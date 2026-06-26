@@ -1,0 +1,64 @@
+{
+  "views": [
+    {
+      "viewId": "vw-workorder-active",
+      "name": "Active Work Orders",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-workorder-overdue",
+      "name": "Overdue Work Orders",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-servicevisit-today",
+      "name": "Today's Service Visits",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-agreement-renewals",
+      "name": "Agreements Due for Renewal",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-asset-byaccount",
+      "name": "Assets by Account",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-technician-active",
+      "name": "Active Technicians",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-inspection-failed",
+      "name": "Failed Inspections",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-quote-open",
+      "name": "Open Quotes",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-project-inflight",
+      "name": "In-Flight Projects",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "viewId": "vw-invoice-unpaid",
+      "name": "Unpaid Invoices",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

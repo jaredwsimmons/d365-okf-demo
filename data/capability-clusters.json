@@ -1,0 +1,24 @@
+{
+  "capabilities": [
+    {
+      "id": "cap-field-service",
+      "name": "Field Service Management",
+      "description": "Scheduling, dispatch, and execution of on-site work."
+    },
+    {
+      "id": "cap-asset-lifecycle",
+      "name": "Asset Lifecycle",
+      "description": "Tracking customer equipment from install through inspection."
+    },
+    {
+      "id": "cap-agreements",
+      "name": "Service Agreements",
+      "description": "Recurring maintenance contracts and their renewals."
+    },
+    {
+      "id": "cap-quote-order",
+      "name": "Quote to Order",
+      "description": "Pricing proposals and converting them to installation projects."
+    }
+  ]
+}

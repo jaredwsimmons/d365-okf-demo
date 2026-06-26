@@ -1,0 +1,14 @@
+{
+  "reports": [
+    {
+      "name": "Work Order Summary",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "Technician Utilization",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "entities": {
+    "con_workorder": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_priority",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_technician",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_asset",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_scheduledstart",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_totalamount",
+          "type": "money"
+        }
+      ]
+    },
+    "con_servicevisit": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_workorder",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_technician",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_outcome",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_arrivaltime",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_departuretime",
+          "type": "datetime"
+        }
+      ]
+    },
+    "con_agreement": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_startdate",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_renewaldate",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_active",
+          "type": "boolean"
+        }
+      ]
+    },
+    "con_asset": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_serialnumber",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_installdate",
+          "type": "datetime"
+        }
+      ]
+    },
+    "con_technician": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_skilllevel",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_region",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_active",
+          "type": "boolean"
+        }
+      ]
+    },
+    "con_part": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_sku",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_unitcost",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_onhand",
+          "type": "integer"
+        }
+      ]
+    },
+    "con_inspection": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_servicevisit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_result",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_notes",
+          "type": "memo"
+        }
+      ]
+    },
+    "con_quote": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_totalamount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_project": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_quote",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_targetdate",
+          "type": "datetime"
+        }
+      ]
+    },
+    "con_invoice": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_workorder",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_duedate",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_paid",
+          "type": "boolean"
+        }
+      ]
+    }
+  }
+}

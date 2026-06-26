@@ -1,0 +1,64 @@
+{
+  "forms": [
+    {
+      "formId": "frm-workorder-main",
+      "name": "Work Order",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "formId": "frm-servicevisit-main",
+      "name": "Service Visit",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "formId": "frm-agreement-main",
+      "name": "Service Agreement",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "formId": "frm-asset-main",
+      "name": "Customer Asset",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "formId": "frm-technician-main",
+      "name": "Technician",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "formId": "frm-inspection-main",
+      "name": "Inspection",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "formId": "frm-quote-main",
+      "name": "Quote",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "formId": "frm-project-main",
+      "name": "Installation Project",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "formId": "frm-invoice-main",
+      "name": "Invoice",
+      "solution": "ContosoCore",
+      "tags": {}
+    },
+    {
+      "formId": "frm-account-fs",
+      "name": "Account (Field Service)",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "webResources": [
+    {
+      "name": "con_/scripts/workorder.js",
+      "displayName": "Work Order Form Scripts",
+      "description": "Client-side validation and pricing preview on the work order form.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/agreement.js",
+      "displayName": "Agreement Form Scripts",
+      "description": "Renewal-date guards on the service agreement form.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/html/fswelcome.html",
+      "displayName": "Field Service Welcome",
+      "description": "Landing HTML embedded on the Field Service dashboard.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/images/logo.png",
+      "displayName": "Contoso Logo",
+      "description": "Brand logo used across model-driven apps.",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

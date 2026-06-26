@@ -1,0 +1,74 @@
+{
+  "workflows": [
+    {
+      "id": "wf-assign-wo",
+      "name": "Assign Work Order to Technician",
+      "description": "Routes a new work order to the nearest available technician.",
+      "primaryEntity": "con_workorder",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "processCatalogL1": "FS.00 Service Delivery"
+      }
+    },
+    {
+      "id": "wf-escalate-wo",
+      "name": "Escalate Overdue Work Order",
+      "description": "Notifies the dispatcher when a work order passes its SLA.",
+      "primaryEntity": "con_workorder",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "processCatalogL1": "FS.00 Service Delivery"
+      }
+    },
+    {
+      "id": "wf-generate-invoice",
+      "name": "Generate Invoice on Completion",
+      "description": "Creates an invoice when a work order is marked complete.",
+      "primaryEntity": "con_workorder",
+      "solution": "ContosoCore",
+      "tags": {
+        "processCatalogL1": "FS.00 Service Delivery"
+      }
+    },
+    {
+      "id": "wf-notify-visit",
+      "name": "Notify Technician of Visit",
+      "description": "Sends the technician an itinerary for the day's visits.",
+      "primaryEntity": "con_servicevisit",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "processCatalogL1": "FS.00 Service Delivery"
+      }
+    },
+    {
+      "id": "wf-sync-asset",
+      "name": "Sync Asset to Field Service",
+      "description": "Keeps customer assets in step with installed equipment.",
+      "primaryEntity": "con_asset",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "processCatalogL1": "FS.00 Service Delivery"
+      }
+    },
+    {
+      "id": "FLOW-RENEWAL",
+      "name": "Send Agreement Renewal Reminder",
+      "description": "Cloud flow emailing customers before an agreement lapses.",
+      "primaryEntity": "con_agreement",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "processCatalogL1": "FS.00 Service Delivery"
+      }
+    },
+    {
+      "id": "FLOW-QUOTE-FOLLOWUP",
+      "name": "Quote Follow-up Reminder",
+      "description": "Cloud flow nudging the sales rep on stale open quotes.",
+      "primaryEntity": "con_quote",
+      "solution": "ContosoSales",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales to Order"
+      }
+    }
+  ]
+}

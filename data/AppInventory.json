@@ -1,0 +1,24 @@
+{
+  "modelDrivenApps": [
+    {
+      "uniqueName": "con_FieldServiceApp",
+      "displayName": "Contoso Field Service",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_SalesApp",
+      "displayName": "Contoso Sales",
+      "solution": "ContosoSales",
+      "tags": {}
+    }
+  ],
+  "canvasApps": [
+    {
+      "uniqueName": "con_TechnicianMobile",
+      "displayName": "Contoso Technician Mobile",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    }
+  ]
+}

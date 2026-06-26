@@ -1,0 +1,16 @@
+{
+  "dashboards": [
+    {
+      "id": "dash-fs-overview",
+      "name": "Field Service Overview",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "dash-sales-pipeline",
+      "name": "Sales Pipeline",
+      "solution": "ContosoSales",
+      "tags": {}
+    }
+  ]
+}

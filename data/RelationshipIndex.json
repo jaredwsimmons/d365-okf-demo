@@ -1,0 +1,261 @@
+{
+  "byEntity": {
+    "con_workorder": {
+      "forms": [
+        "frm-workorder-main"
+      ],
+      "views": [
+        "vw-workorder-active",
+        "vw-workorder-overdue"
+      ],
+      "optionSets": [
+        "con_workorderstatus",
+        "con_priority"
+      ],
+      "pluginSteps": [
+        "step-wo-create",
+        "step-wo-update"
+      ],
+      "workflows": [
+        "Assign Work Order to Technician",
+        "Escalate Overdue Work Order",
+        "Generate Invoice on Completion"
+      ]
+    },
+    "con_servicevisit": {
+      "forms": [
+        "frm-servicevisit-main"
+      ],
+      "views": [
+        "vw-servicevisit-today"
+      ],
+      "optionSets": [
+        "con_visitoutcome"
+      ],
+      "workflows": [
+        "Notify Technician of Visit"
+      ]
+    },
+    "con_agreement": {
+      "forms": [
+        "frm-agreement-main"
+      ],
+      "views": [
+        "vw-agreement-renewals"
+      ],
+      "optionSets": [
+        "con_agreementtype"
+      ],
+      "pluginSteps": [
+        "step-agreement-update"
+      ],
+      "workflows": [
+        "Send Agreement Renewal Reminder"
+      ]
+    },
+    "con_asset": {
+      "forms": [
+        "frm-asset-main"
+      ],
+      "views": [
+        "vw-asset-byaccount"
+      ],
+      "optionSets": [
+        "con_assettype"
+      ],
+      "pluginSteps": [
+        "step-asset-create"
+      ],
+      "workflows": [
+        "Sync Asset to Field Service"
+      ]
+    },
+    "con_technician": {
+      "forms": [
+        "frm-technician-main"
+      ],
+      "views": [
+        "vw-technician-active"
+      ]
+    },
+    "con_inspection": {
+      "forms": [
+        "frm-inspection-main"
+      ],
+      "views": [
+        "vw-inspection-failed"
+      ],
+      "optionSets": [
+        "con_inspectionresult"
+      ]
+    },
+    "con_quote": {
+      "forms": [
+        "frm-quote-main"
+      ],
+      "views": [
+        "vw-quote-open"
+      ],
+      "optionSets": [
+        "con_quotestatus"
+      ],
+      "workflows": [
+        "Quote Follow-up Reminder"
+      ]
+    },
+    "con_project": {
+      "forms": [
+        "frm-project-main"
+      ],
+      "views": [
+        "vw-project-inflight"
+      ]
+    },
+    "con_invoice": {
+      "forms": [
+        "frm-invoice-main"
+      ],
+      "views": [
+        "vw-invoice-unpaid"
+      ],
+      "pluginSteps": [
+        "step-invoice-create"
+      ],
+      "workflows": [
+        "Generate Invoice on Completion"
+      ]
+    },
+    "account": {
+      "forms": [
+        "frm-account-fs"
+      ]
+    }
+  },
+  "byApp": {
+    "con_FieldServiceApp": {
+      "entities": [
+        "con_workorder",
+        "con_servicevisit",
+        "con_agreement",
+        "con_asset",
+        "con_technician",
+        "con_part",
+        "con_inspection",
+        "con_invoice",
+        "account",
+        "contact"
+      ],
+      "dashboards": [
+        "dash-fs-overview"
+      ],
+      "webResources": [
+        "con_/scripts/workorder.js",
+        "con_/scripts/agreement.js",
+        "con_/html/fswelcome.html"
+      ],
+      "siteMaps": [
+        "Contoso Field Service Sitemap"
+      ]
+    },
+    "con_SalesApp": {
+      "entities": [
+        "con_quote",
+        "con_project",
+        "account",
+        "contact"
+      ],
+      "dashboards": [
+        "dash-sales-pipeline"
+      ],
+      "webResources": [
+        "con_/images/logo.png"
+      ],
+      "siteMaps": [
+        "Contoso Sales Sitemap"
+      ]
+    }
+  },
+  "byWorkflow": {
+    "Assign Work Order to Technician": {
+      "envVars": [
+        "con_FieldServiceApiUrl",
+        "con_DefaultRegion"
+      ]
+    },
+    "Generate Invoice on Completion": {
+      "envVars": [
+        "con_InvoicePrefix"
+      ]
+    }
+  },
+  "entityRelationships": [
+    {
+      "from": "con_workorder",
+      "to": "account"
+    },
+    {
+      "from": "con_workorder",
+      "to": "con_technician"
+    },
+    {
+      "from": "con_workorder",
+      "to": "con_asset"
+    },
+    {
+      "from": "con_servicevisit",
+      "to": "con_workorder"
+    },
+    {
+      "from": "con_servicevisit",
+      "to": "con_technician"
+    },
+    {
+      "from": "con_agreement",
+      "to": "account"
+    },
+    {
+      "from": "con_agreement",
+      "to": "con_asset"
+    },
+    {
+      "from": "con_asset",
+      "to": "account"
+    },
+    {
+      "from": "con_inspection",
+      "to": "con_servicevisit"
+    },
+    {
+      "from": "con_part",
+      "to": "con_workorder"
+    },
+    {
+      "from": "con_invoice",
+      "to": "con_workorder"
+    },
+    {
+      "from": "con_invoice",
+      "to": "account"
+    },
+    {
+      "from": "con_quote",
+      "to": "account"
+    },
+    {
+      "from": "con_quote",
+      "to": "contact"
+    },
+    {
+      "from": "con_project",
+      "to": "account"
+    },
+    {
+      "from": "con_project",
+      "to": "con_quote"
+    },
+    {
+      "from": "contact",
+      "to": "account"
+    }
+  ]
+}

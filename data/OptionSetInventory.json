@@ -1,0 +1,46 @@
+{
+  "optionSets": [
+    {
+      "schemaName": "con_workorderstatus",
+      "displayName": "Work Order Status",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_priority",
+      "displayName": "Priority",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_assettype",
+      "displayName": "Asset Type",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_visitoutcome",
+      "displayName": "Visit Outcome",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_agreementtype",
+      "displayName": "Agreement Type",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_inspectionresult",
+      "displayName": "Inspection Result",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_quotestatus",
+      "displayName": "Quote Status",
+      "solution": "ContosoSales",
+      "tags": {}
+    }
+  ]
+}

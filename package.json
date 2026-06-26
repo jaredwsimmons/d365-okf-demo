@@ -1,0 +1,14 @@
+{
+  "name": "d365-okf-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public, fully-synthetic demo of the D365 Open Knowledge Format bundle + viewer, published to GitHub Pages. No real customer data.",
+  "scripts": {
+    "okf:emit": "tsx scripts/okf/emit-bundle-standalone.ts",
+    "okf:viewer": "tsx scripts/okf/build-viewer.ts",
+    "okf:bundle": "npm run okf:emit && npm run okf:viewer"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

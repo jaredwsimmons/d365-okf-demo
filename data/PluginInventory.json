@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    {
+      "id": "plg-wo-pricing",
+      "name": "WorkOrderPricingPlugin",
+      "businessLogic": "Calculates work-order totals from labor, parts, and agreement discounts.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "plg-agreement-renew",
+      "name": "AgreementRenewalPlugin",
+      "businessLogic": "Rolls a service agreement's renewal date forward on confirmation.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "plg-asset-validate",
+      "name": "AssetValidationPlugin",
+      "businessLogic": "Blocks duplicate serial numbers when registering a customer asset.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "plg-invoice-number",
+      "name": "InvoiceNumberPlugin",
+      "businessLogic": "Stamps a sequential, prefixed invoice number on create.",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

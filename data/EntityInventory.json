@@ -1,0 +1,144 @@
+{
+  "entities": {
+    "fieldService": [
+      {
+        "logicalName": "con_workorder",
+        "displayName": "Work Order",
+        "description": "A unit of field work scheduled, dispatched, and billed.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_servicevisit",
+        "displayName": "Service Visit",
+        "description": "A technician's on-site visit fulfilling a work order.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_agreement",
+        "displayName": "Service Agreement",
+        "description": "A recurring maintenance contract that generates work orders.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_asset",
+        "displayName": "Customer Asset",
+        "description": "A serviceable piece of equipment installed at a customer site.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_technician",
+        "displayName": "Technician",
+        "description": "A field resource who performs service visits.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_part",
+        "displayName": "Part",
+        "description": "An inventory item consumed while completing a work order.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_inspection",
+        "displayName": "Inspection",
+        "description": "A checklist outcome captured during a service visit.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      }
+    ],
+    "sales": [
+      {
+        "logicalName": "con_quote",
+        "displayName": "Quote",
+        "description": "A priced proposal sent to a prospective customer.",
+        "solution": "ContosoSales",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales to Order",
+          "vertical": "Field Service"
+        }
+      },
+      {
+        "logicalName": "con_project",
+        "displayName": "Installation Project",
+        "description": "A multi-visit installation engagement won from a quote.",
+        "solution": "ContosoSales",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales to Order",
+          "vertical": "Field Service"
+        }
+      }
+    ],
+    "core": [
+      {
+        "logicalName": "con_invoice",
+        "displayName": "Invoice",
+        "description": "A billing document raised when a work order completes.",
+        "solution": "ContosoCore",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FS.00 Service Delivery",
+          "vertical": "Field Service"
+        }
+      }
+    ]
+  },
+  "standardEntitiesCustomized": [
+    {
+      "logicalName": "account",
+      "displayName": "Account",
+      "description": "Customer organization (standard table, customized for field service).",
+      "solution": "ContosoCore",
+      "tags": {
+        "d365Module": "Sales",
+        "processCatalogL1": "SA.00 Sales to Order",
+        "vertical": "Field Service"
+      }
+    },
+    {
+      "logicalName": "contact",
+      "displayName": "Contact",
+      "description": "Individual at a customer site (standard table, customized).",
+      "solution": "ContosoCore",
+      "tags": {
+        "d365Module": "Sales",
+        "processCatalogL1": "SA.00 Sales to Order",
+        "vertical": "Field Service"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "roles": [
+    {
+      "id": "role-technician",
+      "name": "Contoso Field Technician",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "role-dispatcher",
+      "name": "Contoso Dispatcher",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "role-servicemgr",
+      "name": "Contoso Service Manager",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "role-salesrep",
+      "name": "Contoso Sales Rep",
+      "solution": "ContosoSales",
+      "tags": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "siteMaps": [
+    {
+      "name": "Contoso Field Service Sitemap",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Sales Sitemap",
+      "solution": "ContosoSales",
+      "tags": {}
+    }
+  ]
+}

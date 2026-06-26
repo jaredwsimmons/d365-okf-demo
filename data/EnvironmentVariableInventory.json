@@ -1,0 +1,25 @@
+{
+  "environmentVariables": [
+    {
+      "schemaName": "con_FieldServiceApiUrl",
+      "displayName": "Field Service API URL",
+      "description": "Base URL of the dispatch scheduling API.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_DefaultRegion",
+      "displayName": "Default Region",
+      "description": "Region used when a technician has none set.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_InvoicePrefix",
+      "displayName": "Invoice Prefix",
+      "description": "Prefix stamped onto generated invoice numbers.",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

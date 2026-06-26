@@ -1,0 +1,34 @@
+{
+  "pluginSteps": [
+    {
+      "id": "step-wo-create",
+      "name": "Create of con_workorder — WorkOrderPricingPlugin",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "step-wo-update",
+      "name": "Update of con_workorder — WorkOrderPricingPlugin",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "step-agreement-update",
+      "name": "Update of con_agreement — AgreementRenewalPlugin",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "step-asset-create",
+      "name": "Create of con_asset — AssetValidationPlugin",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "step-invoice-create",
+      "name": "Create of con_invoice — InvoiceNumberPlugin",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

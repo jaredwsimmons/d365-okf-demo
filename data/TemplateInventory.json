@@ -1,0 +1,16 @@
+{
+  "templates": [
+    {
+      "id": "tpl-wo-confirm",
+      "title": "Work Order Confirmation Email",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "tpl-agreement-renewal",
+      "title": "Agreement Renewal Email",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    }
+  ]
+}

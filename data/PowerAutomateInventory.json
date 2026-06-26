@@ -1,0 +1,24 @@
+{
+  "flows": [
+    {
+      "id": "FLOW-RENEWAL",
+      "name": "Send Agreement Renewal Reminder",
+      "trigger": "Scheduled - daily",
+      "connectors": [
+        "Office 365 Outlook",
+        "Dataverse"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-QUOTE-FOLLOWUP",
+      "name": "Quote Follow-up Reminder",
+      "trigger": "Dataverse - When a row is modified",
+      "connectors": [
+        "Dataverse",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 4
+    }
+  ]
+}
