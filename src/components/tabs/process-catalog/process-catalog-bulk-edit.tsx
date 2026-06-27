@@ -317,7 +317,7 @@ export function BulkEditPanel({
                   <FormControl error={field.state.meta.errors.length > 0}>
                     <Input
                       className="h-8 text-xs"
-                      placeholder="e.g., XOI, F&O"
+                      placeholder="e.g., F&O"
                       value={field.state.value || ""}
                       onChange={(e) => field.handleChange(e.target.value)}
                       onBlur={field.handleBlur}

@@ -4,7 +4,6 @@
 const iconMap: Record<string, string> = {
   // Component types that use product SVGs (types with Lucide icons are in typeLucideIcons instead)
   Entity: "Dataverse.svg",
-  BRE: "Hitachi_Symbol.svg",
   Workflow: "PowerAutomate.svg",
   App: "PowerApps.svg",
   Report: "PowerBI.svg",
@@ -23,9 +22,6 @@ const iconMap: Record<string, string> = {
   "Contact Center": "ContactCenter.svg",
   URS: "FieldService.svg",
   "Universal Resource Scheduling": "FieldService.svg",
-  // Vendor / Integration icons
-  HSL: "Hitachi_Symbol.svg",
-  XOI: "XOi.png",
   // Power Platform
   "Power Automate": "PowerAutomate.svg",
   "Power Apps": "PowerApps.svg",
@@ -60,8 +56,6 @@ export function iconUrl(key: string): string | undefined {
 /** Smart icon resolution for entities — checks module, integration, Custom pattern */
 export function entityIconKey(tags?: Record<string, unknown> | null): string {
   if (!tags) return "Entity";
-  // XOI integration entities
-  if (tags.integration === "XOI") return "XOI";
   const mod = (tags.d365Module as string) || "";
   // Exact module match
   if (iconMap[mod]) return mod;
@@ -79,12 +73,8 @@ export function compIconKey(
   tags?: Record<string, unknown> | null,
   extra?: { isBRE?: boolean; isImage?: boolean; format?: string }
 ): string {
-  // XOI integration override (highest priority)
-  if (tags?.integration === "XOI") return "XOI";
   // Entities use module-specific resolution
   if (type === "Entity") return entityIconKey(tags);
-  // BRE web resources (HSL Rules Engine)
-  if (type === "WebResource" && extra?.isBRE) return "BRE";
   // Image web resources (PNG, JPG, Vector/SVG)
   if (type === "WebResource" && extra?.isImage) return "Image";
   // PowerAutomate-format workflows → PA icon instead of generic Workflow
@@ -151,8 +141,6 @@ export const legendSections = [
       ["Power Apps", "Power Apps"],
       ["Power Automate", "Power Automate"],
       ["Dataverse", "Dataverse"],
-      ["HSL", "Hitachi Solutions (Builder)"],
-      ["XOI", "XOi Technologies"],
       ["Custom", "Custom Entities"],
     ] as [string, string][],
   },

@@ -177,7 +177,6 @@ export const typeLucideIcons: Record<string, LucideIcon> = {
 export const componentTypeIcons: Record<string, string> = {
   Entity: "Dataverse.svg",
   Workflow: "PowerAutomate.svg",
-  BRE: "Hitachi_Symbol.svg",
   App: "PowerApps.svg",
   Report: "PowerBI.svg",
   PowerAutomate: "PowerAutomate.svg",

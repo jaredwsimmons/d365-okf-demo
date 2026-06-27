@@ -428,18 +428,9 @@ export const webresourcesConfig: ExplorerConfig<WebResourceItem> = {
   listSubtitle: () => "",
   listPills: (item) => {
     const pills: PillDef[] = [];
-    const dn = item.displayName || item.name || "";
-    const desc = item.description || "";
-    const t = item.tags;
     const wrType = item.webResourceType || item.type || "";
-    if (dn.startsWith("Rules ") || desc.startsWith("HSL Rules Engine")) {
-      pills.push({ text: "BRE", iconKey: "BRE", color: "var(--color-pill-info)" });
-    } else if (t?.integration === "XOI") {
-      pills.push({ text: "XOi", iconKey: "XOI", color: "var(--color-pill-info)" });
-    } else {
-      const langKey = webResourceIconKey(wrType);
-      if (langKey) pills.push({ text: langKey, iconKey: langKey, color: "var(--color-pill-secondary)" });
-    }
+    const langKey = webResourceIconKey(wrType);
+    if (langKey) pills.push({ text: langKey, iconKey: langKey, color: "var(--color-pill-secondary)" });
     return pills;
   },
   filters: [
