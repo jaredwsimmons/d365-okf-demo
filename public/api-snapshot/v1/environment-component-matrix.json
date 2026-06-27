@@ -1,1 +1,44 @@
-{"metadata":{},"coreSolutionDiffs":[],"nonCoreSolutionDiffs":[],"presenceGaps":[]}
+{
+  "metadata": {
+    "environments": ["devint", "ort", "uat", "prod"],
+    "generatedFrom": "synthetic-contoso"
+  },
+  "coreSolutionDiffs": [
+    {
+      "solution": "ContosoCore",
+      "version": { "devint": "1.1.0.0", "ort": "1.1.0.0", "uat": "1.0.0.0", "prod": "1.0.0.0" },
+      "presentIn": ["devint", "ort", "uat", "prod"],
+      "totalComponentCounts": { "devint": 11, "ort": 11, "uat": 9, "prod": 9 },
+      "typeDiffs": [
+        { "type": "Plugin", "counts": { "devint": 2, "ort": 2, "uat": 1, "prod": 1 } },
+        { "type": "Form", "counts": { "devint": 3, "ort": 3, "uat": 2, "prod": 2 } }
+      ],
+      "totalDiffCount": 2
+    }
+  ],
+  "nonCoreSolutionDiffs": [
+    {
+      "solution": "ContosoFieldService",
+      "version": { "devint": "1.3.0.0", "ort": "1.2.0.0", "uat": "1.2.0.0", "prod": "1.2.0.0" },
+      "presentIn": ["devint", "ort", "uat", "prod"],
+      "totalComponentCounts": { "devint": 53, "ort": 50, "uat": 50, "prod": 50 },
+      "typeDiffs": [
+        { "type": "AIComponent", "counts": { "devint": 5, "ort": 4, "uat": 4, "prod": 4 } },
+        { "type": "View", "counts": { "devint": 8, "ort": 7, "uat": 7, "prod": 7 } },
+        { "type": "Workflow", "counts": { "devint": 6, "ort": 5, "uat": 5, "prod": 5 } }
+      ],
+      "totalDiffCount": 3
+    },
+    {
+      "solution": "ContosoSales",
+      "version": { "devint": "1.2.0.0", "ort": "1.2.0.0", "uat": "1.1.0.0", "prod": "1.1.0.0" },
+      "presentIn": ["devint", "ort", "uat", "prod"],
+      "totalComponentCounts": { "devint": 10, "ort": 10, "uat": 9, "prod": 9 },
+      "typeDiffs": [
+        { "type": "View", "counts": { "devint": 3, "ort": 3, "uat": 2, "prod": 2 } }
+      ],
+      "totalDiffCount": 1
+    }
+  ],
+  "presenceGaps": []
+}

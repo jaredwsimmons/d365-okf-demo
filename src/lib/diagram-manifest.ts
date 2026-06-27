@@ -5,9 +5,11 @@ export interface DiagramEntry {
 
 export type DiagramManifest = Record<string, DiagramEntry[]>;
 
+import { apiUrl } from "@/lib/asset-path";
+
 export async function loadDiagramManifest(): Promise<DiagramManifest> {
   try {
-    const res = await fetch("/api/v1/bpc-diagrams");
+    const res = await fetch(apiUrl("/api/v1/bpc-diagrams"));
     if (!res.ok) return {};
     return await res.json();
   } catch {

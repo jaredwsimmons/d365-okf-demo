@@ -14,6 +14,7 @@
 
 import { typeLucideIcons, tabLucideIcons, componentTypeIcons } from "@/lib/theme";
 import { iconUrl } from "@/lib/icons";
+import { assetUrl } from "@/lib/asset-path";
 
 interface DashboardIconProps {
   /** Icon key — resolves through iconUrl (product SVGs) then typeLucideIcons (generic types) */
@@ -44,7 +45,7 @@ export function DashboardIcon({ iconKey, tabId, fallbackType, className }: Dashb
     // Fallback to component type SVG (e.g. Entity → Dataverse.svg)
     const ft = fallbackType || iconKey;
     const svgFallback = componentTypeIcons[ft];
-    if (svgFallback) return <img src={`/icons/${svgFallback}`} alt="" className={className} />;
+    if (svgFallback) return <img src={assetUrl(`/icons/${svgFallback}`)} alt="" className={className} />;
   }
 
   return null;

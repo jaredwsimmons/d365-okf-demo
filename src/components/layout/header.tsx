@@ -4,6 +4,7 @@
 
 import { Search } from "lucide-react";
 import { useDashboard } from "@/lib/dashboard-context";
+import { assetUrl } from "@/lib/asset-path";
 
 export function DashboardHeader() {
   const { viewScope, setViewScope, branding } = useDashboard();
@@ -15,7 +16,7 @@ export function DashboardHeader() {
       <div className="flex items-center gap-4">
         {branding.logoPath && (
           <img
-            src={branding.logoPath}
+            src={assetUrl(branding.logoPath)}
             alt={branding.appName || "Dashboard"}
             className="h-8"
           />
@@ -52,7 +53,7 @@ export function DashboardHeader() {
           <kbd className="ml-1 text-[10px] bg-white/10 rounded px-1 py-0.5">Ctrl+K</kbd>
         </button>
         <img
-          src="/icons/Dynamics365.svg"
+          src={assetUrl("/icons/Dynamics365.svg")}
           alt="Dynamics 365"
           className="h-5 opacity-70"
         />

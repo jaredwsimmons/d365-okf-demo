@@ -1,5 +1,7 @@
 // Smart icon resolution — ported from old dashboard's pcIcon/pcEntityIcon/pcCompIcon
 
+import { assetUrl } from "@/lib/asset-path";
+
 /** Master icon map: key → filename in /icons/ */
 const iconMap: Record<string, string> = {
   // Component types that use product SVGs (types with Lucide icons are in typeLucideIcons instead)
@@ -50,7 +52,7 @@ const iconMap: Record<string, string> = {
 /** Resolve icon key → URL path (or undefined) */
 export function iconUrl(key: string): string | undefined {
   const file = iconMap[key];
-  return file ? `/icons/${encodeURIComponent(file)}` : undefined;
+  return file ? assetUrl(`/icons/${encodeURIComponent(file)}`) : undefined;
 }
 
 /** Smart icon resolution for entities — checks module, integration, Custom pattern */

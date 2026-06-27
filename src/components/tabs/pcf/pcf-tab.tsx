@@ -8,6 +8,7 @@ import { SquarePen } from "lucide-react";
 import { TagEditPanel } from "@/components/explorer/tag-edit-panel";
 import { StatsBar } from "@/components/shared/stats-bar";
 import { EmptyState } from "@/components/shared/empty-state";
+import { apiUrl } from "@/lib/asset-path";
 import type { Tags } from "@/types/inventory";
 
 interface PCFControl {
@@ -40,7 +41,7 @@ export function PCFTab() {
   const [editingControl, setEditingControl] = useState<PCFControl | null>(null);
 
   useEffect(() => {
-    fetch(`/api/v1/inventory/pcf`)
+    fetch(apiUrl(`/api/v1/inventory/pcf`))
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => {
         if (d?.items) {

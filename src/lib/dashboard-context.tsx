@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, useCallback, useRef, type ReactNode } from "react";
 import { loadDiagramManifest, type DiagramManifest } from "./diagram-manifest";
+import { assetUrl } from "./asset-path";
 
 /** A configurable implementation scope (e.g., "D365 CE", "F&O", "All") */
 export interface ScopeConfig {
@@ -107,7 +108,7 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
     async function init() {
       const [diagrams, brandingData] = await Promise.all([
         loadDiagramManifest(),
-        fetch("/data/branding.json").then(r => r.ok ? r.json() : DEFAULT_BRANDING).catch(() => DEFAULT_BRANDING),
+        fetch(assetUrl("/data/branding.json")).then(r => r.ok ? r.json() : DEFAULT_BRANDING).catch(() => DEFAULT_BRANDING),
       ]);
       setDiagramManifest(diagrams);
       const mergedBranding = { ...DEFAULT_BRANDING, ...brandingData, scopes: brandingData.scopes || [] };

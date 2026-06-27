@@ -1,1 +1,20 @@
-{}
+{
+  "FS.00": [
+    {
+      "path": "bpc-diagrams/field-service/service-delivery-flow.svg",
+      "name": "Service Delivery — End-to-End Flow"
+    }
+  ],
+  "FS.20": [
+    {
+      "path": "bpc-diagrams/field-service/execute-work-order-flow.svg",
+      "name": "Execute Work Order — On-Site Flow"
+    }
+  ],
+  "SA.00": [
+    {
+      "path": "bpc-diagrams/sales/sales-to-order-flow.svg",
+      "name": "Sales to Order — Lead to Booked Work"
+    }
+  ]
+}

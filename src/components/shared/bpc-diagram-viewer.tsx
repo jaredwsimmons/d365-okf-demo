@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import type { DiagramManifest, DiagramEntry } from "@/lib/diagram-manifest";
+import { assetUrl } from "@/lib/asset-path";
 import { Badge } from "@/components/ui";
 import {
   Dialog,
@@ -42,7 +43,7 @@ export function BpcDiagramViewer({
           >
             <div className="bg-white p-2 flex items-center justify-center">
               <img
-                src={`/${d.path}`}
+                src={assetUrl(`/${d.path}`)}
                 alt={d.name}
                 className="max-h-[120px] w-auto object-contain"
               />
@@ -68,7 +69,7 @@ export function BpcDiagramViewer({
           <div className="flex-1 overflow-auto custom-scroll min-h-0 bg-white rounded-md border">
             {selected && (
               <img
-                src={`/${selected.path}`}
+                src={assetUrl(`/${selected.path}`)}
                 alt={selected.name}
                 className="w-full h-auto"
               />
