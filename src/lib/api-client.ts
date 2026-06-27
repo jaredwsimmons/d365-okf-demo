@@ -145,22 +145,6 @@ export function getInventoryItem<T = Record<string, unknown>>(
   return fetchApi<InventoryItemResult<T>>(`/api/v1/inventory/${type}/${encodeURIComponent(id)}`);
 }
 
-// ─── Summary ───────────────────────────────────────────────────────
-
-export interface SummaryResult {
-  counts: Record<string, number>;
-  governance: {
-    score: number;
-    totalFindings: number;
-    bySeverity: Record<string, number>;
-  };
-  lastRefresh: string | null;
-}
-
-export function getSummary(): Promise<SummaryResult> {
-  return fetchApi<SummaryResult>("/api/v1/summary");
-}
-
 // ─── Overrides ─────────────────────────────────────────────────────
 
 export function saveOverride(
@@ -263,22 +247,6 @@ export function getUntagged(): Promise<{ total: number; byType: Record<string, n
   return fetchApi("/api/v1/untagged");
 }
 
-// ─── Orphaned Components ───────────────────────────────────────────
-
-export interface OrphanedComponentsResult {
-  metadata: {
-    total: number;
-    byType: Record<string, number>;
-    bySeverity: Record<string, number>;
-  };
-  orphans: Array<Record<string, unknown>>;
-  byType: Record<string, Array<Record<string, unknown>>>;
-}
-
-export function getOrphanedComponents(): Promise<OrphanedComponentsResult> {
-  return fetchApi("/api/v1/orphaned-components");
-}
-
 // ─── Process Diagrams ──────────────────────────────────────────────
 
 export type ProcessDiagramsMap = Record<string, { url: string; title?: string }>;
@@ -354,10 +322,4 @@ export function getWorkflowDefinition(
 
 export function getWorkflowNameMap(): Promise<Record<string, string>> {
   return fetchApi("/api/v1/workflow-name-map");
-}
-
-// ─── Health ────────────────────────────────────────────────────────
-
-export function getHealth(): Promise<{ status: string; database: string }> {
-  return fetchApi("/api/v1/health");
 }

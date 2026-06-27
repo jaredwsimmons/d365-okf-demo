@@ -34,18 +34,6 @@ interface LogicAppAction {
   description?: string;
 }
 
-export interface FlowNode {
-  id: string;
-  label: string;
-  type: string; // Action type: OpenApiConnection, SetVariable, If, Scope, etc.
-  kind?: string;
-  nodeType: "trigger" | "action" | "scope" | "condition-branch" | "terminal";
-  parentId?: string;
-  description?: string;
-  connector?: string; // e.g. shared_commondataserviceforapps
-  operation?: string; // e.g. ListRecords, GetItem
-}
-
 export interface ParsedWorkflow {
   nodes: Node[];
   edges: Edge[];

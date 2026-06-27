@@ -2,12 +2,10 @@
 
 "use client";
 
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import {
   getInventory,
   getInventoryItem,
-  getSummary,
-  saveOverride,
   getGovernance,
   getProcessCatalog,
   getSolutions,
@@ -16,7 +14,6 @@ import {
   getEnvironmentComponentMatrix,
   getEntityRelationships,
   getUntagged,
-  getOrphanedComponents,
   getSolutionComponents,
   getSolutionDetail,
   getProcessCatalogComponents,
@@ -54,38 +51,6 @@ export function useInventoryItem<T = Record<string, unknown>>(
     queryFn: () => getInventoryItem<T>(type, id!),
     enabled: (queryOptions?.enabled ?? true) && !!id,
     staleTime: 5 * 60 * 1000,
-  });
-}
-
-// ─── Summary ───────────────────────────────────────────────────────
-
-export function useSummary() {
-  return useQuery({
-    queryKey: ["summary"],
-    queryFn: getSummary,
-    staleTime: 5 * 60 * 1000,
-  });
-}
-
-// ─── Override Mutation ──────────────────────────────────────────────
-
-export function useSaveOverride() {
-  const queryClient = useQueryClient();
-
-  return useMutation({
-    mutationFn: ({
-      dataKey,
-      itemId,
-      override,
-    }: {
-      dataKey: string;
-      itemId: string;
-      override: Record<string, unknown>;
-    }) => saveOverride(dataKey, itemId, override),
-    onSuccess: (_, { dataKey }) => {
-      // Invalidate the affected inventory tab so it refetches with updated overrides
-      queryClient.invalidateQueries({ queryKey: ["inventory", dataKey] });
-    },
   });
 }
 
@@ -140,17 +105,6 @@ export function useUntagged(queryOptions?: { enabled?: boolean }) {
     queryKey: ["untagged"],
     queryFn: getUntagged,
     staleTime: 5 * 60 * 1000,
-    enabled: queryOptions?.enabled ?? true,
-  });
-}
-
-// ─── Orphaned Components ───────────────────────────────────────────
-
-export function useOrphanedComponents(queryOptions?: { enabled?: boolean }) {
-  return useQuery({
-    queryKey: ["orphaned-components"],
-    queryFn: getOrphanedComponents,
-    staleTime: 10 * 60 * 1000,
     enabled: queryOptions?.enabled ?? true,
   });
 }

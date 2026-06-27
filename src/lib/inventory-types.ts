@@ -58,10 +58,6 @@ export const API_KEY_BY_TYPE_NAME: Record<string, string> = Object.fromEntries(
   INVENTORY_TYPES.map((t) => [t.typeName, t.apiKey]),
 );
 
-export const TYPE_NAME_BY_API_KEY: Record<string, string> = Object.fromEntries(
-  INVENTORY_TYPES.map((t) => [t.apiKey, t.typeName]),
-);
-
 export const TAB_ID_BY_TYPE_NAME: Record<string, string> = Object.fromEntries(
   INVENTORY_TYPES.map((t) => [t.typeName, t.tabId]),
 );
