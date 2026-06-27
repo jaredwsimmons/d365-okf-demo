@@ -74,8 +74,7 @@ export async function listItems(type: string, options: ListOptions = {}) {
   const config = TABLE_MAP[type];
   if (!config) throw new Error(`Unknown inventory type: ${type}`);
 
-  const { page = 1, limit = 500, solution, search, entity } = options;
-  const offset = (page - 1) * limit;
+  const { page = 1, limit, solution, search, entity } = options;
   const t = config.drizzleTable;
 
   // Build dynamic where conditions
@@ -100,12 +99,11 @@ export async function listItems(type: string, options: ListOptions = {}) {
     ? sql.join(conditions.map((c) => sql`${c}`), sql` AND `)
     : undefined;
 
-  const items = await db
-    .select()
-    .from(t)
-    .where(whereClause)
-    .limit(limit)
-    .offset(offset);
+  // No limit → return all matching rows (bounded by table size) so the
+  // client-side explorer can filter/search/sort the full set.
+  const items = limit != null
+    ? await db.select().from(t).where(whereClause).limit(limit).offset((page - 1) * limit)
+    : await db.select().from(t).where(whereClause);
 
   // Get total count for pagination
   const [totalRow] = await db
@@ -145,8 +143,8 @@ export async function listItems(type: string, options: ListOptions = {}) {
       type,
       total: Number(total),
       page,
-      limit,
-      hasMore: offset + items.length < Number(total),
+      limit: limit ?? Number(total),
+      hasMore: limit != null ? (page - 1) * limit + items.length < Number(total) : false,
     },
   };
 }

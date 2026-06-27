@@ -17,7 +17,8 @@ export const MAX_LIST_LIMIT = 500;
 
 export interface ListParams {
   page: number;
-  limit: number;
+  /** undefined = no limit (return all rows). See parseListParams. */
+  limit?: number;
   solution?: string;
   search?: string;
   entity?: string;
@@ -26,8 +27,12 @@ export interface ListParams {
 /**
  * Parse + clamp inventory list query params at the trust boundary.
  * Guards against NaN / negative / oversized values that would otherwise reach
- * SQL OFFSET/LIMIT — a malformed `?page=abc` 500s and `?limit=99999999` is a
- * memory-exhaustion lever in a capped container.
+ * SQL OFFSET/LIMIT (`?page=abc` 500s, `?limit=99999999`).
+ *
+ * An ABSENT limit means "all rows": the explorer filters/searches client-side and
+ * needs the full set, and the response is bounded by the (solution-sized) table —
+ * not by user input — so this is not an exhaustion vector. An EXPLICIT limit is
+ * clamped to MAX_LIST_LIMIT so paginated requests stay bounded.
  */
 export function parseListParams(searchParams: URLSearchParams): ListParams {
   const clampInt = (raw: string | null, def: number, min: number, max: number): number => {
@@ -36,9 +41,10 @@ export function parseListParams(searchParams: URLSearchParams): ListParams {
     if (!Number.isFinite(n)) return def;
     return Math.min(max, Math.max(min, n));
   };
+  const limitRaw = searchParams.get("limit");
   return {
     page: clampInt(searchParams.get("page"), 1, 1, Number.MAX_SAFE_INTEGER),
-    limit: clampInt(searchParams.get("limit"), MAX_LIST_LIMIT, 1, MAX_LIST_LIMIT),
+    limit: limitRaw == null ? undefined : clampInt(limitRaw, MAX_LIST_LIMIT, 1, MAX_LIST_LIMIT),
     solution: searchParams.get("solution") ?? undefined,
     search: searchParams.get("search") ?? undefined,
     entity: searchParams.get("entity") ?? undefined,
