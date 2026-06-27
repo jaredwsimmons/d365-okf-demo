@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "auditDate": "2026-06-26T00:00:00.000Z",
+    "totalFindings": 5
+  },
+  "findings": [
+    {
+      "ruleId": "FORMS_NO_DESC",
+      "name": "Forms without a description",
+      "severity": "medium",
+      "category": "Documentation",
+      "count": 4,
+      "componentType": "Form",
+      "message": "4 forms have no description set.",
+      "recommendation": "Add a short description to each main form.",
+      "status": "open",
+      "scope": "ContosoFieldService",
+      "items": [
+        "frm-asset-main",
+        "frm-technician-main",
+        "frm-inspection-main",
+        "frm-invoice-main"
+      ]
+    },
+    {
+      "ruleId": "WF_UNTAGGED",
+      "name": "Automations missing a process tag",
+      "severity": "warning",
+      "category": "Process Alignment",
+      "count": 1,
+      "componentType": "Workflow",
+      "message": "1 automation is not mapped to a business process.",
+      "recommendation": "Tag automations with their BPC process code.",
+      "status": "open",
+      "scope": "ContosoSales",
+      "items": [
+        "Quote Follow-up Reminder"
+      ]
+    },
+    {
+      "ruleId": "WR_NO_SOLUTION",
+      "name": "Web resource flagged for review",
+      "severity": "warning",
+      "category": "Solution Hygiene",
+      "count": 1,
+      "componentType": "WebResource",
+      "message": "1 web resource may be unused.",
+      "recommendation": "Confirm the resource is referenced by a form or remove it.",
+      "status": "open",
+      "scope": "ContosoCore",
+      "items": [
+        "con_/images/logo.png"
+      ]
+    },
+    {
+      "ruleId": "PLUGIN_NO_DESC",
+      "name": "Plugin with sparse business-logic notes",
+      "severity": "high",
+      "category": "Documentation",
+      "count": 1,
+      "componentType": "Plugin",
+      "message": "1 plugin lacks documented business logic.",
+      "recommendation": "Document the plugin's purpose and trigger.",
+      "status": "open",
+      "scope": "ContosoCore",
+      "items": [
+        "InvoiceNumberPlugin"
+      ]
+    },
+    {
+      "ruleId": "OPTSET_UNUSED",
+      "name": "Option set not bound to a column",
+      "severity": "medium",
+      "category": "Solution Hygiene",
+      "count": 1,
+      "componentType": "OptionSet",
+      "message": "1 global option set is not used by any column.",
+      "recommendation": "Bind it to a column or remove it.",
+      "status": "open",
+      "scope": "ContosoFieldService",
+      "items": [
+        "con_inspectionresult"
+      ]
+    }
+  ]
+}

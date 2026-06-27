@@ -1,0 +1,1 @@
+{"item":{"id":"plg-agreement-renew","name":"AgreementRenewalPlugin","tags":{},"solution":"ContosoFieldService","businessLogic":"Rolls a service agreement's renewal date forward on confirmation."},"metadata":{"type":"plugins","id":"plg-agreement-renew"}}

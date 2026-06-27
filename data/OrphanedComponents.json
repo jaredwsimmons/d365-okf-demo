@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "total": 3,
+    "generated": "2026-06-26T00:00:00.000Z"
+  },
+  "orphans": [
+    {
+      "type": "WebResource",
+      "name": "Contoso Logo",
+      "schemaName": "con_/images/logo.png",
+      "reason": "Not referenced by any form or sitemap.",
+      "severity": "low",
+      "solution": "ContosoCore"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Inspection Result",
+      "schemaName": "con_inspectionresult",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "ContosoFieldService"
+    },
+    {
+      "type": "Report",
+      "name": "Technician Utilization",
+      "schemaName": "Technician Utilization",
+      "reason": "Not linked to any model-driven app.",
+      "severity": "low",
+      "solution": "ContosoFieldService"
+    }
+  ]
+}

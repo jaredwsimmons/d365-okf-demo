@@ -1,0 +1,1 @@
+{"item":{"tags":{},"solution":"ContosoFieldService","schemaName":"con_DefaultRegion","description":"Region used when a technician has none set.","displayName":"Default Region","_relWorkflows":["Assign Work Order to Technician"]},"metadata":{"type":"envVars","id":"con_DefaultRegion"}}

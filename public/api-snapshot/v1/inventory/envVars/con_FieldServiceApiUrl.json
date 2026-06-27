@@ -1,0 +1,1 @@
+{"item":{"tags":{},"solution":"ContosoFieldService","schemaName":"con_FieldServiceApiUrl","description":"Base URL of the dispatch scheduling API.","displayName":"Field Service API URL","_relWorkflows":["Assign Work Order to Technician"]},"metadata":{"type":"envVars","id":"con_FieldServiceApiUrl"}}

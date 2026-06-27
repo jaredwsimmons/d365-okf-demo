@@ -4,60 +4,70 @@
       "viewId": "vw-workorder-active",
       "name": "Active Work Orders",
       "solution": "ContosoFieldService",
+      "entity": "con_workorder",
       "tags": {}
     },
     {
       "viewId": "vw-workorder-overdue",
       "name": "Overdue Work Orders",
       "solution": "ContosoFieldService",
+      "entity": "con_workorder",
       "tags": {}
     },
     {
       "viewId": "vw-servicevisit-today",
       "name": "Today's Service Visits",
       "solution": "ContosoFieldService",
+      "entity": "con_servicevisit",
       "tags": {}
     },
     {
       "viewId": "vw-agreement-renewals",
       "name": "Agreements Due for Renewal",
       "solution": "ContosoFieldService",
+      "entity": "con_agreement",
       "tags": {}
     },
     {
       "viewId": "vw-asset-byaccount",
       "name": "Assets by Account",
       "solution": "ContosoFieldService",
+      "entity": "con_asset",
       "tags": {}
     },
     {
       "viewId": "vw-technician-active",
       "name": "Active Technicians",
       "solution": "ContosoFieldService",
+      "entity": "con_technician",
       "tags": {}
     },
     {
       "viewId": "vw-inspection-failed",
       "name": "Failed Inspections",
       "solution": "ContosoFieldService",
+      "entity": "con_inspection",
       "tags": {}
     },
     {
       "viewId": "vw-quote-open",
       "name": "Open Quotes",
       "solution": "ContosoSales",
+      "entity": "con_quote",
       "tags": {}
     },
     {
       "viewId": "vw-project-inflight",
       "name": "In-Flight Projects",
       "solution": "ContosoSales",
+      "entity": "con_project",
       "tags": {}
     },
     {
       "viewId": "vw-invoice-unpaid",
       "name": "Unpaid Invoices",
       "solution": "ContosoCore",
+      "entity": "con_invoice",
       "tags": {}
     }
   ]

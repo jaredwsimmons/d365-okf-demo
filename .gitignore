@@ -1,2 +1,16 @@
+# Node / Next.js
 node_modules/
-okf-bundle/
+.next/
+out/
+.api-stash/
+tsconfig.tsbuildinfo
+
+# Pipeline scratch (not used by the static demo). Root-anchored — an unanchored
+# "Inventory/" matches public/api-snapshot/v1/inventory/ case-insensitively on
+# Windows and would drop the per-item snapshots.
+/Inventory/
+/okf-bundle/
+
+# Committed on purpose (do NOT ignore):
+#   public/api-snapshot/  — the baked Contoso API snapshots the app reads
+#   data/                 — the raw synthetic Contoso seeds (regenerate snapshots from these)

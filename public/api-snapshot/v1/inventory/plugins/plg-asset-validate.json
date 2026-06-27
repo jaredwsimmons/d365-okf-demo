@@ -1,0 +1,1 @@
+{"item":{"id":"plg-asset-validate","name":"AssetValidationPlugin","tags":{},"solution":"ContosoFieldService","businessLogic":"Blocks duplicate serial numbers when registering a customer asset."},"metadata":{"type":"plugins","id":"plg-asset-validate"}}

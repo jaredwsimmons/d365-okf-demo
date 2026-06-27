@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "generated": "2026-06-26T00:00:00.000Z",
+    "totalAppActions": 2,
+    "summary": {}
+  },
+  "appActions": [
+    {
+      "uniqueName": "con_CompleteWorkOrder",
+      "name": "Complete Work Order",
+      "buttonLabel": "Complete",
+      "appModule": "con_FieldServiceApp",
+      "contextEntity": "con_workorder",
+      "fontIcon": "CheckMark",
+      "location": "Form",
+      "sequence": 10,
+      "isHidden": false,
+      "isDisabled": false,
+      "isCustomizable": true,
+      "onClickType": "JavaScript",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_GenerateInvoiceAction",
+      "name": "Generate Invoice",
+      "buttonLabel": "Invoice",
+      "appModule": "con_FieldServiceApp",
+      "contextEntity": "con_workorder",
+      "fontIcon": "Money",
+      "location": "Form",
+      "sequence": 20,
+      "isHidden": false,
+      "isDisabled": false,
+      "isCustomizable": true,
+      "onClickType": "CustomAPI",
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ]
+}

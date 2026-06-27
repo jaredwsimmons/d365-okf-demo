@@ -1,0 +1,1 @@
+{"item":{"id":"wf-notify-visit","name":"Notify Technician of Visit","tags":{"processCatalogL1":"FS.00 Service Delivery"},"solution":"ContosoFieldService","description":"Sends the technician an itinerary for the day's visits.","primaryEntity":"con_servicevisit"},"metadata":{"type":"workflows","id":"wf-notify-visit"}}

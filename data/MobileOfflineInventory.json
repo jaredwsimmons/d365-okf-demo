@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "generated": "2026-06-26T00:00:00.000Z",
+    "totalProfiles": 1,
+    "totalEntitiesEnabled": 4,
+    "summary": {}
+  },
+  "profiles": [
+    {
+      "id": "mob-technician",
+      "name": "Field Technician Offline",
+      "solution": "ContosoFieldService",
+      "entityCount": 4,
+      "entities": [
+        "con_workorder",
+        "con_servicevisit",
+        "con_asset",
+        "con_inspection"
+      ],
+      "tags": {}
+    }
+  ]
+}

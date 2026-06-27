@@ -1,0 +1,70 @@
+{
+  "solutions": [
+    {
+      "uniqueName": "ContosoCore",
+      "displayName": "Contoso Core",
+      "version": "1.0.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Core tables, option sets, and shared configuration.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoFieldService",
+      "displayName": "Contoso Field Service",
+      "version": "1.2.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Work orders, agreements, assets, technicians, inspections.",
+      "dependsOn": [
+        "ContosoCore"
+      ],
+      "dependencyCount": 1,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoSales",
+      "displayName": "Contoso Sales",
+      "version": "1.1.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Quotes and installation projects.",
+      "dependsOn": [
+        "ContosoCore"
+      ],
+      "dependencyCount": 1,
+      "missingDependencyCount": 0
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "ContosoFieldService",
+      "to": "ContosoCore",
+      "componentCount": 9
+    },
+    {
+      "from": "ContosoSales",
+      "to": "ContosoCore",
+      "componentCount": 5
+    }
+  ],
+  "missingDependencies": [],
+  "installOrder": [
+    "ContosoCore",
+    "ContosoFieldService",
+    "ContosoSales"
+  ],
+  "metadata": {
+    "totalSolutions": 3,
+    "unmanagedCount": 3,
+    "managedCount": 0,
+    "totalDependencies": 2,
+    "withMissingDeps": 0,
+    "generated": "2026-06-26T00:00:00.000Z"
+  }
+}

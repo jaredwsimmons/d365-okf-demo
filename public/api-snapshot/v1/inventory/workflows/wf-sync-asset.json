@@ -1,0 +1,1 @@
+{"item":{"id":"wf-sync-asset","name":"Sync Asset to Field Service","tags":{"processCatalogL1":"FS.00 Service Delivery"},"solution":"ContosoFieldService","description":"Keeps customer assets in step with installed equipment.","primaryEntity":"con_asset"},"metadata":{"type":"workflows","id":"wf-sync-asset"}}

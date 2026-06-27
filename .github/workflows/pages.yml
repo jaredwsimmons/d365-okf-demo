@@ -1,11 +1,11 @@
-name: Publish OKF Demo Pages
+name: Publish OKF Demo (static app)
 
-# Emits the synthetic Contoso OKF bundle from data/ and publishes it to GitHub
-# Pages. This demo is pure Node (no PowerShell extract), so it runs on
-# ubuntu-latest. One-time setup: repo Settings -> Pages -> Source: GitHub Actions.
-# Publishes to https://<owner>.github.io/<repo>/.
+# Builds the OKF dashboard as a static export fed by the committed Contoso API
+# snapshots (public/api-snapshot) and publishes it to GitHub Pages. Pure Node —
+# no database, no server. One-time setup: repo Settings -> Pages -> Source:
+# "GitHub Actions". Publishes to https://<owner>.github.io/d365-okf-demo/.
 
-run-name: Publish OKF Demo Pages (${{ github.sha }})
+run-name: Publish OKF Demo (${{ github.sha }})
 
 on:
   push:
@@ -26,27 +26,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
       - run: npm ci
-
-      - name: Emit OKF bundle + viewer
+      - name: Build static export (Contoso branding + Pages basePath)
+        run: node scripts/static/build-static.mjs
         env:
-          DATA_DIR: data
-        run: npm run okf:bundle
-
-      - name: Prepare Pages bundle
-        run: |
-          cp okf-bundle/_viewer.html okf-bundle/index.html
-          touch okf-bundle/.nojekyll
-
+          NEXT_PUBLIC_STATIC: '1'
+          NEXT_PUBLIC_BASE_PATH: '/d365-okf-demo'
+          NEXT_PUBLIC_CUSTOM_PREFIX: 'con_'
+          NEXT_PUBLIC_CUSTOM_LABEL: 'Contoso'
+      - run: touch out/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: okf-bundle
+          path: out
 
   deploy:
     needs: build

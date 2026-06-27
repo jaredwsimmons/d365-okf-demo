@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "generated": "2026-06-26T00:00:00.000Z",
+    "summary": {
+      "botComponents": 2,
+      "customAPIs": 2,
+      "aiSkillConfigs": 1
+    }
+  },
+  "botComponents": [
+    {
+      "schemaName": "con_fieldservicecopilot",
+      "name": "Field Service Copilot",
+      "description": "Answers technician questions about work orders and assets.",
+      "componentType": "Bot",
+      "componentTypeCode": 0,
+      "parentBot": "con_fieldservicecopilot",
+      "stateCode": 0,
+      "statusCode": 1,
+      "isCustomizable": true,
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_fieldservicecopilot_topic_status",
+      "name": "Topic: Work Order Status",
+      "description": "Copilot topic that reports a work order's status.",
+      "componentType": "BotComponent",
+      "componentTypeCode": 1,
+      "parentBot": "con_fieldservicecopilot",
+      "stateCode": 0,
+      "statusCode": 1,
+      "isCustomizable": true,
+      "solution": "ContosoFieldService",
+      "tags": {}
+    }
+  ],
+  "customAPIs": [
+    {
+      "uniqueName": "con_CalculatePricing",
+      "name": "con_CalculatePricing",
+      "displayName": "Calculate Pricing",
+      "description": "Returns a priced quote for a work order.",
+      "isFunction": true,
+      "isPrivate": false,
+      "isCustomizable": true,
+      "workflowEnabled": false,
+      "bindingType": "Global",
+      "parameterCount": 3,
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_GenerateInvoice",
+      "name": "con_GenerateInvoice",
+      "displayName": "Generate Invoice",
+      "description": "Creates an invoice for a completed work order.",
+      "isFunction": false,
+      "isPrivate": false,
+      "isCustomizable": true,
+      "workflowEnabled": true,
+      "bindingType": "Entity",
+      "parameterCount": 1,
+      "solution": "ContosoCore",
+      "tags": {}
+    }
+  ],
+  "aiSkillConfigs": [
+    {
+      "uniqueName": "con_AssetImageRecognition",
+      "skillType": "AI Builder",
+      "description": "Recognizes equipment from a photo on the asset form.",
+      "entity": "con_asset",
+      "attribute": "con_serialnumber",
+      "scope": "Entity",
+      "stateCode": 0,
+      "statusCode": 1,
+      "isCustomizable": true,
+      "solution": "ContosoFieldService",
+      "tags": {}
+    }
+  ]
+}

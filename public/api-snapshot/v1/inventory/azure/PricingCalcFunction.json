@@ -1,0 +1,1 @@
+{"item":{"name":"PricingCalcFunction","_type":"function","status":"Active","purpose":"Pricing","runtime":"dotnet-isolated","trigger":"HTTP","calledBy":"WorkOrderPricingPlugin","description":"Computes work-order pricing from labor and parts."},"metadata":{"type":"azure","id":"PricingCalcFunction"}}

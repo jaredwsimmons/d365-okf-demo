@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "generated": "2026-06-26T00:00:00.000Z",
+    "totalControls": 2,
+    "summary": {
+      "byTechnology": {
+        "React": 2
+      }
+    }
+  },
+  "controls": [
+    {
+      "name": "WorkOrderTimeline",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "Work Order Timeline",
+      "description": "Visual timeline of service visits on a work order.",
+      "controlType": "field",
+      "technology": "React",
+      "sourcePath": "controls/WorkOrderTimeline",
+      "boundProperties": [
+        "con_status"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "con_workorder"
+      ],
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "AssetMap",
+      "namespace": "Contoso",
+      "version": "1.1.0",
+      "displayName": "Asset Map",
+      "description": "Map of customer assets by site location.",
+      "controlType": "dataset",
+      "technology": "React",
+      "sourcePath": "controls/AssetMap",
+      "boundProperties": [],
+      "features": [
+        "WebAPI",
+        "Device"
+      ],
+      "externalIntegration": true,
+      "deployedTo": [
+        "con_asset"
+      ],
+      "solution": "ContosoFieldService",
+      "tags": {}
+    }
+  ]
+}

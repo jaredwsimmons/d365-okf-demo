@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "generated": "2026-06-26T00:00:00.000Z",
+    "totalLogicApps": 2,
+    "totalFunctions": 2,
+    "totalExternalIntegrations": 2
+  },
+  "logicApps": [
+    {
+      "name": "WorkOrderSyncLogicApp",
+      "description": "Pushes completed work orders to the billing system.",
+      "trigger": "Work order completed",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → Billing API",
+      "relatedEntity": "con_workorder",
+      "status": "Active"
+    },
+    {
+      "name": "AgreementRenewalLogicApp",
+      "description": "Generates renewal tasks for expiring agreements.",
+      "trigger": "Recurrence — daily",
+      "direction": "Internal",
+      "dataFlow": "Dataverse → Dataverse",
+      "relatedEntity": "con_agreement",
+      "status": "Active"
+    }
+  ],
+  "functions": [
+    {
+      "name": "PricingCalcFunction",
+      "description": "Computes work-order pricing from labor and parts.",
+      "trigger": "HTTP",
+      "runtime": "dotnet-isolated",
+      "calledBy": "WorkOrderPricingPlugin",
+      "purpose": "Pricing",
+      "status": "Active"
+    },
+    {
+      "name": "InvoicePdfFunction",
+      "description": "Renders an invoice PDF on demand.",
+      "trigger": "HTTP",
+      "runtime": "dotnet-isolated",
+      "calledBy": "Contoso Field Service",
+      "purpose": "Document generation",
+      "status": "Active"
+    }
+  ],
+  "externalIntegrations": [
+    {
+      "name": "Billing API",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Work order completion",
+      "dataExchanged": "Invoices",
+      "connector": "HTTP"
+    },
+    {
+      "name": "Mapping Service",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Dispatch",
+      "dataExchanged": "Routes & ETAs",
+      "connector": "Custom Connector"
+    }
+  ],
+  "summary": {
+    "totalAzureComponents": 6,
+    "byType": {
+      "logicApp": 2,
+      "function": 2,
+      "externalIntegration": 2
+    },
+    "byTrigger": {
+      "HTTP": 2,
+      "scheduled": 1,
+      "event": 3
+    },
+    "byDirection": {
+      "Outbound": 4,
+      "Internal": 2
+    }
+  }
+}

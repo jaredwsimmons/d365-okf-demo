@@ -4,60 +4,70 @@
       "formId": "frm-workorder-main",
       "name": "Work Order",
       "solution": "ContosoFieldService",
+      "entity": "con_workorder",
       "tags": {}
     },
     {
       "formId": "frm-servicevisit-main",
       "name": "Service Visit",
       "solution": "ContosoFieldService",
+      "entity": "con_servicevisit",
       "tags": {}
     },
     {
       "formId": "frm-agreement-main",
       "name": "Service Agreement",
       "solution": "ContosoFieldService",
+      "entity": "con_agreement",
       "tags": {}
     },
     {
       "formId": "frm-asset-main",
       "name": "Customer Asset",
       "solution": "ContosoFieldService",
+      "entity": "con_asset",
       "tags": {}
     },
     {
       "formId": "frm-technician-main",
       "name": "Technician",
       "solution": "ContosoFieldService",
+      "entity": "con_technician",
       "tags": {}
     },
     {
       "formId": "frm-inspection-main",
       "name": "Inspection",
       "solution": "ContosoFieldService",
+      "entity": "con_inspection",
       "tags": {}
     },
     {
       "formId": "frm-quote-main",
       "name": "Quote",
       "solution": "ContosoSales",
+      "entity": "con_quote",
       "tags": {}
     },
     {
       "formId": "frm-project-main",
       "name": "Installation Project",
       "solution": "ContosoSales",
+      "entity": "con_project",
       "tags": {}
     },
     {
       "formId": "frm-invoice-main",
       "name": "Invoice",
       "solution": "ContosoCore",
+      "entity": "con_invoice",
       "tags": {}
     },
     {
       "formId": "frm-account-fs",
       "name": "Account (Field Service)",
       "solution": "ContosoCore",
+      "entity": "account",
       "tags": {}
     }
   ]

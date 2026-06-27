@@ -1,0 +1,269 @@
+/* ============================================================================
+ * CoE Dashboard — global styles
+ * ============================================================================
+ *
+ * Self-contained Tailwind v4 base + design tokens (previously layered on top of
+ * an external SDK). Brand colors are generic, neutral defaults intended to be
+ * overridden per implementation.
+ *
+ * Layers in this file:
+ *   - Tailwind v4 base + theme bridge (semantic tokens -> color utilities)
+ *   - :root light tokens + .dark overrides
+ *   - brand-* aliases (consumed by app components for accent surfaces)
+ *   - palette-*, pill-*, dot-*, status-*, heat-*, perm-*, level-* app palette
+ *   - ERD highlight/fade selectors
+ *   - .list-item-base / .list-item-selected / .card-grid-outer utilities
+ *   - .custom-scroll thin scrollbar
+ * ============================================================================ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Generic brand defaults — override per implementation. */
+  --brand-primary: #1e293b;
+  --brand-accent: #4f46e5;
+  --brand-secondary: #0ea5e9;
+}
+
+@theme {
+  /* Brand aliases — app components use bg-brand-accent / bg-brand-primary /
+     bg-brand-secondary. Resolve to the generic brand primitives above. */
+  --color-brand-accent: var(--brand-accent, #4f46e5);
+  --color-brand-primary: var(--brand-primary, #1e293b);
+  --color-brand-secondary: var(--brand-secondary, #0ea5e9);
+
+  /* App palette */
+  --color-palette-dark: #26240a;
+  --color-palette-umber: #594f1e;
+  --color-palette-cream: #a6986d;
+  --color-palette-sienna: #735634;
+  --color-palette-tan: #a6866a;
+
+  /* Catalog coverage dots (process catalog L1–L5) */
+  --color-dot-l1: #f43f5e;
+  --color-dot-l2: #f97316;
+  --color-dot-l3: #fcd34d;
+  --color-dot-l4: #10b981;
+  --color-dot-l5: #3b82f6;
+  --color-dot-empty: #d1d5db;
+
+  /* Pill / badge semantic colors */
+  --color-pill-info: #6b7280;
+  --color-pill-secondary: #6b7280;
+  --color-pill-alt: #6b7280;
+  --color-pill-core: #6b498f;
+  --color-pill-service: var(--brand-primary, #1e293b);
+  --color-pill-construction: var(--brand-secondary, #0ea5e9);
+  --color-pill-general: #6b7280;
+  --color-pill-cdm: #0078d4;
+
+  /* Status indicator colors */
+  --color-status-high: #f43f5e;
+  --color-status-medium: #f59e0b;
+  --color-status-low: #10b981;
+
+  /* Heat map stops (capability map) — blue → red for increasing density */
+  --color-heat-zero: #ffffff;
+  --color-heat-zero-text: #ffffff;
+  --color-heat-1: #3b82f6; /* blue (L5 dot) */
+  --color-heat-2: #10b981; /* green (L4 dot) */
+  --color-heat-3: #fcd34d; /* yellow (L3 dot) */
+  --color-heat-4: #f97316; /* orange (L2 dot) */
+  --color-heat-5: #f43f5e; /* red (L1 dot) */
+
+  /* Security permissions (CRUD+AS) */
+  --color-perm-create: #67686a;
+  --color-perm-read: #67686a;
+  --color-perm-write: #67686a;
+  --color-perm-delete: #67686a;
+  --color-perm-append: #67686a;
+  --color-perm-share: #67686a;
+
+  /* Security access levels */
+  --color-level-global-bg: #a0522d;
+  --color-level-deep-bg: #ff9800;
+  --color-level-local-bg: #d2b48c;
+  --color-level-basic-bg: #f5deb3;
+}
+
+/* Dark theme — full surface + sidebar overrides. */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Full-graph ERD — D3 highlight/fade states */
+.erd-node-hl circle { stroke-width: 3px; filter: drop-shadow(0 0 4px rgba(0,46,86,0.4)); }
+.erd-node-hl text { font-weight: 600; }
+.erd-node-fade circle { opacity: 0.1; }
+.erd-node-fade text { opacity: 0.06; }
+.erd-link-hl { stroke-opacity: 0.85 !important; stroke-width: 2px !important; }
+.erd-link-fade { stroke-opacity: 0.04 !important; }
+
+/* UI standardization utilities */
+@layer components {
+  .list-item-base {
+    @apply border-l-2 border-l-transparent px-3 py-2.5 cursor-pointer hover:bg-accent/50 transition-colors;
+  }
+  .list-item-selected {
+    @apply border-l-primary bg-accent;
+  }
+  .card-grid-outer {
+    @apply p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3;
+  }
+}
+
+/* Custom thin scrollbar matching Radix ScrollArea style */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-scroll::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.custom-scroll::-webkit-scrollbar-corner {
+  display: none;
+}
+.custom-scroll::-webkit-scrollbar-button:start:decrement,
+.custom-scroll::-webkit-scrollbar-button:end:increment {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+/* Firefox */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  overflow: overlay;
+}

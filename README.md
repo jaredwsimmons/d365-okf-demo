@@ -1,40 +1,53 @@
 # D365 OKF Demo
 
-A **public, fully-synthetic** demonstration of the
-[Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
-(OKF) bundle + self-contained viewer produced by
-[D365OKFApp](https://github.com/jaredwsimmons/D365OKFApp).
+A **public, fully-synthetic** deployment of the **D365 OKF dashboard** — the real
+interactive app (entity ERD, dependency graphs, sitemaps, process catalog,
+governance, capability map, …) running as a **static site** on GitHub Pages, with
+**no database and no server**.
 
-Every record here belongs to a made-up company — **Contoso**, a fictional field-service
-business (publisher prefix `con_`). **No real customer data.** It exists to prove the
-end-to-end publish path: synthetic data → OKF markdown bundle → GitHub Pages.
+Every record belongs to a made-up company — **Contoso**, a fictional field-service
+business (publisher prefix `con_`). **No real customer data.**
 
 **Live site:** `https://jaredwsimmons.github.io/d365-okf-demo/`
 
-## What's here
+## How it works
+
+The dashboard normally talks to a Postgres-backed API. For this static demo, every
+GET API response was pre-rendered to JSON once and committed:
 
 ```
-data/                 synthetic Contoso seeds (entities, forms, views, automations, …)
-scripts/okf/          the database-free OKF emitter + viewer (vendored from D365OKFApp)
-.github/workflows/    emit the bundle and deploy it to Pages
+public/api-snapshot/v1/**.json   the baked Contoso API responses the app reads
+data/**.json                     the raw synthetic Contoso seeds they were built from
+src/**                           the real dashboard UI (Next.js + React)
+scripts/static/build-static.mjs  static-export wrapper (output: "export")
+scripts/okf/build-snapshot.mjs   regenerates the snapshots from a seeded DB
 ```
 
-The published site is `okf-bundle/_viewer.html` (served as `index.html`): a
-dependency-free browser with search, type filter, clickable relationships, and a
-blast-radius graph. Nothing leaves the page.
+At build time the app is exported with `output: "export"` and
+`NEXT_PUBLIC_STATIC=1`, which switches the client's fetch layer to read the
+committed snapshots (and run search / list-filtering in the browser). Writes
+(curation, diagram upload) are accepted as no-ops — it's a read-only showcase.
 
-## Run it locally
+## Build it locally
 
 ```bash
 npm install
-DATA_DIR=data npm run okf:bundle   # -> okf-bundle/ (+ _viewer.html)
+npm run build:static     # -> out/  (static site)
+npx serve out            # open http://localhost:3000/
 ```
 
-Open `okf-bundle/_viewer.html` in a browser.
+## Regenerate the Contoso snapshots (optional)
 
-## Relation to the real tool
+Only needed if you change `data/`:
 
-The real pipeline ([D365OKFApp](https://github.com/jaredwsimmons/D365OKFApp)) starts
-from unpacked Dataverse solution XML and runs a PowerShell extract before this same
-emitter. This demo skips that step and feeds the emitter hand-authored JSON, so it can
-run anywhere (no PowerShell, no database) and expose nothing real.
+```bash
+npm run db:setup                       # docker Postgres + schema + seed from data/
+DATABASE_URL=...coe_contoso npm run dev # start the app in DB mode (port 3100)
+npm run snapshot                       # crawl every endpoint -> public/api-snapshot
+```
+
+## Relation to the product
+
+The OKF dashboard itself lives in
+[D365OKFApp](https://github.com/jaredwsimmons/D365OKFApp); this repo is just a
+public Contoso deployment of it.

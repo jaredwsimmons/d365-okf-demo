@@ -1,0 +1,1 @@
+{"items":[{"id":"mob-technician","name":"Field Technician Offline","tags":{},"entities":["con_workorder","con_servicevisit","con_asset","con_inspection"],"solution":"ContosoFieldService","entityCount":4}],"metadata":{"type":"mobileOffline","total":1,"page":1,"limit":100000,"hasMore":false}}
