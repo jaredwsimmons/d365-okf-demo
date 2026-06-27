@@ -773,10 +773,42 @@ export interface DashboardData {
   webResourceCodeAnalysis: WebResourceCodeAnalysisData | null;
   orphanedComponents: OrphanedComponentsData | null;
   governanceFindings: GovernanceFindingsData | null;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  environmentDrift: any | null;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  environmentComponentMatrix: any | null;
+  environmentDrift: EnvironmentDriftData | null;
+  environmentComponentMatrix: EnvironmentComponentMatrixData | null;
+}
+
+/** One solution's per-environment component drift (Solution Explorer tab). */
+export interface EnvironmentSolutionDiff {
+  solution: string;
+  version: Record<string, string>;
+  presentIn: string[];
+  totalComponentCounts: Record<string, number>;
+  typeDiffs: { type: string; counts: Record<string, number> }[];
+  totalDiffCount: number;
+}
+
+export interface EnvironmentPresenceGap {
+  solution: string;
+  isCore?: boolean;
+  isManaged?: boolean;
+  presentIn: string[];
+  absentFrom: string[];
+  componentCount?: Record<string, number>;
+}
+
+export interface EnvironmentComponentMatrixData {
+  metadata: { environments?: string[] } & Record<string, unknown>;
+  coreSolutionDiffs: EnvironmentSolutionDiff[];
+  nonCoreSolutionDiffs: EnvironmentSolutionDiff[];
+  presenceGaps: EnvironmentPresenceGap[];
+}
+
+export interface EnvironmentDriftData {
+  metadata: Record<string, unknown>;
+  summary: { environments: number; findings: number } & Record<string, unknown>;
+  findings: Array<Record<string, unknown>>;
+  playbook: Record<string, unknown>;
+  categories: Record<string, unknown>;
 }
 
 export interface GovernanceFinding {
