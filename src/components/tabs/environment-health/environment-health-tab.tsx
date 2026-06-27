@@ -11,7 +11,7 @@ import { StatsBar } from "@/components/shared/stats-bar";
 import { EmptyState } from "@/components/shared/empty-state";
 import { SplitPaneLayout } from "@/components/shared/split-pane-layout";
 import { TYPE_LABELS } from "@/lib/constants";
-import { TAB_ID_BY_TYPE_NAME, API_KEY_BY_TYPE_NAME } from "@/lib/inventory-types";
+import { resolveTypeRouting } from "@/lib/inventory-types";
 import { Input } from "@/components/ui";
 import { Badge } from "@/components/ui";
 import { Separator } from "@/components/ui";
@@ -389,8 +389,7 @@ function SolutionDetail({
       type: c.type,
       itemId: c.id,
       searchName: c.id,
-      dataKey: API_KEY_BY_TYPE_NAME[c.type] ?? c.type.toLowerCase(),
-      tabId: TAB_ID_BY_TYPE_NAME[c.type] ?? c.type.toLowerCase(),
+      ...resolveTypeRouting(c.type),
       solution: solution.name,
       tags: (c.tags || {}) as import("@/types/inventory").Tags,
       sub: "",

@@ -1,4 +1,5 @@
 import { listItems } from "@/lib/services/inventory-service";
+import { parseListParams } from "@/lib/api-utils";
 
 export async function GET(
   request: Request,
@@ -7,16 +8,8 @@ export async function GET(
   try {
     const { type } = await params;
     const url = new URL(request.url);
-    const page = url.searchParams.get("page");
-    const limit = url.searchParams.get("limit");
 
-    const result = await listItems(type, {
-      page: page ? parseInt(page, 10) : undefined,
-      limit: limit ? parseInt(limit, 10) : undefined,
-      solution: url.searchParams.get("solution") ?? undefined,
-      search: url.searchParams.get("search") ?? undefined,
-      entity: url.searchParams.get("entity") ?? undefined,
-    });
+    const result = await listItems(type, parseListParams(url.searchParams));
 
     return Response.json(result);
   } catch (err) {

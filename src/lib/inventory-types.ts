@@ -61,3 +61,16 @@ export const API_KEY_BY_TYPE_NAME: Record<string, string> = Object.fromEntries(
 export const TAB_ID_BY_TYPE_NAME: Record<string, string> = Object.fromEntries(
   INVENTORY_TYPES.map((t) => [t.typeName, t.tabId]),
 );
+
+/**
+ * Resolve a component typeName to its inventory routing identifiers
+ * ({ dataKey, tabId }) via the canonical maps. NEVER lowercases the type
+ * (see commit 80bb117) — `"PluginStep".toLowerCase()` is `"pluginstep"` but the
+ * tab id is `"pluginsteps"`, so lowercasing silently mis-routes. For an
+ * unregistered type it degrades to the raw type (a nav no-op) rather than a
+ * plausible-but-wrong tab. Use this everywhere instead of inlining the lookup.
+ */
+export function resolveTypeRouting(typeName: string): { dataKey: string; tabId: string } {
+  const dataKey = API_KEY_BY_TYPE_NAME[typeName] ?? typeName;
+  return { dataKey, tabId: TAB_ID_BY_TYPE_NAME[typeName] ?? dataKey };
+}

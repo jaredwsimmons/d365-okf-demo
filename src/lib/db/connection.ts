@@ -40,9 +40,15 @@ function buildPoolConfig(): PoolConfig {
     return config;
   }
 
+  if (!process.env.DATABASE_URL && process.env.NODE_ENV === "production") {
+    throw new Error(
+      "DATABASE_URL must be set in production — no hardcoded connection string is used.",
+    );
+  }
   return {
     connectionString:
       process.env.DATABASE_URL ||
+      // Dev-only convenience default; production requires DATABASE_URL (guarded above).
       "postgresql://postgres:postgres@localhost:5432/coe_dashboard",
   };
 }

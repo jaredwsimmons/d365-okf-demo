@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback } from "react";
 import { useBulkEdit } from "@/hooks/use-bulk-edit";
 import { useDashboard } from "@/lib/dashboard-context";
 import type { ComponentIndex, IndexedComponent } from "@/lib/component-index";
-import { TAB_ID_BY_TYPE_NAME, API_KEY_BY_TYPE_NAME } from "@/lib/inventory-types";
+import { resolveTypeRouting } from "@/lib/inventory-types";
 import { useProcessCatalog, useProcessCatalogComponents, useProcessNodeComponents } from "@/hooks/use-inventory-api";
 import type { ProcessCatalog } from "@/types/inventory";
 import { Input } from "@/components/ui";
@@ -80,8 +80,7 @@ export function ProcessCatalogTab() {
       type: c.type,
       itemId: c.id,
       searchName: c.id,
-      dataKey: API_KEY_BY_TYPE_NAME[c.type] ?? c.type.toLowerCase(),
-      tabId: TAB_ID_BY_TYPE_NAME[c.type] ?? c.type.toLowerCase(),
+      ...resolveTypeRouting(c.type),
       solution: c.solution || "",
       tags: (c.tags || {}) as import("@/types/inventory").Tags,
       sub: c.solution || "",

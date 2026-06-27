@@ -30,13 +30,17 @@ async function loadProcessDiagrams(): Promise<ProcessDiagrams> {
 
 async function saveProcessDiagrams(data: ProcessDiagrams, changed?: { code: string; entry: { url: string; title?: string } | null }): Promise<boolean> {
   try {
-    diagramCache = data;
-    if (!changed) return true;
+    if (!changed) {
+      diagramCache = data;
+      return true;
+    }
     if (changed.entry === null) {
       await deleteProcessDiagram(changed.code);
     } else {
       await saveProcessDiagram(changed.code, changed.entry.url, changed.entry.title);
     }
+    // Only update the shared cache after the write actually succeeds.
+    diagramCache = data;
     return true;
   } catch { return false; }
 }

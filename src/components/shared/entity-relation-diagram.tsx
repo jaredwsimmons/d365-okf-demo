@@ -244,9 +244,11 @@ function DiagramCanvas({
     const simNodes = graphNodes.map(n => ({ ...n }));
     const simLinks = graphLinks.map(l => ({ ...l }));
 
-    const center = simNodes.find(n => n.isCenter)!;
-    center.fx = W / 2;
-    center.fy = H / 2;
+    const center = simNodes.find(n => n.isCenter);
+    if (center) {
+      center.fx = W / 2;
+      center.fy = H / 2;
+    }
 
     const sim = d3.forceSimulation<GraphNode>(simNodes)
       .alphaDecay(0.04)

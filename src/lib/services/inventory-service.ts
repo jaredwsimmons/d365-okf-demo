@@ -211,20 +211,26 @@ export async function getItem(type: string, id: string) {
 // ─── Summary ───────────────────────────────────────────────────────
 
 export async function getSummary() {
-  const counts: Record<string, number> = {};
+  // Per-table counts — parallelized (was 20 sequential round-trips).
+  const countEntries = await Promise.all(
+    Object.entries(TABLE_MAP).map(async ([type, config]) => {
+      const [totalRow] = await db.select({ total: count() }).from(config.drizzleTable);
+      return [type, Number(totalRow!.total)] as const;
+    }),
+  );
+  const counts: Record<string, number> = Object.fromEntries(countEntries);
 
-  for (const [type, config] of Object.entries(TABLE_MAP)) {
-    const [totalRow] = await db
-      .select({ total: count() })
-      .from(config.drizzleTable);
-    counts[type] = Number(totalRow!.total);
-  }
-
-  // Governance score
-  const findings = await db.select().from(schema.governanceFindings);
+  // Governance score — aggregate severities in SQL instead of scanning the table.
+  const severityRows = await db
+    .select({ severity: schema.governanceFindings.severity, n: count() })
+    .from(schema.governanceFindings)
+    .groupBy(schema.governanceFindings.severity);
   const bySeverity: Record<string, number> = {};
-  for (const f of findings) {
-    bySeverity[f.severity] = (bySeverity[f.severity] || 0) + 1;
+  let totalFindings = 0;
+  for (const r of severityRows) {
+    const n = Number(r.n);
+    bySeverity[r.severity] = n;
+    totalFindings += n;
   }
 
   // Last refresh
@@ -237,8 +243,8 @@ export async function getSummary() {
   return {
     counts,
     governance: {
-      score: findings.length > 0 ? Math.max(0, 100 - (bySeverity["high"] || 0) * 10 - (bySeverity["medium"] || 0) * 5 - (bySeverity["warning"] || 0) * 2) : 100,
-      totalFindings: findings.length,
+      score: totalFindings > 0 ? Math.max(0, 100 - (bySeverity["high"] || 0) * 10 - (bySeverity["medium"] || 0) * 5 - (bySeverity["warning"] || 0) * 2) : 100,
+      totalFindings,
       bySeverity,
     },
     lastRefresh: lastRefresh?.timestamp?.toISOString() || null,
@@ -349,14 +355,10 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
   }
 
   // Entity map field mappings (data mapping between entities)
-  const entityMapsFrom = await db
-    .select()
-    .from(schema.entityMaps)
-    .where(eq(schema.entityMaps.sourceEntity, logicalName));
-  const entityMapsTo = await db
-    .select()
-    .from(schema.entityMaps)
-    .where(eq(schema.entityMaps.targetEntity, logicalName));
+  const [entityMapsFrom, entityMapsTo] = await Promise.all([
+    db.select().from(schema.entityMaps).where(eq(schema.entityMaps.sourceEntity, logicalName)),
+    db.select().from(schema.entityMaps).where(eq(schema.entityMaps.targetEntity, logicalName)),
+  ]);
 
   if (entityMapsFrom.length > 0) {
     item._relEntityMapsFrom = entityMapsFrom.map((m) => ({
@@ -373,8 +375,14 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
     }));
   }
 
-  // Canvas apps referencing this entity
-  const canvasApps = await db.select().from(schema.canvasAppSources);
+  // Canvas apps referencing this entity — project only the columns used below.
+  const canvasApps = await db
+    .select({
+      name: schema.canvasAppSources.name,
+      displayName: schema.canvasAppSources.displayName,
+      entities: schema.canvasAppSources.entities,
+    })
+    .from(schema.canvasAppSources);
   const relevantCanvas = canvasApps.filter((ca) => {
     const entities = (ca.entities as Array<Record<string, unknown>>) || [];
     return entities.some((e) => (e.logicalName as string)?.toLowerCase() === logicalName.toLowerCase());
@@ -387,10 +395,13 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
     }));
   }
 
-  // Subgrids referencing this entity as a target
-  const formDetailsAll = await db.select().from(schema.formDetails);
+  // Subgrids referencing this entity as a target — scan tabs across all forms,
+  // projecting only formId + tabs (avoids loading every form's jsHandlers blob).
+  const formTabs = await db
+    .select({ formId: schema.formDetails.formId, tabs: schema.formDetails.tabs })
+    .from(schema.formDetails);
   const subgrids: { formId: string; targetEntity: string; label: string; tab: string }[] = [];
-  for (const fd of formDetailsAll) {
+  for (const fd of formTabs) {
     const tabs = (fd.tabs as Array<Record<string, unknown>>) || [];
     for (const tab of tabs) {
       const sections = (tab.sections as Array<Record<string, unknown>>) || [];
@@ -411,35 +422,43 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
   }
   if (subgrids.length > 0) item._relSubgrids = subgrids;
 
-  // JS handlers on forms for this entity
+  // JS handlers on this entity's forms — scope the form_details read to them
+  // instead of re-scanning every form.
   const entityFormIds = await db.select({ formId: schema.forms.formId })
     .from(schema.forms)
     .where(eq(schema.forms.entity, logicalName));
-  const formIds = new Set(entityFormIds.map((f) => f.formId));
+  const formIds = entityFormIds.map((f) => f.formId);
   const jsHandlers: { formId: string; event: string; library: string; function: string }[] = [];
-  for (const fd of formDetailsAll) {
-    if (!formIds.has(fd.formId)) continue;
-    const handlers = (fd.jsHandlers as Array<Record<string, unknown>>) || [];
-    for (const h of handlers) {
-      jsHandlers.push({
-        formId: fd.formId,
-        event: h.event as string,
-        library: h.library as string,
-        function: h.function as string,
-      });
+  if (formIds.length > 0) {
+    const handlerForms = await db
+      .select({ formId: schema.formDetails.formId, jsHandlers: schema.formDetails.jsHandlers })
+      .from(schema.formDetails)
+      .where(inArray(schema.formDetails.formId, formIds));
+    for (const fd of handlerForms) {
+      const handlers = (fd.jsHandlers as Array<Record<string, unknown>>) || [];
+      for (const h of handlers) {
+        jsHandlers.push({
+          formId: fd.formId,
+          event: h.event as string,
+          library: h.library as string,
+          function: h.function as string,
+        });
+      }
     }
   }
   if (jsHandlers.length > 0) item._relJsHandlers = jsHandlers;
 
-  // Plugin rules (HSL rules engine) tied to plugin steps on this entity
+  // Plugin rules (rules engine) tied to plugin steps on this entity
   const entityStepIds = await db
     .select({ pluginStepId: schema.relEntityPluginStep.pluginStepId })
     .from(schema.relEntityPluginStep)
     .where(eq(schema.relEntityPluginStep.entityName, logicalName));
   const stepIdSet = new Set(entityStepIds.map((s) => s.pluginStepId));
   if (stepIdSet.size > 0) {
-    const allConfigs = await db.select().from(schema.pluginConfigs);
-    const relevantConfigs = allConfigs.filter((c) => stepIdSet.has(c.stepId));
+    const relevantConfigs = await db
+      .select()
+      .from(schema.pluginConfigs)
+      .where(inArray(schema.pluginConfigs.stepId, [...stepIdSet]));
     if (relevantConfigs.length > 0) {
       item._relPluginRules = relevantConfigs.map((c) => ({
         stepName: c.stepName,
@@ -465,12 +484,12 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
 
   // Solution footprint — which solutions reference this entity via any component
   const solutionSet = new Set<string>();
-  const addSols = (rows: Array<{ solution: string | null }>) => {
-    for (const r of rows) if (r.solution) solutionSet.add(r.solution);
-  };
-  addSols(await db.select({ solution: schema.forms.solution }).from(schema.forms).where(eq(schema.forms.entity, logicalName)));
-  addSols(await db.select({ solution: schema.views.solution }).from(schema.views).where(eq(schema.views.entity, logicalName)));
-  addSols(await db.select({ solution: schema.pluginSteps.solution }).from(schema.pluginSteps).where(eq(schema.pluginSteps.entity, logicalName)));
+  const [formSols, viewSols, stepSols] = await Promise.all([
+    db.select({ solution: schema.forms.solution }).from(schema.forms).where(eq(schema.forms.entity, logicalName)),
+    db.select({ solution: schema.views.solution }).from(schema.views).where(eq(schema.views.entity, logicalName)),
+    db.select({ solution: schema.pluginSteps.solution }).from(schema.pluginSteps).where(eq(schema.pluginSteps.entity, logicalName)),
+  ]);
+  for (const r of [...formSols, ...viewSols, ...stepSols]) if (r.solution) solutionSet.add(r.solution);
   if (solutionSet.size > 0) item._relSolutionFootprint = Array.from(solutionSet).sort();
 
   // Option sets — names of option sets where this entity is referenced
@@ -558,12 +577,18 @@ async function enrichWorkflow(item: Record<string, unknown>) {
   const name = (item.name as string) || "";
   const normalizedName = name.replace(/[\s|_-]+/g, "");
 
-  // Environment variables — match by normalized name
-  const allWfEv = await db.select().from(schema.relWorkflowEnvVar);
-  const wfEnvVars = allWfEv.filter((e) =>
-    e.workflowName === name || e.workflowName === normalizedName ||
-    e.workflowName.startsWith(normalizedName.substring(0, 50))
-  );
+  // Environment variables — match by normalized name, pushed to SQL so it hits
+  // idx_rel_wf_ev_workflow instead of scanning the whole junction table.
+  // Escape LIKE metachars in the prefix so it behaves like startsWith().
+  const evPrefix = normalizedName.substring(0, 50).replace(/[\\%_]/g, (c) => `\\${c}`);
+  const wfEnvVars = await db
+    .select()
+    .from(schema.relWorkflowEnvVar)
+    .where(or(
+      eq(schema.relWorkflowEnvVar.workflowName, name),
+      eq(schema.relWorkflowEnvVar.workflowName, normalizedName),
+      like(schema.relWorkflowEnvVar.workflowName, `${evPrefix}%`),
+    ));
   if (wfEnvVars.length > 0) {
     item._relEnvVars = wfEnvVars.map((e) => e.envVarSchema);
   }
@@ -629,9 +654,9 @@ async function enrichWebResource(item: Record<string, unknown>, name: string) {
     item._isRulesEngine = code.isRulesEngine;
   }
 
-  // Rules-engine linkage: `.hslrules` web resources are consumed by plugin steps
-  // named `RulesEngine Action for {Message} of {entity} (Namespace={ns})`. Parse
-  // entity + namespace from the file path and match against plugin_configs + plugin_steps.
+  // Rules-engine linkage: `.hslrules` web resources are consumed by
+  // plugin steps named `RulesEngine Action for {Message} of {entity} (Namespace={ns})`.
+  // Parse entity + namespace from the file path and match against plugin_configs + plugin_steps.
   // Pattern: `<prefix>/entityrules/{namespace}/{entity}.hslrules` (also `.hslrules.data.xml`
   // and companion `_{GUID}.js` wrappers live in the same folder).
   const rulesMatch = /entityrules\/([^/]+)\/([^/]+?)(?:\.hslrules(?:\.data\.xml)?|_[a-f0-9]{32}\.js|_[a-f0-9-]{36}\.js)$/i.exec(name);

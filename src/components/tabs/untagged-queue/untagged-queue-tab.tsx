@@ -14,7 +14,7 @@ import type { IndexedComponent } from "@/lib/component-index";
 import { useUntagged } from "@/hooks/use-inventory-api";
 import { ExplorerSkeleton } from "@/components/shared/loading-states";
 import { TYPE_ORDER, TYPE_LABELS } from "@/lib/constants";
-import { TAB_ID_BY_TYPE_NAME, API_KEY_BY_TYPE_NAME } from "@/lib/inventory-types";
+import { resolveTypeRouting } from "@/lib/inventory-types";
 
 type GapFilter = "all" | "bpc" | "orphaned";
 
@@ -46,8 +46,7 @@ export function UntaggedQueueTab() {
         type: item.type as string,
         itemId: item.id as string,
         searchName: item.id as string,
-        dataKey: API_KEY_BY_TYPE_NAME[item.type as string] ?? (item.type as string).toLowerCase(),
-        tabId: TAB_ID_BY_TYPE_NAME[item.type as string] ?? (item.type as string).toLowerCase(),
+        ...resolveTypeRouting(item.type as string),
         solution: item.solution as string || "",
         tags: {},
         sub: "",
