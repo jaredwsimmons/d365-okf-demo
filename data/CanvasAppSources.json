@@ -1,0 +1,219 @@
+{
+  "apps": [
+    {
+      "name": "con_contosoFieldQuoteCapture",
+      "displayName": "Contoso Field Quote Capture",
+      "description": "Canvas app for Contoso Field Quote Capture.",
+      "solution": "ContosoSales",
+      "formFactor": "Phone",
+      "entityCount": 4,
+      "connectorCount": 2,
+      "entities": [
+        "opportunity",
+        "quote",
+        "quotedetail",
+        "product"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoServiceCoeInsights",
+      "displayName": "Contoso Service CoE Insights",
+      "description": "Canvas app for Contoso Service CoE Insights.",
+      "solution": "ContosoCustomerService",
+      "formFactor": "Tablet",
+      "entityCount": 3,
+      "connectorCount": 2,
+      "entities": [
+        "con_servicefeedback",
+        "con_casedeflection",
+        "con_escalation"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoFieldServiceMobile",
+      "displayName": "Contoso Field Service Mobile",
+      "description": "Canvas app for Contoso Field Service Mobile.",
+      "solution": "ContosoFieldService",
+      "formFactor": "Phone",
+      "entityCount": 4,
+      "connectorCount": 2,
+      "entities": [
+        "msdyn_workorder",
+        "bookableresourcebooking",
+        "con_safetyinspection",
+        "msdyn_timeentry"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoTimeExpenseCapture",
+      "displayName": "Contoso Time & Expense Capture",
+      "description": "Canvas app for Contoso Time & Expense Capture.",
+      "solution": "ContosoProjectOperations",
+      "formFactor": "Tablet",
+      "entityCount": 4,
+      "connectorCount": 2,
+      "entities": [
+        "msdyn_timeentry",
+        "msdyn_expense",
+        "msdyn_project",
+        "msdyn_projecttask"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoEventCheckIn",
+      "displayName": "Contoso Event Check-in",
+      "description": "Canvas app for Contoso Event Check-in.",
+      "solution": "ContosoMarketing",
+      "formFactor": "Tablet",
+      "entityCount": 3,
+      "connectorCount": 2,
+      "entities": [
+        "msevtmgt_event",
+        "msevtmgt_eventregistration",
+        "contact"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_consentStewardPortal",
+      "displayName": "Consent Steward Portal",
+      "description": "Canvas app for Consent Steward Portal.",
+      "solution": "ContosoCustomerInsights",
+      "formFactor": "Tablet",
+      "entityCount": 2,
+      "connectorCount": 2,
+      "entities": [
+        "con_consentledger",
+        "msdynci_customerprofile"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_capexRequestIntake",
+      "displayName": "Capex Request Intake",
+      "description": "Canvas app for Capex Request Intake.",
+      "solution": "ContosoFinance",
+      "formFactor": "Tablet",
+      "entityCount": 1,
+      "connectorCount": 2,
+      "entities": [
+        "con_capexrequest"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoWarehouseCount",
+      "displayName": "Contoso Warehouse Count (Canvas)",
+      "description": "Canvas app for Contoso Warehouse Count (Canvas).",
+      "solution": "ContosoSupplyChain",
+      "formFactor": "Tablet",
+      "entityCount": 3,
+      "connectorCount": 2,
+      "entities": [
+        "con_inventorycount",
+        "msdyn_releasedproduct",
+        "msdyn_inventwarehouse"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoCurbsideConcierge",
+      "displayName": "Contoso Curbside Concierge",
+      "description": "Canvas app for Contoso Curbside Concierge.",
+      "solution": "ContosoCommerce",
+      "formFactor": "Tablet",
+      "entityCount": 3,
+      "connectorCount": 2,
+      "entities": [
+        "con_curbsideorder",
+        "msdyn_retailstore",
+        "msdyn_retailtransaction"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoTalentMarketplace",
+      "displayName": "Contoso Talent Marketplace",
+      "description": "Canvas app for Contoso Talent Marketplace.",
+      "solution": "ContosoHumanResources",
+      "formFactor": "Tablet",
+      "entityCount": 4,
+      "connectorCount": 2,
+      "entities": [
+        "con_skill",
+        "con_workerskill",
+        "cdm_position",
+        "cdm_worker"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_contosoSupervisorCoaching",
+      "displayName": "Contoso Supervisor Coaching",
+      "description": "Canvas app for Contoso Supervisor Coaching.",
+      "solution": "ContosoContactCenter",
+      "formFactor": "Tablet",
+      "entityCount": 2,
+      "connectorCount": 2,
+      "entities": [
+        "con_agentcoachingnote",
+        "msdyn_agentstatushistory"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    },
+    {
+      "name": "con_makerAttestation",
+      "displayName": "Maker Attestation (Canvas)",
+      "description": "Canvas app for Maker Attestation (Canvas).",
+      "solution": "ContosoPlatformGovernance",
+      "formFactor": "Tablet",
+      "entityCount": 2,
+      "connectorCount": 2,
+      "entities": [
+        "con_coecomplianceattestation",
+        "con_environmentinventory"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Users"
+      ]
+    }
+  ]
+}

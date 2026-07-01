@@ -1,0 +1,1 @@
+{"item":{"id":"plg-contosobudgetrollupplugin","name":"ContosoBudgetRollupPlugin","tags":{},"solution":"ContosoMarketing","businessLogic":"Post-operation plugin that recalculates committed vs requested budget on con_campaignbrief by aggregating related F&O virtual spend lines whenever a spend line is associated."},"metadata":{"type":"plugins","id":"plg-contosobudgetrollupplugin"}}

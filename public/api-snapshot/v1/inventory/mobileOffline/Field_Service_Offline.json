@@ -1,0 +1,1 @@
+{"item":{"id":"mob-fieldService","name":"Field Service Offline","tags":{},"entities":["msdyn_workorder","msdyn_workorderproduct","msdyn_workorderservice","msdyn_incidenttype","bookableresource","bookableresourcebooking"],"solution":"ContosoFieldService","entityCount":6},"metadata":{"type":"mobileOffline","id":"Field Service Offline"}}

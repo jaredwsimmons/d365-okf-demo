@@ -1,0 +1,1 @@
+{"item":{"id":"plg-retailtransactiontotalsplugin","name":"RetailTransactionTotalsPlugin","tags":{},"solution":"ContosoCommerce","businessLogic":"On create/update of a sales or payment line, recalculates the parent transaction's msdyn_totalamount and msdyn_grosstotal and flags over-tendered transactions."},"metadata":{"type":"plugins","id":"plg-retailtransactiontotalsplugin"}}

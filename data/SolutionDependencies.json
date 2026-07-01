@@ -7,7 +7,73 @@
       "isManaged": false,
       "publisher": "Contoso",
       "publisherPrefix": "con",
-      "description": "Core tables, option sets, and shared configuration.",
+      "description": "Shared tables, option sets, and cross-cutting configuration.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_SalesPro",
+      "displayName": "msdyn_SalesPro",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Sales.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoSales",
+      "displayName": "Contoso Sales",
+      "version": "1.0.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Sales.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdyn_SalesPro"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_CustomerService",
+      "displayName": "msdyn_CustomerService",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Customer Service.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoCustomerService",
+      "displayName": "Contoso Customer Service",
+      "version": "1.1.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Customer Service.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdyn_CustomerService"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_FieldService",
+      "displayName": "msdyn_FieldService",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Field Service.",
       "dependsOn": [],
       "dependencyCount": 0,
       "missingDependencyCount": 0
@@ -19,51 +85,413 @@
       "isManaged": false,
       "publisher": "Contoso",
       "publisherPrefix": "con",
-      "description": "Work orders, agreements, assets, technicians, inspections.",
+      "description": "Contoso customizations layered over Field Service.",
       "dependsOn": [
-        "ContosoCore"
+        "ContosoCore",
+        "msdyn_FieldService"
       ],
-      "dependencyCount": 1,
+      "dependencyCount": 2,
       "missingDependencyCount": 0
     },
     {
-      "uniqueName": "ContosoSales",
-      "displayName": "Contoso Sales",
-      "version": "1.1.0.0",
+      "uniqueName": "msdyn_ProjectServiceCore",
+      "displayName": "msdyn_ProjectServiceCore",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Project Operations.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoProjectOperations",
+      "displayName": "Contoso Project Operations",
+      "version": "1.3.0.0",
       "isManaged": false,
       "publisher": "Contoso",
       "publisherPrefix": "con",
-      "description": "Quotes and installation projects.",
+      "description": "Contoso customizations layered over Project Operations.",
       "dependsOn": [
-        "ContosoCore"
+        "ContosoCore",
+        "msdyn_ProjectServiceCore"
       ],
-      "dependencyCount": 1,
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdynmkt_CustomerInsightsJourneys",
+      "displayName": "msdynmkt_CustomerInsightsJourneys",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Customer Insights - Journeys (Marketing).",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoMarketing",
+      "displayName": "Contoso Marketing",
+      "version": "1.4.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Customer Insights - Journeys (Marketing).",
+      "dependsOn": [
+        "ContosoCore",
+        "msdynmkt_CustomerInsightsJourneys"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdynci_CustomerInsights",
+      "displayName": "msdynci_CustomerInsights",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Customer Insights - Data (CDP).",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoCustomerInsights",
+      "displayName": "Contoso Customer Insights",
+      "version": "1.5.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Customer Insights - Data (CDP).",
+      "dependsOn": [
+        "ContosoCore",
+        "msdynci_CustomerInsights"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_FinanceAndOperations",
+      "displayName": "msdyn_FinanceAndOperations",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Finance.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoFinance",
+      "displayName": "Contoso Finance",
+      "version": "1.6.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Finance.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdyn_FinanceAndOperations"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_SupplyChain",
+      "displayName": "msdyn_SupplyChain",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Supply Chain Management.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoSupplyChain",
+      "displayName": "Contoso Supply Chain",
+      "version": "1.7.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Supply Chain Management.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdyn_SupplyChain"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_Commerce",
+      "displayName": "msdyn_Commerce",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Commerce.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoCommerce",
+      "displayName": "Contoso Commerce",
+      "version": "1.8.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Commerce.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdyn_Commerce"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdynhr_HumanResources",
+      "displayName": "msdynhr_HumanResources",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Human Resources.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoHumanResources",
+      "displayName": "Contoso Human Resources",
+      "version": "1.9.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Human Resources.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdynhr_HumanResources"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "msdyn_OmnichannelBase",
+      "displayName": "msdyn_OmnichannelBase",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Contact Center / Omnichannel.",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoContactCenter",
+      "displayName": "Contoso Contact Center",
+      "version": "1.10.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Contact Center / Omnichannel.",
+      "dependsOn": [
+        "ContosoCore",
+        "msdyn_OmnichannelBase"
+      ],
+      "dependencyCount": 2,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "CenterofExcellenceCoreComponents",
+      "displayName": "CenterofExcellenceCoreComponents",
+      "version": "9.0.0.0",
+      "isManaged": true,
+      "publisher": "Microsoft Dynamics 365",
+      "publisherPrefix": "msdyn",
+      "description": "Managed base solution for Platform & Governance (shared core).",
+      "dependsOn": [],
+      "dependencyCount": 0,
+      "missingDependencyCount": 0
+    },
+    {
+      "uniqueName": "ContosoPlatformGovernance",
+      "displayName": "Contoso Platform Governance",
+      "version": "1.11.0.0",
+      "isManaged": false,
+      "publisher": "Contoso",
+      "publisherPrefix": "con",
+      "description": "Contoso customizations layered over Platform & Governance (shared core).",
+      "dependsOn": [
+        "ContosoCore",
+        "CenterofExcellenceCoreComponents"
+      ],
+      "dependencyCount": 2,
       "missingDependencyCount": 0
     }
   ],
   "dependencies": [
     {
+      "from": "ContosoSales",
+      "to": "ContosoCore",
+      "componentCount": 6
+    },
+    {
+      "from": "ContosoSales",
+      "to": "msdyn_SalesPro",
+      "componentCount": 15
+    },
+    {
+      "from": "ContosoCustomerService",
+      "to": "ContosoCore",
+      "componentCount": 6
+    },
+    {
+      "from": "ContosoCustomerService",
+      "to": "msdyn_CustomerService",
+      "componentCount": 15
+    },
+    {
       "from": "ContosoFieldService",
+      "to": "ContosoCore",
+      "componentCount": 6
+    },
+    {
+      "from": "ContosoFieldService",
+      "to": "msdyn_FieldService",
+      "componentCount": 17
+    },
+    {
+      "from": "ContosoProjectOperations",
+      "to": "ContosoCore",
+      "componentCount": 5
+    },
+    {
+      "from": "ContosoProjectOperations",
+      "to": "msdyn_ProjectServiceCore",
+      "componentCount": 15
+    },
+    {
+      "from": "ContosoMarketing",
+      "to": "ContosoCore",
+      "componentCount": 7
+    },
+    {
+      "from": "ContosoMarketing",
+      "to": "msdynmkt_CustomerInsightsJourneys",
+      "componentCount": 16
+    },
+    {
+      "from": "ContosoCustomerInsights",
+      "to": "ContosoCore",
+      "componentCount": 6
+    },
+    {
+      "from": "ContosoCustomerInsights",
+      "to": "msdynci_CustomerInsights",
+      "componentCount": 15
+    },
+    {
+      "from": "ContosoFinance",
+      "to": "ContosoCore",
+      "componentCount": 6
+    },
+    {
+      "from": "ContosoFinance",
+      "to": "msdyn_FinanceAndOperations",
+      "componentCount": 15
+    },
+    {
+      "from": "ContosoSupplyChain",
+      "to": "ContosoCore",
+      "componentCount": 7
+    },
+    {
+      "from": "ContosoSupplyChain",
+      "to": "msdyn_SupplyChain",
+      "componentCount": 16
+    },
+    {
+      "from": "ContosoCommerce",
+      "to": "ContosoCore",
+      "componentCount": 8
+    },
+    {
+      "from": "ContosoCommerce",
+      "to": "msdyn_Commerce",
+      "componentCount": 18
+    },
+    {
+      "from": "ContosoHumanResources",
       "to": "ContosoCore",
       "componentCount": 9
     },
     {
-      "from": "ContosoSales",
+      "from": "ContosoHumanResources",
+      "to": "msdynhr_HumanResources",
+      "componentCount": 20
+    },
+    {
+      "from": "ContosoContactCenter",
+      "to": "ContosoCore",
+      "componentCount": 6
+    },
+    {
+      "from": "ContosoContactCenter",
+      "to": "msdyn_OmnichannelBase",
+      "componentCount": 15
+    },
+    {
+      "from": "ContosoPlatformGovernance",
       "to": "ContosoCore",
       "componentCount": 5
+    },
+    {
+      "from": "ContosoPlatformGovernance",
+      "to": "CenterofExcellenceCoreComponents",
+      "componentCount": 15
     }
   ],
   "missingDependencies": [],
   "installOrder": [
     "ContosoCore",
+    "msdyn_SalesPro",
+    "msdyn_CustomerService",
+    "msdyn_FieldService",
+    "msdyn_ProjectServiceCore",
+    "msdynmkt_CustomerInsightsJourneys",
+    "msdynci_CustomerInsights",
+    "msdyn_FinanceAndOperations",
+    "msdyn_SupplyChain",
+    "msdyn_Commerce",
+    "msdynhr_HumanResources",
+    "msdyn_OmnichannelBase",
+    "CenterofExcellenceCoreComponents",
+    "ContosoSales",
+    "ContosoCustomerService",
     "ContosoFieldService",
-    "ContosoSales"
+    "ContosoProjectOperations",
+    "ContosoMarketing",
+    "ContosoCustomerInsights",
+    "ContosoFinance",
+    "ContosoSupplyChain",
+    "ContosoCommerce",
+    "ContosoHumanResources",
+    "ContosoContactCenter",
+    "ContosoPlatformGovernance"
   ],
   "metadata": {
-    "totalSolutions": 3,
-    "unmanagedCount": 3,
-    "managedCount": 0,
-    "totalDependencies": 2,
+    "totalSolutions": 25,
+    "unmanagedCount": 13,
+    "managedCount": 12,
+    "totalDependencies": 24,
     "withMissingDeps": 0,
     "generated": "2026-06-26T00:00:00.000Z"
   }

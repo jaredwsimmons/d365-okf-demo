@@ -1,4 +1,1 @@
-{
-  "FLOW-RENEWAL": { "solution": "ContosoFieldService", "actionCount": 7, "triggerCount": 1 },
-  "FLOW-QUOTE-FOLLOWUP": { "solution": "ContosoSales", "actionCount": 6, "triggerCount": 1 }
-}
+{}

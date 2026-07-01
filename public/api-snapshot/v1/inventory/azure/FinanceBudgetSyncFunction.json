@@ -1,0 +1,1 @@
+{"item":{"name":"FinanceBudgetSyncFunction","_type":"function","status":"Active","purpose":"Compute","runtime":"dotnet-isolated","trigger":"HTTP","calledBy":"con_channelbudgetline","description":"Azure Function brokering dual-write reconciliation of channel budget lines from Dynamics 365 Finance."},"metadata":{"type":"azure","id":"FinanceBudgetSyncFunction"}}

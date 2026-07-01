@@ -1,0 +1,1 @@
+{"item":{"name":"Dual-Write Orchestration","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Dual-write mapping synchronizing released products, PO headers/lines, sales order lines, and warehouses bidirectionally between F&O and Dataverse."},"metadata":{"type":"azure","id":"Dual-Write Orchestration"}}

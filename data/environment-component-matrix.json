@@ -1,0 +1,526 @@
+{
+  "metadata": {
+    "environments": [
+      "devint",
+      "ort",
+      "uat",
+      "prod"
+    ],
+    "generated": "2026-06-26T00:00:00.000Z",
+    "tierMap": {
+      "devint": "Development",
+      "ort": "Test",
+      "uat": "Pre-Prod",
+      "prod": "Production"
+    }
+  },
+  "summary": {
+    "coreDiffs": 3,
+    "nonCoreDiffs": 8,
+    "presenceGaps": 2,
+    "solutionsWithDiffs": 11
+  },
+  "coreSolutionDiffs": [
+    {
+      "solution": "ContosoCore",
+      "version": {
+        "devint": "1.1.0.0",
+        "ort": "1.1.0.0",
+        "uat": "1.1.0.0",
+        "prod": "1.0.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 20,
+        "ort": 20,
+        "uat": 20,
+        "prod": 16
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 3,
+            "prod": 2
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 2,
+            "prod": 1
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoSales",
+      "version": {
+        "devint": "1.2.0.0",
+        "ort": "1.2.0.0",
+        "uat": "1.1.0.0",
+        "prod": "1.1.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 23,
+        "ort": 23,
+        "uat": 19,
+        "prod": 23
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 2,
+            "prod": 3
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 1,
+            "prod": 2
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoCustomerService",
+      "version": {
+        "devint": "1.3.0.0",
+        "ort": "1.3.0.0",
+        "uat": "1.3.0.0",
+        "prod": "1.2.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 26,
+        "ort": 26,
+        "uat": 26,
+        "prod": 22
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 3,
+            "prod": 2
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 2,
+            "prod": 1
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    }
+  ],
+  "nonCoreSolutionDiffs": [
+    {
+      "solution": "ContosoFieldService",
+      "version": {
+        "devint": "1.3.0.0",
+        "ort": "1.3.0.0",
+        "uat": "1.3.0.0",
+        "prod": "1.2.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 26,
+        "ort": 26,
+        "uat": 26,
+        "prod": 22
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 3,
+            "prod": 2
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 2,
+            "prod": 1
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoProjectOperations",
+      "version": {
+        "devint": "1.4.0.0",
+        "ort": "1.4.0.0",
+        "uat": "1.3.0.0",
+        "prod": "1.3.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 29,
+        "ort": 29,
+        "uat": 25,
+        "prod": 29
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 2,
+            "prod": 3
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 1,
+            "prod": 2
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoMarketing",
+      "version": {
+        "devint": "1.5.0.0",
+        "ort": "1.5.0.0",
+        "uat": "1.5.0.0",
+        "prod": "1.4.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 32,
+        "ort": 32,
+        "uat": 32,
+        "prod": 28
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 3,
+            "prod": 2
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 2,
+            "prod": 1
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoCustomerInsights",
+      "version": {
+        "devint": "1.6.0.0",
+        "ort": "1.6.0.0",
+        "uat": "1.5.0.0",
+        "prod": "1.5.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 35,
+        "ort": 35,
+        "uat": 31,
+        "prod": 35
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 2,
+            "prod": 3
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 1,
+            "prod": 2
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoFinance",
+      "version": {
+        "devint": "1.7.0.0",
+        "ort": "1.7.0.0",
+        "uat": "1.7.0.0",
+        "prod": "1.6.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 38,
+        "ort": 38,
+        "uat": 38,
+        "prod": 34
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 3,
+            "prod": 2
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 2,
+            "prod": 1
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoSupplyChain",
+      "version": {
+        "devint": "1.8.0.0",
+        "ort": "1.8.0.0",
+        "uat": "1.7.0.0",
+        "prod": "1.7.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 41,
+        "ort": 41,
+        "uat": 37,
+        "prod": 41
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 2,
+            "prod": 3
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 1,
+            "prod": 2
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoCommerce",
+      "version": {
+        "devint": "1.9.0.0",
+        "ort": "1.9.0.0",
+        "uat": "1.9.0.0",
+        "prod": "1.8.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 44,
+        "ort": 44,
+        "uat": 44,
+        "prod": 40
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 3,
+            "prod": 2
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 2,
+            "prod": 1
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    },
+    {
+      "solution": "ContosoHumanResources",
+      "version": {
+        "devint": "1.10.0.0",
+        "ort": "1.10.0.0",
+        "uat": "1.9.0.0",
+        "prod": "1.9.0.0"
+      },
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ],
+      "totalComponentCounts": {
+        "devint": 47,
+        "ort": 47,
+        "uat": 43,
+        "prod": 47
+      },
+      "typeDiffs": [
+        {
+          "type": "entity",
+          "counts": {
+            "devint": 3,
+            "ort": 3,
+            "uat": 2,
+            "prod": 3
+          }
+        },
+        {
+          "type": "workflow",
+          "counts": {
+            "devint": 2,
+            "ort": 2,
+            "uat": 1,
+            "prod": 2
+          }
+        }
+      ],
+      "totalDiffCount": 6
+    }
+  ],
+  "envLevelDiffs": [],
+  "presenceGaps": [
+    {
+      "solution": "ContosoContactCenter",
+      "isCore": false,
+      "isManaged": false,
+      "presentIn": [
+        "devint",
+        "ort"
+      ],
+      "absentFrom": [
+        "uat",
+        "prod"
+      ],
+      "componentCount": {
+        "entity": 3,
+        "workflow": 1
+      }
+    },
+    {
+      "solution": "ContosoPlatformGovernance",
+      "isCore": false,
+      "isManaged": false,
+      "presentIn": [
+        "devint",
+        "ort",
+        "uat"
+      ],
+      "absentFrom": [
+        "prod"
+      ],
+      "componentCount": {
+        "entity": 4,
+        "workflow": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"item":{"id":"plg-dealdeskapprovalstampplugin","name":"DealDeskApprovalStampPlugin","tags":{},"solution":"ContosoSales","businessLogic":"On con_dealdeskreview status change to Approved, stamps con_approvedon and the approving user, and writes back the approved discount to the opportunity."},"metadata":{"type":"plugins","id":"plg-dealdeskapprovalstampplugin"}}

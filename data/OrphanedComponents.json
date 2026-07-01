@@ -1,9 +1,73 @@
 {
   "metadata": {
-    "total": 3,
+    "total": 13,
     "generated": "2026-06-26T00:00:00.000Z"
   },
   "orphans": [
+    {
+      "type": "OptionSet",
+      "name": "Sales Stage",
+      "schemaName": "opportunity_salesstagecode",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Lead Source",
+      "schemaName": "lead_leadsourcecode",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Rating",
+      "schemaName": "lead_leadqualitycode",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Case Priority",
+      "schemaName": "incident_prioritycode",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Case Type",
+      "schemaName": "incident_casetypecode",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Support Tier",
+      "schemaName": "con_supporttier",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Work Order System Status",
+      "schemaName": "msdyn_workorder_systemstatus",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "type": "OptionSet",
+      "name": "Safety Inspection Result",
+      "schemaName": "con_safetyinspection_result",
+      "reason": "Not bound to any entity column.",
+      "severity": "medium",
+      "solution": "ContosoFieldService"
+    },
     {
       "type": "WebResource",
       "name": "Contoso Logo",
@@ -13,20 +77,36 @@
       "solution": "ContosoCore"
     },
     {
-      "type": "OptionSet",
-      "name": "Inspection Result",
-      "schemaName": "con_inspectionresult",
-      "reason": "Not bound to any entity column.",
-      "severity": "medium",
-      "solution": "ContosoFieldService"
+      "type": "Report",
+      "name": "Finance Summary",
+      "schemaName": "Finance Summary",
+      "reason": "Not linked to any model-driven app.",
+      "severity": "low",
+      "solution": "ContosoFinance"
     },
     {
       "type": "Report",
-      "name": "Technician Utilization",
-      "schemaName": "Technician Utilization",
+      "name": "Supply Chain Management Summary",
+      "schemaName": "Supply Chain Management Summary",
       "reason": "Not linked to any model-driven app.",
       "severity": "low",
-      "solution": "ContosoFieldService"
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "type": "Report",
+      "name": "Commerce Summary",
+      "schemaName": "Commerce Summary",
+      "reason": "Not linked to any model-driven app.",
+      "severity": "low",
+      "solution": "ContosoCommerce"
+    },
+    {
+      "type": "Report",
+      "name": "Human Resources Summary",
+      "schemaName": "Human Resources Summary",
+      "reason": "Not linked to any model-driven app.",
+      "severity": "low",
+      "solution": "ContosoHumanResources"
     }
   ]
 }

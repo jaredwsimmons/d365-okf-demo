@@ -1,24 +1,136 @@
 {
   "environmentVariables": [
     {
-      "schemaName": "con_FieldServiceApiUrl",
-      "displayName": "Field Service API URL",
-      "description": "Base URL of the dispatch scheduling API.",
+      "schemaName": "con_fODualWriteCustomerInvoiceUrl",
+      "displayName": "F&O Dual-Write: Customer & Invoice URL",
+      "description": "Endpoint for F&O Dual-Write: Customer & Invoice.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_salesorderToErpLogicappUrl",
+      "displayName": "SalesOrder-to-ERP LogicApp URL",
+      "description": "Endpoint for SalesOrder-to-ERP LogicApp.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_warrantyDualwriteAgreementUrl",
+      "displayName": "warranty-dualwrite-agreement URL",
+      "description": "Endpoint for warranty-dualwrite-agreement.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_fandoDualwriteProcurementUrl",
+      "displayName": "FandO-DualWrite-Procurement URL",
+      "description": "Endpoint for FandO-DualWrite-Procurement.",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "schemaName": "con_DefaultRegion",
-      "displayName": "Default Region",
-      "description": "Region used when a technician has none set.",
-      "solution": "ContosoFieldService",
+      "schemaName": "con_projectopsToFinopsDualwriteUrl",
+      "displayName": "ProjectOps-to-FinOps DualWrite URL",
+      "description": "Endpoint for ProjectOps-to-FinOps DualWrite.",
+      "solution": "ContosoProjectOperations",
       "tags": {}
     },
     {
-      "schemaName": "con_InvoicePrefix",
-      "displayName": "Invoice Prefix",
-      "description": "Prefix stamped onto generated invoice numbers.",
-      "solution": "ContosoCore",
+      "schemaName": "con_conInvoicepdfLogicappUrl",
+      "displayName": "con-InvoicePDF-LogicApp URL",
+      "description": "Endpoint for con-InvoicePDF-LogicApp.",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_fOMarketingSpendVirtualEntityProviderUrl",
+      "displayName": "F&O Marketing Spend Virtual Entity Provider URL",
+      "description": "Endpoint for F&O Marketing Spend Virtual Entity Provider.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_marketingAnalyticsExportLogicAppUrl",
+      "displayName": "Marketing Analytics Export Logic App URL",
+      "description": "Endpoint for Marketing Analytics Export Logic App.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_onelakeAdlsGen2IngestionUrl",
+      "displayName": "OneLake / ADLS Gen2 Ingestion URL",
+      "description": "Endpoint for OneLake / ADLS Gen2 Ingestion.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dsrErasureOrchestratorUrl",
+      "displayName": "DSR Erasure Orchestrator (Logic App) URL",
+      "description": "Endpoint for DSR Erasure Orchestrator (Logic App).",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dualwriteFinanceSyncUrl",
+      "displayName": "DualWrite-Finance-Sync URL",
+      "description": "Endpoint for DualWrite-Finance-Sync.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dualWriteOrchestrationUrl",
+      "displayName": "Dual-Write Orchestration URL",
+      "description": "Endpoint for Dual-Write Orchestration.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_supplierediIntakelogicappUrl",
+      "displayName": "SupplierEDI-IntakeLogicApp URL",
+      "description": "Endpoint for SupplierEDI-IntakeLogicApp.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_channeldatapublishLogicappUrl",
+      "displayName": "ChannelDataPublish-LogicApp URL",
+      "description": "Endpoint for ChannelDataPublish-LogicApp.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dualwriteRetailtransactionsyncUrl",
+      "displayName": "DualWrite-RetailTransactionSync URL",
+      "description": "Endpoint for DualWrite-RetailTransactionSync.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_fODualWriteHrBridgeUrl",
+      "displayName": "F&O Dual-Write HR Bridge URL",
+      "description": "Endpoint for F&O Dual-Write HR Bridge.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_offboardingToServicenowLogicAppUrl",
+      "displayName": "Offboarding-to-ServiceNow Logic App URL",
+      "description": "Endpoint for Offboarding-to-ServiceNow Logic App.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_omnichannelvoiceeventgridUrl",
+      "displayName": "OmnichannelVoiceEventGrid URL",
+      "description": "Endpoint for OmnichannelVoiceEventGrid.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dualWriteLedgerDimensionBridgeUrl",
+      "displayName": "Dual-Write Ledger Dimension Bridge URL",
+      "description": "Endpoint for Dual-Write Ledger Dimension Bridge.",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

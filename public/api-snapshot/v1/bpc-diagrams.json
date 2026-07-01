@@ -1,20 +1,134 @@
 {
-  "FS.00": [
-    {
-      "path": "bpc-diagrams/field-service/service-delivery-flow.svg",
-      "name": "Service Delivery — End-to-End Flow"
-    }
-  ],
-  "FS.20": [
-    {
-      "path": "bpc-diagrams/field-service/execute-work-order-flow.svg",
-      "name": "Execute Work Order — On-Site Flow"
-    }
-  ],
   "SA.00": [
     {
-      "path": "bpc-diagrams/sales/sales-to-order-flow.svg",
-      "name": "Sales to Order — Lead to Booked Work"
+      "path": "bpc-diagrams/sales/sales-flow.svg",
+      "name": "Sales — End-to-End Flow"
+    }
+  ],
+  "SA.01": [
+    {
+      "path": "bpc-diagrams/sales/lead-management-subflow.svg",
+      "name": "Lead Management — Detailed Flow"
+    }
+  ],
+  "CS.00": [
+    {
+      "path": "bpc-diagrams/customer-service-management/customer-service-management-flow.svg",
+      "name": "Customer Service Management — End-to-End Flow"
+    }
+  ],
+  "CS.10": [
+    {
+      "path": "bpc-diagrams/customer-service-management/case-intake-routing-subflow.svg",
+      "name": "Case Intake & Routing — Detailed Flow"
+    }
+  ],
+  "FS.00": [
+    {
+      "path": "bpc-diagrams/field-service/field-service-flow.svg",
+      "name": "Field Service — End-to-End Flow"
+    }
+  ],
+  "FS.01": [
+    {
+      "path": "bpc-diagrams/field-service/work-order-management-subflow.svg",
+      "name": "Work Order Management — Detailed Flow"
+    }
+  ],
+  "PJ.00": [
+    {
+      "path": "bpc-diagrams/project-operations/project-operations-flow.svg",
+      "name": "Project Operations — End-to-End Flow"
+    }
+  ],
+  "PJ.02": [
+    {
+      "path": "bpc-diagrams/project-operations/plan-resource-subflow.svg",
+      "name": "Plan & Resource — Detailed Flow"
+    }
+  ],
+  "MK.00": [
+    {
+      "path": "bpc-diagrams/marketing/marketing-flow.svg",
+      "name": "Marketing — End-to-End Flow"
+    }
+  ],
+  "MK.02": [
+    {
+      "path": "bpc-diagrams/marketing/audience-journey-orchestration-subflow.svg",
+      "name": "Audience & Journey Orchestration — Detailed Flow"
+    }
+  ],
+  "CI.00": [
+    {
+      "path": "bpc-diagrams/customer-data-platform-unified-customer-data/customer-data-platform-unified-customer-data-flow.svg",
+      "name": "Customer Data Platform (Unified Customer Data) — End-to-End Flow"
+    }
+  ],
+  "CI.01": [
+    {
+      "path": "bpc-diagrams/customer-data-platform-unified-customer-data/data-ingestion-onboarding-subflow.svg",
+      "name": "Data Ingestion & Onboarding — Detailed Flow"
+    }
+  ],
+  "FI.00": [
+    {
+      "path": "bpc-diagrams/finance/finance-flow.svg",
+      "name": "Finance — End-to-End Flow"
+    }
+  ],
+  "SC.00": [
+    {
+      "path": "bpc-diagrams/supply-chain-management/supply-chain-management-flow.svg",
+      "name": "Supply Chain Management — End-to-End Flow"
+    }
+  ],
+  "SC.20": [
+    {
+      "path": "bpc-diagrams/supply-chain-management/procure-to-receive-subflow.svg",
+      "name": "Procure to Receive — Detailed Flow"
+    }
+  ],
+  "CO.00": [
+    {
+      "path": "bpc-diagrams/commerce-omnichannel-retail/commerce-omnichannel-retail-flow.svg",
+      "name": "Commerce & Omnichannel Retail — End-to-End Flow"
+    }
+  ],
+  "HR.00": [
+    {
+      "path": "bpc-diagrams/human-resources/human-resources-flow.svg",
+      "name": "Human Resources — End-to-End Flow"
+    }
+  ],
+  "HR.02": [
+    {
+      "path": "bpc-diagrams/human-resources/hire-to-onboard-subflow.svg",
+      "name": "Hire to Onboard — Detailed Flow"
+    }
+  ],
+  "CC.00": [
+    {
+      "path": "bpc-diagrams/contact-center-omnichannel-engagement/contact-center-omnichannel-engagement-flow.svg",
+      "name": "Contact Center / Omnichannel Engagement — End-to-End Flow"
+    }
+  ],
+  "CC.20": [
+    {
+      "path": "bpc-diagrams/contact-center-omnichannel-engagement/conversation-handling-subflow.svg",
+      "name": "Conversation Handling — Detailed Flow"
+    }
+  ],
+  "PL.00": [
+    {
+      "path": "bpc-diagrams/platform-governance/platform-governance-flow.svg",
+      "name": "Platform & Governance — End-to-End Flow"
+    }
+  ],
+  "PL.01": [
+    {
+      "path": "bpc-diagrams/platform-governance/environment-capacity-management-subflow.svg",
+      "name": "Environment & Capacity Management — Detailed Flow"
     }
   ]
 }

@@ -5,8 +5,12 @@ interactive app (entity ERD, dependency graphs, sitemaps, process catalog,
 governance, capability map, …) running as a **static site** on GitHub Pages, with
 **no database and no server**.
 
-Every record belongs to a made-up company — **Contoso**, a fictional field-service
-business (publisher prefix `con_`). **No real customer data.**
+Every record belongs to a made-up company — **Contoso Ltd**, a fictional enterprise
+running a **complete Dynamics 365 deployment** across all modules (Sales, Customer
+Service, Field Service, Project Operations, Marketing / Customer Insights, Finance,
+Supply Chain, Commerce, Human Resources, Contact Center, and shared platform) —
+real out-of-box tables layered with Contoso customizations (publisher prefix
+`con_`). **No real customer data.**
 
 **Live site:** `https://jaredwsimmons.github.io/d365-okf-demo/`
 
@@ -36,15 +40,28 @@ npm run build:static     # -> out/  (static site)
 npx serve out            # open http://localhost:3000/
 ```
 
-## Regenerate the Contoso snapshots (optional)
+## Regenerate the Contoso data + snapshots (optional)
 
-Only needed if you change `data/`:
+The synthetic org is generated from a per-module blueprint, then baked to snapshots:
 
 ```bash
-npm run db:setup                       # docker Postgres + schema + seed from data/
+# 1. (re)generate the raw seeds from the 12-module blueprint
+node scripts/gen-d365-complete.mjs scripts/d365-blueprint.json data
+
+# 2. seed a throwaway DB, crawl every endpoint into the snapshots
+npm run db:setup                        # docker Postgres + schema + seed from data/
 DATABASE_URL=...coe_contoso npm run dev # start the app in DB mode (port 3100)
-npm run snapshot                       # crawl every endpoint -> public/api-snapshot
+npm run snapshot                        # crawl every endpoint -> public/api-snapshot
+
+# 3. regenerate the BPC process-flow SVGs + manifest
+node scripts/gen-bpc-diagrams.mjs
 ```
+
+`scripts/d365-blueprint.json` is the verified per-module spec (real out-of-box
+tables + Contoso customizations). `gen-d365-complete.mjs` derives all 28 inventory
+files plus deep detail (form/view details, flow complexity, web-resource code
+analysis) and the environment-drift matrix from it. The older single-vertical
+`gen-contoso.mjs` is kept for reference.
 
 ## Relation to the product
 

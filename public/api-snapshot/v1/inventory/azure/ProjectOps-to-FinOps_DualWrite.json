@@ -1,0 +1,1 @@
+{"item":{"name":"ProjectOps-to-FinOps DualWrite","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Dual-write mapping synchronizing project contracts, actuals, and vendor invoices between Dataverse and Finance & Operations project accounting."},"metadata":{"type":"azure","id":"ProjectOps-to-FinOps DualWrite"}}

@@ -1,0 +1,509 @@
+{
+  "metadata": {
+    "environmentsScanned": [
+      "devint",
+      "ort",
+      "uat",
+      "prod"
+    ],
+    "generated": "2026-06-26T00:00:00.000Z",
+    "duration": "—",
+    "skipComponents": false
+  },
+  "summary": {
+    "environments": 4,
+    "findings": 31,
+    "highSeverity": 11,
+    "totalSolutions": 25,
+    "cleanupActions": 24
+  },
+  "findings": [
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoSales",
+      "detail": "Contoso Lead Scoring & Routing: Cloud flow points at different Teams channel IDs and lead-score thresholds in dev/test vs prod because values are hardcoded rather than sourced from environment variables.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "high",
+      "solution": "ContosoSales",
+      "detail": "SalesStageProgressBar: PCF control is a newer version (with probability tooltip) in dev/test but prod still runs the prior build; the control was updated outside the managed solution import.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoCustomerService",
+      "detail": "svc-sentiment-scoring-fn: Test and Prod point the CSAT sync flow at region-specific Azure Function endpoints, but Dev still references a developer's personal Function App URL hardcoded in the flow rather than an environment variable, so the flow behaves differently across environments.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoCustomerService",
+      "detail": "con_SlaTimerControl: The PCF SLA timer control is deployed at v1.2 in Dev/Test but Prod is pinned to v1.0; the newer warning-threshold color logic is not yet promoted, so timers render differently in Prod.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoFieldService",
+      "detail": "SLA Breach Risk Escalation (cloud flow): In Dev the Teams connector points at a personal test channel and the flow is turned on; in Test it is off; in Prod it targets the Dispatch Operations channel. The Teams channel ID is hardcoded rather than sourced from an environment variable, causing environment drift.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoFieldService",
+      "detail": "Copilot for Field Service: Enabled and configured against the mobile app in Prod, but the Copilot feature toggle is disabled in the Test environment, so pre-prod validation of summarization prompts is not possible.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoProjectOperations",
+      "detail": "con-InvoicePDF-LogicApp: The connection reference target differs across environments — DEV points at a sandbox SharePoint site and a test SMTP, while PROD points at the corporate document library; the flow was hand-edited in PROD rather than deployed via the solution, so the two are out of sync.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "high",
+      "solution": "ContosoProjectOperations",
+      "detail": "con_ExpenseReceiptExtraction: The AI Builder receipt model is trained and published in DEV/TEST but only a stub (unpublished) model exists in PROD, so con_receiptverified auto-population silently no-ops in production.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "high",
+      "solution": "ContosoMarketing",
+      "detail": "Contoso Send-Time Optimization API: The custom API and its Azure ML endpoint environment variable point at a sandbox model in dev/test but are unregistered in prod, so journey send-time steps silently fall back to default timing in production.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoMarketing",
+      "detail": "con_legalfootertemplate: Prod contains an extra APAC legal footer template row and an additional con_region option (APAC) that were hotfixed directly in production and never backported to dev, causing schema/data drift.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoCustomerInsights",
+      "detail": "Match Rule Override (con_matchrule): Prod runs 3 additional fuzzy match rules (higher precision threshold) that were hotfixed directly in production and never back-ported to dev/test, so unification results differ across environments.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoCustomerInsights",
+      "detail": "OneLake / ADLS Gen2 Ingestion data source (msdynci_datasource): Dev/test point at a sampled ADLS Gen2 container while prod ingests from Microsoft Fabric OneLake; the msdynci_sourcetype value therefore differs, causing schema-refresh diffs.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoFinance",
+      "detail": "Dual-write table mapping (mserp_vendinvoiceheader): TEST maps only vendinvoice header fields while PROD includes the vendinvoice-to-con_apapprovalrequest write-back mapping, so approval write-back cannot be validated in TEST before release.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoFinance",
+      "detail": "Contoso AP Copilot: The Copilot Studio agent is published and grounded on live mserp_vendinvoiceheader data in PROD but points at a stale knowledge source in DEV, producing different answers across environments.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoSupplyChain",
+      "detail": "Generate PO in F&O on Approval: Cloud flow points at the F&O UAT legal entity (USMF) connection reference in test but the production legal entity (CONT) in prod; the dev copy is turned off entirely, so PO generation cannot be validated in dev.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "high",
+      "solution": "ContosoSupplyChain",
+      "detail": "con_purchaserequisition: The con_generatedponumber column and its business rule exist in dev and test but were never deployed to prod, leaving the PO write-back silently no-op in production.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoCommerce",
+      "detail": "ChannelDataPublish-LogicApp: The Logic App HTTP endpoint URL is hardcoded in the 'Channel Data Publish Trigger' flow rather than stored in an environment variable, so dev/test point at the sandbox Commerce Scale Unit while prod points at the production CSU — the flow drifts per environment.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "high",
+      "solution": "ContosoCommerce",
+      "detail": "LoyaltyTierGauge: The LoyaltyTierGauge PCF control is at v1.2 in dev/test but only v1.0 in prod; the newer version reads con_tierstructure which does not yet render correctly in production.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoHumanResources",
+      "detail": "New Hire Onboarding Orchestration: The onboarding flow points at the Test M365 tenant's Office 365 Users connection in test but the production tenant in prod; the dev copy is turned off, so an onboarding task template edit made in dev was never promoted.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "high",
+      "solution": "ContosoHumanResources",
+      "detail": "OrgChartControl: PCF OrgChartControl is at v1.2.0 in prod but v1.4.0-preview in dev/test, so the position hierarchy renders differently and the newer collapse feature is missing in production.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoContactCenter",
+      "detail": "Contoso Contact Center Copilot: Bound to a Copilot Studio dev bot in DEV/TEST but points to the production-published bot in PROD; con_botconfiguration record GUIDs differ across environments.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoContactCenter",
+      "detail": "Sync Channel Budget from Finance: Nightly recurrence flow is enabled in PROD only; disabled in DEV/TEST because dual-write to Dynamics 365 Finance is not provisioned in the lower environments.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoPlatformGovernance",
+      "detail": "environmentvariabledefinition (con_CoEAdminTeamEmail / con_DlpPolicyName): Environment variable current values differ across environments - Dev points at a test distribution list and a permissive DLP policy, while Prod uses the real CoE DL and the enforced enterprise DLP policy. Only the definition is solution-aware; values drift per environment.",
+      "environments": [
+        "devint",
+        "ort",
+        "prod"
+      ]
+    },
+    {
+      "type": "Presence Drift",
+      "severity": "medium",
+      "solution": "ContosoPlatformGovernance",
+      "detail": "Con.Governance.DataSensitivityGuardPlugin (sdkmessageprocessingstep): The synchronous plug-in step is registered and active in Prod but disabled in Dev/Test to let makers freely edit sensitivity during development, meaning the sensitivity-downgrade guard is only enforced in Production.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "type": "Unpromoted Solution",
+      "severity": "medium",
+      "solution": "ContosoContactCenter",
+      "detail": "ContosoContactCenter exists in Dev Integration/ORT but is absent from UAT/Production.",
+      "environments": [
+        "devint",
+        "ort"
+      ]
+    },
+    {
+      "type": "Unpromoted Solution",
+      "severity": "medium",
+      "solution": "ContosoPlatformGovernance",
+      "detail": "ContosoPlatformGovernance exists in Dev Integration/ORT/UAT but is absent from Production.",
+      "environments": [
+        "devint",
+        "ort",
+        "uat"
+      ]
+    },
+    {
+      "type": "Version Drift",
+      "severity": "high",
+      "solution": "ContosoFieldService",
+      "detail": "ContosoFieldService version differs across environments (1.3.0.0, 1.3.0.0, 1.3.0.0, 1.2.0.0).",
+      "environments": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ]
+    },
+    {
+      "type": "Version Drift",
+      "severity": "high",
+      "solution": "ContosoProjectOperations",
+      "detail": "ContosoProjectOperations version differs across environments (1.4.0.0, 1.4.0.0, 1.3.0.0, 1.3.0.0).",
+      "environments": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ]
+    },
+    {
+      "type": "Version Drift",
+      "severity": "high",
+      "solution": "ContosoMarketing",
+      "detail": "ContosoMarketing version differs across environments (1.5.0.0, 1.5.0.0, 1.5.0.0, 1.4.0.0).",
+      "environments": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ]
+    },
+    {
+      "type": "Version Drift",
+      "severity": "high",
+      "solution": "ContosoCustomerInsights",
+      "detail": "ContosoCustomerInsights version differs across environments (1.6.0.0, 1.6.0.0, 1.5.0.0, 1.5.0.0).",
+      "environments": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ]
+    },
+    {
+      "type": "Version Drift",
+      "severity": "high",
+      "solution": "ContosoFinance",
+      "detail": "ContosoFinance version differs across environments (1.7.0.0, 1.7.0.0, 1.7.0.0, 1.6.0.0).",
+      "environments": [
+        "devint",
+        "ort",
+        "uat",
+        "prod"
+      ]
+    }
+  ],
+  "playbook": {
+    "devint": [],
+    "ort": [],
+    "uat": [
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoSales",
+        "solution": "ContosoSales",
+        "reason": "SalesStageProgressBar: PCF control is a newer version (with probability tooltip) in dev/test but prod still runs the prior build; the control was updated outside the managed solution import."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoProjectOperations",
+        "solution": "ContosoProjectOperations",
+        "reason": "con_ExpenseReceiptExtraction: The AI Builder receipt model is trained and published in DEV/TEST but only a stub (unpublished) model exists in PROD, so con_receiptverified auto-population silently no-ops in production."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoMarketing",
+        "solution": "ContosoMarketing",
+        "reason": "Contoso Send-Time Optimization API: The custom API and its Azure ML endpoint environment variable point at a sandbox model in dev/test but are unregistered in prod, so journey send-time steps silently fall back to default timing in production."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoSupplyChain",
+        "solution": "ContosoSupplyChain",
+        "reason": "con_purchaserequisition: The con_generatedponumber column and its business rule exist in dev and test but were never deployed to prod, leaving the PO write-back silently no-op in production."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoCommerce",
+        "solution": "ContosoCommerce",
+        "reason": "LoyaltyTierGauge: The LoyaltyTierGauge PCF control is at v1.2 in dev/test but only v1.0 in prod; the newer version reads con_tierstructure which does not yet render correctly in production."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoHumanResources",
+        "solution": "ContosoHumanResources",
+        "reason": "OrgChartControl: PCF OrgChartControl is at v1.2.0 in prod but v1.4.0-preview in dev/test, so the position hierarchy renders differently and the newer collapse feature is missing in production."
+      }
+    ],
+    "prod": [
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoSales",
+        "solution": "ContosoSales",
+        "reason": "Contoso Lead Scoring & Routing: Cloud flow points at different Teams channel IDs and lead-score thresholds in dev/test vs prod because values are hardcoded rather than sourced from environment variables."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoCustomerService",
+        "solution": "ContosoCustomerService",
+        "reason": "svc-sentiment-scoring-fn: Test and Prod point the CSAT sync flow at region-specific Azure Function endpoints, but Dev still references a developer's personal Function App URL hardcoded in the flow rather than an environment variable, so the flow behaves differently across environments."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoCustomerService",
+        "solution": "ContosoCustomerService",
+        "reason": "con_SlaTimerControl: The PCF SLA timer control is deployed at v1.2 in Dev/Test but Prod is pinned to v1.0; the newer warning-threshold color logic is not yet promoted, so timers render differently in Prod."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoFieldService",
+        "solution": "ContosoFieldService",
+        "reason": "SLA Breach Risk Escalation (cloud flow): In Dev the Teams connector points at a personal test channel and the flow is turned on; in Test it is off; in Prod it targets the Dispatch Operations channel. The Teams channel ID is hardcoded rather than sourced from an environment variable, causing environment drift."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoFieldService",
+        "solution": "ContosoFieldService",
+        "reason": "Copilot for Field Service: Enabled and configured against the mobile app in Prod, but the Copilot feature toggle is disabled in the Test environment, so pre-prod validation of summarization prompts is not possible."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoProjectOperations",
+        "solution": "ContosoProjectOperations",
+        "reason": "con-InvoicePDF-LogicApp: The connection reference target differs across environments — DEV points at a sandbox SharePoint site and a test SMTP, while PROD points at the corporate document library; the flow was hand-edited in PROD rather than deployed via the solution, so the two are out of sync."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoMarketing",
+        "solution": "ContosoMarketing",
+        "reason": "con_legalfootertemplate: Prod contains an extra APAC legal footer template row and an additional con_region option (APAC) that were hotfixed directly in production and never backported to dev, causing schema/data drift."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoCustomerInsights",
+        "solution": "ContosoCustomerInsights",
+        "reason": "Match Rule Override (con_matchrule): Prod runs 3 additional fuzzy match rules (higher precision threshold) that were hotfixed directly in production and never back-ported to dev/test, so unification results differ across environments."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoCustomerInsights",
+        "solution": "ContosoCustomerInsights",
+        "reason": "OneLake / ADLS Gen2 Ingestion data source (msdynci_datasource): Dev/test point at a sampled ADLS Gen2 container while prod ingests from Microsoft Fabric OneLake; the msdynci_sourcetype value therefore differs, causing schema-refresh diffs."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoFinance",
+        "solution": "ContosoFinance",
+        "reason": "Dual-write table mapping (mserp_vendinvoiceheader): TEST maps only vendinvoice header fields while PROD includes the vendinvoice-to-con_apapprovalrequest write-back mapping, so approval write-back cannot be validated in TEST before release."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoFinance",
+        "solution": "ContosoFinance",
+        "reason": "Contoso AP Copilot: The Copilot Studio agent is published and grounded on live mserp_vendinvoiceheader data in PROD but points at a stale knowledge source in DEV, producing different answers across environments."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoSupplyChain",
+        "solution": "ContosoSupplyChain",
+        "reason": "Generate PO in F&O on Approval: Cloud flow points at the F&O UAT legal entity (USMF) connection reference in test but the production legal entity (CONT) in prod; the dev copy is turned off entirely, so PO generation cannot be validated in dev."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoCommerce",
+        "solution": "ContosoCommerce",
+        "reason": "ChannelDataPublish-LogicApp: The Logic App HTTP endpoint URL is hardcoded in the 'Channel Data Publish Trigger' flow rather than stored in an environment variable, so dev/test point at the sandbox Commerce Scale Unit while prod points at the production CSU — the flow drifts per environment."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoHumanResources",
+        "solution": "ContosoHumanResources",
+        "reason": "New Hire Onboarding Orchestration: The onboarding flow points at the Test M365 tenant's Office 365 Users connection in test but the production tenant in prod; the dev copy is turned off, so an onboarding task template edit made in dev was never promoted."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoContactCenter",
+        "solution": "ContosoContactCenter",
+        "reason": "Contoso Contact Center Copilot: Bound to a Copilot Studio dev bot in DEV/TEST but points to the production-published bot in PROD; con_botconfiguration record GUIDs differ across environments."
+      },
+      {
+        "phase": 2,
+        "action": "Reconcile ContosoContactCenter",
+        "solution": "ContosoContactCenter",
+        "reason": "Sync Channel Budget from Finance: Nightly recurrence flow is enabled in PROD only; disabled in DEV/TEST because dual-write to Dynamics 365 Finance is not provisioned in the lower environments."
+      },
+      {
+        "phase": 3,
+        "action": "Reconcile ContosoPlatformGovernance",
+        "solution": "ContosoPlatformGovernance",
+        "reason": "environmentvariabledefinition (con_CoEAdminTeamEmail / con_DlpPolicyName): Environment variable current values differ across environments - Dev points at a test distribution list and a permissive DLP policy, while Prod uses the real CoE DL and the enforced enterprise DLP policy. Only the definition is solution-aware; values drift per environment."
+      },
+      {
+        "phase": 1,
+        "action": "Reconcile ContosoPlatformGovernance",
+        "solution": "ContosoPlatformGovernance",
+        "reason": "Con.Governance.DataSensitivityGuardPlugin (sdkmessageprocessingstep): The synchronous plug-in step is registered and active in Prod but disabled in Dev/Test to let makers freely edit sensitivity during development, meaning the sensitivity-downgrade guard is only enforced in Production."
+      }
+    ]
+  },
+  "categories": {
+    "unmanagedDrift": [
+      "ContosoSales",
+      "ContosoCustomerService",
+      "ContosoFieldService",
+      "ContosoProjectOperations"
+    ],
+    "versionDrift": [
+      "ContosoFieldService",
+      "ContosoProjectOperations",
+      "ContosoMarketing",
+      "ContosoCustomerInsights",
+      "ContosoFinance"
+    ],
+    "devOnly": [
+      "ContosoContactCenter",
+      "ContosoPlatformGovernance"
+    ],
+    "microsoft": [
+      "msdyn_SalesPro",
+      "msdyn_CustomerService",
+      "msdyn_FieldService",
+      "msdyn_ProjectServiceCore",
+      "msdynmkt_CustomerInsightsJourneys"
+    ],
+    "thirdParty": [],
+    "cleanup": [],
+    "other": [],
+    "workItem": []
+  }
+}

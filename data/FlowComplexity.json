@@ -1,0 +1,3189 @@
+{
+  "flows": [
+    {
+      "name": "Lead to Opportunity Sales Process",
+      "solution": "ContosoSales",
+      "triggerType": "Active on lead; spans lead and opportunity",
+      "triggerEntity": "lead",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/sales/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Contoso Lead Scoring & Routing",
+      "solution": "ContosoSales",
+      "triggerType": "When a lead is created or updated (Dataverse trigger)",
+      "triggerEntity": "lead",
+      "totalActions": 18,
+      "maxDepth": 4,
+      "complexityScore": 54,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/sales/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Deal Desk Approval Routing",
+      "solution": "ContosoSales",
+      "triggerType": "When a Deal Desk Review is created",
+      "triggerEntity": "con_dealdeskreview",
+      "totalActions": 14,
+      "maxDepth": 4,
+      "complexityScore": 42,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/sales/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Microsoft Teams"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Auto-Create Deal Desk Review on Strategic Deal",
+      "solution": "ContosoSales",
+      "triggerType": "Update of opportunity where con_strategicdeal = true and requested discount exceeds threshold",
+      "triggerEntity": "opportunity",
+      "totalActions": 16,
+      "maxDepth": 2,
+      "complexityScore": 48,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/sales/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Require Est. Close Date & Value on Propose",
+      "solution": "ContosoSales",
+      "triggerType": "Form load / field change when salesstagecode = Propose",
+      "triggerEntity": "opportunity",
+      "totalActions": 12,
+      "maxDepth": 2,
+      "complexityScore": 36,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/sales/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Invoice Paid Sync from F&O",
+      "solution": "ContosoSales",
+      "triggerType": "On create of Customer Payment (F&O) related to an invoice",
+      "triggerEntity": "invoice",
+      "totalActions": 14,
+      "maxDepth": 4,
+      "complexityScore": 42,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/sales/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Phase to First Response and Resolution",
+      "solution": "ContosoCustomerService",
+      "triggerType": "Case created",
+      "triggerEntity": "incident",
+      "totalActions": 8,
+      "maxDepth": 2,
+      "complexityScore": 24,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Auto-Route New Cases to Tier Queue",
+      "solution": "ContosoCustomerService",
+      "triggerType": "Create of incident",
+      "triggerEntity": "incident",
+      "totalActions": 22,
+      "maxDepth": 4,
+      "complexityScore": 66,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Notify Manager on High-Priority Escalation",
+      "solution": "ContosoCustomerService",
+      "triggerType": "When a row is added (con_escalation)",
+      "triggerEntity": "con_escalation",
+      "totalActions": 12,
+      "maxDepth": 2,
+      "complexityScore": 36,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerService/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Sync CSAT Survey Responses to Service Feedback",
+      "solution": "ContosoCustomerService",
+      "triggerType": "When a survey response is submitted (Customer Voice)",
+      "triggerEntity": "con_servicefeedback",
+      "totalActions": 16,
+      "maxDepth": 2,
+      "complexityScore": 48,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerService/v1"
+      ],
+      "connectors": [
+        "Dynamics 365 Customer Voice",
+        "Microsoft Dataverse",
+        "Azure Functions"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Require Resolution Notes Before Close",
+      "solution": "ContosoCustomerService",
+      "triggerType": "Status changes to Resolved",
+      "triggerEntity": "incident",
+      "totalActions": 7,
+      "maxDepth": 5,
+      "complexityScore": 21,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Nightly Knowledge Article Review Reminder",
+      "solution": "ContosoCustomerService",
+      "triggerType": "Scheduled / recurring",
+      "triggerEntity": "knowledgearticle",
+      "totalActions": 11,
+      "maxDepth": 5,
+      "complexityScore": 33,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Work Order Lifecycle",
+      "solution": "ContosoFieldService",
+      "triggerType": "On work order create",
+      "triggerEntity": "msdyn_workorder",
+      "totalActions": 8,
+      "maxDepth": 2,
+      "complexityScore": 24,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Auto-Create Safety Inspection for Hazardous Work Orders",
+      "solution": "ContosoFieldService",
+      "triggerType": "On create/update of msdyn_workorder when con_hazardsiteflag = true",
+      "triggerEntity": "msdyn_workorder",
+      "totalActions": 7,
+      "maxDepth": 5,
+      "complexityScore": 21,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "SLA Breach Risk Escalation",
+      "solution": "ContosoFieldService",
+      "triggerType": "When con_slabreachrisk changes to High or Breached",
+      "triggerEntity": "msdyn_workorder",
+      "totalActions": 14,
+      "maxDepth": 4,
+      "complexityScore": 42,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Agreement Booking Setup Generation",
+      "solution": "ContosoFieldService",
+      "triggerType": "On agreement activation",
+      "triggerEntity": "msdyn_agreement",
+      "totalActions": 22,
+      "maxDepth": 4,
+      "complexityScore": 66,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Truck Stock Replenishment Request",
+      "solution": "ContosoFieldService",
+      "triggerType": "When msdyn_availablequantity falls below reorder point",
+      "triggerEntity": "msdyn_productinventory",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 2,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Fin & Ops Apps (Dynamics 365)"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Require Serial Number on Serviceable Assets",
+      "solution": "ContosoFieldService",
+      "triggerType": "On form load / save of msdyn_customerasset",
+      "triggerEntity": "msdyn_customerasset",
+      "totalActions": 13,
+      "maxDepth": 3,
+      "complexityScore": 39,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Certification Expiry Warning for Resources",
+      "solution": "ContosoFieldService",
+      "triggerType": "Scheduled daily recurrence evaluating con_certexpirydate",
+      "triggerEntity": "bookableresource",
+      "totalActions": 12,
+      "maxDepth": 2,
+      "complexityScore": 36,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 2,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/fieldService/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Project Approval Business Process Flow",
+      "solution": "ContosoProjectOperations",
+      "triggerType": "Stage progression on msdyn_project lifecycle",
+      "triggerEntity": "msdyn_project",
+      "totalActions": 8,
+      "maxDepth": 2,
+      "complexityScore": 24,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/projectOperations/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Contoso Time Entry Auto-Submit Reminder",
+      "solution": "ContosoProjectOperations",
+      "triggerType": "Scheduled (weekly, Friday 16:00)",
+      "triggerEntity": "msdyn_timeentry",
+      "totalActions": 9,
+      "maxDepth": 3,
+      "complexityScore": 27,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/projectOperations/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Users"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Margin Alert on Actuals Posting",
+      "solution": "ContosoProjectOperations",
+      "triggerType": "Create of msdyn_actuals",
+      "triggerEntity": "msdyn_actuals",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/projectOperations/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Staffing Request Fulfillment Routing",
+      "solution": "ContosoProjectOperations",
+      "triggerType": "When a row is created (con_resourcerequest)",
+      "triggerEntity": "con_resourcerequest",
+      "totalActions": 6,
+      "maxDepth": 4,
+      "complexityScore": 18,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/projectOperations/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Microsoft Teams"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Expense Receipt Required Rule",
+      "solution": "ContosoProjectOperations",
+      "triggerType": "Form load / field change on msdyn_expense",
+      "triggerEntity": "msdyn_expense",
+      "totalActions": 17,
+      "maxDepth": 3,
+      "complexityScore": 51,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/projectOperations/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Contract Line to F&O Sync",
+      "solution": "ContosoProjectOperations",
+      "triggerType": "Update of statecode (Active)",
+      "triggerEntity": "msdyn_contractline",
+      "totalActions": 13,
+      "maxDepth": 3,
+      "complexityScore": 39,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/projectOperations/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Sales-Ready Lead Handoff",
+      "solution": "ContosoMarketing",
+      "triggerType": "Update of leadscore crossing sales-ready threshold",
+      "triggerEntity": "lead",
+      "totalActions": 12,
+      "maxDepth": 2,
+      "complexityScore": 36,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsJourneys/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Campaign Brief Approval Routing",
+      "solution": "ContosoMarketing",
+      "triggerType": "When con_approvalstatus set to In Review",
+      "triggerEntity": "con_campaignbrief",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 4,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsJourneys/v1"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Approvals",
+        "Office 365 Outlook",
+        "Microsoft Teams"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)",
+        "High connector fan-out"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        },
+        {
+          "ruleId": "FLOW_3",
+          "detail": "High connector fan-out"
+        }
+      ]
+    },
+    {
+      "name": "Event Registration Confirmation",
+      "solution": "ContosoMarketing",
+      "triggerType": "On create of Event Registration",
+      "triggerEntity": "msevtmgt_eventregistration",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 2,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsJourneys/v1"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Customer Insights - Journeys"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Consent Change Suppression Sync",
+      "solution": "ContosoMarketing",
+      "triggerType": "On update of msdynmkt_consentstatus to Opt-out",
+      "triggerEntity": "msdynmkt_contactpointconsent3",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsJourneys/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Require Legal Footer Before Email Go-Live",
+      "solution": "ContosoMarketing",
+      "triggerType": "Form load / field change on Marketing Email",
+      "triggerEntity": "msdynmkt_marketingemail",
+      "totalActions": 11,
+      "maxDepth": 5,
+      "complexityScore": 33,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsJourneys/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Campaign Brief to Launch BPF",
+      "solution": "ContosoMarketing",
+      "triggerType": "Manual stage advance from Brief record",
+      "triggerEntity": "con_campaignbrief",
+      "totalActions": 16,
+      "maxDepth": 2,
+      "complexityScore": 48,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsJourneys/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Sync Churn Prediction to Loyalty Tier",
+      "solution": "ContosoCustomerInsights",
+      "triggerType": "On Create of Prediction Score (churn model)",
+      "triggerEntity": "msdynci_predictionscore",
+      "totalActions": 7,
+      "maxDepth": 5,
+      "complexityScore": 21,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsData/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Consent Verified Guard for Segment Activation",
+      "solution": "ContosoCustomerInsights",
+      "triggerType": "On field change of con_activationchannel",
+      "triggerEntity": "msdynci_segment",
+      "totalActions": 15,
+      "maxDepth": 5,
+      "complexityScore": 45,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsData/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Data Source Health Alert to Teams",
+      "solution": "ContosoCustomerInsights",
+      "triggerType": "On Create where con_refreshstatus = Failed",
+      "triggerEntity": "con_datasourcehealth",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsData/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "ServiceNow"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "DSR Delete Propagation",
+      "solution": "ContosoCustomerInsights",
+      "triggerType": "On Create where con_consenttype = DSR - Delete",
+      "triggerEntity": "con_consentledger",
+      "totalActions": 10,
+      "maxDepth": 4,
+      "complexityScore": 30,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 4,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsData/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "HTTP",
+        "Azure Service Bus",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)",
+        "High connector fan-out"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        },
+        {
+          "ruleId": "FLOW_3",
+          "detail": "High connector fan-out"
+        }
+      ]
+    },
+    {
+      "name": "Unified Profile Enrichment - F&O Credit",
+      "solution": "ContosoCustomerInsights",
+      "triggerType": "On Create/Update of Customer Profile",
+      "triggerEntity": "msdynci_customerprofile",
+      "totalActions": 9,
+      "maxDepth": 3,
+      "complexityScore": 27,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsData/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Data Onboarding & Unification Approval",
+      "solution": "ContosoCustomerInsights",
+      "triggerType": "New Data Source onboarding",
+      "triggerEntity": "msdynci_datasource",
+      "totalActions": 8,
+      "maxDepth": 2,
+      "complexityScore": 24,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/customerInsightsData/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "AP Invoice Approval BPF",
+      "solution": "ContosoFinance",
+      "triggerType": "Record created from dual-write vendor invoice",
+      "triggerEntity": "con_apapprovalrequest",
+      "totalActions": 11,
+      "maxDepth": 5,
+      "complexityScore": 33,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/finance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Capex Budget Check Flow",
+      "solution": "ContosoFinance",
+      "triggerType": "On con_capexrequest status change to Submitted",
+      "triggerEntity": "con_capexrequest",
+      "totalActions": 11,
+      "maxDepth": 5,
+      "complexityScore": 33,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 3,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/finance/v1"
+      ],
+      "connectors": [
+        "Dynamics 365 Finance and Operations (Dataverse)",
+        "Microsoft Dataverse",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Dunning Escalation Async Workflow",
+      "solution": "ContosoFinance",
+      "triggerType": "On create of con_dunningaction",
+      "triggerEntity": "con_dunningaction",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/finance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Credit Risk Rating Business Rule",
+      "solution": "ContosoFinance",
+      "triggerType": "On form load / creditlimit change",
+      "triggerEntity": "account",
+      "totalActions": 20,
+      "maxDepth": 2,
+      "complexityScore": 60,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/finance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Exchange Rate Sync Flow",
+      "solution": "ContosoFinance",
+      "triggerType": "Scheduled daily 05:00 UTC",
+      "triggerEntity": "transactioncurrency",
+      "totalActions": 11,
+      "maxDepth": 5,
+      "complexityScore": 33,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 2,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/finance/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "HTTP"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Vendor Invoice Post Realtime Workflow",
+      "solution": "ContosoFinance",
+      "triggerType": "On update of statuscode to Approved",
+      "triggerEntity": "con_apapprovalrequest",
+      "totalActions": 7,
+      "maxDepth": 5,
+      "complexityScore": 21,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/finance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Requisition Approval BPF",
+      "solution": "ContosoSupplyChain",
+      "triggerType": "On requisition create",
+      "triggerEntity": "con_purchaserequisition",
+      "totalActions": 12,
+      "maxDepth": 2,
+      "complexityScore": 36,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/supplyChainManagement/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Auto-Set ABC Classification",
+      "solution": "ContosoSupplyChain",
+      "triggerType": "On load / on change of estimated value",
+      "triggerEntity": "product",
+      "totalActions": 15,
+      "maxDepth": 5,
+      "complexityScore": 45,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/supplyChainManagement/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Generate PO in F&O on Approval",
+      "solution": "ContosoSupplyChain",
+      "triggerType": "When con_approvalstatus = Approved",
+      "triggerEntity": "con_purchaserequisition",
+      "totalActions": 18,
+      "maxDepth": 4,
+      "complexityScore": 54,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/supplyChainManagement/v1"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Fin & Ops Apps (Dynamics 365)",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Shipment Delivery Notification",
+      "solution": "ContosoSupplyChain",
+      "triggerType": "When con_shipmentstatus changes to Delivered",
+      "triggerEntity": "con_shipment",
+      "totalActions": 18,
+      "maxDepth": 4,
+      "complexityScore": 54,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/supplyChainManagement/v1"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Office 365 Outlook",
+        "Microsoft Teams"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Reassign Requisition on Vendor Approval",
+      "solution": "ContosoSupplyChain",
+      "triggerType": "On update of con_approvalstatus",
+      "triggerEntity": "con_vendor",
+      "totalActions": 9,
+      "maxDepth": 3,
+      "complexityScore": 27,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/supplyChainManagement/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Post Cycle Count Variance",
+      "solution": "ContosoSupplyChain",
+      "triggerType": "On update (con_variancequantity set)",
+      "triggerEntity": "con_inventorycount",
+      "totalActions": 13,
+      "maxDepth": 3,
+      "complexityScore": 39,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/supplyChainManagement/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Loyalty Points Accrual",
+      "solution": "ContosoCommerce",
+      "triggerType": "Create of msdyn_retailtransaction",
+      "triggerEntity": "msdyn_retailtransaction",
+      "totalActions": 10,
+      "maxDepth": 4,
+      "complexityScore": 30,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Curbside Handoff Notification",
+      "solution": "ContosoCommerce",
+      "triggerType": "When con_handoffstatus changes to Customer Arrived",
+      "triggerEntity": "con_curbsideorder",
+      "totalActions": 17,
+      "maxDepth": 3,
+      "complexityScore": 51,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 4,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook",
+        "Twilio"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)",
+        "High connector fan-out"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        },
+        {
+          "ruleId": "FLOW_3",
+          "detail": "High connector fan-out"
+        }
+      ]
+    },
+    {
+      "name": "Price Match Approval",
+      "solution": "ContosoCommerce",
+      "triggerType": "When a price match request is created",
+      "triggerEntity": "con_pricematchrequest",
+      "totalActions": 8,
+      "maxDepth": 2,
+      "complexityScore": 24,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Statement Posting Guard",
+      "solution": "ContosoCommerce",
+      "triggerType": "Update of msdyn_postingstatus",
+      "triggerEntity": "msdyn_retailstatement",
+      "totalActions": 11,
+      "maxDepth": 5,
+      "complexityScore": 33,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Gift Card Balance Rule",
+      "solution": "ContosoCommerce",
+      "triggerType": "Form load / balance change",
+      "triggerEntity": "msdyn_giftcard",
+      "totalActions": 10,
+      "maxDepth": 4,
+      "complexityScore": 30,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Clienteling Appointment Lifecycle",
+      "solution": "ContosoCommerce",
+      "triggerType": "Record creation (BPF stage progression)",
+      "triggerEntity": "con_clienteling",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Channel Data Publish Trigger",
+      "solution": "ContosoCommerce",
+      "triggerType": "When a pricing rule is created or updated",
+      "triggerEntity": "msdyn_pricingrule",
+      "totalActions": 16,
+      "maxDepth": 2,
+      "complexityScore": 48,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/commerce/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "HTTP",
+        "Azure Logic Apps"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Leave Request Approval",
+      "solution": "ContosoHumanResources",
+      "triggerType": "On leave request submitted",
+      "triggerEntity": "mshr_leaverequest",
+      "totalActions": 10,
+      "maxDepth": 4,
+      "complexityScore": 30,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Leave Balance Notification Flow",
+      "solution": "ContosoHumanResources",
+      "triggerType": "When a leave request is approved (Dataverse)",
+      "triggerEntity": "mshr_leaverequest",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 3,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "New Hire Onboarding Orchestration",
+      "solution": "ContosoHumanResources",
+      "triggerType": "When a worker is created (Dataverse)",
+      "triggerEntity": "cdm_worker",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 4,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Users",
+        "Approvals"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)",
+        "High connector fan-out"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        },
+        {
+          "ruleId": "FLOW_3",
+          "detail": "High connector fan-out"
+        }
+      ]
+    },
+    {
+      "name": "Probation End Reminder",
+      "solution": "ContosoHumanResources",
+      "triggerType": "Timeout: 14 days before con_probationenddate",
+      "triggerEntity": "cdm_employment",
+      "totalActions": 10,
+      "maxDepth": 4,
+      "complexityScore": 30,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Position Cost Center Validation",
+      "solution": "ContosoHumanResources",
+      "triggerType": "On form load / save of Position",
+      "triggerEntity": "cdm_position",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Performance Review Compensation Sync",
+      "solution": "ContosoHumanResources",
+      "triggerType": "On update of con_overallrating (review Completed)",
+      "triggerEntity": "con_performancereview",
+      "totalActions": 6,
+      "maxDepth": 4,
+      "complexityScore": 18,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Termination Access Deprovisioning",
+      "solution": "ContosoHumanResources",
+      "triggerType": "When cdm_employmentenddate is set (Dataverse)",
+      "triggerEntity": "cdm_employment",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 3,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/humanResources/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Azure AD",
+        "HTTP"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Contoso Conversation Lifecycle BPF",
+      "solution": "ContosoContactCenter",
+      "triggerType": "On conversation creation",
+      "triggerEntity": "msdyn_ocliveworkitem",
+      "totalActions": 22,
+      "maxDepth": 4,
+      "complexityScore": 66,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/contactCenterOmnichannel/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Set VIP Flag on High-Value Customer",
+      "solution": "ContosoContactCenter",
+      "triggerType": "On load / on change of customer",
+      "triggerEntity": "msdyn_ocliveworkitem",
+      "totalActions": 23,
+      "maxDepth": 5,
+      "complexityScore": 69,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/contactCenterOmnichannel/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Escalate Low-Sentiment Conversation to Supervisor",
+      "solution": "ContosoContactCenter",
+      "triggerType": "On update of msdyn_sentimentpulse",
+      "triggerEntity": "msdyn_ocliveworkitem",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/contactCenterOmnichannel/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Post-Conversation CSAT Survey Dispatch",
+      "solution": "ContosoContactCenter",
+      "triggerType": "When a conversation is closed (Dataverse trigger)",
+      "triggerEntity": "msdyn_ocliveworkitem",
+      "totalActions": 8,
+      "maxDepth": 2,
+      "complexityScore": 24,
+      "complexity": "Low",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/contactCenterOmnichannel/v1"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Microsoft Forms Pro / Customer Voice",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Sync Channel Budget from Finance",
+      "solution": "ContosoContactCenter",
+      "triggerType": "Recurrence (nightly)",
+      "triggerEntity": "con_channelbudgetline",
+      "totalActions": 20,
+      "maxDepth": 2,
+      "complexityScore": 60,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 2,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/contactCenterOmnichannel/v1"
+      ],
+      "connectors": [
+        "Dataverse",
+        "Dynamics 365 Finance and Operations",
+        "Azure Service Bus"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Deflection Outcome Rollup",
+      "solution": "ContosoContactCenter",
+      "triggerType": "On create of Deflection Outcome",
+      "triggerEntity": "con_deflectionoutcome",
+      "totalActions": 13,
+      "maxDepth": 3,
+      "complexityScore": 39,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/contactCenterOmnichannel/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Environment Provisioning Approval",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "When a row is created (con_environmentinventory, con_lifecyclestate = Requested)",
+      "triggerEntity": "con_environmentinventory",
+      "totalActions": 21,
+      "maxDepth": 3,
+      "complexityScore": 63,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 4,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Microsoft Teams",
+        "Power Platform for Admins"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)",
+        "High connector fan-out"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        },
+        {
+          "ruleId": "FLOW_3",
+          "detail": "High connector fan-out"
+        }
+      ]
+    },
+    {
+      "name": "Orphaned Flow & App Detector",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "Scheduled - daily 02:00 UTC",
+      "triggerEntity": "workflow",
+      "totalActions": 16,
+      "maxDepth": 2,
+      "complexityScore": 48,
+      "complexity": "Medium",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 3,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 0,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Office 365 Users",
+        "Office 365 Outlook"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Compliance Attestation Reminder",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "Scheduled - weekly Monday 08:00",
+      "triggerEntity": "con_coecomplianceattestation",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": false,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 2,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 0,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint",
+        "No error handling (Scope/Try-Catch)"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        },
+        {
+          "ruleId": "FLOW_2",
+          "detail": "No error handling (Scope/Try-Catch)"
+        }
+      ]
+    },
+    {
+      "name": "Account Data Steward Assignment",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "On create of account (real-time workflow)",
+      "triggerEntity": "account",
+      "totalActions": 19,
+      "maxDepth": 5,
+      "complexityScore": 57,
+      "complexity": "High",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 1,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 1,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 3,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Consent Capture Business Rule",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "On form load / change of con_consentstatus",
+      "triggerEntity": "contact",
+      "totalActions": 17,
+      "maxDepth": 3,
+      "complexityScore": 51,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 2,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 2,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Environment Onboarding Process",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "Business process flow on con_environmentinventory",
+      "triggerEntity": "con_environmentinventory",
+      "totalActions": 18,
+      "maxDepth": 4,
+      "complexityScore": 54,
+      "complexity": "Medium",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 0,
+        "httpCount": 1,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 2,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    },
+    {
+      "name": "Unmanaged Layer Alert",
+      "solution": "ContosoPlatformGovernance",
+      "triggerType": "On update of solution (ismanaged)",
+      "triggerEntity": "solution",
+      "totalActions": 9,
+      "maxDepth": 3,
+      "complexityScore": 27,
+      "complexity": "Low",
+      "hasErrorHandling": true,
+      "metrics": {
+        "childFlows": 0,
+        "composeCount": 0,
+        "connectorActions": 1,
+        "foreachCount": 1,
+        "httpCount": 2,
+        "ifCount": 0,
+        "scopeCount": 1,
+        "switchCount": 0,
+        "terminateCount": 0,
+        "variableCount": 1,
+        "waitCount": 0
+      },
+      "httpUrls": [
+        "https://api.contoso.com/platformGovernance/v1"
+      ],
+      "connectors": [
+        "Dataverse"
+      ],
+      "governanceFlags": [
+        "Uses HTTP / external endpoint"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "FLOW_1",
+          "detail": "Uses HTTP / external endpoint"
+        }
+      ]
+    }
+  ]
+}

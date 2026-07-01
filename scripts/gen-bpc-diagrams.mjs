@@ -9,12 +9,13 @@
 // The manifest shape matches DiagramManifest (src/lib/diagram-manifest.ts):
 //   { [bpcCode]: [{ path, name }] }  where path is the public-relative SVG path.
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = join(ROOT, "public");
+const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 // ── Palette (matches the favicon brand blue) ───────────────────────
 const C = {
@@ -27,30 +28,25 @@ const C = {
   band: "#f6f9fd",
 };
 
-// ── Flows to render ────────────────────────────────────────────────
-const FLOWS = [
-  {
-    code: "FS.00",
-    area: "field-service",
-    file: "service-delivery-flow.svg",
-    name: "Service Delivery — End-to-End Flow",
-    stages: ["Schedule Work", "Dispatch Technician", "Execute Visit", "Inspect & QA", "Invoice", "Close Job"],
-  },
-  {
-    code: "FS.20",
-    area: "field-service",
-    file: "execute-work-order-flow.svg",
-    name: "Execute Work Order — On-Site Flow",
-    stages: ["Arrive On-Site", "Diagnose Issue", "Perform Repair", "Record Parts Used", "Customer Sign-off"],
-  },
-  {
-    code: "SA.00",
-    area: "sales",
-    file: "sales-to-order-flow.svg",
-    name: "Sales to Order — Lead to Booked Work",
-    stages: ["Capture Lead", "Qualify", "Build Quote", "Negotiate", "Convert to Order"],
-  },
-];
+// ── Flows to render — data-driven from the generated process catalog ────
+// One end-to-end L1 flow per module (stages = its L2 processes), plus a
+// detailed sub-flow for any L2 that has L3 steps.
+const PC = JSON.parse(readFileSync(join(ROOT, "data/ProcessCatalog.json"), "utf8"));
+const l2ByL1 = {};
+for (const l2 of PC.l2Processes || []) (l2ByL1[l2.parentL1Code] ||= []).push(l2);
+const l3ByL2 = {};
+for (const l3 of PC.l3Processes || []) (l3ByL2[l3.parentL2Code] ||= []).push(l3);
+
+const FLOWS = [];
+for (const l1 of PC.l1Processes || []) {
+  const area = slug(l1.title);
+  const l2s = l2ByL1[l1.code] || [];
+  const stages = l2s.map((l2) => l2.title);
+  FLOWS.push({ code: l1.code, area, file: `${slug(l1.title)}-flow.svg`, name: `${l1.title} — End-to-End Flow`, stages: stages.length >= 2 ? stages : ["Initiate", "Process", "Review", "Complete"] });
+  // detailed sub-flow for the first L2 that has L3 steps
+  const withL3 = l2s.find((l2) => (l3ByL2[l2.code] || []).length >= 2);
+  if (withL3) FLOWS.push({ code: withL3.code, area, file: `${slug(withL3.title)}-subflow.svg`, name: `${withL3.title} — Detailed Flow`, stages: (l3ByL2[withL3.code] || []).map((l3) => l3.title) });
+}
 
 // ── SVG geometry ───────────────────────────────────────────────────
 const BOX_W = 150;

@@ -1,380 +1,6624 @@
 {
   "byEntity": {
-    "con_workorder": {
+    "lead": {
       "forms": [
-        "frm-workorder-main"
+        "frm-lead-main",
+        "frm-lead-qc"
       ],
       "views": [
-        "vw-workorder-active",
-        "vw-workorder-overdue"
+        "vw-lead-active",
+        "vw-lead-all",
+        "vw-lead-mine"
       ],
       "optionSets": [
-        "con_workorderstatus",
-        "con_priority"
+        "leadsourcecode",
+        "leadqualitycode",
+        "statecode",
+        "statuscode"
+      ],
+      "workflows": [
+        "Lead to Opportunity Sales Process",
+        "Contoso Lead Scoring & Routing",
+        "Sales-Ready Lead Handoff"
+      ]
+    },
+    "opportunity": {
+      "forms": [
+        "frm-opportunity-main",
+        "frm-opportunity-qc"
+      ],
+      "views": [
+        "vw-opportunity-active",
+        "vw-opportunity-all",
+        "vw-opportunity-mine"
+      ],
+      "optionSets": [
+        "salesstagecode",
+        "statecode"
+      ],
+      "workflows": [
+        "Auto-Create Deal Desk Review on Strategic Deal",
+        "Require Est. Close Date & Value on Propose"
+      ]
+    },
+    "opportunityproduct": {
+      "forms": [
+        "frm-opportunityproduct-main"
+      ],
+      "views": [
+        "vw-opportunityproduct-active",
+        "vw-opportunityproduct-all"
       ],
       "pluginSteps": [
-        "step-wo-create",
-        "step-wo-update"
-      ],
-      "workflows": [
-        "Assign Work Order to Technician",
-        "Escalate Overdue Work Order",
-        "Generate Invoice on Completion"
+        "step-1-opportunityrollupp",
+        "step-2-opportunityrollupp",
+        "step-3-opportunityrollupp"
       ]
     },
-    "con_servicevisit": {
-      "forms": [
-        "frm-servicevisit-main"
-      ],
-      "views": [
-        "vw-servicevisit-today"
-      ],
-      "optionSets": [
-        "con_visitoutcome"
-      ],
-      "workflows": [
-        "Notify Technician of Visit"
-      ]
-    },
-    "con_agreement": {
-      "forms": [
-        "frm-agreement-main"
-      ],
-      "views": [
-        "vw-agreement-renewals"
-      ],
-      "optionSets": [
-        "con_agreementtype"
-      ],
-      "pluginSteps": [
-        "step-agreement-update"
-      ],
-      "workflows": [
-        "Send Agreement Renewal Reminder"
-      ]
-    },
-    "con_asset": {
-      "forms": [
-        "frm-asset-main"
-      ],
-      "views": [
-        "vw-asset-byaccount"
-      ],
-      "optionSets": [
-        "con_assettype"
-      ],
-      "pluginSteps": [
-        "step-asset-create"
-      ],
-      "workflows": [
-        "Sync Asset to Field Service"
-      ]
-    },
-    "con_technician": {
-      "forms": [
-        "frm-technician-main"
-      ],
-      "views": [
-        "vw-technician-active"
-      ]
-    },
-    "con_inspection": {
-      "forms": [
-        "frm-inspection-main"
-      ],
-      "views": [
-        "vw-inspection-failed"
-      ],
-      "optionSets": [
-        "con_inspectionresult"
-      ]
-    },
-    "con_quote": {
+    "quote": {
       "forms": [
         "frm-quote-main"
       ],
       "views": [
-        "vw-quote-open"
+        "vw-quote-active",
+        "vw-quote-all"
       ],
       "optionSets": [
-        "con_quotestatus"
+        "statecode",
+        "statuscode"
       ],
-      "workflows": [
-        "Quote Follow-up Reminder"
+      "pluginSteps": [
+        "step-4-quotetoorderguardp"
       ]
     },
-    "con_project": {
+    "quotedetail": {
       "forms": [
-        "frm-project-main"
+        "frm-quotedetail-main"
       ],
       "views": [
-        "vw-project-inflight"
+        "vw-quotedetail-active",
+        "vw-quotedetail-all"
       ]
     },
-    "con_invoice": {
+    "salesorder": {
+      "forms": [
+        "frm-salesorder-main",
+        "frm-salesorder-qc"
+      ],
+      "views": [
+        "vw-salesorder-active",
+        "vw-salesorder-all",
+        "vw-salesorder-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "con_fulfillmentpriority"
+      ],
+      "pluginSteps": [
+        "step-5-quotetoorderguardp"
+      ]
+    },
+    "salesorderdetail": {
+      "forms": [
+        "frm-salesorderdetail-main"
+      ],
+      "views": [
+        "vw-salesorderdetail-active",
+        "vw-salesorderdetail-all"
+      ]
+    },
+    "invoice": {
       "forms": [
         "frm-invoice-main"
       ],
       "views": [
-        "vw-invoice-unpaid"
+        "vw-invoice-active",
+        "vw-invoice-all"
       ],
-      "pluginSteps": [
-        "step-invoice-create"
+      "optionSets": [
+        "statecode"
       ],
       "workflows": [
-        "Generate Invoice on Completion"
+        "Invoice Paid Sync from F&O"
+      ]
+    },
+    "product": {
+      "forms": [
+        "frm-product-main",
+        "frm-product-qc"
+      ],
+      "views": [
+        "vw-product-active",
+        "vw-product-all",
+        "vw-product-mine"
+      ],
+      "optionSets": [
+        "producttypecode",
+        "statecode",
+        "con_lifecyclestage",
+        "productstructure",
+        "con_hazmatclass",
+        "con_abcclassification"
+      ],
+      "workflows": [
+        "Auto-Set ABC Classification"
+      ]
+    },
+    "pricelevel": {
+      "forms": [
+        "frm-pricelevel-main"
+      ],
+      "views": [
+        "vw-pricelevel-active",
+        "vw-pricelevel-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "competitor": {
+      "forms": [
+        "frm-competitor-main"
+      ],
+      "views": [
+        "vw-competitor-active",
+        "vw-competitor-all"
+      ]
+    },
+    "goal": {
+      "forms": [
+        "frm-goal-main"
+      ],
+      "views": [
+        "vw-goal-active",
+        "vw-goal-all"
+      ]
+    },
+    "territory": {
+      "forms": [
+        "frm-territory-main"
+      ],
+      "views": [
+        "vw-territory-active",
+        "vw-territory-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "campaign": {
+      "forms": [
+        "frm-campaign-main"
+      ],
+      "views": [
+        "vw-campaign-active",
+        "vw-campaign-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "con_dealdeskreview": {
+      "forms": [
+        "frm-con-dealdeskreview-main",
+        "frm-con-dealdeskreview-qc"
+      ],
+      "views": [
+        "vw-con-dealdeskreview-active",
+        "vw-con-dealdeskreview-all",
+        "vw-con-dealdeskreview-mine"
+      ],
+      "optionSets": [
+        "con_reviewstatus",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-6-dealdeskapprovalst"
+      ],
+      "workflows": [
+        "Deal Desk Approval Routing"
+      ]
+    },
+    "con_salesplaybook": {
+      "forms": [
+        "frm-con-salesplaybook-main",
+        "frm-con-salesplaybook-qc"
+      ],
+      "views": [
+        "vw-con-salesplaybook-active",
+        "vw-con-salesplaybook-all",
+        "vw-con-salesplaybook-mine"
+      ],
+      "optionSets": [
+        "con_stage"
+      ]
+    },
+    "con_custtranspayment": {
+      "forms": [
+        "frm-con-custtranspayment-main"
+      ],
+      "views": [
+        "vw-con-custtranspayment-active",
+        "vw-con-custtranspayment-all"
+      ],
+      "optionSets": [
+        "con_settlementstatus"
+      ]
+    },
+    "incident": {
+      "forms": [
+        "frm-incident-main",
+        "frm-incident-qc"
+      ],
+      "views": [
+        "vw-incident-active",
+        "vw-incident-all",
+        "vw-incident-mine"
+      ],
+      "optionSets": [
+        "prioritycode",
+        "casetypecode",
+        "statuscode",
+        "statecode",
+        "con_channelsource"
+      ],
+      "pluginSteps": [
+        "step-7-con-caserouting-en",
+        "step-8-con-caserouting-en"
+      ],
+      "workflows": [
+        "Phase to First Response and Resolution",
+        "Auto-Route New Cases to Tier Queue",
+        "Require Resolution Notes Before Close"
+      ]
+    },
+    "incidentresolution": {
+      "forms": [
+        "frm-incidentresolution-main"
+      ],
+      "views": [
+        "vw-incidentresolution-active",
+        "vw-incidentresolution-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "knowledgearticle": {
+      "forms": [
+        "frm-knowledgearticle-main",
+        "frm-knowledgearticle-qc"
+      ],
+      "views": [
+        "vw-knowledgearticle-active",
+        "vw-knowledgearticle-all",
+        "vw-knowledgearticle-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-11-con-deflection-sav"
+      ],
+      "workflows": [
+        "Nightly Knowledge Article Review Reminder"
+      ]
+    },
+    "entitlement": {
+      "forms": [
+        "frm-entitlement-main"
+      ],
+      "views": [
+        "vw-entitlement-active",
+        "vw-entitlement-all"
+      ],
+      "optionSets": [
+        "allocationtypecode",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "entitlementtemplate": {
+      "forms": [
+        "frm-entitlementtemplate-main"
+      ],
+      "views": [
+        "vw-entitlementtemplate-active",
+        "vw-entitlementtemplate-all"
+      ],
+      "optionSets": [
+        "allocationtypecode",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "sla": {
+      "forms": [
+        "frm-sla-main",
+        "frm-sla-qc"
+      ],
+      "views": [
+        "vw-sla-active",
+        "vw-sla-all",
+        "vw-sla-mine"
+      ],
+      "optionSets": [
+        "objecttypecode",
+        "slatype",
+        "statecode",
+        "con_tier"
+      ]
+    },
+    "slaitem": {
+      "forms": [
+        "frm-slaitem-main"
+      ],
+      "views": [
+        "vw-slaitem-active",
+        "vw-slaitem-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "queue": {
+      "forms": [
+        "frm-queue-main"
+      ],
+      "views": [
+        "vw-queue-active",
+        "vw-queue-all"
+      ],
+      "optionSets": [
+        "queuetypecode",
+        "statecode",
+        "statuscode",
+        "queuetype"
+      ]
+    },
+    "queueitem": {
+      "forms": [
+        "frm-queueitem-main"
+      ],
+      "views": [
+        "vw-queueitem-active",
+        "vw-queueitem-all"
+      ],
+      "optionSets": [
+        "objecttypecode",
+        "statecode"
+      ]
+    },
+    "msdyn_ocsession": {
+      "forms": [
+        "frm-msdyn-ocsession-main"
+      ],
+      "views": [
+        "vw-msdyn-ocsession-active",
+        "vw-msdyn-ocsession-all"
+      ],
+      "optionSets": [
+        "msdyn_channel",
+        "msdyn_sessionstate",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "contract": {
+      "forms": [
+        "frm-contract-main"
+      ],
+      "views": [
+        "vw-contract-active",
+        "vw-contract-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdyn_customervoicesurvey": {
+      "forms": [
+        "frm-msdyn-customervoicesurvey-main"
+      ],
+      "views": [
+        "vw-msdyn-customervoicesurvey-active",
+        "vw-msdyn-customervoicesurvey-all"
+      ],
+      "optionSets": [
+        "msdyn_surveytype",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "con_casedeflection": {
+      "forms": [
+        "frm-con-casedeflection-main",
+        "frm-con-casedeflection-qc"
+      ],
+      "views": [
+        "vw-con-casedeflection-active",
+        "vw-con-casedeflection-all",
+        "vw-con-casedeflection-mine"
+      ],
+      "optionSets": [
+        "con_deflectionchannel",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-10-con-deflection-sav"
+      ]
+    },
+    "con_escalation": {
+      "forms": [
+        "frm-con-escalation-main",
+        "frm-con-escalation-qc"
+      ],
+      "views": [
+        "vw-con-escalation-active",
+        "vw-con-escalation-all",
+        "vw-con-escalation-mine"
+      ],
+      "optionSets": [
+        "con_reason"
+      ],
+      "pluginSteps": [
+        "step-9-con-escalation-sla"
+      ],
+      "workflows": [
+        "Notify Manager on High-Priority Escalation"
+      ]
+    },
+    "con_servicefeedback": {
+      "forms": [
+        "frm-con-servicefeedback-main",
+        "frm-con-servicefeedback-qc"
+      ],
+      "views": [
+        "vw-con-servicefeedback-active",
+        "vw-con-servicefeedback-all",
+        "vw-con-servicefeedback-mine"
+      ],
+      "optionSets": [
+        "con_sentiment"
+      ],
+      "workflows": [
+        "Sync CSAT Survey Responses to Service Feedback"
+      ]
+    },
+    "msdyn_agreement": {
+      "forms": [
+        "frm-msdyn-agreement-main"
+      ],
+      "views": [
+        "vw-msdyn-agreement-active",
+        "vw-msdyn-agreement-all"
+      ],
+      "optionSets": [
+        "msdyn_systemstatus",
+        "msdyn_recordtype",
+        "statecode"
+      ],
+      "workflows": [
+        "Agreement Booking Setup Generation"
+      ]
+    },
+    "msdyn_workorder": {
+      "forms": [
+        "frm-msdyn-workorder-main",
+        "frm-msdyn-workorder-qc"
+      ],
+      "views": [
+        "vw-msdyn-workorder-active",
+        "vw-msdyn-workorder-all",
+        "vw-msdyn-workorder-mine"
+      ],
+      "optionSets": [
+        "msdyn_systemstatus",
+        "con_slabreachrisk",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-15-contoso-fieldservi"
+      ],
+      "workflows": [
+        "Work Order Lifecycle",
+        "Auto-Create Safety Inspection for Hazardous Work Orders",
+        "SLA Breach Risk Escalation"
+      ]
+    },
+    "msdyn_workorderproduct": {
+      "forms": [
+        "frm-msdyn-workorderproduct-main"
+      ],
+      "views": [
+        "vw-msdyn-workorderproduct-active",
+        "vw-msdyn-workorderproduct-all"
+      ],
+      "optionSets": [
+        "msdyn_linestatus"
+      ],
+      "pluginSteps": [
+        "step-12-contoso-fieldservi",
+        "step-13-contoso-fieldservi",
+        "step-16-contoso-fieldservi"
+      ]
+    },
+    "msdyn_workorderservice": {
+      "forms": [
+        "frm-msdyn-workorderservice-main"
+      ],
+      "views": [
+        "vw-msdyn-workorderservice-active",
+        "vw-msdyn-workorderservice-all"
+      ],
+      "optionSets": [
+        "msdyn_linestatus"
+      ],
+      "pluginSteps": [
+        "step-14-contoso-fieldservi"
+      ]
+    },
+    "msdyn_incidenttype": {
+      "forms": [
+        "frm-msdyn-incidenttype-main",
+        "frm-msdyn-incidenttype-qc"
+      ],
+      "views": [
+        "vw-msdyn-incidenttype-active",
+        "vw-msdyn-incidenttype-all",
+        "vw-msdyn-incidenttype-mine"
+      ],
+      "optionSets": [
+        "con_compliancecategory",
+        "statecode"
+      ]
+    },
+    "bookableresource": {
+      "forms": [
+        "frm-bookableresource-main",
+        "frm-bookableresource-qc"
+      ],
+      "views": [
+        "vw-bookableresource-active",
+        "vw-bookableresource-all",
+        "vw-bookableresource-mine"
+      ],
+      "optionSets": [
+        "resourcetype",
+        "statecode",
+        "con_primaryskill"
+      ],
+      "workflows": [
+        "Certification Expiry Warning for Resources"
+      ]
+    },
+    "bookableresourcebooking": {
+      "forms": [
+        "frm-bookableresourcebooking-main"
+      ],
+      "views": [
+        "vw-bookableresourcebooking-active",
+        "vw-bookableresourcebooking-all"
+      ],
+      "optionSets": [
+        "msdyn_bookingtype"
+      ],
+      "pluginSteps": [
+        "step-17-contoso-fieldservi"
+      ]
+    },
+    "msdyn_resourcerequirement": {
+      "forms": [
+        "frm-msdyn-resourcerequirement-main"
+      ],
+      "views": [
+        "vw-msdyn-resourcerequirement-active",
+        "vw-msdyn-resourcerequirement-all"
+      ],
+      "optionSets": [
+        "msdyn_worklocation"
+      ]
+    },
+    "msdyn_customerasset": {
+      "forms": [
+        "frm-msdyn-customerasset-main",
+        "frm-msdyn-customerasset-qc"
+      ],
+      "views": [
+        "vw-msdyn-customerasset-active",
+        "vw-msdyn-customerasset-all",
+        "vw-msdyn-customerasset-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "workflows": [
+        "Require Serial Number on Serviceable Assets"
+      ]
+    },
+    "msdyn_rma": {
+      "forms": [
+        "frm-msdyn-rma-main"
+      ],
+      "views": [
+        "vw-msdyn-rma-active",
+        "vw-msdyn-rma-all"
+      ],
+      "optionSets": [
+        "msdyn_systemstatus",
+        "msdyn_returntype"
+      ]
+    },
+    "msdyn_timeentry": {
+      "forms": [
+        "frm-msdyn-timeentry-main",
+        "frm-msdyn-timeentry-qc"
+      ],
+      "views": [
+        "vw-msdyn-timeentry-active",
+        "vw-msdyn-timeentry-all",
+        "vw-msdyn-timeentry-mine"
+      ],
+      "optionSets": [
+        "msdyn_type",
+        "msdyn_entrystatus"
+      ],
+      "pluginSteps": [
+        "step-20-timeentryvalidatio",
+        "step-21-timeentryvalidatio"
+      ],
+      "workflows": [
+        "Contoso Time Entry Auto-Submit Reminder"
+      ]
+    },
+    "msdyn_productinventory": {
+      "forms": [
+        "frm-msdyn-productinventory-main"
+      ],
+      "views": [
+        "vw-msdyn-productinventory-active",
+        "vw-msdyn-productinventory-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "workflows": [
+        "Truck Stock Replenishment Request"
+      ]
+    },
+    "msdyn_warehouse": {
+      "forms": [
+        "frm-msdyn-warehouse-main"
+      ],
+      "views": [
+        "vw-msdyn-warehouse-active",
+        "vw-msdyn-warehouse-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "con_safetyinspection": {
+      "forms": [
+        "frm-con-safetyinspection-main",
+        "frm-con-safetyinspection-qc"
+      ],
+      "views": [
+        "vw-con-safetyinspection-active",
+        "vw-con-safetyinspection-all",
+        "vw-con-safetyinspection-mine"
+      ],
+      "optionSets": [
+        "con_result",
+        "statuscode"
+      ]
+    },
+    "con_slapenaltyrule": {
+      "forms": [
+        "frm-con-slapenaltyrule-main",
+        "frm-con-slapenaltyrule-qc"
+      ],
+      "views": [
+        "vw-con-slapenaltyrule-active",
+        "vw-con-slapenaltyrule-all",
+        "vw-con-slapenaltyrule-mine"
+      ],
+      "optionSets": [
+        "con_penaltytier",
+        "statecode"
+      ]
+    },
+    "msdyn_purchaseorder": {
+      "forms": [
+        "frm-msdyn-purchaseorder-main"
+      ],
+      "views": [
+        "vw-msdyn-purchaseorder-active",
+        "vw-msdyn-purchaseorder-all"
+      ],
+      "optionSets": [
+        "msdyn_systemstatus",
+        "msdyn_ordertype"
+      ]
+    },
+    "msdyn_project": {
+      "forms": [
+        "frm-msdyn-project-main",
+        "frm-msdyn-project-qc"
+      ],
+      "views": [
+        "vw-msdyn-project-active",
+        "vw-msdyn-project-all",
+        "vw-msdyn-project-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode",
+        "con_deliveryregion"
+      ],
+      "workflows": [
+        "Project Approval Business Process Flow"
+      ]
+    },
+    "msdyn_projecttask": {
+      "forms": [
+        "frm-msdyn-projecttask-main"
+      ],
+      "views": [
+        "vw-msdyn-projecttask-active",
+        "vw-msdyn-projecttask-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-18-projectrollupplugi"
+      ]
+    },
+    "msdyn_projectteam": {
+      "forms": [
+        "frm-msdyn-projectteam-main"
+      ],
+      "views": [
+        "vw-msdyn-projectteam-active",
+        "vw-msdyn-projectteam-all"
+      ]
+    },
+    "msdyn_resourceassignment": {
+      "forms": [
+        "frm-msdyn-resourceassignment-main"
+      ],
+      "views": [
+        "vw-msdyn-resourceassignment-active",
+        "vw-msdyn-resourceassignment-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdyn_projectcontract": {
+      "forms": [
+        "frm-msdyn-projectcontract-main"
+      ],
+      "views": [
+        "vw-msdyn-projectcontract-active",
+        "vw-msdyn-projectcontract-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdyn_contractline": {
+      "forms": [
+        "frm-msdyn-contractline-main"
+      ],
+      "views": [
+        "vw-msdyn-contractline-active",
+        "vw-msdyn-contractline-all"
+      ],
+      "optionSets": [
+        "msdyn_billingmethod",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-22-contractlineactual"
+      ],
+      "workflows": [
+        "Contract Line to F&O Sync"
+      ]
+    },
+    "msdyn_estimate": {
+      "forms": [
+        "frm-msdyn-estimate-main"
+      ],
+      "views": [
+        "vw-msdyn-estimate-active",
+        "vw-msdyn-estimate-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdyn_estimateline": {
+      "forms": [
+        "frm-msdyn-estimateline-main"
+      ],
+      "views": [
+        "vw-msdyn-estimateline-active",
+        "vw-msdyn-estimateline-all"
+      ],
+      "optionSets": [
+        "msdyn_transactiontypecode"
+      ]
+    },
+    "msdyn_expense": {
+      "forms": [
+        "frm-msdyn-expense-main",
+        "frm-msdyn-expense-qc"
+      ],
+      "views": [
+        "vw-msdyn-expense-active",
+        "vw-msdyn-expense-all",
+        "vw-msdyn-expense-mine"
+      ],
+      "optionSets": [
+        "msdyn_expensestatus"
+      ],
+      "workflows": [
+        "Expense Receipt Required Rule"
+      ]
+    },
+    "msdyn_actuals": {
+      "forms": [
+        "frm-msdyn-actuals-main"
+      ],
+      "views": [
+        "vw-msdyn-actuals-active",
+        "vw-msdyn-actuals-all"
+      ],
+      "optionSets": [
+        "msdyn_transactiontypecode",
+        "msdyn_transactionclassification",
+        "msdyn_billingtype"
+      ],
+      "pluginSteps": [
+        "step-19-projectrollupplugi"
+      ],
+      "workflows": [
+        "Margin Alert on Actuals Posting"
+      ]
+    },
+    "msdyn_invoice": {
+      "forms": [
+        "frm-msdyn-invoice-main"
+      ],
+      "views": [
+        "vw-msdyn-invoice-active",
+        "vw-msdyn-invoice-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "con_projecthealthreview": {
+      "forms": [
+        "frm-con-projecthealthreview-main",
+        "frm-con-projecthealthreview-qc"
+      ],
+      "views": [
+        "vw-con-projecthealthreview-active",
+        "vw-con-projecthealthreview-all",
+        "vw-con-projecthealthreview-mine"
+      ],
+      "optionSets": [
+        "con_ragstatus",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-23-projecthealthrevie"
+      ]
+    },
+    "con_resourcerequest": {
+      "forms": [
+        "frm-con-resourcerequest-main",
+        "frm-con-resourcerequest-qc"
+      ],
+      "views": [
+        "vw-con-resourcerequest-active",
+        "vw-con-resourcerequest-all",
+        "vw-con-resourcerequest-mine"
+      ],
+      "optionSets": [
+        "con_requiredrole",
+        "con_fulfillmentstatus",
+        "con_priority"
+      ],
+      "workflows": [
+        "Staffing Request Fulfillment Routing"
+      ]
+    },
+    "msdyn_projectparameter": {
+      "forms": [
+        "frm-msdyn-projectparameter-main"
+      ],
+      "views": [
+        "vw-msdyn-projectparameter-active",
+        "vw-msdyn-projectparameter-all"
+      ],
+      "optionSets": [
+        "msdyn_integrationmode",
+        "msdyn_timecapturewbslevel",
+        "statecode"
+      ]
+    },
+    "con_faoprojectvendorinvoice": {
+      "forms": [
+        "frm-con-faoprojectvendorinvoice-main"
+      ],
+      "views": [
+        "vw-con-faoprojectvendorinvoice-active",
+        "vw-con-faoprojectvendorinvoice-all"
+      ]
+    },
+    "msdynmkt_journey": {
+      "forms": [
+        "frm-msdynmkt-journey-main",
+        "frm-msdynmkt-journey-qc"
+      ],
+      "views": [
+        "vw-msdynmkt-journey-active",
+        "vw-msdynmkt-journey-all",
+        "vw-msdynmkt-journey-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode",
+        "con_dataresidencyregion"
+      ]
+    },
+    "msdynmkt_segment": {
+      "forms": [
+        "frm-msdynmkt-segment-main",
+        "frm-msdynmkt-segment-qc"
+      ],
+      "views": [
+        "vw-msdynmkt-segment-active",
+        "vw-msdynmkt-segment-all",
+        "vw-msdynmkt-segment-mine"
+      ],
+      "optionSets": [
+        "msdynmkt_segmenttype",
+        "statecode",
+        "statuscode",
+        "con_dataresidencyregion"
+      ]
+    },
+    "msdynmkt_marketingemail": {
+      "forms": [
+        "frm-msdynmkt-marketingemail-main",
+        "frm-msdynmkt-marketingemail-qc"
+      ],
+      "views": [
+        "vw-msdynmkt-marketingemail-active",
+        "vw-msdynmkt-marketingemail-all",
+        "vw-msdynmkt-marketingemail-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode",
+        "con_brandapprovalstatus"
+      ],
+      "pluginSteps": [
+        "step-24-contosobrandapprov"
+      ],
+      "workflows": [
+        "Require Legal Footer Before Email Go-Live"
+      ]
+    },
+    "msdynmkt_channeltemplate": {
+      "forms": [
+        "frm-msdynmkt-channeltemplate-main"
+      ],
+      "views": [
+        "vw-msdynmkt-channeltemplate-active",
+        "vw-msdynmkt-channeltemplate-all"
+      ],
+      "optionSets": [
+        "msdynmkt_channeltype",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdynmkt_marketingform": {
+      "forms": [
+        "frm-msdynmkt-marketingform-main"
+      ],
+      "views": [
+        "vw-msdynmkt-marketingform-active",
+        "vw-msdynmkt-marketingform-all"
+      ],
+      "optionSets": [
+        "msdynmkt_formtype",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdynmkt_leadscoringmodel": {
+      "forms": [
+        "frm-msdynmkt-leadscoringmodel-main"
+      ],
+      "views": [
+        "vw-msdynmkt-leadscoringmodel-active",
+        "vw-msdynmkt-leadscoringmodel-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "contact": {
+      "forms": [
+        "frm-contact-main",
+        "frm-contact-qc"
+      ],
+      "views": [
+        "vw-contact-active",
+        "vw-contact-all",
+        "vw-contact-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode",
+        "con_marketablereason",
+        "con_consentstatus",
+        "con_datasensitivity"
+      ],
+      "pluginSteps": [
+        "step-61-con-governance-dat"
+      ],
+      "workflows": [
+        "Consent Capture Business Rule"
+      ]
+    },
+    "msevtmgt_event": {
+      "forms": [
+        "frm-msevtmgt-event-main",
+        "frm-msevtmgt-event-qc"
+      ],
+      "views": [
+        "vw-msevtmgt-event-active",
+        "vw-msevtmgt-event-all",
+        "vw-msevtmgt-event-mine"
+      ],
+      "optionSets": [
+        "msevtmgt_eventformat",
+        "statecode"
+      ]
+    },
+    "msevtmgt_eventregistration": {
+      "forms": [
+        "frm-msevtmgt-eventregistration-main"
+      ],
+      "views": [
+        "vw-msevtmgt-eventregistration-active",
+        "vw-msevtmgt-eventregistration-all"
+      ],
+      "optionSets": [
+        "msevtmgt_registrationstatus",
+        "statecode",
+        "statuscode"
+      ],
+      "workflows": [
+        "Event Registration Confirmation"
+      ]
+    },
+    "msdynmkt_contactpointconsent3": {
+      "forms": [
+        "frm-msdynmkt-contactpointconsent3-main"
+      ],
+      "views": [
+        "vw-msdynmkt-contactpointconsent3-active",
+        "vw-msdynmkt-contactpointconsent3-all"
+      ],
+      "optionSets": [
+        "msdynmkt_channeltype",
+        "msdynmkt_consentstatus",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-27-contosoconsentaudi",
+        "step-28-contosoconsentaudi"
+      ],
+      "workflows": [
+        "Consent Change Suppression Sync"
+      ]
+    },
+    "msdynmkt_trigger": {
+      "forms": [
+        "frm-msdynmkt-trigger-main"
+      ],
+      "views": [
+        "vw-msdynmkt-trigger-active",
+        "vw-msdynmkt-trigger-all"
+      ],
+      "optionSets": [
+        "msdynmkt_triggertype",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "con_campaignbrief": {
+      "forms": [
+        "frm-con-campaignbrief-main",
+        "frm-con-campaignbrief-qc"
+      ],
+      "views": [
+        "vw-con-campaignbrief-active",
+        "vw-con-campaignbrief-all",
+        "vw-con-campaignbrief-mine"
+      ],
+      "optionSets": [
+        "con_approvalstatus",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-25-contosobudgetrollu",
+        "step-26-contosobudgetrollu"
+      ],
+      "workflows": [
+        "Campaign Brief Approval Routing",
+        "Campaign Brief to Launch BPF"
+      ]
+    },
+    "con_legalfootertemplate": {
+      "forms": [
+        "frm-con-legalfootertemplate-main",
+        "frm-con-legalfootertemplate-qc"
+      ],
+      "views": [
+        "vw-con-legalfootertemplate-active",
+        "vw-con-legalfootertemplate-all",
+        "vw-con-legalfootertemplate-mine"
+      ],
+      "optionSets": [
+        "con_region",
+        "statecode"
+      ]
+    },
+    "con_marketingspendline": {
+      "forms": [
+        "frm-con-marketingspendline-main"
+      ],
+      "views": [
+        "vw-con-marketingspendline-active",
+        "vw-con-marketingspendline-all"
+      ]
+    },
+    "msdynci_customerprofile": {
+      "forms": [
+        "frm-msdynci-customerprofile-main",
+        "frm-msdynci-customerprofile-qc"
+      ],
+      "views": [
+        "vw-msdynci-customerprofile-active",
+        "vw-msdynci-customerprofile-all",
+        "vw-msdynci-customerprofile-mine"
+      ],
+      "optionSets": [
+        "con_churnriskband",
+        "con_loyaltytier",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-33-profilemergeenrich"
+      ],
+      "workflows": [
+        "Unified Profile Enrichment - F&O Credit"
+      ]
+    },
+    "msdynci_datasource": {
+      "forms": [
+        "frm-msdynci-datasource-main"
+      ],
+      "views": [
+        "vw-msdynci-datasource-active",
+        "vw-msdynci-datasource-all"
+      ],
+      "optionSets": [
+        "msdynci_sourcetype",
+        "statuscode"
+      ],
+      "workflows": [
+        "Data Onboarding & Unification Approval"
+      ]
+    },
+    "msdynci_entity": {
+      "forms": [
+        "frm-msdynci-entity-main"
+      ],
+      "views": [
+        "vw-msdynci-entity-active",
+        "vw-msdynci-entity-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdynci_measure": {
+      "forms": [
+        "frm-msdynci-measure-main",
+        "frm-msdynci-measure-qc"
+      ],
+      "views": [
+        "vw-msdynci-measure-active",
+        "vw-msdynci-measure-all",
+        "vw-msdynci-measure-mine"
+      ],
+      "optionSets": [
+        "msdynci_measuretype",
+        "con_refreshcadence",
+        "statecode"
+      ]
+    },
+    "msdynci_segment": {
+      "forms": [
+        "frm-msdynci-segment-main",
+        "frm-msdynci-segment-qc"
+      ],
+      "views": [
+        "vw-msdynci-segment-active",
+        "vw-msdynci-segment-all",
+        "vw-msdynci-segment-mine"
+      ],
+      "optionSets": [
+        "msdynci_segmenttype",
+        "statuscode"
+      ],
+      "workflows": [
+        "Consent Verified Guard for Segment Activation"
+      ]
+    },
+    "msdynci_prediction": {
+      "forms": [
+        "frm-msdynci-prediction-main"
+      ],
+      "views": [
+        "vw-msdynci-prediction-active",
+        "vw-msdynci-prediction-all"
+      ],
+      "optionSets": [
+        "msdynci_modeltype",
+        "statecode"
+      ]
+    },
+    "msdynci_predictionscore": {
+      "forms": [
+        "frm-msdynci-predictionscore-main"
+      ],
+      "views": [
+        "vw-msdynci-predictionscore-active",
+        "vw-msdynci-predictionscore-all"
+      ],
+      "optionSets": [
+        "msdynci_scoreband",
+        "statecode"
+      ],
+      "workflows": [
+        "Sync Churn Prediction to Loyalty Tier"
+      ]
+    },
+    "msdynci_activity": {
+      "forms": [
+        "frm-msdynci-activity-main"
+      ],
+      "views": [
+        "vw-msdynci-activity-active",
+        "vw-msdynci-activity-all"
+      ],
+      "optionSets": [
+        "msdynci_activitytype",
+        "statecode"
+      ]
+    },
+    "msdynci_relationship": {
+      "forms": [
+        "frm-msdynci-relationship-main"
+      ],
+      "views": [
+        "vw-msdynci-relationship-active",
+        "vw-msdynci-relationship-all"
+      ],
+      "optionSets": [
+        "msdynci_relationshiptype",
+        "msdynci_cardinality",
+        "statecode"
+      ]
+    },
+    "con_consentledger": {
+      "forms": [
+        "frm-con-consentledger-main",
+        "frm-con-consentledger-qc"
+      ],
+      "views": [
+        "vw-con-consentledger-active",
+        "vw-con-consentledger-all",
+        "vw-con-consentledger-mine"
+      ],
+      "optionSets": [
+        "con_consenttype",
+        "con_consentstatus",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-29-consentledgervalid",
+        "step-30-consentledgervalid"
+      ],
+      "workflows": [
+        "DSR Delete Propagation"
+      ]
+    },
+    "con_matchrule": {
+      "forms": [
+        "frm-con-matchrule-main",
+        "frm-con-matchrule-qc"
+      ],
+      "views": [
+        "vw-con-matchrule-active",
+        "vw-con-matchrule-all",
+        "vw-con-matchrule-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-31-matchruleauditplug",
+        "step-32-matchruleauditplug"
+      ]
+    },
+    "con_datasourcehealth": {
+      "forms": [
+        "frm-con-datasourcehealth-main",
+        "frm-con-datasourcehealth-qc"
+      ],
+      "views": [
+        "vw-con-datasourcehealth-active",
+        "vw-con-datasourcehealth-all",
+        "vw-con-datasourcehealth-mine"
+      ],
+      "optionSets": [
+        "con_refreshstatus"
+      ],
+      "workflows": [
+        "Data Source Health Alert to Teams"
+      ]
+    },
+    "mserp_custcustomerv3entity": {
+      "forms": [
+        "frm-mserp-custcustomerv3entity-main"
+      ],
+      "views": [
+        "vw-mserp-custcustomerv3entity-active",
+        "vw-mserp-custcustomerv3entity-all"
+      ]
+    },
+    "msdynci_semanticmapping": {
+      "forms": [
+        "frm-msdynci-semanticmapping-main"
+      ],
+      "views": [
+        "vw-msdynci-semanticmapping-active",
+        "vw-msdynci-semanticmapping-all"
+      ],
+      "optionSets": [
+        "msdynci_semantictype",
+        "msdynci_datatype",
+        "statecode"
+      ]
+    },
+    "mserp_mainaccount": {
+      "forms": [
+        "frm-mserp-mainaccount-main"
+      ],
+      "views": [
+        "vw-mserp-mainaccount-active",
+        "vw-mserp-mainaccount-all"
+      ],
+      "optionSets": [
+        "mserp_type",
+        "statecode"
+      ]
+    },
+    "mserp_ledger": {
+      "forms": [
+        "frm-mserp-ledger-main"
+      ],
+      "views": [
+        "vw-mserp-ledger-active",
+        "vw-mserp-ledger-all"
+      ]
+    },
+    "mserp_generaljournalaccountentry": {
+      "forms": [
+        "frm-mserp-generaljournalaccountentry-main"
+      ],
+      "views": [
+        "vw-mserp-generaljournalaccountentry-active",
+        "vw-mserp-generaljournalaccountentry-all"
+      ],
+      "optionSets": [
+        "mserp_postingtype"
+      ]
+    },
+    "mserp_vendinvoiceheader": {
+      "forms": [
+        "frm-mserp-vendinvoiceheader-main"
+      ],
+      "views": [
+        "vw-mserp-vendinvoiceheader-active",
+        "vw-mserp-vendinvoiceheader-all"
+      ],
+      "optionSets": [
+        "mserp_approvalstatus"
+      ]
+    },
+    "mserp_custpaymentjournalline": {
+      "forms": [
+        "frm-mserp-custpaymentjournalline-main"
+      ],
+      "views": [
+        "vw-mserp-custpaymentjournalline-active",
+        "vw-mserp-custpaymentjournalline-all"
+      ]
+    },
+    "mserp_budgetregisterentry": {
+      "forms": [
+        "frm-mserp-budgetregisterentry-main"
+      ],
+      "views": [
+        "vw-mserp-budgetregisterentry-active",
+        "vw-mserp-budgetregisterentry-all"
+      ]
+    },
+    "mserp_fixedasset": {
+      "forms": [
+        "frm-mserp-fixedasset-main"
+      ],
+      "views": [
+        "vw-mserp-fixedasset-active",
+        "vw-mserp-fixedasset-all"
+      ],
+      "optionSets": [
+        "mserp_assetstatus"
+      ]
+    },
+    "mserp_taxtransaction": {
+      "forms": [
+        "frm-mserp-taxtransaction-main"
+      ],
+      "views": [
+        "vw-mserp-taxtransaction-active",
+        "vw-mserp-taxtransaction-all"
+      ],
+      "optionSets": [
+        "mserp_taxdirection"
+      ]
+    },
+    "cdm_company": {
+      "forms": [
+        "frm-cdm-company-main"
+      ],
+      "views": [
+        "vw-cdm-company-active",
+        "vw-cdm-company-all"
+      ],
+      "optionSets": [
+        "statecode"
       ]
     },
     "account": {
       "forms": [
-        "frm-account-fs"
+        "frm-account-main",
+        "frm-account-qc"
+      ],
+      "views": [
+        "vw-account-active",
+        "vw-account-all",
+        "vw-account-mine"
+      ],
+      "optionSets": [
+        "paymenttermscode",
+        "con_creditriskrating",
+        "statecode",
+        "statuscode",
+        "con_datasensitivity"
+      ],
+      "pluginSteps": [
+        "step-36-creditlimitenforce",
+        "step-60-con-governance-dat"
+      ],
+      "workflows": [
+        "Credit Risk Rating Business Rule",
+        "Account Data Steward Assignment"
+      ]
+    },
+    "transactioncurrency": {
+      "forms": [
+        "frm-transactioncurrency-main",
+        "frm-transactioncurrency-qc"
+      ],
+      "views": [
+        "vw-transactioncurrency-active",
+        "vw-transactioncurrency-all",
+        "vw-transactioncurrency-mine"
+      ],
+      "workflows": [
+        "Exchange Rate Sync Flow"
+      ]
+    },
+    "con_apapprovalrequest": {
+      "forms": [
+        "frm-con-apapprovalrequest-main",
+        "frm-con-apapprovalrequest-qc"
+      ],
+      "views": [
+        "vw-con-apapprovalrequest-active",
+        "vw-con-apapprovalrequest-all",
+        "vw-con-apapprovalrequest-mine"
+      ],
+      "optionSets": [
+        "con_approvaltier",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-34-apapprovalroutingp",
+        "step-35-apapprovalroutingp"
+      ],
+      "workflows": [
+        "AP Invoice Approval BPF",
+        "Vendor Invoice Post Realtime Workflow"
+      ]
+    },
+    "con_capexrequest": {
+      "forms": [
+        "frm-con-capexrequest-main",
+        "frm-con-capexrequest-qc"
+      ],
+      "views": [
+        "vw-con-capexrequest-active",
+        "vw-con-capexrequest-all",
+        "vw-con-capexrequest-mine"
+      ],
+      "optionSets": [
+        "con_assetgroup",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-37-capextofixedassetp"
+      ],
+      "workflows": [
+        "Capex Budget Check Flow"
+      ]
+    },
+    "con_financialdimensionmap": {
+      "forms": [
+        "frm-con-financialdimensionmap-main",
+        "frm-con-financialdimensionmap-qc"
+      ],
+      "views": [
+        "vw-con-financialdimensionmap-active",
+        "vw-con-financialdimensionmap-all",
+        "vw-con-financialdimensionmap-mine"
+      ]
+    },
+    "con_dunningaction": {
+      "forms": [
+        "frm-con-dunningaction-main",
+        "frm-con-dunningaction-qc"
+      ],
+      "views": [
+        "vw-con-dunningaction-active",
+        "vw-con-dunningaction-all",
+        "vw-con-dunningaction-mine"
+      ],
+      "optionSets": [
+        "con_dunninglevel",
+        "con_outcome"
+      ],
+      "workflows": [
+        "Dunning Escalation Async Workflow"
+      ]
+    },
+    "msdyn_releasedproduct": {
+      "forms": [
+        "frm-msdyn-releasedproduct-main"
+      ],
+      "views": [
+        "vw-msdyn-releasedproduct-active",
+        "vw-msdyn-releasedproduct-all"
+      ]
+    },
+    "msdyn_inventwarehouse": {
+      "forms": [
+        "frm-msdyn-inventwarehouse-main"
+      ],
+      "views": [
+        "vw-msdyn-inventwarehouse-active",
+        "vw-msdyn-inventwarehouse-all"
+      ]
+    },
+    "msdyn_purchaseorderheader": {
+      "forms": [
+        "frm-msdyn-purchaseorderheader-main"
+      ],
+      "views": [
+        "vw-msdyn-purchaseorderheader-active",
+        "vw-msdyn-purchaseorderheader-all"
+      ],
+      "optionSets": [
+        "msdyn_purchaseorderstatus"
+      ]
+    },
+    "msdyn_purchaseorderline": {
+      "forms": [
+        "frm-msdyn-purchaseorderline-main"
+      ],
+      "views": [
+        "vw-msdyn-purchaseorderline-active",
+        "vw-msdyn-purchaseorderline-all"
+      ]
+    },
+    "msdyn_salesorderline": {
+      "forms": [
+        "frm-msdyn-salesorderline-main"
+      ],
+      "views": [
+        "vw-msdyn-salesorderline-active",
+        "vw-msdyn-salesorderline-all"
+      ]
+    },
+    "con_vendor": {
+      "forms": [
+        "frm-con-vendor-main",
+        "frm-con-vendor-qc"
+      ],
+      "views": [
+        "vw-con-vendor-active",
+        "vw-con-vendor-all",
+        "vw-con-vendor-mine"
+      ],
+      "optionSets": [
+        "con_vendorgroup",
+        "con_approvalstatus",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-41-vendorapprovalguar",
+        "step-42-vendorapprovalguar"
+      ],
+      "workflows": [
+        "Reassign Requisition on Vendor Approval"
+      ]
+    },
+    "con_purchaserequisition": {
+      "forms": [
+        "frm-con-purchaserequisition-main",
+        "frm-con-purchaserequisition-qc"
+      ],
+      "views": [
+        "vw-con-purchaserequisition-active",
+        "vw-con-purchaserequisition-all",
+        "vw-con-purchaserequisition-mine"
+      ],
+      "optionSets": [
+        "con_approvalstatus",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-38-requisitionnumberp"
+      ],
+      "workflows": [
+        "Requisition Approval BPF",
+        "Generate PO in F&O on Approval"
+      ]
+    },
+    "con_inventorycount": {
+      "forms": [
+        "frm-con-inventorycount-main",
+        "frm-con-inventorycount-qc"
+      ],
+      "views": [
+        "vw-con-inventorycount-active",
+        "vw-con-inventorycount-all",
+        "vw-con-inventorycount-mine"
+      ],
+      "optionSets": [
+        "con_counttype"
+      ],
+      "workflows": [
+        "Post Cycle Count Variance"
+      ]
+    },
+    "con_shipment": {
+      "forms": [
+        "frm-con-shipment-main",
+        "frm-con-shipment-qc"
+      ],
+      "views": [
+        "vw-con-shipment-active",
+        "vw-con-shipment-all",
+        "vw-con-shipment-mine"
+      ],
+      "optionSets": [
+        "con_carrier",
+        "con_shipmentstatus"
+      ],
+      "pluginSteps": [
+        "step-39-shipmenttrackingsy",
+        "step-40-shipmenttrackingsy"
+      ],
+      "workflows": [
+        "Shipment Delivery Notification"
+      ]
+    },
+    "con_demandforecast": {
+      "forms": [
+        "frm-con-demandforecast-main",
+        "frm-con-demandforecast-qc"
+      ],
+      "views": [
+        "vw-con-demandforecast-active",
+        "vw-con-demandforecast-all",
+        "vw-con-demandforecast-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "uom": {
+      "forms": [
+        "frm-uom-main"
+      ],
+      "views": [
+        "vw-uom-active",
+        "vw-uom-all"
+      ]
+    },
+    "con_bomcomponent": {
+      "forms": [
+        "frm-con-bomcomponent-main",
+        "frm-con-bomcomponent-qc"
+      ],
+      "views": [
+        "vw-con-bomcomponent-active",
+        "vw-con-bomcomponent-all",
+        "vw-con-bomcomponent-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "con_productionorder": {
+      "forms": [
+        "frm-con-productionorder-main",
+        "frm-con-productionorder-qc"
+      ],
+      "views": [
+        "vw-con-productionorder-active",
+        "vw-con-productionorder-all",
+        "vw-con-productionorder-mine"
+      ],
+      "optionSets": [
+        "con_productionstatus"
+      ]
+    },
+    "msdyn_retailchannel": {
+      "forms": [
+        "frm-msdyn-retailchannel-main",
+        "frm-msdyn-retailchannel-qc"
+      ],
+      "views": [
+        "vw-msdyn-retailchannel-active",
+        "vw-msdyn-retailchannel-all",
+        "vw-msdyn-retailchannel-mine"
+      ],
+      "optionSets": [
+        "msdyn_channeltype",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdyn_retailstore": {
+      "forms": [
+        "frm-msdyn-retailstore-main",
+        "frm-msdyn-retailstore-qc"
+      ],
+      "views": [
+        "vw-msdyn-retailstore-active",
+        "vw-msdyn-retailstore-all",
+        "vw-msdyn-retailstore-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdyn_retailterminal": {
+      "forms": [
+        "frm-msdyn-retailterminal-main"
+      ],
+      "views": [
+        "vw-msdyn-retailterminal-active",
+        "vw-msdyn-retailterminal-all"
+      ],
+      "optionSets": [
+        "msdyn_devicetype",
+        "statecode"
+      ]
+    },
+    "msdyn_channelprofile": {
+      "forms": [
+        "frm-msdyn-channelprofile-main"
+      ],
+      "views": [
+        "vw-msdyn-channelprofile-active",
+        "vw-msdyn-channelprofile-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdyn_retailtransaction": {
+      "forms": [
+        "frm-msdyn-retailtransaction-main",
+        "frm-msdyn-retailtransaction-qc"
+      ],
+      "views": [
+        "vw-msdyn-retailtransaction-active",
+        "vw-msdyn-retailtransaction-all",
+        "vw-msdyn-retailtransaction-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "workflows": [
+        "Loyalty Points Accrual"
+      ]
+    },
+    "msdyn_retailtransactionsalesline": {
+      "forms": [
+        "frm-msdyn-retailtransactionsalesline-main"
+      ],
+      "views": [
+        "vw-msdyn-retailtransactionsalesline-active",
+        "vw-msdyn-retailtransactionsalesline-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-43-retailtransactiont",
+        "step-44-retailtransactiont"
+      ]
+    },
+    "msdyn_retailtransactionpaymentline": {
+      "forms": [
+        "frm-msdyn-retailtransactionpaymentline-main"
+      ],
+      "views": [
+        "vw-msdyn-retailtransactionpaymentline-active",
+        "vw-msdyn-retailtransactionpaymentline-all"
+      ],
+      "optionSets": [
+        "msdyn_tendertype",
+        "msdyn_cardtype",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-45-retailtransactiont"
+      ]
+    },
+    "msdyn_retailstatement": {
+      "forms": [
+        "frm-msdyn-retailstatement-main"
+      ],
+      "views": [
+        "vw-msdyn-retailstatement-active",
+        "vw-msdyn-retailstatement-all"
+      ],
+      "optionSets": [
+        "msdyn_postingstatus",
+        "statecode"
+      ],
+      "workflows": [
+        "Statement Posting Guard"
+      ]
+    },
+    "msdyn_pricingrule": {
+      "forms": [
+        "frm-msdyn-pricingrule-main"
+      ],
+      "views": [
+        "vw-msdyn-pricingrule-active",
+        "vw-msdyn-pricingrule-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "workflows": [
+        "Channel Data Publish Trigger"
+      ]
+    },
+    "msdyn_loyaltyprogram": {
+      "forms": [
+        "frm-msdyn-loyaltyprogram-main",
+        "frm-msdyn-loyaltyprogram-qc"
+      ],
+      "views": [
+        "vw-msdyn-loyaltyprogram-active",
+        "vw-msdyn-loyaltyprogram-all",
+        "vw-msdyn-loyaltyprogram-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "con_tierstructure"
+      ]
+    },
+    "msdyn_loyaltycard": {
+      "forms": [
+        "frm-msdyn-loyaltycard-main",
+        "frm-msdyn-loyaltycard-qc"
+      ],
+      "views": [
+        "vw-msdyn-loyaltycard-active",
+        "vw-msdyn-loyaltycard-all",
+        "vw-msdyn-loyaltycard-mine"
+      ],
+      "optionSets": [
+        "msdyn_cardstatus",
+        "statecode",
+        "con_enrollmentchannel"
+      ],
+      "pluginSteps": [
+        "step-46-loyaltycardenrollm"
+      ]
+    },
+    "msdyn_giftcard": {
+      "forms": [
+        "frm-msdyn-giftcard-main"
+      ],
+      "views": [
+        "vw-msdyn-giftcard-active",
+        "vw-msdyn-giftcard-all"
+      ],
+      "optionSets": [
+        "msdyn_cardtype",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-47-giftcardredemption"
+      ],
+      "workflows": [
+        "Gift Card Balance Rule"
+      ]
+    },
+    "con_clienteling": {
+      "forms": [
+        "frm-con-clienteling-main",
+        "frm-con-clienteling-qc"
+      ],
+      "views": [
+        "vw-con-clienteling-active",
+        "vw-con-clienteling-all",
+        "vw-con-clienteling-mine"
+      ],
+      "optionSets": [
+        "con_appointmenttype",
+        "statecode"
+      ],
+      "workflows": [
+        "Clienteling Appointment Lifecycle"
+      ]
+    },
+    "con_curbsideorder": {
+      "forms": [
+        "frm-con-curbsideorder-main",
+        "frm-con-curbsideorder-qc"
+      ],
+      "views": [
+        "vw-con-curbsideorder-active",
+        "vw-con-curbsideorder-all",
+        "vw-con-curbsideorder-mine"
+      ],
+      "optionSets": [
+        "con_handoffstatus",
+        "statecode"
+      ],
+      "workflows": [
+        "Curbside Handoff Notification"
+      ]
+    },
+    "con_pricematchrequest": {
+      "forms": [
+        "frm-con-pricematchrequest-main",
+        "frm-con-pricematchrequest-qc"
+      ],
+      "views": [
+        "vw-con-pricematchrequest-active",
+        "vw-con-pricematchrequest-all",
+        "vw-con-pricematchrequest-mine"
+      ],
+      "optionSets": [
+        "con_approvalstatus",
+        "statecode"
+      ],
+      "workflows": [
+        "Price Match Approval"
+      ]
+    },
+    "cdm_worker": {
+      "forms": [
+        "frm-cdm-worker-main",
+        "frm-cdm-worker-qc"
+      ],
+      "views": [
+        "vw-cdm-worker-active",
+        "vw-cdm-worker-all",
+        "vw-cdm-worker-mine"
+      ],
+      "optionSets": [
+        "cdm_workertype",
+        "statecode",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-48-workeremployeeidpl",
+        "step-49-workeremployeeidpl"
+      ],
+      "workflows": [
+        "New Hire Onboarding Orchestration"
+      ]
+    },
+    "cdm_employment": {
+      "forms": [
+        "frm-cdm-employment-main",
+        "frm-cdm-employment-qc"
+      ],
+      "views": [
+        "vw-cdm-employment-active",
+        "vw-cdm-employment-all",
+        "vw-cdm-employment-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "workflows": [
+        "Probation End Reminder",
+        "Termination Access Deprovisioning"
+      ]
+    },
+    "cdm_position": {
+      "forms": [
+        "frm-cdm-position-main",
+        "frm-cdm-position-qc"
+      ],
+      "views": [
+        "vw-cdm-position-active",
+        "vw-cdm-position-all",
+        "vw-cdm-position-mine"
+      ],
+      "optionSets": [
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-52-positionhierarchyg"
+      ],
+      "workflows": [
+        "Position Cost Center Validation"
+      ]
+    },
+    "cdm_job": {
+      "forms": [
+        "frm-cdm-job-main"
+      ],
+      "views": [
+        "vw-cdm-job-active",
+        "vw-cdm-job-all"
+      ],
+      "optionSets": [
+        "cdm_jobtype",
+        "statecode"
+      ]
+    },
+    "cdm_department": {
+      "forms": [
+        "frm-cdm-department-main"
+      ],
+      "views": [
+        "vw-cdm-department-active",
+        "vw-cdm-department-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "cdm_fixedcompensation": {
+      "forms": [
+        "frm-cdm-fixedcompensation-main"
+      ],
+      "views": [
+        "vw-cdm-fixedcompensation-active",
+        "vw-cdm-fixedcompensation-all"
+      ],
+      "optionSets": [
+        "cdm_payfrequency"
+      ]
+    },
+    "mshr_leaverequest": {
+      "forms": [
+        "frm-mshr-leaverequest-main",
+        "frm-mshr-leaverequest-qc"
+      ],
+      "views": [
+        "vw-mshr-leaverequest-active",
+        "vw-mshr-leaverequest-all",
+        "vw-mshr-leaverequest-mine"
+      ],
+      "optionSets": [
+        "mshr_leavetype",
+        "mshr_requeststatus"
+      ],
+      "pluginSteps": [
+        "step-50-leavebalancevalida",
+        "step-51-leavebalancevalida"
+      ],
+      "workflows": [
+        "Leave Request Approval",
+        "Leave Balance Notification Flow"
+      ]
+    },
+    "mshr_leaveenrollment": {
+      "forms": [
+        "frm-mshr-leaveenrollment-main"
+      ],
+      "views": [
+        "vw-mshr-leaveenrollment-active",
+        "vw-mshr-leaveenrollment-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "msdynhr_worker": {
+      "forms": [
+        "frm-msdynhr-worker-main"
+      ],
+      "views": [
+        "vw-msdynhr-worker-active",
+        "vw-msdynhr-worker-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "con_onboardingtask": {
+      "forms": [
+        "frm-con-onboardingtask-main",
+        "frm-con-onboardingtask-qc"
+      ],
+      "views": [
+        "vw-con-onboardingtask-active",
+        "vw-con-onboardingtask-all",
+        "vw-con-onboardingtask-mine"
+      ],
+      "optionSets": [
+        "con_category",
+        "statuscode"
+      ]
+    },
+    "con_performancereview": {
+      "forms": [
+        "frm-con-performancereview-main",
+        "frm-con-performancereview-qc"
+      ],
+      "views": [
+        "vw-con-performancereview-active",
+        "vw-con-performancereview-all",
+        "vw-con-performancereview-mine"
+      ],
+      "optionSets": [
+        "con_reviewcycle",
+        "con_overallrating",
+        "statuscode"
+      ],
+      "workflows": [
+        "Performance Review Compensation Sync"
+      ]
+    },
+    "con_skill": {
+      "forms": [
+        "frm-con-skill-main",
+        "frm-con-skill-qc"
+      ],
+      "views": [
+        "vw-con-skill-active",
+        "vw-con-skill-all",
+        "vw-con-skill-mine"
+      ],
+      "optionSets": [
+        "con_skillcategory",
+        "statecode"
+      ]
+    },
+    "con_workerskill": {
+      "forms": [
+        "frm-con-workerskill-main",
+        "frm-con-workerskill-qc"
+      ],
+      "views": [
+        "vw-con-workerskill-active",
+        "vw-con-workerskill-all",
+        "vw-con-workerskill-mine"
+      ],
+      "optionSets": [
+        "con_proficiency"
+      ]
+    },
+    "cdm_benefit": {
+      "forms": [
+        "frm-cdm-benefit-main"
+      ],
+      "views": [
+        "vw-cdm-benefit-active",
+        "vw-cdm-benefit-all"
+      ],
+      "optionSets": [
+        "cdm_benefittype",
+        "cdm_payfrequency",
+        "statecode"
+      ]
+    },
+    "con_disciplinarycase": {
+      "forms": [
+        "frm-con-disciplinarycase-main",
+        "frm-con-disciplinarycase-qc"
+      ],
+      "views": [
+        "vw-con-disciplinarycase-active",
+        "vw-con-disciplinarycase-all",
+        "vw-con-disciplinarycase-mine"
+      ],
+      "optionSets": [
+        "con_casetype",
+        "con_severity",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-53-disciplinarycaseau",
+        "step-54-disciplinarycaseau"
+      ]
+    },
+    "msdyn_ocliveworkitem": {
+      "forms": [
+        "frm-msdyn-ocliveworkitem-main",
+        "frm-msdyn-ocliveworkitem-qc"
+      ],
+      "views": [
+        "vw-msdyn-ocliveworkitem-active",
+        "vw-msdyn-ocliveworkitem-all",
+        "vw-msdyn-ocliveworkitem-mine"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode",
+        "msdyn_cdsconversationtype"
+      ],
+      "pluginSteps": [
+        "step-55-conversationroutin",
+        "step-56-conversationroutin"
+      ],
+      "workflows": [
+        "Contoso Conversation Lifecycle BPF",
+        "Set VIP Flag on High-Value Customer",
+        "Escalate Low-Sentiment Conversation to Supervisor",
+        "Post-Conversation CSAT Survey Dispatch"
+      ]
+    },
+    "msdyn_ocsessionparticipant": {
+      "forms": [
+        "frm-msdyn-ocsessionparticipant-main"
+      ],
+      "views": [
+        "vw-msdyn-ocsessionparticipant-active",
+        "vw-msdyn-ocsessionparticipant-all"
+      ],
+      "optionSets": [
+        "msdyn_mode",
+        "statecode",
+        "statuscode"
+      ],
+      "pluginSteps": [
+        "step-57-sessionparticipant",
+        "step-58-sessionparticipant"
+      ]
+    },
+    "msdyn_occontext": {
+      "forms": [
+        "frm-msdyn-occontext-main"
+      ],
+      "views": [
+        "vw-msdyn-occontext-active",
+        "vw-msdyn-occontext-all"
+      ],
+      "optionSets": [
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdyn_agentstatushistory": {
+      "forms": [
+        "frm-msdyn-agentstatushistory-main",
+        "frm-msdyn-agentstatushistory-qc"
+      ],
+      "views": [
+        "vw-msdyn-agentstatushistory-active",
+        "vw-msdyn-agentstatushistory-all",
+        "vw-msdyn-agentstatushistory-mine"
+      ]
+    },
+    "msdyn_presence": {
+      "forms": [
+        "frm-msdyn-presence-main"
+      ],
+      "views": [
+        "vw-msdyn-presence-active",
+        "vw-msdyn-presence-all"
+      ],
+      "optionSets": [
+        "msdyn_basepresencestatus",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdyn_liveworkstream": {
+      "forms": [
+        "frm-msdyn-liveworkstream-main"
+      ],
+      "views": [
+        "vw-msdyn-liveworkstream-active",
+        "vw-msdyn-liveworkstream-all"
+      ],
+      "optionSets": [
+        "msdyn_mode",
+        "msdyn_channeltype",
+        "statecode",
+        "statuscode"
+      ]
+    },
+    "msdyn_channel": {
+      "forms": [
+        "frm-msdyn-channel-main",
+        "frm-msdyn-channel-qc"
+      ],
+      "views": [
+        "vw-msdyn-channel-active",
+        "vw-msdyn-channel-all",
+        "vw-msdyn-channel-mine"
+      ],
+      "optionSets": [
+        "msdyn_channeltype",
+        "statecode",
+        "statuscode",
+        "con_region"
+      ]
+    },
+    "con_deflectionoutcome": {
+      "forms": [
+        "frm-con-deflectionoutcome-main",
+        "frm-con-deflectionoutcome-qc"
+      ],
+      "views": [
+        "vw-con-deflectionoutcome-active",
+        "vw-con-deflectionoutcome-all",
+        "vw-con-deflectionoutcome-mine"
+      ],
+      "optionSets": [
+        "con_outcometype",
+        "con_escalationreason",
+        "statecode"
+      ],
+      "pluginSteps": [
+        "step-59-deflectioncostcalc"
+      ],
+      "workflows": [
+        "Deflection Outcome Rollup"
+      ]
+    },
+    "con_agentcoachingnote": {
+      "forms": [
+        "frm-con-agentcoachingnote-main",
+        "frm-con-agentcoachingnote-qc"
+      ],
+      "views": [
+        "vw-con-agentcoachingnote-active",
+        "vw-con-agentcoachingnote-all",
+        "vw-con-agentcoachingnote-mine"
+      ]
+    },
+    "con_botconfiguration": {
+      "forms": [
+        "frm-con-botconfiguration-main",
+        "frm-con-botconfiguration-qc"
+      ],
+      "views": [
+        "vw-con-botconfiguration-active",
+        "vw-con-botconfiguration-all",
+        "vw-con-botconfiguration-mine"
+      ],
+      "optionSets": [
+        "con_botapptype",
+        "con_botprovider",
+        "statecode"
+      ]
+    },
+    "con_channelbudgetline": {
+      "forms": [
+        "frm-con-channelbudgetline-main"
+      ],
+      "views": [
+        "vw-con-channelbudgetline-active",
+        "vw-con-channelbudgetline-all"
+      ],
+      "workflows": [
+        "Sync Channel Budget from Finance"
+      ]
+    },
+    "systemuser": {
+      "forms": [
+        "frm-systemuser-main",
+        "frm-systemuser-qc"
+      ],
+      "views": [
+        "vw-systemuser-active",
+        "vw-systemuser-all",
+        "vw-systemuser-mine"
+      ],
+      "optionSets": [
+        "con_makerpersona"
+      ]
+    },
+    "team": {
+      "forms": [
+        "frm-team-main"
+      ],
+      "views": [
+        "vw-team-active",
+        "vw-team-all"
+      ],
+      "optionSets": [
+        "teamtype"
+      ]
+    },
+    "businessunit": {
+      "forms": [
+        "frm-businessunit-main"
+      ],
+      "views": [
+        "vw-businessunit-active",
+        "vw-businessunit-all"
+      ]
+    },
+    "solution": {
+      "forms": [
+        "frm-solution-main"
+      ],
+      "views": [
+        "vw-solution-active",
+        "vw-solution-all"
+      ],
+      "workflows": [
+        "Unmanaged Layer Alert"
+      ]
+    },
+    "publisher": {
+      "forms": [
+        "frm-publisher-main"
+      ],
+      "views": [
+        "vw-publisher-active",
+        "vw-publisher-all"
+      ]
+    },
+    "workflow": {
+      "forms": [
+        "frm-workflow-main"
+      ],
+      "views": [
+        "vw-workflow-active",
+        "vw-workflow-all"
+      ],
+      "optionSets": [
+        "category",
+        "type",
+        "statecode"
+      ],
+      "workflows": [
+        "Orphaned Flow & App Detector"
+      ]
+    },
+    "connectionreference": {
+      "forms": [
+        "frm-connectionreference-main"
+      ],
+      "views": [
+        "vw-connectionreference-active",
+        "vw-connectionreference-all"
+      ],
+      "optionSets": [
+        "statecode"
+      ]
+    },
+    "environmentvariabledefinition": {
+      "forms": [
+        "frm-environmentvariabledefinition-main"
+      ],
+      "views": [
+        "vw-environmentvariabledefinition-active",
+        "vw-environmentvariabledefinition-all"
+      ],
+      "optionSets": [
+        "type"
+      ]
+    },
+    "sdkmessageprocessingstep": {
+      "forms": [
+        "frm-sdkmessageprocessingstep-main"
+      ],
+      "views": [
+        "vw-sdkmessageprocessingstep-active",
+        "vw-sdkmessageprocessingstep-all"
+      ],
+      "optionSets": [
+        "stage",
+        "mode",
+        "statecode"
+      ]
+    },
+    "plugintype": {
+      "forms": [
+        "frm-plugintype-main"
+      ],
+      "views": [
+        "vw-plugintype-active",
+        "vw-plugintype-all"
+      ]
+    },
+    "role": {
+      "forms": [
+        "frm-role-main"
+      ],
+      "views": [
+        "vw-role-active",
+        "vw-role-all"
+      ]
+    },
+    "fieldsecurityprofile": {
+      "forms": [
+        "frm-fieldsecurityprofile-main"
+      ],
+      "views": [
+        "vw-fieldsecurityprofile-active",
+        "vw-fieldsecurityprofile-all"
+      ]
+    },
+    "adx_webpage": {
+      "forms": [
+        "frm-adx-webpage-main",
+        "frm-adx-webpage-qc"
+      ],
+      "views": [
+        "vw-adx-webpage-active",
+        "vw-adx-webpage-all",
+        "vw-adx-webpage-mine"
+      ]
+    },
+    "con_environmentinventory": {
+      "forms": [
+        "frm-con-environmentinventory-main",
+        "frm-con-environmentinventory-qc"
+      ],
+      "views": [
+        "vw-con-environmentinventory-active",
+        "vw-con-environmentinventory-all",
+        "vw-con-environmentinventory-mine"
+      ],
+      "optionSets": [
+        "con_environmenttype",
+        "con_lifecyclestate"
+      ],
+      "pluginSteps": [
+        "step-62-con-governance-env",
+        "step-63-con-governance-env"
+      ],
+      "workflows": [
+        "Environment Provisioning Approval",
+        "Environment Onboarding Process"
+      ]
+    },
+    "con_coecomplianceattestation": {
+      "forms": [
+        "frm-con-coecomplianceattestation-main",
+        "frm-con-coecomplianceattestation-qc"
+      ],
+      "views": [
+        "vw-con-coecomplianceattestation-active",
+        "vw-con-coecomplianceattestation-all",
+        "vw-con-coecomplianceattestation-mine"
+      ],
+      "optionSets": [
+        "con_componenttype",
+        "con_result"
+      ],
+      "pluginSteps": [
+        "step-64-con-governance-att",
+        "step-65-con-governance-att"
+      ],
+      "workflows": [
+        "Compliance Attestation Reminder"
+      ]
+    },
+    "con_dataprocessingregister": {
+      "forms": [
+        "frm-con-dataprocessingregister-main",
+        "frm-con-dataprocessingregister-qc"
+      ],
+      "views": [
+        "vw-con-dataprocessingregister-active",
+        "vw-con-dataprocessingregister-all",
+        "vw-con-dataprocessingregister-mine"
+      ],
+      "optionSets": [
+        "con_lawfulbasis",
+        "con_datasensitivity"
+      ]
+    },
+    "con_ledgerdimension": {
+      "forms": [
+        "frm-con-ledgerdimension-main"
+      ],
+      "views": [
+        "vw-con-ledgerdimension-active",
+        "vw-con-ledgerdimension-all"
       ]
     }
   },
   "byApp": {
-    "con_FieldServiceApp": {
+    "con_contosoSalesHub": {
       "entities": [
-        "con_workorder",
-        "con_servicevisit",
-        "con_agreement",
-        "con_asset",
-        "con_technician",
-        "con_part",
-        "con_inspection",
-        "con_invoice",
-        "account",
-        "contact"
+        "lead",
+        "opportunity",
+        "quote",
+        "salesorder",
+        "invoice",
+        "product",
+        "con_dealdeskreview"
       ],
       "dashboards": [
-        "dash-fs-overview"
+        "dash-sales"
       ],
-      "webResources": [
-        "con_/scripts/workorder.js",
-        "con_/scripts/agreement.js",
-        "con_/html/fswelcome.html"
-      ],
+      "webResources": [],
       "siteMaps": [
-        "Contoso Field Service Sitemap"
+        "Contoso Sales Hub Sitemap"
       ]
     },
-    "con_SalesApp": {
+    "con_contosoDealDesk": {
       "entities": [
-        "con_quote",
-        "con_project",
-        "account",
-        "contact"
+        "con_dealdeskreview",
+        "opportunity",
+        "quote"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoFieldQuoteCapture": {
+      "entities": [
+        "opportunity",
+        "quote",
+        "quotedetail",
+        "product"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_customerServiceHub": {
+      "entities": [
+        "incident",
+        "knowledgearticle",
+        "entitlement",
+        "sla",
+        "queue",
+        "contract",
+        "con_escalation"
       ],
       "dashboards": [
-        "dash-sales-pipeline"
+        "dash-customerService"
       ],
-      "webResources": [
-        "con_/images/logo.png"
-      ],
+      "webResources": [],
       "siteMaps": [
-        "Contoso Sales Sitemap"
+        "Customer Service Hub Sitemap"
       ]
+    },
+    "con_contosoServiceCoeInsights": {
+      "entities": [
+        "con_servicefeedback",
+        "con_casedeflection",
+        "con_escalation"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_fieldService": {
+      "entities": [
+        "msdyn_workorder",
+        "bookableresourcebooking",
+        "msdyn_agreement",
+        "msdyn_customerasset",
+        "msdyn_rma",
+        "msdyn_incidenttype",
+        "msdyn_resourcerequirement",
+        "msdyn_productinventory"
+      ],
+      "dashboards": [
+        "dash-fieldService"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Field Service Sitemap"
+      ]
+    },
+    "con_contosoFieldServiceMobile": {
+      "entities": [
+        "msdyn_workorder",
+        "bookableresourcebooking",
+        "con_safetyinspection",
+        "msdyn_timeentry"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_projectOperations": {
+      "entities": [
+        "msdyn_project",
+        "msdyn_projecttask",
+        "msdyn_projectcontract",
+        "msdyn_estimate",
+        "msdyn_timeentry",
+        "msdyn_expense",
+        "msdyn_actuals",
+        "msdyn_invoice",
+        "bookableresource"
+      ],
+      "dashboards": [
+        "dash-projectOperations"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Project Operations Sitemap"
+      ]
+    },
+    "con_contosoDeliveryPmo": {
+      "entities": [
+        "msdyn_project",
+        "con_projecthealthreview",
+        "con_resourcerequest",
+        "msdyn_projectteam",
+        "bookableresource"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoTimeExpenseCapture": {
+      "entities": [
+        "msdyn_timeentry",
+        "msdyn_expense",
+        "msdyn_project",
+        "msdyn_projecttask"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_customerInsightsJourneys": {
+      "entities": [
+        "msdynmkt_journey",
+        "msdynmkt_segment",
+        "msdynmkt_marketingemail",
+        "msdynmkt_channeltemplate",
+        "msdynmkt_marketingform",
+        "msdynmkt_leadscoringmodel",
+        "msevtmgt_event",
+        "msdynmkt_contactpointconsent3"
+      ],
+      "dashboards": [
+        "dash-customerInsightsJourneys"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Customer Insights - Journeys Sitemap"
+      ]
+    },
+    "con_contosoCampaignIntake": {
+      "entities": [
+        "con_campaignbrief",
+        "con_legalfootertemplate",
+        "msdynmkt_segment",
+        "msdynmkt_journey"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoEventCheckIn": {
+      "entities": [
+        "msevtmgt_event",
+        "msevtmgt_eventregistration",
+        "contact"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoCustomerInsightsData": {
+      "entities": [
+        "msdynci_customerprofile",
+        "msdynci_datasource",
+        "msdynci_segment",
+        "msdynci_measure",
+        "msdynci_prediction",
+        "con_consentledger",
+        "con_matchrule"
+      ],
+      "dashboards": [
+        "dash-customerInsightsData"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Contoso Customer Insights - Data Sitemap"
+      ]
+    },
+    "con_ciDataGovernanceConsole": {
+      "entities": [
+        "con_datasourcehealth",
+        "con_matchrule",
+        "con_consentledger",
+        "msdynci_datasource"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_consentStewardPortal": {
+      "entities": [
+        "con_consentledger",
+        "msdynci_customerprofile"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoFinanceOperations": {
+      "entities": [
+        "con_apapprovalrequest",
+        "mserp_vendinvoiceheader",
+        "mserp_custpaymentjournalline",
+        "account",
+        "con_dunningaction",
+        "transactioncurrency"
+      ],
+      "dashboards": [
+        "dash-finance"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Contoso Finance Operations Sitemap"
+      ]
+    },
+    "con_contosoBudgetingCapex": {
+      "entities": [
+        "con_capexrequest",
+        "mserp_budgetregisterentry",
+        "mserp_fixedasset",
+        "mserp_mainaccount",
+        "con_financialdimensionmap"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_capexRequestIntake": {
+      "entities": [
+        "con_capexrequest"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoSupplyChainHub": {
+      "entities": [
+        "con_purchaserequisition",
+        "con_vendor",
+        "product",
+        "con_shipment",
+        "con_inventorycount",
+        "msdyn_purchaseorderheader"
+      ],
+      "dashboards": [
+        "dash-supplyChainManagement"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Contoso Supply Chain Hub Sitemap"
+      ]
+    },
+    "con_contosoWarehouseCount": {
+      "entities": [
+        "con_inventorycount",
+        "msdyn_releasedproduct",
+        "msdyn_inventwarehouse"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoCommerceHeadquarters": {
+      "entities": [
+        "msdyn_retailchannel",
+        "msdyn_retailstore",
+        "msdyn_retailterminal",
+        "msdyn_pricingrule",
+        "msdyn_retailstatement",
+        "con_pricematchrequest"
+      ],
+      "dashboards": [
+        "dash-commerce"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Contoso Commerce Headquarters Sitemap"
+      ]
+    },
+    "con_contosoLoyaltyEngagement": {
+      "entities": [
+        "msdyn_loyaltyprogram",
+        "msdyn_loyaltycard",
+        "msdyn_giftcard",
+        "con_clienteling"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoCurbsideConcierge": {
+      "entities": [
+        "con_curbsideorder",
+        "msdyn_retailstore",
+        "msdyn_retailtransaction"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoHumanResources": {
+      "entities": [
+        "cdm_worker",
+        "cdm_employment",
+        "cdm_position",
+        "cdm_job",
+        "cdm_department",
+        "cdm_fixedcompensation",
+        "mshr_leaverequest",
+        "con_performancereview"
+      ],
+      "dashboards": [
+        "dash-humanResources"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Contoso Human Resources Sitemap"
+      ]
+    },
+    "con_employeeSelfService": {
+      "entities": [
+        "cdm_worker",
+        "mshr_leaverequest",
+        "mshr_leaveenrollment",
+        "con_onboardingtask",
+        "cdm_benefit"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoTalentMarketplace": {
+      "entities": [
+        "con_skill",
+        "con_workerskill",
+        "cdm_position",
+        "cdm_worker"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_customerServiceWorkspace": {
+      "entities": [
+        "msdyn_ocliveworkitem",
+        "msdyn_ocsession",
+        "incident",
+        "queue"
+      ],
+      "dashboards": [
+        "dash-contactCenterOmnichannel"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Customer Service workspace Sitemap"
+      ]
+    },
+    "con_omnichannelAdminCenter": {
+      "entities": [
+        "msdyn_liveworkstream",
+        "msdyn_channel",
+        "con_botconfiguration",
+        "msdyn_presence"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoSupervisorCoaching": {
+      "entities": [
+        "con_agentcoachingnote",
+        "msdyn_agentstatushistory"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_contosoCoeCommandCenter": {
+      "entities": [
+        "con_environmentinventory",
+        "con_coecomplianceattestation",
+        "solution",
+        "workflow",
+        "connectionreference",
+        "systemuser",
+        "role"
+      ],
+      "dashboards": [
+        "dash-platformGovernance"
+      ],
+      "webResources": [],
+      "siteMaps": [
+        "Contoso CoE Command Center Sitemap"
+      ]
+    },
+    "con_dataGovernanceRegister": {
+      "entities": [
+        "con_dataprocessingregister",
+        "account",
+        "contact",
+        "fieldsecurityprofile"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
+    },
+    "con_makerAttestation": {
+      "entities": [
+        "con_coecomplianceattestation",
+        "con_environmentinventory"
+      ],
+      "dashboards": [],
+      "webResources": [],
+      "siteMaps": []
     }
   },
   "byWorkflow": {
-    "Assign Work Order to Technician": {
+    "Lead to Opportunity Sales Process": {
       "envVars": [
-        "con_FieldServiceApiUrl",
-        "con_DefaultRegion"
+        "con_fODualWriteCustomerInvoiceUrl"
       ]
     },
-    "Generate Invoice on Completion": {
+    "Contoso Lead Scoring & Routing": {
       "envVars": [
-        "con_InvoicePrefix"
+        "con_fODualWriteCustomerInvoiceUrl"
+      ]
+    },
+    "Deal Desk Approval Routing": {
+      "envVars": [
+        "con_fODualWriteCustomerInvoiceUrl"
+      ]
+    },
+    "Auto-Create Deal Desk Review on Strategic Deal": {
+      "envVars": [
+        "con_fODualWriteCustomerInvoiceUrl"
+      ]
+    },
+    "Require Est. Close Date & Value on Propose": {
+      "envVars": [
+        "con_fODualWriteCustomerInvoiceUrl"
+      ]
+    },
+    "Invoice Paid Sync from F&O": {
+      "envVars": [
+        "con_fODualWriteCustomerInvoiceUrl"
+      ]
+    },
+    "Phase to First Response and Resolution": {
+      "envVars": [
+        "con_warrantyDualwriteAgreementUrl"
+      ]
+    },
+    "Auto-Route New Cases to Tier Queue": {
+      "envVars": [
+        "con_warrantyDualwriteAgreementUrl"
+      ]
+    },
+    "Notify Manager on High-Priority Escalation": {
+      "envVars": [
+        "con_warrantyDualwriteAgreementUrl"
+      ]
+    },
+    "Sync CSAT Survey Responses to Service Feedback": {
+      "envVars": [
+        "con_warrantyDualwriteAgreementUrl"
+      ]
+    },
+    "Require Resolution Notes Before Close": {
+      "envVars": [
+        "con_warrantyDualwriteAgreementUrl"
+      ]
+    },
+    "Nightly Knowledge Article Review Reminder": {
+      "envVars": [
+        "con_warrantyDualwriteAgreementUrl"
+      ]
+    },
+    "Work Order Lifecycle": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "Auto-Create Safety Inspection for Hazardous Work Orders": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "SLA Breach Risk Escalation": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "Agreement Booking Setup Generation": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "Truck Stock Replenishment Request": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "Require Serial Number on Serviceable Assets": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "Certification Expiry Warning for Resources": {
+      "envVars": [
+        "con_fandoDualwriteProcurementUrl"
+      ]
+    },
+    "Project Approval Business Process Flow": {
+      "envVars": [
+        "con_projectopsToFinopsDualwriteUrl"
+      ]
+    },
+    "Contoso Time Entry Auto-Submit Reminder": {
+      "envVars": [
+        "con_projectopsToFinopsDualwriteUrl"
+      ]
+    },
+    "Margin Alert on Actuals Posting": {
+      "envVars": [
+        "con_projectopsToFinopsDualwriteUrl"
+      ]
+    },
+    "Staffing Request Fulfillment Routing": {
+      "envVars": [
+        "con_projectopsToFinopsDualwriteUrl"
+      ]
+    },
+    "Expense Receipt Required Rule": {
+      "envVars": [
+        "con_projectopsToFinopsDualwriteUrl"
+      ]
+    },
+    "Contract Line to F&O Sync": {
+      "envVars": [
+        "con_projectopsToFinopsDualwriteUrl"
+      ]
+    },
+    "Sales-Ready Lead Handoff": {
+      "envVars": [
+        "con_fOMarketingSpendVirtualEntityProviderUrl"
+      ]
+    },
+    "Campaign Brief Approval Routing": {
+      "envVars": [
+        "con_fOMarketingSpendVirtualEntityProviderUrl"
+      ]
+    },
+    "Event Registration Confirmation": {
+      "envVars": [
+        "con_fOMarketingSpendVirtualEntityProviderUrl"
+      ]
+    },
+    "Consent Change Suppression Sync": {
+      "envVars": [
+        "con_fOMarketingSpendVirtualEntityProviderUrl"
+      ]
+    },
+    "Require Legal Footer Before Email Go-Live": {
+      "envVars": [
+        "con_fOMarketingSpendVirtualEntityProviderUrl"
+      ]
+    },
+    "Campaign Brief to Launch BPF": {
+      "envVars": [
+        "con_fOMarketingSpendVirtualEntityProviderUrl"
+      ]
+    },
+    "Sync Churn Prediction to Loyalty Tier": {
+      "envVars": [
+        "con_onelakeAdlsGen2IngestionUrl"
+      ]
+    },
+    "Consent Verified Guard for Segment Activation": {
+      "envVars": [
+        "con_onelakeAdlsGen2IngestionUrl"
+      ]
+    },
+    "Data Source Health Alert to Teams": {
+      "envVars": [
+        "con_onelakeAdlsGen2IngestionUrl"
+      ]
+    },
+    "DSR Delete Propagation": {
+      "envVars": [
+        "con_onelakeAdlsGen2IngestionUrl"
+      ]
+    },
+    "Unified Profile Enrichment - F&O Credit": {
+      "envVars": [
+        "con_onelakeAdlsGen2IngestionUrl"
+      ]
+    },
+    "Data Onboarding & Unification Approval": {
+      "envVars": [
+        "con_onelakeAdlsGen2IngestionUrl"
+      ]
+    },
+    "AP Invoice Approval BPF": {
+      "envVars": [
+        "con_dualwriteFinanceSyncUrl"
+      ]
+    },
+    "Capex Budget Check Flow": {
+      "envVars": [
+        "con_dualwriteFinanceSyncUrl"
+      ]
+    },
+    "Dunning Escalation Async Workflow": {
+      "envVars": [
+        "con_dualwriteFinanceSyncUrl"
+      ]
+    },
+    "Credit Risk Rating Business Rule": {
+      "envVars": [
+        "con_dualwriteFinanceSyncUrl"
+      ]
+    },
+    "Exchange Rate Sync Flow": {
+      "envVars": [
+        "con_dualwriteFinanceSyncUrl"
+      ]
+    },
+    "Vendor Invoice Post Realtime Workflow": {
+      "envVars": [
+        "con_dualwriteFinanceSyncUrl"
+      ]
+    },
+    "Requisition Approval BPF": {
+      "envVars": [
+        "con_dualWriteOrchestrationUrl"
+      ]
+    },
+    "Auto-Set ABC Classification": {
+      "envVars": [
+        "con_dualWriteOrchestrationUrl"
+      ]
+    },
+    "Generate PO in F&O on Approval": {
+      "envVars": [
+        "con_dualWriteOrchestrationUrl"
+      ]
+    },
+    "Shipment Delivery Notification": {
+      "envVars": [
+        "con_dualWriteOrchestrationUrl"
+      ]
+    },
+    "Reassign Requisition on Vendor Approval": {
+      "envVars": [
+        "con_dualWriteOrchestrationUrl"
+      ]
+    },
+    "Post Cycle Count Variance": {
+      "envVars": [
+        "con_dualWriteOrchestrationUrl"
+      ]
+    },
+    "Loyalty Points Accrual": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Curbside Handoff Notification": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Price Match Approval": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Statement Posting Guard": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Gift Card Balance Rule": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Clienteling Appointment Lifecycle": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Channel Data Publish Trigger": {
+      "envVars": [
+        "con_channeldatapublishLogicappUrl"
+      ]
+    },
+    "Leave Request Approval": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "Leave Balance Notification Flow": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "New Hire Onboarding Orchestration": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "Probation End Reminder": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "Position Cost Center Validation": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "Performance Review Compensation Sync": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "Termination Access Deprovisioning": {
+      "envVars": [
+        "con_fODualWriteHrBridgeUrl"
+      ]
+    },
+    "Contoso Conversation Lifecycle BPF": {
+      "envVars": [
+        "con_omnichannelvoiceeventgridUrl"
+      ]
+    },
+    "Set VIP Flag on High-Value Customer": {
+      "envVars": [
+        "con_omnichannelvoiceeventgridUrl"
+      ]
+    },
+    "Escalate Low-Sentiment Conversation to Supervisor": {
+      "envVars": [
+        "con_omnichannelvoiceeventgridUrl"
+      ]
+    },
+    "Post-Conversation CSAT Survey Dispatch": {
+      "envVars": [
+        "con_omnichannelvoiceeventgridUrl"
+      ]
+    },
+    "Sync Channel Budget from Finance": {
+      "envVars": [
+        "con_omnichannelvoiceeventgridUrl"
+      ]
+    },
+    "Deflection Outcome Rollup": {
+      "envVars": [
+        "con_omnichannelvoiceeventgridUrl"
+      ]
+    },
+    "Environment Provisioning Approval": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
+      ]
+    },
+    "Orphaned Flow & App Detector": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
+      ]
+    },
+    "Compliance Attestation Reminder": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
+      ]
+    },
+    "Account Data Steward Assignment": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
+      ]
+    },
+    "Consent Capture Business Rule": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
+      ]
+    },
+    "Environment Onboarding Process": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
+      ]
+    },
+    "Unmanaged Layer Alert": {
+      "envVars": [
+        "con_dualWriteLedgerDimensionBridgeUrl"
       ]
     }
   },
   "entityRelationships": [
     {
-      "id": "con_workorder_account",
-      "name": "con_workorder_account",
-      "type": "ManyToOne",
-      "from": "con_workorder",
-      "to": "account",
-      "lookupField": "con_account",
-      "cascadeDelete": "RemoveLink",
+      "id": "account_lead_OneToMany",
+      "name": "account_lead",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "lead",
+      "lookupField": "parentaccountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "contact_lead_OneToMany",
+      "name": "contact_lead",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "lead",
+      "lookupField": "parentcontactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "systemuser_lead_OneToMany",
+      "name": "systemuser_lead",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "lead",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "campaign_lead_OneToMany",
+      "name": "campaign_lead",
+      "type": "OneToMany",
+      "from": "campaign",
+      "to": "lead",
+      "lookupField": "campaignid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "account_opportunity_OneToMany",
+      "name": "account_opportunity",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "opportunity",
+      "lookupField": "parentaccountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "contact_opportunity_OneToMany",
+      "name": "contact_opportunity",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "opportunity",
+      "lookupField": "parentcontactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "pricelevel_opportunity_OneToMany",
+      "name": "pricelevel_opportunity",
+      "type": "OneToMany",
+      "from": "pricelevel",
+      "to": "opportunity",
+      "lookupField": "pricelevelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "systemuser_opportunity_OneToMany",
+      "name": "systemuser_opportunity",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "opportunity",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "campaign_opportunity_OneToMany",
+      "name": "campaign_opportunity",
+      "type": "OneToMany",
+      "from": "campaign",
+      "to": "opportunity",
+      "lookupField": "campaignid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "opportunity_opportunity_OneToMany",
+      "name": "opportunity_opportunity",
+      "type": "OneToMany",
+      "from": "opportunity",
+      "to": "opportunity",
+      "lookupField": "con_renewalofid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "opportunity_opportunityproduct_OneToMany",
+      "name": "opportunity_opportunityproduct",
+      "type": "OneToMany",
+      "from": "opportunity",
+      "to": "opportunityproduct",
+      "lookupField": "opportunityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "product_opportunityproduct_OneToMany",
+      "name": "product_opportunityproduct",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "opportunityproduct",
+      "lookupField": "productid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "uom_opportunityproduct_OneToMany",
+      "name": "uom_opportunityproduct",
+      "type": "OneToMany",
+      "from": "uom",
+      "to": "opportunityproduct",
+      "lookupField": "uomid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "opportunity_quote_OneToMany",
+      "name": "opportunity_quote",
+      "type": "OneToMany",
+      "from": "opportunity",
+      "to": "quote",
+      "lookupField": "opportunityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "pricelevel_quote_OneToMany",
+      "name": "pricelevel_quote",
+      "type": "OneToMany",
+      "from": "pricelevel",
+      "to": "quote",
+      "lookupField": "pricelevelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "systemuser_quote_OneToMany",
+      "name": "systemuser_quote",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "quote",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "quote_quotedetail_OneToMany",
+      "name": "quote_quotedetail",
+      "type": "OneToMany",
+      "from": "quote",
+      "to": "quotedetail",
+      "lookupField": "quoteid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "product_quotedetail_OneToMany",
+      "name": "product_quotedetail",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "quotedetail",
+      "lookupField": "productid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "uom_quotedetail_OneToMany",
+      "name": "uom_quotedetail",
+      "type": "OneToMany",
+      "from": "uom",
+      "to": "quotedetail",
+      "lookupField": "uomid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "quote_salesorder_OneToMany",
+      "name": "quote_salesorder",
+      "type": "OneToMany",
+      "from": "quote",
+      "to": "salesorder",
+      "lookupField": "quoteid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "opportunity_salesorder_OneToMany",
+      "name": "opportunity_salesorder",
+      "type": "OneToMany",
+      "from": "opportunity",
+      "to": "salesorder",
+      "lookupField": "opportunityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "pricelevel_salesorder_OneToMany",
+      "name": "pricelevel_salesorder",
+      "type": "OneToMany",
+      "from": "pricelevel",
+      "to": "salesorder",
+      "lookupField": "pricelevelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "systemuser_salesorder_OneToMany",
+      "name": "systemuser_salesorder",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "salesorder",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "salesorder_salesorderdetail_OneToMany",
+      "name": "salesorder_salesorderdetail",
+      "type": "OneToMany",
+      "from": "salesorder",
+      "to": "salesorderdetail",
+      "lookupField": "salesorderid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "product_salesorderdetail_OneToMany",
+      "name": "product_salesorderdetail",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "salesorderdetail",
+      "lookupField": "productid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "uom_salesorderdetail_OneToMany",
+      "name": "uom_salesorderdetail",
+      "type": "OneToMany",
+      "from": "uom",
+      "to": "salesorderdetail",
+      "lookupField": "uomid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "salesorder_invoice_OneToMany",
+      "name": "salesorder_invoice",
+      "type": "OneToMany",
+      "from": "salesorder",
+      "to": "invoice",
+      "lookupField": "salesorderid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "opportunity_invoice_OneToMany",
+      "name": "opportunity_invoice",
+      "type": "OneToMany",
+      "from": "opportunity",
+      "to": "invoice",
+      "lookupField": "opportunityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "systemuser_invoice_OneToMany",
+      "name": "systemuser_invoice",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "invoice",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "pricelevel_product_OneToMany",
+      "name": "pricelevel_product",
+      "type": "OneToMany",
+      "from": "pricelevel",
+      "to": "product",
+      "lookupField": "pricelevelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "uom_product_OneToMany",
+      "name": "uom_product",
+      "type": "OneToMany",
+      "from": "uom",
+      "to": "product",
+      "lookupField": "defaultuomid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "con_vendor_product_OneToMany",
+      "name": "con_vendor_product",
+      "type": "OneToMany",
+      "from": "con_vendor",
+      "to": "product",
+      "lookupField": "con_preferredvendorid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "transactioncurrency_pricelevel_OneToMany",
+      "name": "transactioncurrency_pricelevel",
+      "type": "OneToMany",
+      "from": "transactioncurrency",
+      "to": "pricelevel",
+      "lookupField": "transactioncurrencyid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "systemuser_goal_OneToMany",
+      "name": "systemuser_goal",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "goal",
+      "lookupField": "goalownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "team_goal_OneToMany",
+      "name": "team_goal",
+      "type": "OneToMany",
+      "from": "team",
+      "to": "goal",
+      "lookupField": "owningteam",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "systemuser_territory_OneToMany",
+      "name": "systemuser_territory",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "territory",
+      "lookupField": "managerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "systemuser_campaign_OneToMany",
+      "name": "systemuser_campaign",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "campaign",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "opportunity_con_dealdeskreview_OneToMany",
+      "name": "opportunity_con_dealdeskreview",
+      "type": "OneToMany",
+      "from": "opportunity",
+      "to": "con_dealdeskreview",
+      "lookupField": "con_opportunityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "quote_con_dealdeskreview_OneToMany",
+      "name": "quote_con_dealdeskreview",
+      "type": "OneToMany",
+      "from": "quote",
+      "to": "con_dealdeskreview",
+      "lookupField": "con_quoteid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "systemuser_con_dealdeskreview_OneToMany",
+      "name": "systemuser_con_dealdeskreview",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_dealdeskreview",
+      "lookupField": "con_approverid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "invoice_con_custtranspayment_OneToMany",
+      "name": "invoice_con_custtranspayment",
+      "type": "OneToMany",
+      "from": "invoice",
+      "to": "con_custtranspayment",
+      "lookupField": "con_invoiceid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_SalesPro"
+    },
+    {
+      "id": "account_incident_OneToMany",
+      "name": "account_incident",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "incident",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "contact_incident_OneToMany",
+      "name": "contact_incident",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "incident",
+      "lookupField": "primarycontactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "entitlement_incident_OneToMany",
+      "name": "entitlement_incident",
+      "type": "OneToMany",
+      "from": "entitlement",
+      "to": "incident",
+      "lookupField": "entitlementid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "sla_incident_OneToMany",
+      "name": "sla_incident",
+      "type": "OneToMany",
+      "from": "sla",
+      "to": "incident",
+      "lookupField": "slaid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "systemuser_incident_OneToMany",
+      "name": "systemuser_incident",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "incident",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "incident_incidentresolution_OneToMany",
+      "name": "incident_incidentresolution",
+      "type": "OneToMany",
+      "from": "incident",
+      "to": "incidentresolution",
+      "lookupField": "incidentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "systemuser_knowledgearticle_OneToMany",
+      "name": "systemuser_knowledgearticle",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "knowledgearticle",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "account_entitlement_OneToMany",
+      "name": "account_entitlement",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "entitlement",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "contact_entitlement_OneToMany",
+      "name": "contact_entitlement",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "entitlement",
+      "lookupField": "contactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "sla_entitlement_OneToMany",
+      "name": "sla_entitlement",
+      "type": "OneToMany",
+      "from": "sla",
+      "to": "entitlement",
+      "lookupField": "slaid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "sla_entitlementtemplate_OneToMany",
+      "name": "sla_entitlementtemplate",
+      "type": "OneToMany",
+      "from": "sla",
+      "to": "entitlementtemplate",
+      "lookupField": "slaid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "sla_slaitem_OneToMany",
+      "name": "sla_slaitem",
+      "type": "OneToMany",
+      "from": "sla",
+      "to": "slaitem",
+      "lookupField": "slaid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "systemuser_queue_OneToMany",
+      "name": "systemuser_queue",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "queue",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "queue_queueitem_OneToMany",
+      "name": "queue_queueitem",
+      "type": "OneToMany",
+      "from": "queue",
+      "to": "queueitem",
+      "lookupField": "queueid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "systemuser_queueitem_OneToMany",
+      "name": "systemuser_queueitem",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "queueitem",
+      "lookupField": "workerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "incident_msdyn_ocsession_OneToMany",
+      "name": "incident_msdyn_ocsession",
+      "type": "OneToMany",
+      "from": "incident",
+      "to": "msdyn_ocsession",
+      "lookupField": "msdyn_incidentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "systemuser_msdyn_ocsession_OneToMany",
+      "name": "systemuser_msdyn_ocsession",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_ocsession",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "msdyn_ocliveworkitem_msdyn_ocsession_OneToMany",
+      "name": "msdyn_ocliveworkitem_msdyn_ocsession",
+      "type": "OneToMany",
+      "from": "msdyn_ocliveworkitem",
+      "to": "msdyn_ocsession",
+      "lookupField": "msdyn_liveworkitemid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "account_contract_OneToMany",
+      "name": "account_contract",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "contract",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "systemuser_msdyn_customervoicesurvey_OneToMany",
+      "name": "systemuser_msdyn_customervoicesurvey",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_customervoicesurvey",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "knowledgearticle_con_casedeflection_OneToMany",
+      "name": "knowledgearticle_con_casedeflection",
+      "type": "OneToMany",
+      "from": "knowledgearticle",
+      "to": "con_casedeflection",
+      "lookupField": "con_knowledgearticleid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "contact_con_casedeflection_OneToMany",
+      "name": "contact_con_casedeflection",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "con_casedeflection",
+      "lookupField": "con_contactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "incident_con_casedeflection_OneToMany",
+      "name": "incident_con_casedeflection",
+      "type": "OneToMany",
+      "from": "incident",
+      "to": "con_casedeflection",
+      "lookupField": "con_incidentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "incident_con_escalation_OneToMany",
+      "name": "incident_con_escalation",
+      "type": "OneToMany",
+      "from": "incident",
+      "to": "con_escalation",
+      "lookupField": "con_incidentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "team_con_escalation_OneToMany",
+      "name": "team_con_escalation",
+      "type": "OneToMany",
+      "from": "team",
+      "to": "con_escalation",
+      "lookupField": "con_targetteamid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "incident_con_servicefeedback_OneToMany",
+      "name": "incident_con_servicefeedback",
+      "type": "OneToMany",
+      "from": "incident",
+      "to": "con_servicefeedback",
+      "lookupField": "con_incidentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "systemuser_con_servicefeedback_OneToMany",
+      "name": "systemuser_con_servicefeedback",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_servicefeedback",
+      "lookupField": "con_agentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "account_msdyn_agreement_OneToMany",
+      "name": "account_msdyn_agreement",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_agreement",
+      "lookupField": "msdyn_billingaccount",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_CustomerService"
+    },
+    {
+      "id": "account_msdyn_workorder_OneToMany",
+      "name": "account_msdyn_workorder",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_workorder",
+      "lookupField": "msdyn_serviceaccount",
+      "cascadeDelete": "Cascade",
       "description": null,
       "solution": "ContosoFieldService"
     },
     {
-      "id": "con_workorder_con_technician",
-      "name": "con_workorder_con_technician",
-      "type": "ManyToOne",
-      "from": "con_workorder",
-      "to": "con_technician",
+      "id": "msdyn_incidenttype_msdyn_workorder_OneToMany",
+      "name": "msdyn_incidenttype_msdyn_workorder",
+      "type": "OneToMany",
+      "from": "msdyn_incidenttype",
+      "to": "msdyn_workorder",
+      "lookupField": "msdyn_primaryincidenttype",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "msdyn_agreement_msdyn_workorder_OneToMany",
+      "name": "msdyn_agreement_msdyn_workorder",
+      "type": "OneToMany",
+      "from": "msdyn_agreement",
+      "to": "msdyn_workorder",
+      "lookupField": "msdyn_agreement",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "systemuser_msdyn_workorder_OneToMany",
+      "name": "systemuser_msdyn_workorder",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_workorder",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "msdyn_workorder_msdyn_workorderproduct_OneToMany",
+      "name": "msdyn_workorder_msdyn_workorderproduct",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "msdyn_workorderproduct",
+      "lookupField": "msdyn_workorder",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "product_msdyn_workorderproduct_OneToMany",
+      "name": "product_msdyn_workorderproduct",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "msdyn_workorderproduct",
+      "lookupField": "msdyn_product",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "msdyn_workorder_msdyn_workorderservice_OneToMany",
+      "name": "msdyn_workorder_msdyn_workorderservice",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "msdyn_workorderservice",
+      "lookupField": "msdyn_workorder",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "product_msdyn_workorderservice_OneToMany",
+      "name": "product_msdyn_workorderservice",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "msdyn_workorderservice",
+      "lookupField": "msdyn_service",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "systemuser_msdyn_incidenttype_OneToMany",
+      "name": "systemuser_msdyn_incidenttype",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_incidenttype",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "systemuser_bookableresource_OneToMany",
+      "name": "systemuser_bookableresource",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "bookableresource",
+      "lookupField": "userid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "account_bookableresource_OneToMany",
+      "name": "account_bookableresource",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "bookableresource",
+      "lookupField": "accountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "contact_bookableresource_OneToMany",
+      "name": "contact_bookableresource",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "bookableresource",
+      "lookupField": "contactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "bookableresource_bookableresourcebooking_OneToMany",
+      "name": "bookableresource_bookableresourcebooking",
+      "type": "OneToMany",
+      "from": "bookableresource",
+      "to": "bookableresourcebooking",
+      "lookupField": "resource",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "msdyn_workorder_bookableresourcebooking_OneToMany",
+      "name": "msdyn_workorder_bookableresourcebooking",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "bookableresourcebooking",
+      "lookupField": "msdyn_workorder",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "msdyn_workorder_msdyn_resourcerequirement_OneToMany",
+      "name": "msdyn_workorder_msdyn_resourcerequirement",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "msdyn_resourcerequirement",
+      "lookupField": "msdyn_workorder",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "territory_msdyn_resourcerequirement_OneToMany",
+      "name": "territory_msdyn_resourcerequirement",
+      "type": "OneToMany",
+      "from": "territory",
+      "to": "msdyn_resourcerequirement",
+      "lookupField": "msdyn_territory",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "account_msdyn_customerasset_OneToMany",
+      "name": "account_msdyn_customerasset",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_customerasset",
+      "lookupField": "msdyn_account",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "msdyn_customerasset_msdyn_customerasset_OneToMany",
+      "name": "msdyn_customerasset_msdyn_customerasset",
+      "type": "OneToMany",
+      "from": "msdyn_customerasset",
+      "to": "msdyn_customerasset",
+      "lookupField": "msdyn_parentasset",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "product_msdyn_customerasset_OneToMany",
+      "name": "product_msdyn_customerasset",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "msdyn_customerasset",
+      "lookupField": "msdyn_product",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "account_msdyn_rma_OneToMany",
+      "name": "account_msdyn_rma",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_rma",
+      "lookupField": "msdyn_account",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "msdyn_workorder_msdyn_rma_OneToMany",
+      "name": "msdyn_workorder_msdyn_rma",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "msdyn_rma",
+      "lookupField": "msdyn_workorder",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "bookableresource_msdyn_timeentry_OneToMany",
+      "name": "bookableresource_msdyn_timeentry",
+      "type": "OneToMany",
+      "from": "bookableresource",
+      "to": "msdyn_timeentry",
+      "lookupField": "msdyn_bookableresource",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "systemuser_msdyn_timeentry_OneToMany",
+      "name": "systemuser_msdyn_timeentry",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_timeentry",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "msdyn_project_msdyn_timeentry_OneToMany",
+      "name": "msdyn_project_msdyn_timeentry",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_timeentry",
+      "lookupField": "msdyn_project",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "msdyn_projecttask_msdyn_timeentry_OneToMany",
+      "name": "msdyn_projecttask_msdyn_timeentry",
+      "type": "OneToMany",
+      "from": "msdyn_projecttask",
+      "to": "msdyn_timeentry",
+      "lookupField": "msdyn_projecttask",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "product_msdyn_productinventory_OneToMany",
+      "name": "product_msdyn_productinventory",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "msdyn_productinventory",
+      "lookupField": "msdyn_product",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "msdyn_warehouse_msdyn_productinventory_OneToMany",
+      "name": "msdyn_warehouse_msdyn_productinventory",
+      "type": "OneToMany",
+      "from": "msdyn_warehouse",
+      "to": "msdyn_productinventory",
+      "lookupField": "msdyn_warehouse",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "account_msdyn_warehouse_OneToMany",
+      "name": "account_msdyn_warehouse",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_warehouse",
+      "lookupField": "msdyn_account",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FieldService"
+    },
+    {
+      "id": "msdyn_workorder_con_safetyinspection_OneToMany",
+      "name": "msdyn_workorder_con_safetyinspection",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "con_safetyinspection",
+      "lookupField": "con_workorder",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFieldService"
+    },
+    {
+      "id": "bookableresource_con_safetyinspection_OneToMany",
+      "name": "bookableresource_con_safetyinspection",
+      "type": "OneToMany",
+      "from": "bookableresource",
+      "to": "con_safetyinspection",
       "lookupField": "con_technician",
-      "cascadeDelete": "RemoveLink",
+      "cascadeDelete": "Cascade",
       "description": null,
       "solution": "ContosoFieldService"
     },
     {
-      "id": "con_workorder_con_asset",
-      "name": "con_workorder_con_asset",
-      "type": "ManyToOne",
-      "from": "con_workorder",
-      "to": "con_asset",
-      "lookupField": "con_asset",
-      "cascadeDelete": "RemoveLink",
+      "id": "systemuser_con_safetyinspection_OneToMany",
+      "name": "systemuser_con_safetyinspection",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_safetyinspection",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
       "description": null,
       "solution": "ContosoFieldService"
     },
     {
-      "id": "con_servicevisit_con_workorder",
-      "name": "con_servicevisit_con_workorder",
-      "type": "ManyToOne",
-      "from": "con_servicevisit",
-      "to": "con_workorder",
-      "lookupField": "con_workorder",
-      "cascadeDelete": "RemoveLink",
+      "id": "msdyn_agreement_con_slapenaltyrule_OneToMany",
+      "name": "msdyn_agreement_con_slapenaltyrule",
+      "type": "OneToMany",
+      "from": "msdyn_agreement",
+      "to": "con_slapenaltyrule",
+      "lookupField": "con_agreement",
+      "cascadeDelete": "Cascade",
       "description": null,
       "solution": "ContosoFieldService"
     },
     {
-      "id": "con_servicevisit_con_technician",
-      "name": "con_servicevisit_con_technician",
-      "type": "ManyToOne",
-      "from": "con_servicevisit",
-      "to": "con_technician",
-      "lookupField": "con_technician",
-      "cascadeDelete": "RemoveLink",
+      "id": "account_msdyn_purchaseorder_OneToMany",
+      "name": "account_msdyn_purchaseorder",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_purchaseorder",
+      "lookupField": "msdyn_vendor",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "msdyn_FieldService"
     },
     {
-      "id": "con_agreement_account",
-      "name": "con_agreement_account",
-      "type": "ManyToOne",
-      "from": "con_agreement",
-      "to": "account",
-      "lookupField": "con_account",
-      "cascadeDelete": "RemoveLink",
+      "id": "msdyn_workorder_msdyn_purchaseorder_OneToMany",
+      "name": "msdyn_workorder_msdyn_purchaseorder",
+      "type": "OneToMany",
+      "from": "msdyn_workorder",
+      "to": "msdyn_purchaseorder",
+      "lookupField": "msdyn_workorder",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "msdyn_FieldService"
     },
     {
-      "id": "con_agreement_con_asset",
-      "name": "con_agreement_con_asset",
-      "type": "ManyToOne",
-      "from": "con_agreement",
-      "to": "con_asset",
-      "lookupField": "con_asset",
-      "cascadeDelete": "RemoveLink",
+      "id": "account_msdyn_project_OneToMany",
+      "name": "account_msdyn_project",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_project",
+      "lookupField": "msdyn_customer",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "ContosoProjectOperations"
     },
     {
-      "id": "con_asset_account",
-      "name": "con_asset_account",
-      "type": "ManyToOne",
-      "from": "con_asset",
-      "to": "account",
-      "lookupField": "con_account",
-      "cascadeDelete": "RemoveLink",
+      "id": "systemuser_msdyn_project_OneToMany",
+      "name": "systemuser_msdyn_project",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_project",
+      "lookupField": "msdyn_projectmanager",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "ContosoProjectOperations"
     },
     {
-      "id": "con_inspection_con_servicevisit",
-      "name": "con_inspection_con_servicevisit",
-      "type": "ManyToOne",
-      "from": "con_inspection",
-      "to": "con_servicevisit",
-      "lookupField": "con_servicevisit",
-      "cascadeDelete": "RemoveLink",
+      "id": "msdyn_projectcontract_msdyn_project_OneToMany",
+      "name": "msdyn_projectcontract_msdyn_project",
+      "type": "OneToMany",
+      "from": "msdyn_projectcontract",
+      "to": "msdyn_project",
+      "lookupField": "msdyn_contractid",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "ContosoProjectOperations"
     },
     {
-      "id": "con_part_con_workorder",
-      "name": "con_part_con_workorder",
-      "type": "ManyToOne",
-      "from": "con_part",
-      "to": "con_workorder",
-      "lookupField": "con_workorder",
-      "cascadeDelete": "RemoveLink",
+      "id": "msdyn_project_msdyn_projecttask_OneToMany",
+      "name": "msdyn_project_msdyn_projecttask",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_projecttask",
+      "lookupField": "msdyn_project",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "msdyn_ProjectServiceCore"
     },
     {
-      "id": "con_invoice_con_workorder",
-      "name": "con_invoice_con_workorder",
-      "type": "ManyToOne",
-      "from": "con_invoice",
-      "to": "con_workorder",
-      "lookupField": "con_workorder",
-      "cascadeDelete": "RemoveLink",
+      "id": "msdyn_projecttask_msdyn_projecttask_OneToMany",
+      "name": "msdyn_projecttask_msdyn_projecttask",
+      "type": "OneToMany",
+      "from": "msdyn_projecttask",
+      "to": "msdyn_projecttask",
+      "lookupField": "msdyn_parenttask",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "msdyn_ProjectServiceCore"
     },
     {
-      "id": "con_invoice_account",
-      "name": "con_invoice_account",
-      "type": "ManyToOne",
-      "from": "con_invoice",
-      "to": "account",
-      "lookupField": "con_account",
-      "cascadeDelete": "RemoveLink",
+      "id": "msdyn_project_msdyn_projectteam_OneToMany",
+      "name": "msdyn_project_msdyn_projectteam",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_projectteam",
+      "lookupField": "msdyn_project",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "msdyn_ProjectServiceCore"
     },
     {
-      "id": "con_quote_account",
-      "name": "con_quote_account",
-      "type": "ManyToOne",
-      "from": "con_quote",
-      "to": "account",
-      "lookupField": "con_account",
-      "cascadeDelete": "RemoveLink",
+      "id": "bookableresource_msdyn_projectteam_OneToMany",
+      "name": "bookableresource_msdyn_projectteam",
+      "type": "OneToMany",
+      "from": "bookableresource",
+      "to": "msdyn_projectteam",
+      "lookupField": "msdyn_bookableresource",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "msdyn_ProjectServiceCore"
     },
     {
-      "id": "con_quote_contact",
-      "name": "con_quote_contact",
-      "type": "ManyToOne",
-      "from": "con_quote",
+      "id": "msdyn_projecttask_msdyn_resourceassignment_OneToMany",
+      "name": "msdyn_projecttask_msdyn_resourceassignment",
+      "type": "OneToMany",
+      "from": "msdyn_projecttask",
+      "to": "msdyn_resourceassignment",
+      "lookupField": "msdyn_taskid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_projectteam_msdyn_resourceassignment_OneToMany",
+      "name": "msdyn_projectteam_msdyn_resourceassignment",
+      "type": "OneToMany",
+      "from": "msdyn_projectteam",
+      "to": "msdyn_resourceassignment",
+      "lookupField": "msdyn_projectteamid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_project_msdyn_resourceassignment_OneToMany",
+      "name": "msdyn_project_msdyn_resourceassignment",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_resourceassignment",
+      "lookupField": "msdyn_projectid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "account_msdyn_projectcontract_OneToMany",
+      "name": "account_msdyn_projectcontract",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_projectcontract",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "systemuser_msdyn_projectcontract_OneToMany",
+      "name": "systemuser_msdyn_projectcontract",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_projectcontract",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_projectcontract_msdyn_contractline_OneToMany",
+      "name": "msdyn_projectcontract_msdyn_contractline",
+      "type": "OneToMany",
+      "from": "msdyn_projectcontract",
+      "to": "msdyn_contractline",
+      "lookupField": "msdyn_contractid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_project_msdyn_contractline_OneToMany",
+      "name": "msdyn_project_msdyn_contractline",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_contractline",
+      "lookupField": "msdyn_project",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_project_msdyn_estimate_OneToMany",
+      "name": "msdyn_project_msdyn_estimate",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_estimate",
+      "lookupField": "msdyn_projectid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_estimate_msdyn_estimateline_OneToMany",
+      "name": "msdyn_estimate_msdyn_estimateline",
+      "type": "OneToMany",
+      "from": "msdyn_estimate",
+      "to": "msdyn_estimateline",
+      "lookupField": "msdyn_estimateid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_projecttask_msdyn_estimateline_OneToMany",
+      "name": "msdyn_projecttask_msdyn_estimateline",
+      "type": "OneToMany",
+      "from": "msdyn_projecttask",
+      "to": "msdyn_estimateline",
+      "lookupField": "msdyn_projecttaskid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_project_msdyn_expense_OneToMany",
+      "name": "msdyn_project_msdyn_expense",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_expense",
+      "lookupField": "msdyn_project",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "bookableresource_msdyn_expense_OneToMany",
+      "name": "bookableresource_msdyn_expense",
+      "type": "OneToMany",
+      "from": "bookableresource",
+      "to": "msdyn_expense",
+      "lookupField": "msdyn_bookableresource",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "msdyn_project_msdyn_actuals_OneToMany",
+      "name": "msdyn_project_msdyn_actuals",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "msdyn_actuals",
+      "lookupField": "msdyn_project",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_contractline_msdyn_actuals_OneToMany",
+      "name": "msdyn_contractline_msdyn_actuals",
+      "type": "OneToMany",
+      "from": "msdyn_contractline",
+      "to": "msdyn_actuals",
+      "lookupField": "msdyn_projectcontractlinedetail",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_projectcontract_msdyn_invoice_OneToMany",
+      "name": "msdyn_projectcontract_msdyn_invoice",
+      "type": "OneToMany",
+      "from": "msdyn_projectcontract",
+      "to": "msdyn_invoice",
+      "lookupField": "msdyn_contract",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "account_msdyn_invoice_OneToMany",
+      "name": "account_msdyn_invoice",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_invoice",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_ProjectServiceCore"
+    },
+    {
+      "id": "msdyn_project_con_projecthealthreview_OneToMany",
+      "name": "msdyn_project_con_projecthealthreview",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "con_projecthealthreview",
+      "lookupField": "con_projectid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "systemuser_con_projecthealthreview_OneToMany",
+      "name": "systemuser_con_projecthealthreview",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_projecthealthreview",
+      "lookupField": "con_reviewerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "msdyn_project_con_resourcerequest_OneToMany",
+      "name": "msdyn_project_con_resourcerequest",
+      "type": "OneToMany",
+      "from": "msdyn_project",
+      "to": "con_resourcerequest",
+      "lookupField": "con_projectid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "msdyn_projectteam_con_resourcerequest_OneToMany",
+      "name": "msdyn_projectteam_con_resourcerequest",
+      "type": "OneToMany",
+      "from": "msdyn_projectteam",
+      "to": "con_resourcerequest",
+      "lookupField": "con_projectteamid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "systemuser_con_resourcerequest_OneToMany",
+      "name": "systemuser_con_resourcerequest",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_resourcerequest",
+      "lookupField": "con_resourcemanagerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "systemuser_msdynmkt_journey_OneToMany",
+      "name": "systemuser_msdynmkt_journey",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_journey",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "systemuser_msdynmkt_segment_OneToMany",
+      "name": "systemuser_msdynmkt_segment",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_segment",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "con_legalfootertemplate_msdynmkt_marketingemail_OneToMany",
+      "name": "con_legalfootertemplate_msdynmkt_marketingemail",
+      "type": "OneToMany",
+      "from": "con_legalfootertemplate",
+      "to": "msdynmkt_marketingemail",
+      "lookupField": "con_legalfooterid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "systemuser_msdynmkt_marketingemail_OneToMany",
+      "name": "systemuser_msdynmkt_marketingemail",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_marketingemail",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "systemuser_msdynmkt_channeltemplate_OneToMany",
+      "name": "systemuser_msdynmkt_channeltemplate",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_channeltemplate",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "systemuser_msdynmkt_marketingform_OneToMany",
+      "name": "systemuser_msdynmkt_marketingform",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_marketingform",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "systemuser_msdynmkt_leadscoringmodel_OneToMany",
+      "name": "systemuser_msdynmkt_leadscoringmodel",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_leadscoringmodel",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "account_contact_OneToMany",
+      "name": "account_contact",
+      "type": "OneToMany",
+      "from": "account",
       "to": "contact",
-      "lookupField": "con_contact",
-      "cascadeDelete": "RemoveLink",
+      "lookupField": "parentcustomerid",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "ContosoMarketing"
     },
     {
-      "id": "con_project_account",
-      "name": "con_project_account",
-      "type": "ManyToOne",
-      "from": "con_project",
+      "id": "systemuser_contact_OneToMany",
+      "name": "systemuser_contact",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "contact",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "systemuser_msevtmgt_event_OneToMany",
+      "name": "systemuser_msevtmgt_event",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msevtmgt_event",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "msevtmgt_event_msevtmgt_eventregistration_OneToMany",
+      "name": "msevtmgt_event_msevtmgt_eventregistration",
+      "type": "OneToMany",
+      "from": "msevtmgt_event",
+      "to": "msevtmgt_eventregistration",
+      "lookupField": "msevtmgt_eventid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "contact_msevtmgt_eventregistration_OneToMany",
+      "name": "contact_msevtmgt_eventregistration",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "msevtmgt_eventregistration",
+      "lookupField": "msevtmgt_contactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "contact_msdynmkt_contactpointconsent3_OneToMany",
+      "name": "contact_msdynmkt_contactpointconsent3",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "msdynmkt_contactpointconsent3",
+      "lookupField": "msdynmkt_contactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "systemuser_msdynmkt_trigger_OneToMany",
+      "name": "systemuser_msdynmkt_trigger",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynmkt_trigger",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "msdynmkt_segment_con_campaignbrief_OneToMany",
+      "name": "msdynmkt_segment_con_campaignbrief",
+      "type": "OneToMany",
+      "from": "msdynmkt_segment",
+      "to": "con_campaignbrief",
+      "lookupField": "con_targetsegmentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "msdynmkt_journey_con_campaignbrief_OneToMany",
+      "name": "msdynmkt_journey_con_campaignbrief",
+      "type": "OneToMany",
+      "from": "msdynmkt_journey",
+      "to": "con_campaignbrief",
+      "lookupField": "con_journeyid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "systemuser_con_campaignbrief_OneToMany",
+      "name": "systemuser_con_campaignbrief",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_campaignbrief",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "systemuser_con_legalfootertemplate_OneToMany",
+      "name": "systemuser_con_legalfootertemplate",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_legalfootertemplate",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "con_campaignbrief_con_marketingspendline_OneToMany",
+      "name": "con_campaignbrief_con_marketingspendline",
+      "type": "OneToMany",
+      "from": "con_campaignbrief",
+      "to": "con_marketingspendline",
+      "lookupField": "con_campaignbriefid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynmkt_CustomerInsightsJourneys"
+    },
+    {
+      "id": "contact_msdynci_customerprofile_OneToMany",
+      "name": "contact_msdynci_customerprofile",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "msdynci_customerprofile",
+      "lookupField": "con_matchedcontactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "account_msdynci_customerprofile_OneToMany",
+      "name": "account_msdynci_customerprofile",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdynci_customerprofile",
+      "lookupField": "con_matchedaccountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "msdynci_datasource_msdynci_entity_OneToMany",
+      "name": "msdynci_datasource_msdynci_entity",
+      "type": "OneToMany",
+      "from": "msdynci_datasource",
+      "to": "msdynci_entity",
+      "lookupField": "msdynci_datasourceid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "systemuser_msdynci_measure_OneToMany",
+      "name": "systemuser_msdynci_measure",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdynci_measure",
+      "lookupField": "con_businessowner",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "team_msdynci_segment_OneToMany",
+      "name": "team_msdynci_segment",
+      "type": "OneToMany",
+      "from": "team",
+      "to": "msdynci_segment",
+      "lookupField": "owningteam",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "msdynci_prediction_msdynci_predictionscore_OneToMany",
+      "name": "msdynci_prediction_msdynci_predictionscore",
+      "type": "OneToMany",
+      "from": "msdynci_prediction",
+      "to": "msdynci_predictionscore",
+      "lookupField": "msdynci_predictionid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "msdynci_customerprofile_msdynci_predictionscore_OneToMany",
+      "name": "msdynci_customerprofile_msdynci_predictionscore",
+      "type": "OneToMany",
+      "from": "msdynci_customerprofile",
+      "to": "msdynci_predictionscore",
+      "lookupField": "msdynci_customerprofileid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "msdynci_customerprofile_msdynci_activity_OneToMany",
+      "name": "msdynci_customerprofile_msdynci_activity",
+      "type": "OneToMany",
+      "from": "msdynci_customerprofile",
+      "to": "msdynci_activity",
+      "lookupField": "msdynci_customerprofileid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "msdynci_customerprofile_msdynci_relationship_OneToMany",
+      "name": "msdynci_customerprofile_msdynci_relationship",
+      "type": "OneToMany",
+      "from": "msdynci_customerprofile",
+      "to": "msdynci_relationship",
+      "lookupField": "con_fromprofileid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "msdynci_customerprofile_con_consentledger_OneToMany",
+      "name": "msdynci_customerprofile_con_consentledger",
+      "type": "OneToMany",
+      "from": "msdynci_customerprofile",
+      "to": "con_consentledger",
+      "lookupField": "con_customerprofileid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "contact_con_consentledger_OneToMany",
+      "name": "contact_con_consentledger",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "con_consentledger",
+      "lookupField": "con_contactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "msdynci_entity_con_matchrule_OneToMany",
+      "name": "msdynci_entity_con_matchrule",
+      "type": "OneToMany",
+      "from": "msdynci_entity",
+      "to": "con_matchrule",
+      "lookupField": "con_primaryentityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "msdynci_datasource_con_datasourcehealth_OneToMany",
+      "name": "msdynci_datasource_con_datasourcehealth",
+      "type": "OneToMany",
+      "from": "msdynci_datasource",
+      "to": "con_datasourcehealth",
+      "lookupField": "con_datasourceid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "account_mserp_custcustomerv3entity_OneToMany",
+      "name": "account_mserp_custcustomerv3entity",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "mserp_custcustomerv3entity",
+      "lookupField": "con_dualwriteaccountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "msdynci_entity_msdynci_semanticmapping_OneToMany",
+      "name": "msdynci_entity_msdynci_semanticmapping",
+      "type": "OneToMany",
+      "from": "msdynci_entity",
+      "to": "msdynci_semanticmapping",
+      "lookupField": "msdynci_entityid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynci_CustomerInsights"
+    },
+    {
+      "id": "mserp_ledger_mserp_mainaccount_OneToMany",
+      "name": "mserp_ledger_mserp_mainaccount",
+      "type": "OneToMany",
+      "from": "mserp_ledger",
+      "to": "mserp_mainaccount",
+      "lookupField": "mserp_ledgerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FinanceAndOperations"
+    },
+    {
+      "id": "cdm_company_mserp_ledger_OneToMany",
+      "name": "cdm_company_mserp_ledger",
+      "type": "OneToMany",
+      "from": "cdm_company",
+      "to": "mserp_ledger",
+      "lookupField": "mserp_legalentity",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FinanceAndOperations"
+    },
+    {
+      "id": "mserp_mainaccount_mserp_generaljournalaccountentry_OneToMany",
+      "name": "mserp_mainaccount_mserp_generaljournalaccountentry",
+      "type": "OneToMany",
+      "from": "mserp_mainaccount",
+      "to": "mserp_generaljournalaccountentry",
+      "lookupField": "mserp_mainaccount",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FinanceAndOperations"
+    },
+    {
+      "id": "cdm_company_mserp_vendinvoiceheader_OneToMany",
+      "name": "cdm_company_mserp_vendinvoiceheader",
+      "type": "OneToMany",
+      "from": "cdm_company",
+      "to": "mserp_vendinvoiceheader",
+      "lookupField": "mserp_dataareaid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FinanceAndOperations"
+    },
+    {
+      "id": "account_mserp_custpaymentjournalline_OneToMany",
+      "name": "account_mserp_custpaymentjournalline",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "mserp_custpaymentjournalline",
+      "lookupField": "mserp_customeraccount",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FinanceAndOperations"
+    },
+    {
+      "id": "mserp_mainaccount_mserp_budgetregisterentry_OneToMany",
+      "name": "mserp_mainaccount_mserp_budgetregisterentry",
+      "type": "OneToMany",
+      "from": "mserp_mainaccount",
+      "to": "mserp_budgetregisterentry",
+      "lookupField": "mserp_mainaccount",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_FinanceAndOperations"
+    },
+    {
+      "id": "systemuser_account_OneToMany",
+      "name": "systemuser_account",
+      "type": "OneToMany",
+      "from": "systemuser",
       "to": "account",
-      "lookupField": "con_account",
-      "cascadeDelete": "RemoveLink",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
       "description": null,
-      "solution": "ContosoFieldService"
+      "solution": "ContosoFinance"
     },
     {
-      "id": "con_project_con_quote",
-      "name": "con_project_con_quote",
-      "type": "ManyToOne",
-      "from": "con_project",
-      "to": "con_quote",
-      "lookupField": "con_quote",
-      "cascadeDelete": "RemoveLink",
-      "description": null,
-      "solution": "ContosoFieldService"
-    },
-    {
-      "id": "contact_account",
+      "id": "contact_account_OneToMany",
       "name": "contact_account",
-      "type": "ManyToOne",
+      "type": "OneToMany",
       "from": "contact",
       "to": "account",
-      "lookupField": "parentcustomerid",
+      "lookupField": "primarycontactid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "account_account_OneToMany",
+      "name": "account_account",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "account",
+      "lookupField": "parentaccountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "businessunit_account_OneToMany",
+      "name": "businessunit_account",
+      "type": "OneToMany",
+      "from": "businessunit",
+      "to": "account",
+      "lookupField": "owningbusinessunit",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "systemuser_con_apapprovalrequest_OneToMany",
+      "name": "systemuser_con_apapprovalrequest",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_apapprovalrequest",
+      "lookupField": "con_approverid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "account_con_apapprovalrequest_OneToMany",
+      "name": "account_con_apapprovalrequest",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "con_apapprovalrequest",
+      "lookupField": "con_vendoraccountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "systemuser_con_capexrequest_OneToMany",
+      "name": "systemuser_con_capexrequest",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_capexrequest",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "businessunit_con_financialdimensionmap_OneToMany",
+      "name": "businessunit_con_financialdimensionmap",
+      "type": "OneToMany",
+      "from": "businessunit",
+      "to": "con_financialdimensionmap",
+      "lookupField": "con_businessunitid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "account_con_dunningaction_OneToMany",
+      "name": "account_con_dunningaction",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "con_dunningaction",
+      "lookupField": "con_customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "account_con_vendor_OneToMany",
+      "name": "account_con_vendor",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "con_vendor",
+      "lookupField": "con_accountid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "systemuser_con_vendor_OneToMany",
+      "name": "systemuser_con_vendor",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_vendor",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "systemuser_con_purchaserequisition_OneToMany",
+      "name": "systemuser_con_purchaserequisition",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_purchaserequisition",
+      "lookupField": "con_requestedby",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "con_vendor_con_purchaserequisition_OneToMany",
+      "name": "con_vendor_con_purchaserequisition",
+      "type": "OneToMany",
+      "from": "con_vendor",
+      "to": "con_purchaserequisition",
+      "lookupField": "con_vendorid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "systemuser_con_inventorycount_OneToMany",
+      "name": "systemuser_con_inventorycount",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_inventorycount",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "account_con_shipment_OneToMany",
+      "name": "account_con_shipment",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "con_shipment",
+      "lookupField": "con_customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "product_con_bomcomponent_OneToMany",
+      "name": "product_con_bomcomponent",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "con_bomcomponent",
+      "lookupField": "con_parentproductid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "msdyn_channelprofile_msdyn_retailchannel_OneToMany",
+      "name": "msdyn_channelprofile_msdyn_retailchannel",
+      "type": "OneToMany",
+      "from": "msdyn_channelprofile",
+      "to": "msdyn_retailchannel",
+      "lookupField": "msdyn_channelprofileid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "transactioncurrency_msdyn_retailchannel_OneToMany",
+      "name": "transactioncurrency_msdyn_retailchannel",
+      "type": "OneToMany",
+      "from": "transactioncurrency",
+      "to": "msdyn_retailchannel",
+      "lookupField": "transactioncurrencyid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "systemuser_msdyn_retailchannel_OneToMany",
+      "name": "systemuser_msdyn_retailchannel",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_retailchannel",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailchannel_msdyn_retailstore_OneToMany",
+      "name": "msdyn_retailchannel_msdyn_retailstore",
+      "type": "OneToMany",
+      "from": "msdyn_retailchannel",
+      "to": "msdyn_retailstore",
+      "lookupField": "msdyn_retailchannelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "systemuser_msdyn_retailstore_OneToMany",
+      "name": "systemuser_msdyn_retailstore",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_retailstore",
+      "lookupField": "con_districtmanagerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailstore_msdyn_retailterminal_OneToMany",
+      "name": "msdyn_retailstore_msdyn_retailterminal",
+      "type": "OneToMany",
+      "from": "msdyn_retailstore",
+      "to": "msdyn_retailterminal",
+      "lookupField": "msdyn_retailstoreid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "systemuser_msdyn_channelprofile_OneToMany",
+      "name": "systemuser_msdyn_channelprofile",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_channelprofile",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "msdyn_retailchannel_msdyn_retailtransaction_OneToMany",
+      "name": "msdyn_retailchannel_msdyn_retailtransaction",
+      "type": "OneToMany",
+      "from": "msdyn_retailchannel",
+      "to": "msdyn_retailtransaction",
+      "lookupField": "msdyn_retailchannelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailterminal_msdyn_retailtransaction_OneToMany",
+      "name": "msdyn_retailterminal_msdyn_retailtransaction",
+      "type": "OneToMany",
+      "from": "msdyn_retailterminal",
+      "to": "msdyn_retailtransaction",
+      "lookupField": "msdyn_retailterminalid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "account_msdyn_retailtransaction_OneToMany",
+      "name": "account_msdyn_retailtransaction",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "msdyn_retailtransaction",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailtransaction_msdyn_retailtransactionsalesline_OneToMany",
+      "name": "msdyn_retailtransaction_msdyn_retailtransactionsalesline",
+      "type": "OneToMany",
+      "from": "msdyn_retailtransaction",
+      "to": "msdyn_retailtransactionsalesline",
+      "lookupField": "msdyn_retailtransactionid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "product_msdyn_retailtransactionsalesline_OneToMany",
+      "name": "product_msdyn_retailtransactionsalesline",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "msdyn_retailtransactionsalesline",
+      "lookupField": "msdyn_productid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "msdyn_retailtransaction_msdyn_retailtransactionpaymentline_OneToMany",
+      "name": "msdyn_retailtransaction_msdyn_retailtransactionpaymentline",
+      "type": "OneToMany",
+      "from": "msdyn_retailtransaction",
+      "to": "msdyn_retailtransactionpaymentline",
+      "lookupField": "msdyn_retailtransactionid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "msdyn_retailchannel_msdyn_retailstatement_OneToMany",
+      "name": "msdyn_retailchannel_msdyn_retailstatement",
+      "type": "OneToMany",
+      "from": "msdyn_retailchannel",
+      "to": "msdyn_retailstatement",
+      "lookupField": "msdyn_retailchannelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "msdyn_retailchannel_msdyn_pricingrule_OneToMany",
+      "name": "msdyn_retailchannel_msdyn_pricingrule",
+      "type": "OneToMany",
+      "from": "msdyn_retailchannel",
+      "to": "msdyn_pricingrule",
+      "lookupField": "msdyn_retailchannelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "systemuser_msdyn_loyaltyprogram_OneToMany",
+      "name": "systemuser_msdyn_loyaltyprogram",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_loyaltyprogram",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_loyaltyprogram_msdyn_loyaltycard_OneToMany",
+      "name": "msdyn_loyaltyprogram_msdyn_loyaltycard",
+      "type": "OneToMany",
+      "from": "msdyn_loyaltyprogram",
+      "to": "msdyn_loyaltycard",
+      "lookupField": "msdyn_loyaltyprogramid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "contact_msdyn_loyaltycard_OneToMany",
+      "name": "contact_msdyn_loyaltycard",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "msdyn_loyaltycard",
+      "lookupField": "customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailchannel_msdyn_giftcard_OneToMany",
+      "name": "msdyn_retailchannel_msdyn_giftcard",
+      "type": "OneToMany",
+      "from": "msdyn_retailchannel",
+      "to": "msdyn_giftcard",
+      "lookupField": "msdyn_retailchannelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "transactioncurrency_msdyn_giftcard_OneToMany",
+      "name": "transactioncurrency_msdyn_giftcard",
+      "type": "OneToMany",
+      "from": "transactioncurrency",
+      "to": "msdyn_giftcard",
+      "lookupField": "transactioncurrencyid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_Commerce"
+    },
+    {
+      "id": "msdyn_retailstore_con_clienteling_OneToMany",
+      "name": "msdyn_retailstore_con_clienteling",
+      "type": "OneToMany",
+      "from": "msdyn_retailstore",
+      "to": "con_clienteling",
+      "lookupField": "con_retailstoreid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "contact_con_clienteling_OneToMany",
+      "name": "contact_con_clienteling",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "con_clienteling",
+      "lookupField": "con_customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "systemuser_con_clienteling_OneToMany",
+      "name": "systemuser_con_clienteling",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_clienteling",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailtransaction_con_curbsideorder_OneToMany",
+      "name": "msdyn_retailtransaction_con_curbsideorder",
+      "type": "OneToMany",
+      "from": "msdyn_retailtransaction",
+      "to": "con_curbsideorder",
+      "lookupField": "con_retailtransactionid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailstore_con_curbsideorder_OneToMany",
+      "name": "msdyn_retailstore_con_curbsideorder",
+      "type": "OneToMany",
+      "from": "msdyn_retailstore",
+      "to": "con_curbsideorder",
+      "lookupField": "con_retailstoreid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "account_con_curbsideorder_OneToMany",
+      "name": "account_con_curbsideorder",
+      "type": "OneToMany",
+      "from": "account",
+      "to": "con_curbsideorder",
+      "lookupField": "con_customerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "product_con_pricematchrequest_OneToMany",
+      "name": "product_con_pricematchrequest",
+      "type": "OneToMany",
+      "from": "product",
+      "to": "con_pricematchrequest",
+      "lookupField": "con_productid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "msdyn_retailstore_con_pricematchrequest_OneToMany",
+      "name": "msdyn_retailstore_con_pricematchrequest",
+      "type": "OneToMany",
+      "from": "msdyn_retailstore",
+      "to": "con_pricematchrequest",
+      "lookupField": "con_retailstoreid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "systemuser_con_pricematchrequest_OneToMany",
+      "name": "systemuser_con_pricematchrequest",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_pricematchrequest",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "systemuser_cdm_worker_OneToMany",
+      "name": "systemuser_cdm_worker",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "cdm_worker",
+      "lookupField": "con_hrbusinesspartnerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_department_cdm_worker_OneToMany",
+      "name": "cdm_department_cdm_worker",
+      "type": "OneToMany",
+      "from": "cdm_department",
+      "to": "cdm_worker",
+      "lookupField": "con_departmentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_worker_cdm_employment_OneToMany",
+      "name": "cdm_worker_cdm_employment",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "cdm_employment",
+      "lookupField": "cdm_workerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_company_cdm_employment_OneToMany",
+      "name": "cdm_company_cdm_employment",
+      "type": "OneToMany",
+      "from": "cdm_company",
+      "to": "cdm_employment",
+      "lookupField": "cdm_companyid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_job_cdm_position_OneToMany",
+      "name": "cdm_job_cdm_position",
+      "type": "OneToMany",
+      "from": "cdm_job",
+      "to": "cdm_position",
+      "lookupField": "cdm_jobid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_department_cdm_position_OneToMany",
+      "name": "cdm_department_cdm_position",
+      "type": "OneToMany",
+      "from": "cdm_department",
+      "to": "cdm_position",
+      "lookupField": "cdm_departmentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_position_cdm_position_OneToMany",
+      "name": "cdm_position_cdm_position",
+      "type": "OneToMany",
+      "from": "cdm_position",
+      "to": "cdm_position",
+      "lookupField": "cdm_reportstoposition",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_department_cdm_department_OneToMany",
+      "name": "cdm_department_cdm_department",
+      "type": "OneToMany",
+      "from": "cdm_department",
+      "to": "cdm_department",
+      "lookupField": "cdm_parentdepartment",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynhr_HumanResources"
+    },
+    {
+      "id": "cdm_worker_cdm_fixedcompensation_OneToMany",
+      "name": "cdm_worker_cdm_fixedcompensation",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "cdm_fixedcompensation",
+      "lookupField": "cdm_workerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynhr_HumanResources"
+    },
+    {
+      "id": "cdm_position_cdm_fixedcompensation_OneToMany",
+      "name": "cdm_position_cdm_fixedcompensation",
+      "type": "OneToMany",
+      "from": "cdm_position",
+      "to": "cdm_fixedcompensation",
+      "lookupField": "cdm_positionid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynhr_HumanResources"
+    },
+    {
+      "id": "cdm_worker_mshr_leaverequest_OneToMany",
+      "name": "cdm_worker_mshr_leaverequest",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "mshr_leaverequest",
+      "lookupField": "mshr_workerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "systemuser_mshr_leaverequest_OneToMany",
+      "name": "systemuser_mshr_leaverequest",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "mshr_leaverequest",
+      "lookupField": "con_managerapprover",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_worker_mshr_leaveenrollment_OneToMany",
+      "name": "cdm_worker_mshr_leaveenrollment",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "mshr_leaveenrollment",
+      "lookupField": "mshr_workerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdynhr_HumanResources"
+    },
+    {
+      "id": "cdm_worker_con_onboardingtask_OneToMany",
+      "name": "cdm_worker_con_onboardingtask",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "con_onboardingtask",
+      "lookupField": "con_worker",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "systemuser_con_onboardingtask_OneToMany",
+      "name": "systemuser_con_onboardingtask",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_onboardingtask",
+      "lookupField": "con_assignedto",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_worker_con_performancereview_OneToMany",
+      "name": "cdm_worker_con_performancereview",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "con_performancereview",
+      "lookupField": "con_worker",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "systemuser_con_performancereview_OneToMany",
+      "name": "systemuser_con_performancereview",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_performancereview",
+      "lookupField": "con_reviewer",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_worker_con_workerskill_OneToMany",
+      "name": "cdm_worker_con_workerskill",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "con_workerskill",
+      "lookupField": "con_worker",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "con_skill_con_workerskill_OneToMany",
+      "name": "con_skill_con_workerskill",
+      "type": "OneToMany",
+      "from": "con_skill",
+      "to": "con_workerskill",
+      "lookupField": "con_skill",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "cdm_worker_con_disciplinarycase_OneToMany",
+      "name": "cdm_worker_con_disciplinarycase",
+      "type": "OneToMany",
+      "from": "cdm_worker",
+      "to": "con_disciplinarycase",
+      "lookupField": "con_worker",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "contact_msdyn_ocliveworkitem_OneToMany",
+      "name": "contact_msdyn_ocliveworkitem",
+      "type": "OneToMany",
+      "from": "contact",
+      "to": "msdyn_ocliveworkitem",
+      "lookupField": "msdyn_customer",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "incident_msdyn_ocliveworkitem_OneToMany",
+      "name": "incident_msdyn_ocliveworkitem",
+      "type": "OneToMany",
+      "from": "incident",
+      "to": "msdyn_ocliveworkitem",
+      "lookupField": "msdyn_incidentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "systemuser_msdyn_ocliveworkitem_OneToMany",
+      "name": "systemuser_msdyn_ocliveworkitem",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_ocliveworkitem",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "msdyn_ocsession_msdyn_ocsessionparticipant_OneToMany",
+      "name": "msdyn_ocsession_msdyn_ocsessionparticipant",
+      "type": "OneToMany",
+      "from": "msdyn_ocsession",
+      "to": "msdyn_ocsessionparticipant",
+      "lookupField": "msdyn_sessionid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_OmnichannelBase"
+    },
+    {
+      "id": "systemuser_msdyn_ocsessionparticipant_OneToMany",
+      "name": "systemuser_msdyn_ocsessionparticipant",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_ocsessionparticipant",
+      "lookupField": "msdyn_agentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_OmnichannelBase"
+    },
+    {
+      "id": "msdyn_ocliveworkitem_msdyn_occontext_OneToMany",
+      "name": "msdyn_ocliveworkitem_msdyn_occontext",
+      "type": "OneToMany",
+      "from": "msdyn_ocliveworkitem",
+      "to": "msdyn_occontext",
+      "lookupField": "msdyn_liveworkitemid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_OmnichannelBase"
+    },
+    {
+      "id": "systemuser_msdyn_agentstatushistory_OneToMany",
+      "name": "systemuser_msdyn_agentstatushistory",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "msdyn_agentstatushistory",
+      "lookupField": "msdyn_agentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "msdyn_presence_msdyn_agentstatushistory_OneToMany",
+      "name": "msdyn_presence_msdyn_agentstatushistory",
+      "type": "OneToMany",
+      "from": "msdyn_presence",
+      "to": "msdyn_agentstatushistory",
+      "lookupField": "msdyn_presenceid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "queue_msdyn_liveworkstream_OneToMany",
+      "name": "queue_msdyn_liveworkstream",
+      "type": "OneToMany",
+      "from": "queue",
+      "to": "msdyn_liveworkstream",
+      "lookupField": "msdyn_fallbackqueueid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_OmnichannelBase"
+    },
+    {
+      "id": "msdyn_liveworkstream_msdyn_channel_OneToMany",
+      "name": "msdyn_liveworkstream_msdyn_channel",
+      "type": "OneToMany",
+      "from": "msdyn_liveworkstream",
+      "to": "msdyn_channel",
+      "lookupField": "msdyn_workstreamid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "msdyn_ocliveworkitem_con_deflectionoutcome_OneToMany",
+      "name": "msdyn_ocliveworkitem_con_deflectionoutcome",
+      "type": "OneToMany",
+      "from": "msdyn_ocliveworkitem",
+      "to": "con_deflectionoutcome",
+      "lookupField": "con_conversationid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "con_botconfiguration_con_deflectionoutcome_OneToMany",
+      "name": "con_botconfiguration_con_deflectionoutcome",
+      "type": "OneToMany",
+      "from": "con_botconfiguration",
+      "to": "con_deflectionoutcome",
+      "lookupField": "con_botconfigurationid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "msdyn_ocliveworkitem_con_agentcoachingnote_OneToMany",
+      "name": "msdyn_ocliveworkitem_con_agentcoachingnote",
+      "type": "OneToMany",
+      "from": "msdyn_ocliveworkitem",
+      "to": "con_agentcoachingnote",
+      "lookupField": "con_conversationid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "systemuser_con_agentcoachingnote_OneToMany",
+      "name": "systemuser_con_agentcoachingnote",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_agentcoachingnote",
+      "lookupField": "con_agentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "msdyn_channel_con_botconfiguration_OneToMany",
+      "name": "msdyn_channel_con_botconfiguration",
+      "type": "OneToMany",
+      "from": "msdyn_channel",
+      "to": "con_botconfiguration",
+      "lookupField": "con_channelid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "msdyn_channel_con_channelbudgetline_OneToMany",
+      "name": "msdyn_channel_con_channelbudgetline",
+      "type": "OneToMany",
+      "from": "msdyn_channel",
+      "to": "con_channelbudgetline",
+      "lookupField": "con_channelinstanceid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "msdyn_OmnichannelBase"
+    },
+    {
+      "id": "businessunit_systemuser_OneToMany",
+      "name": "businessunit_systemuser",
+      "type": "OneToMany",
+      "from": "businessunit",
+      "to": "systemuser",
+      "lookupField": "businessunitid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "businessunit_team_OneToMany",
+      "name": "businessunit_team",
+      "type": "OneToMany",
+      "from": "businessunit",
+      "to": "team",
+      "lookupField": "businessunitid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "systemuser_team_OneToMany",
+      "name": "systemuser_team",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "team",
+      "lookupField": "administratorid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "businessunit_businessunit_OneToMany",
+      "name": "businessunit_businessunit",
+      "type": "OneToMany",
+      "from": "businessunit",
+      "to": "businessunit",
+      "lookupField": "parentbusinessunitid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "publisher_solution_OneToMany",
+      "name": "publisher_solution",
+      "type": "OneToMany",
+      "from": "publisher",
+      "to": "solution",
+      "lookupField": "publisherid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "systemuser_workflow_OneToMany",
+      "name": "systemuser_workflow",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "workflow",
+      "lookupField": "ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "plugintype_sdkmessageprocessingstep_OneToMany",
+      "name": "plugintype_sdkmessageprocessingstep",
+      "type": "OneToMany",
+      "from": "plugintype",
+      "to": "sdkmessageprocessingstep",
+      "lookupField": "plugintypeid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "businessunit_role_OneToMany",
+      "name": "businessunit_role",
+      "type": "OneToMany",
+      "from": "businessunit",
+      "to": "role",
+      "lookupField": "businessunitid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "adx_webpage_adx_webpage_OneToMany",
+      "name": "adx_webpage_adx_webpage",
+      "type": "OneToMany",
+      "from": "adx_webpage",
+      "to": "adx_webpage",
+      "lookupField": "adx_parentpageid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "systemuser_con_environmentinventory_OneToMany",
+      "name": "systemuser_con_environmentinventory",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_environmentinventory",
+      "lookupField": "con_ownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "systemuser_con_coecomplianceattestation_OneToMany",
+      "name": "systemuser_con_coecomplianceattestation",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_coecomplianceattestation",
+      "lookupField": "con_attestedby",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "con_environmentinventory_con_coecomplianceattestation_OneToMany",
+      "name": "con_environmentinventory_con_coecomplianceattestation",
+      "type": "OneToMany",
+      "from": "con_environmentinventory",
+      "to": "con_coecomplianceattestation",
+      "lookupField": "con_environmentid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "systemuser_con_dataprocessingregister_OneToMany",
+      "name": "systemuser_con_dataprocessingregister",
+      "type": "OneToMany",
+      "from": "systemuser",
+      "to": "con_dataprocessingregister",
+      "lookupField": "con_dataownerid",
+      "cascadeDelete": "Cascade",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "systemuser_team_NN",
+      "name": "systemuser_team",
+      "type": "ManyToMany",
+      "from": "systemuser",
+      "to": "team",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
+    },
+    {
+      "id": "team_businessunit_NN",
+      "name": "team_businessunit",
+      "type": "ManyToMany",
+      "from": "team",
+      "to": "businessunit",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "CenterofExcellenceCoreComponents"
+    },
+    {
+      "id": "opportunity_competitor_NN",
+      "name": "opportunity_competitor",
+      "type": "ManyToMany",
+      "from": "opportunity",
+      "to": "competitor",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "knowledgearticle_incident_NN",
+      "name": "knowledgearticle_incident",
+      "type": "ManyToMany",
+      "from": "knowledgearticle",
+      "to": "incident",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "product_pricelevel_NN",
+      "name": "product_pricelevel",
+      "type": "ManyToMany",
+      "from": "product",
+      "to": "pricelevel",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "con_dealdeskreview_con_salesplaybook_NN",
+      "name": "con_dealdeskreview_con_salesplaybook",
+      "type": "ManyToMany",
+      "from": "con_dealdeskreview",
+      "to": "con_salesplaybook",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoSales"
+    },
+    {
+      "id": "con_casedeflection_con_escalation_NN",
+      "name": "con_casedeflection_con_escalation",
+      "type": "ManyToMany",
+      "from": "con_casedeflection",
+      "to": "con_escalation",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoCustomerService"
+    },
+    {
+      "id": "con_safetyinspection_con_slapenaltyrule_NN",
+      "name": "con_safetyinspection_con_slapenaltyrule",
+      "type": "ManyToMany",
+      "from": "con_safetyinspection",
+      "to": "con_slapenaltyrule",
+      "lookupField": null,
       "cascadeDelete": "RemoveLink",
       "description": null,
       "solution": "ContosoFieldService"
+    },
+    {
+      "id": "con_projecthealthreview_con_resourcerequest_NN",
+      "name": "con_projecthealthreview_con_resourcerequest",
+      "type": "ManyToMany",
+      "from": "con_projecthealthreview",
+      "to": "con_resourcerequest",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoProjectOperations"
+    },
+    {
+      "id": "con_campaignbrief_con_legalfootertemplate_NN",
+      "name": "con_campaignbrief_con_legalfootertemplate",
+      "type": "ManyToMany",
+      "from": "con_campaignbrief",
+      "to": "con_legalfootertemplate",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoMarketing"
+    },
+    {
+      "id": "con_consentledger_con_matchrule_NN",
+      "name": "con_consentledger_con_matchrule",
+      "type": "ManyToMany",
+      "from": "con_consentledger",
+      "to": "con_matchrule",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoCustomerInsights"
+    },
+    {
+      "id": "con_apapprovalrequest_con_capexrequest_NN",
+      "name": "con_apapprovalrequest_con_capexrequest",
+      "type": "ManyToMany",
+      "from": "con_apapprovalrequest",
+      "to": "con_capexrequest",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoFinance"
+    },
+    {
+      "id": "con_vendor_con_purchaserequisition_NN",
+      "name": "con_vendor_con_purchaserequisition",
+      "type": "ManyToMany",
+      "from": "con_vendor",
+      "to": "con_purchaserequisition",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoSupplyChain"
+    },
+    {
+      "id": "con_clienteling_con_curbsideorder_NN",
+      "name": "con_clienteling_con_curbsideorder",
+      "type": "ManyToMany",
+      "from": "con_clienteling",
+      "to": "con_curbsideorder",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoCommerce"
+    },
+    {
+      "id": "con_onboardingtask_con_performancereview_NN",
+      "name": "con_onboardingtask_con_performancereview",
+      "type": "ManyToMany",
+      "from": "con_onboardingtask",
+      "to": "con_performancereview",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoHumanResources"
+    },
+    {
+      "id": "con_deflectionoutcome_con_agentcoachingnote_NN",
+      "name": "con_deflectionoutcome_con_agentcoachingnote",
+      "type": "ManyToMany",
+      "from": "con_deflectionoutcome",
+      "to": "con_agentcoachingnote",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoContactCenter"
+    },
+    {
+      "id": "con_environmentinventory_con_coecomplianceattestation_NN",
+      "name": "con_environmentinventory_con_coecomplianceattestation",
+      "type": "ManyToMany",
+      "from": "con_environmentinventory",
+      "to": "con_coecomplianceattestation",
+      "lookupField": null,
+      "cascadeDelete": "RemoveLink",
+      "description": null,
+      "solution": "ContosoPlatformGovernance"
     }
   ]
 }

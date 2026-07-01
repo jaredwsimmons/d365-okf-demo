@@ -1,0 +1,1 @@
+{"item":{"id":"plg-disciplinarycaseauditplugin","name":"DisciplinaryCaseAuditPlugin","tags":{},"solution":"ContosoHumanResources","businessLogic":"Writes an immutable audit entry and enforces confidential access checks whenever a disciplinary case is created or its owner is reassigned."},"metadata":{"type":"plugins","id":"plg-disciplinarycaseauditplugin"}}

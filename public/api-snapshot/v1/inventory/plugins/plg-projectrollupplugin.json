@@ -1,0 +1,1 @@
+{"item":{"id":"plg-projectrollupplugin","name":"ProjectRollupPlugin","tags":{},"solution":"ContosoProjectOperations","businessLogic":"On task or actuals change, recalculates project-level effort completed, scheduled finish, and cost/sales rollups; guards against recursion via depth check."},"metadata":{"type":"plugins","id":"plg-projectrollupplugin"}}

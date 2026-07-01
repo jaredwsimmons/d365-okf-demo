@@ -1,0 +1,1 @@
+{"item":{"id":"mob-customerService","name":"Customer Service Offline","tags":{},"entities":["incident","incidentresolution","knowledgearticle","entitlement","entitlementtemplate","sla"],"solution":"ContosoCustomerService","entityCount":6},"metadata":{"type":"mobileOffline","id":"Customer Service Offline"}}

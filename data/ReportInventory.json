@@ -1,13 +1,63 @@
 {
   "reports": [
     {
-      "name": "Work Order Summary",
+      "name": "Sales Summary",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "Customer Service Summary",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "Field Service Summary",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "name": "Technician Utilization",
-      "solution": "ContosoFieldService",
+      "name": "Project Operations Summary",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "Customer Insights - Journeys (Marketing) Summary",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "Customer Insights - Data (CDP) Summary",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "Finance Summary",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "Supply Chain Management Summary",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "Commerce Summary",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "Human Resources Summary",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "Contact Center / Omnichannel Summary",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "Platform & Governance (shared core) Summary",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

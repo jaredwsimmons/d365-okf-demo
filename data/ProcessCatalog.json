@@ -1,60 +1,674 @@
 {
   "l1Processes": [
     {
-      "code": "FS.00",
-      "title": "Service Delivery",
-      "description": "End-to-end delivery of field service work."
+      "code": "SA.00",
+      "title": "Sales",
+      "description": "Lead-to-cash demand and revenue management: capturing demand, qualifying and progressing opportunities, quoting, closing orders, and billing."
     },
     {
-      "code": "SA.00",
-      "title": "Sales to Order",
-      "description": "Turning prospects into booked installation work."
+      "code": "CS.00",
+      "title": "Customer Service Management",
+      "description": "End-to-end management of customer support: case intake and routing, SLA and entitlement governance, knowledge management, resolution, and voice-of-customer feedback."
+    },
+    {
+      "code": "FS.00",
+      "title": "Field Service",
+      "description": "End-to-end management of on-site service delivery: work order intake, scheduling and dispatch, on-site execution, asset servicing, inventory/returns, and agreement-based recurring maintenance."
+    },
+    {
+      "code": "PJ.00",
+      "title": "Project Operations",
+      "description": "End-to-end project-based service delivery: sell, plan, resource, deliver, and bill projects with cost/margin control."
+    },
+    {
+      "code": "MK.00",
+      "title": "Marketing",
+      "description": "End-to-end marketing management: campaign intake, audience segmentation, real-time journey orchestration across channels, event management, lead scoring and handoff, and consent/compliance."
+    },
+    {
+      "code": "CI.00",
+      "title": "Customer Data Platform (Unified Customer Data)",
+      "description": "End-to-end management of customer data ingestion, unification, enrichment, measures/predictions, segmentation, and privacy governance across all Contoso source systems."
+    },
+    {
+      "code": "FI.00",
+      "title": "Finance",
+      "description": "End-to-end financial management for Contoso: general ledger, accounts payable, accounts receivable, budgeting, fixed assets, and tax/compliance, surfaced through Dataverse via dual-write with D365 Finance."
+    },
+    {
+      "code": "SC.00",
+      "title": "Supply Chain Management",
+      "description": "End-to-end plan-to-produce and procure-to-receive operations spanning demand planning, procurement, inventory, warehousing, production visibility, and outbound logistics for Contoso, integrated with D365 Finance & Operations via dual-write and virtual entities."
+    },
+    {
+      "code": "CO.00",
+      "title": "Commerce & Omnichannel Retail",
+      "description": "End-to-end retail commerce operations spanning channel setup, product assortment and pricing, in-store and online transaction capture, loyalty and rewards, gift cards, and statement settlement / back-office reconciliation across POS, call center, and e-commerce channels. Built on Dynamics 365 Commerce (F&O runtime) with tables surfaced to Dataverse via dual-write and virtual entities."
+    },
+    {
+      "code": "HR.00",
+      "title": "Human Resources",
+      "description": "Manage the workforce lifecycle at Contoso from hire to retire — organizational structure, employment, compensation, leave and absence, performance, and employee relations across all legal entities."
+    },
+    {
+      "code": "CC.00",
+      "title": "Contact Center / Omnichannel Engagement",
+      "description": "End-to-end management of omnichannel customer interactions from channel entry through routing, agent handling, and post-interaction quality and cost governance."
+    },
+    {
+      "code": "PL.00",
+      "title": "Platform & Governance",
+      "description": "Cross-cutting Center-of-Excellence governance of the Contoso Power Platform / Dataverse estate: environment lifecycle, ALM, security, data protection and maker compliance."
     }
   ],
   "l2Processes": [
     {
-      "code": "FS.10",
-      "title": "Schedule & Dispatch",
-      "description": "Plan and route work orders to technicians.",
-      "parentL1Code": "FS.00"
-    },
-    {
-      "code": "FS.20",
-      "title": "Execute Work Order",
-      "description": "Perform the on-site service visit.",
-      "parentL1Code": "FS.00"
-    },
-    {
-      "code": "FS.30",
-      "title": "Invoice & Close",
-      "description": "Bill the customer and close out the job.",
-      "parentL1Code": "FS.00"
-    },
-    {
-      "code": "SA.10",
-      "title": "Lead to Quote",
-      "description": "Qualify a lead and produce a priced quote.",
+      "code": "SA.01",
+      "title": "Lead Management",
+      "description": "Capture, score, route, and qualify inbound and marketing-sourced leads.",
       "parentL1Code": "SA.00"
     },
     {
-      "code": "SA.20",
-      "title": "Quote to Order",
-      "description": "Convert an accepted quote into an installation project.",
+      "code": "SA.02",
+      "title": "Opportunity Management",
+      "description": "Progress qualified opportunities through the sales stages with playbook guidance and competitor tracking.",
       "parentL1Code": "SA.00"
+    },
+    {
+      "code": "SA.03",
+      "title": "Quote & Order Management",
+      "description": "Configure pricing, obtain deal-desk approval, generate quotes, and convert to orders and invoices.",
+      "parentL1Code": "SA.00"
+    },
+    {
+      "code": "SA.04",
+      "title": "Sales Performance Management",
+      "description": "Set goals and territories and measure attainment across the sales organization.",
+      "parentL1Code": "SA.00"
+    },
+    {
+      "code": "CS.10",
+      "title": "Case Intake & Routing",
+      "description": "Multichannel case capture, entitlement matching, queue assignment, and SLA application.",
+      "parentL1Code": "CS.00"
+    },
+    {
+      "code": "CS.20",
+      "title": "Case Resolution & Escalation",
+      "description": "Investigation, knowledge-assisted resolution, escalation handling, and case closure.",
+      "parentL1Code": "CS.00"
+    },
+    {
+      "code": "CS.30",
+      "title": "Knowledge Management",
+      "description": "Authoring, reviewing, publishing, and retiring knowledge articles for agents and self-service.",
+      "parentL1Code": "CS.00"
+    },
+    {
+      "code": "CS.40",
+      "title": "Voice of Customer & Continuous Improvement",
+      "description": "CSAT/NPS survey distribution, sentiment analysis, and service quality reporting.",
+      "parentL1Code": "CS.00"
+    },
+    {
+      "code": "FS.01",
+      "title": "Work Order Management",
+      "description": "Create, estimate, and close work orders from incidents, agreements, or IoT alerts.",
+      "parentL1Code": "FS.00"
+    },
+    {
+      "code": "FS.02",
+      "title": "Scheduling & Dispatch",
+      "description": "Requirement generation, schedule board, RSO optimization, and booking of resources.",
+      "parentL1Code": "FS.00"
+    },
+    {
+      "code": "FS.03",
+      "title": "Asset & Agreement Management",
+      "description": "Customer asset servicing history and recurring maintenance agreements.",
+      "parentL1Code": "FS.00"
+    },
+    {
+      "code": "FS.04",
+      "title": "Inventory, Returns & Costing",
+      "description": "Truck stock, warehouse inventory, RMAs, and time-entry based costing.",
+      "parentL1Code": "FS.00"
+    },
+    {
+      "code": "PJ.01",
+      "title": "Sell & Estimate",
+      "description": "Opportunity-to-quote estimating, project contract creation, and contract line setup.",
+      "parentL1Code": "PJ.00"
+    },
+    {
+      "code": "PJ.02",
+      "title": "Plan & Resource",
+      "description": "Work breakdown scheduling, team building, and resource fulfillment.",
+      "parentL1Code": "PJ.00"
+    },
+    {
+      "code": "PJ.03",
+      "title": "Deliver & Capture",
+      "description": "Execution, time and expense capture, and project health governance.",
+      "parentL1Code": "PJ.00"
+    },
+    {
+      "code": "PJ.04",
+      "title": "Bill & Recognize",
+      "description": "Actuals generation, invoicing, and revenue/cost recognition to Finance.",
+      "parentL1Code": "PJ.00"
+    },
+    {
+      "code": "MK.01",
+      "title": "Campaign Planning & Intake",
+      "description": "Capture campaign briefs, secure budget and brand/legal approvals, and stage work for launch.",
+      "parentL1Code": "MK.00"
+    },
+    {
+      "code": "MK.02",
+      "title": "Audience & Journey Orchestration",
+      "description": "Build segments and triggers, author channel content, and run real-time customer journeys.",
+      "parentL1Code": "MK.00"
+    },
+    {
+      "code": "MK.03",
+      "title": "Event Management",
+      "description": "Plan events, manage registrations, and drive attendance journeys.",
+      "parentL1Code": "MK.00"
+    },
+    {
+      "code": "MK.04",
+      "title": "Lead Management & Consent",
+      "description": "Score leads, hand off sales-ready leads, and govern channel consent and marketability.",
+      "parentL1Code": "MK.00"
+    },
+    {
+      "code": "CI.01",
+      "title": "Data Ingestion & Onboarding",
+      "description": "Register data sources, map entities, assign semantic types, and monitor refresh health.",
+      "parentL1Code": "CI.00"
+    },
+    {
+      "code": "CI.02",
+      "title": "Identity Unification (Match & Merge)",
+      "description": "Apply match rules to resolve identities into golden unified customer profiles.",
+      "parentL1Code": "CI.00"
+    },
+    {
+      "code": "CI.03",
+      "title": "Insights - Measures, Predictions & Segments",
+      "description": "Author measures, run ML predictions, and build activatable segments.",
+      "parentL1Code": "CI.00"
+    },
+    {
+      "code": "CI.04",
+      "title": "Consent & Privacy Governance",
+      "description": "Manage consent, DSR requests, and compliance auditing over unified data.",
+      "parentL1Code": "CI.00"
+    },
+    {
+      "code": "FI.01",
+      "title": "General Ledger & Close",
+      "description": "Chart of accounts, journal posting, financial dimensions, and period-end close.",
+      "parentL1Code": "FI.00"
+    },
+    {
+      "code": "FI.02",
+      "title": "Accounts Payable",
+      "description": "Vendor invoice capture, multi-tier approval, and payment posting.",
+      "parentL1Code": "FI.00"
+    },
+    {
+      "code": "FI.03",
+      "title": "Accounts Receivable & Collections",
+      "description": "Customer payments, credit management, and dunning/collections.",
+      "parentL1Code": "FI.00"
+    },
+    {
+      "code": "FI.04",
+      "title": "Budgeting & Fixed Assets",
+      "description": "Budget register control, capex requests, and fixed-asset lifecycle.",
+      "parentL1Code": "FI.00"
+    },
+    {
+      "code": "SC.10",
+      "title": "Demand Planning & Forecasting",
+      "description": "Generate and reconcile demand forecasts, apply DDMRP buffers, and feed F&O master planning.",
+      "parentL1Code": "SC.00"
+    },
+    {
+      "code": "SC.20",
+      "title": "Procure to Receive",
+      "description": "Requisition intake, vendor selection, purchase order creation in F&O, and goods receipt.",
+      "parentL1Code": "SC.00"
+    },
+    {
+      "code": "SC.30",
+      "title": "Inventory & Warehouse Management",
+      "description": "Cycle counting, inventory adjustments, and warehouse operations synchronized with F&O WHS.",
+      "parentL1Code": "SC.00"
+    },
+    {
+      "code": "SC.40",
+      "title": "Outbound Logistics & Fulfillment",
+      "description": "Shipment creation, carrier assignment, tracking, and delivery confirmation against sales orders.",
+      "parentL1Code": "SC.00"
+    },
+    {
+      "code": "SC.50",
+      "title": "Production Visibility",
+      "description": "Surface F&O production orders and BOM component data for shop-floor status monitoring and engineering-change review.",
+      "parentL1Code": "SC.00"
+    },
+    {
+      "code": "CO.01",
+      "title": "Channel & Store Management",
+      "description": "Configure retail channels (stores, online, call center), terminals/registers, channel profiles, and functionality profiles that drive POS behavior and Commerce Scale Unit connectivity.",
+      "parentL1Code": "CO.00"
+    },
+    {
+      "code": "CO.02",
+      "title": "Assortment, Pricing & Promotions",
+      "description": "Manage catalog assortments, price groups, trade agreements, discounts and promotional pricing rules distributed to channels via channel data publish (job 1070).",
+      "parentL1Code": "CO.00"
+    },
+    {
+      "code": "CO.03",
+      "title": "Transaction Capture & Settlement",
+      "description": "Capture retail sales transactions and tender lines at the point of sale, then aggregate into statements, post, and reconcile to finance.",
+      "parentL1Code": "CO.00"
+    },
+    {
+      "code": "CO.04",
+      "title": "Loyalty & Customer Engagement",
+      "description": "Enroll customers into loyalty programs, issue loyalty and gift cards, accrue and redeem reward points across channels.",
+      "parentL1Code": "CO.00"
+    },
+    {
+      "code": "HR.01",
+      "title": "Organization & Position Management",
+      "description": "Maintain departments, jobs, and positions and the reporting hierarchy that workers are assigned to.",
+      "parentL1Code": "HR.00"
+    },
+    {
+      "code": "HR.02",
+      "title": "Hire to Onboard",
+      "description": "Recruit, hire, and onboard new workers including checklist orchestration and system provisioning.",
+      "parentL1Code": "HR.00"
+    },
+    {
+      "code": "HR.03",
+      "title": "Time & Absence Management",
+      "description": "Enroll workers in leave plans and process leave requests, approvals, and balances.",
+      "parentL1Code": "HR.00"
+    },
+    {
+      "code": "HR.04",
+      "title": "Performance & Compensation",
+      "description": "Run performance review cycles and manage fixed/variable compensation and merit planning.",
+      "parentL1Code": "HR.00"
+    },
+    {
+      "code": "HR.05",
+      "title": "Employee Relations",
+      "description": "Manage grievances and disciplinary cases with confidential, audited access restricted to ER specialists.",
+      "parentL1Code": "HR.00"
+    },
+    {
+      "code": "CC.10",
+      "title": "Channel & Routing Configuration",
+      "description": "Configure channels, work streams, queues, presence, and routing rules that direct conversations to the right agent.",
+      "parentL1Code": "CC.00"
+    },
+    {
+      "code": "CC.20",
+      "title": "Conversation Handling",
+      "description": "Live agent handling of conversations across sessions including consult, transfer, and wrap-up.",
+      "parentL1Code": "CC.00"
+    },
+    {
+      "code": "CC.30",
+      "title": "Deflection & Automation",
+      "description": "Bot/Copilot self-service containment and escalation from automated to agent channels.",
+      "parentL1Code": "CC.00"
+    },
+    {
+      "code": "CC.40",
+      "title": "Quality & Workforce Governance",
+      "description": "Sentiment monitoring, agent adherence, coaching/calibration, and channel cost governance.",
+      "parentL1Code": "CC.00"
+    },
+    {
+      "code": "PL.01",
+      "title": "Environment & Capacity Management",
+      "description": "Provision, quarantine and decommission environments; monitor capacity and DLP policy assignment.",
+      "parentL1Code": "PL.00"
+    },
+    {
+      "code": "PL.02",
+      "title": "Application Lifecycle Management (ALM)",
+      "description": "Manage solutions, publishers, connection references and environment variables across dev/test/prod.",
+      "parentL1Code": "PL.00"
+    },
+    {
+      "code": "PL.03",
+      "title": "Security & Access Governance",
+      "description": "Administer business units, teams, security roles and field security profiles under least-privilege.",
+      "parentL1Code": "PL.00"
+    },
+    {
+      "code": "PL.04",
+      "title": "Data Protection & Compliance",
+      "description": "Maintain the data processing register, consent, sensitivity classification and maker attestations.",
+      "parentL1Code": "PL.00"
     }
   ],
   "l3Processes": [
     {
-      "code": "FS.21",
-      "title": "Perform Inspection",
-      "description": "Capture checklist outcomes during the visit.",
-      "parentL2Code": "FS.20"
+      "code": "SA.01.01",
+      "title": "Lead Capture & Scoring",
+      "description": "Ingest leads from web/campaign sources and apply Contoso lead scoring.",
+      "parentL2Code": "SA.01"
     },
     {
-      "code": "FS.22",
-      "title": "Record Parts Used",
-      "description": "Log inventory consumed against the work order.",
-      "parentL2Code": "FS.20"
+      "code": "SA.01.02",
+      "title": "Lead Qualification",
+      "description": "Qualify leads and convert to opportunity via the business process flow.",
+      "parentL2Code": "SA.01"
+    },
+    {
+      "code": "SA.02.01",
+      "title": "Opportunity Progression",
+      "description": "Advance opportunities through the Qualify/Develop/Propose/Close stages.",
+      "parentL2Code": "SA.02"
+    },
+    {
+      "code": "SA.03.01",
+      "title": "Deal Desk Approval",
+      "description": "Route non-standard discounts through deal-desk review before quoting.",
+      "parentL2Code": "SA.03"
+    },
+    {
+      "code": "SA.03.02",
+      "title": "Order & Invoice Fulfillment",
+      "description": "Convert won quotes to orders and invoices with F&O settlement visibility.",
+      "parentL2Code": "SA.03"
+    },
+    {
+      "code": "CS.10.01",
+      "title": "Multichannel Case Capture",
+      "description": "Create cases from phone, email, web, chat, and Omnichannel sessions.",
+      "parentL2Code": "CS.10"
+    },
+    {
+      "code": "CS.10.02",
+      "title": "Entitlement & SLA Application",
+      "description": "Match customer to entitlement, decrement terms, and apply the governing SLA.",
+      "parentL2Code": "CS.10"
+    },
+    {
+      "code": "CS.20.01",
+      "title": "Tiered Escalation Handling",
+      "description": "Escalate complex or SLA-at-risk cases to tier-2/3 and notify management.",
+      "parentL2Code": "CS.20"
+    },
+    {
+      "code": "CS.30.01",
+      "title": "Article Review & Publish",
+      "description": "Compliance review, versioning, and publishing of knowledge articles.",
+      "parentL2Code": "CS.30"
+    },
+    {
+      "code": "FS.01.01",
+      "title": "Work Order Intake & Triage",
+      "description": "Capture the problem via incident types and prioritize.",
+      "parentL2Code": "FS.01"
+    },
+    {
+      "code": "FS.01.02",
+      "title": "Estimate & Quote",
+      "description": "Add products/services and price the work order.",
+      "parentL2Code": "FS.01"
+    },
+    {
+      "code": "FS.02.01",
+      "title": "Resource Requirement & Optimization",
+      "description": "Generate requirements and run Resource Scheduling Optimization.",
+      "parentL2Code": "FS.02"
+    },
+    {
+      "code": "FS.03.01",
+      "title": "Recurring Maintenance Generation",
+      "description": "Agreement booking setups auto-create scheduled maintenance work orders.",
+      "parentL2Code": "FS.03"
+    },
+    {
+      "code": "PJ.02.01",
+      "title": "Build Project Schedule",
+      "description": "Author WBS tasks, dependencies, and effort estimates.",
+      "parentL2Code": "PJ.02"
+    },
+    {
+      "code": "PJ.02.02",
+      "title": "Fulfill Staffing Requests",
+      "description": "Convert generic requirements to booked resources via the resourcing desk.",
+      "parentL2Code": "PJ.02"
+    },
+    {
+      "code": "PJ.03.01",
+      "title": "Capture Time & Expense",
+      "description": "Submit, approve, and post resource time and expenses to actuals.",
+      "parentL2Code": "PJ.03"
+    },
+    {
+      "code": "PJ.04.01",
+      "title": "Generate Project Invoice",
+      "description": "Produce invoices from confirmed actuals and contract billing schedules.",
+      "parentL2Code": "PJ.04"
+    },
+    {
+      "code": "MK.02.01",
+      "title": "Segment Building",
+      "description": "Define behavioral/demographic segments and static lists targeting contacts and leads.",
+      "parentL2Code": "MK.02"
+    },
+    {
+      "code": "MK.02.02",
+      "title": "Journey Authoring & Publish",
+      "description": "Configure triggers, steps, and channels, then publish and monitor real-time journeys.",
+      "parentL2Code": "MK.02"
+    },
+    {
+      "code": "MK.04.01",
+      "title": "Lead Scoring & Handoff",
+      "description": "Apply scoring models and hand sales-ready leads to sales routing.",
+      "parentL2Code": "MK.04"
+    },
+    {
+      "code": "MK.04.02",
+      "title": "Consent & Preference Management",
+      "description": "Maintain contact point consent and suppression across channels.",
+      "parentL2Code": "MK.04"
+    },
+    {
+      "code": "CI.01.01",
+      "title": "Register & Configure Data Source",
+      "description": "Onboard a new source with connection and refresh schedule.",
+      "parentL2Code": "CI.01"
+    },
+    {
+      "code": "CI.01.02",
+      "title": "Map Entities & Semantic Types",
+      "description": "Map source attributes to CI-Data model and semantic types.",
+      "parentL2Code": "CI.01"
+    },
+    {
+      "code": "CI.02.01",
+      "title": "Author & Version Match Rules",
+      "description": "Define deterministic/fuzzy match-rule overrides.",
+      "parentL2Code": "CI.02"
+    },
+    {
+      "code": "CI.03.01",
+      "title": "Build & Activate Segment",
+      "description": "Define audience criteria, verify consent, and export to channels.",
+      "parentL2Code": "CI.03"
+    },
+    {
+      "code": "CI.04.01",
+      "title": "Process DSR Request",
+      "description": "Handle data-subject delete/export requests with propagation.",
+      "parentL2Code": "CI.04"
+    },
+    {
+      "code": "FI.02.01",
+      "title": "Vendor Invoice Approval Routing",
+      "description": "Route AP approval requests by amount threshold across manager/controller/CFO tiers.",
+      "parentL2Code": "FI.02"
+    },
+    {
+      "code": "FI.03.01",
+      "title": "Credit Risk & Dunning",
+      "description": "Assess credit risk rating and execute dunning escalation on overdue balances.",
+      "parentL2Code": "FI.03"
+    },
+    {
+      "code": "FI.04.01",
+      "title": "Capex to Asset Provisioning",
+      "description": "Budget-check capex requests and provision approved fixed assets.",
+      "parentL2Code": "FI.04"
+    },
+    {
+      "code": "SC.21",
+      "title": "Requisition Approval",
+      "description": "Multi-stage approval of purchase requisitions before PO generation in F&O.",
+      "parentL2Code": "SC.20"
+    },
+    {
+      "code": "SC.22",
+      "title": "Vendor Onboarding & Qualification",
+      "description": "Approve and qualify new suppliers and sync them to the F&O vendor master.",
+      "parentL2Code": "SC.20"
+    },
+    {
+      "code": "SC.31",
+      "title": "Cycle Count Execution",
+      "description": "Mobile cycle-count sessions posting variances to F&O inventory journals after review.",
+      "parentL2Code": "SC.30"
+    },
+    {
+      "code": "SC.41",
+      "title": "Carrier Assignment & Tracking",
+      "description": "Assign carriers and track shipments through delivery with customer notification.",
+      "parentL2Code": "SC.40"
+    },
+    {
+      "code": "CO.01.01",
+      "title": "Store & Terminal Provisioning",
+      "description": "Create retail stores and register POS terminals, bind them to channel and functionality profiles.",
+      "parentL2Code": "CO.01"
+    },
+    {
+      "code": "CO.02.01",
+      "title": "Price & Discount Distribution",
+      "description": "Author pricing rules and discounts, then publish channel data to the Retail Server / Commerce Scale Unit.",
+      "parentL2Code": "CO.02"
+    },
+    {
+      "code": "CO.03.01",
+      "title": "Statement Posting & Reconciliation",
+      "description": "Aggregate retail transactions into statements, calculate, and post to Finance for settlement.",
+      "parentL2Code": "CO.03"
+    },
+    {
+      "code": "CO.04.01",
+      "title": "Loyalty Accrual & Redemption",
+      "description": "Award reward points on qualifying transactions and redeem at tender.",
+      "parentL2Code": "CO.04"
+    },
+    {
+      "code": "HR.02.01",
+      "title": "Worker Creation & Employment Setup",
+      "description": "Create the worker and employment record, assign to a position, and set probation terms.",
+      "parentL2Code": "HR.02"
+    },
+    {
+      "code": "HR.02.02",
+      "title": "Onboarding Checklist Execution",
+      "description": "Generate and complete onboarding tasks, provision accounts, and confirm readiness.",
+      "parentL2Code": "HR.02"
+    },
+    {
+      "code": "HR.03.01",
+      "title": "Leave Request & Approval",
+      "description": "Submit, validate against balances, and approve/reject leave requests through the BPF.",
+      "parentL2Code": "HR.03"
+    },
+    {
+      "code": "HR.04.01",
+      "title": "Performance Review Cycle",
+      "description": "Initiate review cycles, capture ratings and calibration, and feed merit recommendations.",
+      "parentL2Code": "HR.04"
+    },
+    {
+      "code": "HR.05.01",
+      "title": "Disciplinary Case Handling",
+      "description": "Open, investigate, and resolve disciplinary cases with audit logging and restricted owner-level access.",
+      "parentL2Code": "HR.05"
+    },
+    {
+      "code": "CC.21",
+      "title": "Route & Assign Conversation",
+      "description": "Match a conversation to a queue and agent based on capacity, skills, and priority score.",
+      "parentL2Code": "CC.20"
+    },
+    {
+      "code": "CC.22",
+      "title": "Consult & Transfer",
+      "description": "Bring additional participants into a session or hand off the conversation.",
+      "parentL2Code": "CC.20"
+    },
+    {
+      "code": "CC.31",
+      "title": "Bot Containment & Escalation",
+      "description": "Resolve via bot or knowledge deflection; escalate to a live agent with logged outcome.",
+      "parentL2Code": "CC.30"
+    },
+    {
+      "code": "CC.41",
+      "title": "Coaching & Calibration",
+      "description": "Supervisor QA scoring and calibration of coaching notes against sampled conversations.",
+      "parentL2Code": "CC.40"
+    },
+    {
+      "code": "PL.01.01",
+      "title": "Environment Request & Provisioning",
+      "description": "Intake, approval and provisioning of new environments via the onboarding BPF.",
+      "parentL2Code": "PL.01"
+    },
+    {
+      "code": "PL.01.02",
+      "title": "Environment Decommission & Quarantine",
+      "description": "Retire or quarantine orphaned/non-compliant environments.",
+      "parentL2Code": "PL.01"
+    },
+    {
+      "code": "PL.02.01",
+      "title": "Solution Promotion (Dev to Prod)",
+      "description": "Pipeline-driven managed solution import with connection-reference and env-variable binding.",
+      "parentL2Code": "PL.02"
+    },
+    {
+      "code": "PL.03.01",
+      "title": "Role & Privilege Review",
+      "description": "Periodic audit of over-privileged and custom security roles.",
+      "parentL2Code": "PL.03"
+    },
+    {
+      "code": "PL.04.01",
+      "title": "Maker Compliance Attestation",
+      "description": "Recurring app/flow ownership and compliance attestation cycle.",
+      "parentL2Code": "PL.04"
     }
   ]
 }

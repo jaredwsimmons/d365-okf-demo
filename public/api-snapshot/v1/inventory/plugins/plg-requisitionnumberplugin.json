@@ -1,0 +1,1 @@
+{"item":{"id":"plg-requisitionnumberplugin","name":"RequisitionNumberPlugin","tags":{},"solution":"ContosoSupplyChain","businessLogic":"Generates a sequential con_name requisition number (REQ-{yyyy}-{seq}) on create and validates con_estimatedamount against the requester's spend limit."},"metadata":{"type":"plugins","id":"plg-requisitionnumberplugin"}}

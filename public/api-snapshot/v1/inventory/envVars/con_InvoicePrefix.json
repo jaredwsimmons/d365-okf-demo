@@ -1,1 +1,0 @@
-{"item":{"tags":{},"solution":"ContosoCore","schemaName":"con_InvoicePrefix","description":"Prefix stamped onto generated invoice numbers.","displayName":"Invoice Prefix","_relWorkflows":["Generate Invoice on Completion"]},"metadata":{"type":"envVars","id":"con_InvoicePrefix"}}

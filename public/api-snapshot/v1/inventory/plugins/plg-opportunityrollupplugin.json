@@ -1,0 +1,1 @@
+{"item":{"id":"plg-opportunityrollupplugin","name":"OpportunityRollupPlugin","tags":{},"solution":"ContosoSales","businessLogic":"On opportunity product create/update/delete, recalculates opportunity estimatedvalue and line rollups, honoring ispriceoverridden."},"metadata":{"type":"plugins","id":"plg-opportunityrollupplugin"}}

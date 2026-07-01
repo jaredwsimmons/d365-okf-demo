@@ -1,1 +1,0 @@
-{"item":{"name":"AgreementRenewalLogicApp","_type":"logicApp","status":"Active","trigger":"Recurrence — daily","dataFlow":"Dataverse → Dataverse","direction":"Internal","description":"Generates renewal tasks for expiring agreements.","relatedEntity":"con_agreement"},"metadata":{"type":"azure","id":"AgreementRenewalLogicApp"}}

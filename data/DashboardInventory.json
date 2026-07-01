@@ -1,15 +1,75 @@
 {
   "dashboards": [
     {
-      "id": "dash-fs-overview",
+      "id": "dash-sales",
+      "name": "Sales Overview",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "dash-customerService",
+      "name": "Customer Service Overview",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "dash-fieldService",
       "name": "Field Service Overview",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "id": "dash-sales-pipeline",
-      "name": "Sales Pipeline",
-      "solution": "ContosoSales",
+      "id": "dash-projectOperations",
+      "name": "Project Operations Overview",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "dash-customerInsightsJourneys",
+      "name": "Customer Insights - Journeys (Marketing) Overview",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "dash-customerInsightsData",
+      "name": "Customer Insights - Data (CDP) Overview",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "id": "dash-finance",
+      "name": "Finance Overview",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "id": "dash-supplyChainManagement",
+      "name": "Supply Chain Management Overview",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "id": "dash-commerce",
+      "name": "Commerce Overview",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "id": "dash-humanResources",
+      "name": "Human Resources Overview",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "dash-contactCenterOmnichannel",
+      "name": "Contact Center / Omnichannel Overview",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "id": "dash-platformGovernance",
+      "name": "Platform & Governance (shared core) Overview",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

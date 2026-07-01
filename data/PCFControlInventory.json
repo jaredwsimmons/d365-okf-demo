@@ -1,55 +1,476 @@
 {
   "metadata": {
     "generated": "2026-06-26T00:00:00.000Z",
-    "totalControls": 2,
+    "totalControls": 16,
     "summary": {
       "byTechnology": {
-        "React": 2
+        "React": 16
       }
     }
   },
   "controls": [
     {
-      "name": "WorkOrderTimeline",
+      "name": "SalesStageProgressBar",
       "namespace": "Contoso",
       "version": "1.0.0",
-      "displayName": "Work Order Timeline",
-      "description": "Visual timeline of service visits on a work order.",
+      "displayName": "SalesStageProgressBar",
+      "description": "Field control rendering the current sales stage and probability as an interactive progress bar on the opportunity form.",
       "controlType": "field",
-      "technology": "React",
-      "sourcePath": "controls/WorkOrderTimeline",
+      "technology": "PCF (React/Fluent)",
+      "sourcePath": "controls/SalesStageProgressBar",
       "boundProperties": [
-        "con_status"
+        "name"
       ],
       "features": [
         "WebAPI"
       ],
       "externalIntegration": false,
       "deployedTo": [
-        "con_workorder"
+        "opportunity"
+      ],
+      "deployedOn": [
+        {
+          "entity": "opportunity",
+          "form": "frm-opportunity-main",
+          "field": "name"
+        }
+      ],
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_SlaTimerControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "con_SlaTimerControl",
+      "description": "PCF field control rendering a live SLA countdown timer with warning/failure color states bound to the active SLA KPI instance on the case form.",
+      "controlType": "field",
+      "technology": "PCF (React)",
+      "sourcePath": "controls/con_SlaTimerControl",
+      "boundProperties": [
+        "title"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "incident"
+      ],
+      "deployedOn": [
+        {
+          "entity": "incident",
+          "form": "frm-incident-main",
+          "field": "title"
+        }
+      ],
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "ScheduleBoardControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "ScheduleBoardControl",
+      "description": "OOB Field Service schedule board control for drag-and-drop resource booking.",
+      "controlType": "field",
+      "technology": "React/Virtual PCF",
+      "sourcePath": "controls/ScheduleBoardControl",
+      "boundProperties": [
+        "msdyn_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "msdyn_resourcerequirement"
+      ],
+      "deployedOn": [
+        {
+          "entity": "msdyn_resourcerequirement",
+          "form": "frm-msdyn-resourcerequirement-main",
+          "field": "msdyn_name"
+        }
       ],
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "name": "AssetMap",
+      "name": "con_SafetyChecklistControl",
       "namespace": "Contoso",
-      "version": "1.1.0",
-      "displayName": "Asset Map",
-      "description": "Map of customer assets by site location.",
-      "controlType": "dataset",
-      "technology": "React",
-      "sourcePath": "controls/AssetMap",
-      "boundProperties": [],
-      "features": [
-        "WebAPI",
-        "Device"
+      "version": "1.0.0",
+      "displayName": "con_SafetyChecklistControl",
+      "description": "Custom touch-friendly checklist control for technicians to complete safety inspections on mobile.",
+      "controlType": "field",
+      "technology": "PCF (React) + Fluent UI",
+      "sourcePath": "controls/con_SafetyChecklistControl",
+      "boundProperties": [
+        "con_name"
       ],
-      "externalIntegration": true,
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
       "deployedTo": [
-        "con_asset"
+        "con_safetyinspection"
+      ],
+      "deployedOn": [
+        {
+          "entity": "con_safetyinspection",
+          "form": "frm-con-safetyinspection-main",
+          "field": "con_name"
+        }
       ],
       "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_ProjectGanttControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "con_ProjectGanttControl",
+      "description": "Custom Gantt/timeline PCF control rendering the project WBS with drag-to-reschedule on the project schedule grid.",
+      "controlType": "field",
+      "technology": "React / PCF (virtual control)",
+      "sourcePath": "controls/con_ProjectGanttControl",
+      "boundProperties": [
+        "msdyn_subject"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "msdyn_projecttask"
+      ],
+      "deployedOn": [
+        {
+          "entity": "msdyn_projecttask",
+          "form": "frm-msdyn-projecttask-main",
+          "field": "msdyn_subject"
+        }
+      ],
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "ConsentTimelineControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "ConsentTimelineControl",
+      "description": "Field/dataset PCF control rendering a contact's consent history timeline across channels on the contact form.",
+      "controlType": "field",
+      "technology": "PCF (React) + Dataverse Web API",
+      "sourcePath": "controls/ConsentTimelineControl",
+      "boundProperties": [
+        "msdynmkt_contactpoint"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "msdynmkt_contactpointconsent3"
+      ],
+      "deployedOn": [
+        {
+          "entity": "msdynmkt_contactpointconsent3",
+          "form": "frm-msdynmkt-contactpointconsent3-main",
+          "field": "msdynmkt_contactpoint"
+        }
+      ],
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "ProfileTimelineControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "ProfileTimelineControl",
+      "description": "PCF control rendering the unified activity timeline across all sources on the profile form.",
+      "controlType": "field",
+      "technology": "React / Fluent UI",
+      "sourcePath": "controls/ProfileTimelineControl",
+      "boundProperties": [
+        "msdynci_fullname"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "msdynci_customerprofile"
+      ],
+      "deployedOn": [
+        {
+          "entity": "msdynci_customerprofile",
+          "form": "frm-msdynci-customerprofile-main",
+          "field": "msdynci_fullname"
+        }
+      ],
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "ConsentStatusBadge",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "ConsentStatusBadge",
+      "description": "PCF control showing a color-coded consent/DSR status badge with expiry countdown.",
+      "controlType": "field",
+      "technology": "React",
+      "sourcePath": "controls/ConsentStatusBadge",
+      "boundProperties": [
+        "con_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "con_consentledger"
+      ],
+      "deployedOn": [
+        {
+          "entity": "con_consentledger",
+          "form": "frm-con-consentledger-main",
+          "field": "con_name"
+        }
+      ],
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "FinancialDimensionPickerControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "FinancialDimensionPickerControl",
+      "description": "PCF control that renders a cascading financial-dimension combination picker bound to con_dimensioncombination.",
+      "controlType": "field",
+      "technology": "React / PCF (virtual control)",
+      "sourcePath": "controls/FinancialDimensionPickerControl",
+      "boundProperties": [
+        "con_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "con_financialdimensionmap"
+      ],
+      "deployedOn": [
+        {
+          "entity": "con_financialdimensionmap",
+          "form": "frm-con-financialdimensionmap-main",
+          "field": "con_name"
+        }
+      ],
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "InventoryLevelGauge",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "InventoryLevelGauge",
+      "description": "PCF control rendering on-hand vs. safety-stock as a gauge on the product form, sourced from F&O InventSum via a virtual entity.",
+      "controlType": "field",
+      "technology": "React / Fluent UI PCF",
+      "sourcePath": "controls/InventoryLevelGauge",
+      "boundProperties": [
+        "name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "product"
+      ],
+      "deployedOn": [
+        {
+          "entity": "product",
+          "form": "frm-product-main",
+          "field": "name"
+        }
+      ],
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "LoyaltyTierGauge",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "LoyaltyTierGauge",
+      "description": "PCF control rendering a points/tier progress gauge on the loyalty card form.",
+      "controlType": "field",
+      "technology": "PCF (React + Fluent UI)",
+      "sourcePath": "controls/LoyaltyTierGauge",
+      "boundProperties": [
+        "msdyn_cardnumber"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "msdyn_loyaltycard"
+      ],
+      "deployedOn": [
+        {
+          "entity": "msdyn_loyaltycard",
+          "form": "frm-msdyn-loyaltycard-main",
+          "field": "msdyn_cardnumber"
+        }
+      ],
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "StoreMapPicker",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "StoreMapPicker",
+      "description": "PCF control showing the store parking layout for assigning curbside pickup slots.",
+      "controlType": "field",
+      "technology": "PCF (Azure Maps)",
+      "sourcePath": "controls/StoreMapPicker",
+      "boundProperties": [
+        "con_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "con_curbsideorder"
+      ],
+      "deployedOn": [
+        {
+          "entity": "con_curbsideorder",
+          "form": "frm-con-curbsideorder-main",
+          "field": "con_name"
+        }
+      ],
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "OrgChartControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "OrgChartControl",
+      "description": "Position-hierarchy org chart control rendered on the Worker and Position forms using the cdm_reportstoposition self-relationship.",
+      "controlType": "field",
+      "technology": "PCF (React + Fluent UI)",
+      "sourcePath": "controls/OrgChartControl",
+      "boundProperties": [
+        "cdm_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "cdm_position"
+      ],
+      "deployedOn": [
+        {
+          "entity": "cdm_position",
+          "form": "frm-cdm-position-main",
+          "field": "cdm_name"
+        }
+      ],
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "LeaveCalendarControl",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "LeaveCalendarControl",
+      "description": "Team leave calendar control visualizing approved leave requests across a manager's direct reports.",
+      "controlType": "field",
+      "technology": "PCF (React)",
+      "sourcePath": "controls/LeaveCalendarControl",
+      "boundProperties": [
+        "mshr_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "mshr_leaverequest"
+      ],
+      "deployedOn": [
+        {
+          "entity": "mshr_leaverequest",
+          "form": "frm-mshr-leaverequest-main",
+          "field": "mshr_name"
+        }
+      ],
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "AgentPresenceIndicator",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "AgentPresenceIndicator",
+      "description": "Custom PCF control rendering live agent presence with color-coded status on the supervisor dashboard.",
+      "controlType": "field",
+      "technology": "PCF (React)",
+      "sourcePath": "controls/AgentPresenceIndicator",
+      "boundProperties": [
+        "msdyn_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "msdyn_agentstatushistory"
+      ],
+      "deployedOn": [
+        {
+          "entity": "msdyn_agentstatushistory",
+          "form": "frm-msdyn-agentstatushistory-main",
+          "field": "msdyn_name"
+        }
+      ],
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "EnvironmentComplianceHeatmap",
+      "namespace": "Contoso",
+      "version": "1.0.0",
+      "displayName": "EnvironmentComplianceHeatmap",
+      "description": "Dataset PCF control rendering a red/amber/green compliance heatmap of environments on the CoE Command Center dashboard.",
+      "controlType": "field",
+      "technology": "PCF (React + Fluent UI)",
+      "sourcePath": "controls/EnvironmentComplianceHeatmap",
+      "boundProperties": [
+        "con_name"
+      ],
+      "features": [
+        "WebAPI"
+      ],
+      "externalIntegration": false,
+      "deployedTo": [
+        "con_environmentinventory"
+      ],
+      "deployedOn": [
+        {
+          "entity": "con_environmentinventory",
+          "form": "frm-con-environmentinventory-main",
+          "field": "con_name"
+        }
+      ],
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

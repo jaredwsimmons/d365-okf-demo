@@ -1,1 +1,0 @@
-{"item":{"name":"InvoicePdfFunction","_type":"function","status":"Active","purpose":"Document generation","runtime":"dotnet-isolated","trigger":"HTTP","calledBy":"Contoso Field Service","description":"Renders an invoice PDF on demand."},"metadata":{"type":"azure","id":"InvoicePdfFunction"}}

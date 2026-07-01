@@ -1,1 +1,0 @@
-{"item":{"id":"wf-escalate-wo","name":"Escalate Overdue Work Order","tags":{"processCatalogL1":"FS.00 Service Delivery"},"solution":"ContosoFieldService","description":"Notifies the dispatcher when a work order passes its SLA.","primaryEntity":"con_workorder"},"metadata":{"type":"workflows","id":"wf-escalate-wo"}}

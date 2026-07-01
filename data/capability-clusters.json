@@ -1,191 +1,2282 @@
 {
   "capabilities": [
     {
-      "id": "cap-field-service",
-      "name": "Field Service Management",
-      "description": "Scheduling, dispatch, and execution of on-site work.",
-      "componentCount": 6,
+      "id": "cap-sales",
+      "name": "Sales",
+      "description": "Lead-to-cash demand and revenue management: capturing demand, qualifying and progressing opportunities, quoting, closing orders, and billing.",
+      "componentCount": 89,
       "componentsByType": {
-        "entities": 3,
-        "workflows": 2,
-        "forms": 1
+        "entities": 17,
+        "workflows": 6,
+        "forms": 23,
+        "views": 40,
+        "plugins": 3
       },
       "components": [
-        "con_workorder",
-        "con_servicevisit",
-        "con_technician",
-        "Assign Work Order to Technician",
-        "Notify Technician of Visit",
-        "frm-workorder-main"
+        "lead",
+        "opportunity",
+        "opportunityproduct",
+        "quote",
+        "quotedetail",
+        "salesorder",
+        "salesorderdetail",
+        "invoice",
+        "Lead to Opportunity Sales Process",
+        "Contoso Lead Scoring & Routing",
+        "Deal Desk Approval Routing",
+        "Auto-Create Deal Desk Review on Strategic Deal"
       ],
       "subCapabilities": [
         {
-          "name": "Scheduling & Dispatch",
-          "bpc_l3": "FS.10",
-          "functionalArea": "Operations",
-          "componentCount": 3,
+          "name": "Lead Management",
+          "bpc_l3": "SA.01",
+          "functionalArea": "Cross-industry (B2B enterprise sales)",
+          "componentCount": 4,
           "componentsByType": {
-            "entities": 2,
-            "workflows": 1
+            "entities": 3
           },
           "entities": [
-            "con_workorder",
-            "con_technician"
+            "lead",
+            "opportunity",
+            "opportunityproduct"
           ],
           "topKeywords": [
-            "schedule",
-            "dispatch",
-            "route"
+            "lead",
+            "management"
           ],
           "components": [
-            "con_workorder",
-            "con_technician",
-            "Assign Work Order to Technician"
+            "lead",
+            "opportunity",
+            "opportunityproduct"
           ],
           "tertiarySubCapabilities": [
             {
-              "name": "Auto-routing",
+              "name": "Lead Capture & Scoring",
               "componentCount": 1,
               "entities": [
-                "con_workorder"
+                "lead"
               ],
               "topKeywords": [
-                "route",
-                "nearest"
+                "lead",
+                "capture"
               ],
               "components": [
-                "Assign Work Order to Technician"
+                "lead"
+              ]
+            },
+            {
+              "name": "Lead Qualification",
+              "componentCount": 1,
+              "entities": [
+                "lead"
+              ],
+              "topKeywords": [
+                "lead",
+                "qualification"
+              ],
+              "components": [
+                "lead"
               ]
             }
           ]
         },
         {
-          "name": "Visit Execution",
-          "bpc_l3": "FS.20",
-          "functionalArea": "Operations",
-          "componentCount": 2,
+          "name": "Opportunity Management",
+          "bpc_l3": "SA.02",
+          "functionalArea": "Cross-industry (B2B enterprise sales)",
+          "componentCount": 4,
           "componentsByType": {
-            "entities": 2
+            "entities": 3
           },
           "entities": [
-            "con_servicevisit",
-            "con_inspection"
+            "opportunityproduct",
+            "quote",
+            "quotedetail"
           ],
           "topKeywords": [
-            "visit",
-            "inspection"
+            "opportunity",
+            "management"
           ],
           "components": [
-            "con_servicevisit",
-            "con_inspection"
+            "opportunityproduct",
+            "quote",
+            "quotedetail"
           ],
-          "tertiarySubCapabilities": []
-        }
-      ]
-    },
-    {
-      "id": "cap-asset-lifecycle",
-      "name": "Asset Lifecycle",
-      "description": "Tracking customer equipment from install through inspection.",
-      "componentCount": 3,
-      "componentsByType": {
-        "entities": 2,
-        "optionSets": 1
-      },
-      "components": [
-        "con_asset",
-        "con_inspection",
-        "con_assettype"
-      ],
-      "subCapabilities": [
+          "tertiarySubCapabilities": [
+            {
+              "name": "Opportunity Progression",
+              "componentCount": 1,
+              "entities": [
+                "lead"
+              ],
+              "topKeywords": [
+                "opportunity",
+                "progression"
+              ],
+              "components": [
+                "lead"
+              ]
+            }
+          ]
+        },
         {
-          "name": "Asset Registry",
-          "functionalArea": "Operations",
-          "componentCount": 2,
+          "name": "Quote & Order Management",
+          "bpc_l3": "SA.03",
+          "functionalArea": "Cross-industry (B2B enterprise sales)",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
           "entities": [
-            "con_asset"
-          ],
-          "topKeywords": [
-            "serial",
-            "install"
-          ],
-          "components": [
-            "con_asset",
-            "AssetValidationPlugin"
-          ],
-          "tertiarySubCapabilities": []
-        }
-      ]
-    },
-    {
-      "id": "cap-agreements",
-      "name": "Service Agreements",
-      "description": "Recurring maintenance contracts and their renewals.",
-      "componentCount": 3,
-      "componentsByType": {
-        "entities": 1,
-        "workflows": 1,
-        "plugins": 1
-      },
-      "components": [
-        "con_agreement",
-        "Send Agreement Renewal Reminder",
-        "AgreementRenewalPlugin"
-      ],
-      "subCapabilities": [
-        {
-          "name": "Renewals",
-          "functionalArea": "Service",
-          "componentCount": 2,
-          "entities": [
-            "con_agreement"
-          ],
-          "topKeywords": [
-            "renew",
-            "reminder",
-            "expire"
-          ],
-          "components": [
-            "Send Agreement Renewal Reminder",
-            "AgreementRenewalPlugin"
-          ],
-          "tertiarySubCapabilities": []
-        }
-      ]
-    },
-    {
-      "id": "cap-quote-order",
-      "name": "Quote to Order",
-      "description": "Pricing proposals and converting them to installation projects.",
-      "componentCount": 3,
-      "componentsByType": {
-        "entities": 2,
-        "workflows": 1
-      },
-      "components": [
-        "con_quote",
-        "con_project",
-        "Quote Follow-up Reminder"
-      ],
-      "subCapabilities": [
-        {
-          "name": "Quoting",
-          "bpc_l3": "SA.10",
-          "functionalArea": "Sales",
-          "componentCount": 2,
-          "entities": [
-            "con_quote"
+            "quotedetail",
+            "salesorder",
+            "salesorderdetail"
           ],
           "topKeywords": [
             "quote",
-            "price",
-            "proposal"
+            "&",
+            "order"
           ],
           "components": [
-            "con_quote",
-            "Quote Follow-up Reminder"
+            "quotedetail",
+            "salesorder",
+            "salesorderdetail"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Deal Desk Approval",
+              "componentCount": 1,
+              "entities": [
+                "lead"
+              ],
+              "topKeywords": [
+                "deal",
+                "desk"
+              ],
+              "components": [
+                "lead"
+              ]
+            },
+            {
+              "name": "Order & Invoice Fulfillment",
+              "componentCount": 1,
+              "entities": [
+                "lead"
+              ],
+              "topKeywords": [
+                "order",
+                "&"
+              ],
+              "components": [
+                "lead"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Sales Performance Management",
+          "bpc_l3": "SA.04",
+          "functionalArea": "Cross-industry (B2B enterprise sales)",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "salesorderdetail",
+            "invoice",
+            "product"
+          ],
+          "topKeywords": [
+            "sales",
+            "performance",
+            "management"
+          ],
+          "components": [
+            "salesorderdetail",
+            "invoice",
+            "product"
           ],
           "tertiarySubCapabilities": []
+        }
+      ]
+    },
+    {
+      "id": "cap-customerService",
+      "name": "Customer Service",
+      "description": "End-to-end management of customer support: case intake and routing, SLA and entitlement governance, knowledge management, resolution, and voice-of-customer feedback.",
+      "componentCount": 85,
+      "componentsByType": {
+        "entities": 16,
+        "workflows": 6,
+        "forms": 22,
+        "views": 38,
+        "plugins": 3
+      },
+      "components": [
+        "incident",
+        "incidentresolution",
+        "knowledgearticle",
+        "entitlement",
+        "entitlementtemplate",
+        "sla",
+        "slaitem",
+        "queue",
+        "Phase to First Response and Resolution",
+        "Auto-Route New Cases to Tier Queue",
+        "Notify Manager on High-Priority Escalation",
+        "Sync CSAT Survey Responses to Service Feedback"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Case Intake & Routing",
+          "bpc_l3": "CS.10",
+          "functionalArea": "Customer Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "incident",
+            "incidentresolution",
+            "knowledgearticle"
+          ],
+          "topKeywords": [
+            "case",
+            "intake",
+            "&"
+          ],
+          "components": [
+            "incident",
+            "incidentresolution",
+            "knowledgearticle"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Multichannel Case Capture",
+              "componentCount": 1,
+              "entities": [
+                "incident"
+              ],
+              "topKeywords": [
+                "multichannel",
+                "case"
+              ],
+              "components": [
+                "incident"
+              ]
+            },
+            {
+              "name": "Entitlement & SLA Application",
+              "componentCount": 1,
+              "entities": [
+                "incident"
+              ],
+              "topKeywords": [
+                "entitlement",
+                "&"
+              ],
+              "components": [
+                "incident"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Case Resolution & Escalation",
+          "bpc_l3": "CS.20",
+          "functionalArea": "Customer Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "knowledgearticle",
+            "entitlement",
+            "entitlementtemplate"
+          ],
+          "topKeywords": [
+            "case",
+            "resolution",
+            "&"
+          ],
+          "components": [
+            "knowledgearticle",
+            "entitlement",
+            "entitlementtemplate"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Tiered Escalation Handling",
+              "componentCount": 1,
+              "entities": [
+                "incident"
+              ],
+              "topKeywords": [
+                "tiered",
+                "escalation"
+              ],
+              "components": [
+                "incident"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Knowledge Management",
+          "bpc_l3": "CS.30",
+          "functionalArea": "Customer Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "entitlementtemplate",
+            "sla",
+            "slaitem"
+          ],
+          "topKeywords": [
+            "knowledge",
+            "management"
+          ],
+          "components": [
+            "entitlementtemplate",
+            "sla",
+            "slaitem"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Article Review & Publish",
+              "componentCount": 1,
+              "entities": [
+                "incident"
+              ],
+              "topKeywords": [
+                "article",
+                "review"
+              ],
+              "components": [
+                "incident"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Voice of Customer & Continuous Improvement",
+          "bpc_l3": "CS.40",
+          "functionalArea": "Customer Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "slaitem",
+            "queue",
+            "queueitem"
+          ],
+          "topKeywords": [
+            "voice",
+            "of",
+            "customer"
+          ],
+          "components": [
+            "slaitem",
+            "queue",
+            "queueitem"
+          ],
+          "tertiarySubCapabilities": []
+        }
+      ]
+    },
+    {
+      "id": "cap-fieldService",
+      "name": "Field Service",
+      "description": "End-to-end management of on-site service delivery: work order intake, scheduling and dispatch, on-site execution, asset servicing, inventory/returns, and agreement-based recurring maintenance.",
+      "componentCount": 85,
+      "componentsByType": {
+        "entities": 15,
+        "workflows": 7,
+        "forms": 22,
+        "views": 37,
+        "plugins": 4
+      },
+      "components": [
+        "msdyn_workorder",
+        "msdyn_workorderproduct",
+        "msdyn_workorderservice",
+        "msdyn_incidenttype",
+        "bookableresource",
+        "bookableresourcebooking",
+        "msdyn_resourcerequirement",
+        "msdyn_customerasset",
+        "Work Order Lifecycle",
+        "Auto-Create Safety Inspection for Hazardous Work Orders",
+        "SLA Breach Risk Escalation",
+        "Agreement Booking Setup Generation"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Work Order Management",
+          "bpc_l3": "FS.01",
+          "functionalArea": "Field Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_workorder",
+            "msdyn_workorderproduct",
+            "msdyn_workorderservice"
+          ],
+          "topKeywords": [
+            "work",
+            "order",
+            "management"
+          ],
+          "components": [
+            "msdyn_workorder",
+            "msdyn_workorderproduct",
+            "msdyn_workorderservice"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Work Order Intake & Triage",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_workorder"
+              ],
+              "topKeywords": [
+                "work",
+                "order"
+              ],
+              "components": [
+                "msdyn_workorder"
+              ]
+            },
+            {
+              "name": "Estimate & Quote",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_workorder"
+              ],
+              "topKeywords": [
+                "estimate",
+                "&"
+              ],
+              "components": [
+                "msdyn_workorder"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Scheduling & Dispatch",
+          "bpc_l3": "FS.02",
+          "functionalArea": "Field Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_workorderservice",
+            "msdyn_incidenttype",
+            "bookableresource"
+          ],
+          "topKeywords": [
+            "scheduling",
+            "&",
+            "dispatch"
+          ],
+          "components": [
+            "msdyn_workorderservice",
+            "msdyn_incidenttype",
+            "bookableresource"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Resource Requirement & Optimization",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_workorder"
+              ],
+              "topKeywords": [
+                "resource",
+                "requirement"
+              ],
+              "components": [
+                "msdyn_workorder"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Asset & Agreement Management",
+          "bpc_l3": "FS.03",
+          "functionalArea": "Field Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "bookableresource",
+            "bookableresourcebooking",
+            "msdyn_resourcerequirement"
+          ],
+          "topKeywords": [
+            "asset",
+            "&",
+            "agreement"
+          ],
+          "components": [
+            "bookableresource",
+            "bookableresourcebooking",
+            "msdyn_resourcerequirement"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Recurring Maintenance Generation",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_workorder"
+              ],
+              "topKeywords": [
+                "recurring",
+                "maintenance"
+              ],
+              "components": [
+                "msdyn_workorder"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inventory, Returns & Costing",
+          "bpc_l3": "FS.04",
+          "functionalArea": "Field Service",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_resourcerequirement",
+            "msdyn_customerasset",
+            "msdyn_rma"
+          ],
+          "topKeywords": [
+            "inventory,",
+            "returns",
+            "&"
+          ],
+          "components": [
+            "msdyn_resourcerequirement",
+            "msdyn_customerasset",
+            "msdyn_rma"
+          ],
+          "tertiarySubCapabilities": []
+        }
+      ]
+    },
+    {
+      "id": "cap-projectOperations",
+      "name": "Project Operations",
+      "description": "End-to-end project-based service delivery: sell, plan, resource, deliver, and bill projects with cost/margin control.",
+      "componentCount": 78,
+      "componentsByType": {
+        "entities": 15,
+        "workflows": 6,
+        "forms": 19,
+        "views": 34,
+        "plugins": 4
+      },
+      "components": [
+        "msdyn_project",
+        "msdyn_projecttask",
+        "msdyn_projectteam",
+        "msdyn_resourceassignment",
+        "msdyn_projectcontract",
+        "msdyn_contractline",
+        "msdyn_estimate",
+        "msdyn_estimateline",
+        "Project Approval Business Process Flow",
+        "Contoso Time Entry Auto-Submit Reminder",
+        "Margin Alert on Actuals Posting",
+        "Staffing Request Fulfillment Routing"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Sell & Estimate",
+          "bpc_l3": "PJ.01",
+          "functionalArea": "Professional Services / Project-Based Business",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_project",
+            "msdyn_projecttask",
+            "msdyn_projectteam"
+          ],
+          "topKeywords": [
+            "sell",
+            "&",
+            "estimate"
+          ],
+          "components": [
+            "msdyn_project",
+            "msdyn_projecttask",
+            "msdyn_projectteam"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Plan & Resource",
+          "bpc_l3": "PJ.02",
+          "functionalArea": "Professional Services / Project-Based Business",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_projectteam",
+            "msdyn_resourceassignment",
+            "msdyn_projectcontract"
+          ],
+          "topKeywords": [
+            "plan",
+            "&",
+            "resource"
+          ],
+          "components": [
+            "msdyn_projectteam",
+            "msdyn_resourceassignment",
+            "msdyn_projectcontract"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Build Project Schedule",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_project"
+              ],
+              "topKeywords": [
+                "build",
+                "project"
+              ],
+              "components": [
+                "msdyn_project"
+              ]
+            },
+            {
+              "name": "Fulfill Staffing Requests",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_project"
+              ],
+              "topKeywords": [
+                "fulfill",
+                "staffing"
+              ],
+              "components": [
+                "msdyn_project"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Deliver & Capture",
+          "bpc_l3": "PJ.03",
+          "functionalArea": "Professional Services / Project-Based Business",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_projectcontract",
+            "msdyn_contractline",
+            "msdyn_estimate"
+          ],
+          "topKeywords": [
+            "deliver",
+            "&",
+            "capture"
+          ],
+          "components": [
+            "msdyn_projectcontract",
+            "msdyn_contractline",
+            "msdyn_estimate"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Capture Time & Expense",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_project"
+              ],
+              "topKeywords": [
+                "capture",
+                "time"
+              ],
+              "components": [
+                "msdyn_project"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bill & Recognize",
+          "bpc_l3": "PJ.04",
+          "functionalArea": "Professional Services / Project-Based Business",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_estimate",
+            "msdyn_estimateline",
+            "msdyn_expense"
+          ],
+          "topKeywords": [
+            "bill",
+            "&",
+            "recognize"
+          ],
+          "components": [
+            "msdyn_estimate",
+            "msdyn_estimateline",
+            "msdyn_expense"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Generate Project Invoice",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_project"
+              ],
+              "topKeywords": [
+                "generate",
+                "project"
+              ],
+              "components": [
+                "msdyn_project"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-customerInsightsJourneys",
+      "name": "Customer Insights - Journeys (Marketing)",
+      "description": "End-to-end marketing management: campaign intake, audience segmentation, real-time journey orchestration across channels, event management, lead scoring and handoff, and consent/compliance.",
+      "componentCount": 79,
+      "componentsByType": {
+        "entities": 14,
+        "workflows": 6,
+        "forms": 21,
+        "views": 35,
+        "plugins": 3
+      },
+      "components": [
+        "msdynmkt_journey",
+        "msdynmkt_segment",
+        "msdynmkt_marketingemail",
+        "msdynmkt_channeltemplate",
+        "msdynmkt_marketingform",
+        "msdynmkt_leadscoringmodel",
+        "contact",
+        "msevtmgt_event",
+        "Sales-Ready Lead Handoff",
+        "Campaign Brief Approval Routing",
+        "Event Registration Confirmation",
+        "Consent Change Suppression Sync"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Campaign Planning & Intake",
+          "bpc_l3": "MK.01",
+          "functionalArea": "Marketing",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynmkt_journey",
+            "msdynmkt_segment",
+            "msdynmkt_marketingemail"
+          ],
+          "topKeywords": [
+            "campaign",
+            "planning",
+            "&"
+          ],
+          "components": [
+            "msdynmkt_journey",
+            "msdynmkt_segment",
+            "msdynmkt_marketingemail"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Audience & Journey Orchestration",
+          "bpc_l3": "MK.02",
+          "functionalArea": "Marketing",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynmkt_marketingemail",
+            "msdynmkt_channeltemplate",
+            "msdynmkt_marketingform"
+          ],
+          "topKeywords": [
+            "audience",
+            "&",
+            "journey"
+          ],
+          "components": [
+            "msdynmkt_marketingemail",
+            "msdynmkt_channeltemplate",
+            "msdynmkt_marketingform"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Segment Building",
+              "componentCount": 1,
+              "entities": [
+                "msdynmkt_journey"
+              ],
+              "topKeywords": [
+                "segment",
+                "building"
+              ],
+              "components": [
+                "msdynmkt_journey"
+              ]
+            },
+            {
+              "name": "Journey Authoring & Publish",
+              "componentCount": 1,
+              "entities": [
+                "msdynmkt_journey"
+              ],
+              "topKeywords": [
+                "journey",
+                "authoring"
+              ],
+              "components": [
+                "msdynmkt_journey"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Event Management",
+          "bpc_l3": "MK.03",
+          "functionalArea": "Marketing",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynmkt_marketingform",
+            "msdynmkt_leadscoringmodel",
+            "contact"
+          ],
+          "topKeywords": [
+            "event",
+            "management"
+          ],
+          "components": [
+            "msdynmkt_marketingform",
+            "msdynmkt_leadscoringmodel",
+            "contact"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Lead Management & Consent",
+          "bpc_l3": "MK.04",
+          "functionalArea": "Marketing",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "contact",
+            "msevtmgt_event",
+            "msevtmgt_eventregistration"
+          ],
+          "topKeywords": [
+            "lead",
+            "management",
+            "&"
+          ],
+          "components": [
+            "contact",
+            "msevtmgt_event",
+            "msevtmgt_eventregistration"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Lead Scoring & Handoff",
+              "componentCount": 1,
+              "entities": [
+                "msdynmkt_journey"
+              ],
+              "topKeywords": [
+                "lead",
+                "scoring"
+              ],
+              "components": [
+                "msdynmkt_journey"
+              ]
+            },
+            {
+              "name": "Consent & Preference Management",
+              "componentCount": 1,
+              "entities": [
+                "msdynmkt_journey"
+              ],
+              "topKeywords": [
+                "consent",
+                "&"
+              ],
+              "components": [
+                "msdynmkt_journey"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-customerInsightsData",
+      "name": "Customer Insights - Data (CDP)",
+      "description": "End-to-end management of customer data ingestion, unification, enrichment, measures/predictions, segmentation, and privacy governance across all Contoso source systems.",
+      "componentCount": 77,
+      "componentsByType": {
+        "entities": 14,
+        "workflows": 6,
+        "forms": 20,
+        "views": 34,
+        "plugins": 3
+      },
+      "components": [
+        "msdynci_customerprofile",
+        "msdynci_datasource",
+        "msdynci_entity",
+        "msdynci_measure",
+        "msdynci_segment",
+        "msdynci_prediction",
+        "msdynci_predictionscore",
+        "msdynci_activity",
+        "Sync Churn Prediction to Loyalty Tier",
+        "Consent Verified Guard for Segment Activation",
+        "Data Source Health Alert to Teams",
+        "DSR Delete Propagation"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Data Ingestion & Onboarding",
+          "bpc_l3": "CI.01",
+          "functionalArea": "Customer Data Platform / Unified Profiles",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynci_customerprofile",
+            "msdynci_datasource",
+            "msdynci_entity"
+          ],
+          "topKeywords": [
+            "data",
+            "ingestion",
+            "&"
+          ],
+          "components": [
+            "msdynci_customerprofile",
+            "msdynci_datasource",
+            "msdynci_entity"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Register & Configure Data Source",
+              "componentCount": 1,
+              "entities": [
+                "msdynci_customerprofile"
+              ],
+              "topKeywords": [
+                "register",
+                "&"
+              ],
+              "components": [
+                "msdynci_customerprofile"
+              ]
+            },
+            {
+              "name": "Map Entities & Semantic Types",
+              "componentCount": 1,
+              "entities": [
+                "msdynci_customerprofile"
+              ],
+              "topKeywords": [
+                "map",
+                "entities"
+              ],
+              "components": [
+                "msdynci_customerprofile"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Identity Unification (Match & Merge)",
+          "bpc_l3": "CI.02",
+          "functionalArea": "Customer Data Platform / Unified Profiles",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynci_entity",
+            "msdynci_measure",
+            "msdynci_segment"
+          ],
+          "topKeywords": [
+            "identity",
+            "unification",
+            "(match"
+          ],
+          "components": [
+            "msdynci_entity",
+            "msdynci_measure",
+            "msdynci_segment"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Author & Version Match Rules",
+              "componentCount": 1,
+              "entities": [
+                "msdynci_customerprofile"
+              ],
+              "topKeywords": [
+                "author",
+                "&"
+              ],
+              "components": [
+                "msdynci_customerprofile"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Insights - Measures, Predictions & Segments",
+          "bpc_l3": "CI.03",
+          "functionalArea": "Customer Data Platform / Unified Profiles",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynci_segment",
+            "msdynci_prediction",
+            "msdynci_predictionscore"
+          ],
+          "topKeywords": [
+            "insights",
+            "-",
+            "measures,"
+          ],
+          "components": [
+            "msdynci_segment",
+            "msdynci_prediction",
+            "msdynci_predictionscore"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Build & Activate Segment",
+              "componentCount": 1,
+              "entities": [
+                "msdynci_customerprofile"
+              ],
+              "topKeywords": [
+                "build",
+                "&"
+              ],
+              "components": [
+                "msdynci_customerprofile"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Consent & Privacy Governance",
+          "bpc_l3": "CI.04",
+          "functionalArea": "Customer Data Platform / Unified Profiles",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdynci_predictionscore",
+            "msdynci_activity",
+            "msdynci_relationship"
+          ],
+          "topKeywords": [
+            "consent",
+            "&",
+            "privacy"
+          ],
+          "components": [
+            "msdynci_predictionscore",
+            "msdynci_activity",
+            "msdynci_relationship"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Process DSR Request",
+              "componentCount": 1,
+              "entities": [
+                "msdynci_customerprofile"
+              ],
+              "topKeywords": [
+                "process",
+                "dsr"
+              ],
+              "components": [
+                "msdynci_customerprofile"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-finance",
+      "name": "Finance",
+      "description": "End-to-end financial management for Contoso: general ledger, accounts payable, accounts receivable, budgeting, fixed assets, and tax/compliance, surfaced through Dataverse via dual-write with D365 Finance.",
+      "componentCount": 81,
+      "componentsByType": {
+        "entities": 15,
+        "workflows": 6,
+        "forms": 21,
+        "views": 36,
+        "plugins": 3
+      },
+      "components": [
+        "mserp_mainaccount",
+        "mserp_ledger",
+        "mserp_generaljournalaccountentry",
+        "mserp_vendinvoiceheader",
+        "mserp_custpaymentjournalline",
+        "mserp_budgetregisterentry",
+        "mserp_fixedasset",
+        "mserp_taxtransaction",
+        "AP Invoice Approval BPF",
+        "Capex Budget Check Flow",
+        "Dunning Escalation Async Workflow",
+        "Credit Risk Rating Business Rule"
+      ],
+      "subCapabilities": [
+        {
+          "name": "General Ledger & Close",
+          "bpc_l3": "FI.01",
+          "functionalArea": "Finance & Operations (Financials)",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "mserp_mainaccount",
+            "mserp_ledger",
+            "mserp_generaljournalaccountentry"
+          ],
+          "topKeywords": [
+            "general",
+            "ledger",
+            "&"
+          ],
+          "components": [
+            "mserp_mainaccount",
+            "mserp_ledger",
+            "mserp_generaljournalaccountentry"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Accounts Payable",
+          "bpc_l3": "FI.02",
+          "functionalArea": "Finance & Operations (Financials)",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "mserp_generaljournalaccountentry",
+            "mserp_vendinvoiceheader",
+            "mserp_custpaymentjournalline"
+          ],
+          "topKeywords": [
+            "accounts",
+            "payable"
+          ],
+          "components": [
+            "mserp_generaljournalaccountentry",
+            "mserp_vendinvoiceheader",
+            "mserp_custpaymentjournalline"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Vendor Invoice Approval Routing",
+              "componentCount": 1,
+              "entities": [
+                "mserp_mainaccount"
+              ],
+              "topKeywords": [
+                "vendor",
+                "invoice"
+              ],
+              "components": [
+                "mserp_mainaccount"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Accounts Receivable & Collections",
+          "bpc_l3": "FI.03",
+          "functionalArea": "Finance & Operations (Financials)",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "mserp_custpaymentjournalline",
+            "mserp_budgetregisterentry",
+            "mserp_fixedasset"
+          ],
+          "topKeywords": [
+            "accounts",
+            "receivable",
+            "&"
+          ],
+          "components": [
+            "mserp_custpaymentjournalline",
+            "mserp_budgetregisterentry",
+            "mserp_fixedasset"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Credit Risk & Dunning",
+              "componentCount": 1,
+              "entities": [
+                "mserp_mainaccount"
+              ],
+              "topKeywords": [
+                "credit",
+                "risk"
+              ],
+              "components": [
+                "mserp_mainaccount"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Budgeting & Fixed Assets",
+          "bpc_l3": "FI.04",
+          "functionalArea": "Finance & Operations (Financials)",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "mserp_fixedasset",
+            "mserp_taxtransaction",
+            "cdm_company"
+          ],
+          "topKeywords": [
+            "budgeting",
+            "&",
+            "fixed"
+          ],
+          "components": [
+            "mserp_fixedasset",
+            "mserp_taxtransaction",
+            "cdm_company"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Capex to Asset Provisioning",
+              "componentCount": 1,
+              "entities": [
+                "mserp_mainaccount"
+              ],
+              "topKeywords": [
+                "capex",
+                "to"
+              ],
+              "components": [
+                "mserp_mainaccount"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-supplyChainManagement",
+      "name": "Supply Chain Management",
+      "description": "End-to-end plan-to-produce and procure-to-receive operations spanning demand planning, procurement, inventory, warehousing, production visibility, and outbound logistics for Contoso, integrated with D365 Finance & Operations via dual-write and virtual entities.",
+      "componentCount": 75,
+      "componentsByType": {
+        "entities": 13,
+        "workflows": 6,
+        "forms": 20,
+        "views": 33,
+        "plugins": 3
+      },
+      "components": [
+        "msdyn_releasedproduct",
+        "msdyn_inventwarehouse",
+        "msdyn_purchaseorderheader",
+        "msdyn_purchaseorderline",
+        "msdyn_salesorderline",
+        "con_vendor",
+        "con_purchaserequisition",
+        "con_inventorycount",
+        "Requisition Approval BPF",
+        "Auto-Set ABC Classification",
+        "Generate PO in F&O on Approval",
+        "Shipment Delivery Notification"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Demand Planning & Forecasting",
+          "bpc_l3": "SC.10",
+          "functionalArea": "Manufacturing & Distribution",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_releasedproduct",
+            "msdyn_inventwarehouse",
+            "msdyn_purchaseorderheader"
+          ],
+          "topKeywords": [
+            "demand",
+            "planning",
+            "&"
+          ],
+          "components": [
+            "msdyn_releasedproduct",
+            "msdyn_inventwarehouse",
+            "msdyn_purchaseorderheader"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Procure to Receive",
+          "bpc_l3": "SC.20",
+          "functionalArea": "Manufacturing & Distribution",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_purchaseorderheader",
+            "msdyn_purchaseorderline",
+            "msdyn_salesorderline"
+          ],
+          "topKeywords": [
+            "procure",
+            "to",
+            "receive"
+          ],
+          "components": [
+            "msdyn_purchaseorderheader",
+            "msdyn_purchaseorderline",
+            "msdyn_salesorderline"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Requisition Approval",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_releasedproduct"
+              ],
+              "topKeywords": [
+                "requisition",
+                "approval"
+              ],
+              "components": [
+                "msdyn_releasedproduct"
+              ]
+            },
+            {
+              "name": "Vendor Onboarding & Qualification",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_releasedproduct"
+              ],
+              "topKeywords": [
+                "vendor",
+                "onboarding"
+              ],
+              "components": [
+                "msdyn_releasedproduct"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Inventory & Warehouse Management",
+          "bpc_l3": "SC.30",
+          "functionalArea": "Manufacturing & Distribution",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_salesorderline",
+            "con_vendor",
+            "con_purchaserequisition"
+          ],
+          "topKeywords": [
+            "inventory",
+            "&",
+            "warehouse"
+          ],
+          "components": [
+            "msdyn_salesorderline",
+            "con_vendor",
+            "con_purchaserequisition"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Cycle Count Execution",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_releasedproduct"
+              ],
+              "topKeywords": [
+                "cycle",
+                "count"
+              ],
+              "components": [
+                "msdyn_releasedproduct"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Outbound Logistics & Fulfillment",
+          "bpc_l3": "SC.40",
+          "functionalArea": "Manufacturing & Distribution",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "con_purchaserequisition",
+            "con_inventorycount",
+            "con_shipment"
+          ],
+          "topKeywords": [
+            "outbound",
+            "logistics",
+            "&"
+          ],
+          "components": [
+            "con_purchaserequisition",
+            "con_inventorycount",
+            "con_shipment"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Carrier Assignment & Tracking",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_releasedproduct"
+              ],
+              "topKeywords": [
+                "carrier",
+                "assignment"
+              ],
+              "components": [
+                "msdyn_releasedproduct"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-commerce",
+      "name": "Commerce",
+      "description": "End-to-end retail commerce operations spanning channel setup, product assortment and pricing, in-store and online transaction capture, loyalty and rewards, gift cards, and statement settlement / back-office reconciliation across POS, call center, and e-commerce channels. Built on Dynamics 365 Commerce (F&O runtime) with tables surfaced to Dataverse via dual-write and virtual entities.",
+      "componentCount": 86,
+      "componentsByType": {
+        "entities": 15,
+        "workflows": 7,
+        "forms": 23,
+        "views": 38,
+        "plugins": 3
+      },
+      "components": [
+        "msdyn_retailchannel",
+        "msdyn_retailstore",
+        "msdyn_retailterminal",
+        "msdyn_channelprofile",
+        "msdyn_retailtransaction",
+        "msdyn_retailtransactionsalesline",
+        "msdyn_retailtransactionpaymentline",
+        "msdyn_retailstatement",
+        "Loyalty Points Accrual",
+        "Curbside Handoff Notification",
+        "Price Match Approval",
+        "Statement Posting Guard"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Channel & Store Management",
+          "bpc_l3": "CO.01",
+          "functionalArea": "Retail / Omnichannel Commerce",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_retailchannel",
+            "msdyn_retailstore",
+            "msdyn_retailterminal"
+          ],
+          "topKeywords": [
+            "channel",
+            "&",
+            "store"
+          ],
+          "components": [
+            "msdyn_retailchannel",
+            "msdyn_retailstore",
+            "msdyn_retailterminal"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Store & Terminal Provisioning",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_retailchannel"
+              ],
+              "topKeywords": [
+                "store",
+                "&"
+              ],
+              "components": [
+                "msdyn_retailchannel"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Assortment, Pricing & Promotions",
+          "bpc_l3": "CO.02",
+          "functionalArea": "Retail / Omnichannel Commerce",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_retailterminal",
+            "msdyn_channelprofile",
+            "msdyn_retailtransaction"
+          ],
+          "topKeywords": [
+            "assortment,",
+            "pricing",
+            "&"
+          ],
+          "components": [
+            "msdyn_retailterminal",
+            "msdyn_channelprofile",
+            "msdyn_retailtransaction"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Price & Discount Distribution",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_retailchannel"
+              ],
+              "topKeywords": [
+                "price",
+                "&"
+              ],
+              "components": [
+                "msdyn_retailchannel"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Transaction Capture & Settlement",
+          "bpc_l3": "CO.03",
+          "functionalArea": "Retail / Omnichannel Commerce",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_retailtransaction",
+            "msdyn_retailtransactionsalesline",
+            "msdyn_retailtransactionpaymentline"
+          ],
+          "topKeywords": [
+            "transaction",
+            "capture",
+            "&"
+          ],
+          "components": [
+            "msdyn_retailtransaction",
+            "msdyn_retailtransactionsalesline",
+            "msdyn_retailtransactionpaymentline"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Statement Posting & Reconciliation",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_retailchannel"
+              ],
+              "topKeywords": [
+                "statement",
+                "posting"
+              ],
+              "components": [
+                "msdyn_retailchannel"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Loyalty & Customer Engagement",
+          "bpc_l3": "CO.04",
+          "functionalArea": "Retail / Omnichannel Commerce",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_retailtransactionpaymentline",
+            "msdyn_retailstatement",
+            "msdyn_pricingrule"
+          ],
+          "topKeywords": [
+            "loyalty",
+            "&",
+            "customer"
+          ],
+          "components": [
+            "msdyn_retailtransactionpaymentline",
+            "msdyn_retailstatement",
+            "msdyn_pricingrule"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Loyalty Accrual & Redemption",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_retailchannel"
+              ],
+              "topKeywords": [
+                "loyalty",
+                "accrual"
+              ],
+              "components": [
+                "msdyn_retailchannel"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-humanResources",
+      "name": "Human Resources",
+      "description": "Manage the workforce lifecycle at Contoso from hire to retire — organizational structure, employment, compensation, leave and absence, performance, and employee relations across all legal entities.",
+      "componentCount": 89,
+      "componentsByType": {
+        "entities": 15,
+        "workflows": 7,
+        "forms": 24,
+        "views": 39,
+        "plugins": 4
+      },
+      "components": [
+        "cdm_worker",
+        "cdm_employment",
+        "cdm_position",
+        "cdm_job",
+        "cdm_department",
+        "cdm_fixedcompensation",
+        "mshr_leaverequest",
+        "mshr_leaveenrollment",
+        "Leave Request Approval",
+        "Leave Balance Notification Flow",
+        "New Hire Onboarding Orchestration",
+        "Probation End Reminder"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Organization & Position Management",
+          "bpc_l3": "HR.01",
+          "functionalArea": "Human Resources / Workforce Management",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "cdm_worker",
+            "cdm_employment",
+            "cdm_position"
+          ],
+          "topKeywords": [
+            "organization",
+            "&",
+            "position"
+          ],
+          "components": [
+            "cdm_worker",
+            "cdm_employment",
+            "cdm_position"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Hire to Onboard",
+          "bpc_l3": "HR.02",
+          "functionalArea": "Human Resources / Workforce Management",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "cdm_position",
+            "cdm_job",
+            "cdm_department"
+          ],
+          "topKeywords": [
+            "hire",
+            "to",
+            "onboard"
+          ],
+          "components": [
+            "cdm_position",
+            "cdm_job",
+            "cdm_department"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Worker Creation & Employment Setup",
+              "componentCount": 1,
+              "entities": [
+                "cdm_worker"
+              ],
+              "topKeywords": [
+                "worker",
+                "creation"
+              ],
+              "components": [
+                "cdm_worker"
+              ]
+            },
+            {
+              "name": "Onboarding Checklist Execution",
+              "componentCount": 1,
+              "entities": [
+                "cdm_worker"
+              ],
+              "topKeywords": [
+                "onboarding",
+                "checklist"
+              ],
+              "components": [
+                "cdm_worker"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Time & Absence Management",
+          "bpc_l3": "HR.03",
+          "functionalArea": "Human Resources / Workforce Management",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "cdm_department",
+            "cdm_fixedcompensation",
+            "mshr_leaverequest"
+          ],
+          "topKeywords": [
+            "time",
+            "&",
+            "absence"
+          ],
+          "components": [
+            "cdm_department",
+            "cdm_fixedcompensation",
+            "mshr_leaverequest"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Leave Request & Approval",
+              "componentCount": 1,
+              "entities": [
+                "cdm_worker"
+              ],
+              "topKeywords": [
+                "leave",
+                "request"
+              ],
+              "components": [
+                "cdm_worker"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Performance & Compensation",
+          "bpc_l3": "HR.04",
+          "functionalArea": "Human Resources / Workforce Management",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "mshr_leaverequest",
+            "mshr_leaveenrollment",
+            "msdynhr_worker"
+          ],
+          "topKeywords": [
+            "performance",
+            "&",
+            "compensation"
+          ],
+          "components": [
+            "mshr_leaverequest",
+            "mshr_leaveenrollment",
+            "msdynhr_worker"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Performance Review Cycle",
+              "componentCount": 1,
+              "entities": [
+                "cdm_worker"
+              ],
+              "topKeywords": [
+                "performance",
+                "review"
+              ],
+              "components": [
+                "cdm_worker"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-contactCenterOmnichannel",
+      "name": "Contact Center / Omnichannel",
+      "description": "End-to-end management of omnichannel customer interactions from channel entry through routing, agent handling, and post-interaction quality and cost governance.",
+      "componentCount": 65,
+      "componentsByType": {
+        "entities": 11,
+        "workflows": 6,
+        "forms": 17,
+        "views": 28,
+        "plugins": 3
+      },
+      "components": [
+        "msdyn_ocliveworkitem",
+        "msdyn_ocsessionparticipant",
+        "msdyn_occontext",
+        "msdyn_agentstatushistory",
+        "msdyn_presence",
+        "msdyn_liveworkstream",
+        "msdyn_channel",
+        "con_deflectionoutcome",
+        "Contoso Conversation Lifecycle BPF",
+        "Set VIP Flag on High-Value Customer",
+        "Escalate Low-Sentiment Conversation to Supervisor",
+        "Post-Conversation CSAT Survey Dispatch"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Channel & Routing Configuration",
+          "bpc_l3": "CC.10",
+          "functionalArea": "Customer Service",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_ocliveworkitem",
+            "msdyn_ocsessionparticipant",
+            "msdyn_occontext"
+          ],
+          "topKeywords": [
+            "channel",
+            "&",
+            "routing"
+          ],
+          "components": [
+            "msdyn_ocliveworkitem",
+            "msdyn_ocsessionparticipant",
+            "msdyn_occontext"
+          ],
+          "tertiarySubCapabilities": []
+        },
+        {
+          "name": "Conversation Handling",
+          "bpc_l3": "CC.20",
+          "functionalArea": "Customer Service",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_occontext",
+            "msdyn_agentstatushistory",
+            "msdyn_presence"
+          ],
+          "topKeywords": [
+            "conversation",
+            "handling"
+          ],
+          "components": [
+            "msdyn_occontext",
+            "msdyn_agentstatushistory",
+            "msdyn_presence"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Route & Assign Conversation",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_ocliveworkitem"
+              ],
+              "topKeywords": [
+                "route",
+                "&"
+              ],
+              "components": [
+                "msdyn_ocliveworkitem"
+              ]
+            },
+            {
+              "name": "Consult & Transfer",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_ocliveworkitem"
+              ],
+              "topKeywords": [
+                "consult",
+                "&"
+              ],
+              "components": [
+                "msdyn_ocliveworkitem"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Deflection & Automation",
+          "bpc_l3": "CC.30",
+          "functionalArea": "Customer Service",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_presence",
+            "msdyn_liveworkstream",
+            "msdyn_channel"
+          ],
+          "topKeywords": [
+            "deflection",
+            "&",
+            "automation"
+          ],
+          "components": [
+            "msdyn_presence",
+            "msdyn_liveworkstream",
+            "msdyn_channel"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Bot Containment & Escalation",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_ocliveworkitem"
+              ],
+              "topKeywords": [
+                "bot",
+                "containment"
+              ],
+              "components": [
+                "msdyn_ocliveworkitem"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Quality & Workforce Governance",
+          "bpc_l3": "CC.40",
+          "functionalArea": "Customer Service",
+          "componentCount": 3,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "msdyn_channel",
+            "con_deflectionoutcome",
+            "con_agentcoachingnote"
+          ],
+          "topKeywords": [
+            "quality",
+            "&",
+            "workforce"
+          ],
+          "components": [
+            "msdyn_channel",
+            "con_deflectionoutcome",
+            "con_agentcoachingnote"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Coaching & Calibration",
+              "componentCount": 1,
+              "entities": [
+                "msdyn_ocliveworkitem"
+              ],
+              "topKeywords": [
+                "coaching",
+                "&"
+              ],
+              "components": [
+                "msdyn_ocliveworkitem"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap-platformGovernance",
+      "name": "Platform & Governance (shared core)",
+      "description": "Cross-cutting Center-of-Excellence governance of the Contoso Power Platform / Dataverse estate: environment lifecycle, ALM, security, data protection and maker compliance.",
+      "componentCount": 88,
+      "componentsByType": {
+        "entities": 17,
+        "workflows": 7,
+        "forms": 22,
+        "views": 39,
+        "plugins": 3
+      },
+      "components": [
+        "systemuser",
+        "team",
+        "businessunit",
+        "solution",
+        "publisher",
+        "workflow",
+        "connectionreference",
+        "environmentvariabledefinition",
+        "Environment Provisioning Approval",
+        "Orphaned Flow & App Detector",
+        "Compliance Attestation Reminder",
+        "Account Data Steward Assignment"
+      ],
+      "subCapabilities": [
+        {
+          "name": "Environment & Capacity Management",
+          "bpc_l3": "PL.01",
+          "functionalArea": "Cross-cutting Platform / Center of Excellence",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "systemuser",
+            "team",
+            "businessunit"
+          ],
+          "topKeywords": [
+            "environment",
+            "&",
+            "capacity"
+          ],
+          "components": [
+            "systemuser",
+            "team",
+            "businessunit"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Environment Request & Provisioning",
+              "componentCount": 1,
+              "entities": [
+                "systemuser"
+              ],
+              "topKeywords": [
+                "environment",
+                "request"
+              ],
+              "components": [
+                "systemuser"
+              ]
+            },
+            {
+              "name": "Environment Decommission & Quarantine",
+              "componentCount": 1,
+              "entities": [
+                "systemuser"
+              ],
+              "topKeywords": [
+                "environment",
+                "decommission"
+              ],
+              "components": [
+                "systemuser"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Application Lifecycle Management (ALM)",
+          "bpc_l3": "PL.02",
+          "functionalArea": "Cross-cutting Platform / Center of Excellence",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "businessunit",
+            "solution",
+            "publisher"
+          ],
+          "topKeywords": [
+            "application",
+            "lifecycle",
+            "management"
+          ],
+          "components": [
+            "businessunit",
+            "solution",
+            "publisher"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Solution Promotion (Dev to Prod)",
+              "componentCount": 1,
+              "entities": [
+                "systemuser"
+              ],
+              "topKeywords": [
+                "solution",
+                "promotion"
+              ],
+              "components": [
+                "systemuser"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Security & Access Governance",
+          "bpc_l3": "PL.03",
+          "functionalArea": "Cross-cutting Platform / Center of Excellence",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "publisher",
+            "workflow",
+            "connectionreference"
+          ],
+          "topKeywords": [
+            "security",
+            "&",
+            "access"
+          ],
+          "components": [
+            "publisher",
+            "workflow",
+            "connectionreference"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Role & Privilege Review",
+              "componentCount": 1,
+              "entities": [
+                "systemuser"
+              ],
+              "topKeywords": [
+                "role",
+                "&"
+              ],
+              "components": [
+                "systemuser"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Data Protection & Compliance",
+          "bpc_l3": "PL.04",
+          "functionalArea": "Cross-cutting Platform / Center of Excellence",
+          "componentCount": 4,
+          "componentsByType": {
+            "entities": 3
+          },
+          "entities": [
+            "connectionreference",
+            "environmentvariabledefinition",
+            "sdkmessageprocessingstep"
+          ],
+          "topKeywords": [
+            "data",
+            "protection",
+            "&"
+          ],
+          "components": [
+            "connectionreference",
+            "environmentvariabledefinition",
+            "sdkmessageprocessingstep"
+          ],
+          "tertiarySubCapabilities": [
+            {
+              "name": "Maker Compliance Attestation",
+              "componentCount": 1,
+              "entities": [
+                "systemuser"
+              ],
+              "topKeywords": [
+                "maker",
+                "compliance"
+              ],
+              "components": [
+                "systemuser"
+              ]
+            }
+          ]
         }
       ]
     }

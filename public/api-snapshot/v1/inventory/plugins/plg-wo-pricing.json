@@ -1,1 +1,0 @@
-{"item":{"id":"plg-wo-pricing","name":"WorkOrderPricingPlugin","tags":{},"solution":"ContosoFieldService","businessLogic":"Calculates work-order totals from labor, parts, and agreement discounts."},"metadata":{"type":"plugins","id":"plg-wo-pricing"}}

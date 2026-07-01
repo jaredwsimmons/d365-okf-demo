@@ -1,74 +1,3052 @@
 {
   "forms": [
     {
-      "formId": "frm-workorder-main",
-      "name": "Work Order",
-      "solution": "ContosoFieldService",
-      "entity": "con_workorder",
-      "tags": {}
+      "formId": "frm-lead-main",
+      "name": "Lead",
+      "solution": "ContosoSales",
+      "entity": "lead",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
     },
     {
-      "formId": "frm-servicevisit-main",
-      "name": "Service Visit",
-      "solution": "ContosoFieldService",
-      "entity": "con_servicevisit",
-      "tags": {}
+      "formId": "frm-lead-qc",
+      "name": "Lead (Quick Create)",
+      "solution": "ContosoSales",
+      "entity": "lead",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
     },
     {
-      "formId": "frm-agreement-main",
-      "name": "Service Agreement",
-      "solution": "ContosoFieldService",
-      "entity": "con_agreement",
-      "tags": {}
+      "formId": "frm-opportunity-main",
+      "name": "Opportunity",
+      "solution": "ContosoSales",
+      "entity": "opportunity",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
     },
     {
-      "formId": "frm-asset-main",
-      "name": "Customer Asset",
-      "solution": "ContosoFieldService",
-      "entity": "con_asset",
-      "tags": {}
+      "formId": "frm-opportunity-qc",
+      "name": "Opportunity (Quick Create)",
+      "solution": "ContosoSales",
+      "entity": "opportunity",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
     },
     {
-      "formId": "frm-technician-main",
-      "name": "Technician",
-      "solution": "ContosoFieldService",
-      "entity": "con_technician",
-      "tags": {}
-    },
-    {
-      "formId": "frm-inspection-main",
-      "name": "Inspection",
-      "solution": "ContosoFieldService",
-      "entity": "con_inspection",
-      "tags": {}
+      "formId": "frm-opportunityproduct-main",
+      "name": "Opportunity Product",
+      "solution": "msdyn_SalesPro",
+      "entity": "opportunityproduct",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.02"
+      }
     },
     {
       "formId": "frm-quote-main",
       "name": "Quote",
-      "solution": "ContosoSales",
-      "entity": "con_quote",
-      "tags": {}
+      "solution": "msdyn_SalesPro",
+      "entity": "quote",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
     },
     {
-      "formId": "frm-project-main",
-      "name": "Installation Project",
+      "formId": "frm-quotedetail-main",
+      "name": "Quote Product",
+      "solution": "msdyn_SalesPro",
+      "entity": "quotedetail",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "formId": "frm-salesorder-main",
+      "name": "Order",
       "solution": "ContosoSales",
-      "entity": "con_project",
-      "tags": {}
+      "entity": "salesorder",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-salesorder-qc",
+      "name": "Order (Quick Create)",
+      "solution": "ContosoSales",
+      "entity": "salesorder",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-salesorderdetail-main",
+      "name": "Order Product",
+      "solution": "msdyn_SalesPro",
+      "entity": "salesorderdetail",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.01"
+      }
     },
     {
       "formId": "frm-invoice-main",
       "name": "Invoice",
-      "solution": "ContosoCore",
-      "entity": "con_invoice",
-      "tags": {}
+      "solution": "msdyn_SalesPro",
+      "entity": "invoice",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
     },
     {
-      "formId": "frm-account-fs",
-      "name": "Account (Field Service)",
-      "solution": "ContosoCore",
+      "formId": "frm-product-main",
+      "name": "Product",
+      "solution": "ContosoSales",
+      "entity": "product",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.02"
+      }
+    },
+    {
+      "formId": "frm-product-qc",
+      "name": "Product (Quick Create)",
+      "solution": "ContosoSales",
+      "entity": "product",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.02"
+      }
+    },
+    {
+      "formId": "frm-pricelevel-main",
+      "name": "Price List",
+      "solution": "msdyn_SalesPro",
+      "entity": "pricelevel",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-competitor-main",
+      "name": "Competitor",
+      "solution": "msdyn_SalesPro",
+      "entity": "competitor",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
+    },
+    {
+      "formId": "frm-goal-main",
+      "name": "Goal",
+      "solution": "msdyn_SalesPro",
+      "entity": "goal",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-territory-main",
+      "name": "Sales Territory",
+      "solution": "msdyn_SalesPro",
+      "entity": "territory",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.02"
+      }
+    },
+    {
+      "formId": "frm-campaign-main",
+      "name": "Campaign",
+      "solution": "msdyn_SalesPro",
+      "entity": "campaign",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-dealdeskreview-main",
+      "name": "Deal Desk Review",
+      "solution": "ContosoSales",
+      "entity": "con_dealdeskreview",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-dealdeskreview-qc",
+      "name": "Deal Desk Review (Quick Create)",
+      "solution": "ContosoSales",
+      "entity": "con_dealdeskreview",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-salesplaybook-main",
+      "name": "Sales Playbook",
+      "solution": "ContosoSales",
+      "entity": "con_salesplaybook",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-salesplaybook-qc",
+      "name": "Sales Playbook (Quick Create)",
+      "solution": "ContosoSales",
+      "entity": "con_salesplaybook",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-custtranspayment-main",
+      "name": "Customer Payment (F&O)",
+      "solution": "msdyn_SalesPro",
+      "entity": "con_custtranspayment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.01"
+      }
+    },
+    {
+      "formId": "frm-incident-main",
+      "name": "Case",
+      "solution": "ContosoCustomerService",
+      "entity": "incident",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "formId": "frm-incident-qc",
+      "name": "Case (Quick Create)",
+      "solution": "ContosoCustomerService",
+      "entity": "incident",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "formId": "frm-incidentresolution-main",
+      "name": "Case Resolution",
+      "solution": "msdyn_CustomerService",
+      "entity": "incidentresolution",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-knowledgearticle-main",
+      "name": "Knowledge Article",
+      "solution": "ContosoCustomerService",
+      "entity": "knowledgearticle",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "formId": "frm-knowledgearticle-qc",
+      "name": "Knowledge Article (Quick Create)",
+      "solution": "ContosoCustomerService",
+      "entity": "knowledgearticle",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "formId": "frm-entitlement-main",
+      "name": "Entitlement",
+      "solution": "msdyn_CustomerService",
+      "entity": "entitlement",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-entitlementtemplate-main",
+      "name": "Entitlement Template",
+      "solution": "msdyn_CustomerService",
+      "entity": "entitlementtemplate",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "formId": "frm-sla-main",
+      "name": "SLA",
+      "solution": "ContosoCustomerService",
+      "entity": "sla",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-sla-qc",
+      "name": "SLA (Quick Create)",
+      "solution": "ContosoCustomerService",
+      "entity": "sla",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-slaitem-main",
+      "name": "SLA Item",
+      "solution": "msdyn_CustomerService",
+      "entity": "slaitem",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "formId": "frm-queue-main",
+      "name": "Queue",
+      "solution": "msdyn_CustomerService",
+      "entity": "queue",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-queueitem-main",
+      "name": "Queue Item",
+      "solution": "msdyn_CustomerService",
+      "entity": "queueitem",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-ocsession-main",
+      "name": "Conversation (Session)",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_ocsession",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-contract-main",
+      "name": "Contract",
+      "solution": "msdyn_CustomerService",
+      "entity": "contract",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "formId": "frm-msdyn-customervoicesurvey-main",
+      "name": "Customer Voice Survey",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_customervoicesurvey",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-casedeflection-main",
+      "name": "Case Deflection",
+      "solution": "ContosoCustomerService",
+      "entity": "con_casedeflection",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "formId": "frm-con-casedeflection-qc",
+      "name": "Case Deflection (Quick Create)",
+      "solution": "ContosoCustomerService",
+      "entity": "con_casedeflection",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "formId": "frm-con-escalation-main",
+      "name": "Escalation",
+      "solution": "ContosoCustomerService",
+      "entity": "con_escalation",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-escalation-qc",
+      "name": "Escalation (Quick Create)",
+      "solution": "ContosoCustomerService",
+      "entity": "con_escalation",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-servicefeedback-main",
+      "name": "Service Feedback",
+      "solution": "ContosoCustomerService",
+      "entity": "con_servicefeedback",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "formId": "frm-con-servicefeedback-qc",
+      "name": "Service Feedback (Quick Create)",
+      "solution": "ContosoCustomerService",
+      "entity": "con_servicefeedback",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-agreement-main",
+      "name": "Warranty Agreement (F&O)",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_agreement",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-workorder-main",
+      "name": "Work Order",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_workorder",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-workorder-qc",
+      "name": "Work Order (Quick Create)",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_workorder",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-workorderproduct-main",
+      "name": "Work Order Product",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_workorderproduct",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-workorderservice-main",
+      "name": "Work Order Service",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_workorderservice",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "formId": "frm-msdyn-incidenttype-main",
+      "name": "Incident Type",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_incidenttype",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-incidenttype-qc",
+      "name": "Incident Type (Quick Create)",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_incidenttype",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-bookableresource-main",
+      "name": "Bookable Resource",
+      "solution": "ContosoFieldService",
+      "entity": "bookableresource",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
+    },
+    {
+      "formId": "frm-bookableresource-qc",
+      "name": "Bookable Resource (Quick Create)",
+      "solution": "ContosoFieldService",
+      "entity": "bookableresource",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
+    },
+    {
+      "formId": "frm-bookableresourcebooking-main",
+      "name": "Bookable Resource Booking",
+      "solution": "msdyn_FieldService",
+      "entity": "bookableresourcebooking",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-resourcerequirement-main",
+      "name": "Resource Requirement",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_resourcerequirement",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.03",
+        "processCatalogL3": "FS.03.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-customerasset-main",
+      "name": "Customer Asset",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_customerasset",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-customerasset-qc",
+      "name": "Customer Asset (Quick Create)",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_customerasset",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-rma-main",
+      "name": "Return Merchandise Authorization",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_rma",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-timeentry-main",
+      "name": "Time Entry",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_timeentry",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "formId": "frm-msdyn-timeentry-qc",
+      "name": "Time Entry (Quick Create)",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_timeentry",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "formId": "frm-msdyn-productinventory-main",
+      "name": "Product Inventory",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_productinventory",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-warehouse-main",
+      "name": "Warehouse",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_warehouse",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-safetyinspection-main",
+      "name": "Safety Inspection",
+      "solution": "ContosoFieldService",
+      "entity": "con_safetyinspection",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-safetyinspection-qc",
+      "name": "Safety Inspection (Quick Create)",
+      "solution": "ContosoFieldService",
+      "entity": "con_safetyinspection",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-slapenaltyrule-main",
+      "name": "SLA Penalty Rule",
+      "solution": "ContosoFieldService",
+      "entity": "con_slapenaltyrule",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "formId": "frm-con-slapenaltyrule-qc",
+      "name": "SLA Penalty Rule (Quick Create)",
+      "solution": "ContosoFieldService",
+      "entity": "con_slapenaltyrule",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-purchaseorder-main",
+      "name": "Purchase Order",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_purchaseorder",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-project-main",
+      "name": "Project",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_project",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-project-qc",
+      "name": "Project (Quick Create)",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_project",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-projecttask-main",
+      "name": "Project Task",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projecttask",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-projectteam-main",
+      "name": "Project Team Member",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectteam",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.02"
+      }
+    },
+    {
+      "formId": "frm-msdyn-resourceassignment-main",
+      "name": "Resource Assignment",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_resourceassignment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-projectcontract-main",
+      "name": "Project Contract",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectcontract",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.03",
+        "processCatalogL3": "PJ.03.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-contractline-main",
+      "name": "Contract Line",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_contractline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-estimate-main",
+      "name": "Estimate",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_estimate",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-estimateline-main",
+      "name": "Estimate Line",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_estimateline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-expense-main",
+      "name": "Expense",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_expense",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-expense-qc",
+      "name": "Expense (Quick Create)",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_expense",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-actuals-main",
+      "name": "Actual",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_actuals",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.02"
+      }
+    },
+    {
+      "formId": "frm-msdyn-invoice-main",
+      "name": "Project Invoice",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_invoice",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-projecthealthreview-main",
+      "name": "Project Health Review",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_projecthealthreview",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-projecthealthreview-qc",
+      "name": "Project Health Review (Quick Create)",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_projecthealthreview",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-resourcerequest-main",
+      "name": "Staffing Request",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_resourcerequest",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-resourcerequest-qc",
+      "name": "Staffing Request (Quick Create)",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_resourcerequest",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-projectparameter-main",
+      "name": "Project Parameter",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectparameter",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-faoprojectvendorinvoice-main",
+      "name": "Vendor Invoice (F&O)",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "con_faoprojectvendorinvoice",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-journey-main",
+      "name": "Journey",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_journey",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-journey-qc",
+      "name": "Journey (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_journey",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-segment-main",
+      "name": "Segment",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_segment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-segment-qc",
+      "name": "Segment (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_segment",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-marketingemail-main",
+      "name": "Marketing Email",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_marketingemail",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-marketingemail-qc",
+      "name": "Marketing Email (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_marketingemail",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-channeltemplate-main",
+      "name": "Channel Template",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_channeltemplate",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-marketingform-main",
+      "name": "Marketing Form",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_marketingform",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-leadscoringmodel-main",
+      "name": "Lead Scoring Model",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_leadscoringmodel",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-contact-main",
+      "name": "Contact",
+      "solution": "ContosoMarketing",
+      "entity": "contact",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-contact-qc",
+      "name": "Contact (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "contact",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msevtmgt-event-main",
+      "name": "Event",
+      "solution": "ContosoMarketing",
+      "entity": "msevtmgt_event",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "formId": "frm-msevtmgt-event-qc",
+      "name": "Event (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "msevtmgt_event",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "formId": "frm-msevtmgt-eventregistration-main",
+      "name": "Event Registration",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msevtmgt_eventregistration",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-contactpointconsent3-main",
+      "name": "Contact Point Consent",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_contactpointconsent3",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "formId": "frm-msdynmkt-trigger-main",
+      "name": "Trigger",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_trigger",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-campaignbrief-main",
+      "name": "Campaign Brief",
+      "solution": "ContosoMarketing",
+      "entity": "con_campaignbrief",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-campaignbrief-qc",
+      "name": "Campaign Brief (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "con_campaignbrief",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-legalfootertemplate-main",
+      "name": "Legal Footer Template",
+      "solution": "ContosoMarketing",
+      "entity": "con_legalfootertemplate",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-legalfootertemplate-qc",
+      "name": "Legal Footer Template (Quick Create)",
+      "solution": "ContosoMarketing",
+      "entity": "con_legalfootertemplate",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-marketingspendline-main",
+      "name": "Marketing Spend Line (F&O)",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "con_marketingspendline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.02"
+      }
+    },
+    {
+      "formId": "frm-msdynci-customerprofile-main",
+      "name": "Customer Profile (Unified)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_customerprofile",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdynci-customerprofile-qc",
+      "name": "Customer Profile (Unified) (Quick Create)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_customerprofile",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdynci-datasource-main",
+      "name": "Data Source",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_datasource",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynci-entity-main",
+      "name": "Ingested Entity (Map)",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_entity",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.02"
+      }
+    },
+    {
+      "formId": "frm-msdynci-measure-main",
+      "name": "Measure",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_measure",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynci-measure-qc",
+      "name": "Measure (Quick Create)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_measure",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynci-segment-main",
+      "name": "Segment",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_segment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": "CI.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdynci-segment-qc",
+      "name": "Segment (Quick Create)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_segment",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": "CI.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdynci-prediction-main",
+      "name": "Prediction",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_prediction",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynci-predictionscore-main",
+      "name": "Prediction Score",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_predictionscore",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.03",
+        "processCatalogL3": "CI.03.01"
+      }
+    },
+    {
+      "formId": "frm-msdynci-activity-main",
+      "name": "Unified Activity",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_activity",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynci-relationship-main",
+      "name": "Profile Relationship",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_relationship",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": "CI.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-consentledger-main",
+      "name": "Consent Ledger",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_consentledger",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-consentledger-qc",
+      "name": "Consent Ledger (Quick Create)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_consentledger",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-matchrule-main",
+      "name": "Match Rule Override",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_matchrule",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "formId": "frm-con-matchrule-qc",
+      "name": "Match Rule Override (Quick Create)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_matchrule",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "formId": "frm-con-datasourcehealth-main",
+      "name": "Data Source Health Log",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_datasourcehealth",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-datasourcehealth-qc",
+      "name": "Data Source Health Log (Quick Create)",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_datasourcehealth",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-mserp-custcustomerv3entity-main",
+      "name": "F&O Customer Master (Virtual)",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "mserp_custcustomerv3entity",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.02"
+      }
+    },
+    {
+      "formId": "frm-msdynci-semanticmapping-main",
+      "name": "Semantic Type Mapping",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_semanticmapping",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-mserp-mainaccount-main",
+      "name": "Main Account",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_mainaccount",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "formId": "frm-mserp-ledger-main",
+      "name": "Ledger",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_ledger",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-mserp-generaljournalaccountentry-main",
+      "name": "General Journal Account Entry",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_generaljournalaccountentry",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "formId": "frm-mserp-vendinvoiceheader-main",
+      "name": "Vendor Invoice",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_vendinvoiceheader",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-mserp-custpaymentjournalline-main",
+      "name": "Customer Payment Journal",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_custpaymentjournalline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "formId": "frm-mserp-budgetregisterentry-main",
+      "name": "Budget Register Entry",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_budgetregisterentry",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-mserp-fixedasset-main",
+      "name": "Fixed Asset",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_fixedasset",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "formId": "frm-mserp-taxtransaction-main",
+      "name": "Tax Transaction",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_taxtransaction",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-cdm-company-main",
+      "name": "Company (Legal Entity)",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "cdm_company",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "formId": "frm-account-main",
+      "name": "Account",
+      "solution": "ContosoFinance",
       "entity": "account",
-      "tags": {}
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-account-qc",
+      "name": "Account (Quick Create)",
+      "solution": "ContosoFinance",
+      "entity": "account",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-transactioncurrency-main",
+      "name": "Currency",
+      "solution": "ContosoFinance",
+      "entity": "transactioncurrency",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "formId": "frm-transactioncurrency-qc",
+      "name": "Currency (Quick Create)",
+      "solution": "ContosoFinance",
+      "entity": "transactioncurrency",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-apapprovalrequest-main",
+      "name": "AP Approval Request",
+      "solution": "ContosoFinance",
+      "entity": "con_apapprovalrequest",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-apapprovalrequest-qc",
+      "name": "AP Approval Request (Quick Create)",
+      "solution": "ContosoFinance",
+      "entity": "con_apapprovalrequest",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-capexrequest-main",
+      "name": "Capex Request",
+      "solution": "ContosoFinance",
+      "entity": "con_capexrequest",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-capexrequest-qc",
+      "name": "Capex Request (Quick Create)",
+      "solution": "ContosoFinance",
+      "entity": "con_capexrequest",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-financialdimensionmap-main",
+      "name": "Financial Dimension Map",
+      "solution": "ContosoFinance",
+      "entity": "con_financialdimensionmap",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-financialdimensionmap-qc",
+      "name": "Financial Dimension Map (Quick Create)",
+      "solution": "ContosoFinance",
+      "entity": "con_financialdimensionmap",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-dunningaction-main",
+      "name": "Dunning Action",
+      "solution": "ContosoFinance",
+      "entity": "con_dunningaction",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "formId": "frm-con-dunningaction-qc",
+      "name": "Dunning Action (Quick Create)",
+      "solution": "ContosoFinance",
+      "entity": "con_dunningaction",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-releasedproduct-main",
+      "name": "Released Product",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_releasedproduct",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-inventwarehouse-main",
+      "name": "Warehouse",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_inventwarehouse",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "formId": "frm-msdyn-purchaseorderheader-main",
+      "name": "Purchase Order Header",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_purchaseorderheader",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-purchaseorderline-main",
+      "name": "Purchase Order Line",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_purchaseorderline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": "SC.31"
+      }
+    },
+    {
+      "formId": "frm-msdyn-salesorderline-main",
+      "name": "Sales Order Line (F&O)",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_salesorderline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.10",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-vendor-main",
+      "name": "Vendor",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_vendor",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "formId": "frm-con-vendor-qc",
+      "name": "Vendor (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_vendor",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "formId": "frm-con-purchaserequisition-main",
+      "name": "Purchase Requisition",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_purchaserequisition",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-purchaserequisition-qc",
+      "name": "Purchase Requisition (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_purchaserequisition",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-inventorycount-main",
+      "name": "Inventory Count",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_inventorycount",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.21"
+      }
+    },
+    {
+      "formId": "frm-con-inventorycount-qc",
+      "name": "Inventory Count (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_inventorycount",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.21"
+      }
+    },
+    {
+      "formId": "frm-con-shipment-main",
+      "name": "Shipment",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_shipment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.50",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-shipment-qc",
+      "name": "Shipment (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_shipment",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.50",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-demandforecast-main",
+      "name": "Demand Forecast",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_demandforecast",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "formId": "frm-con-demandforecast-qc",
+      "name": "Demand Forecast (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_demandforecast",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "formId": "frm-uom-main",
+      "name": "Unit",
+      "solution": "msdyn_SupplyChain",
+      "entity": "uom",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-bomcomponent-main",
+      "name": "BOM Component",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_bomcomponent",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-bomcomponent-qc",
+      "name": "BOM Component (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_bomcomponent",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-productionorder-main",
+      "name": "Production Order",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_productionorder",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "formId": "frm-con-productionorder-qc",
+      "name": "Production Order (Quick Create)",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_productionorder",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailchannel-main",
+      "name": "Retail Channel",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailchannel",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.01",
+        "processCatalogL3": "CO.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailchannel-qc",
+      "name": "Retail Channel (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailchannel",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.01",
+        "processCatalogL3": "CO.01.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailstore-main",
+      "name": "Retail Store",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailstore",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailstore-qc",
+      "name": "Retail Store (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailstore",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailterminal-main",
+      "name": "Retail Terminal (Register)",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailterminal",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-channelprofile-main",
+      "name": "Channel Profile",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_channelprofile",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailtransaction-main",
+      "name": "Retail Transaction",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailtransaction",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailtransaction-qc",
+      "name": "Retail Transaction (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailtransaction",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailtransactionsalesline-main",
+      "name": "Retail Transaction Sales Line",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailtransactionsalesline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailtransactionpaymentline-main",
+      "name": "Retail Transaction Payment Line",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailtransactionpaymentline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-retailstatement-main",
+      "name": "Retail Statement",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailstatement",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-pricingrule-main",
+      "name": "Pricing Rule",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_pricingrule",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-loyaltyprogram-main",
+      "name": "Loyalty Program",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltyprogram",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-loyaltyprogram-qc",
+      "name": "Loyalty Program (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltyprogram",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "formId": "frm-msdyn-loyaltycard-main",
+      "name": "Loyalty Card",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltycard",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-loyaltycard-qc",
+      "name": "Loyalty Card (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltycard",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-giftcard-main",
+      "name": "Gift Card",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_giftcard",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "formId": "frm-con-clienteling-main",
+      "name": "Clienteling Appointment",
+      "solution": "ContosoCommerce",
+      "entity": "con_clienteling",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-clienteling-qc",
+      "name": "Clienteling Appointment (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "con_clienteling",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-curbsideorder-main",
+      "name": "Curbside Pickup Order",
+      "solution": "ContosoCommerce",
+      "entity": "con_curbsideorder",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-curbsideorder-qc",
+      "name": "Curbside Pickup Order (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "con_curbsideorder",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "formId": "frm-con-pricematchrequest-main",
+      "name": "Price Match Request",
+      "solution": "ContosoCommerce",
+      "entity": "con_pricematchrequest",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-pricematchrequest-qc",
+      "name": "Price Match Request (Quick Create)",
+      "solution": "ContosoCommerce",
+      "entity": "con_pricematchrequest",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-cdm-worker-main",
+      "name": "Worker",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_worker",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "formId": "frm-cdm-worker-qc",
+      "name": "Worker (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_worker",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "formId": "frm-cdm-employment-main",
+      "name": "Employment",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_employment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-cdm-employment-qc",
+      "name": "Employment (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_employment",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-cdm-position-main",
+      "name": "Position",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_position",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "formId": "frm-cdm-position-qc",
+      "name": "Position (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_position",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "formId": "frm-cdm-job-main",
+      "name": "Job",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_job",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-cdm-department-main",
+      "name": "Department",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_department",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": "HR.03.01"
+      }
+    },
+    {
+      "formId": "frm-cdm-fixedcompensation-main",
+      "name": "Fixed Compensation",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_fixedcompensation",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-mshr-leaverequest-main",
+      "name": "Leave Request",
+      "solution": "ContosoHumanResources",
+      "entity": "mshr_leaverequest",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": "HR.04.01"
+      }
+    },
+    {
+      "formId": "frm-mshr-leaverequest-qc",
+      "name": "Leave Request (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "mshr_leaverequest",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": "HR.04.01"
+      }
+    },
+    {
+      "formId": "frm-mshr-leaveenrollment-main",
+      "name": "Leave Enrollment",
+      "solution": "msdynhr_HumanResources",
+      "entity": "mshr_leaveenrollment",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdynhr-worker-main",
+      "name": "Attract/Onboard Worker Profile",
+      "solution": "msdynhr_HumanResources",
+      "entity": "msdynhr_worker",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.05",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-onboardingtask-main",
+      "name": "Onboarding Task",
+      "solution": "ContosoHumanResources",
+      "entity": "con_onboardingtask",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-onboardingtask-qc",
+      "name": "Onboarding Task (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "con_onboardingtask",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-performancereview-main",
+      "name": "Performance Review",
+      "solution": "ContosoHumanResources",
+      "entity": "con_performancereview",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-performancereview-qc",
+      "name": "Performance Review (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "con_performancereview",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-skill-main",
+      "name": "Skill",
+      "solution": "ContosoHumanResources",
+      "entity": "con_skill",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "formId": "frm-con-skill-qc",
+      "name": "Skill (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "con_skill",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "formId": "frm-con-workerskill-main",
+      "name": "Worker Skill",
+      "solution": "ContosoHumanResources",
+      "entity": "con_workerskill",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-workerskill-qc",
+      "name": "Worker Skill (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "con_workerskill",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-cdm-benefit-main",
+      "name": "Benefit",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_benefit",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": "HR.03.01"
+      }
+    },
+    {
+      "formId": "frm-con-disciplinarycase-main",
+      "name": "Disciplinary Case",
+      "solution": "ContosoHumanResources",
+      "entity": "con_disciplinarycase",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-disciplinarycase-qc",
+      "name": "Disciplinary Case (Quick Create)",
+      "solution": "ContosoHumanResources",
+      "entity": "con_disciplinarycase",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-ocliveworkitem-main",
+      "name": "Conversation",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_ocliveworkitem",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.21"
+      }
+    },
+    {
+      "formId": "frm-msdyn-ocliveworkitem-qc",
+      "name": "Conversation (Quick Create)",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_ocliveworkitem",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.21"
+      }
+    },
+    {
+      "formId": "frm-msdyn-ocsessionparticipant-main",
+      "name": "Session Participant",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_ocsessionparticipant",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "formId": "frm-msdyn-occontext-main",
+      "name": "Conversation Context",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_occontext",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-agentstatushistory-main",
+      "name": "Agent Status History",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_agentstatushistory",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "formId": "frm-msdyn-agentstatushistory-qc",
+      "name": "Agent Status History (Quick Create)",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_agentstatushistory",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "formId": "frm-msdyn-presence-main",
+      "name": "Presence",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_presence",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-liveworkstream-main",
+      "name": "Work Stream",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_liveworkstream",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": "CC.41"
+      }
+    },
+    {
+      "formId": "frm-msdyn-channel-main",
+      "name": "Channel Instance",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_channel",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-msdyn-channel-qc",
+      "name": "Channel Instance (Quick Create)",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_channel",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-deflectionoutcome-main",
+      "name": "Deflection Outcome",
+      "solution": "ContosoContactCenter",
+      "entity": "con_deflectionoutcome",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "formId": "frm-con-deflectionoutcome-qc",
+      "name": "Deflection Outcome (Quick Create)",
+      "solution": "ContosoContactCenter",
+      "entity": "con_deflectionoutcome",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "formId": "frm-con-agentcoachingnote-main",
+      "name": "Agent Coaching Note",
+      "solution": "ContosoContactCenter",
+      "entity": "con_agentcoachingnote",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-agentcoachingnote-qc",
+      "name": "Agent Coaching Note (Quick Create)",
+      "solution": "ContosoContactCenter",
+      "entity": "con_agentcoachingnote",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-botconfiguration-main",
+      "name": "Bot Configuration",
+      "solution": "ContosoContactCenter",
+      "entity": "con_botconfiguration",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "formId": "frm-con-botconfiguration-qc",
+      "name": "Bot Configuration (Quick Create)",
+      "solution": "ContosoContactCenter",
+      "entity": "con_botconfiguration",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "formId": "frm-con-channelbudgetline-main",
+      "name": "Channel Budget Line",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "con_channelbudgetline",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-systemuser-main",
+      "name": "User",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "systemuser",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "formId": "frm-systemuser-qc",
+      "name": "User (Quick Create)",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "systemuser",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "formId": "frm-team-main",
+      "name": "Team",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "team",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-businessunit-main",
+      "name": "Business Unit",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "businessunit",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "formId": "frm-solution-main",
+      "name": "Solution",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "solution",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-publisher-main",
+      "name": "Publisher",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "publisher",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "formId": "frm-workflow-main",
+      "name": "Process (Workflow)",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "workflow",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-connectionreference-main",
+      "name": "Connection Reference",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "connectionreference",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": "PL.04.01"
+      }
+    },
+    {
+      "formId": "frm-environmentvariabledefinition-main",
+      "name": "Environment Variable Definition",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "environmentvariabledefinition",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-sdkmessageprocessingstep-main",
+      "name": "Plug-in Step (SDK Message Processing Step)",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "sdkmessageprocessingstep",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.01"
+      }
+    },
+    {
+      "formId": "frm-plugintype-main",
+      "name": "Plug-in Type",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "plugintype",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-role-main",
+      "name": "Security Role",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "role",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "formId": "frm-fieldsecurityprofile-main",
+      "name": "Field Security Profile",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "fieldsecurityprofile",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-adx-webpage-main",
+      "name": "Web Page (Power Pages)",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "adx_webpage",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "formId": "frm-adx-webpage-qc",
+      "name": "Web Page (Power Pages) (Quick Create)",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "adx_webpage",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "formId": "frm-con-environmentinventory-main",
+      "name": "Environment Inventory",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_environmentinventory",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-environmentinventory-qc",
+      "name": "Environment Inventory (Quick Create)",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_environmentinventory",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-coecomplianceattestation-main",
+      "name": "CoE Compliance Attestation",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_coecomplianceattestation",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "formId": "frm-con-coecomplianceattestation-qc",
+      "name": "CoE Compliance Attestation (Quick Create)",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_coecomplianceattestation",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "formId": "frm-con-dataprocessingregister-main",
+      "name": "Data Processing Register",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_dataprocessingregister",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-dataprocessingregister-qc",
+      "name": "Data Processing Register (Quick Create)",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_dataprocessingregister",
+      "formType": "QuickCreate",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "formId": "frm-con-ledgerdimension-main",
+      "name": "Ledger Dimension (F&O)",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "con_ledgerdimension",
+      "formType": "Main",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": "PL.04.01"
+      }
     }
   ]
 }

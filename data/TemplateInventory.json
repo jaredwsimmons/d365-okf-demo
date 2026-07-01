@@ -1,15 +1,39 @@
 {
   "templates": [
     {
-      "id": "tpl-wo-confirm",
-      "title": "Work Order Confirmation Email",
-      "solution": "ContosoFieldService",
+      "id": "tpl-notify-manager-on-high-p",
+      "title": "Notify Manager on High-Priority Escalation Email",
+      "solution": "ContosoCustomerService",
       "tags": {}
     },
     {
-      "id": "tpl-agreement-renewal",
-      "title": "Agreement Renewal Email",
-      "solution": "ContosoFieldService",
+      "id": "tpl-nightly-knowledge-articl",
+      "title": "Nightly Knowledge Article Review Reminder Email",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "tpl-contoso-time-entry-auto-",
+      "title": "Contoso Time Entry Auto-Submit Reminder Email",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "tpl-require-legal-footer-bef",
+      "title": "Require Legal Footer Before Email Go-Live Email",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "tpl-probation-end-reminder",
+      "title": "Probation End Reminder Email",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "tpl-compliance-attestation-r",
+      "title": "Compliance Attestation Reminder Email",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

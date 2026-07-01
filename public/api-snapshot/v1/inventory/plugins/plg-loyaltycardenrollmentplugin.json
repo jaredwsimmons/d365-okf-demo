@@ -1,0 +1,1 @@
+{"item":{"id":"plg-loyaltycardenrollmentplugin","name":"LoyaltyCardEnrollmentPlugin","tags":{},"solution":"ContosoCommerce","businessLogic":"On create of a loyalty card, validates uniqueness of the card number, stamps the enrollment channel, and initializes the points balance from the program's welcome bonus."},"metadata":{"type":"plugins","id":"plg-loyaltycardenrollmentplugin"}}

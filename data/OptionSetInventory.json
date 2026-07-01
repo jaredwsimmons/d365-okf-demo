@@ -1,45 +1,471 @@
 {
   "optionSets": [
     {
-      "schemaName": "con_workorderstatus",
-      "displayName": "Work Order Status",
-      "solution": "ContosoFieldService",
+      "schemaName": "opportunity_salesstagecode",
+      "displayName": "Sales Stage",
+      "solution": "msdyn_SalesPro",
       "tags": {}
     },
     {
-      "schemaName": "con_priority",
-      "displayName": "Priority",
-      "solution": "ContosoFieldService",
+      "schemaName": "lead_leadsourcecode",
+      "displayName": "Lead Source",
+      "solution": "msdyn_SalesPro",
       "tags": {}
     },
     {
-      "schemaName": "con_assettype",
-      "displayName": "Asset Type",
-      "solution": "ContosoFieldService",
+      "schemaName": "lead_leadqualitycode",
+      "displayName": "Rating",
+      "solution": "msdyn_SalesPro",
       "tags": {}
     },
     {
-      "schemaName": "con_visitoutcome",
-      "displayName": "Visit Outcome",
-      "solution": "ContosoFieldService",
-      "tags": {}
-    },
-    {
-      "schemaName": "con_agreementtype",
-      "displayName": "Agreement Type",
-      "solution": "ContosoFieldService",
-      "tags": {}
-    },
-    {
-      "schemaName": "con_inspectionresult",
-      "displayName": "Inspection Result",
-      "solution": "ContosoFieldService",
-      "tags": {}
-    },
-    {
-      "schemaName": "con_quotestatus",
-      "displayName": "Quote Status",
+      "schemaName": "con_reviewstatus",
+      "displayName": "Deal Desk Review Status",
       "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_fulfillmentpriority",
+      "displayName": "Fulfillment Priority",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_lifecyclestage",
+      "displayName": "Product Lifecycle Stage",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_settlementstatus",
+      "displayName": "F&O Settlement Status",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "schemaName": "incident_prioritycode",
+      "displayName": "Case Priority",
+      "solution": "msdyn_CustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "incident_casetypecode",
+      "displayName": "Case Type",
+      "solution": "msdyn_CustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_channelsource",
+      "displayName": "Channel Source",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_escalationreason",
+      "displayName": "Escalation Reason",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_sentiment",
+      "displayName": "Sentiment",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_supporttier",
+      "displayName": "Support Tier",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_deflectionchannel",
+      "displayName": "Deflection Channel",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_workorder_systemstatus",
+      "displayName": "Work Order System Status",
+      "solution": "msdyn_FieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_bookingtype",
+      "displayName": "Booking Type",
+      "solution": "msdyn_FieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_slabreachrisk",
+      "displayName": "SLA Breach Risk",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_compliancecategory",
+      "displayName": "Compliance Category",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_safetyinspection_result",
+      "displayName": "Safety Inspection Result",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_rma_returntype",
+      "displayName": "RMA Return Type",
+      "solution": "msdyn_FieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_penaltytier",
+      "displayName": "SLA Penalty Tier",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_billingmethod",
+      "displayName": "Billing Method",
+      "solution": "msdyn_ProjectServiceCore",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_timeentry_entrystatus",
+      "displayName": "Time Entry Status",
+      "solution": "msdyn_ProjectServiceCore",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_transactiontypecode",
+      "displayName": "Transaction Type",
+      "solution": "msdyn_ProjectServiceCore",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_ragstatus",
+      "displayName": "Project RAG Status",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_deliveryregion",
+      "displayName": "Delivery Region",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_fulfillmentstatus",
+      "displayName": "Staffing Fulfillment Status",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdynmkt_channeltype",
+      "displayName": "Channel Type",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdynmkt_segmenttype",
+      "displayName": "Segment Type",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdynmkt_consentstatus",
+      "displayName": "Consent Status",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_brandapprovalstatus",
+      "displayName": "Brand Approval Status",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dataresidencyregion",
+      "displayName": "Data Residency Region",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "schemaName": "msevtmgt_eventformat",
+      "displayName": "Event Format",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_approvalstatus",
+      "displayName": "Approval Status",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdynci_sourcetype",
+      "displayName": "Data Source Type",
+      "solution": "msdynci_CustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdynci_measuretype",
+      "displayName": "Measure Type",
+      "solution": "msdynci_CustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdynci_modeltype",
+      "displayName": "Prediction Model Type",
+      "solution": "msdynci_CustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_loyaltytier",
+      "displayName": "Contoso Loyalty Tier",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_consenttype",
+      "displayName": "Consent Type",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_churnriskband",
+      "displayName": "Churn Risk Band",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_creditriskrating",
+      "displayName": "Credit Risk Rating",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_approvaltier",
+      "displayName": "AP Approval Tier",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_dunninglevel",
+      "displayName": "Dunning Level",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "schemaName": "mainaccounttype",
+      "displayName": "Main Account Type",
+      "solution": "msdyn_FinanceAndOperations",
+      "tags": {}
+    },
+    {
+      "schemaName": "vendinvoiceapprovalstatus",
+      "displayName": "Vendor Invoice Approval Status",
+      "solution": "msdyn_FinanceAndOperations",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_capexstatus",
+      "displayName": "Capex Request Status",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_hazmatclass",
+      "displayName": "HazMat Class",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_abcclassification",
+      "displayName": "ABC Classification",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_carrier",
+      "displayName": "Carrier",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_counttype",
+      "displayName": "Inventory Count Type",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_shipmentstatus",
+      "displayName": "Shipment Status",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_productionstatus",
+      "displayName": "Production Status",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_vendorgroup",
+      "displayName": "Vendor Group",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_channeltype",
+      "displayName": "Channel Type",
+      "solution": "msdyn_Commerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_tendertype",
+      "displayName": "Tender Type",
+      "solution": "msdyn_Commerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_postingstatus",
+      "displayName": "Statement Posting Status",
+      "solution": "msdyn_Commerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_handoffstatus",
+      "displayName": "Contoso Curbside Handoff Status",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_loyaltytierstructure",
+      "displayName": "Contoso Loyalty Tier",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_pricematchapprovalstatus",
+      "displayName": "Contoso Price Match Approval Status",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "schemaName": "cdm_workertype",
+      "displayName": "Worker Type",
+      "solution": "msdynhr_HumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "mshr_leavetype",
+      "displayName": "Leave Type",
+      "solution": "msdynhr_HumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "mshr_requeststatus",
+      "displayName": "Leave Request Status",
+      "solution": "msdynhr_HumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_reviewrating",
+      "displayName": "Contoso Performance Rating",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_skillproficiency",
+      "displayName": "Contoso Skill Proficiency",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_onboardingcategory",
+      "displayName": "Onboarding Task Category",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "cdm_payfrequency",
+      "displayName": "Pay Frequency",
+      "solution": "msdynhr_HumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_disciplinaryseverity",
+      "displayName": "Disciplinary Severity",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_cdsconversationtype",
+      "displayName": "Conversation Channel",
+      "solution": "msdyn_OmnichannelBase",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_basepresencestatus",
+      "displayName": "Base Presence Status",
+      "solution": "msdyn_OmnichannelBase",
+      "tags": {}
+    },
+    {
+      "schemaName": "msdyn_ocsessionparticipant_mode",
+      "displayName": "Session Participation Mode",
+      "solution": "msdyn_OmnichannelBase",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_deflectionoutcometype",
+      "displayName": "Deflection Outcome Type",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_datasensitivity",
+      "displayName": "Data Sensitivity",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_environmenttype",
+      "displayName": "Environment Type",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_lifecyclestate",
+      "displayName": "Environment Lifecycle State",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_makerpersona",
+      "displayName": "Maker Persona",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_lawfulbasis",
+      "displayName": "GDPR Lawful Basis",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_attestationresult",
+      "displayName": "Attestation Result",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "schemaName": "con_componenttype",
+      "displayName": "Attestation Component Type",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

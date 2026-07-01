@@ -1,0 +1,1 @@
+{"item":{"name":"fx-rate-ingest-func","_type":"function","status":"Active","purpose":"Compute","runtime":"dotnet-isolated","trigger":"HTTP","calledBy":"transactioncurrency","description":"Azure Function that fetches daily FX rates from an external provider and pushes them into the Exchange Rate Sync cloud flow."},"metadata":{"type":"azure","id":"fx-rate-ingest-func"}}

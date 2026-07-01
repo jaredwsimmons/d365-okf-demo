@@ -1,0 +1,1 @@
+{"item":{"id":"plg-deflectioncostcalculationplugin","name":"DeflectionCostCalculationPlugin","tags":{},"solution":"ContosoContactCenter","businessLogic":"On deflection outcome create, computes con_costavoided using the channel cost model and marks con_contained based on outcome type."},"metadata":{"type":"plugins","id":"plg-deflectioncostcalculationplugin"}}

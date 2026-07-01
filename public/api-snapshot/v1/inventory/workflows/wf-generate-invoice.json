@@ -1,1 +1,0 @@
-{"item":{"id":"wf-generate-invoice","name":"Generate Invoice on Completion","tags":{"processCatalogL1":"FS.00 Service Delivery"},"solution":"ContosoCore","description":"Creates an invoice when a work order is marked complete.","primaryEntity":"con_workorder","_relEnvVars":["con_InvoicePrefix"]},"metadata":{"type":"workflows","id":"wf-generate-invoice"}}

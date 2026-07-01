@@ -1,1 +1,0 @@
-{"item":{"name":"WorkOrderSyncLogicApp","_type":"logicApp","status":"Active","trigger":"Work order completed","dataFlow":"Dataverse → Billing API","direction":"Outbound","description":"Pushes completed work orders to the billing system.","relatedEntity":"con_workorder"},"metadata":{"type":"azure","id":"WorkOrderSyncLogicApp"}}

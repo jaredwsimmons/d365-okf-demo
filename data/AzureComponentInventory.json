@@ -1,83 +1,228 @@
 {
   "metadata": {
     "generated": "2026-06-26T00:00:00.000Z",
-    "totalLogicApps": 2,
-    "totalFunctions": 2,
-    "totalExternalIntegrations": 2
+    "totalLogicApps": 7,
+    "totalFunctions": 5,
+    "totalExternalIntegrations": 12
   },
   "logicApps": [
     {
-      "name": "WorkOrderSyncLogicApp",
-      "description": "Pushes completed work orders to the billing system.",
-      "trigger": "Work order completed",
+      "name": "SalesOrder-to-ERP LogicApp",
+      "description": "Logic App that posts confirmed sales orders to the downstream ERP fulfillment queue via Service Bus when con_fulfillmentpriority is Expedited/Critical.",
+      "trigger": "Event",
       "direction": "Outbound",
-      "dataFlow": "Dataverse → Billing API",
-      "relatedEntity": "con_workorder",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "salesorder",
       "status": "Active"
     },
     {
-      "name": "AgreementRenewalLogicApp",
-      "description": "Generates renewal tasks for expiring agreements.",
-      "trigger": "Recurrence — daily",
-      "direction": "Internal",
-      "dataFlow": "Dataverse → Dataverse",
-      "relatedEntity": "con_agreement",
+      "name": "con-InvoicePDF-LogicApp",
+      "description": "Azure Logic App triggered on invoice confirmation that renders a branded PDF, stores it in SharePoint, and emails the customer contact.",
+      "trigger": "Event",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "msdyn_invoice",
+      "status": "Active"
+    },
+    {
+      "name": "Marketing Analytics Export Logic App",
+      "description": "Logic App that pulls journey interaction/analytics data and lands it in an Azure Synapse marketing lakehouse for BI reporting.",
+      "trigger": "Event",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "msdynmkt_journey",
+      "status": "Active"
+    },
+    {
+      "name": "DSR Erasure Orchestrator (Logic App)",
+      "description": "Azure Logic App fanning out right-to-erasure deletes to downstream commerce, marketing, and warehouse systems via Service Bus.",
+      "trigger": "Event",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "con_consentledger",
+      "status": "Active"
+    },
+    {
+      "name": "SupplierEDI-IntakeLogicApp",
+      "description": "Azure Logic App receiving EDI 850/855 from suppliers and upserting requisition/PO acknowledgements via the Dataverse connector.",
+      "trigger": "Event",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "con_purchaserequisition",
+      "status": "Active"
+    },
+    {
+      "name": "ChannelDataPublish-LogicApp",
+      "description": "Logic App that receives publish requests and calls the Commerce runtime API to trigger a channel data (1070) sync job to the Commerce Scale Unit.",
+      "trigger": "Event",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "msdyn_pricingrule",
+      "status": "Active"
+    },
+    {
+      "name": "Offboarding-to-ServiceNow Logic App",
+      "description": "Logic App invoked by the termination flow that files an offboarding ticket in ServiceNow and revokes third-party SaaS access on worker termination.",
+      "trigger": "Event",
+      "direction": "Outbound",
+      "dataFlow": "Dataverse → External",
+      "relatedEntity": "cdm_employment",
       "status": "Active"
     }
   ],
   "functions": [
     {
-      "name": "PricingCalcFunction",
-      "description": "Computes work-order pricing from labor and parts.",
+      "name": "svc-sentiment-scoring-fn",
+      "description": "Azure Function wrapping Azure AI Language sentiment analysis; called from the CSAT sync flow to score free-text survey comments before writing con_sentiment.",
       "trigger": "HTTP",
       "runtime": "dotnet-isolated",
-      "calledBy": "WorkOrderPricingPlugin",
-      "purpose": "Pricing",
+      "calledBy": "con_servicefeedback",
+      "purpose": "Compute",
       "status": "Active"
     },
     {
-      "name": "InvoicePdfFunction",
-      "description": "Renders an invoice PDF on demand.",
+      "name": "IoT-Alert-To-WorkOrder-Function",
+      "description": "Azure Function triggered by IoT Hub device alerts (Connected Field Service) that creates a work order and links the affected customer asset.",
       "trigger": "HTTP",
       "runtime": "dotnet-isolated",
-      "calledBy": "Contoso Field Service",
-      "purpose": "Document generation",
+      "calledBy": "msdyn_workorder",
+      "purpose": "Compute",
+      "status": "Active"
+    },
+    {
+      "name": "fx-rate-ingest-func",
+      "description": "Azure Function that fetches daily FX rates from an external provider and pushes them into the Exchange Rate Sync cloud flow.",
+      "trigger": "HTTP",
+      "runtime": "dotnet-isolated",
+      "calledBy": "transactioncurrency",
+      "purpose": "Compute",
+      "status": "Active"
+    },
+    {
+      "name": "FinanceBudgetSyncFunction",
+      "description": "Azure Function brokering dual-write reconciliation of channel budget lines from Dynamics 365 Finance.",
+      "trigger": "HTTP",
+      "runtime": "dotnet-isolated",
+      "calledBy": "con_channelbudgetline",
+      "purpose": "Compute",
+      "status": "Active"
+    },
+    {
+      "name": "CoE Inventory Sync Function",
+      "description": "Timer-triggered Azure Function calling the Power Platform Admin API + Microsoft Graph to upsert environment and capacity data into con_environmentinventory nightly.",
+      "trigger": "HTTP",
+      "runtime": "dotnet-isolated",
+      "calledBy": "con_environmentinventory",
+      "purpose": "Compute",
       "status": "Active"
     }
   ],
   "externalIntegrations": [
     {
-      "name": "Billing API",
+      "name": "F&O Dual-Write: Customer & Invoice",
       "type": "REST",
       "direction": "Outbound",
-      "trigger": "Work order completion",
-      "dataExchanged": "Invoices",
+      "trigger": "Event",
+      "dataExchanged": "Dual-write mapping surfacing F&O customer payments/settlements (con_custtranspayment) and syncing invoice status back into Sales.",
       "connector": "HTTP"
     },
     {
-      "name": "Mapping Service",
+      "name": "warranty-dualwrite-agreement",
       "type": "REST",
       "direction": "Outbound",
-      "trigger": "Dispatch",
-      "dataExchanged": "Routes & ETAs",
-      "connector": "Custom Connector"
+      "trigger": "Event",
+      "dataExchanged": "Dual-write / virtual-entity integration surfacing Finance & Operations warranty and service agreements into Dataverse for warranty lookups on cases.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "FandO-DualWrite-Procurement",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Dual-write integration surfacing F&O purchase orders and vendors into Dataverse for truck stock replenishment.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "ProjectOps-to-FinOps DualWrite",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Dual-write mapping synchronizing project contracts, actuals, and vendor invoices between Dataverse and Finance & Operations project accounting.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "F&O Marketing Spend Virtual Entity Provider",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Virtual entity data provider surfacing Finance & Operations committed marketing spend/PO lines into Dataverse for budget-vs-actual on campaign briefs.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "OneLake / ADLS Gen2 Ingestion",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Microsoft Fabric OneLake and ADLS Gen2 backing storage feeding CI-Data ingestion via Power Query.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "DualWrite-Finance-Sync",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Microsoft Dual-write link between D365 Finance & Operations and Dataverse keeping cdm_company, mserp_ledger, mserp_mainaccount, mserp_vendinvoiceheader, and mserp_custpaymentjournalline in near-real-time sync.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "Dual-Write Orchestration",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Dual-write mapping synchronizing released products, PO headers/lines, sales order lines, and warehouses bidirectionally between F&O and Dataverse.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "DualWrite-RetailTransactionSync",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Dual-write and virtual-entity link surfacing the F&O RetailTransactionTable, RetailStatementTable, and RetailTerminal into Dataverse.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "F&O Dual-Write HR Bridge",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Finance & Operations dual-write synchronization surfacing HcmWorker/HcmEmployment/HcmPosition/CompanyInfo into Dataverse cdm_* tables.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "OmnichannelVoiceEventGrid",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Azure Communication Services powering the voice channel; call events flow into Omnichannel via Event Grid.",
+      "connector": "HTTP"
+    },
+    {
+      "name": "Dual-Write Ledger Dimension Bridge",
+      "type": "REST",
+      "direction": "Outbound",
+      "trigger": "Event",
+      "dataExchanged": "Finance & Operations dual-write / virtual entity surfacing F&O financial dimensions into Dataverse for cross-app cost-center reconciliation.",
+      "connector": "HTTP"
     }
   ],
   "summary": {
-    "totalAzureComponents": 6,
+    "totalAzureComponents": 24,
     "byType": {
-      "logicApp": 2,
-      "function": 2,
-      "externalIntegration": 2
+      "logicApp": 7,
+      "function": 5,
+      "externalIntegration": 12
     },
-    "byTrigger": {
-      "HTTP": 2,
-      "scheduled": 1,
-      "event": 3
-    },
-    "byDirection": {
-      "Outbound": 4,
-      "Internal": 2
-    }
+    "byTrigger": {},
+    "byDirection": {}
   }
 }

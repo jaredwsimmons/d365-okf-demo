@@ -1,0 +1,1 @@
+{"item":{"id":"plg-leavebalancevalidationplugin","name":"LeaveBalanceValidationPlugin","tags":{},"solution":"ContosoHumanResources","businessLogic":"Pre-validation plugin that blocks a leave request when con_totaldays exceeds the worker's accrued balance on the matching mshr_leaveenrollment record."},"metadata":{"type":"plugins","id":"plg-leavebalancevalidationplugin"}}

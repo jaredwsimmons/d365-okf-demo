@@ -1,0 +1,1 @@
+{"item":{"id":"plg-positionhierarchyguardplugin","name":"PositionHierarchyGuardPlugin","tags":{},"solution":"ContosoHumanResources","businessLogic":"Prevents circular reporting relationships when cdm_reportstoposition is set and cascades department changes to child positions."},"metadata":{"type":"plugins","id":"plg-positionhierarchyguardplugin"}}

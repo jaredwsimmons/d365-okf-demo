@@ -1,0 +1,1 @@
+{"item":{"id":"plg-timeentryvalidationplugin","name":"TimeEntryValidationPlugin","tags":{},"solution":"ContosoProjectOperations","businessLogic":"Pre-operation validation preventing time entries against closed projects or outside the assignment date range, and enforcing Contoso overtime policy."},"metadata":{"type":"plugins","id":"plg-timeentryvalidationplugin"}}

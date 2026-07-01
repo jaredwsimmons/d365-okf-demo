@@ -1,1 +1,0 @@
-{"item":{"id":"plg-invoice-number","name":"InvoiceNumberPlugin","tags":{},"solution":"ContosoCore","businessLogic":"Stamps a sequential, prefixed invoice number on create."},"metadata":{"type":"plugins","id":"plg-invoice-number"}}

@@ -1,74 +1,4745 @@
 {
   "views": [
     {
-      "viewId": "vw-workorder-active",
+      "viewId": "vw-lead-active",
+      "name": "Active Leads",
+      "solution": "ContosoSales",
+      "entity": "lead",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
+    },
+    {
+      "viewId": "vw-lead-all",
+      "name": "All Leads",
+      "solution": "ContosoSales",
+      "entity": "lead",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
+    },
+    {
+      "viewId": "vw-lead-mine",
+      "name": "My Leads",
+      "solution": "ContosoSales",
+      "entity": "lead",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
+    },
+    {
+      "viewId": "vw-opportunity-active",
+      "name": "Active Opportunities",
+      "solution": "ContosoSales",
+      "entity": "opportunity",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-opportunity-all",
+      "name": "All Opportunities",
+      "solution": "ContosoSales",
+      "entity": "opportunity",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-opportunity-mine",
+      "name": "My Opportunities",
+      "solution": "ContosoSales",
+      "entity": "opportunity",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-opportunityproduct-active",
+      "name": "Active Opportunity Products",
+      "solution": "msdyn_SalesPro",
+      "entity": "opportunityproduct",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.02"
+      }
+    },
+    {
+      "viewId": "vw-opportunityproduct-all",
+      "name": "All Opportunity Products",
+      "solution": "msdyn_SalesPro",
+      "entity": "opportunityproduct",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.02"
+      }
+    },
+    {
+      "viewId": "vw-quote-active",
+      "name": "Active Quotes",
+      "solution": "msdyn_SalesPro",
+      "entity": "quote",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-quote-all",
+      "name": "All Quotes",
+      "solution": "msdyn_SalesPro",
+      "entity": "quote",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-quotedetail-active",
+      "name": "Active Quote Products",
+      "solution": "msdyn_SalesPro",
+      "entity": "quotedetail",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "viewId": "vw-quotedetail-all",
+      "name": "All Quote Products",
+      "solution": "msdyn_SalesPro",
+      "entity": "quotedetail",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "viewId": "vw-salesorder-active",
+      "name": "Active Orders",
+      "solution": "ContosoSales",
+      "entity": "salesorder",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-salesorder-all",
+      "name": "All Orders",
+      "solution": "ContosoSales",
+      "entity": "salesorder",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-salesorder-mine",
+      "name": "My Orders",
+      "solution": "ContosoSales",
+      "entity": "salesorder",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-salesorderdetail-active",
+      "name": "Active Order Products",
+      "solution": "msdyn_SalesPro",
+      "entity": "salesorderdetail",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.01"
+      }
+    },
+    {
+      "viewId": "vw-salesorderdetail-all",
+      "name": "All Order Products",
+      "solution": "msdyn_SalesPro",
+      "entity": "salesorderdetail",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.01"
+      }
+    },
+    {
+      "viewId": "vw-invoice-active",
+      "name": "Active Invoices",
+      "solution": "msdyn_SalesPro",
+      "entity": "invoice",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-invoice-all",
+      "name": "All Invoices",
+      "solution": "msdyn_SalesPro",
+      "entity": "invoice",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-product-active",
+      "name": "Active Products",
+      "solution": "ContosoSales",
+      "entity": "product",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.02"
+      }
+    },
+    {
+      "viewId": "vw-product-all",
+      "name": "All Products",
+      "solution": "ContosoSales",
+      "entity": "product",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.02"
+      }
+    },
+    {
+      "viewId": "vw-product-mine",
+      "name": "My Products",
+      "solution": "ContosoSales",
+      "entity": "product",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.02"
+      }
+    },
+    {
+      "viewId": "vw-pricelevel-active",
+      "name": "Active Price Lists",
+      "solution": "msdyn_SalesPro",
+      "entity": "pricelevel",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-pricelevel-all",
+      "name": "All Price Lists",
+      "solution": "msdyn_SalesPro",
+      "entity": "pricelevel",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-competitor-active",
+      "name": "Active Competitors",
+      "solution": "msdyn_SalesPro",
+      "entity": "competitor",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
+    },
+    {
+      "viewId": "vw-competitor-all",
+      "name": "All Competitors",
+      "solution": "msdyn_SalesPro",
+      "entity": "competitor",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01"
+      }
+    },
+    {
+      "viewId": "vw-goal-active",
+      "name": "Active Goals",
+      "solution": "msdyn_SalesPro",
+      "entity": "goal",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-goal-all",
+      "name": "All Goals",
+      "solution": "msdyn_SalesPro",
+      "entity": "goal",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-territory-active",
+      "name": "Active Sales Territories",
+      "solution": "msdyn_SalesPro",
+      "entity": "territory",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.02"
+      }
+    },
+    {
+      "viewId": "vw-territory-all",
+      "name": "All Sales Territories",
+      "solution": "msdyn_SalesPro",
+      "entity": "territory",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.02"
+      }
+    },
+    {
+      "viewId": "vw-campaign-active",
+      "name": "Active Campaigns",
+      "solution": "msdyn_SalesPro",
+      "entity": "campaign",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-campaign-all",
+      "name": "All Campaigns",
+      "solution": "msdyn_SalesPro",
+      "entity": "campaign",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-dealdeskreview-active",
+      "name": "Active Deal Desk Reviews",
+      "solution": "ContosoSales",
+      "entity": "con_dealdeskreview",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-dealdeskreview-all",
+      "name": "All Deal Desk Reviews",
+      "solution": "ContosoSales",
+      "entity": "con_dealdeskreview",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-dealdeskreview-mine",
+      "name": "My Deal Desk Reviews",
+      "solution": "ContosoSales",
+      "entity": "con_dealdeskreview",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "SA.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-salesplaybook-active",
+      "name": "Active Sales Playbooks",
+      "solution": "ContosoSales",
+      "entity": "con_salesplaybook",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-salesplaybook-all",
+      "name": "All Sales Playbooks",
+      "solution": "ContosoSales",
+      "entity": "con_salesplaybook",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-salesplaybook-mine",
+      "name": "My Sales Playbooks",
+      "solution": "ContosoSales",
+      "entity": "con_salesplaybook",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-custtranspayment-active",
+      "name": "Active Customer Payment (F&O)s",
+      "solution": "msdyn_SalesPro",
+      "entity": "con_custtranspayment",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-custtranspayment-all",
+      "name": "All Customer Payment (F&O)s",
+      "solution": "msdyn_SalesPro",
+      "entity": "con_custtranspayment",
+      "tags": {
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.01"
+      }
+    },
+    {
+      "viewId": "vw-incident-active",
+      "name": "Active Cases",
+      "solution": "ContosoCustomerService",
+      "entity": "incident",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "viewId": "vw-incident-all",
+      "name": "All Cases",
+      "solution": "ContosoCustomerService",
+      "entity": "incident",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "viewId": "vw-incident-mine",
+      "name": "My Cases",
+      "solution": "ContosoCustomerService",
+      "entity": "incident",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "viewId": "vw-incidentresolution-active",
+      "name": "Active Case Resolutions",
+      "solution": "msdyn_CustomerService",
+      "entity": "incidentresolution",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-incidentresolution-all",
+      "name": "All Case Resolutions",
+      "solution": "msdyn_CustomerService",
+      "entity": "incidentresolution",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-knowledgearticle-active",
+      "name": "Active Knowledge Articles",
+      "solution": "ContosoCustomerService",
+      "entity": "knowledgearticle",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "viewId": "vw-knowledgearticle-all",
+      "name": "All Knowledge Articles",
+      "solution": "ContosoCustomerService",
+      "entity": "knowledgearticle",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "viewId": "vw-knowledgearticle-mine",
+      "name": "My Knowledge Articles",
+      "solution": "ContosoCustomerService",
+      "entity": "knowledgearticle",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "viewId": "vw-entitlement-active",
+      "name": "Active Entitlements",
+      "solution": "msdyn_CustomerService",
+      "entity": "entitlement",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-entitlement-all",
+      "name": "All Entitlements",
+      "solution": "msdyn_CustomerService",
+      "entity": "entitlement",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-entitlementtemplate-active",
+      "name": "Active Entitlement Templates",
+      "solution": "msdyn_CustomerService",
+      "entity": "entitlementtemplate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "viewId": "vw-entitlementtemplate-all",
+      "name": "All Entitlement Templates",
+      "solution": "msdyn_CustomerService",
+      "entity": "entitlementtemplate",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "viewId": "vw-sla-active",
+      "name": "Active SLAs",
+      "solution": "ContosoCustomerService",
+      "entity": "sla",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-sla-all",
+      "name": "All SLAs",
+      "solution": "ContosoCustomerService",
+      "entity": "sla",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-sla-mine",
+      "name": "My SLAs",
+      "solution": "ContosoCustomerService",
+      "entity": "sla",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-slaitem-active",
+      "name": "Active SLA Items",
+      "solution": "msdyn_CustomerService",
+      "entity": "slaitem",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "viewId": "vw-slaitem-all",
+      "name": "All SLA Items",
+      "solution": "msdyn_CustomerService",
+      "entity": "slaitem",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "viewId": "vw-queue-active",
+      "name": "Active Queues",
+      "solution": "msdyn_CustomerService",
+      "entity": "queue",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-queue-all",
+      "name": "All Queues",
+      "solution": "msdyn_CustomerService",
+      "entity": "queue",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-queueitem-active",
+      "name": "Active Queue Items",
+      "solution": "msdyn_CustomerService",
+      "entity": "queueitem",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "viewId": "vw-queueitem-all",
+      "name": "All Queue Items",
+      "solution": "msdyn_CustomerService",
+      "entity": "queueitem",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocsession-active",
+      "name": "Active Conversation (Session)s",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_ocsession",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocsession-all",
+      "name": "All Conversation (Session)s",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_ocsession",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-contract-active",
+      "name": "Active Contracts",
+      "solution": "msdyn_CustomerService",
+      "entity": "contract",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "viewId": "vw-contract-all",
+      "name": "All Contracts",
+      "solution": "msdyn_CustomerService",
+      "entity": "contract",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-customervoicesurvey-active",
+      "name": "Active Customer Voice Surveies",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_customervoicesurvey",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-customervoicesurvey-all",
+      "name": "All Customer Voice Surveies",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_customervoicesurvey",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-casedeflection-active",
+      "name": "Active Case Deflections",
+      "solution": "ContosoCustomerService",
+      "entity": "con_casedeflection",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "viewId": "vw-con-casedeflection-all",
+      "name": "All Case Deflections",
+      "solution": "ContosoCustomerService",
+      "entity": "con_casedeflection",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "viewId": "vw-con-casedeflection-mine",
+      "name": "My Case Deflections",
+      "solution": "ContosoCustomerService",
+      "entity": "con_casedeflection",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "CS.20.01"
+      }
+    },
+    {
+      "viewId": "vw-con-escalation-active",
+      "name": "Active Escalations",
+      "solution": "ContosoCustomerService",
+      "entity": "con_escalation",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-escalation-all",
+      "name": "All Escalations",
+      "solution": "ContosoCustomerService",
+      "entity": "con_escalation",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-escalation-mine",
+      "name": "My Escalations",
+      "solution": "ContosoCustomerService",
+      "entity": "con_escalation",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-servicefeedback-active",
+      "name": "Active Service Feedbacks",
+      "solution": "ContosoCustomerService",
+      "entity": "con_servicefeedback",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "viewId": "vw-con-servicefeedback-all",
+      "name": "All Service Feedbacks",
+      "solution": "ContosoCustomerService",
+      "entity": "con_servicefeedback",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "viewId": "vw-con-servicefeedback-mine",
+      "name": "My Service Feedbacks",
+      "solution": "ContosoCustomerService",
+      "entity": "con_servicefeedback",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.30",
+        "processCatalogL3": "CS.30.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-agreement-active",
+      "name": "Active Warranty Agreement (F&O)s",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_agreement",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-agreement-all",
+      "name": "All Warranty Agreement (F&O)s",
+      "solution": "msdyn_CustomerService",
+      "entity": "msdyn_agreement",
+      "tags": {
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-workorder-active",
       "name": "Active Work Orders",
       "solution": "ContosoFieldService",
-      "entity": "con_workorder",
-      "tags": {}
+      "entity": "msdyn_workorder",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
     },
     {
-      "viewId": "vw-workorder-overdue",
-      "name": "Overdue Work Orders",
+      "viewId": "vw-msdyn-workorder-all",
+      "name": "All Work Orders",
       "solution": "ContosoFieldService",
-      "entity": "con_workorder",
-      "tags": {}
+      "entity": "msdyn_workorder",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
     },
     {
-      "viewId": "vw-servicevisit-today",
-      "name": "Today's Service Visits",
+      "viewId": "vw-msdyn-workorder-mine",
+      "name": "My Work Orders",
       "solution": "ContosoFieldService",
-      "entity": "con_servicevisit",
-      "tags": {}
+      "entity": "msdyn_workorder",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
     },
     {
-      "viewId": "vw-agreement-renewals",
-      "name": "Agreements Due for Renewal",
+      "viewId": "vw-msdyn-workorderproduct-active",
+      "name": "Active Work Order Products",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_workorderproduct",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-workorderproduct-all",
+      "name": "All Work Order Products",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_workorderproduct",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-workorderservice-active",
+      "name": "Active Work Order Services",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_workorderservice",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-workorderservice-all",
+      "name": "All Work Order Services",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_workorderservice",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-incidenttype-active",
+      "name": "Active Incident Types",
       "solution": "ContosoFieldService",
-      "entity": "con_agreement",
-      "tags": {}
+      "entity": "msdyn_incidenttype",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
     },
     {
-      "viewId": "vw-asset-byaccount",
-      "name": "Assets by Account",
+      "viewId": "vw-msdyn-incidenttype-all",
+      "name": "All Incident Types",
       "solution": "ContosoFieldService",
-      "entity": "con_asset",
-      "tags": {}
+      "entity": "msdyn_incidenttype",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
     },
     {
-      "viewId": "vw-technician-active",
-      "name": "Active Technicians",
+      "viewId": "vw-msdyn-incidenttype-mine",
+      "name": "My Incident Types",
       "solution": "ContosoFieldService",
-      "entity": "con_technician",
-      "tags": {}
+      "entity": "msdyn_incidenttype",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
     },
     {
-      "viewId": "vw-inspection-failed",
-      "name": "Failed Inspections",
+      "viewId": "vw-bookableresource-active",
+      "name": "Active Bookable Resources",
       "solution": "ContosoFieldService",
-      "entity": "con_inspection",
-      "tags": {}
+      "entity": "bookableresource",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
     },
     {
-      "viewId": "vw-quote-open",
-      "name": "Open Quotes",
-      "solution": "ContosoSales",
-      "entity": "con_quote",
-      "tags": {}
+      "viewId": "vw-bookableresource-all",
+      "name": "All Bookable Resources",
+      "solution": "ContosoFieldService",
+      "entity": "bookableresource",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
     },
     {
-      "viewId": "vw-project-inflight",
-      "name": "In-Flight Projects",
-      "solution": "ContosoSales",
-      "entity": "con_project",
-      "tags": {}
+      "viewId": "vw-bookableresource-mine",
+      "name": "My Bookable Resources",
+      "solution": "ContosoFieldService",
+      "entity": "bookableresource",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
     },
     {
-      "viewId": "vw-invoice-unpaid",
-      "name": "Unpaid Invoices",
-      "solution": "ContosoCore",
-      "entity": "con_invoice",
-      "tags": {}
+      "viewId": "vw-bookableresourcebooking-active",
+      "name": "Active Bookable Resource Bookings",
+      "solution": "msdyn_FieldService",
+      "entity": "bookableresourcebooking",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-bookableresourcebooking-all",
+      "name": "All Bookable Resource Bookings",
+      "solution": "msdyn_FieldService",
+      "entity": "bookableresourcebooking",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-resourcerequirement-active",
+      "name": "Active Resource Requirements",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_resourcerequirement",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.03",
+        "processCatalogL3": "FS.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-resourcerequirement-all",
+      "name": "All Resource Requirements",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_resourcerequirement",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.03",
+        "processCatalogL3": "FS.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-customerasset-active",
+      "name": "Active Customer Assets",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_customerasset",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-customerasset-all",
+      "name": "All Customer Assets",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_customerasset",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-customerasset-mine",
+      "name": "My Customer Assets",
+      "solution": "ContosoFieldService",
+      "entity": "msdyn_customerasset",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-rma-active",
+      "name": "Active Return Merchandise Authorizations",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_rma",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-rma-all",
+      "name": "All Return Merchandise Authorizations",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_rma",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-timeentry-active",
+      "name": "Active Time Entries",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_timeentry",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-timeentry-all",
+      "name": "All Time Entries",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_timeentry",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-timeentry-mine",
+      "name": "My Time Entries",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_timeentry",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-productinventory-active",
+      "name": "Active Product Inventories",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_productinventory",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-productinventory-all",
+      "name": "All Product Inventories",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_productinventory",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-warehouse-active",
+      "name": "Active Warehouses",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_warehouse",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-warehouse-all",
+      "name": "All Warehouses",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_warehouse",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-safetyinspection-active",
+      "name": "Active Safety Inspections",
+      "solution": "ContosoFieldService",
+      "entity": "con_safetyinspection",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-safetyinspection-all",
+      "name": "All Safety Inspections",
+      "solution": "ContosoFieldService",
+      "entity": "con_safetyinspection",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-safetyinspection-mine",
+      "name": "My Safety Inspections",
+      "solution": "ContosoFieldService",
+      "entity": "con_safetyinspection",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-slapenaltyrule-active",
+      "name": "Active SLA Penalty Rules",
+      "solution": "ContosoFieldService",
+      "entity": "con_slapenaltyrule",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "viewId": "vw-con-slapenaltyrule-all",
+      "name": "All SLA Penalty Rules",
+      "solution": "ContosoFieldService",
+      "entity": "con_slapenaltyrule",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "viewId": "vw-con-slapenaltyrule-mine",
+      "name": "My SLA Penalty Rules",
+      "solution": "ContosoFieldService",
+      "entity": "con_slapenaltyrule",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-purchaseorder-active",
+      "name": "Active Purchase Orders",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_purchaseorder",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-purchaseorder-all",
+      "name": "All Purchase Orders",
+      "solution": "msdyn_FieldService",
+      "entity": "msdyn_purchaseorder",
+      "tags": {
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-project-active",
+      "name": "Active Projects",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_project",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-project-all",
+      "name": "All Projects",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_project",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-project-mine",
+      "name": "My Projects",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_project",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projecttask-active",
+      "name": "Active Project Tasks",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projecttask",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projecttask-all",
+      "name": "All Project Tasks",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projecttask",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projectteam-active",
+      "name": "Active Project Team Members",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectteam",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projectteam-all",
+      "name": "All Project Team Members",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectteam",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-resourceassignment-active",
+      "name": "Active Resource Assignments",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_resourceassignment",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-resourceassignment-all",
+      "name": "All Resource Assignments",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_resourceassignment",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projectcontract-active",
+      "name": "Active Project Contracts",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectcontract",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.03",
+        "processCatalogL3": "PJ.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projectcontract-all",
+      "name": "All Project Contracts",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectcontract",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.03",
+        "processCatalogL3": "PJ.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-contractline-active",
+      "name": "Active Contract Lines",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_contractline",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-contractline-all",
+      "name": "All Contract Lines",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_contractline",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-estimate-active",
+      "name": "Active Estimates",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_estimate",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-estimate-all",
+      "name": "All Estimates",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_estimate",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-estimateline-active",
+      "name": "Active Estimate Lines",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_estimateline",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-estimateline-all",
+      "name": "All Estimate Lines",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_estimateline",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-expense-active",
+      "name": "Active Expenses",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_expense",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-expense-all",
+      "name": "All Expenses",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_expense",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-expense-mine",
+      "name": "My Expenses",
+      "solution": "ContosoProjectOperations",
+      "entity": "msdyn_expense",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-actuals-active",
+      "name": "Active Actuals",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_actuals",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-actuals-all",
+      "name": "All Actuals",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_actuals",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-invoice-active",
+      "name": "Active Project Invoices",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_invoice",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-invoice-all",
+      "name": "All Project Invoices",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_invoice",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-projecthealthreview-active",
+      "name": "Active Project Health Reviews",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_projecthealthreview",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-projecthealthreview-all",
+      "name": "All Project Health Reviews",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_projecthealthreview",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-projecthealthreview-mine",
+      "name": "My Project Health Reviews",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_projecthealthreview",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-resourcerequest-active",
+      "name": "Active Staffing Requests",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_resourcerequest",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-resourcerequest-all",
+      "name": "All Staffing Requests",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_resourcerequest",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-resourcerequest-mine",
+      "name": "My Staffing Requests",
+      "solution": "ContosoProjectOperations",
+      "entity": "con_resourcerequest",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": "PJ.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projectparameter-active",
+      "name": "Active Project Parameters",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectparameter",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-projectparameter-all",
+      "name": "All Project Parameters",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "msdyn_projectparameter",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-faoprojectvendorinvoice-active",
+      "name": "Active Vendor Invoice (F&O)s",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "con_faoprojectvendorinvoice",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-faoprojectvendorinvoice-all",
+      "name": "All Vendor Invoice (F&O)s",
+      "solution": "msdyn_ProjectServiceCore",
+      "entity": "con_faoprojectvendorinvoice",
+      "tags": {
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-journey-active",
+      "name": "Active Journeies",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_journey",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-journey-all",
+      "name": "All Journeies",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_journey",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-journey-mine",
+      "name": "My Journeies",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_journey",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-segment-active",
+      "name": "Active Segments",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_segment",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-segment-all",
+      "name": "All Segments",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_segment",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-segment-mine",
+      "name": "My Segments",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_segment",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-marketingemail-active",
+      "name": "Active Marketing Emails",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_marketingemail",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-marketingemail-all",
+      "name": "All Marketing Emails",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_marketingemail",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-marketingemail-mine",
+      "name": "My Marketing Emails",
+      "solution": "ContosoMarketing",
+      "entity": "msdynmkt_marketingemail",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-channeltemplate-active",
+      "name": "Active Channel Templates",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_channeltemplate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-channeltemplate-all",
+      "name": "All Channel Templates",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_channeltemplate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-marketingform-active",
+      "name": "Active Marketing Forms",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_marketingform",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-marketingform-all",
+      "name": "All Marketing Forms",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_marketingform",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-leadscoringmodel-active",
+      "name": "Active Lead Scoring Models",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_leadscoringmodel",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-leadscoringmodel-all",
+      "name": "All Lead Scoring Models",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_leadscoringmodel",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-contact-active",
+      "name": "Active Contacts",
+      "solution": "ContosoMarketing",
+      "entity": "contact",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-contact-all",
+      "name": "All Contacts",
+      "solution": "ContosoMarketing",
+      "entity": "contact",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-contact-mine",
+      "name": "My Contacts",
+      "solution": "ContosoMarketing",
+      "entity": "contact",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msevtmgt-event-active",
+      "name": "Active Events",
+      "solution": "ContosoMarketing",
+      "entity": "msevtmgt_event",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msevtmgt-event-all",
+      "name": "All Events",
+      "solution": "ContosoMarketing",
+      "entity": "msevtmgt_event",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msevtmgt-event-mine",
+      "name": "My Events",
+      "solution": "ContosoMarketing",
+      "entity": "msevtmgt_event",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msevtmgt-eventregistration-active",
+      "name": "Active Event Registrations",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msevtmgt_eventregistration",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msevtmgt-eventregistration-all",
+      "name": "All Event Registrations",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msevtmgt_eventregistration",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-contactpointconsent3-active",
+      "name": "Active Contact Point Consents",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_contactpointconsent3",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-contactpointconsent3-all",
+      "name": "All Contact Point Consents",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_contactpointconsent3",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-trigger-active",
+      "name": "Active Triggers",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_trigger",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynmkt-trigger-all",
+      "name": "All Triggers",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "msdynmkt_trigger",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-campaignbrief-active",
+      "name": "Active Campaign Briefs",
+      "solution": "ContosoMarketing",
+      "entity": "con_campaignbrief",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-campaignbrief-all",
+      "name": "All Campaign Briefs",
+      "solution": "ContosoMarketing",
+      "entity": "con_campaignbrief",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-campaignbrief-mine",
+      "name": "My Campaign Briefs",
+      "solution": "ContosoMarketing",
+      "entity": "con_campaignbrief",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-legalfootertemplate-active",
+      "name": "Active Legal Footer Templates",
+      "solution": "ContosoMarketing",
+      "entity": "con_legalfootertemplate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-legalfootertemplate-all",
+      "name": "All Legal Footer Templates",
+      "solution": "ContosoMarketing",
+      "entity": "con_legalfootertemplate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-legalfootertemplate-mine",
+      "name": "My Legal Footer Templates",
+      "solution": "ContosoMarketing",
+      "entity": "con_legalfootertemplate",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-marketingspendline-active",
+      "name": "Active Marketing Spend Line (F&O)s",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "con_marketingspendline",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.02"
+      }
+    },
+    {
+      "viewId": "vw-con-marketingspendline-all",
+      "name": "All Marketing Spend Line (F&O)s",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "entity": "con_marketingspendline",
+      "tags": {
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "MK.04.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-customerprofile-active",
+      "name": "Active Customer Profile (Unified)s",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_customerprofile",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-customerprofile-all",
+      "name": "All Customer Profile (Unified)s",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_customerprofile",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-customerprofile-mine",
+      "name": "My Customer Profile (Unified)s",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_customerprofile",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-datasource-active",
+      "name": "Active Data Sources",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_datasource",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-datasource-all",
+      "name": "All Data Sources",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_datasource",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-entity-active",
+      "name": "Active Ingested Entity (Map)s",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_entity",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-entity-all",
+      "name": "All Ingested Entity (Map)s",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_entity",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-measure-active",
+      "name": "Active Measures",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_measure",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-measure-all",
+      "name": "All Measures",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_measure",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-measure-mine",
+      "name": "My Measures",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_measure",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-segment-active",
+      "name": "Active Segments",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_segment",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": "CI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-segment-all",
+      "name": "All Segments",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_segment",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": "CI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-segment-mine",
+      "name": "My Segments",
+      "solution": "ContosoCustomerInsights",
+      "entity": "msdynci_segment",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": "CI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-prediction-active",
+      "name": "Active Predictions",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_prediction",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-prediction-all",
+      "name": "All Predictions",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_prediction",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-predictionscore-active",
+      "name": "Active Prediction Scores",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_predictionscore",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.03",
+        "processCatalogL3": "CI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-predictionscore-all",
+      "name": "All Prediction Scores",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_predictionscore",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.03",
+        "processCatalogL3": "CI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-activity-active",
+      "name": "Active Unified Activities",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_activity",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-activity-all",
+      "name": "All Unified Activities",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_activity",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-relationship-active",
+      "name": "Active Profile Relationships",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_relationship",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": "CI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-relationship-all",
+      "name": "All Profile Relationships",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_relationship",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": "CI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-consentledger-active",
+      "name": "Active Consent Ledgers",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_consentledger",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-consentledger-all",
+      "name": "All Consent Ledgers",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_consentledger",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-consentledger-mine",
+      "name": "My Consent Ledgers",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_consentledger",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-matchrule-active",
+      "name": "Active Match Rule Overrides",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_matchrule",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "viewId": "vw-con-matchrule-all",
+      "name": "All Match Rule Overrides",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_matchrule",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "viewId": "vw-con-matchrule-mine",
+      "name": "My Match Rule Overrides",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_matchrule",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01"
+      }
+    },
+    {
+      "viewId": "vw-con-datasourcehealth-active",
+      "name": "Active Data Source Health Logs",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_datasourcehealth",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-datasourcehealth-all",
+      "name": "All Data Source Health Logs",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_datasourcehealth",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-datasourcehealth-mine",
+      "name": "My Data Source Health Logs",
+      "solution": "ContosoCustomerInsights",
+      "entity": "con_datasourcehealth",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-custcustomerv3entity-active",
+      "name": "Active F&O Customer Master (Virtual)s",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "mserp_custcustomerv3entity",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.02"
+      }
+    },
+    {
+      "viewId": "vw-mserp-custcustomerv3entity-all",
+      "name": "All F&O Customer Master (Virtual)s",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "mserp_custcustomerv3entity",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.02"
+      }
+    },
+    {
+      "viewId": "vw-msdynci-semanticmapping-active",
+      "name": "Active Semantic Type Mappings",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_semanticmapping",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynci-semanticmapping-all",
+      "name": "All Semantic Type Mappings",
+      "solution": "msdynci_CustomerInsights",
+      "entity": "msdynci_semanticmapping",
+      "tags": {
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-mainaccount-active",
+      "name": "Active Main Accounts",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_mainaccount",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-mainaccount-all",
+      "name": "All Main Accounts",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_mainaccount",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-ledger-active",
+      "name": "Active Ledgers",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_ledger",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-ledger-all",
+      "name": "All Ledgers",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_ledger",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-generaljournalaccountentry-active",
+      "name": "Active General Journal Account Entries",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_generaljournalaccountentry",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-generaljournalaccountentry-all",
+      "name": "All General Journal Account Entries",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_generaljournalaccountentry",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-vendinvoiceheader-active",
+      "name": "Active Vendor Invoices",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_vendinvoiceheader",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-vendinvoiceheader-all",
+      "name": "All Vendor Invoices",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_vendinvoiceheader",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-custpaymentjournalline-active",
+      "name": "Active Customer Payment Journals",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_custpaymentjournalline",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-custpaymentjournalline-all",
+      "name": "All Customer Payment Journals",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_custpaymentjournalline",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-budgetregisterentry-active",
+      "name": "Active Budget Register Entries",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_budgetregisterentry",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-budgetregisterentry-all",
+      "name": "All Budget Register Entries",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_budgetregisterentry",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-fixedasset-active",
+      "name": "Active Fixed Assets",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_fixedasset",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-fixedasset-all",
+      "name": "All Fixed Assets",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_fixedasset",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-mserp-taxtransaction-active",
+      "name": "Active Tax Transactions",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_taxtransaction",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mserp-taxtransaction-all",
+      "name": "All Tax Transactions",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "mserp_taxtransaction",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-company-active",
+      "name": "Active Company (Legal Entity)s",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "cdm_company",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-company-all",
+      "name": "All Company (Legal Entity)s",
+      "solution": "msdyn_FinanceAndOperations",
+      "entity": "cdm_company",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-account-active",
+      "name": "Active Accounts",
+      "solution": "ContosoFinance",
+      "entity": "account",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-account-all",
+      "name": "All Accounts",
+      "solution": "ContosoFinance",
+      "entity": "account",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-account-mine",
+      "name": "My Accounts",
+      "solution": "ContosoFinance",
+      "entity": "account",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-transactioncurrency-active",
+      "name": "Active Currencies",
+      "solution": "ContosoFinance",
+      "entity": "transactioncurrency",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-transactioncurrency-all",
+      "name": "All Currencies",
+      "solution": "ContosoFinance",
+      "entity": "transactioncurrency",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-transactioncurrency-mine",
+      "name": "My Currencies",
+      "solution": "ContosoFinance",
+      "entity": "transactioncurrency",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-apapprovalrequest-active",
+      "name": "Active AP Approval Requests",
+      "solution": "ContosoFinance",
+      "entity": "con_apapprovalrequest",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-apapprovalrequest-all",
+      "name": "All AP Approval Requests",
+      "solution": "ContosoFinance",
+      "entity": "con_apapprovalrequest",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-apapprovalrequest-mine",
+      "name": "My AP Approval Requests",
+      "solution": "ContosoFinance",
+      "entity": "con_apapprovalrequest",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-capexrequest-active",
+      "name": "Active Capex Requests",
+      "solution": "ContosoFinance",
+      "entity": "con_capexrequest",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-capexrequest-all",
+      "name": "All Capex Requests",
+      "solution": "ContosoFinance",
+      "entity": "con_capexrequest",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-capexrequest-mine",
+      "name": "My Capex Requests",
+      "solution": "ContosoFinance",
+      "entity": "con_capexrequest",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "FI.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-financialdimensionmap-active",
+      "name": "Active Financial Dimension Maps",
+      "solution": "ContosoFinance",
+      "entity": "con_financialdimensionmap",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-financialdimensionmap-all",
+      "name": "All Financial Dimension Maps",
+      "solution": "ContosoFinance",
+      "entity": "con_financialdimensionmap",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-financialdimensionmap-mine",
+      "name": "My Financial Dimension Maps",
+      "solution": "ContosoFinance",
+      "entity": "con_financialdimensionmap",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-dunningaction-active",
+      "name": "Active Dunning Actions",
+      "solution": "ContosoFinance",
+      "entity": "con_dunningaction",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-dunningaction-all",
+      "name": "All Dunning Actions",
+      "solution": "ContosoFinance",
+      "entity": "con_dunningaction",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-dunningaction-mine",
+      "name": "My Dunning Actions",
+      "solution": "ContosoFinance",
+      "entity": "con_dunningaction",
+      "tags": {
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.03",
+        "processCatalogL3": "FI.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-releasedproduct-active",
+      "name": "Active Released Products",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_releasedproduct",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-releasedproduct-all",
+      "name": "All Released Products",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_releasedproduct",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-inventwarehouse-active",
+      "name": "Active Warehouses",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_inventwarehouse",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-inventwarehouse-all",
+      "name": "All Warehouses",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_inventwarehouse",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-purchaseorderheader-active",
+      "name": "Active Purchase Order Headers",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_purchaseorderheader",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-purchaseorderheader-all",
+      "name": "All Purchase Order Headers",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_purchaseorderheader",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-purchaseorderline-active",
+      "name": "Active Purchase Order Lines",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_purchaseorderline",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": "SC.31"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-purchaseorderline-all",
+      "name": "All Purchase Order Lines",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_purchaseorderline",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": "SC.31"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-salesorderline-active",
+      "name": "Active Sales Order Line (F&O)s",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_salesorderline",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.10",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-salesorderline-all",
+      "name": "All Sales Order Line (F&O)s",
+      "solution": "msdyn_SupplyChain",
+      "entity": "msdyn_salesorderline",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.10",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-vendor-active",
+      "name": "Active Vendors",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_vendor",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "viewId": "vw-con-vendor-all",
+      "name": "All Vendors",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_vendor",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "viewId": "vw-con-vendor-mine",
+      "name": "My Vendors",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_vendor",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "viewId": "vw-con-purchaserequisition-active",
+      "name": "Active Purchase Requisitions",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_purchaserequisition",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-purchaserequisition-all",
+      "name": "All Purchase Requisitions",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_purchaserequisition",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-purchaserequisition-mine",
+      "name": "My Purchase Requisitions",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_purchaserequisition",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.30",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-inventorycount-active",
+      "name": "Active Inventory Counts",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_inventorycount",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.21"
+      }
+    },
+    {
+      "viewId": "vw-con-inventorycount-all",
+      "name": "All Inventory Counts",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_inventorycount",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.21"
+      }
+    },
+    {
+      "viewId": "vw-con-inventorycount-mine",
+      "name": "My Inventory Counts",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_inventorycount",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.21"
+      }
+    },
+    {
+      "viewId": "vw-con-shipment-active",
+      "name": "Active Shipments",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_shipment",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.50",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-shipment-all",
+      "name": "All Shipments",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_shipment",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.50",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-shipment-mine",
+      "name": "My Shipments",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_shipment",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.50",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-demandforecast-active",
+      "name": "Active Demand Forecasts",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_demandforecast",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "viewId": "vw-con-demandforecast-all",
+      "name": "All Demand Forecasts",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_demandforecast",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "viewId": "vw-con-demandforecast-mine",
+      "name": "My Demand Forecasts",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_demandforecast",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": "SC.22"
+      }
+    },
+    {
+      "viewId": "vw-uom-active",
+      "name": "Active Units",
+      "solution": "msdyn_SupplyChain",
+      "entity": "uom",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-uom-all",
+      "name": "All Units",
+      "solution": "msdyn_SupplyChain",
+      "entity": "uom",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-bomcomponent-active",
+      "name": "Active BOM Components",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_bomcomponent",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-bomcomponent-all",
+      "name": "All BOM Components",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_bomcomponent",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-bomcomponent-mine",
+      "name": "My BOM Components",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_bomcomponent",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-productionorder-active",
+      "name": "Active Production Orders",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_productionorder",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "viewId": "vw-con-productionorder-all",
+      "name": "All Production Orders",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_productionorder",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "viewId": "vw-con-productionorder-mine",
+      "name": "My Production Orders",
+      "solution": "ContosoSupplyChain",
+      "entity": "con_productionorder",
+      "tags": {
+        "processCatalogL1": "SC.00 Supply Chain Management",
+        "processCatalogL2": "SC.40",
+        "processCatalogL3": "SC.41"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailchannel-active",
+      "name": "Active Retail Channels",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailchannel",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.01",
+        "processCatalogL3": "CO.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailchannel-all",
+      "name": "All Retail Channels",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailchannel",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.01",
+        "processCatalogL3": "CO.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailchannel-mine",
+      "name": "My Retail Channels",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailchannel",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.01",
+        "processCatalogL3": "CO.01.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailstore-active",
+      "name": "Active Retail Stores",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailstore",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailstore-all",
+      "name": "All Retail Stores",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailstore",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailstore-mine",
+      "name": "My Retail Stores",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailstore",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailterminal-active",
+      "name": "Active Retail Terminal (Register)s",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailterminal",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailterminal-all",
+      "name": "All Retail Terminal (Register)s",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailterminal",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-channelprofile-active",
+      "name": "Active Channel Profiles",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_channelprofile",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-channelprofile-all",
+      "name": "All Channel Profiles",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_channelprofile",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransaction-active",
+      "name": "Active Retail Transactions",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailtransaction",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransaction-all",
+      "name": "All Retail Transactions",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailtransaction",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransaction-mine",
+      "name": "My Retail Transactions",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_retailtransaction",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransactionsalesline-active",
+      "name": "Active Retail Transaction Sales Lines",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailtransactionsalesline",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransactionsalesline-all",
+      "name": "All Retail Transaction Sales Lines",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailtransactionsalesline",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransactionpaymentline-active",
+      "name": "Active Retail Transaction Payment Lines",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailtransactionpaymentline",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailtransactionpaymentline-all",
+      "name": "All Retail Transaction Payment Lines",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailtransactionpaymentline",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailstatement-active",
+      "name": "Active Retail Statements",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailstatement",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-retailstatement-all",
+      "name": "All Retail Statements",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_retailstatement",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-pricingrule-active",
+      "name": "Active Pricing Rules",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_pricingrule",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-pricingrule-all",
+      "name": "All Pricing Rules",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_pricingrule",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-loyaltyprogram-active",
+      "name": "Active Loyalty Programs",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltyprogram",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-loyaltyprogram-all",
+      "name": "All Loyalty Programs",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltyprogram",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-loyaltyprogram-mine",
+      "name": "My Loyalty Programs",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltyprogram",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-loyaltycard-active",
+      "name": "Active Loyalty Cards",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltycard",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-loyaltycard-all",
+      "name": "All Loyalty Cards",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltycard",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-loyaltycard-mine",
+      "name": "My Loyalty Cards",
+      "solution": "ContosoCommerce",
+      "entity": "msdyn_loyaltycard",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-giftcard-active",
+      "name": "Active Gift Cards",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_giftcard",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-giftcard-all",
+      "name": "All Gift Cards",
+      "solution": "msdyn_Commerce",
+      "entity": "msdyn_giftcard",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-clienteling-active",
+      "name": "Active Clienteling Appointments",
+      "solution": "ContosoCommerce",
+      "entity": "con_clienteling",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-clienteling-all",
+      "name": "All Clienteling Appointments",
+      "solution": "ContosoCommerce",
+      "entity": "con_clienteling",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-clienteling-mine",
+      "name": "My Clienteling Appointments",
+      "solution": "ContosoCommerce",
+      "entity": "con_clienteling",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-curbsideorder-active",
+      "name": "Active Curbside Pickup Orders",
+      "solution": "ContosoCommerce",
+      "entity": "con_curbsideorder",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-curbsideorder-all",
+      "name": "All Curbside Pickup Orders",
+      "solution": "ContosoCommerce",
+      "entity": "con_curbsideorder",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-curbsideorder-mine",
+      "name": "My Curbside Pickup Orders",
+      "solution": "ContosoCommerce",
+      "entity": "con_curbsideorder",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "CO.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-pricematchrequest-active",
+      "name": "Active Price Match Requests",
+      "solution": "ContosoCommerce",
+      "entity": "con_pricematchrequest",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-pricematchrequest-all",
+      "name": "All Price Match Requests",
+      "solution": "ContosoCommerce",
+      "entity": "con_pricematchrequest",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-pricematchrequest-mine",
+      "name": "My Price Match Requests",
+      "solution": "ContosoCommerce",
+      "entity": "con_pricematchrequest",
+      "tags": {
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-worker-active",
+      "name": "Active Workers",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_worker",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-worker-all",
+      "name": "All Workers",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_worker",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-worker-mine",
+      "name": "My Workers",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_worker",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-employment-active",
+      "name": "Active Employments",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_employment",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-employment-all",
+      "name": "All Employments",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_employment",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-employment-mine",
+      "name": "My Employments",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_employment",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-position-active",
+      "name": "Active Positions",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_position",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "viewId": "vw-cdm-position-all",
+      "name": "All Positions",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_position",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "viewId": "vw-cdm-position-mine",
+      "name": "My Positions",
+      "solution": "ContosoHumanResources",
+      "entity": "cdm_position",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "viewId": "vw-cdm-job-active",
+      "name": "Active Jobs",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_job",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-job-all",
+      "name": "All Jobs",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_job",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-department-active",
+      "name": "Active Departments",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_department",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": "HR.03.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-department-all",
+      "name": "All Departments",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_department",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": "HR.03.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-fixedcompensation-active",
+      "name": "Active Fixed Compensations",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_fixedcompensation",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-fixedcompensation-all",
+      "name": "All Fixed Compensations",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_fixedcompensation",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mshr-leaverequest-active",
+      "name": "Active Leave Requests",
+      "solution": "ContosoHumanResources",
+      "entity": "mshr_leaverequest",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": "HR.04.01"
+      }
+    },
+    {
+      "viewId": "vw-mshr-leaverequest-all",
+      "name": "All Leave Requests",
+      "solution": "ContosoHumanResources",
+      "entity": "mshr_leaverequest",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": "HR.04.01"
+      }
+    },
+    {
+      "viewId": "vw-mshr-leaverequest-mine",
+      "name": "My Leave Requests",
+      "solution": "ContosoHumanResources",
+      "entity": "mshr_leaverequest",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": "HR.04.01"
+      }
+    },
+    {
+      "viewId": "vw-mshr-leaveenrollment-active",
+      "name": "Active Leave Enrollments",
+      "solution": "msdynhr_HumanResources",
+      "entity": "mshr_leaveenrollment",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-mshr-leaveenrollment-all",
+      "name": "All Leave Enrollments",
+      "solution": "msdynhr_HumanResources",
+      "entity": "mshr_leaveenrollment",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynhr-worker-active",
+      "name": "Active Attract/Onboard Worker Profiles",
+      "solution": "msdynhr_HumanResources",
+      "entity": "msdynhr_worker",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.05",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdynhr-worker-all",
+      "name": "All Attract/Onboard Worker Profiles",
+      "solution": "msdynhr_HumanResources",
+      "entity": "msdynhr_worker",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.05",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-onboardingtask-active",
+      "name": "Active Onboarding Tasks",
+      "solution": "ContosoHumanResources",
+      "entity": "con_onboardingtask",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-onboardingtask-all",
+      "name": "All Onboarding Tasks",
+      "solution": "ContosoHumanResources",
+      "entity": "con_onboardingtask",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-onboardingtask-mine",
+      "name": "My Onboarding Tasks",
+      "solution": "ContosoHumanResources",
+      "entity": "con_onboardingtask",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-performancereview-active",
+      "name": "Active Performance Reviews",
+      "solution": "ContosoHumanResources",
+      "entity": "con_performancereview",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-performancereview-all",
+      "name": "All Performance Reviews",
+      "solution": "ContosoHumanResources",
+      "entity": "con_performancereview",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-performancereview-mine",
+      "name": "My Performance Reviews",
+      "solution": "ContosoHumanResources",
+      "entity": "con_performancereview",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-skill-active",
+      "name": "Active Skills",
+      "solution": "ContosoHumanResources",
+      "entity": "con_skill",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "viewId": "vw-con-skill-all",
+      "name": "All Skills",
+      "solution": "ContosoHumanResources",
+      "entity": "con_skill",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "viewId": "vw-con-skill-mine",
+      "name": "My Skills",
+      "solution": "ContosoHumanResources",
+      "entity": "con_skill",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02"
+      }
+    },
+    {
+      "viewId": "vw-con-workerskill-active",
+      "name": "Active Worker Skills",
+      "solution": "ContosoHumanResources",
+      "entity": "con_workerskill",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-workerskill-all",
+      "name": "All Worker Skills",
+      "solution": "ContosoHumanResources",
+      "entity": "con_workerskill",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-workerskill-mine",
+      "name": "My Worker Skills",
+      "solution": "ContosoHumanResources",
+      "entity": "con_workerskill",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-cdm-benefit-active",
+      "name": "Active Benefits",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_benefit",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": "HR.03.01"
+      }
+    },
+    {
+      "viewId": "vw-cdm-benefit-all",
+      "name": "All Benefits",
+      "solution": "msdynhr_HumanResources",
+      "entity": "cdm_benefit",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.03",
+        "processCatalogL3": "HR.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-disciplinarycase-active",
+      "name": "Active Disciplinary Cases",
+      "solution": "ContosoHumanResources",
+      "entity": "con_disciplinarycase",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-disciplinarycase-all",
+      "name": "All Disciplinary Cases",
+      "solution": "ContosoHumanResources",
+      "entity": "con_disciplinarycase",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-disciplinarycase-mine",
+      "name": "My Disciplinary Cases",
+      "solution": "ContosoHumanResources",
+      "entity": "con_disciplinarycase",
+      "tags": {
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.01",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocliveworkitem-active",
+      "name": "Active Conversations",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_ocliveworkitem",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.21"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocliveworkitem-all",
+      "name": "All Conversations",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_ocliveworkitem",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.21"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocliveworkitem-mine",
+      "name": "My Conversations",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_ocliveworkitem",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.21"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocsessionparticipant-active",
+      "name": "Active Session Participants",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_ocsessionparticipant",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-ocsessionparticipant-all",
+      "name": "All Session Participants",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_ocsessionparticipant",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-occontext-active",
+      "name": "Active Conversation Contexts",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_occontext",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-occontext-all",
+      "name": "All Conversation Contexts",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_occontext",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-agentstatushistory-active",
+      "name": "Active Agent Status Histories",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_agentstatushistory",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-agentstatushistory-all",
+      "name": "All Agent Status Histories",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_agentstatushistory",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-agentstatushistory-mine",
+      "name": "My Agent Status Histories",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_agentstatushistory",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-presence-active",
+      "name": "Active Presences",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_presence",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-presence-all",
+      "name": "All Presences",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_presence",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-liveworkstream-active",
+      "name": "Active Work Streams",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_liveworkstream",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": "CC.41"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-liveworkstream-all",
+      "name": "All Work Streams",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "msdyn_liveworkstream",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": "CC.41"
+      }
+    },
+    {
+      "viewId": "vw-msdyn-channel-active",
+      "name": "Active Channel Instances",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_channel",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-channel-all",
+      "name": "All Channel Instances",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_channel",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-msdyn-channel-mine",
+      "name": "My Channel Instances",
+      "solution": "ContosoContactCenter",
+      "entity": "msdyn_channel",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-deflectionoutcome-active",
+      "name": "Active Deflection Outcomes",
+      "solution": "ContosoContactCenter",
+      "entity": "con_deflectionoutcome",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "viewId": "vw-con-deflectionoutcome-all",
+      "name": "All Deflection Outcomes",
+      "solution": "ContosoContactCenter",
+      "entity": "con_deflectionoutcome",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "viewId": "vw-con-deflectionoutcome-mine",
+      "name": "My Deflection Outcomes",
+      "solution": "ContosoContactCenter",
+      "entity": "con_deflectionoutcome",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.22"
+      }
+    },
+    {
+      "viewId": "vw-con-agentcoachingnote-active",
+      "name": "Active Agent Coaching Notes",
+      "solution": "ContosoContactCenter",
+      "entity": "con_agentcoachingnote",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-agentcoachingnote-all",
+      "name": "All Agent Coaching Notes",
+      "solution": "ContosoContactCenter",
+      "entity": "con_agentcoachingnote",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-agentcoachingnote-mine",
+      "name": "My Agent Coaching Notes",
+      "solution": "ContosoContactCenter",
+      "entity": "con_agentcoachingnote",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-botconfiguration-active",
+      "name": "Active Bot Configurations",
+      "solution": "ContosoContactCenter",
+      "entity": "con_botconfiguration",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "viewId": "vw-con-botconfiguration-all",
+      "name": "All Bot Configurations",
+      "solution": "ContosoContactCenter",
+      "entity": "con_botconfiguration",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "viewId": "vw-con-botconfiguration-mine",
+      "name": "My Bot Configurations",
+      "solution": "ContosoContactCenter",
+      "entity": "con_botconfiguration",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31"
+      }
+    },
+    {
+      "viewId": "vw-con-channelbudgetline-active",
+      "name": "Active Channel Budget Lines",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "con_channelbudgetline",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-channelbudgetline-all",
+      "name": "All Channel Budget Lines",
+      "solution": "msdyn_OmnichannelBase",
+      "entity": "con_channelbudgetline",
+      "tags": {
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-systemuser-active",
+      "name": "Active Users",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "systemuser",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "viewId": "vw-systemuser-all",
+      "name": "All Users",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "systemuser",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "viewId": "vw-systemuser-mine",
+      "name": "My Users",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "systemuser",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "viewId": "vw-team-active",
+      "name": "Active Teams",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "team",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-team-all",
+      "name": "All Teams",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "team",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-businessunit-active",
+      "name": "Active Business Units",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "businessunit",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "viewId": "vw-businessunit-all",
+      "name": "All Business Units",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "businessunit",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "viewId": "vw-solution-active",
+      "name": "Active Solutions",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "solution",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-solution-all",
+      "name": "All Solutions",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "solution",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-publisher-active",
+      "name": "Active Publishers",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "publisher",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "viewId": "vw-publisher-all",
+      "name": "All Publishers",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "publisher",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "viewId": "vw-workflow-active",
+      "name": "Active Process (Workflow)s",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "workflow",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-workflow-all",
+      "name": "All Process (Workflow)s",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "workflow",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-connectionreference-active",
+      "name": "Active Connection References",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "connectionreference",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": "PL.04.01"
+      }
+    },
+    {
+      "viewId": "vw-connectionreference-all",
+      "name": "All Connection References",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "connectionreference",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": "PL.04.01"
+      }
+    },
+    {
+      "viewId": "vw-environmentvariabledefinition-active",
+      "name": "Active Environment Variable Definitions",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "environmentvariabledefinition",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-environmentvariabledefinition-all",
+      "name": "All Environment Variable Definitions",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "environmentvariabledefinition",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-sdkmessageprocessingstep-active",
+      "name": "Active Plug-in Step (SDK Message Processing Step)s",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "sdkmessageprocessingstep",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.01"
+      }
+    },
+    {
+      "viewId": "vw-sdkmessageprocessingstep-all",
+      "name": "All Plug-in Step (SDK Message Processing Step)s",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "sdkmessageprocessingstep",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.01"
+      }
+    },
+    {
+      "viewId": "vw-plugintype-active",
+      "name": "Active Plug-in Types",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "plugintype",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-plugintype-all",
+      "name": "All Plug-in Types",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "plugintype",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-role-active",
+      "name": "Active Security Roles",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "role",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "viewId": "vw-role-all",
+      "name": "All Security Roles",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "role",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02"
+      }
+    },
+    {
+      "viewId": "vw-fieldsecurityprofile-active",
+      "name": "Active Field Security Profiles",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "fieldsecurityprofile",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-fieldsecurityprofile-all",
+      "name": "All Field Security Profiles",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "fieldsecurityprofile",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-adx-webpage-active",
+      "name": "Active Web Page (Power Pages)s",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "adx_webpage",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "viewId": "vw-adx-webpage-all",
+      "name": "All Web Page (Power Pages)s",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "adx_webpage",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "viewId": "vw-adx-webpage-mine",
+      "name": "My Web Page (Power Pages)s",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "adx_webpage",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01"
+      }
+    },
+    {
+      "viewId": "vw-con-environmentinventory-active",
+      "name": "Active Environment Inventories",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_environmentinventory",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-environmentinventory-all",
+      "name": "All Environment Inventories",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_environmentinventory",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-environmentinventory-mine",
+      "name": "My Environment Inventories",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_environmentinventory",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-coecomplianceattestation-active",
+      "name": "Active CoE Compliance Attestations",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_coecomplianceattestation",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-coecomplianceattestation-all",
+      "name": "All CoE Compliance Attestations",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_coecomplianceattestation",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-coecomplianceattestation-mine",
+      "name": "My CoE Compliance Attestations",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_coecomplianceattestation",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.03",
+        "processCatalogL3": "PL.03.01"
+      }
+    },
+    {
+      "viewId": "vw-con-dataprocessingregister-active",
+      "name": "Active Data Processing Registers",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_dataprocessingregister",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-dataprocessingregister-all",
+      "name": "All Data Processing Registers",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_dataprocessingregister",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-dataprocessingregister-mine",
+      "name": "My Data Processing Registers",
+      "solution": "ContosoPlatformGovernance",
+      "entity": "con_dataprocessingregister",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": ""
+      }
+    },
+    {
+      "viewId": "vw-con-ledgerdimension-active",
+      "name": "Active Ledger Dimension (F&O)s",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "con_ledgerdimension",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": "PL.04.01"
+      }
+    },
+    {
+      "viewId": "vw-con-ledgerdimension-all",
+      "name": "All Ledger Dimension (F&O)s",
+      "solution": "CenterofExcellenceCoreComponents",
+      "entity": "con_ledgerdimension",
+      "tags": {
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.04",
+        "processCatalogL3": "PL.04.01"
+      }
     }
   ]
 }

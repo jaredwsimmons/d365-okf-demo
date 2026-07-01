@@ -1,13 +1,108 @@
 {
   "siteMaps": [
     {
-      "name": "Contoso Field Service Sitemap",
+      "name": "Contoso Sales Hub Sitemap",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Deal Desk Sitemap",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "Customer Service Hub Sitemap",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "Field Service Sitemap",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "name": "Contoso Sales Sitemap",
-      "solution": "ContosoSales",
+      "name": "Project Operations Sitemap",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Delivery PMO Sitemap",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "Customer Insights - Journeys Sitemap",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Campaign Intake Sitemap",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Customer Insights - Data Sitemap",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "CI Data Governance Console Sitemap",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Finance Operations Sitemap",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Budgeting & Capex Sitemap",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Supply Chain Hub Sitemap",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Commerce Headquarters Sitemap",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Loyalty & Engagement Sitemap",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "Contoso Human Resources Sitemap",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "Employee Self Service Sitemap",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "Customer Service workspace Sitemap",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "Omnichannel Admin Center Sitemap",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "Contoso CoE Command Center Sitemap",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "name": "Data Governance Register Sitemap",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

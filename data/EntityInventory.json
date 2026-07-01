@@ -1,143 +1,2507 @@
 {
   "entities": {
-    "fieldService": [
-      {
-        "logicalName": "con_workorder",
-        "displayName": "Work Order",
-        "description": "A unit of field work scheduled, dispatched, and billed.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      },
-      {
-        "logicalName": "con_servicevisit",
-        "displayName": "Service Visit",
-        "description": "A technician's on-site visit fulfilling a work order.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      },
-      {
-        "logicalName": "con_agreement",
-        "displayName": "Service Agreement",
-        "description": "A recurring maintenance contract that generates work orders.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      },
-      {
-        "logicalName": "con_asset",
-        "displayName": "Customer Asset",
-        "description": "A serviceable piece of equipment installed at a customer site.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      },
-      {
-        "logicalName": "con_technician",
-        "displayName": "Technician",
-        "description": "A field resource who performs service visits.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      },
-      {
-        "logicalName": "con_part",
-        "displayName": "Part",
-        "description": "An inventory item consumed while completing a work order.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      },
-      {
-        "logicalName": "con_inspection",
-        "displayName": "Inspection",
-        "description": "A checklist outcome captured during a service visit.",
-        "solution": "ContosoFieldService",
-        "tags": {
-          "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
-        }
-      }
-    ],
     "sales": [
       {
-        "logicalName": "con_quote",
-        "displayName": "Quote",
-        "description": "A priced proposal sent to a prospective customer.",
-        "solution": "ContosoSales",
+        "logicalName": "opportunityproduct",
+        "displayName": "Opportunity Product",
+        "description": "Line item on an opportunity tying a catalog product, quantity, and pricing to the deal, with optional manual price override.",
+        "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales to Order",
-          "vertical": "Field Service"
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.01",
+          "processCatalogL3": "SA.01.02",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
         }
       },
       {
-        "logicalName": "con_project",
-        "displayName": "Installation Project",
-        "description": "A multi-visit installation engagement won from a quote.",
+        "logicalName": "quote",
+        "displayName": "Quote",
+        "description": "Formal, versioned price proposal generated from an opportunity, with an effective expiry date and running total.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "quotedetail",
+        "displayName": "Quote Product",
+        "description": "Line item on a quote carrying quantity, unit price, tax, and extended amount.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.02",
+          "processCatalogL3": "SA.02.01",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "salesorderdetail",
+        "displayName": "Order Product",
+        "description": "Line item on a sales order carrying ordered quantity, unit price, extended amount, and quantity shipped.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.03",
+          "processCatalogL3": "SA.03.01",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "invoice",
+        "displayName": "Invoice",
+        "description": "Billing document generated from a confirmed order, with a due date and payment status.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "pricelevel",
+        "displayName": "Price List",
+        "description": "Named price list (territory/currency scoped) that holds product price list items and an effective date range.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.02",
+          "processCatalogL3": "",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "competitor",
+        "displayName": "Competitor",
+        "description": "Rival vendor tracked against opportunities for competitive intelligence, with SWOT notes.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.01",
+          "processCatalogL3": "SA.01.01",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "goal",
+        "displayName": "Goal",
+        "description": "Sales target rollup for a user or team over a fiscal period, comparing target versus actual.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "territory",
+        "displayName": "Sales Territory",
+        "description": "Geographic or segment territory used to align sales reps and price lists.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.01",
+          "processCatalogL3": "SA.01.02",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "campaign",
+        "displayName": "Campaign",
+        "description": "Marketing campaign that sources leads and opportunities, shared with the Marketing module.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.02",
+          "processCatalogL3": "",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_dealdeskreview",
+        "displayName": "Deal Desk Review",
+        "description": "Contoso-invented governance record capturing deal-desk approval of non-standard discount/terms on strategic opportunities before a quote can be presented.",
         "solution": "ContosoSales",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales to Order",
-          "vertical": "Field Service"
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.02",
+          "processCatalogL3": "SA.02.01",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_salesplaybook",
+        "displayName": "Sales Playbook",
+        "description": "Contoso-invented reference table holding methodology guidance and recommended next actions keyed to opportunity sales stage.",
+        "solution": "ContosoSales",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_custtranspayment",
+        "displayName": "Customer Payment (F&O)",
+        "description": "Virtual/dual-write surface over the Finance & Operations customer settlement/payment table, letting sellers see AR payment status against invoices without leaving Sales.",
+        "solution": "msdyn_SalesPro",
+        "tags": {
+          "d365Module": "Sales",
+          "processCatalogL1": "SA.00 Sales",
+          "processCatalogL2": "SA.03",
+          "processCatalogL3": "SA.03.01",
+          "vertical": "Cross-industry (B2B enterprise sales)",
+          "layer": "virtual"
         }
       }
     ],
-    "core": [
+    "customerService": [
       {
-        "logicalName": "con_invoice",
-        "displayName": "Invoice",
-        "description": "A billing document raised when a work order completes.",
-        "solution": "ContosoCore",
+        "logicalName": "incidentresolution",
+        "displayName": "Case Resolution",
+        "description": "Activity that records the resolution of a case, including resolution notes and total billable time captured at closure.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.20",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "entitlement",
+        "displayName": "Entitlement",
+        "description": "Defines the level and terms of support a customer is eligible for, including allocation of hours or case counts and applicable SLA.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.40",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "entitlementtemplate",
+        "displayName": "Entitlement Template",
+        "description": "Reusable template that standardizes entitlement terms, channels, and product coverage applied when provisioning customer entitlements.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.20",
+          "processCatalogL3": "CS.20.01",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "slaitem",
+        "displayName": "SLA Item",
+        "description": "Individual KPI line within an SLA specifying the metric, applicable-when conditions, success criteria, warning and failure time thresholds.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.30",
+          "processCatalogL3": "CS.30.01",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "queue",
+        "displayName": "Queue",
+        "description": "Container for work items (cases, activities) used for routing and load-balancing across support teams and tiers.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.40",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "queueitem",
+        "displayName": "Queue Item",
+        "description": "Represents a single work item placed in a queue, tracking who it is worked by and when it entered the queue.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.10",
+          "processCatalogL3": "CS.10.01",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_ocsession",
+        "displayName": "Conversation (Session)",
+        "description": "Omnichannel session record representing a live agent conversation across chat, voice, or messaging channels; linked to a case via the associated live work item.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.20",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "contract",
+        "displayName": "Contract",
+        "description": "Support contract defining coverage period, billing, and contract lines; legacy service model preceding entitlements, still used for warranty tracking.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.10",
+          "processCatalogL3": "CS.10.02",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_customervoicesurvey",
+        "displayName": "Customer Voice Survey",
+        "description": "Survey definition from Dynamics 365 Customer Voice used to collect post-case CSAT and NPS feedback.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.40",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_casedeflection",
+        "displayName": "Case Deflection",
+        "description": "Contoso-invented table logging self-service and bot deflection events, tying an attempted case to the knowledge article or bot topic that resolved it before agent involvement.",
+        "solution": "ContosoCustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.20",
+          "processCatalogL3": "CS.20.01",
+          "vertical": "Customer Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_escalation",
+        "displayName": "Escalation",
+        "description": "Contoso custom table tracking formal case escalations to tier-2/tier-3 or management, with reason, target team, and re-assignment audit.",
+        "solution": "ContosoCustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.20",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_servicefeedback",
+        "displayName": "Service Feedback",
+        "description": "Contoso custom table normalizing inbound CSAT/NPS survey responses into a single reportable record linked to case and agent for CoE dashboards.",
+        "solution": "ContosoCustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.30",
+          "processCatalogL3": "CS.30.01",
+          "vertical": "Customer Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "msdyn_agreement",
+        "displayName": "Warranty Agreement (F&O)",
+        "description": "Virtual/dual-write table surfacing Finance & Operations warranty and service agreements into Dataverse so warranty coverage from F&O is visible when triaging and resolving cases.",
+        "solution": "msdyn_CustomerService",
+        "tags": {
+          "d365Module": "Customer Service",
+          "processCatalogL1": "CS.00 Customer Service Management",
+          "processCatalogL2": "CS.40",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "virtual"
+        }
+      }
+    ],
+    "fieldService": [
+      {
+        "logicalName": "msdyn_workorderproduct",
+        "displayName": "Work Order Product",
+        "description": "Products (parts) used or estimated on a work order. Drives inventory decrement on completion when line status moves to Used.",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.02",
+          "processCatalogL3": "",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_workorderservice",
+        "displayName": "Work Order Service",
+        "description": "Labor/services estimated or performed on a work order, priced by duration and drawn from the product catalog (services are catalog products).",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.01",
+          "processCatalogL3": "FS.01.02",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "bookableresourcebooking",
+        "displayName": "Bookable Resource Booking",
+        "description": "A scheduled block of time reserving a bookable resource against a work order (or other bookable entity).",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.02",
+          "processCatalogL3": "",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_resourcerequirement",
+        "displayName": "Resource Requirement",
+        "description": "Describes the scheduling constraints (duration, territory, skills, time window) that Resource Scheduling Optimization and the schedule board use to fulfill a work order.",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.03",
+          "processCatalogL3": "FS.03.01",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_rma",
+        "displayName": "Return Merchandise Authorization",
+        "description": "Authorizes the return of products from a customer (or between warehouses) prior to receipt and disposition.",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.02",
+          "processCatalogL3": "",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_productinventory",
+        "displayName": "Product Inventory",
+        "description": "Tracks on-hand, allocated, and available quantities of a product at a specific warehouse (including truck stock).",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.04",
+          "processCatalogL3": "",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_warehouse",
+        "displayName": "Warehouse",
+        "description": "A physical or logical stocking location (depot or truck) against which inventory is tracked.",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.02",
+          "processCatalogL3": "FS.02.01",
+          "vertical": "Field Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_safetyinspection",
+        "displayName": "Safety Inspection",
+        "description": "Contoso-invented pre-work safety/compliance checklist a technician must complete and sign off before starting a hazardous work order.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.04",
+          "processCatalogL3": "",
+          "vertical": "Field Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_slapenaltyrule",
+        "displayName": "SLA Penalty Rule",
+        "description": "Contoso-invented reference table defining penalty tiers and credit amounts applied when an agreement-backed work order breaches its response SLA.",
+        "solution": "ContosoFieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.01",
+          "processCatalogL3": "FS.01.01",
+          "vertical": "Field Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "msdyn_purchaseorder",
+        "displayName": "Purchase Order",
+        "description": "Finance & Operations purchase order surfaced into Dataverse via dual-write so field service can replenish truck stock against SCM procurement without leaving the model-driven app.",
+        "solution": "msdyn_FieldService",
+        "tags": {
+          "d365Module": "Field Service",
+          "processCatalogL1": "FS.00 Field Service",
+          "processCatalogL2": "FS.02",
+          "processCatalogL3": "",
+          "vertical": "Field Service",
+          "layer": "virtual"
+        }
+      }
+    ],
+    "projectOperations": [
+      {
+        "logicalName": "msdyn_projecttask",
+        "displayName": "Project Task",
+        "description": "Work breakdown structure task belonging to a project schedule; drives scheduling, dependencies, and resource assignment.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.02",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_projectteam",
+        "displayName": "Project Team Member",
+        "description": "A member (named or generic/requirement-based) of a project team, mapping bookable resources to a project.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.02",
+          "processCatalogL3": "PJ.02.02",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_resourceassignment",
+        "displayName": "Resource Assignment",
+        "description": "Assignment linking a project team member to a project task with an effort distribution across the task date range.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.04",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_projectcontract",
+        "displayName": "Project Contract",
+        "description": "The contract (a specialized Sales Order) governing billing terms, contract lines, and customer for the project engagement.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.03",
+          "processCatalogL3": "PJ.03.01",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_contractline",
+        "displayName": "Contract Line",
+        "description": "A billing arrangement line (Time & Material or Fixed Price) on a project contract, driving invoicing and revenue recognition.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.02",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_estimate",
+        "displayName": "Estimate",
+        "description": "Header for a project estimate rollup produced during the sales/planning phase.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.04",
+          "processCatalogL3": "PJ.04.01",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_estimateline",
+        "displayName": "Estimate Line",
+        "description": "A single line of the estimate — a transaction-typed (hours/expense/material) cost and sales projection for a period.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.04",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_actuals",
+        "displayName": "Actual",
+        "description": "Immutable cost/sales actuals ledger generated from time, expense, and journal entries; the source of margin and WIP reporting.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.02",
+          "processCatalogL3": "PJ.02.02",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_invoice",
+        "displayName": "Project Invoice",
+        "description": "Project-based invoice generated from confirmed actuals and contract billing schedules; drives customer billing and revenue posting.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.04",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_projecthealthreview",
+        "displayName": "Project Health Review",
+        "description": "Contoso-invented governance record: a periodic RAG health assessment of a project used by the delivery PMO, capturing risk, schedule variance, and margin status.",
+        "solution": "ContosoProjectOperations",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.02",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_resourcerequest",
+        "displayName": "Staffing Request",
+        "description": "Contoso-invented intake record bridging a generic project team requirement and the resourcing desk fulfillment workflow.",
+        "solution": "ContosoProjectOperations",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.04",
+          "processCatalogL3": "PJ.04.01",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "msdyn_projectparameter",
+        "displayName": "Project Parameter",
+        "description": "Environment-level configuration table for Project Operations holding integration mode, default journal, and time-capture settings; in a dual-write deployment these values synchronize from Finance & Operations project accounting.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.04",
+          "processCatalogL3": "",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_faoprojectvendorinvoice",
+        "displayName": "Vendor Invoice (F&O)",
+        "description": "Virtual entity surfacing project-related vendor/subcontractor invoices from Finance & Operations for read-only cost visibility on the project record.",
+        "solution": "msdyn_ProjectServiceCore",
+        "tags": {
+          "d365Module": "Project Operations",
+          "processCatalogL1": "PJ.00 Project Operations",
+          "processCatalogL2": "PJ.02",
+          "processCatalogL3": "PJ.02.01",
+          "vertical": "Professional Services / Project-Based Business",
+          "layer": "virtual"
+        }
+      }
+    ],
+    "customerInsightsJourneys": [
+      {
+        "logicalName": "msdynmkt_channeltemplate",
+        "displayName": "Channel Template",
+        "description": "Real-time marketing channel template (SMS/push/custom channel) that binds journey steps to a delivery provider and message format.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.04",
+          "processCatalogL3": "",
+          "vertical": "Marketing",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynmkt_marketingform",
+        "displayName": "Marketing Form",
+        "description": "Real-time marketing form for capturing leads/contacts on landing pages, mapped to Dataverse target entity fields.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.04",
+          "processCatalogL3": "MK.04.01",
+          "vertical": "Marketing",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynmkt_leadscoringmodel",
+        "displayName": "Lead Scoring Model",
+        "description": "Rule-based lead scoring model definition producing grades and thresholds for sales-ready qualification in real-time marketing.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.02",
+          "processCatalogL3": "",
+          "vertical": "Marketing",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msevtmgt_eventregistration",
+        "displayName": "Event Registration",
+        "description": "Registration record linking a contact to an event, driving attendance journeys and reminders.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.02",
+          "processCatalogL3": "",
+          "vertical": "Marketing",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynmkt_contactpointconsent3",
+        "displayName": "Contact Point Consent",
+        "description": "Consent center record tracking channel-level opt-in/opt-out (email, SMS, custom) and purpose-based consent for a contact point.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.02",
+          "processCatalogL3": "MK.02.02",
+          "vertical": "Marketing",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynmkt_trigger",
+        "displayName": "Trigger",
+        "description": "Real-time marketing custom/business trigger definition that starts or branches trigger-based journeys from signals.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.04",
+          "processCatalogL3": "",
+          "vertical": "Marketing",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_campaignbrief",
+        "displayName": "Campaign Brief",
+        "description": "Contoso custom intake record capturing the marketing campaign brief, budget request, and stakeholder approvals before a journey is built.",
+        "solution": "ContosoMarketing",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.04",
+          "processCatalogL3": "MK.04.01",
+          "vertical": "Marketing",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_legalfootertemplate",
+        "displayName": "Legal Footer Template",
+        "description": "Contoso custom library of region-specific legal/unsubscribe footer HTML snippets referenced by marketing emails for compliance.",
+        "solution": "ContosoMarketing",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.02",
+          "processCatalogL3": "",
+          "vertical": "Marketing",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_marketingspendline",
+        "displayName": "Marketing Spend Line (F&O)",
+        "description": "Virtual entity surfacing committed marketing spend and PO lines from Finance & Operations via a virtual entity provider, for budget-vs-actual on campaign briefs.",
+        "solution": "msdynmkt_CustomerInsightsJourneys",
+        "tags": {
+          "d365Module": "Customer Insights - Journeys (Marketing)",
+          "processCatalogL1": "MK.00 Marketing",
+          "processCatalogL2": "MK.04",
+          "processCatalogL3": "MK.04.02",
+          "vertical": "Marketing",
+          "layer": "virtual"
+        }
+      }
+    ],
+    "customerInsightsData": [
+      {
+        "logicalName": "msdynci_datasource",
+        "displayName": "Data Source",
+        "description": "A registered source system feeding data into CI-Data (Dataverse, ADLS Gen2, Azure Synapse, Microsoft Fabric OneLake, Salesforce, Power Query connector). Governs ingestion connection and refresh schedule.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.02",
+          "processCatalogL3": "",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynci_entity",
+        "displayName": "Ingested Entity (Map)",
+        "description": "A source table/entity mapped into the CI-Data data model, with attribute mappings and semantic-type assignments used during unification.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.01",
+          "processCatalogL3": "CI.01.02",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynci_prediction",
+        "displayName": "Prediction",
+        "description": "An out-of-box or custom (AutoML) ML prediction model (churn, CLV, product recommendation) scoring unified profiles on a scheduled cadence.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.02",
+          "processCatalogL3": "",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynci_predictionscore",
+        "displayName": "Prediction Score",
+        "description": "The scored output row linking a prediction model to a unified profile with the numeric probability/score value produced at last scoring.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.03",
+          "processCatalogL3": "CI.03.01",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynci_activity",
+        "displayName": "Unified Activity",
+        "description": "A unified timeline activity (purchase, web visit, support case, email open) attributed to a customer profile from any ingested source.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.04",
+          "processCatalogL3": "",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynci_relationship",
+        "displayName": "Profile Relationship",
+        "description": "Household / B2C relationship-graph edges between unified profiles (member-of-household, works-at). Directed from/to profile references drive the relationship graph.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.04",
+          "processCatalogL3": "CI.04.01",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_consentledger",
+        "displayName": "Consent Ledger",
+        "description": "Contoso-built GDPR/CCPA consent and data-subject-rights ledger. Records marketing/analytics consent grants and DSR (delete/export) requests per unified profile for compliance auditing.",
+        "solution": "ContosoCustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.02",
+          "processCatalogL3": "",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_matchrule",
+        "displayName": "Match Rule Override",
+        "description": "Contoso-authored deterministic/fuzzy match-rule overrides layered on top of the OOB unification match config, versioned for auditability and environment traceability.",
+        "solution": "ContosoCustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.01",
+          "processCatalogL3": "CI.01.01",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_datasourcehealth",
+        "displayName": "Data Source Health Log",
+        "description": "Contoso operational monitoring table capturing per-refresh ingestion health, row deltas, and data-quality scores for each registered data source.",
+        "solution": "ContosoCustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.04",
+          "processCatalogL3": "",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "mserp_custcustomerv3entity",
+        "displayName": "F&O Customer Master (Virtual)",
+        "description": "Finance & Operations customer master (CustTable / CustCustomerV3Entity) surfaced into Dataverse as an mserp_ virtual entity over the F&O OData endpoint, used to enrich unified profiles with financial credit limit and payment terms.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.01",
+          "processCatalogL3": "CI.01.02",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdynci_semanticmapping",
+        "displayName": "Semantic Type Mapping",
+        "description": "Maps ingested attributes to standardized semantic types (Person.Email, Person.FullName, Address.PostalCode) that drive the unification and enrichment engine.",
+        "solution": "msdynci_CustomerInsights",
+        "tags": {
+          "d365Module": "Customer Insights - Data (CDP)",
+          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+          "processCatalogL2": "CI.02",
+          "processCatalogL3": "",
+          "vertical": "Customer Data Platform / Unified Profiles",
+          "layer": "oob"
+        }
+      }
+    ],
+    "finance": [
+      {
+        "logicalName": "mserp_mainaccount",
+        "displayName": "Main Account",
+        "description": "Chart-of-accounts main account surfaced from Dynamics 365 Finance (F&O) into Dataverse via dual-write (mserp_ virtual entity). Represents the general-ledger account definitions used to classify posted journal entries.",
+        "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FS.00 Service Delivery",
-          "vertical": "Field Service"
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.02",
+          "processCatalogL3": "FI.02.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_ledger",
+        "displayName": "Ledger",
+        "description": "The legal-entity ledger definition (accounting currency, reporting currency, fiscal calendar, chart of accounts) dual-written from D365 Finance. Scopes GL activity to a single company/DataAreaId.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.02",
+          "processCatalogL3": "",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_generaljournalaccountentry",
+        "displayName": "General Journal Account Entry",
+        "description": "Posted GL account entries (ledger transaction lines with debit/credit amounts by main account) surfaced from D365 Finance via dual-write. High-volume, read-mostly virtual entity used for financial reporting in Dataverse.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.03",
+          "processCatalogL3": "FI.03.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_vendinvoiceheader",
+        "displayName": "Vendor Invoice",
+        "description": "Accounts Payable pending/posted vendor invoice header dual-written from D365 Finance. Contoso extends AP approval routing via a related custom con_apapprovalrequest table.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.04",
+          "processCatalogL3": "",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_custpaymentjournalline",
+        "displayName": "Customer Payment Journal",
+        "description": "Accounts Receivable customer payment journal lines surfaced from D365 Finance for AR clerks working in Dataverse against open customer balances.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.04",
+          "processCatalogL3": "FI.04.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_budgetregisterentry",
+        "displayName": "Budget Register Entry",
+        "description": "Budget register entries (original and revised budget amounts by main account and financial dimension) from D365 Finance budgeting, surfaced for budget control checks.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.02",
+          "processCatalogL3": "",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_fixedasset",
+        "displayName": "Fixed Asset",
+        "description": "Fixed-asset register (acquisition, depreciation books, net book value, disposal) surfaced from D365 Finance. Contoso adds a con_capexrequest custom table that provisions new assets.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.02",
+          "processCatalogL3": "FI.02.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "mserp_taxtransaction",
+        "displayName": "Tax Transaction",
+        "description": "Sales-tax / VAT transaction posted amounts by tax code, dual-written from D365 Finance for indirect-tax compliance reporting.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.04",
+          "processCatalogL3": "",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "cdm_company",
+        "displayName": "Company (Legal Entity)",
+        "description": "The dual-write Company (legal entity) reference table used to scope all Finance records to a DataAreaId. Standard Finance & Operations integration table (cdm_ prefix) provisioned in Dataverse by dual-write.",
+        "solution": "msdyn_FinanceAndOperations",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.03",
+          "processCatalogL3": "FI.03.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "con_apapprovalrequest",
+        "displayName": "AP Approval Request",
+        "description": "Contoso-custom accounts-payable approval workflow record wrapping a dual-write vendor invoice with a multi-tier approval chain and audit trail in Dataverse.",
+        "solution": "ContosoFinance",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.04",
+          "processCatalogL3": "",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_capexrequest",
+        "displayName": "Capex Request",
+        "description": "Contoso-custom capital-expenditure request that feeds the fixed-asset acquisition process once approved and budget-checked against the budget register.",
+        "solution": "ContosoFinance",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.02",
+          "processCatalogL3": "FI.02.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_financialdimensionmap",
+        "displayName": "Financial Dimension Map",
+        "description": "Contoso-custom reference table mapping Dataverse business units / cost centers to F&O financial-dimension combinations for consolidated reporting.",
+        "solution": "ContosoFinance",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.02",
+          "processCatalogL3": "",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_dunningaction",
+        "displayName": "Dunning Action",
+        "description": "Contoso-custom collections/dunning action log tracking outreach on overdue AR balances per customer account, driving escalation levels.",
+        "solution": "ContosoFinance",
+        "tags": {
+          "d365Module": "Finance",
+          "processCatalogL1": "FI.00 Finance",
+          "processCatalogL2": "FI.03",
+          "processCatalogL3": "FI.03.01",
+          "vertical": "Finance & Operations (Financials)",
+          "layer": "custom"
+        }
+      }
+    ],
+    "supplyChainManagement": [
+      {
+        "logicalName": "msdyn_releasedproduct",
+        "displayName": "Released Product",
+        "description": "F&O ReleasedProductsV2 entity surfaced in Dataverse via dual-write (msdyn_releasedproduct). Master item enabled for a legal entity/site; the source of truth for item numbers referenced across PO, sales, and warehouse tables.",
+        "solution": "msdyn_SupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.20",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdyn_inventwarehouse",
+        "displayName": "Warehouse",
+        "description": "F&O InventWarehouses entity (InventLocationId) surfaced via dual-write. Physical warehouse within a site; WMS-enabled warehouses drive advanced warehouse mobile flows.",
+        "solution": "msdyn_SupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.20",
+          "processCatalogL3": "SC.22",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdyn_purchaseorderheader",
+        "displayName": "Purchase Order Header",
+        "description": "F&O PurchaseOrderHeadersV2 surfaced via dual-write (msdyn_purchaseorderheader). PurchTable equivalent in Dataverse; header-level vendor, status, and delivery data for procurement visibility.",
+        "solution": "msdyn_SupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.40",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdyn_purchaseorderline",
+        "displayName": "Purchase Order Line",
+        "description": "F&O PurchaseOrderLinesV2 surfaced via dual-write (msdyn_purchaseorderline). PurchLine equivalent; line-level item, quantity, and receiving-warehouse detail.",
+        "solution": "msdyn_SupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.30",
+          "processCatalogL3": "SC.31",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdyn_salesorderline",
+        "displayName": "Sales Order Line (F&O)",
+        "description": "F&O SalesOrderLines surfaced via dual-write (msdyn_salesorderline). SalesLine equivalent, used for allocation/reservation and outbound ship confirmation in SCM.",
+        "solution": "msdyn_SupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.10",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "con_vendor",
+        "displayName": "Vendor",
+        "description": "Contoso supplier master mirroring F&O VendVendorV2, held natively in Dataverse for supplier collaboration/portal, approval, and on-time-delivery scorecarding scenarios that F&O does not expose to external users.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.40",
+          "processCatalogL3": "SC.41",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_purchaserequisition",
+        "displayName": "Purchase Requisition",
+        "description": "Contoso pre-PO intake capturing internal requests before F&O purchase order creation; drives multi-stage approval, vendor selection, and write-back of the generated PO number from F&O.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.30",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_inventorycount",
+        "displayName": "Inventory Count",
+        "description": "Contoso cycle-count session headers used by warehouse workers on mobile; captures variance and posts adjustments back to the F&O inventory journal (InventJournalTable) after supervisor review.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.20",
+          "processCatalogL3": "SC.21",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_shipment",
+        "displayName": "Shipment",
+        "description": "Contoso outbound shipment tracking bridging F&O WHSShipmentTable with carrier tracking, ETA, and delivery confirmation for customer-facing notifications.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.50",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_demandforecast",
+        "displayName": "Demand Forecast",
+        "description": "Contoso demand forecast record staged in Dataverse before feeding F&O master planning. Extended with a confidence score and a DDMRP buffer flag; there is no OOB Dataverse forecast table, so this is held as a native custom entity.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.20",
+          "processCatalogL3": "SC.22",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "uom",
+        "displayName": "Unit",
+        "description": "Dataverse unit of measure within a unit group. Used as-is by Contoso as the default unit on the product catalog.",
+        "solution": "msdyn_SupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.20",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_bomcomponent",
+        "displayName": "BOM Component",
+        "description": "Contoso lightweight bill-of-materials line mirroring F&O BOM/BOMVersion for engineering-change visibility and where-used analysis in Dataverse without exposing full F&O BOM management.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.40",
+          "processCatalogL3": "",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_productionorder",
+        "displayName": "Production Order",
+        "description": "Contoso production-order mirror staging F&O ProdTable data in Dataverse for shop-floor visibility and status roll-ups. Held as a custom table because F&O production orders are not exposed as a stable OOB Dataverse/virtual entity.",
+        "solution": "ContosoSupplyChain",
+        "tags": {
+          "d365Module": "Supply Chain Management",
+          "processCatalogL1": "SC.00 Supply Chain Management",
+          "processCatalogL2": "SC.40",
+          "processCatalogL3": "SC.41",
+          "vertical": "Manufacturing & Distribution",
+          "layer": "custom"
+        }
+      }
+    ],
+    "commerce": [
+      {
+        "logicalName": "msdyn_retailterminal",
+        "displayName": "Retail Terminal (Register)",
+        "description": "A POS terminal/register within a store, bound to a hardware and functionality profile. Virtual entity surfaced from the F&O RetailTerminal table.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.02",
+          "processCatalogL3": "CO.02.01",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdyn_channelprofile",
+        "displayName": "Channel Profile",
+        "description": "Real-time / channel database connection profile that ties a channel to its Retail Server and Commerce Scale Unit configuration.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.04",
+          "processCatalogL3": "",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_retailtransactionsalesline",
+        "displayName": "Retail Transaction Sales Line",
+        "description": "Line-item detail (product, quantity, price, discount) for a retail transaction. F&O-backed via dual-write.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.02",
+          "processCatalogL3": "",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_retailtransactionpaymentline",
+        "displayName": "Retail Transaction Payment Line",
+        "description": "Tender line (payment method and amount) applied to a retail transaction. F&O-backed via dual-write.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.04",
+          "processCatalogL3": "CO.04.01",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_retailstatement",
+        "displayName": "Retail Statement",
+        "description": "Aggregation of retail transactions for a channel/day used for posting and reconciliation to finance. Virtual entity surfaced from the F&O RetailStatementTable.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.04",
+          "processCatalogL3": "",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "virtual"
+        }
+      },
+      {
+        "logicalName": "msdyn_pricingrule",
+        "displayName": "Pricing Rule",
+        "description": "A price adjustment / trade agreement rule (discount, price override) applied by channel and price group. F&O-backed via dual-write.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.02",
+          "processCatalogL3": "",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_giftcard",
+        "displayName": "Gift Card",
+        "description": "A stored-value gift card that can be issued, loaded, and redeemed as tender across channels. F&O-backed via dual-write.",
+        "solution": "msdyn_Commerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.03",
+          "processCatalogL3": "CO.03.01",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_clienteling",
+        "displayName": "Clienteling Appointment",
+        "description": "Contoso-invented table for in-store clienteling: personal-shopper appointments linking a store associate to a customer with a curated product wishlist.",
+        "solution": "ContosoCommerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.02",
+          "processCatalogL3": "",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_curbsideorder",
+        "displayName": "Curbside Pickup Order",
+        "description": "Contoso-invented buy-online-pickup-in-store (BOPIS) / curbside fulfillment record tracking pickup slot, vehicle, and handoff status.",
+        "solution": "ContosoCommerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.04",
+          "processCatalogL3": "CO.04.01",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_pricematchrequest",
+        "displayName": "Price Match Request",
+        "description": "Contoso-invented table capturing competitor price-match requests raised at POS for associate/manager approval.",
+        "solution": "ContosoCommerce",
+        "tags": {
+          "d365Module": "Commerce",
+          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+          "processCatalogL2": "CO.04",
+          "processCatalogL3": "",
+          "vertical": "Retail / Omnichannel Commerce",
+          "layer": "custom"
+        }
+      }
+    ],
+    "humanResources": [
+      {
+        "logicalName": "cdm_job",
+        "displayName": "Job",
+        "description": "Defines a job (title + description of duties) that positions are created from. Carries job type, function and maximum number of positions. Dual-written from F&O HcmJob.",
+        "solution": "msdynhr_HumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.04",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "cdm_department",
+        "displayName": "Department",
+        "description": "An operating unit of type Department in the organizational hierarchy. Positions and workers roll up to departments, which self-reference to a parent department. Dual-written from F&O OMOperatingUnit.",
+        "solution": "msdynhr_HumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.03",
+          "processCatalogL3": "HR.03.01",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "cdm_fixedcompensation",
+        "displayName": "Fixed Compensation",
+        "description": "A worker's fixed (base) compensation record tied to a position and compensation plan, with pay rate and pay frequency. Dual-written from F&O HcmFixedCompensation.",
+        "solution": "msdynhr_HumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.01",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "mshr_leaveenrollment",
+        "displayName": "Leave Enrollment",
+        "description": "Enrolls a worker into a leave/absence plan and tracks accrued and remaining balances. Native D365 Human Resources leave-and-absence entity (mshr_ prefix).",
+        "solution": "msdynhr_HumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.03",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdynhr_worker",
+        "displayName": "Attract/Onboard Worker Profile",
+        "description": "Talent (Attract/Onboard) worker profile carried over from the legacy Dynamics 365 Talent schema (msdynhr_ prefix). Retained read-only for onboarding guide references and historical linkage.",
+        "solution": "msdynhr_HumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.05",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_onboardingtask",
+        "displayName": "Onboarding Task",
+        "description": "Contoso-custom onboarding checklist task assigned to a new worker during their first 90 days. Drives the onboarding Copilot and Teams notifications.",
+        "solution": "ContosoHumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.02",
+          "processCatalogL3": "HR.02.01",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_performancereview",
+        "displayName": "Performance Review",
+        "description": "Contoso-custom annual/quarterly performance review record linking a worker, reviewer and review cycle, feeding compensation planning and merit recommendations.",
+        "solution": "ContosoHumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.02",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_skill",
+        "displayName": "Skill",
+        "description": "Contoso-custom skill/competency master used to tag workers and positions for internal mobility and talent-marketplace matching.",
+        "solution": "ContosoHumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.02",
+          "processCatalogL3": "HR.02.02",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_workerskill",
+        "displayName": "Worker Skill",
+        "description": "Contoso-custom intersect associating a Worker to a Skill with a proficiency rating and last-assessed date. Powers the internal talent marketplace and skill-gap analytics.",
+        "solution": "ContosoHumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.04",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "cdm_benefit",
+        "displayName": "Benefit",
+        "description": "A benefit plan/option a worker can be enrolled in (health, retirement, etc.). Dual-written from F&O HcmBenefit.",
+        "solution": "msdynhr_HumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.03",
+          "processCatalogL3": "HR.03.01",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_disciplinarycase",
+        "displayName": "Disciplinary Case",
+        "description": "Contoso-custom employee-relations case tracking grievances and disciplinary actions with confidential access. Restricted to HR ER specialists via user/owner-level security.",
+        "solution": "ContosoHumanResources",
+        "tags": {
+          "d365Module": "Human Resources",
+          "processCatalogL1": "HR.00 Human Resources",
+          "processCatalogL2": "HR.01",
+          "processCatalogL3": "",
+          "vertical": "Human Resources / Workforce Management",
+          "layer": "custom"
+        }
+      }
+    ],
+    "contactCenterOmnichannel": [
+      {
+        "logicalName": "msdyn_ocsessionparticipant",
+        "displayName": "Session Participant",
+        "description": "Junction recording each agent/supervisor/bot participant in a session, including consult and transfer participation modes.",
+        "solution": "msdyn_OmnichannelBase",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.20",
+          "processCatalogL3": "CC.22",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_occontext",
+        "displayName": "Conversation Context",
+        "description": "Key-value context items captured for a conversation (pre-chat survey answers, page URL, product context) surfaced to the agent in the conversation control.",
+        "solution": "msdyn_OmnichannelBase",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.40",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_presence",
+        "displayName": "Presence",
+        "description": "Presence definition mapping a base presence status (Available/Busy/Do Not Disturb) to a display label and color for the agent dashboard.",
+        "solution": "msdyn_OmnichannelBase",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.20",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "msdyn_liveworkstream",
+        "displayName": "Work Stream",
+        "description": "Routing container (live work stream) that groups channels and defines routing rules, capacity model, and fallback queue for a class of conversations.",
+        "solution": "msdyn_OmnichannelBase",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.40",
+          "processCatalogL3": "CC.41",
+          "vertical": "Customer Service",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_deflectionoutcome",
+        "displayName": "Deflection Outcome",
+        "description": "Contoso-custom table logging self-service / bot deflection outcomes to measure containment rate and cost avoidance per conversation.",
+        "solution": "ContosoContactCenter",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.20",
+          "processCatalogL3": "CC.22",
+          "vertical": "Customer Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_agentcoachingnote",
+        "displayName": "Agent Coaching Note",
+        "description": "Contoso-custom supervisor coaching note tied to a conversation and agent, used in the quality-monitoring calibration process.",
+        "solution": "ContosoContactCenter",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.40",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_botconfiguration",
+        "displayName": "Bot Configuration",
+        "description": "Contoso-custom registry of Copilot Studio / bot content configurations used for the automation channel that handles conversations before agent escalation, mapping each bot to its provider and channel binding.",
+        "solution": "ContosoContactCenter",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.30",
+          "processCatalogL3": "CC.31",
+          "vertical": "Customer Service",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_channelbudgetline",
+        "displayName": "Channel Budget Line",
+        "description": "Virtual table surfaced from Dynamics 365 Finance via dual-write, exposing per-channel operating budget and actual spend for contact-center cost governance.",
+        "solution": "msdyn_OmnichannelBase",
+        "tags": {
+          "d365Module": "Contact Center / Omnichannel",
+          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+          "processCatalogL2": "CC.20",
+          "processCatalogL3": "",
+          "vertical": "Customer Service",
+          "layer": "virtual"
+        }
+      }
+    ],
+    "platformGovernance": [
+      {
+        "logicalName": "team",
+        "displayName": "Team",
+        "description": "Owner and access teams used for record-sharing and security scoping across Contoso environments; Entra-group-backed teams sync membership from Azure AD.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "businessunit",
+        "displayName": "Business Unit",
+        "description": "Root of the Dataverse security hierarchy; drives ownership and role scoping for all Contoso apps.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.02",
+          "processCatalogL3": "PL.02.01",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "solution",
+        "displayName": "Solution",
+        "description": "ALM unit-of-deployment. The CoE inventories managed/unmanaged solutions across environments for governance.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.02",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "publisher",
+        "displayName": "Publisher",
+        "description": "Owns the customization prefix (con_) and option-set value ranges. CoE audits prefix sprawl.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.03",
+          "processCatalogL3": "PL.03.01",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "workflow",
+        "displayName": "Process (Workflow)",
+        "description": "Backing table for classic workflows, business rules, actions, BPFs and modern (cloud) flows. Core CoE flow inventory.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "connectionreference",
+        "displayName": "Connection Reference",
+        "description": "Solution-aware binding between a cloud flow and a connector connection. Central to ALM and least-privilege review.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.04",
+          "processCatalogL3": "PL.04.01",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "environmentvariabledefinition",
+        "displayName": "Environment Variable Definition",
+        "description": "Solution-aware configuration schema; paired with environmentvariablevalue per environment. Drives config drift analysis.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.02",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "sdkmessageprocessingstep",
+        "displayName": "Plug-in Step (SDK Message Processing Step)",
+        "description": "Registered plug-in execution steps. CoE reviews synchronous steps for performance and un-managed registrations.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.01",
+          "processCatalogL3": "PL.01.01",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "plugintype",
+        "displayName": "Plug-in Type",
+        "description": "Registered plug-in assembly class type referenced by SDK message processing steps; CoE audits unmanaged and sandbox-isolation state.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "role",
+        "displayName": "Security Role",
+        "description": "Dataverse security role; privilege bundle scoped to a business unit. CoE audits over-privileged and custom roles.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.01",
+          "processCatalogL3": "PL.01.02",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "fieldsecurityprofile",
+        "displayName": "Field Security Profile",
+        "description": "Grants read/update/create on column-secured fields (e.g. con_datasensitivity fields). Key to the data-protection story.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.02",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "oob"
+        }
+      },
+      {
+        "logicalName": "con_environmentinventory",
+        "displayName": "Environment Inventory",
+        "description": "CoE-invented register of every Power Platform environment (dev/test/prod/sandbox) with owner, region, DLP policy binding and lifecycle state.",
+        "solution": "ContosoPlatformGovernance",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.04",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_coecomplianceattestation",
+        "displayName": "CoE Compliance Attestation",
+        "description": "CoE-invented periodic maker/app-owner attestation record proving an app or flow is still owned, needed, and compliant.",
+        "solution": "ContosoPlatformGovernance",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.03",
+          "processCatalogL3": "PL.03.01",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_dataprocessingregister",
+        "displayName": "Data Processing Register",
+        "description": "CoE-invented GDPR/Article 30 record-of-processing-activities register linking business processes to data categories and lawful basis.",
+        "solution": "ContosoPlatformGovernance",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.02",
+          "processCatalogL3": "",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "custom"
+        }
+      },
+      {
+        "logicalName": "con_ledgerdimension",
+        "displayName": "Ledger Dimension (F&O)",
+        "description": "Virtual/dual-write surfaced Finance & Operations financial dimension used by CoE reporting to reconcile cost centers across CE and F&O.",
+        "solution": "CenterofExcellenceCoreComponents",
+        "tags": {
+          "d365Module": "Platform & Governance (shared core)",
+          "processCatalogL1": "PL.00 Platform & Governance",
+          "processCatalogL2": "PL.04",
+          "processCatalogL3": "PL.04.01",
+          "vertical": "Cross-cutting Platform / Center of Excellence",
+          "layer": "virtual"
         }
       }
     ]
   },
   "standardEntitiesCustomized": [
     {
-      "logicalName": "account",
-      "displayName": "Account",
-      "description": "Customer organization (standard table, customized for field service).",
-      "solution": "ContosoCore",
+      "logicalName": "lead",
+      "displayName": "Lead",
+      "description": "Prospect or unqualified sales opportunity captured from web, campaign, or referral sources. Contoso extended it with a numeric lead-score field and a marketing-consent flag to support scoring and GDPR consent tracking.",
+      "solution": "ContosoSales",
       "tags": {
         "d365Module": "Sales",
-        "processCatalogL1": "SA.00 Sales to Order",
-        "vertical": "Field Service"
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.01",
+        "processCatalogL3": "SA.01.01",
+        "vertical": "Cross-industry (B2B enterprise sales)",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "opportunity",
+      "displayName": "Opportunity",
+      "description": "Qualified potential sale progressing through the Qualify/Develop/Propose/Close stages. Contoso added a strategic-deal flag and a self-referential renewal-of lookup to support recurring-revenue and renewal tracking.",
+      "solution": "ContosoSales",
+      "tags": {
+        "d365Module": "Sales",
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "",
+        "vertical": "Cross-industry (B2B enterprise sales)",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "salesorder",
+      "displayName": "Order",
+      "description": "Confirmed customer order created from a won quote. Contoso added a fulfillment-priority choice used to route expedited/critical orders to the warehouse.",
+      "solution": "ContosoSales",
+      "tags": {
+        "d365Module": "Sales",
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.02",
+        "processCatalogL3": "",
+        "vertical": "Cross-industry (B2B enterprise sales)",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "product",
+      "displayName": "Product",
+      "description": "Item or service Contoso sells, organized in the product catalog. Contoso added a lifecycle-stage choice for retirement management.",
+      "solution": "ContosoSales",
+      "tags": {
+        "d365Module": "Sales",
+        "processCatalogL1": "SA.00 Sales",
+        "processCatalogL2": "SA.03",
+        "processCatalogL3": "SA.03.02",
+        "vertical": "Cross-industry (B2B enterprise sales)",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "incident",
+      "displayName": "Case",
+      "description": "Core Customer Service record capturing a customer problem, question, or request routed through queues and governed by SLAs and entitlements.",
+      "solution": "ContosoCustomerService",
+      "tags": {
+        "d365Module": "Customer Service",
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.01",
+        "vertical": "Customer Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "knowledgearticle",
+      "displayName": "Knowledge Article",
+      "description": "Versioned knowledge base article authored, reviewed, and published for agent and self-service use; supersedes legacy kbarticle.",
+      "solution": "ContosoCustomerService",
+      "tags": {
+        "d365Module": "Customer Service",
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.10",
+        "processCatalogL3": "CS.10.02",
+        "vertical": "Customer Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "sla",
+      "displayName": "SLA",
+      "description": "Service Level Agreement defining time-bound commitments (first response, resolution) and their KPIs, applied to cases via entitlements or rules.",
+      "solution": "ContosoCustomerService",
+      "tags": {
+        "d365Module": "Customer Service",
+        "processCatalogL1": "CS.00 Customer Service Management",
+        "processCatalogL2": "CS.20",
+        "processCatalogL3": "",
+        "vertical": "Customer Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_workorder",
+      "displayName": "Work Order",
+      "description": "Central Field Service record representing work to be performed at a service account location. Contoso extended it with SLA breach tracking and a hazard flag.",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "d365Module": "Field Service",
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01",
+        "vertical": "Field Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_incidenttype",
+      "displayName": "Incident Type",
+      "description": "Reusable template describing a type of problem, bundling default service tasks, products, services, and characteristics. Contoso added a default duration estimate and a compliance category.",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "d365Module": "Field Service",
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.04",
+        "processCatalogL3": "",
+        "vertical": "Field Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "bookableresource",
+      "displayName": "Bookable Resource",
+      "description": "A resource that can be scheduled (technician, equipment, crew, facility). Contoso added a home-depot company lookup and certification-expiry tracking.",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "d365Module": "Field Service",
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.02",
+        "processCatalogL3": "FS.02.01",
+        "vertical": "Field Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_customerasset",
+      "displayName": "Customer Asset",
+      "description": "A serviceable piece of equipment installed at a customer location, supporting hierarchical asset structures and IoT connectivity. Contoso added warranty and last-inspection tracking.",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "d365Module": "Field Service",
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.01",
+        "vertical": "Field Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_timeentry",
+      "displayName": "Time Entry",
+      "description": "Unified time-tracking record capturing technician labor (travel, work, break) against work orders and bookings for costing and payroll.",
+      "solution": "ContosoProjectOperations",
+      "tags": {
+        "d365Module": "Field Service",
+        "processCatalogL1": "FS.00 Field Service",
+        "processCatalogL2": "FS.01",
+        "processCatalogL3": "FS.01.02",
+        "vertical": "Field Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_project",
+      "displayName": "Project",
+      "description": "Central project record holding schedule, financials, team, and lifecycle state. Contoso extended it with delivery-region and margin-alert columns via the unmanaged ContosoProjectOperations layer.",
+      "solution": "ContosoProjectOperations",
+      "tags": {
+        "d365Module": "Project Operations",
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "PJ.02.01",
+        "vertical": "Professional Services / Project-Based Business",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_expense",
+      "displayName": "Expense",
+      "description": "Project-related expense submitted by a resource for reimbursement and cost actuals. Contoso added a receipt-verification flag.",
+      "solution": "ContosoProjectOperations",
+      "tags": {
+        "d365Module": "Project Operations",
+        "processCatalogL1": "PJ.00 Project Operations",
+        "processCatalogL2": "PJ.02",
+        "processCatalogL3": "",
+        "vertical": "Professional Services / Project-Based Business",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdynmkt_journey",
+      "displayName": "Journey",
+      "description": "Real-time marketing customer journey orchestrating triggers, segments, and channel steps. Contoso extended it with a program-of-record code and a compliance sign-off flag.",
+      "solution": "ContosoMarketing",
+      "tags": {
+        "d365Module": "Customer Insights - Journeys (Marketing)",
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01",
+        "vertical": "Marketing",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdynmkt_segment",
+      "displayName": "Segment",
+      "description": "Real-time marketing segment (query-based or static list) targeting contacts/leads. Contoso added a data-residency region tag for GDPR routing.",
+      "solution": "ContosoMarketing",
+      "tags": {
+        "d365Module": "Customer Insights - Journeys (Marketing)",
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "",
+        "vertical": "Marketing",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdynmkt_marketingemail",
+      "displayName": "Marketing Email",
+      "description": "Real-time marketing email content asset with designer HTML, subject, and preview text. Contoso added a brand-approval status and a legal footer template lookup.",
+      "solution": "ContosoMarketing",
+      "tags": {
+        "d365Module": "Customer Insights - Journeys (Marketing)",
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.02",
+        "vertical": "Marketing",
+        "layer": "oob_customized"
       }
     },
     {
       "logicalName": "contact",
       "displayName": "Contact",
-      "description": "Individual at a customer site (standard table, customized).",
-      "solution": "ContosoCore",
+      "description": "Standard contact — the primary marketing audience member. Contoso added consent snapshot fields synced from Customer Insights - Data.",
+      "solution": "ContosoMarketing",
       "tags": {
-        "d365Module": "Sales",
-        "processCatalogL1": "SA.00 Sales to Order",
-        "vertical": "Field Service"
+        "d365Module": "Customer Insights - Journeys (Marketing)",
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.04",
+        "processCatalogL3": "",
+        "vertical": "Marketing",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msevtmgt_event",
+      "displayName": "Event",
+      "description": "Event management record for webinars/in-person events with sessions, venue, and registration. Contoso extended with a cost-center chargeback code.",
+      "solution": "ContosoMarketing",
+      "tags": {
+        "d365Module": "Customer Insights - Journeys (Marketing)",
+        "processCatalogL1": "MK.00 Marketing",
+        "processCatalogL2": "MK.02",
+        "processCatalogL3": "MK.02.01",
+        "vertical": "Marketing",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdynci_customerprofile",
+      "displayName": "Customer Profile (Unified)",
+      "description": "The unified customer profile written to Dataverse by the CI-Data match/merge/unification pipeline. One golden record per resolved customer identity across all ingested sources; mapped/merged fields surface as columns on this table.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {
+        "d365Module": "Customer Insights - Data (CDP)",
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.01",
+        "processCatalogL3": "CI.01.01",
+        "vertical": "Customer Data Platform / Unified Profiles",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdynci_measure",
+      "displayName": "Measure",
+      "description": "A KPI/measure calculated over unified profiles or activities (Lifetime Value, Total Spend, Order Count). Business-level or profile-level aggregation refreshed on a cadence.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {
+        "d365Module": "Customer Insights - Data (CDP)",
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.04",
+        "processCatalogL3": "",
+        "vertical": "Customer Data Platform / Unified Profiles",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdynci_segment",
+      "displayName": "Segment",
+      "description": "A defined audience of customer profiles matching rule- or ML-based criteria, exportable to marketing/activation channels via connections.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {
+        "d365Module": "Customer Insights - Data (CDP)",
+        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
+        "processCatalogL2": "CI.02",
+        "processCatalogL3": "CI.02.01",
+        "vertical": "Customer Data Platform / Unified Profiles",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "account",
+      "displayName": "Account",
+      "description": "Customer/Vendor account. Contoso extended the OOB Dataverse account table with credit-risk and dual-write company-scoping columns used by AR/AP clerks.",
+      "solution": "ContosoFinance",
+      "tags": {
+        "d365Module": "Finance",
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.02",
+        "processCatalogL3": "",
+        "vertical": "Finance & Operations (Financials)",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "transactioncurrency",
+      "displayName": "Currency",
+      "description": "OOB Dataverse currency table. Contoso extended it with a treasury-managed flag and a last-synced exchange-rate timestamp fed from F&O.",
+      "solution": "ContosoFinance",
+      "tags": {
+        "d365Module": "Finance",
+        "processCatalogL1": "FI.00 Finance",
+        "processCatalogL2": "FI.04",
+        "processCatalogL3": "FI.04.01",
+        "vertical": "Finance & Operations (Financials)",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_retailchannel",
+      "displayName": "Retail Channel",
+      "description": "A commerce channel (retail store, online store, or call center) through which sales are transacted. Backed by the F&O RetailChannel table and surfaced to Dataverse via dual-write.",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "d365Module": "Commerce",
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.01",
+        "processCatalogL3": "CO.01.01",
+        "vertical": "Retail / Omnichannel Commerce",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_retailstore",
+      "displayName": "Retail Store",
+      "description": "A physical brick-and-mortar store location; a specialization of retail channel carrying address, default warehouse, and sales tax group configuration. F&O-backed via dual-write.",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "d365Module": "Commerce",
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "",
+        "vertical": "Retail / Omnichannel Commerce",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_retailtransaction",
+      "displayName": "Retail Transaction",
+      "description": "Header record for a POS/online sales transaction captured at a channel; aggregated into retail statements. F&O-backed and surfaced to Dataverse via dual-write.",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "d365Module": "Commerce",
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.03",
+        "processCatalogL3": "CO.03.01",
+        "vertical": "Retail / Omnichannel Commerce",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_loyaltyprogram",
+      "displayName": "Loyalty Program",
+      "description": "A rewards program defining earning/redemption schemes and reward point tiers across channels. F&O-backed via dual-write.",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "d365Module": "Commerce",
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.02",
+        "processCatalogL3": "CO.02.01",
+        "vertical": "Retail / Omnichannel Commerce",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_loyaltycard",
+      "displayName": "Loyalty Card",
+      "description": "A loyalty card issued to a customer, tracking reward point balance and program membership. F&O-backed via dual-write.",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "d365Module": "Commerce",
+        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
+        "processCatalogL2": "CO.04",
+        "processCatalogL3": "",
+        "vertical": "Retail / Omnichannel Commerce",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "cdm_worker",
+      "displayName": "Worker",
+      "description": "The central person-record for D365 Human Resources. Represents an individual (employee or contractor) in the workforce; dual-written from the F&O HcmWorker entity into Dataverse via the CDM cdm_worker table. Contoso extends it with an employee ID and HRBP assignment.",
+      "solution": "ContosoHumanResources",
+      "tags": {
+        "d365Module": "Human Resources",
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.01",
+        "vertical": "Human Resources / Workforce Management",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "cdm_employment",
+      "displayName": "Employment",
+      "description": "The employment relationship between a Worker and a legal entity, including hire/termination dates and worker start/end. Dual-written from F&O HcmEmployment. Contoso adds probation tracking and rehire eligibility.",
+      "solution": "ContosoHumanResources",
+      "tags": {
+        "d365Module": "Human Resources",
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "",
+        "vertical": "Human Resources / Workforce Management",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "cdm_position",
+      "displayName": "Position",
+      "description": "A specific instance of a job assigned to a department for a period of time. Workers are assigned to positions and positions report to one another to form the org hierarchy. Dual-written from F&O HcmPosition.",
+      "solution": "ContosoHumanResources",
+      "tags": {
+        "d365Module": "Human Resources",
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.02",
+        "processCatalogL3": "HR.02.02",
+        "vertical": "Human Resources / Workforce Management",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "mshr_leaverequest",
+      "displayName": "Leave Request",
+      "description": "A worker request for time off against a leave/absence plan, approved through a self-service business process flow. Native D365 Human Resources leave-and-absence entity (mshr_ prefix). Contoso adds total-days and manager-approver tracking.",
+      "solution": "ContosoHumanResources",
+      "tags": {
+        "d365Module": "Human Resources",
+        "processCatalogL1": "HR.00 Human Resources",
+        "processCatalogL2": "HR.04",
+        "processCatalogL3": "HR.04.01",
+        "vertical": "Human Resources / Workforce Management",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_ocliveworkitem",
+      "displayName": "Conversation",
+      "description": "The central Omnichannel conversation (live work item) representing a customer interaction across any channel - chat, voice, SMS, or social. Native sentiment columns (msdyn_sentimentpulse, msdyn_sentimentlowscore) live directly on this table. Contoso extended it with routing/priority metadata.",
+      "solution": "ContosoContactCenter",
+      "tags": {
+        "d365Module": "Contact Center / Omnichannel",
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.20",
+        "processCatalogL3": "CC.21",
+        "vertical": "Customer Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_agentstatushistory",
+      "displayName": "Agent Status History",
+      "description": "Historical log of agent presence transitions (Available, Busy, Away, Offline) used for adherence and capacity reporting.",
+      "solution": "ContosoContactCenter",
+      "tags": {
+        "d365Module": "Contact Center / Omnichannel",
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.30",
+        "processCatalogL3": "CC.31",
+        "vertical": "Customer Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "msdyn_channel",
+      "displayName": "Channel Instance",
+      "description": "A configured channel endpoint (a specific chat widget, phone number, WhatsApp line, or Facebook page) that routes into Omnichannel via a work stream.",
+      "solution": "ContosoContactCenter",
+      "tags": {
+        "d365Module": "Contact Center / Omnichannel",
+        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
+        "processCatalogL2": "CC.40",
+        "processCatalogL3": "",
+        "vertical": "Customer Service",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "systemuser",
+      "displayName": "User",
+      "description": "Dataverse user identity synced from Entra ID. Extended with CoE maker-profile and attestation attributes for the environment-usage narrative.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {
+        "d365Module": "Platform & Governance (shared core)",
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.01",
+        "processCatalogL3": "PL.01.02",
+        "vertical": "Cross-cutting Platform / Center of Excellence",
+        "layer": "oob_customized"
+      }
+    },
+    {
+      "logicalName": "adx_webpage",
+      "displayName": "Web Page (Power Pages)",
+      "description": "Power Pages content node for the Contoso partner/self-service portal. Extended with CoE review metadata.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {
+        "d365Module": "Platform & Governance (shared core)",
+        "processCatalogL1": "PL.00 Platform & Governance",
+        "processCatalogL2": "PL.02",
+        "processCatalogL3": "PL.02.01",
+        "vertical": "Cross-cutting Platform / Center of Excellence",
+        "layer": "oob_customized"
       }
     }
   ]

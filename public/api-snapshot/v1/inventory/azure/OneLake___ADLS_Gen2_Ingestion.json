@@ -1,0 +1,1 @@
+{"item":{"name":"OneLake / ADLS Gen2 Ingestion","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Microsoft Fabric OneLake and ADLS Gen2 backing storage feeding CI-Data ingestion via Power Query."},"metadata":{"type":"azure","id":"OneLake / ADLS Gen2 Ingestion"}}

@@ -1,0 +1,632 @@
+{
+  "maps": [
+    {
+      "sourceEntity": "account",
+      "targetEntity": "lead",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "ownerid",
+          "targetField": "ownerid"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "contact",
+      "targetEntity": "lead",
+      "fieldCount": 4,
+      "fieldMappings": [
+        {
+          "sourceField": "fullname",
+          "targetField": "fullname"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        },
+        {
+          "sourceField": "ownerid",
+          "targetField": "ownerid"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "campaign",
+      "targetEntity": "lead",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "account",
+      "targetEntity": "opportunity",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "pricelevel",
+      "targetEntity": "opportunity",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "campaign",
+      "targetEntity": "opportunity",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "opportunity",
+      "targetEntity": "opportunity",
+      "fieldCount": 4,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "estimatedvalue",
+          "targetField": "estimatedvalue"
+        },
+        {
+          "sourceField": "estimatedclosedate",
+          "targetField": "estimatedclosedate"
+        },
+        {
+          "sourceField": "closeprobability",
+          "targetField": "closeprobability"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "opportunity",
+      "targetEntity": "quote",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "customerid",
+          "targetField": "customerid"
+        }
+      ],
+      "solutions": [
+        "msdyn_SalesPro"
+      ]
+    },
+    {
+      "sourceEntity": "pricelevel",
+      "targetEntity": "quote",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "msdyn_SalesPro"
+      ]
+    },
+    {
+      "sourceEntity": "quote",
+      "targetEntity": "salesorder",
+      "fieldCount": 4,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "totalamount",
+          "targetField": "totalamount"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "customerid",
+          "targetField": "customerid"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "opportunity",
+      "targetEntity": "salesorder",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "customerid",
+          "targetField": "customerid"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "pricelevel",
+      "targetEntity": "salesorder",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "salesorder",
+      "targetEntity": "invoice",
+      "fieldCount": 4,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "totalamount",
+          "targetField": "totalamount"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "customerid",
+          "targetField": "customerid"
+        }
+      ],
+      "solutions": [
+        "msdyn_SalesPro"
+      ]
+    },
+    {
+      "sourceEntity": "opportunity",
+      "targetEntity": "invoice",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "customerid",
+          "targetField": "customerid"
+        }
+      ],
+      "solutions": [
+        "msdyn_SalesPro"
+      ]
+    },
+    {
+      "sourceEntity": "pricelevel",
+      "targetEntity": "product",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoSales"
+      ]
+    },
+    {
+      "sourceEntity": "account",
+      "targetEntity": "incident",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "ownerid",
+          "targetField": "ownerid"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "ContosoCustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "contact",
+      "targetEntity": "incident",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        },
+        {
+          "sourceField": "ownerid",
+          "targetField": "ownerid"
+        }
+      ],
+      "solutions": [
+        "ContosoCustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "entitlement",
+      "targetEntity": "incident",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "customerid",
+          "targetField": "customerid"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "ContosoCustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "incident",
+      "targetEntity": "incidentresolution",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "incidentid",
+          "targetField": "incidentid"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "account",
+      "targetEntity": "entitlement",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "contact",
+      "targetEntity": "entitlement",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "sla",
+      "targetEntity": "entitlement",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "sla",
+      "targetEntity": "entitlementtemplate",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "sla",
+      "targetEntity": "slaitem",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "name",
+          "targetField": "name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "queue",
+      "targetEntity": "queueitem",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "queueid",
+          "targetField": "queueid"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "incident",
+      "targetEntity": "msdyn_ocsession",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "ownerid",
+          "targetField": "ownerid"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "msdyn_ocliveworkitem",
+      "targetEntity": "msdyn_ocsession",
+      "fieldCount": 4,
+      "fieldMappings": [
+        {
+          "sourceField": "msdyn_name",
+          "targetField": "msdyn_name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        },
+        {
+          "sourceField": "statuscode",
+          "targetField": "statuscode"
+        },
+        {
+          "sourceField": "ownerid",
+          "targetField": "ownerid"
+        }
+      ],
+      "solutions": [
+        "msdyn_CustomerService"
+      ]
+    },
+    {
+      "sourceEntity": "msdyn_incidenttype",
+      "targetEntity": "msdyn_workorder",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "msdyn_name",
+          "targetField": "msdyn_name"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoFieldService"
+      ]
+    },
+    {
+      "sourceEntity": "msdyn_agreement",
+      "targetEntity": "msdyn_workorder",
+      "fieldCount": 3,
+      "fieldMappings": [
+        {
+          "sourceField": "msdyn_name",
+          "targetField": "msdyn_name"
+        },
+        {
+          "sourceField": "msdyn_systemstatus",
+          "targetField": "msdyn_systemstatus"
+        },
+        {
+          "sourceField": "statecode",
+          "targetField": "statecode"
+        }
+      ],
+      "solutions": [
+        "ContosoFieldService"
+      ]
+    },
+    {
+      "sourceEntity": "msdyn_workorder",
+      "targetEntity": "msdyn_workorderproduct",
+      "fieldCount": 2,
+      "fieldMappings": [
+        {
+          "sourceField": "msdyn_name",
+          "targetField": "msdyn_name"
+        },
+        {
+          "sourceField": "msdyn_totalamount",
+          "targetField": "msdyn_totalamount"
+        }
+      ],
+      "solutions": [
+        "msdyn_FieldService"
+      ]
+    }
+  ]
+}

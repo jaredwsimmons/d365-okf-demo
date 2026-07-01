@@ -1,242 +1,6705 @@
 {
   "entities": {
-    "con_workorder": {
+    "lead": {
       "columns": [
         {
-          "logicalName": "con_name",
+          "logicalName": "subject",
+          "displayName": "Topic",
           "type": "string"
         },
         {
-          "logicalName": "con_status",
+          "logicalName": "fullname",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "leadsourcecode",
+          "displayName": "Lead Source",
           "type": "optionset"
         },
         {
-          "logicalName": "con_priority",
+          "logicalName": "leadqualitycode",
+          "displayName": "Rating",
           "type": "optionset"
         },
         {
-          "logicalName": "con_account",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_technician",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_asset",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_scheduledstart",
-          "type": "datetime"
-        },
-        {
-          "logicalName": "con_totalamount",
-          "type": "money"
-        }
-      ]
-    },
-    "con_servicevisit": {
-      "columns": [
-        {
-          "logicalName": "con_name",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_workorder",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_technician",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_outcome",
+          "logicalName": "statecode",
+          "displayName": "Status",
           "type": "optionset"
         },
         {
-          "logicalName": "con_arrivaltime",
-          "type": "datetime"
-        },
-        {
-          "logicalName": "con_departuretime",
-          "type": "datetime"
-        }
-      ]
-    },
-    "con_agreement": {
-      "columns": [
-        {
-          "logicalName": "con_name",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_account",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_type",
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
           "type": "optionset"
         },
         {
-          "logicalName": "con_startdate",
-          "type": "datetime"
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
         },
         {
-          "logicalName": "con_renewaldate",
-          "type": "datetime"
-        },
-        {
-          "logicalName": "con_active",
-          "type": "boolean"
-        }
-      ]
-    },
-    "con_asset": {
-      "columns": [
-        {
-          "logicalName": "con_name",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_serialnumber",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_type",
-          "type": "optionset"
-        },
-        {
-          "logicalName": "con_account",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_installdate",
-          "type": "datetime"
-        }
-      ]
-    },
-    "con_technician": {
-      "columns": [
-        {
-          "logicalName": "con_name",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_skilllevel",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_region",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_active",
-          "type": "boolean"
-        }
-      ]
-    },
-    "con_part": {
-      "columns": [
-        {
-          "logicalName": "con_name",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_sku",
-          "type": "string"
-        },
-        {
-          "logicalName": "con_unitcost",
-          "type": "money"
-        },
-        {
-          "logicalName": "con_onhand",
+          "logicalName": "con_leadscore",
+          "displayName": "Contoso Lead Score",
           "type": "integer"
+        },
+        {
+          "logicalName": "con_marketingconsent",
+          "displayName": "Marketing Consent",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "leadid",
+          "displayName": "Lead",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "leadscore",
+          "displayName": "Lead Score",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_sourcecampaigncode",
+          "displayName": "Source Campaign Code",
+          "type": "string"
         }
       ]
     },
-    "con_inspection": {
+    "opportunity": {
       "columns": [
         {
-          "logicalName": "con_name",
+          "logicalName": "name",
+          "displayName": "Topic",
           "type": "string"
         },
         {
-          "logicalName": "con_servicevisit",
-          "type": "lookup"
+          "logicalName": "estimatedvalue",
+          "displayName": "Est. Revenue",
+          "type": "money"
         },
         {
-          "logicalName": "con_result",
+          "logicalName": "estimatedclosedate",
+          "displayName": "Est. Close Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "closeprobability",
+          "displayName": "Probability",
+          "type": "integer"
+        },
+        {
+          "logicalName": "salesstagecode",
+          "displayName": "Sales Stage",
           "type": "optionset"
         },
         {
-          "logicalName": "con_notes",
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "con_strategicdeal",
+          "displayName": "Strategic Deal",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_renewalofid",
+          "displayName": "Renewal Of",
+          "type": "lookup"
+        }
+      ]
+    },
+    "opportunityproduct": {
+      "columns": [
+        {
+          "logicalName": "quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "priceperunit",
+          "displayName": "Price Per Unit",
+          "type": "money"
+        },
+        {
+          "logicalName": "extendedamount",
+          "displayName": "Extended Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "manualdiscountamount",
+          "displayName": "Manual Discount",
+          "type": "money"
+        },
+        {
+          "logicalName": "ispriceoverridden",
+          "displayName": "Price Overridden",
+          "type": "boolean"
+        }
+      ]
+    },
+    "quote": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "quotenumber",
+          "displayName": "Quote ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "effectiveto",
+          "displayName": "Expires On",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        }
+      ]
+    },
+    "quotedetail": {
+      "columns": [
+        {
+          "logicalName": "quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "priceperunit",
+          "displayName": "Price Per Unit",
+          "type": "money"
+        },
+        {
+          "logicalName": "extendedamount",
+          "displayName": "Extended Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "tax",
+          "displayName": "Tax",
+          "type": "money"
+        },
+        {
+          "logicalName": "ispriceoverridden",
+          "displayName": "Price Overridden",
+          "type": "boolean"
+        }
+      ]
+    },
+    "salesorder": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "ordernumber",
+          "displayName": "Order ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "con_fulfillmentpriority",
+          "displayName": "Fulfillment Priority",
+          "type": "optionset"
+        }
+      ]
+    },
+    "salesorderdetail": {
+      "columns": [
+        {
+          "logicalName": "quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "priceperunit",
+          "displayName": "Price Per Unit",
+          "type": "money"
+        },
+        {
+          "logicalName": "extendedamount",
+          "displayName": "Extended Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "quantityshipped",
+          "displayName": "Quantity Shipped",
+          "type": "decimal"
+        }
+      ]
+    },
+    "invoice": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "invoicenumber",
+          "displayName": "Invoice ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "duedate",
+          "displayName": "Due Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        }
+      ]
+    },
+    "product": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "productnumber",
+          "displayName": "Product ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "producttypecode",
+          "displayName": "Product Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "currentcost",
+          "displayName": "Current Cost",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_lifecyclestage",
+          "displayName": "Lifecycle Stage",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "price",
+          "displayName": "List Price",
+          "type": "money"
+        },
+        {
+          "logicalName": "defaultuomid",
+          "displayName": "Default Unit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "productid",
+          "displayName": "Product",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "productstructure",
+          "displayName": "Product Structure",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_hazmatclass",
+          "displayName": "HazMat Class",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_preferredvendorid",
+          "displayName": "Preferred Vendor",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_abcclassification",
+          "displayName": "ABC Classification",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_shelflifedays",
+          "displayName": "Contoso Shelf Life (Days)",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_hazmatflag",
+          "displayName": "Contoso HazMat Flag",
+          "type": "boolean"
+        }
+      ]
+    },
+    "pricelevel": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "begindate",
+          "displayName": "Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "enddate",
+          "displayName": "End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "pricelevelid",
+          "displayName": "Price List",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "transactioncurrencyid",
+          "displayName": "Currency",
+          "type": "lookup"
+        }
+      ]
+    },
+    "competitor": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "strengths",
+          "displayName": "Strengths",
+          "type": "memo"
+        },
+        {
+          "logicalName": "weaknesses",
+          "displayName": "Weaknesses",
+          "type": "memo"
+        },
+        {
+          "logicalName": "opportunities",
+          "displayName": "Opportunities",
+          "type": "memo"
+        },
+        {
+          "logicalName": "websiteurl",
+          "displayName": "Website",
+          "type": "string"
+        }
+      ]
+    },
+    "goal": {
+      "columns": [
+        {
+          "logicalName": "title",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "targetmoney",
+          "displayName": "Target (Money)",
+          "type": "money"
+        },
+        {
+          "logicalName": "actualmoney",
+          "displayName": "Actual (Money)",
+          "type": "money"
+        },
+        {
+          "logicalName": "goalstartdate",
+          "displayName": "From",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "goalenddate",
+          "displayName": "To",
+          "type": "datetime"
+        }
+      ]
+    },
+    "territory": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "managerid",
+          "displayName": "Manager",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_dispatchhubcode",
+          "displayName": "Dispatch Hub Code",
+          "type": "string"
+        }
+      ]
+    },
+    "campaign": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "codename",
+          "displayName": "Campaign Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "expectedrevenue",
+          "displayName": "Expected Revenue",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_dealdeskreview": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Review Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_requesteddiscount",
+          "displayName": "Requested Discount %",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_reviewstatus",
+          "displayName": "Review Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_approvedon",
+          "displayName": "Approved On",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_justification",
+          "displayName": "Justification",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_salesplaybook": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Playbook Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_stage",
+          "displayName": "Applies To Stage",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_guidance",
+          "displayName": "Guidance",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_isactive",
+          "displayName": "Active",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_custtranspayment": {
+      "columns": [
+        {
+          "logicalName": "con_accountnum",
+          "displayName": "Customer Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_paymentamount",
+          "displayName": "Payment Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_settledinvoice",
+          "displayName": "Settled Invoice",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_transdate",
+          "displayName": "Transaction Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_settlementstatus",
+          "displayName": "Settlement Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "incident": {
+      "columns": [
+        {
+          "logicalName": "title",
+          "displayName": "Case Title",
+          "type": "string"
+        },
+        {
+          "logicalName": "ticketnumber",
+          "displayName": "Case Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "prioritycode",
+          "displayName": "Priority",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "casetypecode",
+          "displayName": "Case Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_channelsource",
+          "displayName": "Channel Source",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_firstresponsemet",
+          "displayName": "First Response SLA Met",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "incidentid",
+          "displayName": "Case",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_csatscore",
+          "displayName": "CSAT Score (Contoso)",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_firstcontactresolved",
+          "displayName": "First Contact Resolved (Contoso)",
+          "type": "boolean"
+        }
+      ]
+    },
+    "incidentresolution": {
+      "columns": [
+        {
+          "logicalName": "subject",
+          "displayName": "Subject",
+          "type": "string"
+        },
+        {
+          "logicalName": "incidentid",
+          "displayName": "Case",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "timespent",
+          "displayName": "Billable Time",
+          "type": "integer"
+        },
+        {
+          "logicalName": "description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "knowledgearticle": {
+      "columns": [
+        {
+          "logicalName": "title",
+          "displayName": "Title",
+          "type": "string"
+        },
+        {
+          "logicalName": "articlepublicnumber",
+          "displayName": "Article Public Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "keywords",
+          "displayName": "Keywords",
+          "type": "string"
+        },
+        {
+          "logicalName": "content",
+          "displayName": "Content",
+          "type": "memo"
+        },
+        {
+          "logicalName": "majorversionnumber",
+          "displayName": "Major Version",
+          "type": "integer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_reviewduedate",
+          "displayName": "Review Due Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_complianceapproved",
+          "displayName": "Compliance Approved",
+          "type": "boolean"
+        }
+      ]
+    },
+    "entitlement": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "startdate",
+          "displayName": "Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "enddate",
+          "displayName": "End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "remainingterms",
+          "displayName": "Remaining Terms",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "allocationtypecode",
+          "displayName": "Allocation Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "entitlementtemplate": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "totalterms",
+          "displayName": "Total Terms",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "allocationtypecode",
+          "displayName": "Allocation Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "restrictbasedonentitlementterms",
+          "displayName": "Restrict Based on Terms",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "sla": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "applicablefrom",
+          "displayName": "Applicable From",
+          "type": "string"
+        },
+        {
+          "logicalName": "objecttypecode",
+          "displayName": "Entity",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "slatype",
+          "displayName": "SLA Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "isdefault",
+          "displayName": "Is Default",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "businesshoursid",
+          "displayName": "Business Hours",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_tier",
+          "displayName": "Support Tier",
+          "type": "optionset"
+        }
+      ]
+    },
+    "slaitem": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "slaid",
+          "displayName": "SLA",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "allowpauseandresume",
+          "displayName": "Allow Pause and Resume",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "warnafter",
+          "displayName": "Warn After",
+          "type": "string"
+        },
+        {
+          "logicalName": "failureafter",
+          "displayName": "Fail After",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "queue": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "queuetypecode",
+          "displayName": "Queue Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "emailaddress",
+          "displayName": "Incoming Email",
+          "type": "string"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "queueid",
+          "displayName": "Queue",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "queuetype",
+          "displayName": "Queue Type",
+          "type": "optionset"
+        }
+      ]
+    },
+    "queueitem": {
+      "columns": [
+        {
+          "logicalName": "queueid",
+          "displayName": "Queue",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "objecttypecode",
+          "displayName": "Object Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "workerid",
+          "displayName": "Worked By",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "enteredon",
+          "displayName": "Entered On",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_ocsession": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_channel",
+          "displayName": "Channel",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_sessionstate",
+          "displayName": "Session State",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_incidentid",
+          "displayName": "Case",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_ocsessionid",
+          "displayName": "Session",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_startedon",
+          "displayName": "Session Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_closedon",
+          "displayName": "Session End",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "contract": {
+      "columns": [
+        {
+          "logicalName": "title",
+          "displayName": "Contract Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "contractnumber",
+          "displayName": "Contract ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "activeon",
+          "displayName": "Contract Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "expireson",
+          "displayName": "Contract End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_customervoicesurvey": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_surveytype",
+          "displayName": "Survey Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_casedeflection": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_deflectionchannel",
+          "displayName": "Deflection Channel",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_deflected",
+          "displayName": "Deflected",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_knowledgearticleid",
+          "displayName": "Knowledge Article",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_contactid",
+          "displayName": "Contact",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_incidentid",
+          "displayName": "Case",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_estimatedsavings",
+          "displayName": "Estimated Savings",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_escalation": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_incidentid",
+          "displayName": "Case",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_reason",
+          "displayName": "Escalation Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_targetteamid",
+          "displayName": "Target Team",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_escalatedon",
+          "displayName": "Escalated On",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_slabreached",
+          "displayName": "SLA Breached",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_servicefeedback": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_incidentid",
+          "displayName": "Case",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_csatscore",
+          "displayName": "CSAT Score",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_npsscore",
+          "displayName": "NPS Score",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_sentiment",
+          "displayName": "Sentiment",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_agentid",
+          "displayName": "Agent",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_comments",
+          "displayName": "Comments",
           "type": "memo"
         }
       ]
     },
-    "con_quote": {
+    "msdyn_agreement": {
       "columns": [
         {
-          "logicalName": "con_name",
+          "logicalName": "msdyn_name",
+          "displayName": "Agreement Name",
           "type": "string"
         },
         {
-          "logicalName": "con_account",
+          "logicalName": "msdyn_agreementnumber",
+          "displayName": "Agreement Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_startdate",
+          "displayName": "Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_enddate",
+          "displayName": "End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_billingaccount",
+          "displayName": "Billing Account",
           "type": "lookup"
         },
         {
-          "logicalName": "con_totalamount",
-          "type": "money"
+          "logicalName": "msdyn_systemstatus",
+          "displayName": "System Status",
+          "type": "optionset"
         },
         {
-          "logicalName": "con_status",
+          "logicalName": "msdyn_recordtype",
+          "displayName": "Record Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
           "type": "optionset"
         }
       ]
     },
-    "con_project": {
+    "msdyn_workorder": {
       "columns": [
         {
-          "logicalName": "con_name",
+          "logicalName": "msdyn_name",
+          "displayName": "Work Order Number",
           "type": "string"
         },
         {
-          "logicalName": "con_account",
+          "logicalName": "msdyn_workordersummary",
+          "displayName": "Work Order Summary",
+          "type": "memo"
+        },
+        {
+          "logicalName": "msdyn_systemstatus",
+          "displayName": "System Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_substatus",
+          "displayName": "Sub-Status",
           "type": "lookup"
         },
         {
-          "logicalName": "con_quote",
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_timewindowstart",
+          "displayName": "Time Window Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_slabreachrisk",
+          "displayName": "SLA Breach Risk",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_hazardsiteflag",
+          "displayName": "Hazardous Site",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_workorderproduct": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_estimatequantity",
+          "displayName": "Estimated Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_linestatus",
+          "displayName": "Line Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_unitamount",
+          "displayName": "Unit Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        }
+      ]
+    },
+    "msdyn_workorderservice": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_duration",
+          "displayName": "Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_estimateduration",
+          "displayName": "Estimated Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_linestatus",
+          "displayName": "Line Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_unitamount",
+          "displayName": "Unit Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        }
+      ]
+    },
+    "msdyn_incidenttype": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "msdyn_defaulttaxable",
+          "displayName": "Default Taxable",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "msdyn_estimatedduration",
+          "displayName": "Estimated Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_compliancecategory",
+          "displayName": "Compliance Category",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "bookableresource": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "resourcetype",
+          "displayName": "Resource Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_hourlyrate",
+          "displayName": "Hourly Rate",
+          "type": "money"
+        },
+        {
+          "logicalName": "timezone",
+          "displayName": "Time Zone",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_certexpirydate",
+          "displayName": "Certification Expiry",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_primaryskill",
+          "displayName": "Primary Skill",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        }
+      ]
+    },
+    "bookableresourcebooking": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "starttime",
+          "displayName": "Start Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "endtime",
+          "displayName": "End Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "bookingstatus",
+          "displayName": "Booking Status",
           "type": "lookup"
         },
         {
-          "logicalName": "con_targetdate",
+          "logicalName": "duration",
+          "displayName": "Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_bookingtype",
+          "displayName": "Booking Type",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_resourcerequirement": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_duration",
+          "displayName": "Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_fromdate",
+          "displayName": "From Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_todate",
+          "displayName": "To Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_remainingduration",
+          "displayName": "Remaining Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_worklocation",
+          "displayName": "Work Location",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_customerasset": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_serialnumber",
+          "displayName": "Serial Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_category",
+          "displayName": "Category",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_warrantyexpiry",
+          "displayName": "Warranty Expiry",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_lastinspectiondate",
+          "displayName": "Last Inspection Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_rma": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "RMA Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_systemstatus",
+          "displayName": "System Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_returntype",
+          "displayName": "Return Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_expectedreturnstartdate",
+          "displayName": "Expected Return Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        }
+      ]
+    },
+    "msdyn_timeentry": {
+      "columns": [
+        {
+          "logicalName": "msdyn_start",
+          "displayName": "Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_end",
+          "displayName": "End",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_duration",
+          "displayName": "Duration",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_type",
+          "displayName": "Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_entrystatus",
+          "displayName": "Entry Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_date",
+          "displayName": "Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_isovertime",
+          "displayName": "Is Overtime",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_clientapprovalref",
+          "displayName": "Client Approval Ref",
+          "type": "string"
+        }
+      ]
+    },
+    "msdyn_productinventory": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_availablequantity",
+          "displayName": "Available Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_allocatedquantity",
+          "displayName": "Allocated Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_onhandquantity",
+          "displayName": "On Hand Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_warehouse": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "msdyn_account",
+          "displayName": "Account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_safetyinspection": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Inspection Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_inspectiondate",
+          "displayName": "Inspection Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_result",
+          "displayName": "Result",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_hazardsidentified",
+          "displayName": "Hazards Identified",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_signedoff",
+          "displayName": "Signed Off",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_slapenaltyrule": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Rule Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_responsehours",
+          "displayName": "Response Hours",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_penaltyamount",
+          "displayName": "Penalty Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_penaltytier",
+          "displayName": "Penalty Tier",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_purchaseorder": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "PO Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_systemstatus",
+          "displayName": "System Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_billtoaddress",
+          "displayName": "Bill To Address",
+          "type": "memo"
+        },
+        {
+          "logicalName": "msdyn_ordertype",
+          "displayName": "Order Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        }
+      ]
+    },
+    "msdyn_project": {
+      "columns": [
+        {
+          "logicalName": "msdyn_subject",
+          "displayName": "Project Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_projectstartdate",
+          "displayName": "Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_scheduledfinish",
+          "displayName": "Scheduled Finish",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_effortcompleted",
+          "displayName": "Effort Completed",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_projectmanager",
+          "displayName": "Project Manager",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_deliveryregion",
+          "displayName": "Delivery Region",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_marginalert",
+          "displayName": "Margin Alert",
+          "type": "boolean"
+        }
+      ]
+    },
+    "msdyn_projecttask": {
+      "columns": [
+        {
+          "logicalName": "msdyn_subject",
+          "displayName": "Task Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_start",
+          "displayName": "Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_finish",
+          "displayName": "Finish",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_effort",
+          "displayName": "Effort (Hours)",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_progress",
+          "displayName": "Progress",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_iscritical",
+          "displayName": "Is Critical",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_projectteam": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_effortcontour",
+          "displayName": "Effort Contour",
+          "type": "memo"
+        },
+        {
+          "logicalName": "msdyn_isgeneric",
+          "displayName": "Is Generic",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "msdyn_from",
+          "displayName": "From Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_to",
+          "displayName": "To Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdyn_resourceassignment": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_effort",
+          "displayName": "Effort",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_from",
+          "displayName": "From",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_to",
+          "displayName": "To",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_projectcontract": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Contract Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_contractorganizationalunitid",
+          "displayName": "Contracting Unit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "msdyn_estimatedtotalamount",
+          "displayName": "Estimated Total",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "transactioncurrencyid",
+          "displayName": "Currency",
+          "type": "lookup"
+        }
+      ]
+    },
+    "msdyn_contractline": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_billingmethod",
+          "displayName": "Billing Method",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_estimatedamount",
+          "displayName": "Estimated Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_committedcost",
+          "displayName": "Committed Cost",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_estimate": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_totalcost",
+          "displayName": "Total Cost",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_totalsalesamount",
+          "displayName": "Total Sales Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdyn_estimateline": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_transactiontypecode",
+          "displayName": "Transaction Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_costamount",
+          "displayName": "Cost Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_salesamount",
+          "displayName": "Sales Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_startdate",
+          "displayName": "Start Date",
           "type": "datetime"
         }
       ]
     },
-    "con_invoice": {
+    "msdyn_expense": {
       "columns": [
         {
-          "logicalName": "con_name",
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
           "type": "string"
         },
         {
-          "logicalName": "con_workorder",
-          "type": "lookup"
-        },
-        {
-          "logicalName": "con_amount",
-          "type": "money"
-        },
-        {
-          "logicalName": "con_duedate",
+          "logicalName": "msdyn_transactiondate",
+          "displayName": "Transaction Date",
           "type": "datetime"
         },
         {
-          "logicalName": "con_paid",
+          "logicalName": "msdyn_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_category",
+          "displayName": "Category",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "msdyn_expensestatus",
+          "displayName": "Expense Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_receiptverified",
+          "displayName": "Receipt Verified",
           "type": "boolean"
+        }
+      ]
+    },
+    "msdyn_actuals": {
+      "columns": [
+        {
+          "logicalName": "msdyn_transactiontypecode",
+          "displayName": "Transaction Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_transactionclassification",
+          "displayName": "Classification",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_actualsdate",
+          "displayName": "Actuals Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_billingtype",
+          "displayName": "Billing Type",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_invoice": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Invoice Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_invoicedate",
+          "displayName": "Invoice Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_projecthealthreview": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Review Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_reviewdate",
+          "displayName": "Review Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_ragstatus",
+          "displayName": "RAG Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_schedulevariance",
+          "displayName": "Schedule Variance (Days)",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_marginpercent",
+          "displayName": "Margin %",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_riskcommentary",
+          "displayName": "Risk Commentary",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_resourcerequest": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Request Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_requiredfrom",
+          "displayName": "Required From",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_requiredhours",
+          "displayName": "Required Hours",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_requiredrole",
+          "displayName": "Required Role",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_fulfillmentstatus",
+          "displayName": "Fulfillment Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_priority",
+          "displayName": "Priority",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdyn_projectparameter": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_integrationmode",
+          "displayName": "Integration Mode",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_defaultjournal",
+          "displayName": "Default Journal",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_timecapturewbslevel",
+          "displayName": "Time Capture WBS Level",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_faoprojectvendorinvoice": {
+      "columns": [
+        {
+          "logicalName": "con_invoicenumber",
+          "displayName": "Invoice Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_vendoraccount",
+          "displayName": "Vendor Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_invoiceamount",
+          "displayName": "Invoice Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_postingdate",
+          "displayName": "Posting Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_projectcontractnumber",
+          "displayName": "Project Contract Number",
+          "type": "string"
+        }
+      ]
+    },
+    "msdynmkt_journey": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_journeyid",
+          "displayName": "Journey",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynmkt_startdatetime",
+          "displayName": "Start Date/Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdynmkt_enddatetime",
+          "displayName": "End Date/Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_programcode",
+          "displayName": "Program Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_compliancesignoff",
+          "displayName": "Compliance Sign-off",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_dataresidencyregion",
+          "displayName": "Data Residency Region",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdynmkt_segment": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_segmentid",
+          "displayName": "Segment",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_segmenttype",
+          "displayName": "Segment Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynmkt_estimatedsize",
+          "displayName": "Estimated Size",
+          "type": "integer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_dataresidencyregion",
+          "displayName": "Data Residency Region",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdynmkt_marketingemail": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_marketingemailid",
+          "displayName": "Marketing Email",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_subject",
+          "displayName": "Subject",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_content",
+          "displayName": "Content",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_brandapprovalstatus",
+          "displayName": "Brand Approval Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_legalfooterid",
+          "displayName": "Legal Footer",
+          "type": "lookup"
+        }
+      ]
+    },
+    "msdynmkt_channeltemplate": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_channeltemplateid",
+          "displayName": "Channel Template",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_channeltype",
+          "displayName": "Channel Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynmkt_marketingform": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_marketingformid",
+          "displayName": "Marketing Form",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_formtype",
+          "displayName": "Form Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynmkt_targetentity",
+          "displayName": "Target Entity",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynmkt_leadscoringmodel": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_leadscoringmodelid",
+          "displayName": "Lead Scoring Model",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_salesreadythreshold",
+          "displayName": "Sales-Ready Threshold",
+          "type": "integer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "contact": {
+      "columns": [
+        {
+          "logicalName": "contactid",
+          "displayName": "Contact",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "fullname",
+          "displayName": "Full Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "emailaddress1",
+          "displayName": "Email",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_marketablereason",
+          "displayName": "Marketable Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "parentcustomerid",
+          "displayName": "Company Name",
+          "type": "customer"
+        },
+        {
+          "logicalName": "con_consentstatus",
+          "displayName": "Consent Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_consentcapturedon",
+          "displayName": "Consent Captured On",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_datasensitivity",
+          "displayName": "Data Sensitivity",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msevtmgt_event": {
+      "columns": [
+        {
+          "logicalName": "msevtmgt_eventid",
+          "displayName": "Event",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msevtmgt_name",
+          "displayName": "Event Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msevtmgt_eventstartdate",
+          "displayName": "Event Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msevtmgt_eventenddate",
+          "displayName": "Event End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msevtmgt_eventformat",
+          "displayName": "Event Format",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_chargebackcostcenter",
+          "displayName": "Chargeback Cost Center",
+          "type": "string"
+        }
+      ]
+    },
+    "msevtmgt_eventregistration": {
+      "columns": [
+        {
+          "logicalName": "msevtmgt_eventregistrationid",
+          "displayName": "Event Registration",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msevtmgt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msevtmgt_registrationstatus",
+          "displayName": "Registration Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynmkt_contactpointconsent3": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_contactpointconsent3id",
+          "displayName": "Contact Point Consent",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_contactpoint",
+          "displayName": "Contact Point",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_channeltype",
+          "displayName": "Channel Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynmkt_consentstatus",
+          "displayName": "Consent Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynmkt_trigger": {
+      "columns": [
+        {
+          "logicalName": "msdynmkt_triggerid",
+          "displayName": "Trigger",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynmkt_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynmkt_triggertype",
+          "displayName": "Trigger Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_campaignbrief": {
+      "columns": [
+        {
+          "logicalName": "con_campaignbriefid",
+          "displayName": "Campaign Brief",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Brief Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_objective",
+          "displayName": "Objective",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_requestedbudget",
+          "displayName": "Requested Budget",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_approvalstatus",
+          "displayName": "Approval Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_targetsegmentid",
+          "displayName": "Target Segment",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_journeyid",
+          "displayName": "Journey",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_legalfootertemplate": {
+      "columns": [
+        {
+          "logicalName": "con_legalfootertemplateid",
+          "displayName": "Legal Footer Template",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_region",
+          "displayName": "Region",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_footerhtml",
+          "displayName": "Footer HTML",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_effectivedate",
+          "displayName": "Effective Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_marketingspendline": {
+      "columns": [
+        {
+          "logicalName": "con_marketingspendlineid",
+          "displayName": "Spend Line",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_purchaseordernumber",
+          "displayName": "PO Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_glaccount",
+          "displayName": "GL Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_postingdate",
+          "displayName": "Posting Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_campaignbriefid",
+          "displayName": "Campaign Brief",
+          "type": "lookup"
+        }
+      ]
+    },
+    "msdynci_customerprofile": {
+      "columns": [
+        {
+          "logicalName": "msdynci_customerprofileid",
+          "displayName": "Customer Profile",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_fullname",
+          "displayName": "Full Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_email",
+          "displayName": "Email",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_customerid",
+          "displayName": "Customer ID (Unified Key)",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_churnriskband",
+          "displayName": "Churn Risk Band",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_loyaltytier",
+          "displayName": "Loyalty Tier",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynci_datasource": {
+      "columns": [
+        {
+          "logicalName": "msdynci_datasourceid",
+          "displayName": "Data Source",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_sourcetype",
+          "displayName": "Source Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynci_connectionreference",
+          "displayName": "Connection Reference",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_lastrefresh",
+          "displayName": "Last Refresh",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynci_entity": {
+      "columns": [
+        {
+          "logicalName": "msdynci_entityid",
+          "displayName": "Entity",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_recordcount",
+          "displayName": "Record Count",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdynci_primarykey",
+          "displayName": "Primary Key Attribute",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynci_measure": {
+      "columns": [
+        {
+          "logicalName": "msdynci_measureid",
+          "displayName": "Measure",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_measuretype",
+          "displayName": "Measure Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynci_value",
+          "displayName": "Value",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_refreshcadence",
+          "displayName": "Refresh Cadence",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_businessowner",
+          "displayName": "Business Owner",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "createdon",
+          "displayName": "Created On",
+          "type": "datetime"
+        }
+      ]
+    },
+    "msdynci_segment": {
+      "columns": [
+        {
+          "logicalName": "msdynci_segmentid",
+          "displayName": "Segment",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_membercount",
+          "displayName": "Member Count",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdynci_segmenttype",
+          "displayName": "Segment Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_activationchannel",
+          "displayName": "Activation Channel",
+          "type": "multiselect"
+        },
+        {
+          "logicalName": "con_consentverified",
+          "displayName": "Consent Verified",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynci_prediction": {
+      "columns": [
+        {
+          "logicalName": "msdynci_predictionid",
+          "displayName": "Prediction",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_modeltype",
+          "displayName": "Model Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynci_accuracy",
+          "displayName": "Accuracy",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdynci_lastscored",
+          "displayName": "Last Scored",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdynci_predictionscore": {
+      "columns": [
+        {
+          "logicalName": "msdynci_predictionscoreid",
+          "displayName": "Prediction Score",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_score",
+          "displayName": "Score",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdynci_scoredon",
+          "displayName": "Scored On",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdynci_scoreband",
+          "displayName": "Score Band",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdynci_activity": {
+      "columns": [
+        {
+          "logicalName": "msdynci_activityid",
+          "displayName": "Activity",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_activitytype",
+          "displayName": "Activity Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynci_timestamp",
+          "displayName": "Timestamp",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdynci_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdynci_sourcename",
+          "displayName": "Source Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdynci_relationship": {
+      "columns": [
+        {
+          "logicalName": "msdynci_relationshipid",
+          "displayName": "Relationship",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_relationshiptype",
+          "displayName": "Relationship Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynci_cardinality",
+          "displayName": "Cardinality",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_consentledger": {
+      "columns": [
+        {
+          "logicalName": "con_consentledgerid",
+          "displayName": "Consent Ledger",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_consenttype",
+          "displayName": "Consent Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_consentstatus",
+          "displayName": "Consent Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_effectivedate",
+          "displayName": "Effective Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_dsrrequestref",
+          "displayName": "DSR Request Ref",
+          "type": "string"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_matchrule": {
+      "columns": [
+        {
+          "logicalName": "con_matchruleid",
+          "displayName": "Match Rule",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_matchattributes",
+          "displayName": "Match Attributes",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_precisionthreshold",
+          "displayName": "Precision Threshold",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_ismandatory",
+          "displayName": "Is Mandatory",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_version",
+          "displayName": "Version",
+          "type": "integer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_datasourcehealth": {
+      "columns": [
+        {
+          "logicalName": "con_datasourcehealthid",
+          "displayName": "Data Source Health",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_refreshstatus",
+          "displayName": "Refresh Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_rowsingested",
+          "displayName": "Rows Ingested",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_dataqualityscore",
+          "displayName": "Data Quality Score",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_refreshduration",
+          "displayName": "Refresh Duration (min)",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_runtimestamp",
+          "displayName": "Run Timestamp",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "mserp_custcustomerv3entity": {
+      "columns": [
+        {
+          "logicalName": "mserp_customeraccount",
+          "displayName": "Customer Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_creditlimit",
+          "displayName": "Credit Limit",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_paymentterms",
+          "displayName": "Payment Terms",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_customergroupid",
+          "displayName": "Customer Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_creditrating",
+          "displayName": "Credit Rating",
+          "type": "string"
+        }
+      ]
+    },
+    "msdynci_semanticmapping": {
+      "columns": [
+        {
+          "logicalName": "msdynci_semanticmappingid",
+          "displayName": "Semantic Mapping",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynci_attributename",
+          "displayName": "Attribute Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynci_semantictype",
+          "displayName": "Semantic Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdynci_datatype",
+          "displayName": "Data Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "mserp_mainaccount": {
+      "columns": [
+        {
+          "logicalName": "mserp_mainaccountid",
+          "displayName": "Main Account",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_mainaccountnumber",
+          "displayName": "Main Account Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_type",
+          "displayName": "Main Account Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "mserp_chartofaccounts",
+          "displayName": "Chart of Accounts",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_activefrom",
+          "displayName": "Active From",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "mserp_activeto",
+          "displayName": "Active To",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "mserp_ledger": {
+      "columns": [
+        {
+          "logicalName": "mserp_ledgerid",
+          "displayName": "Ledger",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_accountingcurrency",
+          "displayName": "Accounting Currency",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_reportingcurrency",
+          "displayName": "Reporting Currency",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_fiscalcalendar",
+          "displayName": "Fiscal Calendar",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_legalentity",
+          "displayName": "Legal Entity",
+          "type": "lookup"
+        }
+      ]
+    },
+    "mserp_generaljournalaccountentry": {
+      "columns": [
+        {
+          "logicalName": "mserp_generaljournalaccountentryid",
+          "displayName": "Entry",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_mainaccount",
+          "displayName": "Main Account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "mserp_accountingcurrencyamount",
+          "displayName": "Accounting Currency Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_reportingcurrencyamount",
+          "displayName": "Reporting Currency Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_postingtype",
+          "displayName": "Posting Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "mserp_iscredit",
+          "displayName": "Is Credit",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "mserp_generaljournalentry",
+          "displayName": "General Journal Entry",
+          "type": "string"
+        }
+      ]
+    },
+    "mserp_vendinvoiceheader": {
+      "columns": [
+        {
+          "logicalName": "mserp_vendinvoiceheaderid",
+          "displayName": "Vendor Invoice",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_invoiceaccount",
+          "displayName": "Invoice Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_invoicenumber",
+          "displayName": "Invoice Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_invoiceamount",
+          "displayName": "Invoice Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_currencycode",
+          "displayName": "Currency",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_duedate",
+          "displayName": "Due Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "mserp_approvalstatus",
+          "displayName": "Approval Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "mserp_dataareaid",
+          "displayName": "Legal Entity Code",
+          "type": "string"
+        }
+      ]
+    },
+    "mserp_custpaymentjournalline": {
+      "columns": [
+        {
+          "logicalName": "mserp_custpaymentjournallineid",
+          "displayName": "Payment Journal",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_journalbatchnumber",
+          "displayName": "Journal Batch Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_customeraccount",
+          "displayName": "Customer Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_paymentreference",
+          "displayName": "Payment Reference",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_transactiondate",
+          "displayName": "Transaction Date",
+          "type": "datetime"
+        }
+      ]
+    },
+    "mserp_budgetregisterentry": {
+      "columns": [
+        {
+          "logicalName": "mserp_budgetregisterentryid",
+          "displayName": "Budget",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_budgetcode",
+          "displayName": "Budget Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_budgetmodel",
+          "displayName": "Budget Model",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_fiscalperiod",
+          "displayName": "Fiscal Period",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_mainaccount",
+          "displayName": "Main Account",
+          "type": "lookup"
+        }
+      ]
+    },
+    "mserp_fixedasset": {
+      "columns": [
+        {
+          "logicalName": "mserp_fixedassetid",
+          "displayName": "Fixed Asset",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_assetnumber",
+          "displayName": "Asset Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_assetgroup",
+          "displayName": "Asset Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_acquisitionprice",
+          "displayName": "Acquisition Price",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_netbookvalue",
+          "displayName": "Net Book Value",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_acquisitiondate",
+          "displayName": "Acquisition Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "mserp_assetstatus",
+          "displayName": "Asset Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "mserp_taxtransaction": {
+      "columns": [
+        {
+          "logicalName": "mserp_taxtransactionid",
+          "displayName": "Tax Transaction",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mserp_taxcode",
+          "displayName": "Tax Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "mserp_taxbaseamount",
+          "displayName": "Tax Base Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_taxamount",
+          "displayName": "Tax Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "mserp_taxdirection",
+          "displayName": "Tax Direction",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "mserp_transactiondate",
+          "displayName": "Transaction Date",
+          "type": "datetime"
+        }
+      ]
+    },
+    "cdm_company": {
+      "columns": [
+        {
+          "logicalName": "cdm_companyid",
+          "displayName": "Company",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_companycode",
+          "displayName": "Company Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_defaultcurrency",
+          "displayName": "Default Currency",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "cdm_country",
+          "displayName": "Country/Region",
+          "type": "string"
+        }
+      ]
+    },
+    "account": {
+      "columns": [
+        {
+          "logicalName": "accountid",
+          "displayName": "Account",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "name",
+          "displayName": "Account Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "creditlimit",
+          "displayName": "Credit Limit",
+          "type": "money"
+        },
+        {
+          "logicalName": "paymenttermscode",
+          "displayName": "Payment Terms",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_creditriskrating",
+          "displayName": "Credit Risk Rating",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_ondunninghold",
+          "displayName": "On Dunning Hold",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_dataareaid",
+          "displayName": "Legal Entity Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "accountnumber",
+          "displayName": "Account Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "primarycontactid",
+          "displayName": "Primary Contact",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "parentaccountid",
+          "displayName": "Parent Account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_datastewardid",
+          "displayName": "Data Steward",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_mdmgoldenrecord",
+          "displayName": "MDM Golden Record",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_datasensitivity",
+          "displayName": "Data Sensitivity",
+          "type": "optionset"
+        }
+      ]
+    },
+    "transactioncurrency": {
+      "columns": [
+        {
+          "logicalName": "transactioncurrencyid",
+          "displayName": "Currency",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "currencyname",
+          "displayName": "Currency Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "isocurrencycode",
+          "displayName": "Currency Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "exchangerate",
+          "displayName": "Exchange Rate",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_treasurymanaged",
+          "displayName": "Treasury Managed",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_lastratesyncon",
+          "displayName": "Last Rate Sync On",
+          "type": "datetime"
+        }
+      ]
+    },
+    "con_apapprovalrequest": {
+      "columns": [
+        {
+          "logicalName": "con_apapprovalrequestid",
+          "displayName": "AP Approval Request",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_vendinvoicereference",
+          "displayName": "Vendor Invoice Reference",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_amount",
+          "displayName": "Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_approvaltier",
+          "displayName": "Approval Tier",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_approverid",
+          "displayName": "Approver",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_vendoraccountid",
+          "displayName": "Vendor Account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_capexrequest": {
+      "columns": [
+        {
+          "logicalName": "con_capexrequestid",
+          "displayName": "Capex Request",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_requestedamount",
+          "displayName": "Requested Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_assetgroup",
+          "displayName": "Asset Group",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_businessjustification",
+          "displayName": "Business Justification",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_budgetavailable",
+          "displayName": "Budget Available",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_financialdimensionmap": {
+      "columns": [
+        {
+          "logicalName": "con_financialdimensionmapid",
+          "displayName": "Financial Dimension Map",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_dimensioncombination",
+          "displayName": "Dimension Combination",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_department",
+          "displayName": "Department",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_businessunitid",
+          "displayName": "Business Unit",
+          "type": "lookup"
+        }
+      ]
+    },
+    "con_dunningaction": {
+      "columns": [
+        {
+          "logicalName": "con_dunningactionid",
+          "displayName": "Dunning Action",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "con_overdueamount",
+          "displayName": "Overdue Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_dunninglevel",
+          "displayName": "Dunning Level",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_actiondate",
+          "displayName": "Action Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_outcome",
+          "displayName": "Outcome",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_releasedproduct": {
+      "columns": [
+        {
+          "logicalName": "msdyn_itemnumber",
+          "displayName": "Item Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_productname",
+          "displayName": "Product Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_itemmodelgroupid",
+          "displayName": "Item Model Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_storagedimensiongroupname",
+          "displayName": "Storage Dimension Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_trackingdimensiongroupname",
+          "displayName": "Tracking Dimension Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_productgroupid",
+          "displayName": "Item Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_dataareaid",
+          "displayName": "Legal Entity",
+          "type": "string"
+        }
+      ]
+    },
+    "msdyn_inventwarehouse": {
+      "columns": [
+        {
+          "logicalName": "msdyn_inventlocationid",
+          "displayName": "Warehouse",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_inventsiteid",
+          "displayName": "Site",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_wmsenabled",
+          "displayName": "WMS Enabled",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "msdyn_dataareaid",
+          "displayName": "Legal Entity",
+          "type": "string"
+        }
+      ]
+    },
+    "msdyn_purchaseorderheader": {
+      "columns": [
+        {
+          "logicalName": "msdyn_purchaseordernumber",
+          "displayName": "PO Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_orderaccountid",
+          "displayName": "Vendor Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_purchaseorderstatus",
+          "displayName": "PO Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_deliverydate",
+          "displayName": "Delivery Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_dataareaid",
+          "displayName": "Legal Entity",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        }
+      ]
+    },
+    "msdyn_purchaseorderline": {
+      "columns": [
+        {
+          "logicalName": "msdyn_purchaseordernumber",
+          "displayName": "PO Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_linenumber",
+          "displayName": "Line Number",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_itemnumber",
+          "displayName": "Item Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_orderedpurchasequantity",
+          "displayName": "Ordered Qty",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_requesteddeliverydate",
+          "displayName": "Requested Delivery Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_lineamount",
+          "displayName": "Line Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_receivingwarehouseid",
+          "displayName": "Receiving Warehouse",
+          "type": "string"
+        }
+      ]
+    },
+    "msdyn_salesorderline": {
+      "columns": [
+        {
+          "logicalName": "msdyn_salesordernumber",
+          "displayName": "Sales Order",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_linenumber",
+          "displayName": "Line Number",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_itemnumber",
+          "displayName": "Item Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_orderedsalesquantity",
+          "displayName": "Ordered Qty",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_shippingwarehouseid",
+          "displayName": "Shipping Warehouse",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_confirmedshippingdate",
+          "displayName": "Confirmed Ship Date",
+          "type": "datetime"
+        }
+      ]
+    },
+    "con_vendor": {
+      "columns": [
+        {
+          "logicalName": "con_vendorid",
+          "displayName": "Vendor",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Vendor Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_vendoraccount",
+          "displayName": "Vendor Account",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_accountid",
+          "displayName": "Account",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_vendorgroup",
+          "displayName": "Vendor Group",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_approvalstatus",
+          "displayName": "Approval Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_ontimedeliveryrate",
+          "displayName": "On-Time Delivery %",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_purchaserequisition": {
+      "columns": [
+        {
+          "logicalName": "con_purchaserequisitionid",
+          "displayName": "Requisition",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Requisition Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_requestedby",
+          "displayName": "Requested By",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_vendorid",
+          "displayName": "Suggested Vendor",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_estimatedamount",
+          "displayName": "Estimated Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_requiredbydate",
+          "displayName": "Required By",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_approvalstatus",
+          "displayName": "Approval Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_generatedponumber",
+          "displayName": "Generated PO Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_inventorycount": {
+      "columns": [
+        {
+          "logicalName": "con_inventorycountid",
+          "displayName": "Inventory Count",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Count Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_warehouse",
+          "displayName": "Warehouse",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_counttype",
+          "displayName": "Count Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_countdate",
+          "displayName": "Count Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_variancequantity",
+          "displayName": "Variance Qty",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_postedtofno",
+          "displayName": "Posted to F&O",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_shipment": {
+      "columns": [
+        {
+          "logicalName": "con_shipmentid",
+          "displayName": "Shipment",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_shipmentnumber",
+          "displayName": "Shipment Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_carrier",
+          "displayName": "Carrier",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_trackingnumber",
+          "displayName": "Tracking Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_shipdate",
+          "displayName": "Ship Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_estimateddeliverydate",
+          "displayName": "ETA",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "con_shipmentstatus",
+          "displayName": "Shipment Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_demandforecast": {
+      "columns": [
+        {
+          "logicalName": "con_demandforecastid",
+          "displayName": "Forecast",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_itemnumber",
+          "displayName": "Item Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_forecastquantity",
+          "displayName": "Forecast Qty",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_periodstartdate",
+          "displayName": "Period Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_confidencescore",
+          "displayName": "Confidence Score",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_ddmrpbuffer",
+          "displayName": "DDMRP Buffered",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "uom": {
+      "columns": [
+        {
+          "logicalName": "uomid",
+          "displayName": "Unit",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "uomscheduleid",
+          "displayName": "Unit Group",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "isschedulebaseuom",
+          "displayName": "Base Unit",
+          "type": "boolean"
+        }
+      ]
+    },
+    "con_bomcomponent": {
+      "columns": [
+        {
+          "logicalName": "con_bomcomponentid",
+          "displayName": "BOM Component",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_parentproductid",
+          "displayName": "Parent Product",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_componentitemnumber",
+          "displayName": "Component Item",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_quantityper",
+          "displayName": "Quantity Per",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_bomversion",
+          "displayName": "BOM Version",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_scrappercent",
+          "displayName": "Scrap %",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_productionorder": {
+      "columns": [
+        {
+          "logicalName": "con_productionorderid",
+          "displayName": "Production Order",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_productionordernumber",
+          "displayName": "Production Order Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_itemnumber",
+          "displayName": "Item Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_scheduledquantity",
+          "displayName": "Scheduled Qty",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_productionstatus",
+          "displayName": "Production Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_scheduledstartdate",
+          "displayName": "Scheduled Start",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_warehouse",
+          "displayName": "Warehouse",
+          "type": "string"
+        }
+      ]
+    },
+    "msdyn_retailchannel": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_channeltype",
+          "displayName": "Channel Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "transactioncurrencyid",
+          "displayName": "Channel Currency",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_regioncode",
+          "displayName": "Contoso Region Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_flagshipstore",
+          "displayName": "Is Flagship Store",
+          "type": "boolean"
+        }
+      ]
+    },
+    "msdyn_retailstore": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Store Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_storenumber",
+          "displayName": "Store Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_warehouse",
+          "displayName": "Default Warehouse",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_salestaxgroup",
+          "displayName": "Sales Tax Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_squarefootage",
+          "displayName": "Contoso Square Footage",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_districtmanagerid",
+          "displayName": "District Manager",
+          "type": "lookup"
+        }
+      ]
+    },
+    "msdyn_retailterminal": {
+      "columns": [
+        {
+          "logicalName": "msdyn_terminalid",
+          "displayName": "Terminal ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Terminal Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_devicetype",
+          "displayName": "Device Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_hardwareprofile",
+          "displayName": "Hardware Profile",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_channelprofile": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Profile Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_liveurl",
+          "displayName": "Retail Server URL",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_channeldbid",
+          "displayName": "Channel Database ID",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "msdyn_retailtransaction": {
+      "columns": [
+        {
+          "logicalName": "msdyn_transactionid",
+          "displayName": "Transaction ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_receiptid",
+          "displayName": "Receipt ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_transactiondate",
+          "displayName": "Transaction Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_totalamount",
+          "displayName": "Total Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_grosstotal",
+          "displayName": "Gross Total",
+          "type": "money"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_channelreference",
+          "displayName": "Contoso Channel Reference",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_fraudscore",
+          "displayName": "Contoso Fraud Score",
+          "type": "decimal"
+        }
+      ]
+    },
+    "msdyn_retailtransactionsalesline": {
+      "columns": [
+        {
+          "logicalName": "msdyn_linenumber",
+          "displayName": "Line Number",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_quantity",
+          "displayName": "Quantity",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_unitprice",
+          "displayName": "Unit Price",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_netamount",
+          "displayName": "Net Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_discountamount",
+          "displayName": "Discount Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_retailtransactionpaymentline": {
+      "columns": [
+        {
+          "logicalName": "msdyn_amount",
+          "displayName": "Tender Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_tendertype",
+          "displayName": "Tender Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_cardtype",
+          "displayName": "Card Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_authorizationcode",
+          "displayName": "Authorization Code",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_retailstatement": {
+      "columns": [
+        {
+          "logicalName": "msdyn_statementid",
+          "displayName": "Statement ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_statementdate",
+          "displayName": "Statement Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_totalsalesamount",
+          "displayName": "Total Sales Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "msdyn_postingstatus",
+          "displayName": "Posting Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_pricingrule": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Rule Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_discountpercent",
+          "displayName": "Discount Percent",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "msdyn_validfrom",
+          "displayName": "Valid From",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_validto",
+          "displayName": "Valid To",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_pricegroup",
+          "displayName": "Price Group",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_loyaltyprogram": {
+      "columns": [
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Program Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_rewardpointid",
+          "displayName": "Reward Point ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_isactive",
+          "displayName": "Is Active",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_tierstructure",
+          "displayName": "Contoso Tier Structure",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_loyaltycard": {
+      "columns": [
+        {
+          "logicalName": "msdyn_cardnumber",
+          "displayName": "Card Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_cardstatus",
+          "displayName": "Card Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_issuedate",
+          "displayName": "Issue Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_pointsbalance",
+          "displayName": "Contoso Points Balance",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_enrollmentchannel",
+          "displayName": "Contoso Enrollment Channel",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_giftcard": {
+      "columns": [
+        {
+          "logicalName": "msdyn_cardnumber",
+          "displayName": "Gift Card Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_balance",
+          "displayName": "Balance",
+          "type": "money"
+        },
+        {
+          "logicalName": "transactioncurrencyid",
+          "displayName": "Currency",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "msdyn_cardtype",
+          "displayName": "Card Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_clienteling": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Appointment Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_appointmentdate",
+          "displayName": "Appointment Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_appointmenttype",
+          "displayName": "Appointment Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_notes",
+          "displayName": "Notes",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_customerid",
+          "displayName": "Customer",
+          "type": "lookup"
+        }
+      ]
+    },
+    "con_curbsideorder": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Order Reference",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_pickupslot",
+          "displayName": "Pickup Slot",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_vehicledescription",
+          "displayName": "Vehicle Description",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_handoffstatus",
+          "displayName": "Handoff Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_customerid",
+          "displayName": "Customer",
+          "type": "customer"
+        }
+      ]
+    },
+    "con_pricematchrequest": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Request Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_competitorname",
+          "displayName": "Competitor Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_competitorprice",
+          "displayName": "Competitor Price",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_approvalstatus",
+          "displayName": "Approval Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "cdm_worker": {
+      "columns": [
+        {
+          "logicalName": "cdm_workerid",
+          "displayName": "Worker",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_personalemailaddress",
+          "displayName": "Personal Email Address",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_workernumber",
+          "displayName": "Personnel Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_workertype",
+          "displayName": "Worker Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "cdm_birthdate",
+          "displayName": "Birth Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_employeeid",
+          "displayName": "Contoso Employee ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_hrbusinesspartnerid",
+          "displayName": "HR Business Partner",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_departmentid",
+          "displayName": "Department",
+          "type": "lookup"
+        }
+      ]
+    },
+    "cdm_employment": {
+      "columns": [
+        {
+          "logicalName": "cdm_employmentid",
+          "displayName": "Employment",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_workerid",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "cdm_employmentstartdate",
+          "displayName": "Employment Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "cdm_employmentenddate",
+          "displayName": "Employment End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "cdm_workerstartdate",
+          "displayName": "Worker Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "cdm_companyid",
+          "displayName": "Legal Entity",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_probationenddate",
+          "displayName": "Probation End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_rehireeligible",
+          "displayName": "Rehire Eligible",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "cdm_position": {
+      "columns": [
+        {
+          "logicalName": "cdm_positionid",
+          "displayName": "Position",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_name",
+          "displayName": "Position ID",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_description",
+          "displayName": "Description",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_jobid",
+          "displayName": "Job",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "cdm_departmentid",
+          "displayName": "Department",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "cdm_reportstoposition",
+          "displayName": "Reports To Position",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_fulltimeequivalent",
+          "displayName": "FTE",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "cdm_job": {
+      "columns": [
+        {
+          "logicalName": "cdm_jobid",
+          "displayName": "Job",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_name",
+          "displayName": "Job",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "cdm_jobtype",
+          "displayName": "Job Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "cdm_maximumnumberofpositions",
+          "displayName": "Maximum Positions",
+          "type": "integer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "cdm_department": {
+      "columns": [
+        {
+          "logicalName": "cdm_departmentid",
+          "displayName": "Department",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_departmentnumber",
+          "displayName": "Department Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_parentdepartment",
+          "displayName": "Parent Department",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "cdm_fixedcompensation": {
+      "columns": [
+        {
+          "logicalName": "cdm_fixedcompensationid",
+          "displayName": "Fixed Compensation",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_workerid",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "cdm_positionid",
+          "displayName": "Position",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "cdm_payrate",
+          "displayName": "Pay Rate",
+          "type": "money"
+        },
+        {
+          "logicalName": "cdm_payfrequency",
+          "displayName": "Pay Frequency",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "cdm_effectivedate",
+          "displayName": "Effective Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "cdm_expirationdate",
+          "displayName": "Expiration Date",
+          "type": "datetime"
+        }
+      ]
+    },
+    "mshr_leaverequest": {
+      "columns": [
+        {
+          "logicalName": "mshr_leaverequestid",
+          "displayName": "Leave Request",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mshr_name",
+          "displayName": "Leave Request",
+          "type": "string"
+        },
+        {
+          "logicalName": "mshr_workerid",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "mshr_leavetype",
+          "displayName": "Leave Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "mshr_startdate",
+          "displayName": "Start Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "mshr_enddate",
+          "displayName": "End Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "mshr_requeststatus",
+          "displayName": "Request Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_totaldays",
+          "displayName": "Total Days",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_managerapprover",
+          "displayName": "Approving Manager",
+          "type": "lookup"
+        }
+      ]
+    },
+    "mshr_leaveenrollment": {
+      "columns": [
+        {
+          "logicalName": "mshr_leaveenrollmentid",
+          "displayName": "Leave Enrollment",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "mshr_workerid",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "mshr_leaveplanname",
+          "displayName": "Leave Plan",
+          "type": "string"
+        },
+        {
+          "logicalName": "mshr_accruedbalance",
+          "displayName": "Accrued Balance",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "mshr_enrollmentdate",
+          "displayName": "Enrollment Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdynhr_worker": {
+      "columns": [
+        {
+          "logicalName": "msdynhr_workerid",
+          "displayName": "Worker Profile",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdynhr_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynhr_workeremail",
+          "displayName": "Worker Email",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdynhr_hireddate",
+          "displayName": "Hired Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_onboardingtask": {
+      "columns": [
+        {
+          "logicalName": "con_onboardingtaskid",
+          "displayName": "Onboarding Task",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Task Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_worker",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_assignedto",
+          "displayName": "Assigned To",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_duedate",
+          "displayName": "Due Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_category",
+          "displayName": "Category",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_iscompleted",
+          "displayName": "Completed",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_performancereview": {
+      "columns": [
+        {
+          "logicalName": "con_performancereviewid",
+          "displayName": "Performance Review",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Review Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_worker",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_reviewer",
+          "displayName": "Reviewer",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_reviewcycle",
+          "displayName": "Review Cycle",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_overallrating",
+          "displayName": "Overall Rating",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_calibrationscore",
+          "displayName": "Calibration Score",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_skill": {
+      "columns": [
+        {
+          "logicalName": "con_skillid",
+          "displayName": "Skill",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Skill Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_skillcategory",
+          "displayName": "Category",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_isstrategic",
+          "displayName": "Strategic Skill",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_workerskill": {
+      "columns": [
+        {
+          "logicalName": "con_workerskillid",
+          "displayName": "Worker Skill",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Worker Skill",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_worker",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_skill",
+          "displayName": "Skill",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_proficiency",
+          "displayName": "Proficiency",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_lastassessed",
+          "displayName": "Last Assessed",
+          "type": "datetime"
+        }
+      ]
+    },
+    "cdm_benefit": {
+      "columns": [
+        {
+          "logicalName": "cdm_benefitid",
+          "displayName": "Benefit",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "cdm_name",
+          "displayName": "Benefit",
+          "type": "string"
+        },
+        {
+          "logicalName": "cdm_benefittype",
+          "displayName": "Benefit Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "cdm_payfrequency",
+          "displayName": "Pay Frequency",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "cdm_description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_disciplinarycase": {
+      "columns": [
+        {
+          "logicalName": "con_disciplinarycaseid",
+          "displayName": "Disciplinary Case",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Case Number",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_worker",
+          "displayName": "Worker",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_casetype",
+          "displayName": "Case Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_severity",
+          "displayName": "Severity",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_openeddate",
+          "displayName": "Opened Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_ocliveworkitem": {
+      "columns": [
+        {
+          "logicalName": "msdyn_ocliveworkitemid",
+          "displayName": "Conversation",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_cdsconversationtype",
+          "displayName": "Channel",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_wrapupnotes",
+          "displayName": "Wrap-up Notes",
+          "type": "memo"
+        },
+        {
+          "logicalName": "msdyn_sentimentpulse",
+          "displayName": "Sentiment Pulse",
+          "type": "integer"
+        },
+        {
+          "logicalName": "msdyn_sentimentlowscore",
+          "displayName": "Lowest Sentiment",
+          "type": "integer"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_priorityscore",
+          "displayName": "Priority Score (Contoso)",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_vipflag",
+          "displayName": "VIP Customer (Contoso)",
+          "type": "boolean"
+        }
+      ]
+    },
+    "msdyn_ocsessionparticipant": {
+      "columns": [
+        {
+          "logicalName": "msdyn_ocsessionparticipantid",
+          "displayName": "Session Participant",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_mode",
+          "displayName": "Participation Mode",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_activestarttime",
+          "displayName": "Active Start Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_occontext": {
+      "columns": [
+        {
+          "logicalName": "msdyn_occontextid",
+          "displayName": "Context",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Key",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_value",
+          "displayName": "Value",
+          "type": "memo"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_agentstatushistory": {
+      "columns": [
+        {
+          "logicalName": "msdyn_agentstatushistoryid",
+          "displayName": "Agent Status History",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_starttime",
+          "displayName": "Start Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_endtime",
+          "displayName": "End Time",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "msdyn_presenceid",
+          "displayName": "Presence",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_adherencedeviationmin",
+          "displayName": "Adherence Deviation (min)",
+          "type": "decimal"
+        }
+      ]
+    },
+    "msdyn_presence": {
+      "columns": [
+        {
+          "logicalName": "msdyn_presenceid",
+          "displayName": "Presence",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_presencetext",
+          "displayName": "Presence Text",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_basepresencestatus",
+          "displayName": "Base Presence Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_liveworkstream": {
+      "columns": [
+        {
+          "logicalName": "msdyn_liveworkstreamid",
+          "displayName": "Work Stream",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_mode",
+          "displayName": "Work Distribution Mode",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "msdyn_channeltype",
+          "displayName": "Channel Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        }
+      ]
+    },
+    "msdyn_channel": {
+      "columns": [
+        {
+          "logicalName": "msdyn_channelid",
+          "displayName": "Channel Instance",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "msdyn_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "msdyn_channeltype",
+          "displayName": "Channel Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statuscode",
+          "displayName": "Status Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_businesshoursid",
+          "displayName": "Business Hours (Contoso)",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_region",
+          "displayName": "Region (Contoso)",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_deflectionoutcome": {
+      "columns": [
+        {
+          "logicalName": "con_deflectionoutcomeid",
+          "displayName": "Deflection Outcome",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_outcometype",
+          "displayName": "Outcome Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_contained",
+          "displayName": "Contained",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_costavoided",
+          "displayName": "Cost Avoided",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_escalationreason",
+          "displayName": "Escalation Reason",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_agentcoachingnote": {
+      "columns": [
+        {
+          "logicalName": "con_agentcoachingnoteid",
+          "displayName": "Agent Coaching Note",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_notes",
+          "displayName": "Notes",
+          "type": "memo"
+        },
+        {
+          "logicalName": "con_qascore",
+          "displayName": "QA Score",
+          "type": "decimal"
+        },
+        {
+          "logicalName": "con_calibrated",
+          "displayName": "Calibrated",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        }
+      ]
+    },
+    "con_botconfiguration": {
+      "columns": [
+        {
+          "logicalName": "con_botconfigurationid",
+          "displayName": "Bot Configuration",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_botapptype",
+          "displayName": "Bot Application Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_botprovider",
+          "displayName": "Bot Provider",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_botschemaname",
+          "displayName": "Bot Schema Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_channelbudgetline": {
+      "columns": [
+        {
+          "logicalName": "con_channelbudgetlineid",
+          "displayName": "Channel Budget Line",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_fiscalperiod",
+          "displayName": "Fiscal Period",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_budgetamount",
+          "displayName": "Budget Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_actualamount",
+          "displayName": "Actual Amount",
+          "type": "money"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        }
+      ]
+    },
+    "systemuser": {
+      "columns": [
+        {
+          "logicalName": "fullname",
+          "displayName": "Full Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "internalemailaddress",
+          "displayName": "Primary Email",
+          "type": "string"
+        },
+        {
+          "logicalName": "azureactivedirectoryobjectid",
+          "displayName": "Azure AD Object Id",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "businessunitid",
+          "displayName": "Business Unit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "isdisabled",
+          "displayName": "Disabled",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_makerpersona",
+          "displayName": "Maker Persona",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_lastcoeattestation",
+          "displayName": "Last CoE Attestation",
+          "type": "datetime"
+        }
+      ]
+    },
+    "team": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Team Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "teamtype",
+          "displayName": "Team Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "businessunitid",
+          "displayName": "Business Unit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "azureactivedirectoryobjectid",
+          "displayName": "Entra Group Id",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "administratorid",
+          "displayName": "Administrator",
+          "type": "lookup"
+        }
+      ]
+    },
+    "businessunit": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "parentbusinessunitid",
+          "displayName": "Parent Business Unit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "isdisabled",
+          "displayName": "Disabled",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "divisionname",
+          "displayName": "Division",
+          "type": "string"
+        },
+        {
+          "logicalName": "costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
+        }
+      ]
+    },
+    "solution": {
+      "columns": [
+        {
+          "logicalName": "uniquename",
+          "displayName": "Unique Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "friendlyname",
+          "displayName": "Display Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "version",
+          "displayName": "Version",
+          "type": "string"
+        },
+        {
+          "logicalName": "ismanaged",
+          "displayName": "Is Managed",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "publisherid",
+          "displayName": "Publisher",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "installedon",
+          "displayName": "Installed On",
+          "type": "datetime"
+        }
+      ]
+    },
+    "publisher": {
+      "columns": [
+        {
+          "logicalName": "uniquename",
+          "displayName": "Unique Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "friendlyname",
+          "displayName": "Display Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "customizationprefix",
+          "displayName": "Prefix",
+          "type": "string"
+        },
+        {
+          "logicalName": "customizationoptionvalueprefix",
+          "displayName": "Option Value Prefix",
+          "type": "integer"
+        },
+        {
+          "logicalName": "description",
+          "displayName": "Description",
+          "type": "memo"
+        }
+      ]
+    },
+    "workflow": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "category",
+          "displayName": "Category",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "type",
+          "displayName": "Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "primaryentity",
+          "displayName": "Primary Entity",
+          "type": "string"
+        },
+        {
+          "logicalName": "ownerid",
+          "displayName": "Owner",
+          "type": "owner"
+        },
+        {
+          "logicalName": "con_coecertified",
+          "displayName": "CoE Certified",
+          "type": "boolean"
+        }
+      ]
+    },
+    "connectionreference": {
+      "columns": [
+        {
+          "logicalName": "connectionreferencedisplayname",
+          "displayName": "Display Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "connectionreferencelogicalname",
+          "displayName": "Logical Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "connectorid",
+          "displayName": "Connector Id",
+          "type": "string"
+        },
+        {
+          "logicalName": "connectionid",
+          "displayName": "Connection Id",
+          "type": "string"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        }
+      ]
+    },
+    "environmentvariabledefinition": {
+      "columns": [
+        {
+          "logicalName": "schemaname",
+          "displayName": "Schema Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "displayname",
+          "displayName": "Display Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "type",
+          "displayName": "Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "defaultvalue",
+          "displayName": "Default Value",
+          "type": "memo"
+        },
+        {
+          "logicalName": "isrequired",
+          "displayName": "Is Required",
+          "type": "boolean"
+        }
+      ]
+    },
+    "sdkmessageprocessingstep": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "stage",
+          "displayName": "Stage",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "mode",
+          "displayName": "Execution Mode",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "rank",
+          "displayName": "Rank",
+          "type": "integer"
+        },
+        {
+          "logicalName": "statecode",
+          "displayName": "Status",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "plugintypeid",
+          "displayName": "Plug-in Type",
+          "type": "lookup"
+        }
+      ]
+    },
+    "plugintype": {
+      "columns": [
+        {
+          "logicalName": "typename",
+          "displayName": "Type Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "friendlyname",
+          "displayName": "Friendly Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "assemblyname",
+          "displayName": "Assembly Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "isworkflowactivity",
+          "displayName": "Is Workflow Activity",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "version",
+          "displayName": "Version",
+          "type": "string"
+        }
+      ]
+    },
+    "role": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Role Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "businessunitid",
+          "displayName": "Business Unit",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "ismanaged",
+          "displayName": "Is Managed",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "iscustomizable",
+          "displayName": "Is Customizable",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "roletemplateid",
+          "displayName": "Role Template",
+          "type": "uniqueidentifier"
+        }
+      ]
+    },
+    "fieldsecurityprofile": {
+      "columns": [
+        {
+          "logicalName": "name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "description",
+          "displayName": "Description",
+          "type": "memo"
+        },
+        {
+          "logicalName": "ismanaged",
+          "displayName": "Is Managed",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "iscustomizable",
+          "displayName": "Is Customizable",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "solutionid",
+          "displayName": "Solution",
+          "type": "uniqueidentifier"
+        }
+      ]
+    },
+    "adx_webpage": {
+      "columns": [
+        {
+          "logicalName": "adx_name",
+          "displayName": "Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "adx_partialurl",
+          "displayName": "Partial URL",
+          "type": "string"
+        },
+        {
+          "logicalName": "adx_websiteid",
+          "displayName": "Website",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "adx_publishingstateid",
+          "displayName": "Publishing State",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "adx_parentpageid",
+          "displayName": "Parent Page",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_securityreviewed",
+          "displayName": "Security Reviewed",
+          "type": "boolean"
+        }
+      ]
+    },
+    "con_environmentinventory": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Environment Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_environmentid",
+          "displayName": "Environment Id (GUID)",
+          "type": "uniqueidentifier"
+        },
+        {
+          "logicalName": "con_environmenttype",
+          "displayName": "Environment Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_region",
+          "displayName": "Azure Region",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_ownerid",
+          "displayName": "Environment Owner",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_dlppolicyname",
+          "displayName": "DLP Policy",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_lifecyclestate",
+          "displayName": "Lifecycle State",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_capacityconsumedmb",
+          "displayName": "Capacity Consumed (MB)",
+          "type": "decimal"
+        }
+      ]
+    },
+    "con_coecomplianceattestation": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Attestation Subject",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_componenttype",
+          "displayName": "Component Type",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_attestedby",
+          "displayName": "Attested By",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_attestationdate",
+          "displayName": "Attestation Date",
+          "type": "datetime"
+        },
+        {
+          "logicalName": "con_result",
+          "displayName": "Result",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_environmentid",
+          "displayName": "Environment",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_nextduedate",
+          "displayName": "Next Due Date",
+          "type": "datetime"
+        }
+      ]
+    },
+    "con_dataprocessingregister": {
+      "columns": [
+        {
+          "logicalName": "con_name",
+          "displayName": "Processing Activity",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_lawfulbasis",
+          "displayName": "Lawful Basis",
+          "type": "optionset"
+        },
+        {
+          "logicalName": "con_datacategory",
+          "displayName": "Data Category",
+          "type": "multiselect"
+        },
+        {
+          "logicalName": "con_retentionmonths",
+          "displayName": "Retention (Months)",
+          "type": "integer"
+        },
+        {
+          "logicalName": "con_dataownerid",
+          "displayName": "Data Owner",
+          "type": "lookup"
+        },
+        {
+          "logicalName": "con_datasensitivity",
+          "displayName": "Sensitivity",
+          "type": "optionset"
+        }
+      ]
+    },
+    "con_ledgerdimension": {
+      "columns": [
+        {
+          "logicalName": "con_dimensionname",
+          "displayName": "Dimension Name",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_dimensionvalue",
+          "displayName": "Dimension Value",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_legalentity",
+          "displayName": "Legal Entity",
+          "type": "string"
+        },
+        {
+          "logicalName": "con_isactive",
+          "displayName": "Is Active",
+          "type": "boolean"
+        },
+        {
+          "logicalName": "con_costcenter",
+          "displayName": "Cost Center",
+          "type": "string"
         }
       ]
     }

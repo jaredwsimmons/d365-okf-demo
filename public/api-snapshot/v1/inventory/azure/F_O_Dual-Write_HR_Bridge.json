@@ -1,0 +1,1 @@
+{"item":{"name":"F&O Dual-Write HR Bridge","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Finance & Operations dual-write synchronization surfacing HcmWorker/HcmEmployment/HcmPosition/CompanyInfo into Dataverse cdm_* tables."},"metadata":{"type":"azure","id":"F&O Dual-Write HR Bridge"}}

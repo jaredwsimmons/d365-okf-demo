@@ -1,1 +1,0 @@
-{"item":{"id":"wf-assign-wo","name":"Assign Work Order to Technician","tags":{"processCatalogL1":"FS.00 Service Delivery"},"solution":"ContosoFieldService","description":"Routes a new work order to the nearest available technician.","primaryEntity":"con_workorder","_relEnvVars":["con_FieldServiceApiUrl","con_DefaultRegion"]},"metadata":{"type":"workflows","id":"wf-assign-wo"}}

@@ -1,0 +1,676 @@
+{
+  "configs": [
+    {
+      "stepId": "step-1-opportunityrollupp",
+      "stepName": "Create of opportunityproduct — OpportunityRollupPlugin",
+      "pluginType": "OpportunityRollupPlugin",
+      "entity": "opportunityproduct",
+      "solution": "ContosoSales",
+      "ruleCount": 1,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-1-opportunityrollupp-r0",
+          "attribute": "quantity",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-opportunityrollupp",
+      "stepName": "Update of opportunityproduct — OpportunityRollupPlugin",
+      "pluginType": "OpportunityRollupPlugin",
+      "entity": "opportunityproduct",
+      "solution": "ContosoSales",
+      "ruleCount": 2,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-2-opportunityrollupp-r0",
+          "attribute": "quantity",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-2-opportunityrollupp-r1",
+          "attribute": "priceperunit",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-opportunityrollupp",
+      "stepName": "Delete of opportunityproduct — OpportunityRollupPlugin",
+      "pluginType": "OpportunityRollupPlugin",
+      "entity": "opportunityproduct",
+      "solution": "ContosoSales",
+      "ruleCount": 3,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-3-opportunityrollupp-r0",
+          "attribute": "quantity",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-3-opportunityrollupp-r1",
+          "attribute": "priceperunit",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-3-opportunityrollupp-r2",
+          "attribute": "extendedamount",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-4-quotetoorderguardp",
+      "stepName": "Update of quote — QuoteToOrderGuardPlugin",
+      "pluginType": "QuoteToOrderGuardPlugin",
+      "entity": "quote",
+      "solution": "ContosoSales",
+      "ruleCount": 4,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-4-quotetoorderguardp-r0",
+          "attribute": "name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-5-quotetoorderguardp",
+      "stepName": "Create of salesorder — QuoteToOrderGuardPlugin",
+      "pluginType": "QuoteToOrderGuardPlugin",
+      "entity": "salesorder",
+      "solution": "ContosoSales",
+      "ruleCount": 1,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-5-quotetoorderguardp-r0",
+          "attribute": "name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-5-quotetoorderguardp-r1",
+          "attribute": "ordernumber",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-6-dealdeskapprovalst",
+      "stepName": "Update of con_dealdeskreview — DealDeskApprovalStampPlugin",
+      "pluginType": "DealDeskApprovalStampPlugin",
+      "entity": "con_dealdeskreview",
+      "solution": "ContosoSales",
+      "ruleCount": 2,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-6-dealdeskapprovalst-r0",
+          "attribute": "con_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-6-dealdeskapprovalst-r1",
+          "attribute": "con_requesteddiscount",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-6-dealdeskapprovalst-r2",
+          "attribute": "con_reviewstatus",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-7-con-caserouting-en",
+      "stepName": "Create of incident — Con.CaseRouting.EntitlementBinderPlugin",
+      "pluginType": "Con.CaseRouting.EntitlementBinderPlugin",
+      "entity": "incident",
+      "solution": "ContosoCustomerService",
+      "ruleCount": 3,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-7-con-caserouting-en-r0",
+          "attribute": "title",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-8-con-caserouting-en",
+      "stepName": "Update of incident — Con.CaseRouting.EntitlementBinderPlugin",
+      "pluginType": "Con.CaseRouting.EntitlementBinderPlugin",
+      "entity": "incident",
+      "solution": "ContosoCustomerService",
+      "ruleCount": 4,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-8-con-caserouting-en-r0",
+          "attribute": "title",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-8-con-caserouting-en-r1",
+          "attribute": "ticketnumber",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-9-con-escalation-sla",
+      "stepName": "Create of con_escalation — Con.Escalation.SlaBreachStampPlugin",
+      "pluginType": "Con.Escalation.SlaBreachStampPlugin",
+      "entity": "con_escalation",
+      "solution": "ContosoCustomerService",
+      "ruleCount": 1,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-9-con-escalation-sla-r0",
+          "attribute": "con_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-9-con-escalation-sla-r1",
+          "attribute": "con_incidentid",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-9-con-escalation-sla-r2",
+          "attribute": "con_reason",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-10-con-deflection-sav",
+      "stepName": "Create of con_casedeflection — Con.Deflection.SavingsCalculatorPlugin",
+      "pluginType": "Con.Deflection.SavingsCalculatorPlugin",
+      "entity": "con_casedeflection",
+      "solution": "ContosoCustomerService",
+      "ruleCount": 2,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-10-con-deflection-sav-r0",
+          "attribute": "con_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-11-con-deflection-sav",
+      "stepName": "Associate of knowledgearticle — Con.Deflection.SavingsCalculatorPlugin",
+      "pluginType": "Con.Deflection.SavingsCalculatorPlugin",
+      "entity": "knowledgearticle",
+      "solution": "ContosoCustomerService",
+      "ruleCount": 3,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-11-con-deflection-sav-r0",
+          "attribute": "title",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-11-con-deflection-sav-r1",
+          "attribute": "articlepublicnumber",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-12-contoso-fieldservi",
+      "stepName": "Create of msdyn_workorderproduct — Contoso.FieldService.WorkOrderPricingPlugin",
+      "pluginType": "Contoso.FieldService.WorkOrderPricingPlugin",
+      "entity": "msdyn_workorderproduct",
+      "solution": "ContosoFieldService",
+      "ruleCount": 4,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-12-contoso-fieldservi-r0",
+          "attribute": "msdyn_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-12-contoso-fieldservi-r1",
+          "attribute": "msdyn_estimatequantity",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-12-contoso-fieldservi-r2",
+          "attribute": "msdyn_quantity",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-13-contoso-fieldservi",
+      "stepName": "Update of msdyn_workorderproduct — Contoso.FieldService.WorkOrderPricingPlugin",
+      "pluginType": "Contoso.FieldService.WorkOrderPricingPlugin",
+      "entity": "msdyn_workorderproduct",
+      "solution": "ContosoFieldService",
+      "ruleCount": 1,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-13-contoso-fieldservi-r0",
+          "attribute": "msdyn_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-14-contoso-fieldservi",
+      "stepName": "Create of msdyn_workorderservice — Contoso.FieldService.WorkOrderPricingPlugin",
+      "pluginType": "Contoso.FieldService.WorkOrderPricingPlugin",
+      "entity": "msdyn_workorderservice",
+      "solution": "ContosoFieldService",
+      "ruleCount": 2,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-14-contoso-fieldservi-r0",
+          "attribute": "msdyn_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-14-contoso-fieldservi-r1",
+          "attribute": "msdyn_duration",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-15-contoso-fieldservi",
+      "stepName": "Update of msdyn_workorder — Contoso.FieldService.SlaBreachEvaluatorPlugin",
+      "pluginType": "Contoso.FieldService.SlaBreachEvaluatorPlugin",
+      "entity": "msdyn_workorder",
+      "solution": "ContosoFieldService",
+      "ruleCount": 3,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-15-contoso-fieldservi-r0",
+          "attribute": "msdyn_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-15-contoso-fieldservi-r1",
+          "attribute": "msdyn_workordersummary",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-15-contoso-fieldservi-r2",
+          "attribute": "msdyn_systemstatus",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-16-contoso-fieldservi",
+      "stepName": "Update of msdyn_workorderproduct — Contoso.FieldService.InventoryDecrementPlugin",
+      "pluginType": "Contoso.FieldService.InventoryDecrementPlugin",
+      "entity": "msdyn_workorderproduct",
+      "solution": "ContosoFieldService",
+      "ruleCount": 4,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-16-contoso-fieldservi-r0",
+          "attribute": "msdyn_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-17-contoso-fieldservi",
+      "stepName": "Create of bookableresourcebooking — Contoso.FieldService.SafetyInspectionGuardPlugin",
+      "pluginType": "Contoso.FieldService.SafetyInspectionGuardPlugin",
+      "entity": "bookableresourcebooking",
+      "solution": "ContosoFieldService",
+      "ruleCount": 1,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-17-contoso-fieldservi-r0",
+          "attribute": "name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-17-contoso-fieldservi-r1",
+          "attribute": "starttime",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-18-projectrollupplugi",
+      "stepName": "Update of msdyn_projecttask — ProjectRollupPlugin",
+      "pluginType": "ProjectRollupPlugin",
+      "entity": "msdyn_projecttask",
+      "solution": "ContosoProjectOperations",
+      "ruleCount": 2,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-18-projectrollupplugi-r0",
+          "attribute": "msdyn_subject",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-18-projectrollupplugi-r1",
+          "attribute": "msdyn_start",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-18-projectrollupplugi-r2",
+          "attribute": "msdyn_finish",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-19-projectrollupplugi",
+      "stepName": "Create of msdyn_actuals — ProjectRollupPlugin",
+      "pluginType": "ProjectRollupPlugin",
+      "entity": "msdyn_actuals",
+      "solution": "ContosoProjectOperations",
+      "ruleCount": 3,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-19-projectrollupplugi-r0",
+          "attribute": "msdyn_transactiontypecode",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "stepId": "step-20-timeentryvalidatio",
+      "stepName": "Create of msdyn_timeentry — TimeEntryValidationPlugin",
+      "pluginType": "TimeEntryValidationPlugin",
+      "entity": "msdyn_timeentry",
+      "solution": "ContosoProjectOperations",
+      "ruleCount": 4,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-20-timeentryvalidatio-r0",
+          "attribute": "msdyn_start",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-20-timeentryvalidatio-r1",
+          "attribute": "msdyn_end",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "stepId": "step-21-timeentryvalidatio",
+      "stepName": "Update of msdyn_timeentry — TimeEntryValidationPlugin",
+      "pluginType": "TimeEntryValidationPlugin",
+      "entity": "msdyn_timeentry",
+      "solution": "ContosoProjectOperations",
+      "ruleCount": 1,
+      "isRulesEngine": true,
+      "rules": [
+        {
+          "ruleId": "step-21-timeentryvalidatio-r0",
+          "attribute": "msdyn_start",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        },
+        {
+          "ruleId": "step-21-timeentryvalidatio-r1",
+          "attribute": "msdyn_end",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 1
+        },
+        {
+          "ruleId": "step-21-timeentryvalidatio-r2",
+          "attribute": "msdyn_duration",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": false,
+          "isCustomField": true,
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "stepId": "step-22-contractlineactual",
+      "stepName": "Update of msdyn_contractline — ContractLineActualsGenerationPlugin",
+      "pluginType": "ContractLineActualsGenerationPlugin",
+      "entity": "msdyn_contractline",
+      "solution": "ContosoProjectOperations",
+      "ruleCount": 2,
+      "isRulesEngine": false,
+      "rules": [
+        {
+          "ruleId": "step-22-contractlineactual-r0",
+          "attribute": "msdyn_name",
+          "dataType": "string",
+          "deployForm": true,
+          "deployPlugin": true,
+          "evalOnLoad": true,
+          "isCustomField": true,
+          "priority": 0
+        }
+      ]
+    }
+  ]
+}

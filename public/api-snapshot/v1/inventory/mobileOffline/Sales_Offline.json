@@ -1,0 +1,1 @@
+{"item":{"id":"mob-sales","name":"Sales Offline","tags":{},"entities":["lead","opportunity","opportunityproduct","quote","quotedetail","salesorder"],"solution":"ContosoSales","entityCount":6},"metadata":{"type":"mobileOffline","id":"Sales Offline"}}

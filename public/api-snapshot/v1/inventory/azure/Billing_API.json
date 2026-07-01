@@ -1,1 +1,0 @@
-{"item":{"name":"Billing API","type":"REST","_type":"externalIntegration","trigger":"Work order completion","connector":"HTTP","direction":"Outbound","dataExchanged":"Invoices"},"metadata":{"type":"azure","id":"Billing API"}}

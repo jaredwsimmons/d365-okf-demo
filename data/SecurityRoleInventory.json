@@ -1,28 +1,372 @@
 {
   "roles": [
     {
-      "id": "role-technician",
-      "name": "Contoso Field Technician",
-      "solution": "ContosoFieldService",
-      "tags": {}
+      "id": "role-salesperson",
+      "name": "Salesperson",
+      "solution": "msdyn_SalesPro",
+      "tags": {
+        "persona": "Account Executive / Sales Rep"
+      }
     },
     {
-      "id": "role-dispatcher",
-      "name": "Contoso Dispatcher",
-      "solution": "ContosoFieldService",
-      "tags": {}
+      "id": "role-sales-manager",
+      "name": "Sales Manager",
+      "solution": "msdyn_SalesPro",
+      "tags": {
+        "persona": "Sales Manager"
+      }
     },
     {
-      "id": "role-servicemgr",
-      "name": "Contoso Service Manager",
-      "solution": "ContosoFieldService",
-      "tags": {}
-    },
-    {
-      "id": "role-salesrep",
-      "name": "Contoso Sales Rep",
+      "id": "role-con-deal-desk-approver",
+      "name": "Con Deal Desk Approver",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "persona": "Deal Desk / Finance Approver"
+      }
+    },
+    {
+      "id": "role-con-sales-operations-admin",
+      "name": "Con Sales Operations Admin",
+      "solution": "ContosoSales",
+      "tags": {
+        "persona": "Sales Ops Administrator"
+      }
+    },
+    {
+      "id": "role-customer-service-representative",
+      "name": "Customer Service Representative",
+      "solution": "msdyn_CustomerService",
+      "tags": {
+        "persona": "Tier-1 Support Agent"
+      }
+    },
+    {
+      "id": "role-customer-service-manager",
+      "name": "Customer Service Manager",
+      "solution": "msdyn_CustomerService",
+      "tags": {
+        "persona": "Support Team Lead / Manager"
+      }
+    },
+    {
+      "id": "role-knowledge-manager",
+      "name": "Knowledge Manager",
+      "solution": "msdyn_CustomerService",
+      "tags": {
+        "persona": "KB Author / Curator"
+      }
+    },
+    {
+      "id": "role-con-cs-escalation-handler",
+      "name": "Con - CS Escalation Handler",
+      "solution": "ContosoCustomerService",
+      "tags": {
+        "persona": "Tier-2/Tier-3 Escalation Specialist"
+      }
+    },
+    {
+      "id": "role-field-service-dispatcher",
+      "name": "Field Service - Dispatcher",
+      "solution": "msdyn_FieldService",
+      "tags": {
+        "persona": "Dispatcher"
+      }
+    },
+    {
+      "id": "role-field-service-resource",
+      "name": "Field Service - Resource",
+      "solution": "msdyn_FieldService",
+      "tags": {
+        "persona": "Field Technician"
+      }
+    },
+    {
+      "id": "role-field-service-administrator",
+      "name": "Field Service - Administrator",
+      "solution": "msdyn_FieldService",
+      "tags": {
+        "persona": "Field Service Admin"
+      }
+    },
+    {
+      "id": "role-contoso-safety-compliance-officer",
+      "name": "Contoso Safety Compliance Officer",
+      "solution": "ContosoFieldService",
+      "tags": {
+        "persona": "EHS Compliance Officer"
+      }
+    },
+    {
+      "id": "role-project-manager",
+      "name": "Project Manager",
+      "solution": "msdyn_ProjectServiceCore",
+      "tags": {
+        "persona": "Delivery / Engagement Manager"
+      }
+    },
+    {
+      "id": "role-team-member-project-operations",
+      "name": "Team Member - Project Operations",
+      "solution": "msdyn_ProjectServiceCore",
+      "tags": {
+        "persona": "Consultant / Billable Resource"
+      }
+    },
+    {
+      "id": "role-con-resourcing-desk-coordinator",
+      "name": "con_Resourcing Desk Coordinator",
+      "solution": "ContosoProjectOperations",
+      "tags": {
+        "persona": "Resource Manager / Staffing"
+      }
+    },
+    {
+      "id": "role-con-pmo-delivery-governance",
+      "name": "con_PMO Delivery Governance",
+      "solution": "ContosoProjectOperations",
+      "tags": {
+        "persona": "PMO / Delivery Director"
+      }
+    },
+    {
+      "id": "role-marketing-manager",
+      "name": "Marketing Manager",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "tags": {
+        "persona": "Campaign owner / marketing lead"
+      }
+    },
+    {
+      "id": "role-marketing-services-user",
+      "name": "Marketing Services User",
+      "solution": "msdynmkt_CustomerInsightsJourneys",
+      "tags": {
+        "persona": "Marketing operations user"
+      }
+    },
+    {
+      "id": "role-contoso-campaign-approver",
+      "name": "Contoso Campaign Approver",
+      "solution": "ContosoMarketing",
+      "tags": {
+        "persona": "Marketing director approving briefs and budgets"
+      }
+    },
+    {
+      "id": "role-contoso-consent-steward",
+      "name": "Contoso Consent Steward",
+      "solution": "ContosoMarketing",
+      "tags": {
+        "persona": "Privacy/compliance officer managing consent center"
+      }
+    },
+    {
+      "id": "role-ci-data-administrator",
+      "name": "CI Data Administrator",
+      "solution": "msdynci_CustomerInsights",
+      "tags": {
+        "persona": "CDP Platform Admin"
+      }
+    },
+    {
+      "id": "role-ci-data-contributor",
+      "name": "CI Data Contributor",
+      "solution": "msdynci_CustomerInsights",
+      "tags": {
+        "persona": "Data Engineer / Analyst"
+      }
+    },
+    {
+      "id": "role-contoso-segment-activator",
+      "name": "Contoso Segment Activator",
+      "solution": "ContosoCustomerInsights",
+      "tags": {
+        "persona": "Marketing Operations"
+      }
+    },
+    {
+      "id": "role-accounts-payable-coordinator",
+      "name": "Accounts Payable Coordinator",
+      "solution": "ContosoFinance",
+      "tags": {
+        "persona": "AP Clerk"
+      }
+    },
+    {
+      "id": "role-accounts-receivable-coordinator",
+      "name": "Accounts Receivable Coordinator",
+      "solution": "ContosoFinance",
+      "tags": {
+        "persona": "AR/Collections Clerk"
+      }
+    },
+    {
+      "id": "role-financial-controller",
+      "name": "Financial Controller",
+      "solution": "ContosoFinance",
+      "tags": {
+        "persona": "Controller"
+      }
+    },
+    {
+      "id": "role-finance-and-operations-integration-user",
+      "name": "Finance and Operations Integration User",
+      "solution": "msdyn_FinanceAndOperations",
+      "tags": {
+        "persona": "Dual-Write Service Account"
+      }
+    },
+    {
+      "id": "role-procurement-manager",
+      "name": "Procurement Manager",
+      "solution": "ContosoSupplyChain",
+      "tags": {
+        "persona": "Procurement Manager"
+      }
+    },
+    {
+      "id": "role-warehouse-worker",
+      "name": "Warehouse Worker",
+      "solution": "ContosoSupplyChain",
+      "tags": {
+        "persona": "Warehouse Operative"
+      }
+    },
+    {
+      "id": "role-supply-chain-planner",
+      "name": "Supply Chain Planner",
+      "solution": "ContosoSupplyChain",
+      "tags": {
+        "persona": "Demand Planner"
+      }
+    },
+    {
+      "id": "role-system-administrator",
+      "name": "System Administrator",
+      "solution": "msdyn_SupplyChain",
+      "tags": {
+        "persona": "CoE Admin"
+      }
+    },
+    {
+      "id": "role-retail-store-manager",
+      "name": "Retail Store Manager",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "persona": "Store Manager"
+      }
+    },
+    {
+      "id": "role-store-associate-pos",
+      "name": "Store Associate (POS)",
+      "solution": "ContosoCommerce",
+      "tags": {
+        "persona": "Cashier / Sales Associate"
+      }
+    },
+    {
+      "id": "role-retail-operations-manager",
+      "name": "Retail Operations Manager",
+      "solution": "msdyn_Commerce",
+      "tags": {
+        "persona": "Regional Retail Operations"
+      }
+    },
+    {
+      "id": "role-commerce-system-administrator",
+      "name": "Commerce System Administrator",
+      "solution": "msdyn_Commerce",
+      "tags": {
+        "persona": "Commerce Platform Admin"
+      }
+    },
+    {
+      "id": "role-human-resources-manager",
+      "name": "Human Resources Manager",
+      "solution": "msdynhr_HumanResources",
+      "tags": {
+        "persona": "HR Manager / HRBP"
+      }
+    },
+    {
+      "id": "role-human-resources-self-service",
+      "name": "Human Resources Self Service",
+      "solution": "msdynhr_HumanResources",
+      "tags": {
+        "persona": "Employee (Self-Service)"
+      }
+    },
+    {
+      "id": "role-contoso-hr-business-partner",
+      "name": "Contoso HR Business Partner",
+      "solution": "ContosoHumanResources",
+      "tags": {
+        "persona": "HR Business Partner"
+      }
+    },
+    {
+      "id": "role-contoso-employee-relations-specialist",
+      "name": "Contoso Employee Relations Specialist",
+      "solution": "ContosoHumanResources",
+      "tags": {
+        "persona": "ER / Disciplinary Case Handler"
+      }
+    },
+    {
+      "id": "role-omnichannel-agent",
+      "name": "Omnichannel agent",
+      "solution": "msdyn_OmnichannelBase",
+      "tags": {
+        "persona": "Contact Center Agent"
+      }
+    },
+    {
+      "id": "role-omnichannel-supervisor",
+      "name": "Omnichannel supervisor",
+      "solution": "msdyn_OmnichannelBase",
+      "tags": {
+        "persona": "Contact Center Supervisor"
+      }
+    },
+    {
+      "id": "role-omnichannel-administrator",
+      "name": "Omnichannel administrator",
+      "solution": "msdyn_OmnichannelBase",
+      "tags": {
+        "persona": "Contact Center Administrator"
+      }
+    },
+    {
+      "id": "role-contoso-cc-quality-analyst",
+      "name": "Contoso CC Quality Analyst",
+      "solution": "ContosoContactCenter",
+      "tags": {
+        "persona": "Quality / Calibration Analyst"
+      }
+    },
+    {
+      "id": "role-environment-maker",
+      "name": "Environment Maker",
+      "solution": "CenterofExcellenceCoreComponents",
+      "tags": {
+        "persona": "Citizen / Fusion Maker"
+      }
+    },
+    {
+      "id": "role-con-coe-data-protection-officer",
+      "name": "Con - CoE Data Protection Officer",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {
+        "persona": "DPO / Data Governance Lead"
+      }
+    },
+    {
+      "id": "role-con-governance-auditor-read-only",
+      "name": "Con - Governance Auditor (Read-Only)",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {
+        "persona": "Internal Audit / Compliance Reviewer"
+      }
     }
   ]
 }

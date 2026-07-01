@@ -1,21 +1,53 @@
 {
   "metadata": {
     "generated": "2026-06-26T00:00:00.000Z",
-    "totalProfiles": 1,
-    "totalEntitiesEnabled": 4,
+    "totalProfiles": 3,
+    "totalEntitiesEnabled": 18,
     "summary": {}
   },
   "profiles": [
     {
-      "id": "mob-technician",
-      "name": "Field Technician Offline",
-      "solution": "ContosoFieldService",
-      "entityCount": 4,
+      "id": "mob-sales",
+      "name": "Sales Offline",
+      "solution": "ContosoSales",
+      "entityCount": 6,
       "entities": [
-        "con_workorder",
-        "con_servicevisit",
-        "con_asset",
-        "con_inspection"
+        "lead",
+        "opportunity",
+        "opportunityproduct",
+        "quote",
+        "quotedetail",
+        "salesorder"
+      ],
+      "tags": {}
+    },
+    {
+      "id": "mob-customerService",
+      "name": "Customer Service Offline",
+      "solution": "ContosoCustomerService",
+      "entityCount": 6,
+      "entities": [
+        "incident",
+        "incidentresolution",
+        "knowledgearticle",
+        "entitlement",
+        "entitlementtemplate",
+        "sla"
+      ],
+      "tags": {}
+    },
+    {
+      "id": "mob-fieldService",
+      "name": "Field Service Offline",
+      "solution": "ContosoFieldService",
+      "entityCount": 6,
+      "entities": [
+        "msdyn_workorder",
+        "msdyn_workorderproduct",
+        "msdyn_workorderservice",
+        "msdyn_incidenttype",
+        "bookableresource",
+        "bookableresourcebooking"
       ],
       "tags": {}
     }

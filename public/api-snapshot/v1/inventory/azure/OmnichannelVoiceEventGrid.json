@@ -1,0 +1,1 @@
+{"item":{"name":"OmnichannelVoiceEventGrid","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Azure Communication Services powering the voice channel; call events flow into Omnichannel via Event Grid."},"metadata":{"type":"azure","id":"OmnichannelVoiceEventGrid"}}

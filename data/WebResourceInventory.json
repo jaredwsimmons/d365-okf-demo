@@ -1,24 +1,549 @@
 {
   "webResources": [
     {
-      "name": "con_/scripts/workorder.js",
+      "name": "con_/scripts/lead.js",
+      "displayName": "Lead Form Scripts",
+      "description": "Client-side logic on the Lead form.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/opportunity.js",
+      "displayName": "Opportunity Form Scripts",
+      "description": "Client-side logic on the Opportunity form.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/salesorder.js",
+      "displayName": "Order Form Scripts",
+      "description": "Client-side logic on the Order form.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/product.js",
+      "displayName": "Product Form Scripts",
+      "description": "Client-side logic on the Product form.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-dealdeskreview.js",
+      "displayName": "Deal Desk Review Form Scripts",
+      "description": "Client-side logic on the Deal Desk Review form.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-salesplaybook.js",
+      "displayName": "Sales Playbook Form Scripts",
+      "description": "Client-side logic on the Sales Playbook form.",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/incident.js",
+      "displayName": "Case Form Scripts",
+      "description": "Client-side logic on the Case form.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/knowledgearticle.js",
+      "displayName": "Knowledge Article Form Scripts",
+      "description": "Client-side logic on the Knowledge Article form.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/sla.js",
+      "displayName": "SLA Form Scripts",
+      "description": "Client-side logic on the SLA form.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-casedeflection.js",
+      "displayName": "Case Deflection Form Scripts",
+      "description": "Client-side logic on the Case Deflection form.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-escalation.js",
+      "displayName": "Escalation Form Scripts",
+      "description": "Client-side logic on the Escalation form.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-servicefeedback.js",
+      "displayName": "Service Feedback Form Scripts",
+      "description": "Client-side logic on the Service Feedback form.",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-workorder.js",
       "displayName": "Work Order Form Scripts",
-      "description": "Client-side validation and pricing preview on the work order form.",
+      "description": "Client-side logic on the Work Order form.",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "name": "con_/scripts/agreement.js",
-      "displayName": "Agreement Form Scripts",
-      "description": "Renewal-date guards on the service agreement form.",
+      "name": "con_/scripts/msdyn-incidenttype.js",
+      "displayName": "Incident Type Form Scripts",
+      "description": "Client-side logic on the Incident Type form.",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "name": "con_/html/fswelcome.html",
-      "displayName": "Field Service Welcome",
-      "description": "Landing HTML embedded on the Field Service dashboard.",
+      "name": "con_/scripts/bookableresource.js",
+      "displayName": "Bookable Resource Form Scripts",
+      "description": "Client-side logic on the Bookable Resource form.",
       "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-customerasset.js",
+      "displayName": "Customer Asset Form Scripts",
+      "description": "Client-side logic on the Customer Asset form.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-timeentry.js",
+      "displayName": "Time Entry Form Scripts",
+      "description": "Client-side logic on the Time Entry form.",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-safetyinspection.js",
+      "displayName": "Safety Inspection Form Scripts",
+      "description": "Client-side logic on the Safety Inspection form.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-slapenaltyrule.js",
+      "displayName": "SLA Penalty Rule Form Scripts",
+      "description": "Client-side logic on the SLA Penalty Rule form.",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-project.js",
+      "displayName": "Project Form Scripts",
+      "description": "Client-side logic on the Project form.",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-expense.js",
+      "displayName": "Expense Form Scripts",
+      "description": "Client-side logic on the Expense form.",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-projecthealthreview.js",
+      "displayName": "Project Health Review Form Scripts",
+      "description": "Client-side logic on the Project Health Review form.",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-resourcerequest.js",
+      "displayName": "Staffing Request Form Scripts",
+      "description": "Client-side logic on the Staffing Request form.",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdynmkt-journey.js",
+      "displayName": "Journey Form Scripts",
+      "description": "Client-side logic on the Journey form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdynmkt-segment.js",
+      "displayName": "Segment Form Scripts",
+      "description": "Client-side logic on the Segment form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdynmkt-marketingemail.js",
+      "displayName": "Marketing Email Form Scripts",
+      "description": "Client-side logic on the Marketing Email form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/contact.js",
+      "displayName": "Contact Form Scripts",
+      "description": "Client-side logic on the Contact form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msevtmgt-event.js",
+      "displayName": "Event Form Scripts",
+      "description": "Client-side logic on the Event form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-campaignbrief.js",
+      "displayName": "Campaign Brief Form Scripts",
+      "description": "Client-side logic on the Campaign Brief form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-legalfootertemplate.js",
+      "displayName": "Legal Footer Template Form Scripts",
+      "description": "Client-side logic on the Legal Footer Template form.",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdynci-customerprofile.js",
+      "displayName": "Customer Profile (Unified) Form Scripts",
+      "description": "Client-side logic on the Customer Profile (Unified) form.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdynci-measure.js",
+      "displayName": "Measure Form Scripts",
+      "description": "Client-side logic on the Measure form.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdynci-segment.js",
+      "displayName": "Segment Form Scripts",
+      "description": "Client-side logic on the Segment form.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-consentledger.js",
+      "displayName": "Consent Ledger Form Scripts",
+      "description": "Client-side logic on the Consent Ledger form.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-matchrule.js",
+      "displayName": "Match Rule Override Form Scripts",
+      "description": "Client-side logic on the Match Rule Override form.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-datasourcehealth.js",
+      "displayName": "Data Source Health Log Form Scripts",
+      "description": "Client-side logic on the Data Source Health Log form.",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/account.js",
+      "displayName": "Account Form Scripts",
+      "description": "Client-side logic on the Account form.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/transactioncurrency.js",
+      "displayName": "Currency Form Scripts",
+      "description": "Client-side logic on the Currency form.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-apapprovalrequest.js",
+      "displayName": "AP Approval Request Form Scripts",
+      "description": "Client-side logic on the AP Approval Request form.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-capexrequest.js",
+      "displayName": "Capex Request Form Scripts",
+      "description": "Client-side logic on the Capex Request form.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-financialdimensionmap.js",
+      "displayName": "Financial Dimension Map Form Scripts",
+      "description": "Client-side logic on the Financial Dimension Map form.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-dunningaction.js",
+      "displayName": "Dunning Action Form Scripts",
+      "description": "Client-side logic on the Dunning Action form.",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-vendor.js",
+      "displayName": "Vendor Form Scripts",
+      "description": "Client-side logic on the Vendor form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-purchaserequisition.js",
+      "displayName": "Purchase Requisition Form Scripts",
+      "description": "Client-side logic on the Purchase Requisition form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-inventorycount.js",
+      "displayName": "Inventory Count Form Scripts",
+      "description": "Client-side logic on the Inventory Count form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-shipment.js",
+      "displayName": "Shipment Form Scripts",
+      "description": "Client-side logic on the Shipment form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-demandforecast.js",
+      "displayName": "Demand Forecast Form Scripts",
+      "description": "Client-side logic on the Demand Forecast form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-bomcomponent.js",
+      "displayName": "BOM Component Form Scripts",
+      "description": "Client-side logic on the BOM Component form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-productionorder.js",
+      "displayName": "Production Order Form Scripts",
+      "description": "Client-side logic on the Production Order form.",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-retailchannel.js",
+      "displayName": "Retail Channel Form Scripts",
+      "description": "Client-side logic on the Retail Channel form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-retailstore.js",
+      "displayName": "Retail Store Form Scripts",
+      "description": "Client-side logic on the Retail Store form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-retailtransaction.js",
+      "displayName": "Retail Transaction Form Scripts",
+      "description": "Client-side logic on the Retail Transaction form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-loyaltyprogram.js",
+      "displayName": "Loyalty Program Form Scripts",
+      "description": "Client-side logic on the Loyalty Program form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-loyaltycard.js",
+      "displayName": "Loyalty Card Form Scripts",
+      "description": "Client-side logic on the Loyalty Card form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-clienteling.js",
+      "displayName": "Clienteling Appointment Form Scripts",
+      "description": "Client-side logic on the Clienteling Appointment form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-curbsideorder.js",
+      "displayName": "Curbside Pickup Order Form Scripts",
+      "description": "Client-side logic on the Curbside Pickup Order form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-pricematchrequest.js",
+      "displayName": "Price Match Request Form Scripts",
+      "description": "Client-side logic on the Price Match Request form.",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/cdm-worker.js",
+      "displayName": "Worker Form Scripts",
+      "description": "Client-side logic on the Worker form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/cdm-employment.js",
+      "displayName": "Employment Form Scripts",
+      "description": "Client-side logic on the Employment form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/cdm-position.js",
+      "displayName": "Position Form Scripts",
+      "description": "Client-side logic on the Position form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/mshr-leaverequest.js",
+      "displayName": "Leave Request Form Scripts",
+      "description": "Client-side logic on the Leave Request form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-onboardingtask.js",
+      "displayName": "Onboarding Task Form Scripts",
+      "description": "Client-side logic on the Onboarding Task form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-performancereview.js",
+      "displayName": "Performance Review Form Scripts",
+      "description": "Client-side logic on the Performance Review form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-skill.js",
+      "displayName": "Skill Form Scripts",
+      "description": "Client-side logic on the Skill form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-workerskill.js",
+      "displayName": "Worker Skill Form Scripts",
+      "description": "Client-side logic on the Worker Skill form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-disciplinarycase.js",
+      "displayName": "Disciplinary Case Form Scripts",
+      "description": "Client-side logic on the Disciplinary Case form.",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-ocliveworkitem.js",
+      "displayName": "Conversation Form Scripts",
+      "description": "Client-side logic on the Conversation form.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-agentstatushistory.js",
+      "displayName": "Agent Status History Form Scripts",
+      "description": "Client-side logic on the Agent Status History form.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/msdyn-channel.js",
+      "displayName": "Channel Instance Form Scripts",
+      "description": "Client-side logic on the Channel Instance form.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-deflectionoutcome.js",
+      "displayName": "Deflection Outcome Form Scripts",
+      "description": "Client-side logic on the Deflection Outcome form.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-agentcoachingnote.js",
+      "displayName": "Agent Coaching Note Form Scripts",
+      "description": "Client-side logic on the Agent Coaching Note form.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-botconfiguration.js",
+      "displayName": "Bot Configuration Form Scripts",
+      "description": "Client-side logic on the Bot Configuration form.",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/systemuser.js",
+      "displayName": "User Form Scripts",
+      "description": "Client-side logic on the User form.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/adx-webpage.js",
+      "displayName": "Web Page (Power Pages) Form Scripts",
+      "description": "Client-side logic on the Web Page (Power Pages) form.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-environmentinventory.js",
+      "displayName": "Environment Inventory Form Scripts",
+      "description": "Client-side logic on the Environment Inventory form.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-coecomplianceattestation.js",
+      "displayName": "CoE Compliance Attestation Form Scripts",
+      "description": "Client-side logic on the CoE Compliance Attestation form.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "name": "con_/scripts/con-dataprocessingregister.js",
+      "displayName": "Data Processing Register Form Scripts",
+      "description": "Client-side logic on the Data Processing Register form.",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "name": "con_/html/welcome.html",
+      "displayName": "CoE Welcome",
+      "description": "Landing HTML embedded on the CoE dashboard.",
+      "solution": "ContosoCore",
       "tags": {}
     },
     {

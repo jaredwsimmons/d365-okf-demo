@@ -1,0 +1,1 @@
+{"item":{"id":"plg-shipmenttrackingsyncplugin","name":"ShipmentTrackingSyncPlugin","tags":{},"solution":"ContosoSupplyChain","businessLogic":"On shipment create/update, validates carrier tracking number format and rolls up shipment status to the linked F&O sales order line via the OData connection."},"metadata":{"type":"plugins","id":"plg-shipmenttrackingsyncplugin"}}

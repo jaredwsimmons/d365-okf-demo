@@ -1,0 +1,3099 @@
+{
+  "byFlow": {
+    "Lead to Opportunity Sales Process": {
+      "solution": "ContosoSales",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "lead",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "subject",
+            "fullname",
+            "leadsourcecode"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Contoso Lead Scoring & Routing": {
+      "solution": "ContosoSales",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "lead",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "subject",
+            "fullname",
+            "leadsourcecode"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Deal Desk Approval Routing": {
+      "solution": "ContosoSales",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_dealdeskreview",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_requesteddiscount",
+            "con_reviewstatus"
+          ]
+        },
+        {
+          "entity": "opportunity",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "estimatedvalue",
+            "estimatedclosedate"
+          ]
+        },
+        {
+          "entity": "quote",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "quotenumber",
+            "totalamount"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Auto-Create Deal Desk Review on Strategic Deal": {
+      "solution": "ContosoSales",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "opportunity",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "name",
+            "estimatedvalue",
+            "estimatedclosedate"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "pricelevel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "begindate",
+            "enddate"
+          ]
+        }
+      ]
+    },
+    "Require Est. Close Date & Value on Propose": {
+      "solution": "ContosoSales",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "opportunity",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "name",
+            "estimatedvalue",
+            "estimatedclosedate"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "pricelevel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "begindate",
+            "enddate"
+          ]
+        }
+      ]
+    },
+    "Invoice Paid Sync from F&O": {
+      "solution": "ContosoSales",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "invoice",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "name",
+            "invoicenumber",
+            "totalamount"
+          ]
+        },
+        {
+          "entity": "salesorder",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "ordernumber",
+            "totalamount"
+          ]
+        },
+        {
+          "entity": "opportunity",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "estimatedvalue",
+            "estimatedclosedate"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Phase to First Response and Resolution": {
+      "solution": "ContosoCustomerService",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "incident",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "entitlement",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "customerid",
+            "startdate"
+          ]
+        }
+      ]
+    },
+    "Auto-Route New Cases to Tier Queue": {
+      "solution": "ContosoCustomerService",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "incident",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "entitlement",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "customerid",
+            "startdate"
+          ]
+        }
+      ]
+    },
+    "Notify Manager on High-Priority Escalation": {
+      "solution": "ContosoCustomerService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_escalation",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_incidentid",
+            "con_reason"
+          ]
+        },
+        {
+          "entity": "incident",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "team",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "teamtype",
+            "businessunitid"
+          ]
+        }
+      ]
+    },
+    "Sync CSAT Survey Responses to Service Feedback": {
+      "solution": "ContosoCustomerService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_servicefeedback",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_incidentid",
+            "con_csatscore"
+          ]
+        },
+        {
+          "entity": "incident",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Require Resolution Notes Before Close": {
+      "solution": "ContosoCustomerService",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "incident",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "entitlement",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "customerid",
+            "startdate"
+          ]
+        }
+      ]
+    },
+    "Nightly Knowledge Article Review Reminder": {
+      "solution": "ContosoCustomerService",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "knowledgearticle",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "title",
+            "articlepublicnumber",
+            "keywords"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Work Order Lifecycle": {
+      "solution": "ContosoFieldService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_workorder",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_workordersummary",
+            "msdyn_systemstatus"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "msdyn_incidenttype",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_description",
+            "msdyn_defaulttaxable"
+          ]
+        }
+      ]
+    },
+    "Auto-Create Safety Inspection for Hazardous Work Orders": {
+      "solution": "ContosoFieldService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_workorder",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_workordersummary",
+            "msdyn_systemstatus"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "msdyn_incidenttype",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_description",
+            "msdyn_defaulttaxable"
+          ]
+        }
+      ]
+    },
+    "SLA Breach Risk Escalation": {
+      "solution": "ContosoFieldService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_workorder",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_workordersummary",
+            "msdyn_systemstatus"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "msdyn_incidenttype",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_description",
+            "msdyn_defaulttaxable"
+          ]
+        }
+      ]
+    },
+    "Agreement Booking Setup Generation": {
+      "solution": "ContosoFieldService",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "msdyn_agreement",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_agreementnumber",
+            "msdyn_startdate"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Truck Stock Replenishment Request": {
+      "solution": "ContosoFieldService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_productinventory",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_availablequantity",
+            "msdyn_allocatedquantity"
+          ]
+        },
+        {
+          "entity": "product",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "productnumber",
+            "producttypecode"
+          ]
+        },
+        {
+          "entity": "msdyn_warehouse",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_description",
+            "msdyn_account"
+          ]
+        }
+      ]
+    },
+    "Require Serial Number on Serviceable Assets": {
+      "solution": "ContosoFieldService",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_customerasset",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_serialnumber",
+            "msdyn_category"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "product",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "productnumber",
+            "producttypecode"
+          ]
+        }
+      ]
+    },
+    "Certification Expiry Warning for Resources": {
+      "solution": "ContosoFieldService",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "bookableresource",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "name",
+            "resourcetype",
+            "msdyn_hourlyrate"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        }
+      ]
+    },
+    "Project Approval Business Process Flow": {
+      "solution": "ContosoProjectOperations",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_project",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_subject",
+            "statecode",
+            "statuscode"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "msdyn_projectcontract",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_contractorganizationalunitid",
+            "msdyn_estimatedtotalamount"
+          ]
+        }
+      ]
+    },
+    "Contoso Time Entry Auto-Submit Reminder": {
+      "solution": "ContosoProjectOperations",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_timeentry",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_start",
+            "msdyn_end",
+            "msdyn_duration"
+          ]
+        },
+        {
+          "entity": "bookableresource",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "resourcetype",
+            "msdyn_hourlyrate"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "msdyn_project",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_subject",
+            "statecode",
+            "statuscode"
+          ]
+        }
+      ]
+    },
+    "Margin Alert on Actuals Posting": {
+      "solution": "ContosoProjectOperations",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_actuals",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_transactiontypecode",
+            "msdyn_transactionclassification",
+            "msdyn_quantity"
+          ]
+        },
+        {
+          "entity": "msdyn_project",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_subject",
+            "statecode",
+            "statuscode"
+          ]
+        },
+        {
+          "entity": "msdyn_contractline",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_billingmethod",
+            "msdyn_estimatedamount"
+          ]
+        }
+      ]
+    },
+    "Staffing Request Fulfillment Routing": {
+      "solution": "ContosoProjectOperations",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_resourcerequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_requiredfrom",
+            "con_requiredhours"
+          ]
+        },
+        {
+          "entity": "msdyn_project",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_subject",
+            "statecode",
+            "statuscode"
+          ]
+        },
+        {
+          "entity": "msdyn_projectteam",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_effortcontour",
+            "msdyn_isgeneric"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Expense Receipt Required Rule": {
+      "solution": "ContosoProjectOperations",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_expense",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_transactiondate",
+            "msdyn_amount"
+          ]
+        },
+        {
+          "entity": "msdyn_project",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_subject",
+            "statecode",
+            "statuscode"
+          ]
+        },
+        {
+          "entity": "bookableresource",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "resourcetype",
+            "msdyn_hourlyrate"
+          ]
+        }
+      ]
+    },
+    "Contract Line to F&O Sync": {
+      "solution": "ContosoProjectOperations",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_contractline",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_billingmethod",
+            "msdyn_estimatedamount"
+          ]
+        },
+        {
+          "entity": "msdyn_projectcontract",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_contractorganizationalunitid",
+            "msdyn_estimatedtotalamount"
+          ]
+        },
+        {
+          "entity": "msdyn_project",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_subject",
+            "statecode",
+            "statuscode"
+          ]
+        }
+      ]
+    },
+    "Sales-Ready Lead Handoff": {
+      "solution": "ContosoMarketing",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "lead",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "subject",
+            "fullname",
+            "leadsourcecode"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Campaign Brief Approval Routing": {
+      "solution": "ContosoMarketing",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_campaignbrief",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_campaignbriefid",
+            "con_name",
+            "con_objective"
+          ]
+        },
+        {
+          "entity": "msdynmkt_segment",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynmkt_segmentid",
+            "msdynmkt_name",
+            "msdynmkt_segmenttype"
+          ]
+        },
+        {
+          "entity": "msdynmkt_journey",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynmkt_journeyid",
+            "msdynmkt_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Event Registration Confirmation": {
+      "solution": "ContosoMarketing",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msevtmgt_eventregistration",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msevtmgt_eventregistrationid",
+            "msevtmgt_name",
+            "msevtmgt_registrationstatus"
+          ]
+        },
+        {
+          "entity": "msevtmgt_event",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msevtmgt_eventid",
+            "msevtmgt_name",
+            "msevtmgt_eventstartdate"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        }
+      ]
+    },
+    "Consent Change Suppression Sync": {
+      "solution": "ContosoMarketing",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "msdynmkt_contactpointconsent3",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdynmkt_contactpointconsent3id",
+            "msdynmkt_contactpoint",
+            "msdynmkt_channeltype"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        }
+      ]
+    },
+    "Require Legal Footer Before Email Go-Live": {
+      "solution": "ContosoMarketing",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdynmkt_marketingemail",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdynmkt_marketingemailid",
+            "msdynmkt_name",
+            "msdynmkt_subject"
+          ]
+        },
+        {
+          "entity": "con_legalfootertemplate",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "con_legalfootertemplateid",
+            "con_name",
+            "con_region"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Campaign Brief to Launch BPF": {
+      "solution": "ContosoMarketing",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_campaignbrief",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_campaignbriefid",
+            "con_name",
+            "con_objective"
+          ]
+        },
+        {
+          "entity": "msdynmkt_segment",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynmkt_segmentid",
+            "msdynmkt_name",
+            "msdynmkt_segmenttype"
+          ]
+        },
+        {
+          "entity": "msdynmkt_journey",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynmkt_journeyid",
+            "msdynmkt_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Sync Churn Prediction to Loyalty Tier": {
+      "solution": "ContosoCustomerInsights",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdynci_predictionscore",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdynci_predictionscoreid",
+            "msdynci_score",
+            "msdynci_scoredon"
+          ]
+        },
+        {
+          "entity": "msdynci_prediction",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynci_predictionid",
+            "msdynci_name",
+            "msdynci_modeltype"
+          ]
+        },
+        {
+          "entity": "msdynci_customerprofile",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynci_customerprofileid",
+            "msdynci_fullname",
+            "msdynci_email"
+          ]
+        }
+      ]
+    },
+    "Consent Verified Guard for Segment Activation": {
+      "solution": "ContosoCustomerInsights",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "msdynci_segment",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdynci_segmentid",
+            "msdynci_name",
+            "msdynci_membercount"
+          ]
+        },
+        {
+          "entity": "team",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "teamtype",
+            "businessunitid"
+          ]
+        }
+      ]
+    },
+    "Data Source Health Alert to Teams": {
+      "solution": "ContosoCustomerInsights",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_datasourcehealth",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_datasourcehealthid",
+            "con_name",
+            "con_refreshstatus"
+          ]
+        },
+        {
+          "entity": "msdynci_datasource",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynci_datasourceid",
+            "msdynci_name",
+            "msdynci_sourcetype"
+          ]
+        }
+      ]
+    },
+    "DSR Delete Propagation": {
+      "solution": "ContosoCustomerInsights",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_consentledger",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_consentledgerid",
+            "con_name",
+            "con_consenttype"
+          ]
+        },
+        {
+          "entity": "msdynci_customerprofile",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdynci_customerprofileid",
+            "msdynci_fullname",
+            "msdynci_email"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        }
+      ]
+    },
+    "Unified Profile Enrichment - F&O Credit": {
+      "solution": "ContosoCustomerInsights",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdynci_customerprofile",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdynci_customerprofileid",
+            "msdynci_fullname",
+            "msdynci_email"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Data Onboarding & Unification Approval": {
+      "solution": "ContosoCustomerInsights",
+      "entityCount": 1,
+      "entities": [
+        {
+          "entity": "msdynci_datasource",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdynci_datasourceid",
+            "msdynci_name",
+            "msdynci_sourcetype"
+          ]
+        }
+      ]
+    },
+    "AP Invoice Approval BPF": {
+      "solution": "ContosoFinance",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_apapprovalrequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_apapprovalrequestid",
+            "con_name",
+            "con_vendinvoicereference"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Capex Budget Check Flow": {
+      "solution": "ContosoFinance",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_capexrequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_capexrequestid",
+            "con_name",
+            "con_requestedamount"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Dunning Escalation Async Workflow": {
+      "solution": "ContosoFinance",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_dunningaction",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_dunningactionid",
+            "con_name",
+            "con_customerid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Credit Risk Rating Business Rule": {
+      "solution": "ContosoFinance",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "account",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        }
+      ]
+    },
+    "Exchange Rate Sync Flow": {
+      "solution": "ContosoFinance",
+      "entityCount": 1,
+      "entities": [
+        {
+          "entity": "transactioncurrency",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "transactioncurrencyid",
+            "currencyname",
+            "isocurrencycode"
+          ]
+        }
+      ]
+    },
+    "Vendor Invoice Post Realtime Workflow": {
+      "solution": "ContosoFinance",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_apapprovalrequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_apapprovalrequestid",
+            "con_name",
+            "con_vendinvoicereference"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Requisition Approval BPF": {
+      "solution": "ContosoSupplyChain",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_purchaserequisition",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_purchaserequisitionid",
+            "con_name",
+            "con_requestedby"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "con_vendor",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "con_vendorid",
+            "con_name",
+            "con_vendoraccount"
+          ]
+        }
+      ]
+    },
+    "Auto-Set ABC Classification": {
+      "solution": "ContosoSupplyChain",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "product",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "name",
+            "productnumber",
+            "producttypecode"
+          ]
+        },
+        {
+          "entity": "pricelevel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "begindate",
+            "enddate"
+          ]
+        },
+        {
+          "entity": "uom",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "uomid",
+            "name",
+            "uomscheduleid"
+          ]
+        },
+        {
+          "entity": "con_vendor",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "con_vendorid",
+            "con_name",
+            "con_vendoraccount"
+          ]
+        }
+      ]
+    },
+    "Generate PO in F&O on Approval": {
+      "solution": "ContosoSupplyChain",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_purchaserequisition",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_purchaserequisitionid",
+            "con_name",
+            "con_requestedby"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "con_vendor",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "con_vendorid",
+            "con_name",
+            "con_vendoraccount"
+          ]
+        }
+      ]
+    },
+    "Shipment Delivery Notification": {
+      "solution": "ContosoSupplyChain",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_shipment",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_shipmentid",
+            "con_shipmentnumber",
+            "con_carrier"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Reassign Requisition on Vendor Approval": {
+      "solution": "ContosoSupplyChain",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_vendor",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_vendorid",
+            "con_name",
+            "con_vendoraccount"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Post Cycle Count Variance": {
+      "solution": "ContosoSupplyChain",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_inventorycount",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_inventorycountid",
+            "con_name",
+            "con_warehouse"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Loyalty Points Accrual": {
+      "solution": "ContosoCommerce",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_retailtransaction",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_transactionid",
+            "msdyn_receiptid",
+            "msdyn_transactiondate"
+          ]
+        },
+        {
+          "entity": "msdyn_retailchannel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_channeltype",
+            "transactioncurrencyid"
+          ]
+        },
+        {
+          "entity": "msdyn_retailterminal",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_terminalid",
+            "msdyn_name",
+            "msdyn_devicetype"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Curbside Handoff Notification": {
+      "solution": "ContosoCommerce",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_curbsideorder",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_pickupslot",
+            "con_vehicledescription"
+          ]
+        },
+        {
+          "entity": "msdyn_retailtransaction",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_transactionid",
+            "msdyn_receiptid",
+            "msdyn_transactiondate"
+          ]
+        },
+        {
+          "entity": "msdyn_retailstore",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_storenumber",
+            "msdyn_warehouse"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        }
+      ]
+    },
+    "Price Match Approval": {
+      "solution": "ContosoCommerce",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_pricematchrequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_competitorname",
+            "con_competitorprice"
+          ]
+        },
+        {
+          "entity": "product",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "name",
+            "productnumber",
+            "producttypecode"
+          ]
+        },
+        {
+          "entity": "msdyn_retailstore",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_storenumber",
+            "msdyn_warehouse"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Statement Posting Guard": {
+      "solution": "ContosoCommerce",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "msdyn_retailstatement",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_statementid",
+            "msdyn_statementdate",
+            "msdyn_totalsalesamount"
+          ]
+        },
+        {
+          "entity": "msdyn_retailchannel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_channeltype",
+            "transactioncurrencyid"
+          ]
+        }
+      ]
+    },
+    "Gift Card Balance Rule": {
+      "solution": "ContosoCommerce",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "msdyn_giftcard",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_cardnumber",
+            "msdyn_balance",
+            "transactioncurrencyid"
+          ]
+        },
+        {
+          "entity": "msdyn_retailchannel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_channeltype",
+            "transactioncurrencyid"
+          ]
+        },
+        {
+          "entity": "transactioncurrency",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "transactioncurrencyid",
+            "currencyname",
+            "isocurrencycode"
+          ]
+        }
+      ]
+    },
+    "Clienteling Appointment Lifecycle": {
+      "solution": "ContosoCommerce",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "con_clienteling",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_appointmentdate",
+            "con_appointmenttype"
+          ]
+        },
+        {
+          "entity": "msdyn_retailstore",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_storenumber",
+            "msdyn_warehouse"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Channel Data Publish Trigger": {
+      "solution": "ContosoCommerce",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "msdyn_pricingrule",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_discountpercent",
+            "msdyn_validfrom"
+          ]
+        },
+        {
+          "entity": "msdyn_retailchannel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_name",
+            "msdyn_channeltype",
+            "transactioncurrencyid"
+          ]
+        }
+      ]
+    },
+    "Leave Request Approval": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "mshr_leaverequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "mshr_leaverequestid",
+            "mshr_name",
+            "mshr_workerid"
+          ]
+        },
+        {
+          "entity": "cdm_worker",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_workerid",
+            "cdm_name",
+            "cdm_personalemailaddress"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Leave Balance Notification Flow": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "mshr_leaverequest",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "mshr_leaverequestid",
+            "mshr_name",
+            "mshr_workerid"
+          ]
+        },
+        {
+          "entity": "cdm_worker",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_workerid",
+            "cdm_name",
+            "cdm_personalemailaddress"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "New Hire Onboarding Orchestration": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "cdm_worker",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "cdm_workerid",
+            "cdm_name",
+            "cdm_personalemailaddress"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "cdm_department",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_departmentid",
+            "cdm_name",
+            "cdm_departmentnumber"
+          ]
+        }
+      ]
+    },
+    "Probation End Reminder": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "cdm_employment",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "cdm_employmentid",
+            "cdm_workerid",
+            "cdm_employmentstartdate"
+          ]
+        },
+        {
+          "entity": "cdm_worker",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_workerid",
+            "cdm_name",
+            "cdm_personalemailaddress"
+          ]
+        },
+        {
+          "entity": "cdm_company",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_companyid",
+            "cdm_companycode",
+            "cdm_name"
+          ]
+        }
+      ]
+    },
+    "Position Cost Center Validation": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "cdm_position",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "cdm_positionid",
+            "cdm_name",
+            "cdm_description"
+          ]
+        },
+        {
+          "entity": "cdm_job",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_jobid",
+            "cdm_name",
+            "cdm_description"
+          ]
+        },
+        {
+          "entity": "cdm_department",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_departmentid",
+            "cdm_name",
+            "cdm_departmentnumber"
+          ]
+        }
+      ]
+    },
+    "Performance Review Compensation Sync": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_performancereview",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_performancereviewid",
+            "con_name",
+            "con_worker"
+          ]
+        },
+        {
+          "entity": "cdm_worker",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_workerid",
+            "cdm_name",
+            "cdm_personalemailaddress"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Termination Access Deprovisioning": {
+      "solution": "ContosoHumanResources",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "cdm_employment",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "cdm_employmentid",
+            "cdm_workerid",
+            "cdm_employmentstartdate"
+          ]
+        },
+        {
+          "entity": "cdm_worker",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_workerid",
+            "cdm_name",
+            "cdm_personalemailaddress"
+          ]
+        },
+        {
+          "entity": "cdm_company",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "cdm_companyid",
+            "cdm_companycode",
+            "cdm_name"
+          ]
+        }
+      ]
+    },
+    "Contoso Conversation Lifecycle BPF": {
+      "solution": "ContosoContactCenter",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_ocliveworkitem",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_ocliveworkitemid",
+            "msdyn_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "incident",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Set VIP Flag on High-Value Customer": {
+      "solution": "ContosoContactCenter",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_ocliveworkitem",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_ocliveworkitemid",
+            "msdyn_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "incident",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Escalate Low-Sentiment Conversation to Supervisor": {
+      "solution": "ContosoContactCenter",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_ocliveworkitem",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_ocliveworkitemid",
+            "msdyn_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "incident",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Post-Conversation CSAT Survey Dispatch": {
+      "solution": "ContosoContactCenter",
+      "entityCount": 4,
+      "entities": [
+        {
+          "entity": "msdyn_ocliveworkitem",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "msdyn_ocliveworkitemid",
+            "msdyn_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "incident",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "title",
+            "ticketnumber",
+            "customerid"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Sync Channel Budget from Finance": {
+      "solution": "ContosoContactCenter",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_channelbudgetline",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_channelbudgetlineid",
+            "con_name",
+            "con_fiscalperiod"
+          ]
+        },
+        {
+          "entity": "msdyn_channel",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_channelid",
+            "msdyn_name",
+            "msdyn_channeltype"
+          ]
+        }
+      ]
+    },
+    "Deflection Outcome Rollup": {
+      "solution": "ContosoContactCenter",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_deflectionoutcome",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_deflectionoutcomeid",
+            "con_name",
+            "con_outcometype"
+          ]
+        },
+        {
+          "entity": "msdyn_ocliveworkitem",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "msdyn_ocliveworkitemid",
+            "msdyn_name",
+            "statecode"
+          ]
+        },
+        {
+          "entity": "con_botconfiguration",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "con_botconfigurationid",
+            "con_name",
+            "con_botapptype"
+          ]
+        }
+      ]
+    },
+    "Environment Provisioning Approval": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_environmentinventory",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_environmentid",
+            "con_environmenttype"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Orphaned Flow & App Detector": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "workflow",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "name",
+            "category",
+            "type"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Compliance Attestation Reminder": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "con_coecomplianceattestation",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_componenttype",
+            "con_attestedby"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "con_environmentinventory",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_environmentid",
+            "con_environmenttype"
+          ]
+        }
+      ]
+    },
+    "Account Data Steward Assignment": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "account",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        },
+        {
+          "entity": "contact",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        }
+      ]
+    },
+    "Consent Capture Business Rule": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 3,
+      "entities": [
+        {
+          "entity": "contact",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "contactid",
+            "fullname",
+            "emailaddress1"
+          ]
+        },
+        {
+          "entity": "account",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "accountid",
+            "name",
+            "creditlimit"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Environment Onboarding Process": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "con_environmentinventory",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "con_name",
+            "con_environmentid",
+            "con_environmenttype"
+          ]
+        },
+        {
+          "entity": "systemuser",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "fullname",
+            "internalemailaddress",
+            "azureactivedirectoryobjectid"
+          ]
+        }
+      ]
+    },
+    "Unmanaged Layer Alert": {
+      "solution": "ContosoPlatformGovernance",
+      "entityCount": 2,
+      "entities": [
+        {
+          "entity": "solution",
+          "operations": [
+            "Create",
+            "Update"
+          ],
+          "columnsReferenced": [
+            "uniquename",
+            "friendlyname",
+            "version"
+          ]
+        },
+        {
+          "entity": "publisher",
+          "operations": [
+            "Read"
+          ],
+          "columnsReferenced": [
+            "uniquename",
+            "friendlyname",
+            "customizationprefix"
+          ]
+        }
+      ]
+    }
+  }
+}

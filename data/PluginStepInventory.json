@@ -1,33 +1,393 @@
 {
   "pluginSteps": [
     {
-      "id": "step-wo-create",
-      "name": "Create of con_workorder — WorkOrderPricingPlugin",
+      "id": "step-1-opportunityrollupp",
+      "name": "Create of opportunityproduct — OpportunityRollupPlugin",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "step-2-opportunityrollupp",
+      "name": "Update of opportunityproduct — OpportunityRollupPlugin",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "step-3-opportunityrollupp",
+      "name": "Delete of opportunityproduct — OpportunityRollupPlugin",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "step-4-quotetoorderguardp",
+      "name": "Update of quote — QuoteToOrderGuardPlugin",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "step-5-quotetoorderguardp",
+      "name": "Create of salesorder — QuoteToOrderGuardPlugin",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "step-6-dealdeskapprovalst",
+      "name": "Update of con_dealdeskreview — DealDeskApprovalStampPlugin",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "id": "step-7-con-caserouting-en",
+      "name": "Create of incident — Con.CaseRouting.EntitlementBinderPlugin",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "step-8-con-caserouting-en",
+      "name": "Update of incident — Con.CaseRouting.EntitlementBinderPlugin",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "step-9-con-escalation-sla",
+      "name": "Create of con_escalation — Con.Escalation.SlaBreachStampPlugin",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "step-10-con-deflection-sav",
+      "name": "Create of con_casedeflection — Con.Deflection.SavingsCalculatorPlugin",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "step-11-con-deflection-sav",
+      "name": "Associate of knowledgearticle — Con.Deflection.SavingsCalculatorPlugin",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "id": "step-12-contoso-fieldservi",
+      "name": "Create of msdyn_workorderproduct — Contoso.FieldService.WorkOrderPricingPlugin",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "id": "step-wo-update",
-      "name": "Update of con_workorder — WorkOrderPricingPlugin",
+      "id": "step-13-contoso-fieldservi",
+      "name": "Update of msdyn_workorderproduct — Contoso.FieldService.WorkOrderPricingPlugin",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "id": "step-agreement-update",
-      "name": "Update of con_agreement — AgreementRenewalPlugin",
+      "id": "step-14-contoso-fieldservi",
+      "name": "Create of msdyn_workorderservice — Contoso.FieldService.WorkOrderPricingPlugin",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "id": "step-asset-create",
-      "name": "Create of con_asset — AssetValidationPlugin",
+      "id": "step-15-contoso-fieldservi",
+      "name": "Update of msdyn_workorder — Contoso.FieldService.SlaBreachEvaluatorPlugin",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "id": "step-invoice-create",
-      "name": "Create of con_invoice — InvoiceNumberPlugin",
-      "solution": "ContosoCore",
+      "id": "step-16-contoso-fieldservi",
+      "name": "Update of msdyn_workorderproduct — Contoso.FieldService.InventoryDecrementPlugin",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "step-17-contoso-fieldservi",
+      "name": "Create of bookableresourcebooking — Contoso.FieldService.SafetyInspectionGuardPlugin",
+      "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "id": "step-18-projectrollupplugi",
+      "name": "Update of msdyn_projecttask — ProjectRollupPlugin",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "step-19-projectrollupplugi",
+      "name": "Create of msdyn_actuals — ProjectRollupPlugin",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "step-20-timeentryvalidatio",
+      "name": "Create of msdyn_timeentry — TimeEntryValidationPlugin",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "step-21-timeentryvalidatio",
+      "name": "Update of msdyn_timeentry — TimeEntryValidationPlugin",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "step-22-contractlineactual",
+      "name": "Update of msdyn_contractline — ContractLineActualsGenerationPlugin",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "step-23-projecthealthrevie",
+      "name": "Create of con_projecthealthreview — ProjectHealthReviewAuditPlugin",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "id": "step-24-contosobrandapprov",
+      "name": "Update of msdynmkt_marketingemail — ContosoBrandApprovalGuardPlugin",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "step-25-contosobudgetrollu",
+      "name": "Associate of con_campaignbrief — ContosoBudgetRollupPlugin",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "step-26-contosobudgetrollu",
+      "name": "Update of con_campaignbrief — ContosoBudgetRollupPlugin",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "step-27-contosoconsentaudi",
+      "name": "Update of msdynmkt_contactpointconsent3 — ContosoConsentAuditPlugin",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "step-28-contosoconsentaudi",
+      "name": "Create of msdynmkt_contactpointconsent3 — ContosoConsentAuditPlugin",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "id": "step-29-consentledgervalid",
+      "name": "Create of con_consentledger — ConsentLedgerValidationPlugin",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "id": "step-30-consentledgervalid",
+      "name": "Update of con_consentledger — ConsentLedgerValidationPlugin",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "id": "step-31-matchruleauditplug",
+      "name": "Update of con_matchrule — MatchRuleAuditPlugin",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "id": "step-32-matchruleauditplug",
+      "name": "Delete of con_matchrule — MatchRuleAuditPlugin",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "id": "step-33-profilemergeenrich",
+      "name": "Create of msdynci_customerprofile — ProfileMergeEnrichmentPlugin",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "id": "step-34-apapprovalroutingp",
+      "name": "Create of con_apapprovalrequest — ApApprovalRoutingPlugin",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "id": "step-35-apapprovalroutingp",
+      "name": "Update of con_apapprovalrequest — ApApprovalRoutingPlugin",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "id": "step-36-creditlimitenforce",
+      "name": "Update of account — CreditLimitEnforcementPlugin",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "id": "step-37-capextofixedassetp",
+      "name": "Update of con_capexrequest — CapexToFixedAssetPlugin",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "id": "step-38-requisitionnumberp",
+      "name": "Create of con_purchaserequisition — RequisitionNumberPlugin",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "id": "step-39-shipmenttrackingsy",
+      "name": "Update of con_shipment — ShipmentTrackingSyncPlugin",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "id": "step-40-shipmenttrackingsy",
+      "name": "Create of con_shipment — ShipmentTrackingSyncPlugin",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "id": "step-41-vendorapprovalguar",
+      "name": "Delete of con_vendor — VendorApprovalGuardPlugin",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "id": "step-42-vendorapprovalguar",
+      "name": "Update of con_vendor — VendorApprovalGuardPlugin",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "id": "step-43-retailtransactiont",
+      "name": "Create of msdyn_retailtransactionsalesline — RetailTransactionTotalsPlugin",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "id": "step-44-retailtransactiont",
+      "name": "Update of msdyn_retailtransactionsalesline — RetailTransactionTotalsPlugin",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "id": "step-45-retailtransactiont",
+      "name": "Create of msdyn_retailtransactionpaymentline — RetailTransactionTotalsPlugin",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "id": "step-46-loyaltycardenrollm",
+      "name": "Create of msdyn_loyaltycard — LoyaltyCardEnrollmentPlugin",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "id": "step-47-giftcardredemption",
+      "name": "Update of msdyn_giftcard — GiftCardRedemptionPlugin",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "id": "step-48-workeremployeeidpl",
+      "name": "Create of cdm_worker — WorkerEmployeeIdPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-49-workeremployeeidpl",
+      "name": "Update of cdm_worker — WorkerEmployeeIdPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-50-leavebalancevalida",
+      "name": "Create of mshr_leaverequest — LeaveBalanceValidationPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-51-leavebalancevalida",
+      "name": "Update of mshr_leaverequest — LeaveBalanceValidationPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-52-positionhierarchyg",
+      "name": "Update of cdm_position — PositionHierarchyGuardPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-53-disciplinarycaseau",
+      "name": "Create of con_disciplinarycase — DisciplinaryCaseAuditPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-54-disciplinarycaseau",
+      "name": "Assign of con_disciplinarycase — DisciplinaryCaseAuditPlugin",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "id": "step-55-conversationroutin",
+      "name": "Create of msdyn_ocliveworkitem — ConversationRoutingPlugin",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "id": "step-56-conversationroutin",
+      "name": "Update of msdyn_ocliveworkitem — ConversationRoutingPlugin",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "id": "step-57-sessionparticipant",
+      "name": "Create of msdyn_ocsessionparticipant — SessionParticipantAuditPlugin",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "id": "step-58-sessionparticipant",
+      "name": "Update of msdyn_ocsessionparticipant — SessionParticipantAuditPlugin",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "id": "step-59-deflectioncostcalc",
+      "name": "Create of con_deflectionoutcome — DeflectionCostCalculationPlugin",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "id": "step-60-con-governance-dat",
+      "name": "Update of account — Con.Governance.DataSensitivityGuardPlugin",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "id": "step-61-con-governance-dat",
+      "name": "Update of contact — Con.Governance.DataSensitivityGuardPlugin",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "id": "step-62-con-governance-env",
+      "name": "Create of con_environmentinventory — Con.Governance.EnvironmentInventoryAuditPlugin",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "id": "step-63-con-governance-env",
+      "name": "Update of con_environmentinventory — Con.Governance.EnvironmentInventoryAuditPlugin",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "id": "step-64-con-governance-att",
+      "name": "Create of con_coecomplianceattestation — Con.Governance.AttestationRollupPlugin",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "id": "step-65-con-governance-att",
+      "name": "Update of con_coecomplianceattestation — Con.Governance.AttestationRollupPlugin",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

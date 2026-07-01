@@ -1,0 +1,1 @@
+{"item":{"id":"plg-contosoconsentauditplugin","name":"ContosoConsentAuditPlugin","tags":{},"solution":"ContosoMarketing","businessLogic":"Post-operation plugin that writes an immutable audit entry and updates con_marketablereason on the related contact whenever consent status changes."},"metadata":{"type":"plugins","id":"plg-contosoconsentauditplugin"}}

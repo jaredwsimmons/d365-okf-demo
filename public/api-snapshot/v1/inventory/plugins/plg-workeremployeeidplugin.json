@@ -1,0 +1,1 @@
+{"item":{"id":"plg-workeremployeeidplugin","name":"WorkerEmployeeIdPlugin","tags":{},"solution":"ContosoHumanResources","businessLogic":"Auto-generates a sequential con_employeeid on worker creation and validates uniqueness of personal email within the legal entity."},"metadata":{"type":"plugins","id":"plg-workeremployeeidplugin"}}

@@ -1,0 +1,1 @@
+{"item":{"id":"plg-capextofixedassetplugin","name":"CapexToFixedAssetPlugin","tags":{},"solution":"ContosoFinance","businessLogic":"On con_capexrequest status = Approved, provisions a fixed-asset acquisition payload and links the resulting F&O mserp_fixedasset reference back to the request."},"metadata":{"type":"plugins","id":"plg-capextofixedassetplugin"}}

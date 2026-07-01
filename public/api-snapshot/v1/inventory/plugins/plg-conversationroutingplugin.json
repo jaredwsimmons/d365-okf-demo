@@ -1,0 +1,1 @@
+{"item":{"id":"plg-conversationroutingplugin","name":"ConversationRoutingPlugin","tags":{},"solution":"ContosoContactCenter","businessLogic":"On conversation create, evaluates con_priorityscore from context and work-stream routing rules, then stamps the target queue before assignment."},"metadata":{"type":"plugins","id":"plg-conversationroutingplugin"}}

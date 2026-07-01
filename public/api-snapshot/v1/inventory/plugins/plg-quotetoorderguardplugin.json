@@ -1,0 +1,1 @@
+{"item":{"id":"plg-quotetoorderguardplugin","name":"QuoteToOrderGuardPlugin","tags":{},"solution":"ContosoSales","businessLogic":"On quote activation/win and on order creation, blocks conversion to salesorder if an open con_dealdeskreview exists for the parent opportunity."},"metadata":{"type":"plugins","id":"plg-quotetoorderguardplugin"}}

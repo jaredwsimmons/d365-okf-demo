@@ -1,0 +1,1 @@
+{"item":{"name":"DualWrite-RetailTransactionSync","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Dual-write and virtual-entity link surfacing the F&O RetailTransactionTable, RetailStatementTable, and RetailTerminal into Dataverse."},"metadata":{"type":"azure","id":"DualWrite-RetailTransactionSync"}}

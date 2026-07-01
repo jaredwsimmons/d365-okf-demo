@@ -1,0 +1,1 @@
+{"item":{"id":"plg-vendorapprovalguardplugin","name":"VendorApprovalGuardPlugin","tags":{},"solution":"ContosoSupplyChain","businessLogic":"Prevents deletion of an approved vendor that is referenced by open requisitions and defaults con_vendoraccount from the linked account number."},"metadata":{"type":"plugins","id":"plg-vendorapprovalguardplugin"}}

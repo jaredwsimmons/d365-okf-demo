@@ -1,0 +1,1 @@
+{"item":{"name":"FandO-DualWrite-Procurement","type":"REST","_type":"externalIntegration","trigger":"Event","connector":"HTTP","direction":"Outbound","dataExchanged":"Dual-write integration surfacing F&O purchase orders and vendors into Dataverse for truck stock replenishment."},"metadata":{"type":"azure","id":"FandO-DualWrite-Procurement"}}

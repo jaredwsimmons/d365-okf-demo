@@ -1,24 +1,312 @@
 {
   "flows": [
     {
-      "id": "FLOW-RENEWAL",
-      "name": "Send Agreement Renewal Reminder",
-      "trigger": "Scheduled - daily",
+      "id": "FLOW-2",
+      "name": "Contoso Lead Scoring & Routing",
+      "trigger": "When a lead is created or updated (Dataverse trigger)",
       "connectors": [
-        "Office 365 Outlook",
-        "Dataverse"
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 5
+    },
+    {
+      "id": "FLOW-3",
+      "name": "Deal Desk Approval Routing",
+      "trigger": "When a Deal Desk Review is created",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Microsoft Teams"
       ],
       "actionCount": 6
     },
     {
-      "id": "FLOW-QUOTE-FOLLOWUP",
-      "name": "Quote Follow-up Reminder",
-      "trigger": "Dataverse - When a row is modified",
+      "id": "FLOW-9",
+      "name": "Notify Manager on High-Priority Escalation",
+      "trigger": "When a row is added (con_escalation)",
       "connectors": [
-        "Dataverse",
+        "Microsoft Dataverse",
+        "Microsoft Teams",
         "Office 365 Outlook"
       ],
       "actionCount": 4
+    },
+    {
+      "id": "FLOW-10",
+      "name": "Sync CSAT Survey Responses to Service Feedback",
+      "trigger": "When a survey response is submitted (Customer Voice)",
+      "connectors": [
+        "Dynamics 365 Customer Voice",
+        "Microsoft Dataverse",
+        "Azure Functions"
+      ],
+      "actionCount": 5
+    },
+    {
+      "id": "FLOW-15",
+      "name": "SLA Breach Risk Escalation",
+      "trigger": "When con_slabreachrisk changes to High or Breached",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 10
+    },
+    {
+      "id": "FLOW-17",
+      "name": "Truck Stock Replenishment Request",
+      "trigger": "When msdyn_availablequantity falls below reorder point",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Fin & Ops Apps (Dynamics 365)"
+      ],
+      "actionCount": 4
+    },
+    {
+      "id": "FLOW-19",
+      "name": "Certification Expiry Warning for Resources",
+      "trigger": "Scheduled daily recurrence evaluating con_certexpirydate",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-21",
+      "name": "Contoso Time Entry Auto-Submit Reminder",
+      "trigger": "Scheduled (weekly, Friday 16:00)",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Users"
+      ],
+      "actionCount": 8
+    },
+    {
+      "id": "FLOW-23",
+      "name": "Staffing Request Fulfillment Routing",
+      "trigger": "When a row is created (con_resourcerequest)",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Microsoft Teams"
+      ],
+      "actionCount": 10
+    },
+    {
+      "id": "FLOW-27",
+      "name": "Campaign Brief Approval Routing",
+      "trigger": "When con_approvalstatus set to In Review",
+      "connectors": [
+        "Dataverse",
+        "Approvals",
+        "Office 365 Outlook",
+        "Microsoft Teams"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-28",
+      "name": "Event Registration Confirmation",
+      "trigger": "On create of Event Registration",
+      "connectors": [
+        "Dataverse",
+        "Customer Insights - Journeys"
+      ],
+      "actionCount": 7
+    },
+    {
+      "id": "FLOW-34",
+      "name": "Data Source Health Alert to Teams",
+      "trigger": "On Create where con_refreshstatus = Failed",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "ServiceNow"
+      ],
+      "actionCount": 5
+    },
+    {
+      "id": "FLOW-35",
+      "name": "DSR Delete Propagation",
+      "trigger": "On Create where con_consenttype = DSR - Delete",
+      "connectors": [
+        "Microsoft Dataverse",
+        "HTTP",
+        "Azure Service Bus",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-39",
+      "name": "Capex Budget Check Flow",
+      "trigger": "On con_capexrequest status change to Submitted",
+      "connectors": [
+        "Dynamics 365 Finance and Operations (Dataverse)",
+        "Microsoft Dataverse",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 10
+    },
+    {
+      "id": "FLOW-42",
+      "name": "Exchange Rate Sync Flow",
+      "trigger": "Scheduled daily 05:00 UTC",
+      "connectors": [
+        "Microsoft Dataverse",
+        "HTTP"
+      ],
+      "actionCount": 5
+    },
+    {
+      "id": "FLOW-46",
+      "name": "Generate PO in F&O on Approval",
+      "trigger": "When con_approvalstatus = Approved",
+      "connectors": [
+        "Dataverse",
+        "Fin & Ops Apps (Dynamics 365)",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 9
+    },
+    {
+      "id": "FLOW-47",
+      "name": "Shipment Delivery Notification",
+      "trigger": "When con_shipmentstatus changes to Delivered",
+      "connectors": [
+        "Dataverse",
+        "Office 365 Outlook",
+        "Microsoft Teams"
+      ],
+      "actionCount": 10
+    },
+    {
+      "id": "FLOW-51",
+      "name": "Curbside Handoff Notification",
+      "trigger": "When con_handoffstatus changes to Customer Arrived",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook",
+        "Twilio"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-52",
+      "name": "Price Match Approval",
+      "trigger": "When a price match request is created",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 7
+    },
+    {
+      "id": "FLOW-56",
+      "name": "Channel Data Publish Trigger",
+      "trigger": "When a pricing rule is created or updated",
+      "connectors": [
+        "Microsoft Dataverse",
+        "HTTP",
+        "Azure Logic Apps"
+      ],
+      "actionCount": 3
+    },
+    {
+      "id": "FLOW-58",
+      "name": "Leave Balance Notification Flow",
+      "trigger": "When a leave request is approved (Dataverse)",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 5
+    },
+    {
+      "id": "FLOW-59",
+      "name": "New Hire Onboarding Orchestration",
+      "trigger": "When a worker is created (Dataverse)",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams",
+        "Office 365 Users",
+        "Approvals"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-63",
+      "name": "Termination Access Deprovisioning",
+      "trigger": "When cdm_employmentenddate is set (Dataverse)",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Azure AD",
+        "HTTP"
+      ],
+      "actionCount": 10
+    },
+    {
+      "id": "FLOW-67",
+      "name": "Post-Conversation CSAT Survey Dispatch",
+      "trigger": "When a conversation is closed (Dataverse trigger)",
+      "connectors": [
+        "Dataverse",
+        "Microsoft Forms Pro / Customer Voice",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 6
+    },
+    {
+      "id": "FLOW-68",
+      "name": "Sync Channel Budget from Finance",
+      "trigger": "Recurrence (nightly)",
+      "connectors": [
+        "Dataverse",
+        "Dynamics 365 Finance and Operations",
+        "Azure Service Bus"
+      ],
+      "actionCount": 7
+    },
+    {
+      "id": "FLOW-70",
+      "name": "Environment Provisioning Approval",
+      "trigger": "When a row is created (con_environmentinventory, con_lifecyclestate = Requested)",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Approvals",
+        "Microsoft Teams",
+        "Power Platform for Admins"
+      ],
+      "actionCount": 9
+    },
+    {
+      "id": "FLOW-71",
+      "name": "Orphaned Flow & App Detector",
+      "trigger": "Scheduled - daily 02:00 UTC",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Office 365 Users",
+        "Office 365 Outlook"
+      ],
+      "actionCount": 10
+    },
+    {
+      "id": "FLOW-72",
+      "name": "Compliance Attestation Reminder",
+      "trigger": "Scheduled - weekly Monday 08:00",
+      "connectors": [
+        "Microsoft Dataverse",
+        "Microsoft Teams"
+      ],
+      "actionCount": 3
     }
   ]
 }

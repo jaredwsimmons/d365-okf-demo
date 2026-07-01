@@ -1,0 +1,1 @@
+{"item":{"id":"plg-sessionparticipantauditplugin","name":"SessionParticipantAuditPlugin","tags":{},"solution":"ContosoContactCenter","businessLogic":"On participant creation, records active start time and validates consult/transfer mode transitions for coaching-note eligibility."},"metadata":{"type":"plugins","id":"plg-sessionparticipantauditplugin"}}

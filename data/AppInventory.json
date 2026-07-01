@@ -1,23 +1,203 @@
 {
   "modelDrivenApps": [
     {
-      "uniqueName": "con_FieldServiceApp",
-      "displayName": "Contoso Field Service",
+      "uniqueName": "con_contosoSalesHub",
+      "displayName": "Contoso Sales Hub",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoDealDesk",
+      "displayName": "Contoso Deal Desk",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_customerServiceHub",
+      "displayName": "Customer Service Hub",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_fieldService",
+      "displayName": "Field Service",
       "solution": "ContosoFieldService",
       "tags": {}
     },
     {
-      "uniqueName": "con_SalesApp",
-      "displayName": "Contoso Sales",
-      "solution": "ContosoSales",
+      "uniqueName": "con_projectOperations",
+      "displayName": "Project Operations",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoDeliveryPmo",
+      "displayName": "Contoso Delivery PMO",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_customerInsightsJourneys",
+      "displayName": "Customer Insights - Journeys",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoCampaignIntake",
+      "displayName": "Contoso Campaign Intake",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoCustomerInsightsData",
+      "displayName": "Contoso Customer Insights - Data",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_ciDataGovernanceConsole",
+      "displayName": "CI Data Governance Console",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoFinanceOperations",
+      "displayName": "Contoso Finance Operations",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoBudgetingCapex",
+      "displayName": "Contoso Budgeting & Capex",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoSupplyChainHub",
+      "displayName": "Contoso Supply Chain Hub",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoCommerceHeadquarters",
+      "displayName": "Contoso Commerce Headquarters",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoLoyaltyEngagement",
+      "displayName": "Contoso Loyalty & Engagement",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoHumanResources",
+      "displayName": "Contoso Human Resources",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_employeeSelfService",
+      "displayName": "Employee Self Service",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_customerServiceWorkspace",
+      "displayName": "Customer Service workspace",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_omnichannelAdminCenter",
+      "displayName": "Omnichannel Admin Center",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoCoeCommandCenter",
+      "displayName": "Contoso CoE Command Center",
+      "solution": "ContosoPlatformGovernance",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_dataGovernanceRegister",
+      "displayName": "Data Governance Register",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ],
   "canvasApps": [
     {
-      "uniqueName": "con_TechnicianMobile",
-      "displayName": "Contoso Technician Mobile",
+      "uniqueName": "con_contosoFieldQuoteCapture",
+      "displayName": "Contoso Field Quote Capture",
+      "solution": "ContosoSales",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoServiceCoeInsights",
+      "displayName": "Contoso Service CoE Insights",
+      "solution": "ContosoCustomerService",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoFieldServiceMobile",
+      "displayName": "Contoso Field Service Mobile",
       "solution": "ContosoFieldService",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoTimeExpenseCapture",
+      "displayName": "Contoso Time & Expense Capture",
+      "solution": "ContosoProjectOperations",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoEventCheckIn",
+      "displayName": "Contoso Event Check-in",
+      "solution": "ContosoMarketing",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_consentStewardPortal",
+      "displayName": "Consent Steward Portal",
+      "solution": "ContosoCustomerInsights",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_capexRequestIntake",
+      "displayName": "Capex Request Intake",
+      "solution": "ContosoFinance",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoWarehouseCount",
+      "displayName": "Contoso Warehouse Count (Canvas)",
+      "solution": "ContosoSupplyChain",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoCurbsideConcierge",
+      "displayName": "Contoso Curbside Concierge",
+      "solution": "ContosoCommerce",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoTalentMarketplace",
+      "displayName": "Contoso Talent Marketplace",
+      "solution": "ContosoHumanResources",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_contosoSupervisorCoaching",
+      "displayName": "Contoso Supervisor Coaching",
+      "solution": "ContosoContactCenter",
+      "tags": {}
+    },
+    {
+      "uniqueName": "con_makerAttestation",
+      "displayName": "Maker Attestation (Canvas)",
+      "solution": "ContosoPlatformGovernance",
       "tags": {}
     }
   ]

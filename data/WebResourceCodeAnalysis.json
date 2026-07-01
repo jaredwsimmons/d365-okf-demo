@@ -1,0 +1,2890 @@
+{
+  "files": [
+    {
+      "name": "con_/scripts/lead.js",
+      "solution": "ContosoSales",
+      "lineCount": 80,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "lead"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API",
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/lead.js"
+          ]
+        },
+        {
+          "ruleId": "WR_2",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/lead.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/opportunity.js",
+      "solution": "ContosoSales",
+      "lineCount": 97,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "opportunity"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/salesorder.js",
+      "solution": "ContosoSales",
+      "lineCount": 114,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "opportunityproduct"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/product.js",
+      "solution": "ContosoSales",
+      "lineCount": 131,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "quote"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/product.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-dealdeskreview.js",
+      "solution": "ContosoSales",
+      "lineCount": 148,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "quotedetail"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-salesplaybook.js",
+      "solution": "ContosoSales",
+      "lineCount": 165,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "salesorder"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-salesplaybook.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/incident.js",
+      "solution": "ContosoCustomerService",
+      "lineCount": 182,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "salesorderdetail"
+        }
+      ],
+      "deprecatedCount": 4,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 4
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/incident.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/knowledgearticle.js",
+      "solution": "ContosoCustomerService",
+      "lineCount": 199,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "invoice"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/sla.js",
+      "solution": "ContosoCustomerService",
+      "lineCount": 216,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "product"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-casedeflection.js",
+      "solution": "ContosoCustomerService",
+      "lineCount": 233,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "pricelevel"
+        }
+      ],
+      "deprecatedCount": 3,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 3
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-casedeflection.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-escalation.js",
+      "solution": "ContosoCustomerService",
+      "lineCount": 250,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "competitor"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-escalation.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-servicefeedback.js",
+      "solution": "ContosoCustomerService",
+      "lineCount": 267,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "goal"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdyn-workorder.js",
+      "solution": "ContosoFieldService",
+      "lineCount": 284,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "territory"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msdyn-workorder.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-incidenttype.js",
+      "solution": "ContosoFieldService",
+      "lineCount": 301,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "campaign"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/bookableresource.js",
+      "solution": "ContosoFieldService",
+      "lineCount": 318,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_dealdeskreview"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdyn-customerasset.js",
+      "solution": "ContosoFieldService",
+      "lineCount": 335,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_salesplaybook"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API",
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msdyn-customerasset.js"
+          ]
+        },
+        {
+          "ruleId": "WR_2",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/msdyn-customerasset.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-timeentry.js",
+      "solution": "ContosoProjectOperations",
+      "lineCount": 352,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_custtranspayment"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-safetyinspection.js",
+      "solution": "ContosoFieldService",
+      "lineCount": 369,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "incident"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-slapenaltyrule.js",
+      "solution": "ContosoFieldService",
+      "lineCount": 386,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "incidentresolution"
+        }
+      ],
+      "deprecatedCount": 4,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 4
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-slapenaltyrule.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-project.js",
+      "solution": "ContosoProjectOperations",
+      "lineCount": 403,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "knowledgearticle"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdyn-expense.js",
+      "solution": "ContosoProjectOperations",
+      "lineCount": 420,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "entitlement"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/msdyn-expense.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-projecthealthreview.js",
+      "solution": "ContosoProjectOperations",
+      "lineCount": 437,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "entitlementtemplate"
+        }
+      ],
+      "deprecatedCount": 3,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 3
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-projecthealthreview.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-resourcerequest.js",
+      "solution": "ContosoProjectOperations",
+      "lineCount": 454,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "sla"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdynmkt-journey.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 471,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "slaitem"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdynmkt-segment.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 88,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "queue"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msdynmkt-segment.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdynmkt-marketingemail.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 105,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "queueitem"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/msdynmkt-marketingemail.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/contact.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 122,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_ocsession"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msevtmgt-event.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 139,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "contract"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msevtmgt-event.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-campaignbrief.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 156,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_customervoicesurvey"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-legalfootertemplate.js",
+      "solution": "ContosoMarketing",
+      "lineCount": 173,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_casedeflection"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdynci-customerprofile.js",
+      "solution": "ContosoCustomerInsights",
+      "lineCount": 190,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_escalation"
+        }
+      ],
+      "deprecatedCount": 4,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 4
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API",
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msdynci-customerprofile.js"
+          ]
+        },
+        {
+          "ruleId": "WR_2",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/msdynci-customerprofile.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdynci-measure.js",
+      "solution": "ContosoCustomerInsights",
+      "lineCount": 207,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_servicefeedback"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdynci-segment.js",
+      "solution": "ContosoCustomerInsights",
+      "lineCount": 224,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_agreement"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-consentledger.js",
+      "solution": "ContosoCustomerInsights",
+      "lineCount": 241,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_workorder"
+        }
+      ],
+      "deprecatedCount": 3,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 3
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-consentledger.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-matchrule.js",
+      "solution": "ContosoCustomerInsights",
+      "lineCount": 258,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_workorderproduct"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-datasourcehealth.js",
+      "solution": "ContosoCustomerInsights",
+      "lineCount": 275,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_workorderservice"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-datasourcehealth.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/account.js",
+      "solution": "ContosoFinance",
+      "lineCount": 292,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_incidenttype"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/account.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/transactioncurrency.js",
+      "solution": "ContosoFinance",
+      "lineCount": 309,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "bookableresource"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-apapprovalrequest.js",
+      "solution": "ContosoFinance",
+      "lineCount": 326,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "bookableresourcebooking"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-capexrequest.js",
+      "solution": "ContosoFinance",
+      "lineCount": 343,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_resourcerequirement"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-capexrequest.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-financialdimensionmap.js",
+      "solution": "ContosoFinance",
+      "lineCount": 360,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_customerasset"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-financialdimensionmap.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-dunningaction.js",
+      "solution": "ContosoFinance",
+      "lineCount": 377,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_rma"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-vendor.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 394,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_timeentry"
+        }
+      ],
+      "deprecatedCount": 4,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 4
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-vendor.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-purchaserequisition.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 411,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_productinventory"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-inventorycount.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 428,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_warehouse"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-shipment.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 445,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_safetyinspection"
+        }
+      ],
+      "deprecatedCount": 3,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 3
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API",
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-shipment.js"
+          ]
+        },
+        {
+          "ruleId": "WR_2",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-shipment.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-demandforecast.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 462,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_slapenaltyrule"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-bomcomponent.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 479,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_purchaseorder"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-productionorder.js",
+      "solution": "ContosoSupplyChain",
+      "lineCount": 96,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_project"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-productionorder.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-retailchannel.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 113,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_projecttask"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdyn-retailstore.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 130,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_projectteam"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/msdyn-retailstore.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-retailtransaction.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 147,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_resourceassignment"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msdyn-retailtransaction.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-loyaltyprogram.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 164,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_projectcontract"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdyn-loyaltycard.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 181,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_contractline"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-clienteling.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 198,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_estimate"
+        }
+      ],
+      "deprecatedCount": 4,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 4
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-clienteling.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-curbsideorder.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 215,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_estimateline"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-curbsideorder.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-pricematchrequest.js",
+      "solution": "ContosoCommerce",
+      "lineCount": 232,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_expense"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/cdm-worker.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 249,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_actuals"
+        }
+      ],
+      "deprecatedCount": 3,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 3
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/cdm-worker.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/cdm-employment.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 266,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_invoice"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/cdm-position.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 283,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_projecthealthreview"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/mshr-leaverequest.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 300,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_resourcerequest"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API",
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/mshr-leaverequest.js"
+          ]
+        },
+        {
+          "ruleId": "WR_2",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/mshr-leaverequest.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-onboardingtask.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 317,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdyn_projectparameter"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-performancereview.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 334,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_faoprojectvendorinvoice"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-skill.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 351,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_journey"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-skill.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-workerskill.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 368,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_segment"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-disciplinarycase.js",
+      "solution": "ContosoHumanResources",
+      "lineCount": 385,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_marketingemail"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-disciplinarycase.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-ocliveworkitem.js",
+      "solution": "ContosoContactCenter",
+      "lineCount": 402,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_channeltemplate"
+        }
+      ],
+      "deprecatedCount": 4,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 4
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/msdyn-ocliveworkitem.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/msdyn-agentstatushistory.js",
+      "solution": "ContosoContactCenter",
+      "lineCount": 419,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_marketingform"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/msdyn-channel.js",
+      "solution": "ContosoContactCenter",
+      "lineCount": 436,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_leadscoringmodel"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-deflectionoutcome.js",
+      "solution": "ContosoContactCenter",
+      "lineCount": 453,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "contact"
+        }
+      ],
+      "deprecatedCount": 3,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 3
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-deflectionoutcome.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-agentcoachingnote.js",
+      "solution": "ContosoContactCenter",
+      "lineCount": 470,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msevtmgt_event"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-agentcoachingnote.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-botconfiguration.js",
+      "solution": "ContosoContactCenter",
+      "lineCount": 87,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msevtmgt_eventregistration"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/systemuser.js",
+      "solution": "ContosoPlatformGovernance",
+      "lineCount": 104,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 4,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_contactpointconsent3"
+        }
+      ],
+      "deprecatedCount": 2,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 2
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/systemuser.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/adx-webpage.js",
+      "solution": "ContosoPlatformGovernance",
+      "lineCount": 121,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 5,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "msdynmkt_trigger"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-environmentinventory.js",
+      "solution": "ContosoPlatformGovernance",
+      "lineCount": 138,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 6,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 3,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_campaignbrief"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    },
+    {
+      "name": "con_/scripts/con-coecomplianceattestation.js",
+      "solution": "ContosoPlatformGovernance",
+      "lineCount": 155,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 2,
+      "functions": [
+        "onLoad",
+        "onSave",
+        "validate"
+      ],
+      "apiCallCount": 1,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_legalfootertemplate"
+        }
+      ],
+      "deprecatedCount": 5,
+      "deprecated": [
+        {
+          "pattern": "Xrm.Page",
+          "count": 5
+        }
+      ],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [
+        "Deprecated Xrm.Page API",
+        "Synchronous OData request"
+      ],
+      "governanceFindings": [
+        {
+          "ruleId": "WR_1",
+          "detail": "Deprecated Xrm.Page API",
+          "evidence": [
+            "con_/scripts/con-coecomplianceattestation.js"
+          ]
+        },
+        {
+          "ruleId": "WR_2",
+          "detail": "Synchronous OData request",
+          "evidence": [
+            "con_/scripts/con-coecomplianceattestation.js"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "con_/scripts/con-dataprocessingregister.js",
+      "solution": "ContosoPlatformGovernance",
+      "lineCount": 172,
+      "isRulesEngine": false,
+      "isCustom": true,
+      "functionCount": 3,
+      "functions": [
+        "onLoad",
+        "onSave"
+      ],
+      "apiCallCount": 2,
+      "apiCalls": [
+        {
+          "operation": "retrieveMultipleRecords",
+          "entity": "con_marketingspendline"
+        }
+      ],
+      "deprecatedCount": 0,
+      "deprecated": [],
+      "fieldRefCount": 3,
+      "fieldRefs": [
+        "name",
+        "statuscode",
+        "ownerid"
+      ],
+      "externalUrls": [],
+      "governanceFlags": [],
+      "governanceFindings": []
+    }
+  ]
+}

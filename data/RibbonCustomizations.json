@@ -1,0 +1,277 @@
+{
+  "customizations": [
+    {
+      "entity": "lead",
+      "type": "Form",
+      "id": "con_action1",
+      "location": "Form",
+      "solution": "ContosoSales",
+      "jsActions": [
+        {
+          "library": "con_/scripts/lead.js",
+          "function": "Contoso.lead.openLead"
+        }
+      ]
+    },
+    {
+      "entity": "con_dealdeskreview",
+      "type": "Form",
+      "id": "con_action2",
+      "location": "Form",
+      "solution": "ContosoSales",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-dealdeskreview.js",
+          "function": "Contoso.conDealdeskreview.openDealdeskreview"
+        }
+      ]
+    },
+    {
+      "entity": "incident",
+      "type": "Form",
+      "id": "con_action3",
+      "location": "Form",
+      "solution": "ContosoCustomerService",
+      "jsActions": [
+        {
+          "library": "con_/scripts/incident.js",
+          "function": "Contoso.incident.openIncident"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_workorder",
+      "type": "Form",
+      "id": "con_action4",
+      "location": "Form",
+      "solution": "ContosoFieldService",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-workorder.js",
+          "function": "Contoso.msdynWorkorder.openWorkorder"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_project",
+      "type": "Form",
+      "id": "con_action5",
+      "location": "Form",
+      "solution": "ContosoProjectOperations",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-project.js",
+          "function": "Contoso.msdynProject.openProject"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_project",
+      "type": "Form",
+      "id": "con_action6",
+      "location": "Form",
+      "solution": "ContosoProjectOperations",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-project.js",
+          "function": "Contoso.msdynProject.openProject"
+        }
+      ]
+    },
+    {
+      "entity": "msdynmkt_journey",
+      "type": "Form",
+      "id": "con_action7",
+      "location": "Form",
+      "solution": "ContosoMarketing",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdynmkt-journey.js",
+          "function": "Contoso.msdynmktJourney.openJourney"
+        }
+      ]
+    },
+    {
+      "entity": "con_campaignbrief",
+      "type": "Form",
+      "id": "con_action8",
+      "location": "Form",
+      "solution": "ContosoMarketing",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-campaignbrief.js",
+          "function": "Contoso.conCampaignbrief.openCampaignbrief"
+        }
+      ]
+    },
+    {
+      "entity": "msdynci_customerprofile",
+      "type": "Form",
+      "id": "con_action9",
+      "location": "Form",
+      "solution": "ContosoCustomerInsights",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdynci-customerprofile.js",
+          "function": "Contoso.msdynciCustomerprofile.openCustomerprofile"
+        }
+      ]
+    },
+    {
+      "entity": "con_datasourcehealth",
+      "type": "Form",
+      "id": "con_action10",
+      "location": "Form",
+      "solution": "ContosoCustomerInsights",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-datasourcehealth.js",
+          "function": "Contoso.conDatasourcehealth.openDatasourcehealth"
+        }
+      ]
+    },
+    {
+      "entity": "con_apapprovalrequest",
+      "type": "Form",
+      "id": "con_action11",
+      "location": "Form",
+      "solution": "ContosoFinance",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-apapprovalrequest.js",
+          "function": "Contoso.conApapprovalrequest.openApapprovalrequest"
+        }
+      ]
+    },
+    {
+      "entity": "con_capexrequest",
+      "type": "Form",
+      "id": "con_action12",
+      "location": "Form",
+      "solution": "ContosoFinance",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-capexrequest.js",
+          "function": "Contoso.conCapexrequest.openCapexrequest"
+        }
+      ]
+    },
+    {
+      "entity": "con_purchaserequisition",
+      "type": "Form",
+      "id": "con_action13",
+      "location": "Form",
+      "solution": "ContosoSupplyChain",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-purchaserequisition.js",
+          "function": "Contoso.conPurchaserequisition.openPurchaserequisition"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_retailchannel",
+      "type": "Form",
+      "id": "con_action14",
+      "location": "Form",
+      "solution": "ContosoCommerce",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-retailchannel.js",
+          "function": "Contoso.msdynRetailchannel.openRetailchannel"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_loyaltyprogram",
+      "type": "Form",
+      "id": "con_action15",
+      "location": "Form",
+      "solution": "ContosoCommerce",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-loyaltyprogram.js",
+          "function": "Contoso.msdynLoyaltyprogram.openLoyaltyprogram"
+        }
+      ]
+    },
+    {
+      "entity": "cdm_worker",
+      "type": "Form",
+      "id": "con_action16",
+      "location": "Form",
+      "solution": "ContosoHumanResources",
+      "jsActions": [
+        {
+          "library": "con_/scripts/cdm-worker.js",
+          "function": "Contoso.cdmWorker.openCdmWorker"
+        }
+      ]
+    },
+    {
+      "entity": "cdm_worker",
+      "type": "Form",
+      "id": "con_action17",
+      "location": "Form",
+      "solution": "ContosoHumanResources",
+      "jsActions": [
+        {
+          "library": "con_/scripts/cdm-worker.js",
+          "function": "Contoso.cdmWorker.openCdmWorker"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_ocliveworkitem",
+      "type": "Form",
+      "id": "con_action18",
+      "location": "Form",
+      "solution": "ContosoContactCenter",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-ocliveworkitem.js",
+          "function": "Contoso.msdynOcliveworkitem.openOcliveworkitem"
+        }
+      ]
+    },
+    {
+      "entity": "msdyn_liveworkstream",
+      "type": "Form",
+      "id": "con_action19",
+      "location": "Form",
+      "solution": "ContosoContactCenter",
+      "jsActions": [
+        {
+          "library": "con_/scripts/msdyn-liveworkstream.js",
+          "function": "Contoso.msdynLiveworkstream.openLiveworkstream"
+        }
+      ]
+    },
+    {
+      "entity": "con_environmentinventory",
+      "type": "Form",
+      "id": "con_action20",
+      "location": "Form",
+      "solution": "ContosoPlatformGovernance",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-environmentinventory.js",
+          "function": "Contoso.conEnvironmentinventory.openEnvironmentinventory"
+        }
+      ]
+    },
+    {
+      "entity": "con_dataprocessingregister",
+      "type": "Form",
+      "id": "con_action21",
+      "location": "Form",
+      "solution": "ContosoPlatformGovernance",
+      "jsActions": [
+        {
+          "library": "con_/scripts/con-dataprocessingregister.js",
+          "function": "Contoso.conDataprocessingregister.openDataprocessingregister"
+        }
+      ]
+    }
+  ]
+}
