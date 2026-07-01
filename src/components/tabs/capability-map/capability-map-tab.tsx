@@ -4,19 +4,17 @@ import { useState, useMemo, useCallback } from "react";
 import { useDashboard } from "@/lib/dashboard-context";
 import { useCapabilityMap } from "@/hooks/use-inventory-api";
 import { ExplorerSkeleton } from "@/components/shared/loading-states";
-import type { ComponentIndex, IndexedComponent } from "@/lib/component-index";
 import type { Capability, CapabilityMap } from "@/types/inventory";
 import { Separator } from "@/components/ui";
 import { ScrollArea } from "@/components/ui";
 import { Badge } from "@/components/ui";
 import { Input } from "@/components/ui";
 import { DashboardIcon } from "@/components/shared/dashboard-icon";
-import { ComponentTypeGroup } from "@/components/shared/component-type-group";
 import { StatsBar } from "@/components/shared/stats-bar";
 import { EmptyState } from "@/components/shared/empty-state";
 import { DatabaseZap } from "lucide-react";
 import { SplitPaneLayout } from "@/components/shared/split-pane-layout";
-import { TYPE_ORDER, TYPE_LABELS } from "@/lib/constants";
+import { TYPE_LABELS } from "@/lib/constants";
 
 // Heat color utility
 function getHeatColor(count: number, maxCount: number): string {
@@ -47,7 +45,6 @@ export function CapabilityMapTab() {
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const compIndex: ComponentIndex | null = null;
 
   const maxCount = useMemo(() => {
     if (!capabilityMap) return 0;
@@ -147,7 +144,6 @@ export function CapabilityMapTab() {
                 <CapDetail
                   capability={selectedCap}
                   maxCount={maxCount}
-                  compIndex={compIndex}
                   onNavigate={navigateToTab}
                 />
               ) : (
@@ -169,39 +165,28 @@ export function CapabilityMapTab() {
 function CapDetail({
   capability,
   maxCount,
-  compIndex,
   onNavigate,
 }: {
   capability: Capability;
   maxCount: number;
-  compIndex: ComponentIndex | null;
   onNavigate: (tabId: string, searchName: string) => void;
 }) {
-  const components = useMemo(() => {
-    if (!compIndex) return [];
-    const componentIds = capability.components || [];
-    const lookup = new Map<string, IndexedComponent>();
-    compIndex.all.forEach((comp) => {
-      lookup.set(`${comp.dataKey}:${comp.itemId}`, comp);
-    });
-    return componentIds.map((id) => lookup.get(id)).filter(Boolean) as IndexedComponent[];
-  }, [capability.components, compIndex]);
+  // Type breakdown straight from the capability's own componentsByType counts.
+  const byTypeCounts = (capability.componentsByType || {}) as Record<string, number>;
+  const typeLabel = (k: string) => TYPE_LABELS[k] || (k.charAt(0).toUpperCase() + k.slice(1));
 
-  // Group by type
-  const byType: Record<string, IndexedComponent[]> = {};
-  components.forEach((c) => {
-    if (!byType[c.type]) byType[c.type] = [];
-    byType[c.type]!.push(c);
-  });
-
-  // Entities in this capability
+  // Entities aggregated from the sub-capabilities (which carry entity lists).
+  const subs = useMemo(
+    () => (capability.subCapabilities || []) as unknown as Array<Record<string, unknown>>,
+    [capability.subCapabilities],
+  );
   const entities = useMemo(() => {
     const set = new Set<string>();
-    components.forEach((c) => {
-      if (c.type === "Entity") set.add(c.name);
-    });
+    for (const s of subs) for (const e of ((s.entities as string[]) || [])) set.add(e);
     return Array.from(set).sort();
-  }, [components]);
+  }, [subs]);
+
+  const components = (capability.components || []) as string[];
 
   return (
     <>
@@ -221,43 +206,74 @@ function CapDetail({
         </div>
       )}
 
-      {/* Stats */}
+      {/* Type breakdown */}
       <div className="flex flex-wrap gap-1.5 mb-3">
-        {TYPE_ORDER.filter((t) => byType[t]).map((t) => (
-          <Badge key={t} variant="outline" className="text-xs font-normal flex items-center gap-1">
-            <DashboardIcon iconKey={t} className="w-3.5 h-3.5 shrink-0" />
-            {byType[t]!.length} {TYPE_LABELS[t] || t}
-          </Badge>
-        ))}
+        {Object.entries(byTypeCounts)
+          .filter(([, n]) => (n as number) > 0)
+          .sort((a, b) => (b[1] as number) - (a[1] as number))
+          .map(([type, n]) => (
+            <Badge key={type} variant="outline" className="text-xs font-normal flex items-center gap-1">
+              <DashboardIcon iconKey={type} className="w-3.5 h-3.5 shrink-0" />
+              {n} {typeLabel(type)}
+            </Badge>
+          ))}
       </div>
 
       {/* Entities summary */}
       {entities.length > 0 && (
         <div className="grid grid-cols-[80px_1fr] gap-x-3 gap-y-1 text-xs mb-3 bg-muted/50 rounded-md px-3 py-2">
           <span className="text-muted-foreground">Entities</span>
-          <span>{entities.join(", ")}</span>
+          <span className="flex flex-wrap gap-1">
+            {entities.map((e) => (
+              <button
+                key={e}
+                onClick={() => onNavigate("entities", e)}
+                className="font-mono text-brand-accent hover:underline"
+              >
+                {e}
+              </button>
+            ))}
+          </span>
+        </div>
+      )}
+
+      {/* Sub-capabilities */}
+      {subs.length > 0 && (
+        <div className="mb-3">
+          <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+            Sub-capabilities ({subs.length})
+          </h3>
+          <div className="space-y-1.5">
+            {subs.map((s, i) => (
+              <div key={i} className="bg-muted/50 rounded-md px-3 py-2 text-xs">
+                <div className="flex items-center justify-between">
+                  <span className="font-medium">{String(s.name ?? "")}</span>
+                  {s.bpcL3 ? <span className="font-mono text-muted-foreground">{String(s.bpcL3)}</span> : null}
+                </div>
+                {Array.isArray(s.topKeywords) && (s.topKeywords as string[]).length > 0 && (
+                  <div className="text-muted-foreground mt-0.5">{(s.topKeywords as string[]).join(" · ")}</div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
       <Separator className="mb-3" />
 
-      {/* Components by type */}
+      {/* Component list */}
       {components.length > 0 ? (
         <div>
           <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
             Components ({components.length})
           </h3>
-          {TYPE_ORDER.filter((t) => byType[t]).map((type) => {
-            const items = byType[type]!.sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
-            return (
-              <ComponentTypeGroup
-                key={type}
-                type={type}
-                items={items}
-                onNavigate={onNavigate}
-              />
-            );
-          })}
+          <div className="flex flex-wrap gap-1">
+            {components.map((c, i) => (
+              <Badge key={`${c}-${i}`} variant="secondary" className="text-xs font-normal font-mono">
+                {c}
+              </Badge>
+            ))}
+          </div>
         </div>
       ) : (
         <div className="bg-muted/50 rounded-md px-3 py-3 text-sm text-muted-foreground">

@@ -22,9 +22,9 @@ import { cn } from "@/lib/utils";
 // --- Layer colors ---
 const LAYER_COLORS: Record<SolutionLayer, string> = {
   "Core": "var(--color-chart-1)",
-  "Vertical: Services": "var(--color-chart-4)",
-  "Vertical: Construction": "var(--color-chart-2)",
-  "Integrated": "var(--color-chart-3)",
+  "Microsoft (Managed)": "var(--color-chart-4)",
+  "Line of Business": "var(--color-chart-2)",
+  "Integration": "var(--color-chart-3)",
   "Company / Security": "var(--color-chart-5)",
   "ISV / External": "var(--color-muted-foreground)",
 };
@@ -74,7 +74,7 @@ export function EnvironmentHealthTab() {
   const { data: apiMatrix } = useEnvironmentComponentMatrix();
   const [selection, setSelection] = useState<Selection | null>(null);
   const [expandedLayers, setExpandedLayers] = useState<Set<SolutionLayer>>(
-    new Set(["Core", "Vertical: Services", "Vertical: Construction", "Integrated"])
+    new Set(["Core", "Microsoft (Managed)", "Line of Business", "Integration"])
   );
   const [searchQuery, setSearchQuery] = useState("");
 

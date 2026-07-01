@@ -20,9 +20,9 @@ import { cn } from "@/lib/utils";
 // --- Layer colors ---
 const LAYER_COLORS: Record<SolutionLayer, string> = {
   "Core": "var(--color-chart-1)",
-  "Vertical: Services": "var(--color-chart-4)",
-  "Vertical: Construction": "var(--color-chart-2)",
-  "Integrated": "var(--color-chart-3)",
+  "Microsoft (Managed)": "var(--color-chart-4)",
+  "Line of Business": "var(--color-chart-2)",
+  "Integration": "var(--color-chart-3)",
   "Company / Security": "var(--color-chart-5)",
   "ISV / External": "var(--color-muted-foreground)",
 };
@@ -53,7 +53,7 @@ export function SolutionArchitectureTab() {
   const { data: apiSolComponents } = useSolutionComponents();
   const [selection, setSelection] = useState<Selection | null>(null);
   const [expandedLayers, setExpandedLayers] = useState<Set<SolutionLayer>>(
-    new Set(["Core", "Vertical: Services", "Vertical: Construction", "Integrated"])
+    new Set(["Core", "Microsoft (Managed)", "Line of Business", "Integration"])
   );
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -242,7 +242,7 @@ export function SolutionArchitectureTab() {
               solution={selectedSolution}
               l1Lookup={l1Lookup}
               onNavigate={handleNavigate}
-              solutionDeps={null}
+              solutionDeps={(apiSolutions as unknown as import("@/types/inventory").SolutionDependenciesData) ?? null}
             />
           ) : null
         }

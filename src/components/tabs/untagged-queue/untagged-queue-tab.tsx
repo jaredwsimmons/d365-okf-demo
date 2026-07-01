@@ -11,7 +11,7 @@ import { DashboardIcon } from "@/components/shared/dashboard-icon";
 import { compIconKey, subIconKey } from "@/lib/icons";
 import { BulkEditPanel } from "@/components/tabs/process-catalog/process-catalog-bulk-edit";
 import type { IndexedComponent } from "@/lib/component-index";
-import { useUntagged } from "@/hooks/use-inventory-api";
+import { useUntagged, useOrphaned } from "@/hooks/use-inventory-api";
 import { ExplorerSkeleton } from "@/components/shared/loading-states";
 import { TYPE_ORDER, TYPE_LABELS } from "@/lib/constants";
 import { resolveTypeRouting } from "@/lib/inventory-types";
@@ -29,6 +29,7 @@ const GROUP_PREVIEW_LIMIT = 10;
 
 export function UntaggedQueueTab() {
   const { data: apiUntagged, isLoading: untaggedLoading } = useUntagged();
+  const { data: apiOrphaned } = useOrphaned();
   const catalog = null;
 
   const [gapFilter, setGapFilter] = useState<GapFilter>("all");
@@ -53,9 +54,21 @@ export function UntaggedQueueTab() {
         altId: "",
       })) as IndexedComponent[];
 
+      const orphanItems = (apiOrphaned?.orphans || []).map((o: Record<string, unknown>) => ({
+        name: o.name as string,
+        type: o.type as string,
+        itemId: (o.schemaName || o.name) as string,
+        searchName: (o.name || o.schemaName) as string,
+        ...resolveTypeRouting(o.type as string),
+        solution: (o.solution as string) || "",
+        tags: {},
+        sub: (o.reason as string) || "",
+        altId: (o.severity as string) || "",
+      })) as IndexedComponent[];
+
       return {
-        untagged: { all: items, bpc: items, orphaned: [] as IndexedComponent[] },
-        stats: { total: items.length, noBpc: items.length, orphaned: 0, either: items.length },
+        untagged: { all: items, bpc: items, orphaned: orphanItems },
+        stats: { total: items.length, noBpc: items.length, orphaned: orphanItems.length, either: items.length + orphanItems.length },
       };
     }
 
@@ -64,7 +77,7 @@ export function UntaggedQueueTab() {
       stats: { total: 0, noBpc: 0, orphaned: 0, either: 0 },
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [refreshKey, apiUntagged]);
+  }, [refreshKey, apiUntagged, apiOrphaned]);
 
   // Active list based on gap filter
   const activeList = untagged[gapFilter];

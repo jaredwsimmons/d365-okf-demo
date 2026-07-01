@@ -53,9 +53,9 @@ export function AzureTab() {
   // Build azure structure from flat API items
   const azure = apiResult?.items && apiResult.items.length > 0
     ? {
-        logicApps: apiResult.items.filter((i: Record<string, unknown>) => i.type === "logicApp") as unknown as AzureLogicApp[],
-        functions: apiResult.items.filter((i: Record<string, unknown>) => i.type === "function") as unknown as AzureFunction[],
-        externalIntegrations: apiResult.items.filter((i: Record<string, unknown>) => i.type === "externalIntegration") as unknown as AzureIntegration[],
+        logicApps: apiResult.items.filter((i: Record<string, unknown>) => (i._type ?? i.type) === "logicApp") as unknown as AzureLogicApp[],
+        functions: apiResult.items.filter((i: Record<string, unknown>) => (i._type ?? i.type) === "function") as unknown as AzureFunction[],
+        externalIntegrations: apiResult.items.filter((i: Record<string, unknown>) => (i._type ?? i.type) === "externalIntegration") as unknown as AzureIntegration[],
       }
     : null;
 

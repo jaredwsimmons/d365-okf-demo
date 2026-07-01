@@ -247,6 +247,10 @@ export function getUntagged(): Promise<{ total: number; byType: Record<string, n
   return fetchApi("/api/v1/untagged");
 }
 
+export function getOrphaned(): Promise<{ orphans: Record<string, unknown>[]; byType?: Record<string, number>; metadata?: Record<string, unknown> }> {
+  return fetchApi("/api/v1/orphaned-components");
+}
+
 // ─── Process Diagrams ──────────────────────────────────────────────
 
 export type ProcessDiagramsMap = Record<string, { url: string; title?: string }>;

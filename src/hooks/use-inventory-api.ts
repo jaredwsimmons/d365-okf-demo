@@ -14,6 +14,7 @@ import {
   getEnvironmentComponentMatrix,
   getEntityRelationships,
   getUntagged,
+  getOrphaned,
   getSolutionComponents,
   getSolutionDetail,
   getProcessCatalogComponents,
@@ -104,6 +105,15 @@ export function useUntagged(queryOptions?: { enabled?: boolean }) {
   return useQuery({
     queryKey: ["untagged"],
     queryFn: getUntagged,
+    staleTime: 5 * 60 * 1000,
+    enabled: queryOptions?.enabled ?? true,
+  });
+}
+
+export function useOrphaned(queryOptions?: { enabled?: boolean }) {
+  return useQuery({
+    queryKey: ["orphaned"],
+    queryFn: getOrphaned,
     staleTime: 5 * 60 * 1000,
     enabled: queryOptions?.enabled ?? true,
   });

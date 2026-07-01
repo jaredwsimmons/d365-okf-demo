@@ -5,9 +5,9 @@ import type { IndexedComponent } from "@/lib/component-index";
 
 export type SolutionLayer =
   | "Core"
-  | "Vertical: Services"
-  | "Vertical: Construction"
-  | "Integrated"
+  | "Microsoft (Managed)"
+  | "Line of Business"
+  | "Integration"
   | "Company / Security"
   | "ISV / External";
 
@@ -37,37 +37,45 @@ export interface SolutionIndex {
 
 export const LAYER_ORDER: SolutionLayer[] = [
   "Core",
-  "Vertical: Services",
-  "Vertical: Construction",
-  "Integrated",
+  "Microsoft (Managed)",
+  "Line of Business",
+  "Integration",
   "Company / Security",
   "ISV / External",
 ];
 
 /**
- * Layer classification rules — each rule maps a solution name prefix to a layer.
- * Override this array in customer-specific builds if the solution naming convention differs.
- * Checked in order; the first match wins. The fallback is always "ISV / External".
- *
- * Example for a different customer whose solutions start with "Acme":
- *   { prefix: "AcmeCore", layer: "Core" }
+ * Optional per-deployment name-prefix rules. When a rule's prefix matches, its
+ * layer wins; otherwise the layer is inferred generically from solution metadata
+ * (isManaged / publisher / name), which works for any org without configuration.
  */
-export const defaultLayerRules: Array<{ prefix: string; layer: SolutionLayer }> = [
-  { prefix: "AcmeCore", layer: "Core" },
-  { prefix: "AcmeService", layer: "Vertical: Services" },
-  { prefix: "AcmeConstruction", layer: "Vertical: Construction" },
-  { prefix: "AcmeIntegrated", layer: "Integrated" },
-  { prefix: "AcmeExternal", layer: "Integrated" },
-  { prefix: "AcmeCompany", layer: "Company / Security" },
-];
+export const defaultLayerRules: Array<{ prefix: string; layer: SolutionLayer }> = [];
 
+/**
+ * Classify a solution into an architectural layer. Prefers explicit prefix rules,
+ * then infers generically: Microsoft-managed base solutions, the customization
+ * layer (unmanaged line-of-business), core/platform, integration, and security.
+ */
 function getSolutionLayer(
   name: string,
+  sol?: Record<string, unknown> | null,
   rules: Array<{ prefix: string; layer: SolutionLayer }> = defaultLayerRules,
 ): SolutionLayer {
   for (const rule of rules) {
     if (name.startsWith(rule.prefix)) return rule.layer;
   }
+  const nl = String(name || "").toLowerCase();
+  const managed = sol?.isManaged === true;
+  const pub = String(sol?.publisher ?? sol?.publisherPrefix ?? "").toLowerCase();
+  const microsoft =
+    /microsoft|dynamics/.test(pub) ||
+    /^(msdyn|msdynce|msdynmkt|msdynci|mscrm|msevtmgt)/.test(nl) ||
+    (managed && /^ms/.test(nl));
+  if (/(security|fieldsecurity|\brole)/.test(nl)) return "Company / Security";
+  if (/(integration|dualwrite|dual write|external|azure|connector)/.test(nl)) return "Integration";
+  if (microsoft) return "Microsoft (Managed)";
+  if (/((^|[^a-z])core([^a-z]|$)|platform|governance|\bcommon\b|foundation|^system|^default)/.test(nl)) return "Core";
+  if (!managed) return "Line of Business";
   return "ISV / External";
 }
 
@@ -112,7 +120,7 @@ export function buildSolutionIndexFromApi(
     const counts = componentCounts?.bySolution?.[name];
     bySolution.set(name, {
       name,
-      layer: getSolutionLayer(name, layerRules),
+      layer: getSolutionLayer(name, sol, layerRules),
       bpcL1Code: null,
       components: [],
       countsByType: counts?.byType || {},

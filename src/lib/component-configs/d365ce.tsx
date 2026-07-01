@@ -371,10 +371,10 @@ export const formDetailConfig: DetailConfig<FormItem> = {
       { label: "Solution", value: item.solution },
       { label: "Active", value: boolToYes(item.isActive) },
       { label: "Version", value: item.version },
-      { label: "Tabs", value: item.tabCount != null ? String(item.tabCount) : undefined },
-      { label: "Sections", value: item.sectionCount != null ? String(item.sectionCount) : undefined },
-      { label: "Controls", value: item.controlCount != null ? String(item.controlCount) : undefined },
-      { label: "Subgrids", value: item.subgridCount != null ? String(item.subgridCount) : undefined },
+      { label: "Tabs", value: (item._tabCount ?? item.tabCount) != null ? String(item._tabCount ?? item.tabCount) : undefined },
+      { label: "Fields", value: item._totalFields != null ? String(item._totalFields) : undefined },
+      { label: "Subgrids", value: (item._subgridCount ?? item.subgridCount) != null ? String(item._subgridCount ?? item.subgridCount) : undefined },
+      { label: "JS Handlers", value: item._jsHandlerCount != null ? String(item._jsHandlerCount) : undefined },
       { label: "Vertical", value: t.vertical },
       { label: "Complexity", value: t.complexity },
     ].filter((row) => row.value != null);
@@ -399,10 +399,10 @@ export const viewDetailConfig: DetailConfig<ViewItem> = {
     const t = item.tags || {};
     return [
       { label: "Entity", value: item.entity, mono: true },
-      { label: "Query Type", value: item.queryType },
+      { label: "Query Type", value: item._viewDetails?.queryType ?? item.queryType },
       { label: "Solution", value: item.solution },
-      { label: "Columns", value: item.columnCount != null ? String(item.columnCount) : undefined },
-      { label: "Filters", value: item.filterCount != null ? String(item.filterCount) : undefined },
+      { label: "Columns", value: (item._viewDetails?.columnCount ?? item.columnCount) != null ? String(item._viewDetails?.columnCount ?? item.columnCount) : undefined },
+      { label: "Filters", value: (item._viewDetails?.filterCount ?? item.filterCount) != null ? String(item._viewDetails?.filterCount ?? item.filterCount) : undefined },
       { label: "Vertical", value: t.vertical },
       { label: "Complexity", value: t.complexity },
     ].filter((row) => row.value != null);
@@ -410,8 +410,8 @@ export const viewDetailConfig: DetailConfig<ViewItem> = {
 
   getPillSections: (item) => {
     const flags: string[] = [];
-    if (item.isDefault) flags.push("Default");
-    if (item.isQuickFind) flags.push("Quick Find");
+    if (item._viewDetails?.isDefault ?? item.isDefault) flags.push("Default");
+    if (item._viewDetails?.isQuickFind ?? item.isQuickFind) flags.push("Quick Find");
     if (item.hasJoins) flags.push("Has Joins");
     if (item.hasFilters) flags.push("Has Filters");
     const sections = [];

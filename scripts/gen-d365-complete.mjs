@@ -410,9 +410,9 @@ const viewDetails = views.map((v) => {
   const shown = cols.slice(0, Math.min(cols.length, 6));
   const columns = shown.map((c, i) => ({ name: c.logicalName, width: [200, 150, 120, 100][i % 4] }));
   const active = /^Active /.test(v.name);
-  const filters = active ? [{ attribute: "statecode", operator: "eq", value: "0" }] : [];
+  const filters = active ? [{ field: "statecode", operator: "eq", value: "0" }] : [];
   const sortField = cols.find((c) => c.type === "datetime") || cols[0];
-  return { viewId: v.viewId, entity: v.entity, name: v.name, solution: v.solution, queryType: /lookup/i.test(v.name) ? "LookupView" : "SavedQuery", isDefault: /^Active /.test(v.name), isQuickFind: false, columnCount: columns.length, filterCount: filters.length, linkedEntityCount: 0, columns, filters, linkedEntities: [], sortFields: sortField ? [{ attribute: sortField.logicalName, descending: true }] : [], fetchAttributes: shown.map((c) => c.logicalName) };
+  return { viewId: v.viewId, entity: v.entity, name: v.name, solution: v.solution, queryType: /lookup/i.test(v.name) ? "LookupView" : "SavedQuery", isDefault: /^Active /.test(v.name), isQuickFind: false, columnCount: columns.length, filterCount: filters.length, linkedEntityCount: 0, columns, filters, linkedEntities: [], sortFields: sortField ? [{ field: sortField.logicalName, descending: true }] : [], fetchAttributes: shown.map((c) => c.logicalName) };
 });
 w("ViewDetails.json", { views: viewDetails });
 
