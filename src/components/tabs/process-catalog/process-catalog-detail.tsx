@@ -250,7 +250,7 @@ export function PCDetail({
       )}
 
       {/* Microsoft Learn links */}
-      {proc?.microsoftReferences && proc.microsoftReferences.length > 0 && (
+      {Array.isArray(proc?.microsoftReferences) && proc.microsoftReferences.length > 0 && (
         <div className="mb-4">
           {proc.microsoftReferences.map((ref, i) => (
             <a

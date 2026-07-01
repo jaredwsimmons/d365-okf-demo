@@ -111,7 +111,9 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
         fetch(assetUrl("/data/branding.json")).then(r => r.ok ? r.json() : DEFAULT_BRANDING).catch(() => DEFAULT_BRANDING),
       ]);
       setDiagramManifest(diagrams);
-      const mergedBranding = { ...DEFAULT_BRANDING, ...brandingData, scopes: brandingData.scopes || [] };
+      const rawScopes = brandingData.scopes;
+      const scopes: ScopeConfig[] = Array.isArray(rawScopes) ? rawScopes : rawScopes ? [rawScopes] : [];
+      const mergedBranding = { ...DEFAULT_BRANDING, ...brandingData, scopes };
       setBranding(mergedBranding);
       if (mergedBranding.scopes.length > 0) {
         const defaultScope = mergedBranding.scopes.find((s: ScopeConfig) => s.default) || mergedBranding.scopes[0];

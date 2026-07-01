@@ -46,7 +46,7 @@ export function SecurityDetail({ item, icon, onNavigate }: { item: SecurityRoleI
   const t = item.tags || {};
   const privCounts = item.privilegeCounts || {};
   const levelCounts = item.levelCounts || {};
-  const perms = item.entityPermissions || [];
+  const perms = Array.isArray(item.entityPermissions) ? item.entityPermissions : [];
 
   return (
     <>

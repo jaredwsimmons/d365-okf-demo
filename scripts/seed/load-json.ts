@@ -9,6 +9,16 @@ import { sql } from "drizzle-orm";
 import { Pool } from "pg";
 import * as schema from "../../src/lib/db/schema";
 
+/**
+ * Coerce a possibly-unwrapped single-element array back to an array. null/undefined
+ * stay undefined so nullable columns remain null in the DB. Guards against the
+ * PowerShell/JSON single-element-array unwrap (a 1-element array written as a bare scalar).
+ */
+function toArr<T = unknown>(v: unknown): T[] | undefined {
+  if (v === null || v === undefined) return undefined;
+  return (Array.isArray(v) ? v : [v]) as T[];
+}
+
 // ─── Config ────────────────────────────────────────────────────────
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -238,7 +248,7 @@ async function loadWorkflows() {
       onDelete: w.triggerOnDelete as boolean | undefined,
       triggerType: pa?.triggerType as string | undefined,
       triggerEntity: pa?.triggerEntity as string | undefined,
-      connectors: pa?.connectors as string[] | undefined,
+      connectors: toArr(pa?.connectors) as string[] | undefined,
       tags: w.tags as Record<string, unknown> | undefined,
       // Preserve the entire Power Automate record so nothing from the retired
       // flows table is lost (its tags/rawData/etc. live under _powerAutomate).
@@ -339,8 +349,8 @@ async function loadOptionSets() {
     isGlobal: o.isGlobal as boolean | undefined,
     solution: o.solution as string | undefined,
     optionCount: o.optionCount as number | undefined,
-    options: o.options as { label: string; value: number; isHidden: boolean }[] | undefined,
-    entities: o.entities as string[] | undefined,
+    options: toArr(o.options) as { label: string; value: number; isHidden: boolean }[] | undefined,
+    entities: toArr(o.entities) as string[] | undefined,
     tags: o.tags as Record<string, unknown> | undefined,
     rawData: o,
   }));
@@ -503,7 +513,7 @@ async function loadGovernance() {
     status: f.status as string | undefined,
     scope: f.scope as string | undefined,
     componentType: f.componentType as string | undefined,
-    items: f.items as string[] | undefined,
+    items: toArr(f.items) as string[] | undefined,
     itemDetails: f.itemDetails as Record<string, { detail: string }> | undefined,
     auditDate: data.metadata?.auditDate ? new Date(data.metadata.auditDate) : undefined,
   }));
@@ -542,7 +552,7 @@ async function loadProcessCatalog() {
         products: item.products as string | undefined,
         microsoftId: item.microsoftId as string | undefined,
         apqc: item.apqc as { id: string; description: string } | undefined,
-        microsoftReferences: item.microsoftReferences as string[] | undefined,
+        microsoftReferences: toArr(item.microsoftReferences) as string[] | undefined,
         rawData: item,
       });
     }
@@ -572,8 +582,8 @@ async function loadEntityColumns() {
     customColumns: info.customColumns as number | undefined,
     oobColumns: info.oobColumns as number | undefined,
     settings: info.settings as Record<string, boolean | string | null> | undefined,
-    solutions: info.solutions as string[] | undefined,
-    columns: info.columns as unknown[] | undefined,
+    solutions: toArr(info.solutions) as string[] | undefined,
+    columns: toArr(info.columns) as unknown[] | undefined,
   }));
   const count = await truncateAndInsert("entity_columns", schema.entityColumns, rows);
   log("entity_columns", count);
@@ -587,7 +597,7 @@ async function loadSolutions() {
   if (!data) return;
 
   if (data.solutions) {
-    const rows = data.solutions.map((s) => ({
+    const rows = asArray(data.solutions).map((s) => ({
       uniqueName: s.uniqueName as string,
       displayName: s.displayName as string | undefined,
       version: s.version as string | undefined,
@@ -597,7 +607,7 @@ async function loadSolutions() {
       description: s.description as string | undefined,
       dependencyCount: s.dependencyCount as number | undefined,
       missingDependencyCount: s.missingDependencyCount as number | undefined,
-      dependsOn: s.dependsOn as string[] | undefined,
+      dependsOn: toArr(s.dependsOn) as string[] | undefined,
     }));
     const count = await truncateAndInsert("solutions", schema.solutions, rows);
     log("solutions", count);
@@ -629,8 +639,8 @@ async function loadFormDetails() {
     totalFields: f.totalFields as number | undefined,
     jsHandlerCount: f.jsHandlerCount as number | undefined,
     subgridCount: f.subgridCount as number | undefined,
-    tabs: f.tabs as unknown[] | undefined,
-    jsHandlers: f.jsHandlers as unknown[] | undefined,
+    tabs: toArr(f.tabs) as unknown[] | undefined,
+    jsHandlers: toArr(f.jsHandlers) as unknown[] | undefined,
   }));
   const count = await truncateAndInsert("form_details", schema.formDetails, rows);
   log("form_details", count);
@@ -650,10 +660,10 @@ async function loadViewDetails() {
     columnCount: v.columnCount as number | undefined,
     filterCount: v.filterCount as number | undefined,
     linkedEntityCount: v.linkedEntityCount as number | undefined,
-    columns: v.columns as unknown[] | undefined,
-    filters: v.filters as unknown[] | undefined,
-    linkedEntities: v.linkedEntities as unknown[] | undefined,
-    sortFields: v.sortFields as unknown[] | undefined,
+    columns: toArr(v.columns) as unknown[] | undefined,
+    filters: toArr(v.filters) as unknown[] | undefined,
+    linkedEntities: toArr(v.linkedEntities) as unknown[] | undefined,
+    sortFields: toArr(v.sortFields) as unknown[] | undefined,
   }));
   const count = await truncateAndInsert("view_details", schema.viewDetails, rows);
   log("view_details", count);
@@ -670,7 +680,7 @@ async function loadPluginConfigs() {
     solution: c.solution as string | undefined,
     ruleCount: c.ruleCount as number | undefined,
     isRulesEngine: c.isRulesEngine as boolean | undefined,
-    rules: c.rules as unknown[] | undefined,
+    rules: toArr(c.rules) as unknown[] | undefined,
   }));
   const count = await truncateAndInsert("plugin_configs", schema.pluginConfigs, rows);
   log("plugin_configs", count);
@@ -679,7 +689,7 @@ async function loadPluginConfigs() {
 async function loadFlowComplexity() {
   const data = readJson("FlowComplexity.json") as { flows?: Array<Record<string, unknown>> } | null;
   if (!data?.flows) return;
-  const rows = data.flows.map((f) => ({
+  const rows = asArray(data.flows).map((f) => ({
     name: f.name as string,
     solution: f.solution as string | undefined,
     triggerType: f.triggerType as string | undefined,
@@ -690,9 +700,9 @@ async function loadFlowComplexity() {
     complexity: f.complexity as string | undefined,
     hasErrorHandling: f.hasErrorHandling as boolean | undefined,
     metrics: f.metrics as Record<string, number> | undefined,
-    httpUrls: f.httpUrls as string[] | undefined,
-    connectors: f.connectors as string[] | undefined,
-    governanceFlags: f.governanceFlags as string[] | undefined,
+    httpUrls: toArr(f.httpUrls) as string[] | undefined,
+    connectors: toArr(f.connectors) as string[] | undefined,
+    governanceFlags: toArr(f.governanceFlags) as string[] | undefined,
   }));
   const count = await truncateAndInsert("flow_complexity", schema.flowComplexity, rows);
   log("flow_complexity", count);
@@ -711,8 +721,8 @@ async function loadFlowEntityInteractions() {
         flowName,
         flowSolution: info.solution,
         entityName: ent.entity,
-        operations: ent.operations,
-        columnsReferenced: ent.columnsReferenced,
+        operations: toArr<string>(ent.operations),
+        columnsReferenced: toArr<string>(ent.columnsReferenced),
       });
     }
   }
@@ -731,8 +741,8 @@ async function loadCanvasAppSources() {
     formFactor: a.formFactor as string | undefined,
     entityCount: a.entityCount as number | undefined,
     connectorCount: a.connectorCount as number | undefined,
-    entities: a.entities as unknown[] | undefined,
-    connectors: a.connectors as unknown[] | undefined,
+    entities: toArr(a.entities) as unknown[] | undefined,
+    connectors: toArr(a.connectors) as unknown[] | undefined,
   }));
   const count = await truncateAndInsert("canvas_app_sources", schema.canvasAppSources, rows);
   log("canvas_app_sources", count);
@@ -746,8 +756,8 @@ async function loadEntityMaps() {
     sourceEntity: m.sourceEntity as string,
     targetEntity: m.targetEntity as string,
     fieldCount: m.fieldCount as number | undefined,
-    fieldMappings: m.fieldMappings as unknown[] | undefined,
-    solutions: m.solutions as string[] | undefined,
+    fieldMappings: toArr(m.fieldMappings) as unknown[] | undefined,
+    solutions: toArr(m.solutions) as string[] | undefined,
   }));
   const count = await truncateAndInsert("entity_maps", schema.entityMaps, rows);
   log("entity_maps", count);
@@ -763,7 +773,7 @@ async function loadRibbonCustomizations() {
     ribbonId: r.id as string,
     location: r.location as string | undefined,
     solution: r.solution as string | undefined,
-    jsActions: r.jsActions as { library: string; function: string }[] | undefined,
+    jsActions: toArr(r.jsActions) as { library: string; function: string }[] | undefined,
   }));
   const count = await truncateAndInsert("ribbon_customizations", schema.ribbonCustomizations, rows);
   log("ribbon_customizations", count);
@@ -772,21 +782,21 @@ async function loadRibbonCustomizations() {
 async function loadWebResourceCodeAnalysis() {
   const data = readJson("WebResourceCodeAnalysis.json") as { files?: Array<Record<string, unknown>> } | null;
   if (!data?.files) return;
-  const rows = data.files.map((w) => ({
+  const rows = asArray(data.files).map((w) => ({
     name: w.name as string,
     solution: w.solution as string | undefined,
     lineCount: w.lineCount as number | undefined,
     isRulesEngine: w.isRulesEngine as boolean | undefined,
     isCustom: w.isCustom as boolean | undefined,
     functionCount: w.functionCount as number | undefined,
-    functions: w.functions as string[] | undefined,
+    functions: toArr(w.functions) as string[] | undefined,
     apiCallCount: w.apiCallCount as number | undefined,
-    apiCalls: w.apiCalls as { operation: string; entity: string }[] | undefined,
+    apiCalls: toArr(w.apiCalls) as { operation: string; entity: string }[] | undefined,
     deprecatedCount: w.deprecatedCount as number | undefined,
-    deprecated: w.deprecated as { pattern: string; count: number }[] | undefined,
+    deprecated: toArr(w.deprecated) as { pattern: string; count: number }[] | undefined,
     fieldRefCount: w.fieldRefCount as number | undefined,
-    fieldRefs: w.fieldRefs as string[] | undefined,
-    governanceFlags: w.governanceFlags as string[] | undefined,
+    fieldRefs: toArr(w.fieldRefs) as string[] | undefined,
+    governanceFlags: toArr(w.governanceFlags) as string[] | undefined,
   }));
   const count = await truncateAndInsert("web_resource_code_analysis", schema.webResourceCodeAnalysis, rows);
   log("web_resource_code_analysis", count);
@@ -820,7 +830,7 @@ async function loadCapabilities() {
     description: c.description as string | undefined,
     componentCount: c.componentCount as number | undefined,
     componentsByType: c.componentsByType as Record<string, number> | undefined,
-    components: c.components as string[] | undefined,
+    components: toArr(c.components) as string[] | undefined,
   }));
   const count = await truncateAndInsert("capabilities", schema.capabilities, capRows);
   log("capabilities", count);
@@ -838,9 +848,9 @@ async function loadCapabilities() {
         functionalArea: sub.functionalArea as string | undefined,
         componentCount: sub.componentCount as number | undefined,
         componentsByType: sub.componentsByType as Record<string, number> | undefined,
-        entities: sub.entities as string[] | undefined,
-        topKeywords: sub.topKeywords as string[] | undefined,
-        components: sub.components as string[] | undefined,
+        entities: toArr(sub.entities) as string[] | undefined,
+        topKeywords: toArr(sub.topKeywords) as string[] | undefined,
+        components: toArr(sub.components) as string[] | undefined,
       });
       for (const tert of (sub.tertiarySubCapabilities as Array<Record<string, unknown>>) || []) {
         tertRows.push({
@@ -850,9 +860,9 @@ async function loadCapabilities() {
           name: tert.name as string,
           componentCount: tert.componentCount as number | undefined,
           componentsByType: tert.componentsByType as Record<string, number> | undefined,
-          entities: tert.entities as string[] | undefined,
-          topKeywords: tert.topKeywords as string[] | undefined,
-          components: tert.components as string[] | undefined,
+          entities: toArr(tert.entities) as string[] | undefined,
+          topKeywords: toArr(tert.topKeywords) as string[] | undefined,
+          components: toArr(tert.components) as string[] | undefined,
         });
       }
     }
@@ -1005,7 +1015,7 @@ async function main() {
     name: s.name as string, solution: s.solution as string | undefined,
     areaCount: s.areaCount as number | undefined, totalGroups: s.totalGroups as number | undefined,
     totalSubAreas: s.totalSubAreas as number | undefined, totalEntities: s.totalEntities as number | undefined,
-    areas: s.areas as unknown[] | undefined, tags: s.tags as Record<string, unknown> | undefined, rawData: s,
+    areas: toArr(s.areas) as unknown[] | undefined, tags: s.tags as Record<string, unknown> | undefined, rawData: s,
   }));
   await loadSimpleInventory("TemplateInventory.json", "templates", schema.templates, "templates", (t) => ({
     id: (t.id || t.title) as string, title: t.title as string,
@@ -1020,7 +1030,7 @@ async function main() {
   await loadSimpleInventory("MobileOfflineInventory.json", "mobile_offline", schema.mobileOffline, "profiles", (m) => ({
     name: (Array.isArray(m.name) ? m.name[0] : m.name) as string,
     solution: m.solution as string | undefined, entityCount: m.entityCount as number | undefined,
-    entities: m.entities as unknown[] | undefined, tags: m.tags as Record<string, unknown> | undefined, rawData: m,
+    entities: toArr(m.entities) as unknown[] | undefined, tags: m.tags as Record<string, unknown> | undefined, rawData: m,
   }));
   await loadSimpleInventory("PluginStepInventory.json", "plugin_steps", schema.pluginSteps, "pluginSteps", (p) => ({
     id: p.id as string, name: p.name as string, description: p.description as string | undefined,

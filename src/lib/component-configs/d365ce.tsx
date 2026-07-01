@@ -104,7 +104,7 @@ export const entityDetailConfig: DetailConfig<EntityItem> = {
         items: item._relOptionSets.map(name => ({ name, tabId: "optionsets", itemId: name, searchName: name })),
       });
     }
-    if (item.keyRelationships?.length) {
+    if (Array.isArray(item.keyRelationships) && item.keyRelationships.length) {
       sections.push({
         title: `Related Entities (${item.keyRelationships.length})`,
         icon: "entities",
@@ -520,14 +520,14 @@ export const optionSetDetailConfig: DetailConfig<OptionSetItem> = {
 
   getCrossReferences: (item) => {
     const sections: CrossReferenceSection[] = [];
-    if (item.entities?.length) {
+    if (Array.isArray(item.entities) && item.entities.length) {
       sections.push({
         title: `Used By Entities (${item.entities.length})`,
         icon: "entities",
         items: item.entities.map(name => ({ name, tabId: "entities", searchName: name })),
       });
     }
-    if (item.options?.length) {
+    if (Array.isArray(item.options) && item.options.length) {
       sections.push({
         title: `Options (${item.options.length})`,
         icon: "optionsets",

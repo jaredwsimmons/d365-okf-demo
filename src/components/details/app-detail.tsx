@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { AppItem } from "@/types/inventory";
 import { Badge } from "@/components/ui";
-import { cn } from "@/lib/utils";
+import { cn, toArray } from "@/lib/utils";
 import { DashboardIcon } from "@/components/shared/dashboard-icon";
 import { AccordionSection } from "@/components/shared/accordion-section";
 import {
@@ -51,9 +51,9 @@ function ModelDrivenDetail({
   onNavigate?: NavFn;
 }) {
   const t = (item.tags as Record<string, unknown>) || {};
-  const embeddedCanvas = (item.embeddedCanvasApps as string[]) || [];
+  const embeddedCanvas = toArray<string>(item.embeddedCanvasApps);
   const entityDetails = (item._relEntityDetails as EntityDetail[]) || [];
-  const entityCount = (item.entities as string[] || []).length;
+  const entityCount = toArray<string>(item.entities).length;
 
   return (
     <>
@@ -100,8 +100,8 @@ function CanvasDetail({
 }) {
   const t = (item.tags as Record<string, unknown>) || {};
   const entityDetails = (item._relEntityDetails as EntityDetail[]) || [];
-  const conns = (item.connections as string[]) || [];
-  const screenNames = (item.screenNames as string[]) || [];
+  const conns = toArray<string>(item.connections);
+  const screenNames = toArray<string>(item.screenNames);
   const controlCounts = (item.controlCounts as Record<string, number>) || {};
   const parserErrors = (item.parserErrors as number) || 0;
   const bindingErrors = (item.bindingErrors as number) || 0;
@@ -290,7 +290,7 @@ function AppRelatedObjects({
   // Build entity items from pre-resolved details, or fall back to raw logicalNames
   const entityItems: EntityDetail[] = entityDetails.length > 0
     ? entityDetails
-    : (item.entities as string[] || []).map(ln => ({
+    : (Array.isArray(item.entities) ? (item.entities as string[]) : []).map(ln => ({
         logicalName: ln, displayName: ln, iconKey: "Entity", searchName: ln,
       }));
 

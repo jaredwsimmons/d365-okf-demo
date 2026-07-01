@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 import { sql, eq, like, or, count, inArray } from "drizzle-orm";
 import * as schema from "@/lib/db";
 import { INVENTORY_TYPES } from "@/lib/inventory-types";
+import { toArray } from "@/lib/utils";
 
 // ─── Table Registry ────────────────────────────────────────────────
 // Maps inventory type names to their Drizzle table references + config.
@@ -315,7 +316,7 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
     item._colTotal = colInfo.totalColumns;
     item._colCustom = colInfo.customColumns;
     item._colOOB = colInfo.oobColumns;
-    item._columns = colInfo.columns;
+    item._columns = toArray(colInfo.columns);
     item._entitySettings = colInfo.settings;
   }
 
@@ -328,7 +329,7 @@ async function enrichEntity(item: Record<string, unknown>, logicalName: string) 
   if (flowInteractions.length > 0) {
     item._relFlows = flowInteractions.map((f) => ({
       name: f.flowName,
-      operations: (f.operations as string[]) || [],
+      operations: toArray<string>(f.operations),
     }));
   }
 
@@ -616,7 +617,7 @@ async function enrichWorkflow(item: Record<string, unknown>) {
   if (flowEntities.length > 0) {
     item._relFlowEntities = flowEntities.map((fe) => ({
       entity: fe.entityName,
-      operations: (fe.operations as string[]) || [],
+      operations: toArray<string>(fe.operations),
     }));
   }
 }
@@ -643,12 +644,12 @@ async function enrichWebResource(item: Record<string, unknown>, name: string) {
   if (code) {
     item._codeLineCount = code.lineCount;
     item._codeFunctionCount = code.functionCount;
-    item._codeFunctions = code.functions;
-    item._codeApiCalls = code.apiCalls;
+    item._codeFunctions = toArray(code.functions);
+    item._codeApiCalls = toArray(code.apiCalls);
     item._codeDeprecatedCount = code.deprecatedCount;
-    item._codeDeprecated = code.deprecated;
-    item._codeFieldRefs = code.fieldRefs;
-    item._codeGovernanceFlags = code.governanceFlags;
+    item._codeDeprecated = toArray(code.deprecated);
+    item._codeFieldRefs = toArray(code.fieldRefs);
+    item._codeGovernanceFlags = toArray(code.governanceFlags);
     item._isRulesEngine = code.isRulesEngine;
   }
 
@@ -694,7 +695,7 @@ async function enrichWebResource(item: Record<string, unknown>, name: string) {
           message: s?.message || "",
           ruleCount: c.ruleCount || 0,
           isRulesEngine: true,
-          rules: (c.rules as unknown[]) || [],
+          rules: toArray(c.rules),
         };
       });
       item._relPluginStepCount = matchedConfigs.length;
@@ -754,8 +755,8 @@ async function enrichForm(item: Record<string, unknown>, formId: string) {
     item._totalFields = fd.totalFields;
     item._jsHandlerCount = fd.jsHandlerCount;
     item._subgridCount = fd.subgridCount;
-    item._tabs = fd.tabs;
-    item._jsHandlers = fd.jsHandlers;
+    item._tabs = toArray(fd.tabs);
+    item._jsHandlers = toArray(fd.jsHandlers);
   }
 
   // JS library web resources attached to this form
@@ -785,10 +786,10 @@ async function enrichView(item: Record<string, unknown>, viewId: string) {
       columnCount: vd.columnCount,
       filterCount: vd.filterCount,
       linkedEntityCount: vd.linkedEntityCount,
-      columns: vd.columns,
-      filters: vd.filters,
-      linkedEntities: vd.linkedEntities,
-      sortFields: vd.sortFields,
+      columns: toArray(vd.columns),
+      filters: toArray(vd.filters),
+      linkedEntities: toArray(vd.linkedEntities),
+      sortFields: toArray(vd.sortFields),
     };
   }
 }
