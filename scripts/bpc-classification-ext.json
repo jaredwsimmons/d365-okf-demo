@@ -1,0 +1,645 @@
+{
+  "_description": "Demo-owned extension to the product's BPC classification rules (bpc-classification.json). Adds coverage for the 6 end-to-end processes the shipped rules don't elaborate (10 Acquire to dispose, 30 Concept to market, 40 Design to retire, 50 Forecast to plan, 70 Plan to produce, 90 Record to report) plus routing for the demo's Marketing / Customer Insights / Finance / SCM / Commerce / HR modules. All L1/L2/L3 codes are real nodes from the DEC 2025.1 Microsoft Business Process Catalog (bpc-catalog.json) — the classifier validates every emitted code against the catalog.",
+  "moduleToL1": {
+    "Sales": "85.00",
+    "Customer Service": "20.00",
+    "Field Service": "95.00",
+    "Project Operations": "80.00",
+    "Customer Insights - Journeys (Marketing)": "30.00",
+    "Customer Insights - Data (CDP)": "99.00",
+    "Finance": "90.00",
+    "Supply Chain Management": "60.00",
+    "Commerce": "65.00",
+    "Human Resources": "55.00",
+    "Contact Center / Omnichannel": "20.00",
+    "Platform & Governance (shared core)": "99.00"
+  },
+  "l1Names": {
+    "10.00": "Acquire to dispose",
+    "30.00": "Concept to market",
+    "40.00": "Design to retire",
+    "50.00": "Forecast to plan",
+    "70.00": "Plan to produce",
+    "90.00": "Record to report"
+  },
+  "entityKeywords": {
+    "10.00": [
+      "fixed asset",
+      "depreciation",
+      "capital expenditure",
+      "asset acquisition",
+      "asset disposal",
+      "asset lease"
+    ],
+    "30.00": [
+      "campaign",
+      "marketing",
+      "journey",
+      "segment",
+      "event registration",
+      "lead scoring",
+      "brand",
+      "consent"
+    ],
+    "40.00": [
+      "product master",
+      "released product",
+      "product lifecycle",
+      "bill of materials",
+      "product catalog",
+      "pricing rule",
+      "assortment"
+    ],
+    "50.00": [
+      "demand forecast",
+      "sales and operations",
+      "s&op",
+      "supply plan",
+      "aggregate plan",
+      "demand planning"
+    ],
+    "70.00": [
+      "production order",
+      "manufacturing",
+      "shop floor",
+      "work center",
+      "production quality",
+      "bom"
+    ],
+    "90.00": [
+      "general ledger",
+      "chart of accounts",
+      "journal entry",
+      "fiscal period",
+      "financial statement",
+      "budget register",
+      "tax transaction",
+      "main account"
+    ]
+  },
+  "entityPatterns": {
+    "10.00": [
+      "fixedasset",
+      "capex",
+      "assetlease"
+    ],
+    "30.00": [
+      "msdynmkt_",
+      "msevtmgt_",
+      "campaign",
+      "marketingform",
+      "leadscoring",
+      "campaignbrief",
+      "marketingspend",
+      "channeltemplate",
+      "eventregistration"
+    ],
+    "40.00": [
+      "releasedproduct",
+      "pricingrule",
+      "pricematch",
+      "bomcomponent"
+    ],
+    "50.00": [
+      "demandforecast"
+    ],
+    "70.00": [
+      "productionorder"
+    ],
+    "90.00": [
+      "mainaccount",
+      "generaljournal",
+      "journalaccount",
+      "budgetregister",
+      "taxtransaction",
+      "financialdimension",
+      "mserp_ledger"
+    ],
+    "55.00": [
+      "msdynhr_",
+      "mshr_",
+      "cdm_job",
+      "cdm_department",
+      "cdm_benefit",
+      "cdm_fixedcompensation",
+      "leaveenrollment",
+      "onboardingtask",
+      "performancereview",
+      "workerskill",
+      "disciplinary"
+    ],
+    "60.00": [
+      "inventwarehouse",
+      "inventorycount",
+      "con_shipment"
+    ],
+    "75.00": [
+      "purchaserequisition",
+      "vendinvoice",
+      "purchaseorderheader",
+      "purchaseorderline"
+    ],
+    "65.00": [
+      "retailterminal",
+      "retailtransaction",
+      "retailstatement",
+      "channelprofile",
+      "giftcard",
+      "clienteling",
+      "curbside",
+      "custtranspayment",
+      "custpaymentjournal"
+    ],
+    "99.00": [
+      "msdynci_",
+      "datasource",
+      "matchrule",
+      "semanticmapping",
+      "consentledger",
+      "datasourcehealth",
+      "custcustomerv3"
+    ]
+  },
+  "entityToProcess": {
+    "mserp_mainaccount": {
+      "l1": "90.00",
+      "l2": "90.10",
+      "l3": "90.10.040"
+    },
+    "mserp_ledger": {
+      "l1": "90.00",
+      "l2": "90.10",
+      "l3": "90.10.040"
+    },
+    "mserp_generaljournalaccountentry": {
+      "l1": "90.00",
+      "l2": "90.50",
+      "l3": "90.50.040"
+    },
+    "mserp_vendinvoiceheader": {
+      "l1": "75.00",
+      "l2": "75.50",
+      "l3": "75.50.020"
+    },
+    "mserp_custpaymentjournalline": {
+      "l1": "65.00",
+      "l2": "65.30",
+      "l3": "65.30.100"
+    },
+    "mserp_budgetregisterentry": {
+      "l1": "90.00",
+      "l2": "90.30",
+      "l3": "90.30.050"
+    },
+    "mserp_fixedasset": {
+      "l1": "10.00",
+      "l2": "10.40",
+      "l3": "10.40.025"
+    },
+    "mserp_taxtransaction": {
+      "l1": "90.00",
+      "l2": "90.50",
+      "l3": "90.50.090"
+    },
+    "cdm_company": {
+      "l1": "90.00",
+      "l2": "90.10",
+      "l3": "90.10.010"
+    },
+    "con_apapprovalrequest": {
+      "l1": "75.00",
+      "l2": "75.50",
+      "l3": "75.50.020"
+    },
+    "con_capexrequest": {
+      "l1": "10.00",
+      "l2": "10.20",
+      "l3": "10.20.200"
+    },
+    "con_financialdimensionmap": {
+      "l1": "90.00",
+      "l2": "90.10",
+      "l3": "90.10.035"
+    },
+    "con_dunningaction": {
+      "l1": "65.00",
+      "l2": "65.50",
+      "l3": "65.50.080"
+    },
+    "msdyn_releasedproduct": {
+      "l1": "40.00",
+      "l2": "40.10",
+      "l3": "40.10.070"
+    },
+    "msdyn_inventwarehouse": {
+      "l1": "60.00",
+      "l2": "60.10",
+      "l3": "60.10.010"
+    },
+    "msdyn_purchaseorderheader": {
+      "l1": "75.00",
+      "l2": "75.40",
+      "l3": "75.40.030"
+    },
+    "msdyn_purchaseorderline": {
+      "l1": "75.00",
+      "l2": "75.40",
+      "l3": "75.40.030"
+    },
+    "msdyn_salesorderline": {
+      "l1": "65.00",
+      "l2": "65.20",
+      "l3": "65.20.025"
+    },
+    "con_vendor": {
+      "l1": "75.00",
+      "l2": "75.30",
+      "l3": "75.30.030"
+    },
+    "con_purchaserequisition": {
+      "l1": "75.00",
+      "l2": "75.40",
+      "l3": "75.40.010"
+    },
+    "con_inventorycount": {
+      "l1": "60.00",
+      "l2": "60.20",
+      "l3": "60.20.040"
+    },
+    "con_shipment": {
+      "l1": "60.00",
+      "l2": "60.40",
+      "l3": "60.40.060"
+    },
+    "con_demandforecast": {
+      "l1": "50.00",
+      "l2": "50.25",
+      "l3": "50.25.625"
+    },
+    "uom": {
+      "l1": "40.00",
+      "l2": "40.10",
+      "l3": "40.10.040"
+    },
+    "con_bomcomponent": {
+      "l1": "40.00",
+      "l2": "40.50",
+      "l3": "40.50.100"
+    },
+    "con_productionorder": {
+      "l1": "70.00",
+      "l2": "70.30",
+      "l3": "70.30.010"
+    },
+    "msdyn_retailterminal": {
+      "l1": "65.00",
+      "l2": "65.20",
+      "l3": "65.20.300"
+    },
+    "msdyn_channelprofile": {
+      "l1": "65.00",
+      "l2": "65.05",
+      "l3": "65.05.020"
+    },
+    "msdyn_retailtransactionsalesline": {
+      "l1": "65.00",
+      "l2": "65.20",
+      "l3": "65.20.300"
+    },
+    "msdyn_retailtransactionpaymentline": {
+      "l1": "65.00",
+      "l2": "65.30",
+      "l3": "65.30.100"
+    },
+    "msdyn_retailstatement": {
+      "l1": "65.00",
+      "l2": "65.20",
+      "l3": "65.20.300"
+    },
+    "msdyn_pricingrule": {
+      "l1": "40.00",
+      "l2": "40.50",
+      "l3": "40.50.400"
+    },
+    "msdyn_giftcard": {
+      "l1": "65.00",
+      "l2": "65.30",
+      "l3": "65.30.100"
+    },
+    "con_clienteling": {
+      "l1": "65.00",
+      "l2": "65.20",
+      "l3": "65.20.025"
+    },
+    "con_curbsideorder": {
+      "l1": "65.00",
+      "l2": "65.20",
+      "l3": "65.20.025"
+    },
+    "con_pricematchrequest": {
+      "l1": "40.00",
+      "l2": "40.50",
+      "l3": "40.50.400"
+    },
+    "msdynmkt_channeltemplate": {
+      "l1": "30.00",
+      "l2": "30.35",
+      "l3": "30.35.300"
+    },
+    "msdynmkt_marketingform": {
+      "l1": "30.00",
+      "l2": "30.35",
+      "l3": "30.35.800"
+    },
+    "msdynmkt_leadscoringmodel": {
+      "l1": "30.00",
+      "l2": "30.35",
+      "l3": "30.35.100"
+    },
+    "msevtmgt_eventregistration": {
+      "l1": "30.00",
+      "l2": "30.45",
+      "l3": "30.45.200"
+    },
+    "msdynmkt_contactpointconsent3": {
+      "l1": "30.00",
+      "l2": "30.35",
+      "l3": "30.35.700"
+    },
+    "msdynmkt_trigger": {
+      "l1": "30.00",
+      "l2": "30.45",
+      "l3": "30.45.100"
+    },
+    "con_campaignbrief": {
+      "l1": "30.00",
+      "l2": "30.35",
+      "l3": "30.35.200"
+    },
+    "con_legalfootertemplate": {
+      "l1": "30.00",
+      "l2": "30.35",
+      "l3": "30.35.700"
+    },
+    "con_marketingspendline": {
+      "l1": "30.00",
+      "l2": "30.45",
+      "l3": "30.45.300"
+    },
+    "campaign": {
+      "l1": "30.00",
+      "l2": "30.45",
+      "l3": "30.45.100"
+    },
+    "msdynci_datasource": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.010"
+    },
+    "msdynci_entity": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.020"
+    },
+    "msdynci_prediction": {
+      "l1": "50.00",
+      "l2": "50.65",
+      "l3": "50.65.525"
+    },
+    "msdynci_predictionscore": {
+      "l1": "50.00",
+      "l2": "50.65",
+      "l3": "50.65.525"
+    },
+    "msdynci_activity": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.020"
+    },
+    "msdynci_relationship": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.020"
+    },
+    "con_consentledger": {
+      "l1": "99.00",
+      "l2": "99.60",
+      "l3": "99.60.020"
+    },
+    "con_matchrule": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.020"
+    },
+    "con_datasourcehealth": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.030"
+    },
+    "mserp_custcustomerv3entity": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.020"
+    },
+    "msdynci_semanticmapping": {
+      "l1": "99.00",
+      "l2": "99.55",
+      "l3": "99.55.010"
+    },
+    "cdm_job": {
+      "l1": "55.00",
+      "l2": "55.05",
+      "l3": "55.05.010"
+    },
+    "cdm_department": {
+      "l1": "55.00",
+      "l2": "55.05",
+      "l3": "55.05.010"
+    },
+    "cdm_fixedcompensation": {
+      "l1": "55.00",
+      "l2": "55.70",
+      "l3": "55.70.070"
+    },
+    "mshr_leaveenrollment": {
+      "l1": "55.00",
+      "l2": "55.50",
+      "l3": "55.50.010"
+    },
+    "msdynhr_worker": {
+      "l1": "55.00",
+      "l2": "55.10",
+      "l3": "55.10.070"
+    },
+    "con_onboardingtask": {
+      "l1": "55.00",
+      "l2": "55.10",
+      "l3": "55.10.070"
+    },
+    "con_performancereview": {
+      "l1": "55.00",
+      "l2": "55.40",
+      "l3": "55.40.080"
+    },
+    "con_skill": {
+      "l1": "55.00",
+      "l2": "55.40",
+      "l3": "55.40.055"
+    },
+    "con_workerskill": {
+      "l1": "55.00",
+      "l2": "55.40",
+      "l3": "55.40.055"
+    },
+    "cdm_benefit": {
+      "l1": "55.00",
+      "l2": "55.70",
+      "l3": "55.70.020"
+    },
+    "con_disciplinarycase": {
+      "l1": "55.00",
+      "l2": "55.30",
+      "l3": "55.30.400"
+    },
+    "con_ledgerdimension": {
+      "l1": "90.00",
+      "l2": "90.10",
+      "l3": "90.10.035"
+    },
+    "con_custtranspayment": {
+      "l1": "65.00",
+      "l2": "65.30",
+      "l3": "65.30.100"
+    },
+    "plugintype": {
+      "l1": "99.00",
+      "l2": "99.01",
+      "l3": "99.01.350"
+    },
+    "opportunityproduct": {
+      "l1": "85.00",
+      "l2": "85.45",
+      "l3": "85.45.200"
+    },
+    "incidentresolution": {
+      "l1": "20.00",
+      "l2": "20.40",
+      "l3": "20.40.100"
+    },
+    "slaitem": {
+      "l1": "20.00",
+      "l2": "20.40",
+      "l3": "20.40.200"
+    },
+    "queue": {
+      "l1": "20.00",
+      "l2": "20.20",
+      "l3": "20.20.020"
+    },
+    "entitlement": {
+      "l1": "20.00",
+      "l2": "20.40",
+      "l3": "20.40.220"
+    },
+    "entitlementtemplate": {
+      "l1": "20.00",
+      "l2": "20.40",
+      "l3": "20.40.220"
+    },
+    "msdyn_ocsession": {
+      "l1": "20.00",
+      "l2": "20.40",
+      "l3": "20.40.010"
+    },
+    "con_agentcoachingnote": {
+      "l1": "20.00",
+      "l2": "20.60",
+      "l3": "20.60.030"
+    },
+    "msdyn_customervoicesurvey": {
+      "l1": "20.00",
+      "l2": "20.60",
+      "l3": "20.60.030"
+    },
+    "msdyn_presence": {
+      "l1": "20.00",
+      "l2": "20.20",
+      "l3": "20.20.010"
+    },
+    "con_casedeflection": {
+      "l1": "20.00",
+      "l2": "20.10",
+      "l3": "20.10.020"
+    },
+    "con_faoprojectvendorinvoice": {
+      "l1": "75.00",
+      "l2": "75.50",
+      "l3": "75.50.020"
+    },
+    "con_projecthealthreview": {
+      "l1": "80.00",
+      "l2": "80.60",
+      "l3": "80.60.020"
+    },
+    "con_resourcerequest": {
+      "l1": "80.00",
+      "l2": "80.30",
+      "l3": "80.30.050"
+    },
+    "msdyn_estimateline": {
+      "l1": "80.00",
+      "l2": "80.20",
+      "l3": "80.20.010"
+    },
+    "msdyn_projectparameter": {
+      "l1": "80.00",
+      "l2": "80.10",
+      "l3": "80.10.200"
+    },
+    "goal": {
+      "l1": "85.00",
+      "l2": "85.35",
+      "l3": "85.35.400"
+    },
+    "territory": {
+      "l1": "85.00",
+      "l2": "85.35",
+      "l3": "85.35.200"
+    },
+    "con_salesplaybook": {
+      "l1": "85.00",
+      "l2": "85.35",
+      "l3": "85.35.100"
+    },
+    "pricelevel": {
+      "l1": "85.00",
+      "l2": "85.35",
+      "l3": "85.35.100"
+    },
+    "con_safetyinspection": {
+      "l1": "95.00",
+      "l2": "95.35",
+      "l3": "95.35.100"
+    },
+    "con_dataprocessingregister": {
+      "l1": "99.00",
+      "l2": "99.60",
+      "l3": "99.60.020"
+    },
+    "con_coecomplianceattestation": {
+      "l1": "99.00",
+      "l2": "99.60",
+      "l3": "99.60.050"
+    },
+    "publisher": {
+      "l1": "99.00",
+      "l2": "99.01",
+      "l3": "99.01.310"
+    },
+    "sdkmessageprocessingstep": {
+      "l1": "99.00",
+      "l2": "99.01",
+      "l3": "99.01.350"
+    }
+  }
+}

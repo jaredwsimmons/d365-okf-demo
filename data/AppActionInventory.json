@@ -19,7 +19,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
+      }
     },
     {
       "uniqueName": "con_action2",
@@ -35,7 +39,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
+      }
     },
     {
       "uniqueName": "con_action3",
@@ -51,7 +59,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
+      }
     },
     {
       "uniqueName": "con_action4",
@@ -67,7 +79,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
+      }
     },
     {
       "uniqueName": "con_action5",
@@ -83,7 +99,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope"
+      }
     },
     {
       "uniqueName": "con_action6",
@@ -99,7 +119,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope"
+      }
     },
     {
       "uniqueName": "con_action7",
@@ -115,7 +139,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
+      }
     },
     {
       "uniqueName": "con_action8",
@@ -131,7 +159,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
+      }
     },
     {
       "uniqueName": "con_action9",
@@ -147,7 +179,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     },
     {
       "uniqueName": "con_action10",
@@ -163,7 +199,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.030 Monitor data synchronization failures"
+      }
     },
     {
       "uniqueName": "con_action11",
@@ -179,7 +219,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
+      }
     },
     {
       "uniqueName": "con_action12",
@@ -195,7 +239,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.20 Acquire assets",
+        "processCatalogL3": "10.20.200 Budget fixed assets"
+      }
     },
     {
       "uniqueName": "con_action13",
@@ -211,7 +259,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
+      }
     },
     {
       "uniqueName": "con_action14",
@@ -227,7 +279,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
+      }
     },
     {
       "uniqueName": "con_action15",
@@ -243,7 +299,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_action16",
@@ -259,7 +319,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_action17",
@@ -275,7 +339,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_action18",
@@ -291,7 +359,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
+      }
     },
     {
       "uniqueName": "con_action19",
@@ -307,7 +379,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
+      }
     },
     {
       "uniqueName": "con_action20",
@@ -323,7 +399,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
+      }
     },
     {
       "uniqueName": "con_action21",
@@ -339,7 +419,11 @@
       "isCustomizable": true,
       "onClickType": "JavaScript",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
+      }
     }
   ]
 }

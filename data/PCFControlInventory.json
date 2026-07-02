@@ -36,7 +36,11 @@
         }
       ],
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
+      }
     },
     {
       "name": "con_SlaTimerControl",
@@ -65,7 +69,11 @@
         }
       ],
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "ScheduleBoardControl",
@@ -94,7 +102,11 @@
         }
       ],
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "con_SafetyChecklistControl",
@@ -123,7 +135,11 @@
         }
       ],
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.020 Document safety protocols"
+      }
     },
     {
       "name": "con_ProjectGanttControl",
@@ -152,7 +168,11 @@
         }
       ],
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
+      }
     },
     {
       "name": "ConsentTimelineControl",
@@ -181,7 +201,11 @@
         }
       ],
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "ProfileTimelineControl",
@@ -210,7 +234,11 @@
         }
       ],
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "ConsentStatusBadge",
@@ -239,7 +267,11 @@
         }
       ],
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "FinancialDimensionPickerControl",
@@ -268,7 +300,11 @@
         }
       ],
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "InventoryLevelGauge",
@@ -297,7 +333,11 @@
         }
       ],
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.010 Track supplier managed and consignment inventory"
+      }
     },
     {
       "name": "LoyaltyTierGauge",
@@ -326,7 +366,11 @@
         }
       ],
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "StoreMapPicker",
@@ -355,7 +399,11 @@
         }
       ],
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "OrgChartControl",
@@ -384,7 +432,11 @@
         }
       ],
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "LeaveCalendarControl",
@@ -413,7 +465,11 @@
         }
       ],
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "AgentPresenceIndicator",
@@ -442,7 +498,11 @@
         }
       ],
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "EnvironmentComplianceHeatmap",
@@ -471,7 +531,11 @@
         }
       ],
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.010 Identify applicable regulations and compliance requirements"
+      }
     }
   ]
 }

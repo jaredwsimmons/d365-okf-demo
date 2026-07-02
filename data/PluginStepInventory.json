@@ -4,391 +4,651 @@
       "id": "step-1-opportunityrollupp",
       "name": "Create of opportunityproduct — OpportunityRollupPlugin",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
+      }
     },
     {
       "id": "step-2-opportunityrollupp",
       "name": "Update of opportunityproduct — OpportunityRollupPlugin",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
+      }
     },
     {
       "id": "step-3-opportunityrollupp",
       "name": "Delete of opportunityproduct — OpportunityRollupPlugin",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
+      }
     },
     {
       "id": "step-4-quotetoorderguardp",
       "name": "Update of quote — QuoteToOrderGuardPlugin",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.55 Estimate and quote sales",
+        "processCatalogL3": "85.55.200 Define sales quotations"
+      }
     },
     {
       "id": "step-5-quotetoorderguardp",
       "name": "Create of salesorder — QuoteToOrderGuardPlugin",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
+      }
     },
     {
       "id": "step-6-dealdeskapprovalst",
       "name": "Update of con_dealdeskreview — DealDeskApprovalStampPlugin",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
+      }
     },
     {
       "id": "step-7-con-caserouting-en",
       "name": "Create of incident — Con.CaseRouting.EntitlementBinderPlugin",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
+      }
     },
     {
       "id": "step-8-con-caserouting-en",
       "name": "Update of incident — Con.CaseRouting.EntitlementBinderPlugin",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
+      }
     },
     {
       "id": "step-9-con-escalation-sla",
       "name": "Create of con_escalation — Con.Escalation.SlaBreachStampPlugin",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.040 Re-assign case to another team/individual"
+      }
     },
     {
       "id": "step-10-con-deflection-sav",
       "name": "Create of con_casedeflection — Con.Deflection.SavingsCalculatorPlugin",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.020 Identify common issues"
+      }
     },
     {
       "id": "step-11-con-deflection-sav",
       "name": "Associate of knowledgearticle — Con.Deflection.SavingsCalculatorPlugin",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
+      }
     },
     {
       "id": "step-12-contoso-fieldservi",
       "name": "Create of msdyn_workorderproduct — Contoso.FieldService.WorkOrderPricingPlugin",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
+      }
     },
     {
       "id": "step-13-contoso-fieldservi",
       "name": "Update of msdyn_workorderproduct — Contoso.FieldService.WorkOrderPricingPlugin",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
+      }
     },
     {
       "id": "step-14-contoso-fieldservi",
       "name": "Create of msdyn_workorderservice — Contoso.FieldService.WorkOrderPricingPlugin",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
+      }
     },
     {
       "id": "step-15-contoso-fieldservi",
       "name": "Update of msdyn_workorder — Contoso.FieldService.SlaBreachEvaluatorPlugin",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
+      }
     },
     {
       "id": "step-16-contoso-fieldservi",
       "name": "Update of msdyn_workorderproduct — Contoso.FieldService.InventoryDecrementPlugin",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
+      }
     },
     {
       "id": "step-17-contoso-fieldservi",
       "name": "Create of bookableresourcebooking — Contoso.FieldService.SafetyInspectionGuardPlugin",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.950 Schedule frontline workers"
+      }
     },
     {
       "id": "step-18-projectrollupplugi",
       "name": "Update of msdyn_projecttask — ProjectRollupPlugin",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.040 Plan project tasks"
+      }
     },
     {
       "id": "step-19-projectrollupplugi",
       "name": "Create of msdyn_actuals — ProjectRollupPlugin",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.45 Analyze service performance",
+        "processCatalogL3": "95.45.300 Analyze service profitability"
+      }
     },
     {
       "id": "step-20-timeentryvalidatio",
       "name": "Create of msdyn_timeentry — TimeEntryValidationPlugin",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
+      }
     },
     {
       "id": "step-21-timeentryvalidatio",
       "name": "Update of msdyn_timeentry — TimeEntryValidationPlugin",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
+      }
     },
     {
       "id": "step-22-contractlineactual",
       "name": "Update of msdyn_contractline — ContractLineActualsGenerationPlugin",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
+      }
     },
     {
       "id": "step-23-projecthealthrevie",
       "name": "Create of con_projecthealthreview — ProjectHealthReviewAuditPlugin",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.60 Analyze project performance",
+        "processCatalogL3": "80.60.020 Monitor project status"
+      }
     },
     {
       "id": "step-24-contosobrandapprov",
       "name": "Update of msdynmkt_marketingemail — ContosoBrandApprovalGuardPlugin",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
+      }
     },
     {
       "id": "step-25-contosobudgetrollu",
       "name": "Associate of con_campaignbrief — ContosoBudgetRollupPlugin",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
+      }
     },
     {
       "id": "step-26-contosobudgetrollu",
       "name": "Update of con_campaignbrief — ContosoBudgetRollupPlugin",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
+      }
     },
     {
       "id": "step-27-contosoconsentaudi",
       "name": "Update of msdynmkt_contactpointconsent3 — ContosoConsentAuditPlugin",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
+      }
     },
     {
       "id": "step-28-contosoconsentaudi",
       "name": "Create of msdynmkt_contactpointconsent3 — ContosoConsentAuditPlugin",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
+      }
     },
     {
       "id": "step-29-consentledgervalid",
       "name": "Create of con_consentledger — ConsentLedgerValidationPlugin",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
+      }
     },
     {
       "id": "step-30-consentledgervalid",
       "name": "Update of con_consentledger — ConsentLedgerValidationPlugin",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
+      }
     },
     {
       "id": "step-31-matchruleauditplug",
       "name": "Update of con_matchrule — MatchRuleAuditPlugin",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
+      }
     },
     {
       "id": "step-32-matchruleauditplug",
       "name": "Delete of con_matchrule — MatchRuleAuditPlugin",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
+      }
     },
     {
       "id": "step-33-profilemergeenrich",
       "name": "Create of msdynci_customerprofile — ProfileMergeEnrichmentPlugin",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     },
     {
       "id": "step-34-apapprovalroutingp",
       "name": "Create of con_apapprovalrequest — ApApprovalRoutingPlugin",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
+      }
     },
     {
       "id": "step-35-apapprovalroutingp",
       "name": "Update of con_apapprovalrequest — ApApprovalRoutingPlugin",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
+      }
     },
     {
       "id": "step-36-creditlimitenforce",
       "name": "Update of account — CreditLimitEnforcementPlugin",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
+      }
     },
     {
       "id": "step-37-capextofixedassetp",
       "name": "Update of con_capexrequest — CapexToFixedAssetPlugin",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.20 Acquire assets",
+        "processCatalogL3": "10.20.200 Budget fixed assets"
+      }
     },
     {
       "id": "step-38-requisitionnumberp",
       "name": "Create of con_purchaserequisition — RequisitionNumberPlugin",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
+      }
     },
     {
       "id": "step-39-shipmenttrackingsy",
       "name": "Update of con_shipment — ShipmentTrackingSyncPlugin",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.40 Process outbound goods",
+        "processCatalogL3": "60.40.060 Load goods for shipping"
+      }
     },
     {
       "id": "step-40-shipmenttrackingsy",
       "name": "Create of con_shipment — ShipmentTrackingSyncPlugin",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.40 Process outbound goods",
+        "processCatalogL3": "60.40.060 Load goods for shipping"
+      }
     },
     {
       "id": "step-41-vendorapprovalguar",
       "name": "Delete of con_vendor — VendorApprovalGuardPlugin",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
+      }
     },
     {
       "id": "step-42-vendorapprovalguar",
       "name": "Update of con_vendor — VendorApprovalGuardPlugin",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
+      }
     },
     {
       "id": "step-43-retailtransactiont",
       "name": "Create of msdyn_retailtransactionsalesline — RetailTransactionTotalsPlugin",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
+      }
     },
     {
       "id": "step-44-retailtransactiont",
       "name": "Update of msdyn_retailtransactionsalesline — RetailTransactionTotalsPlugin",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
+      }
     },
     {
       "id": "step-45-retailtransactiont",
       "name": "Create of msdyn_retailtransactionpaymentline — RetailTransactionTotalsPlugin",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
+      }
     },
     {
       "id": "step-46-loyaltycardenrollm",
       "name": "Create of msdyn_loyaltycard — LoyaltyCardEnrollmentPlugin",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.010 Assess customer credit risk"
+      }
     },
     {
       "id": "step-47-giftcardredemption",
       "name": "Update of msdyn_giftcard — GiftCardRedemptionPlugin",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
+      }
     },
     {
       "id": "step-48-workeremployeeidpl",
       "name": "Create of cdm_worker — WorkerEmployeeIdPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "step-49-workeremployeeidpl",
       "name": "Update of cdm_worker — WorkerEmployeeIdPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "step-50-leavebalancevalida",
       "name": "Create of mshr_leaverequest — LeaveBalanceValidationPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
+      }
     },
     {
       "id": "step-51-leavebalancevalida",
       "name": "Update of mshr_leaverequest — LeaveBalanceValidationPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
+      }
     },
     {
       "id": "step-52-positionhierarchyg",
       "name": "Update of cdm_position — PositionHierarchyGuardPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
+      }
     },
     {
       "id": "step-53-disciplinarycaseau",
       "name": "Create of con_disciplinarycase — DisciplinaryCaseAuditPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.400 Manage cases and requests"
+      }
     },
     {
       "id": "step-54-disciplinarycaseau",
       "name": "Assign of con_disciplinarycase — DisciplinaryCaseAuditPlugin",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.400 Manage cases and requests"
+      }
     },
     {
       "id": "step-55-conversationroutin",
       "name": "Create of msdyn_ocliveworkitem — ConversationRoutingPlugin",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
+      }
     },
     {
       "id": "step-56-conversationroutin",
       "name": "Update of msdyn_ocliveworkitem — ConversationRoutingPlugin",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
+      }
     },
     {
       "id": "step-57-sessionparticipant",
       "name": "Create of msdyn_ocsessionparticipant — SessionParticipantAuditPlugin",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "step-58-sessionparticipant",
       "name": "Update of msdyn_ocsessionparticipant — SessionParticipantAuditPlugin",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "step-59-deflectioncostcalc",
       "name": "Create of con_deflectionoutcome — DeflectionCostCalculationPlugin",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "step-60-con-governance-dat",
       "name": "Update of account — Con.Governance.DataSensitivityGuardPlugin",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
+      }
     },
     {
       "id": "step-61-con-governance-dat",
       "name": "Update of contact — Con.Governance.DataSensitivityGuardPlugin",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
+      }
     },
     {
       "id": "step-62-con-governance-env",
       "name": "Create of con_environmentinventory — Con.Governance.EnvironmentInventoryAuditPlugin",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
+      }
     },
     {
       "id": "step-63-con-governance-env",
       "name": "Update of con_environmentinventory — Con.Governance.EnvironmentInventoryAuditPlugin",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
+      }
     },
     {
       "id": "step-64-con-governance-att",
       "name": "Create of con_coecomplianceattestation — Con.Governance.AttestationRollupPlugin",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.050 Monitor compliance"
+      }
     },
     {
       "id": "step-65-con-governance-att",
       "name": "Update of con_coecomplianceattestation — Con.Governance.AttestationRollupPlugin",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.050 Monitor compliance"
+      }
     }
   ]
 }

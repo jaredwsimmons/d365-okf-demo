@@ -1,1 +1,1 @@
-{"item":{"id":"step-42-vendorapprovalguar","name":"Update of con_vendor — VendorApprovalGuardPlugin","tags":{},"solution":"ContosoSupplyChain"},"metadata":{"type":"pluginSteps","id":"step-42-vendorapprovalguar"}}
+{"item":{"id":"step-42-vendorapprovalguar","name":"Update of con_vendor — VendorApprovalGuardPlugin","tags":{"processCatalogL1":"75.00 Source to pay","processCatalogL2":"75.30 Manage supplier relationships","processCatalogL3":"75.30.030 Manage active suppliers"},"solution":"ContosoSupplyChain"},"metadata":{"type":"pluginSteps","id":"step-42-vendorapprovalguar"}}

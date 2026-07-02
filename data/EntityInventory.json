@@ -8,9 +8,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.01",
-          "processCatalogL3": "SA.01.02",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.45 Pursue opportunities",
+          "processCatalogL3": "85.45.200 Manage opportunity process",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -22,9 +22,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.55 Estimate and quote sales",
+          "processCatalogL3": "85.55.200 Define sales quotations",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -36,9 +36,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.02",
-          "processCatalogL3": "SA.02.01",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.55 Estimate and quote sales",
+          "processCatalogL3": "85.55.200 Define sales quotations",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -50,9 +50,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.03",
-          "processCatalogL3": "SA.03.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.025 Enter sales orders",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -64,9 +64,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.30 Manage accounts receivable",
+          "processCatalogL3": "65.30.010 Issue sales invoices",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -78,9 +78,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.35 Define sales strategy and policies",
+          "processCatalogL3": "85.35.100 Define sales process",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -92,9 +92,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.01",
-          "processCatalogL3": "SA.01.01",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.45 Pursue opportunities",
+          "processCatalogL3": "85.45.200 Manage opportunity process",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -106,9 +106,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.35 Define sales strategy and policies",
+          "processCatalogL3": "85.35.400 Determine sales targets",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -120,9 +120,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.01",
-          "processCatalogL3": "SA.01.02",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.35 Define sales strategy and policies",
+          "processCatalogL3": "85.35.200 Define sales teams",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -134,9 +134,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.45 Manage marketing campaigns",
+          "processCatalogL3": "30.45.100 Run campaigns",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "oob"
         }
@@ -148,9 +148,9 @@
         "solution": "ContosoSales",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.02",
-          "processCatalogL3": "SA.02.01",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.45 Pursue opportunities",
+          "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "custom"
         }
@@ -162,9 +162,9 @@
         "solution": "ContosoSales",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "85.00 Prospect to quote",
+          "processCatalogL2": "85.35 Define sales strategy and policies",
+          "processCatalogL3": "85.35.100 Define sales process",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "custom"
         }
@@ -176,9 +176,9 @@
         "solution": "msdyn_SalesPro",
         "tags": {
           "d365Module": "Sales",
-          "processCatalogL1": "SA.00 Sales",
-          "processCatalogL2": "SA.03",
-          "processCatalogL3": "SA.03.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.30 Manage accounts receivable",
+          "processCatalogL3": "65.30.100 Process customer payments",
           "vertical": "Cross-industry (B2B enterprise sales)",
           "layer": "virtual"
         }
@@ -192,9 +192,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.20",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.100 Close a case",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -206,9 +206,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.220 Define service terms",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -220,9 +220,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.20",
-          "processCatalogL3": "CS.20.01",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.220 Define service terms",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -234,9 +234,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.30",
-          "processCatalogL3": "CS.30.01",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.200 Create and track service level agreements",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -248,9 +248,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.20 Define customer and employee service operations",
+          "processCatalogL3": "20.20.020 Define queues and teams",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -262,9 +262,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.10",
-          "processCatalogL3": "CS.10.01",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.070 Track additional information against a case",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -276,9 +276,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.20",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.010 Engage in conversations with customers",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -290,9 +290,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.10",
-          "processCatalogL3": "CS.10.02",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.20 Define customer and employee service operations",
+          "processCatalogL3": "",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -304,9 +304,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.60 Analyze case performance",
+          "processCatalogL3": "20.60.030 Review call center performance",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -318,9 +318,9 @@
         "solution": "ContosoCustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.20",
-          "processCatalogL3": "CS.20.01",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.10 Establish a knowledge base",
+          "processCatalogL3": "20.10.020 Identify common issues",
           "vertical": "Customer Service",
           "layer": "custom"
         }
@@ -332,9 +332,9 @@
         "solution": "ContosoCustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.20",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.040 Re-assign case to another team/individual",
           "vertical": "Customer Service",
           "layer": "custom"
         }
@@ -346,9 +346,9 @@
         "solution": "ContosoCustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.30",
-          "processCatalogL3": "CS.30.01",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.60 Analyze case performance",
+          "processCatalogL3": "20.60.010 Analyze case patterns",
           "vertical": "Customer Service",
           "layer": "custom"
         }
@@ -360,9 +360,9 @@
         "solution": "msdyn_CustomerService",
         "tags": {
           "d365Module": "Customer Service",
-          "processCatalogL1": "CS.00 Customer Service Management",
-          "processCatalogL2": "CS.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.05 Develop service strategy",
+          "processCatalogL3": "95.05.400 Define service contracts",
           "vertical": "Customer Service",
           "layer": "virtual"
         }
@@ -376,9 +376,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.35 Deliver services",
+          "processCatalogL3": "95.35.300 Manage service truck inventory",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -390,9 +390,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.01",
-          "processCatalogL3": "FS.01.02",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.35 Deliver services",
+          "processCatalogL3": "95.35.100 Perform service tasks",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -404,9 +404,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.25 Manage service work",
+          "processCatalogL3": "95.25.950 Schedule frontline workers",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -418,9 +418,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.03",
-          "processCatalogL3": "FS.03.01",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.15 Plan service work",
+          "processCatalogL3": "95.15.100 Model service capacity",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -432,9 +432,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.35 Deliver services",
+          "processCatalogL3": "95.35.300 Manage service truck inventory",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -446,9 +446,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.35 Deliver services",
+          "processCatalogL3": "95.35.300 Manage service truck inventory",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -460,9 +460,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.02",
-          "processCatalogL3": "FS.02.01",
+          "processCatalogL1": "60.00 Inventory to deliver",
+          "processCatalogL2": "60.10 Manage warehouse operations",
+          "processCatalogL3": "60.10.010 Define warehouse processes",
           "vertical": "Field Service",
           "layer": "oob"
         }
@@ -474,9 +474,9 @@
         "solution": "ContosoFieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.35 Deliver services",
+          "processCatalogL3": "95.35.100 Perform service tasks",
           "vertical": "Field Service",
           "layer": "custom"
         }
@@ -488,9 +488,9 @@
         "solution": "ContosoFieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.01",
-          "processCatalogL3": "FS.01.01",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.05 Develop service strategy",
+          "processCatalogL3": "95.05.400 Define service contracts",
           "vertical": "Field Service",
           "layer": "custom"
         }
@@ -502,9 +502,9 @@
         "solution": "msdyn_FieldService",
         "tags": {
           "d365Module": "Field Service",
-          "processCatalogL1": "FS.00 Field Service",
-          "processCatalogL2": "FS.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.40 Procure goods and services",
+          "processCatalogL3": "75.40.030 Issue purchase orders",
           "vertical": "Field Service",
           "layer": "virtual"
         }
@@ -518,9 +518,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.30 Plan projects",
+          "processCatalogL3": "80.30.040 Plan project tasks",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -532,9 +532,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.02",
-          "processCatalogL3": "PJ.02.02",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.30 Plan projects",
+          "processCatalogL3": "80.30.050 Assign project resources",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -546,9 +546,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.25 Manage service work",
+          "processCatalogL3": "95.25.400 Deploy service resources",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -560,9 +560,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.03",
-          "processCatalogL3": "PJ.03.01",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.20 Manage project contracts",
+          "processCatalogL3": "80.20.060 Maintain project contracts",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -574,9 +574,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.20 Manage project contracts",
+          "processCatalogL3": "80.20.060 Maintain project contracts",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -588,9 +588,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.04",
-          "processCatalogL3": "PJ.04.01",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.20 Manage project contracts",
+          "processCatalogL3": "80.20.010 Estimate project contracts",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -602,9 +602,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.20 Manage project contracts",
+          "processCatalogL3": "80.20.010 Estimate project contracts",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -616,9 +616,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.02",
-          "processCatalogL3": "PJ.02.02",
+          "processCatalogL1": "95.00 Service to deliver",
+          "processCatalogL2": "95.45 Analyze service performance",
+          "processCatalogL3": "95.45.300 Analyze service profitability",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -630,9 +630,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.30 Manage accounts receivable",
+          "processCatalogL3": "65.30.010 Issue sales invoices",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -644,9 +644,9 @@
         "solution": "ContosoProjectOperations",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.60 Analyze project performance",
+          "processCatalogL3": "80.60.020 Monitor project status",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "custom"
         }
@@ -658,9 +658,9 @@
         "solution": "ContosoProjectOperations",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.04",
-          "processCatalogL3": "PJ.04.01",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.30 Plan projects",
+          "processCatalogL3": "80.30.050 Assign project resources",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "custom"
         }
@@ -672,9 +672,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "80.00 Project to profit",
+          "processCatalogL2": "80.10 Develop project strategy",
+          "processCatalogL3": "80.10.200 Develop project management strategy",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "oob"
         }
@@ -686,9 +686,9 @@
         "solution": "msdyn_ProjectServiceCore",
         "tags": {
           "d365Module": "Project Operations",
-          "processCatalogL1": "PJ.00 Project Operations",
-          "processCatalogL2": "PJ.02",
-          "processCatalogL3": "PJ.02.01",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.50 Manage accounts payable",
+          "processCatalogL3": "75.50.020 Process supplier invoices",
           "vertical": "Professional Services / Project-Based Business",
           "layer": "virtual"
         }
@@ -702,9 +702,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.35 Prepare marketing campaigns",
+          "processCatalogL3": "30.35.300 Create marketing material",
           "vertical": "Marketing",
           "layer": "oob"
         }
@@ -716,9 +716,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.04",
-          "processCatalogL3": "MK.04.01",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.35 Prepare marketing campaigns",
+          "processCatalogL3": "30.35.800 Create website for campaigns",
           "vertical": "Marketing",
           "layer": "oob"
         }
@@ -730,9 +730,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.35 Prepare marketing campaigns",
+          "processCatalogL3": "30.35.100 Identify campaign audiences",
           "vertical": "Marketing",
           "layer": "oob"
         }
@@ -744,9 +744,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.45 Manage marketing campaigns",
+          "processCatalogL3": "30.45.200 Run events",
           "vertical": "Marketing",
           "layer": "oob"
         }
@@ -758,9 +758,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.02",
-          "processCatalogL3": "MK.02.02",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.35 Prepare marketing campaigns",
+          "processCatalogL3": "30.35.700 Comply with customer data regulations",
           "vertical": "Marketing",
           "layer": "oob"
         }
@@ -772,9 +772,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.45 Manage marketing campaigns",
+          "processCatalogL3": "30.45.100 Run campaigns",
           "vertical": "Marketing",
           "layer": "oob"
         }
@@ -786,9 +786,9 @@
         "solution": "ContosoMarketing",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.04",
-          "processCatalogL3": "MK.04.01",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.35 Prepare marketing campaigns",
+          "processCatalogL3": "30.35.200 Develop campaign themes and messages",
           "vertical": "Marketing",
           "layer": "custom"
         }
@@ -800,9 +800,9 @@
         "solution": "ContosoMarketing",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.35 Prepare marketing campaigns",
+          "processCatalogL3": "30.35.700 Comply with customer data regulations",
           "vertical": "Marketing",
           "layer": "custom"
         }
@@ -814,9 +814,9 @@
         "solution": "msdynmkt_CustomerInsightsJourneys",
         "tags": {
           "d365Module": "Customer Insights - Journeys (Marketing)",
-          "processCatalogL1": "MK.00 Marketing",
-          "processCatalogL2": "MK.04",
-          "processCatalogL3": "MK.04.02",
+          "processCatalogL1": "30.00 Concept to market",
+          "processCatalogL2": "30.45 Manage marketing campaigns",
+          "processCatalogL3": "30.45.300 Track campaign expenses",
           "vertical": "Marketing",
           "layer": "virtual"
         }
@@ -830,9 +830,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.010 Manage the initial synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -844,9 +844,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.01",
-          "processCatalogL3": "CI.01.02",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.020 Manage the recurring synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -858,9 +858,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "50.00 Forecast to plan",
+          "processCatalogL2": "50.65 Analyze business performance",
+          "processCatalogL3": "50.65.525 Analyze and segment customers and markets",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -872,9 +872,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.03",
-          "processCatalogL3": "CI.03.01",
+          "processCatalogL1": "50.00 Forecast to plan",
+          "processCatalogL2": "50.65 Analyze business performance",
+          "processCatalogL3": "50.65.525 Analyze and segment customers and markets",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -886,9 +886,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.020 Manage the recurring synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -900,9 +900,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.04",
-          "processCatalogL3": "CI.04.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.020 Manage the recurring synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -914,9 +914,9 @@
         "solution": "ContosoCustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.60 Manage system compliance",
+          "processCatalogL3": "99.60.020 Establish compliance policies and procedures",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "custom"
         }
@@ -928,9 +928,9 @@
         "solution": "ContosoCustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.01",
-          "processCatalogL3": "CI.01.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.020 Manage the recurring synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "custom"
         }
@@ -942,9 +942,9 @@
         "solution": "ContosoCustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.030 Monitor data synchronization failures",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "custom"
         }
@@ -956,9 +956,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.01",
-          "processCatalogL3": "CI.01.02",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.020 Manage the recurring synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "virtual"
         }
@@ -970,9 +970,9 @@
         "solution": "msdynci_CustomerInsights",
         "tags": {
           "d365Module": "Customer Insights - Data (CDP)",
-          "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-          "processCatalogL2": "CI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.55 Manage data",
+          "processCatalogL3": "99.55.010 Manage the initial synchronization of data",
           "vertical": "Customer Data Platform / Unified Profiles",
           "layer": "oob"
         }
@@ -986,9 +986,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.02",
-          "processCatalogL3": "FI.02.01",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.10 Define accounting policies",
+          "processCatalogL3": "90.10.040 Develop chart of accounts strategy",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1000,9 +1000,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.10 Define accounting policies",
+          "processCatalogL3": "90.10.040 Develop chart of accounts strategy",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1014,9 +1014,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.03",
-          "processCatalogL3": "FI.03.01",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.50 Record financial transactions",
+          "processCatalogL3": "90.50.040 Record ledger entries",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1028,9 +1028,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.50 Manage accounts payable",
+          "processCatalogL3": "75.50.020 Process supplier invoices",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1042,9 +1042,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.04",
-          "processCatalogL3": "FI.04.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.30 Manage accounts receivable",
+          "processCatalogL3": "65.30.100 Process customer payments",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1056,9 +1056,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.30 Manage budgets",
+          "processCatalogL3": "90.30.050 Maintain budgets",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1070,9 +1070,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.02",
-          "processCatalogL3": "FI.02.01",
+          "processCatalogL1": "10.00 Acquire to dispose",
+          "processCatalogL2": "10.40 Manage active assets",
+          "processCatalogL3": "10.40.025 Maintain fixed assets",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1084,9 +1084,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.50 Record financial transactions",
+          "processCatalogL3": "90.50.090 Record tax commitments",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1098,9 +1098,9 @@
         "solution": "msdyn_FinanceAndOperations",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.03",
-          "processCatalogL3": "FI.03.01",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.10 Define accounting policies",
+          "processCatalogL3": "90.10.010 Develop company structure",
           "vertical": "Finance & Operations (Financials)",
           "layer": "virtual"
         }
@@ -1112,9 +1112,9 @@
         "solution": "ContosoFinance",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.50 Manage accounts payable",
+          "processCatalogL3": "75.50.020 Process supplier invoices",
           "vertical": "Finance & Operations (Financials)",
           "layer": "custom"
         }
@@ -1126,9 +1126,9 @@
         "solution": "ContosoFinance",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.02",
-          "processCatalogL3": "FI.02.01",
+          "processCatalogL1": "10.00 Acquire to dispose",
+          "processCatalogL2": "10.20 Acquire assets",
+          "processCatalogL3": "10.20.200 Budget fixed assets",
           "vertical": "Finance & Operations (Financials)",
           "layer": "custom"
         }
@@ -1140,9 +1140,9 @@
         "solution": "ContosoFinance",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.10 Define accounting policies",
+          "processCatalogL3": "90.10.035 Define posting policies",
           "vertical": "Finance & Operations (Financials)",
           "layer": "custom"
         }
@@ -1154,9 +1154,9 @@
         "solution": "ContosoFinance",
         "tags": {
           "d365Module": "Finance",
-          "processCatalogL1": "FI.00 Finance",
-          "processCatalogL2": "FI.03",
-          "processCatalogL3": "FI.03.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.50 Manage credit and collections",
+          "processCatalogL3": "65.50.080 Manage customer collections",
           "vertical": "Finance & Operations (Financials)",
           "layer": "custom"
         }
@@ -1170,9 +1170,9 @@
         "solution": "msdyn_SupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.20",
-          "processCatalogL3": "",
+          "processCatalogL1": "40.00 Design to retire",
+          "processCatalogL2": "40.10 Develop product strategy",
+          "processCatalogL3": "40.10.070 Develop product catalogs",
           "vertical": "Manufacturing & Distribution",
           "layer": "virtual"
         }
@@ -1184,9 +1184,9 @@
         "solution": "msdyn_SupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.20",
-          "processCatalogL3": "SC.22",
+          "processCatalogL1": "60.00 Inventory to deliver",
+          "processCatalogL2": "60.10 Manage warehouse operations",
+          "processCatalogL3": "60.10.010 Define warehouse processes",
           "vertical": "Manufacturing & Distribution",
           "layer": "virtual"
         }
@@ -1198,9 +1198,9 @@
         "solution": "msdyn_SupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.40 Procure goods and services",
+          "processCatalogL3": "75.40.030 Issue purchase orders",
           "vertical": "Manufacturing & Distribution",
           "layer": "virtual"
         }
@@ -1212,9 +1212,9 @@
         "solution": "msdyn_SupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.30",
-          "processCatalogL3": "SC.31",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.40 Procure goods and services",
+          "processCatalogL3": "75.40.030 Issue purchase orders",
           "vertical": "Manufacturing & Distribution",
           "layer": "virtual"
         }
@@ -1226,9 +1226,9 @@
         "solution": "msdyn_SupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.10",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.025 Enter sales orders",
           "vertical": "Manufacturing & Distribution",
           "layer": "virtual"
         }
@@ -1240,9 +1240,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.40",
-          "processCatalogL3": "SC.41",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.30 Manage supplier relationships",
+          "processCatalogL3": "75.30.030 Manage active suppliers",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1254,9 +1254,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.30",
-          "processCatalogL3": "",
+          "processCatalogL1": "75.00 Source to pay",
+          "processCatalogL2": "75.40 Procure goods and services",
+          "processCatalogL3": "75.40.010 Raise purchase requisitions",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1268,9 +1268,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.20",
-          "processCatalogL3": "SC.21",
+          "processCatalogL1": "60.00 Inventory to deliver",
+          "processCatalogL2": "60.20 Maintain inventory levels",
+          "processCatalogL3": "60.20.040 Count inventory",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1282,9 +1282,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.50",
-          "processCatalogL3": "",
+          "processCatalogL1": "60.00 Inventory to deliver",
+          "processCatalogL2": "60.40 Process outbound goods",
+          "processCatalogL3": "60.40.060 Load goods for shipping",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1296,9 +1296,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.20",
-          "processCatalogL3": "SC.22",
+          "processCatalogL1": "50.00 Forecast to plan",
+          "processCatalogL2": "50.25 Conduct sales and operations planning",
+          "processCatalogL3": "50.25.625 Forecast demand",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1310,9 +1310,9 @@
         "solution": "msdyn_SupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.20",
-          "processCatalogL3": "",
+          "processCatalogL1": "40.00 Design to retire",
+          "processCatalogL2": "40.10 Develop product strategy",
+          "processCatalogL3": "40.10.040 Define product attributes",
           "vertical": "Manufacturing & Distribution",
           "layer": "oob"
         }
@@ -1324,9 +1324,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "40.00 Design to retire",
+          "processCatalogL2": "40.50 Manage active products",
+          "processCatalogL3": "40.50.100 Manage bills of materials",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1338,9 +1338,9 @@
         "solution": "ContosoSupplyChain",
         "tags": {
           "d365Module": "Supply Chain Management",
-          "processCatalogL1": "SC.00 Supply Chain Management",
-          "processCatalogL2": "SC.40",
-          "processCatalogL3": "SC.41",
+          "processCatalogL1": "70.00 Plan to produce",
+          "processCatalogL2": "70.30 Run production operations",
+          "processCatalogL3": "70.30.010 Start production",
           "vertical": "Manufacturing & Distribution",
           "layer": "custom"
         }
@@ -1354,9 +1354,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.02",
-          "processCatalogL3": "CO.02.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.300 Manage store operations",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "virtual"
         }
@@ -1368,9 +1368,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.05 Develop sales policies",
+          "processCatalogL3": "65.05.020 Manage sales channels",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "oob"
         }
@@ -1382,9 +1382,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.300 Manage store operations",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "oob"
         }
@@ -1396,9 +1396,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.04",
-          "processCatalogL3": "CO.04.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.30 Manage accounts receivable",
+          "processCatalogL3": "65.30.100 Process customer payments",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "oob"
         }
@@ -1410,9 +1410,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.300 Manage store operations",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "virtual"
         }
@@ -1424,9 +1424,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "40.00 Design to retire",
+          "processCatalogL2": "40.50 Manage active products",
+          "processCatalogL3": "40.50.400 Manage product pricing",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "oob"
         }
@@ -1438,9 +1438,9 @@
         "solution": "msdyn_Commerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.03",
-          "processCatalogL3": "CO.03.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.30 Manage accounts receivable",
+          "processCatalogL3": "65.30.100 Process customer payments",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "oob"
         }
@@ -1452,9 +1452,9 @@
         "solution": "ContosoCommerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.025 Enter sales orders",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "custom"
         }
@@ -1466,9 +1466,9 @@
         "solution": "ContosoCommerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.04",
-          "processCatalogL3": "CO.04.01",
+          "processCatalogL1": "65.00 Order to cash",
+          "processCatalogL2": "65.20 Manage sales orders",
+          "processCatalogL3": "65.20.025 Enter sales orders",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "custom"
         }
@@ -1480,9 +1480,9 @@
         "solution": "ContosoCommerce",
         "tags": {
           "d365Module": "Commerce",
-          "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-          "processCatalogL2": "CO.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "40.00 Design to retire",
+          "processCatalogL2": "40.50 Manage active products",
+          "processCatalogL3": "40.50.400 Manage product pricing",
           "vertical": "Retail / Omnichannel Commerce",
           "layer": "custom"
         }
@@ -1496,9 +1496,9 @@
         "solution": "msdynhr_HumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.05 Develop people strategy",
+          "processCatalogL3": "55.05.010 Define organizational structure",
           "vertical": "Human Resources / Workforce Management",
           "layer": "oob"
         }
@@ -1510,9 +1510,9 @@
         "solution": "msdynhr_HumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.03",
-          "processCatalogL3": "HR.03.01",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.05 Develop people strategy",
+          "processCatalogL3": "55.05.010 Define organizational structure",
           "vertical": "Human Resources / Workforce Management",
           "layer": "oob"
         }
@@ -1524,9 +1524,9 @@
         "solution": "msdynhr_HumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.01",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.70 Manage compensation and benefits",
+          "processCatalogL3": "55.70.070 Manage compensation changes",
           "vertical": "Human Resources / Workforce Management",
           "layer": "oob"
         }
@@ -1538,9 +1538,9 @@
         "solution": "msdynhr_HumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.03",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.50 Manage time and attendance",
+          "processCatalogL3": "55.50.010 Develop leave and absence policies",
           "vertical": "Human Resources / Workforce Management",
           "layer": "oob"
         }
@@ -1552,9 +1552,9 @@
         "solution": "msdynhr_HumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.05",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.10 Recruit and onboard talent",
+          "processCatalogL3": "55.10.070 Onboard new employees",
           "vertical": "Human Resources / Workforce Management",
           "layer": "oob"
         }
@@ -1566,9 +1566,9 @@
         "solution": "ContosoHumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.02",
-          "processCatalogL3": "HR.02.01",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.10 Recruit and onboard talent",
+          "processCatalogL3": "55.10.070 Onboard new employees",
           "vertical": "Human Resources / Workforce Management",
           "layer": "custom"
         }
@@ -1580,9 +1580,9 @@
         "solution": "ContosoHumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.40 Manage performance and growth",
+          "processCatalogL3": "55.40.080 Asses worker performance",
           "vertical": "Human Resources / Workforce Management",
           "layer": "custom"
         }
@@ -1594,9 +1594,9 @@
         "solution": "ContosoHumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.02",
-          "processCatalogL3": "HR.02.02",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.40 Manage performance and growth",
+          "processCatalogL3": "55.40.055 Track skills and competencies",
           "vertical": "Human Resources / Workforce Management",
           "layer": "custom"
         }
@@ -1608,9 +1608,9 @@
         "solution": "ContosoHumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.40 Manage performance and growth",
+          "processCatalogL3": "55.40.055 Track skills and competencies",
           "vertical": "Human Resources / Workforce Management",
           "layer": "custom"
         }
@@ -1622,9 +1622,9 @@
         "solution": "msdynhr_HumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.03",
-          "processCatalogL3": "HR.03.01",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.70 Manage compensation and benefits",
+          "processCatalogL3": "55.70.020 Define benefit offerings",
           "vertical": "Human Resources / Workforce Management",
           "layer": "oob"
         }
@@ -1636,9 +1636,9 @@
         "solution": "ContosoHumanResources",
         "tags": {
           "d365Module": "Human Resources",
-          "processCatalogL1": "HR.00 Human Resources",
-          "processCatalogL2": "HR.01",
-          "processCatalogL3": "",
+          "processCatalogL1": "55.00 Hire to retire",
+          "processCatalogL2": "55.30 Manage workplace compliance",
+          "processCatalogL3": "55.30.400 Manage cases and requests",
           "vertical": "Human Resources / Workforce Management",
           "layer": "custom"
         }
@@ -1652,9 +1652,9 @@
         "solution": "msdyn_OmnichannelBase",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.20",
-          "processCatalogL3": "CC.22",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "",
+          "processCatalogL3": "",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -1666,8 +1666,8 @@
         "solution": "msdyn_OmnichannelBase",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.40",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "",
           "processCatalogL3": "",
           "vertical": "Customer Service",
           "layer": "oob"
@@ -1680,9 +1680,9 @@
         "solution": "msdyn_OmnichannelBase",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.20",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.20 Define customer and employee service operations",
+          "processCatalogL3": "20.20.010 Define agent skill sets",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -1694,9 +1694,9 @@
         "solution": "msdyn_OmnichannelBase",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.40",
-          "processCatalogL3": "CC.41",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.20 Define customer and employee service operations",
+          "processCatalogL3": "20.20.030 Define routing rules",
           "vertical": "Customer Service",
           "layer": "oob"
         }
@@ -1708,9 +1708,9 @@
         "solution": "ContosoContactCenter",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.20",
-          "processCatalogL3": "CC.22",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.20 Define customer and employee service operations",
+          "processCatalogL3": "",
           "vertical": "Customer Service",
           "layer": "custom"
         }
@@ -1722,9 +1722,9 @@
         "solution": "ContosoContactCenter",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.40",
-          "processCatalogL3": "",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.60 Analyze case performance",
+          "processCatalogL3": "20.60.030 Review call center performance",
           "vertical": "Customer Service",
           "layer": "custom"
         }
@@ -1736,9 +1736,9 @@
         "solution": "ContosoContactCenter",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.30",
-          "processCatalogL3": "CC.31",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "20.40 Manage and work on cases",
+          "processCatalogL3": "20.40.010 Engage in conversations with customers",
           "vertical": "Customer Service",
           "layer": "custom"
         }
@@ -1750,8 +1750,8 @@
         "solution": "msdyn_OmnichannelBase",
         "tags": {
           "d365Module": "Contact Center / Omnichannel",
-          "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-          "processCatalogL2": "CC.20",
+          "processCatalogL1": "20.00 Case to resolution",
+          "processCatalogL2": "",
           "processCatalogL3": "",
           "vertical": "Customer Service",
           "layer": "virtual"
@@ -1766,9 +1766,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.25 Manage system access and security",
+          "processCatalogL3": "99.25.040 Onboard new users",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1780,9 +1780,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.02",
-          "processCatalogL3": "PL.02.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.20 Administer system features",
+          "processCatalogL3": "99.20.130 Manage organizational structure",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1794,9 +1794,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.01 Implement solutions",
+          "processCatalogL3": "99.01.100 Implement cloud solutions",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1808,9 +1808,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.03",
-          "processCatalogL3": "PL.03.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.01 Implement solutions",
+          "processCatalogL3": "99.01.310 Implement application lifecycle management (ALM) strategies",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1822,9 +1822,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.20 Administer system features",
+          "processCatalogL3": "99.20.010 Configure and administer workflows",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1836,9 +1836,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.04",
-          "processCatalogL3": "PL.04.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.01 Implement solutions",
+          "processCatalogL3": "99.01.100 Implement cloud solutions",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1850,9 +1850,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.01 Implement solutions",
+          "processCatalogL3": "99.01.110 Drive app value",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1864,9 +1864,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.01",
-          "processCatalogL3": "PL.01.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.01 Implement solutions",
+          "processCatalogL3": "99.01.350 Define extensions approach",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1878,9 +1878,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.01 Implement solutions",
+          "processCatalogL3": "99.01.350 Define extensions approach",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1892,9 +1892,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.01",
-          "processCatalogL3": "PL.01.02",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.25 Manage system access and security",
+          "processCatalogL3": "99.25.050 Manage data security",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1906,9 +1906,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.25 Manage system access and security",
+          "processCatalogL3": "99.25.050 Manage data security",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "oob"
         }
@@ -1920,9 +1920,9 @@
         "solution": "ContosoPlatformGovernance",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.04",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.60 Manage system compliance",
+          "processCatalogL3": "99.60.020 Establish compliance policies and procedures",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "custom"
         }
@@ -1934,9 +1934,9 @@
         "solution": "ContosoPlatformGovernance",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.03",
-          "processCatalogL3": "PL.03.01",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.60 Manage system compliance",
+          "processCatalogL3": "99.60.050 Monitor compliance",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "custom"
         }
@@ -1948,9 +1948,9 @@
         "solution": "ContosoPlatformGovernance",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.02",
-          "processCatalogL3": "",
+          "processCatalogL1": "99.00 Administer to operate",
+          "processCatalogL2": "99.60 Manage system compliance",
+          "processCatalogL3": "99.60.020 Establish compliance policies and procedures",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "custom"
         }
@@ -1962,9 +1962,9 @@
         "solution": "CenterofExcellenceCoreComponents",
         "tags": {
           "d365Module": "Platform & Governance (shared core)",
-          "processCatalogL1": "PL.00 Platform & Governance",
-          "processCatalogL2": "PL.04",
-          "processCatalogL3": "PL.04.01",
+          "processCatalogL1": "90.00 Record to report",
+          "processCatalogL2": "90.10 Define accounting policies",
+          "processCatalogL3": "90.10.035 Define posting policies",
           "vertical": "Cross-cutting Platform / Center of Excellence",
           "layer": "virtual"
         }
@@ -1979,9 +1979,9 @@
       "solution": "ContosoSales",
       "tags": {
         "d365Module": "Sales",
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.01",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process",
         "vertical": "Cross-industry (B2B enterprise sales)",
         "layer": "oob_customized"
       }
@@ -1993,9 +1993,9 @@
       "solution": "ContosoSales",
       "tags": {
         "d365Module": "Sales",
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity",
         "vertical": "Cross-industry (B2B enterprise sales)",
         "layer": "oob_customized"
       }
@@ -2007,9 +2007,9 @@
       "solution": "ContosoSales",
       "tags": {
         "d365Module": "Sales",
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders",
         "vertical": "Cross-industry (B2B enterprise sales)",
         "layer": "oob_customized"
       }
@@ -2021,9 +2021,9 @@
       "solution": "ContosoSales",
       "tags": {
         "d365Module": "Sales",
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.02",
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes",
         "vertical": "Cross-industry (B2B enterprise sales)",
         "layer": "oob_customized"
       }
@@ -2035,9 +2035,9 @@
       "solution": "ContosoCustomerService",
       "tags": {
         "d365Module": "Customer Service",
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.01",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually",
         "vertical": "Customer Service",
         "layer": "oob_customized"
       }
@@ -2049,9 +2049,9 @@
       "solution": "ContosoCustomerService",
       "tags": {
         "d365Module": "Customer Service",
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.02",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles",
         "vertical": "Customer Service",
         "layer": "oob_customized"
       }
@@ -2063,9 +2063,9 @@
       "solution": "ContosoCustomerService",
       "tags": {
         "d365Module": "Customer Service",
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": "",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns",
         "vertical": "Customer Service",
         "layer": "oob_customized"
       }
@@ -2077,9 +2077,9 @@
       "solution": "ContosoFieldService",
       "tags": {
         "d365Module": "Field Service",
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests",
         "vertical": "Field Service",
         "layer": "oob_customized"
       }
@@ -2091,9 +2091,9 @@
       "solution": "ContosoFieldService",
       "tags": {
         "d365Module": "Field Service",
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": "",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.300 Develop service catalogs",
         "vertical": "Field Service",
         "layer": "oob_customized"
       }
@@ -2105,9 +2105,9 @@
       "solution": "ContosoFieldService",
       "tags": {
         "d365Module": "Field Service",
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": "FS.02.01",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources",
         "vertical": "Field Service",
         "layer": "oob_customized"
       }
@@ -2119,9 +2119,9 @@
       "solution": "ContosoFieldService",
       "tags": {
         "d365Module": "Field Service",
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.600 Manage service assets",
         "vertical": "Field Service",
         "layer": "oob_customized"
       }
@@ -2133,9 +2133,9 @@
       "solution": "ContosoProjectOperations",
       "tags": {
         "d365Module": "Field Service",
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.02",
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time",
         "vertical": "Field Service",
         "layer": "oob_customized"
       }
@@ -2147,9 +2147,9 @@
       "solution": "ContosoProjectOperations",
       "tags": {
         "d365Module": "Project Operations",
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.01",
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope",
         "vertical": "Professional Services / Project-Based Business",
         "layer": "oob_customized"
       }
@@ -2161,9 +2161,9 @@
       "solution": "ContosoProjectOperations",
       "tags": {
         "d365Module": "Project Operations",
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.020 Track project expenses",
         "vertical": "Professional Services / Project-Based Business",
         "layer": "oob_customized"
       }
@@ -2175,9 +2175,9 @@
       "solution": "ContosoMarketing",
       "tags": {
         "d365Module": "Customer Insights - Journeys (Marketing)",
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01",
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets",
         "vertical": "Marketing",
         "layer": "oob_customized"
       }
@@ -2189,9 +2189,9 @@
       "solution": "ContosoMarketing",
       "tags": {
         "d365Module": "Customer Insights - Journeys (Marketing)",
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets",
         "vertical": "Marketing",
         "layer": "oob_customized"
       }
@@ -2203,9 +2203,9 @@
       "solution": "ContosoMarketing",
       "tags": {
         "d365Module": "Customer Insights - Journeys (Marketing)",
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.02",
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets",
         "vertical": "Marketing",
         "layer": "oob_customized"
       }
@@ -2217,9 +2217,9 @@
       "solution": "ContosoMarketing",
       "tags": {
         "d365Module": "Customer Insights - Journeys (Marketing)",
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts",
         "vertical": "Marketing",
         "layer": "oob_customized"
       }
@@ -2231,9 +2231,9 @@
       "solution": "ContosoMarketing",
       "tags": {
         "d365Module": "Customer Insights - Journeys (Marketing)",
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01",
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": "",
         "vertical": "Marketing",
         "layer": "oob_customized"
       }
@@ -2245,9 +2245,9 @@
       "solution": "ContosoCustomerInsights",
       "tags": {
         "d365Module": "Customer Insights - Data (CDP)",
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data",
         "vertical": "Customer Data Platform / Unified Profiles",
         "layer": "oob_customized"
       }
@@ -2259,9 +2259,9 @@
       "solution": "ContosoCustomerInsights",
       "tags": {
         "d365Module": "Customer Insights - Data (CDP)",
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": "",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.10 Define business continuity plan",
+        "processCatalogL3": "99.10.010 Define business continuity objectives",
         "vertical": "Customer Data Platform / Unified Profiles",
         "layer": "oob_customized"
       }
@@ -2273,9 +2273,9 @@
       "solution": "ContosoCustomerInsights",
       "tags": {
         "d365Module": "Customer Insights - Data (CDP)",
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": "CI.02.01",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "",
         "vertical": "Customer Data Platform / Unified Profiles",
         "layer": "oob_customized"
       }
@@ -2287,9 +2287,9 @@
       "solution": "ContosoFinance",
       "tags": {
         "d365Module": "Finance",
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts",
         "vertical": "Finance & Operations (Financials)",
         "layer": "oob_customized"
       }
@@ -2301,9 +2301,9 @@
       "solution": "ContosoFinance",
       "tags": {
         "d365Module": "Finance",
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": "FI.04.01",
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": "",
         "vertical": "Finance & Operations (Financials)",
         "layer": "oob_customized"
       }
@@ -2315,9 +2315,9 @@
       "solution": "ContosoCommerce",
       "tags": {
         "d365Module": "Commerce",
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.01",
-        "processCatalogL3": "CO.01.01",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels",
         "vertical": "Retail / Omnichannel Commerce",
         "layer": "oob_customized"
       }
@@ -2329,9 +2329,9 @@
       "solution": "ContosoCommerce",
       "tags": {
         "d365Module": "Commerce",
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels",
         "vertical": "Retail / Omnichannel Commerce",
         "layer": "oob_customized"
       }
@@ -2343,9 +2343,9 @@
       "solution": "ContosoCommerce",
       "tags": {
         "d365Module": "Commerce",
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03",
-        "processCatalogL3": "CO.03.01",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels",
         "vertical": "Retail / Omnichannel Commerce",
         "layer": "oob_customized"
       }
@@ -2357,9 +2357,9 @@
       "solution": "ContosoCommerce",
       "tags": {
         "d365Module": "Commerce",
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "CO.02.01",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "",
         "vertical": "Retail / Omnichannel Commerce",
         "layer": "oob_customized"
       }
@@ -2371,9 +2371,9 @@
       "solution": "ContosoCommerce",
       "tags": {
         "d365Module": "Commerce",
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": "",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.010 Assess customer credit risk",
         "vertical": "Retail / Omnichannel Commerce",
         "layer": "oob_customized"
       }
@@ -2385,9 +2385,9 @@
       "solution": "ContosoHumanResources",
       "tags": {
         "d365Module": "Human Resources",
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01",
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": "",
         "vertical": "Human Resources / Workforce Management",
         "layer": "oob_customized"
       }
@@ -2399,9 +2399,9 @@
       "solution": "ContosoHumanResources",
       "tags": {
         "d365Module": "Human Resources",
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "",
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions",
         "vertical": "Human Resources / Workforce Management",
         "layer": "oob_customized"
       }
@@ -2413,9 +2413,9 @@
       "solution": "ContosoHumanResources",
       "tags": {
         "d365Module": "Human Resources",
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02",
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions",
         "vertical": "Human Resources / Workforce Management",
         "layer": "oob_customized"
       }
@@ -2427,9 +2427,9 @@
       "solution": "ContosoHumanResources",
       "tags": {
         "d365Module": "Human Resources",
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": "HR.04.01",
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off",
         "vertical": "Human Resources / Workforce Management",
         "layer": "oob_customized"
       }
@@ -2441,9 +2441,9 @@
       "solution": "ContosoContactCenter",
       "tags": {
         "d365Module": "Contact Center / Omnichannel",
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.21",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules",
         "vertical": "Customer Service",
         "layer": "oob_customized"
       }
@@ -2455,9 +2455,9 @@
       "solution": "ContosoContactCenter",
       "tags": {
         "d365Module": "Contact Center / Omnichannel",
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "",
         "vertical": "Customer Service",
         "layer": "oob_customized"
       }
@@ -2469,9 +2469,9 @@
       "solution": "ContosoContactCenter",
       "tags": {
         "d365Module": "Contact Center / Omnichannel",
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": "",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules",
         "vertical": "Customer Service",
         "layer": "oob_customized"
       }
@@ -2483,9 +2483,9 @@
       "solution": "ContosoPlatformGovernance",
       "tags": {
         "d365Module": "Platform & Governance (shared core)",
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.02",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.040 Onboard new users",
         "vertical": "Cross-cutting Platform / Center of Excellence",
         "layer": "oob_customized"
       }
@@ -2497,9 +2497,9 @@
       "solution": "ContosoPlatformGovernance",
       "tags": {
         "d365Module": "Platform & Governance (shared core)",
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": "PL.02.01",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.120 Configure and manage portals",
         "vertical": "Cross-cutting Platform / Center of Excellence",
         "layer": "oob_customized"
       }

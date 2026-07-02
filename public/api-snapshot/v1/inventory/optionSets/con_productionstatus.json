@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_productionstatus","displayName":"Production Status"},"metadata":{"type":"optionSets","id":"con_productionstatus"}}
+{"item":{"tags":{"processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSupplyChain","schemaName":"con_productionstatus","displayName":"Production Status"},"metadata":{"type":"optionSets","id":"con_productionstatus"}}

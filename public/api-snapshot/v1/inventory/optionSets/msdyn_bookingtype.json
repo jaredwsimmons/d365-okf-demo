@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_FieldService","schemaName":"msdyn_bookingtype","displayName":"Booking Type"},"metadata":{"type":"optionSets","id":"msdyn_bookingtype"}}
+{"item":{"tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_FieldService","schemaName":"msdyn_bookingtype","displayName":"Booking Type"},"metadata":{"type":"optionSets","id":"msdyn_bookingtype"}}

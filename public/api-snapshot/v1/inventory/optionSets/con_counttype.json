@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_counttype","displayName":"Inventory Count Type"},"metadata":{"type":"optionSets","id":"con_counttype"}}
+{"item":{"tags":{"processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"60.20 Maintain inventory levels","processCatalogL3":"60.20.040 Count inventory"},"solution":"ContosoSupplyChain","schemaName":"con_counttype","displayName":"Inventory Count Type"},"metadata":{"type":"optionSets","id":"con_counttype"}}

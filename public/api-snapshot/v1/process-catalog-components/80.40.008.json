@@ -1,0 +1,1 @@
+{"code":"80.40.008","tagField":"processCatalogL3","total":1,"components":[{"name":"ProjectHealthReviewAuditPlugin","type":"Plugin","id":"plg-projecthealthreviewauditplugin","solution":"ContosoProjectOperations","tags":{"processCatalogL1":"80.00 Project to profit","processCatalogL2":"80.40 Manage project delivery","processCatalogL3":"80.40.008 Control project scope"}}]}

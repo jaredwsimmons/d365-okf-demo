@@ -1,1 +1,1 @@
-{"item":{"name":"Field Service Summary","tags":{},"solution":"ContosoFieldService"},"metadata":{"type":"reports","id":"Field Service Summary"}}
+{"item":{"name":"Field Service Summary","tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"95.05 Develop service strategy","processCatalogL3":"95.05.100 Develop service pricing strategy"},"solution":"ContosoFieldService"},"metadata":{"type":"reports","id":"Field Service Summary"}}

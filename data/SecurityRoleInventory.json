@@ -5,7 +5,10 @@
       "name": "Salesperson",
       "solution": "msdyn_SalesPro",
       "tags": {
-        "persona": "Account Executive / Sales Rep"
+        "persona": "Account Executive / Sales Rep",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -13,7 +16,10 @@
       "name": "Sales Manager",
       "solution": "msdyn_SalesPro",
       "tags": {
-        "persona": "Sales Manager"
+        "persona": "Sales Manager",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -21,7 +27,10 @@
       "name": "Con Deal Desk Approver",
       "solution": "ContosoSales",
       "tags": {
-        "persona": "Deal Desk / Finance Approver"
+        "persona": "Deal Desk / Finance Approver",
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": ""
       }
     },
     {
@@ -29,7 +38,10 @@
       "name": "Con Sales Operations Admin",
       "solution": "ContosoSales",
       "tags": {
-        "persona": "Sales Ops Administrator"
+        "persona": "Sales Ops Administrator",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -37,7 +49,10 @@
       "name": "Customer Service Representative",
       "solution": "msdyn_CustomerService",
       "tags": {
-        "persona": "Tier-1 Support Agent"
+        "persona": "Tier-1 Support Agent",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
       }
     },
     {
@@ -45,7 +60,10 @@
       "name": "Customer Service Manager",
       "solution": "msdyn_CustomerService",
       "tags": {
-        "persona": "Support Team Lead / Manager"
+        "persona": "Support Team Lead / Manager",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.650 Coordinate service work with customer"
       }
     },
     {
@@ -53,7 +71,10 @@
       "name": "Knowledge Manager",
       "solution": "msdyn_CustomerService",
       "tags": {
-        "persona": "KB Author / Curator"
+        "persona": "KB Author / Curator",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.030 Maintain knowledge base articles"
       }
     },
     {
@@ -61,7 +82,10 @@
       "name": "Con - CS Escalation Handler",
       "solution": "ContosoCustomerService",
       "tags": {
-        "persona": "Tier-2/Tier-3 Escalation Specialist"
+        "persona": "Tier-2/Tier-3 Escalation Specialist",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": ""
       }
     },
     {
@@ -69,7 +93,10 @@
       "name": "Field Service - Dispatcher",
       "solution": "msdyn_FieldService",
       "tags": {
-        "persona": "Dispatcher"
+        "persona": "Dispatcher",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -77,7 +104,10 @@
       "name": "Field Service - Resource",
       "solution": "msdyn_FieldService",
       "tags": {
-        "persona": "Field Technician"
+        "persona": "Field Technician",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
       }
     },
     {
@@ -85,7 +115,10 @@
       "name": "Field Service - Administrator",
       "solution": "msdyn_FieldService",
       "tags": {
-        "persona": "Field Service Admin"
+        "persona": "Field Service Admin",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
       }
     },
     {
@@ -93,7 +126,10 @@
       "name": "Contoso Safety Compliance Officer",
       "solution": "ContosoFieldService",
       "tags": {
-        "persona": "EHS Compliance Officer"
+        "persona": "EHS Compliance Officer",
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.020 Document safety protocols"
       }
     },
     {
@@ -101,7 +137,10 @@
       "name": "Project Manager",
       "solution": "msdyn_ProjectServiceCore",
       "tags": {
-        "persona": "Delivery / Engagement Manager"
+        "persona": "Delivery / Engagement Manager",
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
       }
     },
     {
@@ -109,7 +148,10 @@
       "name": "Team Member - Project Operations",
       "solution": "msdyn_ProjectServiceCore",
       "tags": {
-        "persona": "Consultant / Billable Resource"
+        "persona": "Consultant / Billable Resource",
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
       }
     },
     {
@@ -117,7 +159,10 @@
       "name": "con_Resourcing Desk Coordinator",
       "solution": "ContosoProjectOperations",
       "tags": {
-        "persona": "Resource Manager / Staffing"
+        "persona": "Resource Manager / Staffing",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -125,7 +170,10 @@
       "name": "con_PMO Delivery Governance",
       "solution": "ContosoProjectOperations",
       "tags": {
-        "persona": "PMO / Delivery Director"
+        "persona": "PMO / Delivery Director",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -133,7 +181,10 @@
       "name": "Marketing Manager",
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "tags": {
-        "persona": "Campaign owner / marketing lead"
+        "persona": "Campaign owner / marketing lead",
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -141,7 +192,10 @@
       "name": "Marketing Services User",
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "tags": {
-        "persona": "Marketing operations user"
+        "persona": "Marketing operations user",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
       }
     },
     {
@@ -149,7 +203,10 @@
       "name": "Contoso Campaign Approver",
       "solution": "ContosoMarketing",
       "tags": {
-        "persona": "Marketing director approving briefs and budgets"
+        "persona": "Marketing director approving briefs and budgets",
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -157,7 +214,10 @@
       "name": "Contoso Consent Steward",
       "solution": "ContosoMarketing",
       "tags": {
-        "persona": "Privacy/compliance officer managing consent center"
+        "persona": "Privacy/compliance officer managing consent center",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -165,7 +225,10 @@
       "name": "CI Data Administrator",
       "solution": "msdynci_CustomerInsights",
       "tags": {
-        "persona": "CDP Platform Admin"
+        "persona": "CDP Platform Admin",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -173,7 +236,10 @@
       "name": "CI Data Contributor",
       "solution": "msdynci_CustomerInsights",
       "tags": {
-        "persona": "Data Engineer / Analyst"
+        "persona": "Data Engineer / Analyst",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -181,7 +247,10 @@
       "name": "Contoso Segment Activator",
       "solution": "ContosoCustomerInsights",
       "tags": {
-        "persona": "Marketing Operations"
+        "persona": "Marketing Operations",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -189,7 +258,10 @@
       "name": "Accounts Payable Coordinator",
       "solution": "ContosoFinance",
       "tags": {
-        "persona": "AP Clerk"
+        "persona": "AP Clerk",
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": ""
       }
     },
     {
@@ -197,7 +269,10 @@
       "name": "Accounts Receivable Coordinator",
       "solution": "ContosoFinance",
       "tags": {
-        "persona": "AR/Collections Clerk"
+        "persona": "AR/Collections Clerk",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": ""
       }
     },
     {
@@ -205,7 +280,10 @@
       "name": "Financial Controller",
       "solution": "ContosoFinance",
       "tags": {
-        "persona": "Controller"
+        "persona": "Controller",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -213,7 +291,10 @@
       "name": "Finance and Operations Integration User",
       "solution": "msdyn_FinanceAndOperations",
       "tags": {
-        "persona": "Dual-Write Service Account"
+        "persona": "Dual-Write Service Account",
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -221,7 +302,10 @@
       "name": "Procurement Manager",
       "solution": "ContosoSupplyChain",
       "tags": {
-        "persona": "Procurement Manager"
+        "persona": "Procurement Manager",
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
       }
     },
     {
@@ -229,7 +313,10 @@
       "name": "Warehouse Worker",
       "solution": "ContosoSupplyChain",
       "tags": {
-        "persona": "Warehouse Operative"
+        "persona": "Warehouse Operative",
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -237,7 +324,10 @@
       "name": "Supply Chain Planner",
       "solution": "ContosoSupplyChain",
       "tags": {
-        "persona": "Demand Planner"
+        "persona": "Demand Planner",
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -245,7 +335,10 @@
       "name": "System Administrator",
       "solution": "msdyn_SupplyChain",
       "tags": {
-        "persona": "CoE Admin"
+        "persona": "CoE Admin",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.040 Configure and monitor system generated numbers"
       }
     },
     {
@@ -253,7 +346,10 @@
       "name": "Retail Store Manager",
       "solution": "ContosoCommerce",
       "tags": {
-        "persona": "Store Manager"
+        "persona": "Store Manager",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -261,7 +357,10 @@
       "name": "Store Associate (POS)",
       "solution": "ContosoCommerce",
       "tags": {
-        "persona": "Cashier / Sales Associate"
+        "persona": "Cashier / Sales Associate",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -269,7 +368,10 @@
       "name": "Retail Operations Manager",
       "solution": "msdyn_Commerce",
       "tags": {
-        "persona": "Regional Retail Operations"
+        "persona": "Regional Retail Operations",
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -277,7 +379,10 @@
       "name": "Commerce System Administrator",
       "solution": "msdyn_Commerce",
       "tags": {
-        "persona": "Commerce Platform Admin"
+        "persona": "Commerce Platform Admin",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.040 Configure and monitor system generated numbers"
       }
     },
     {
@@ -285,7 +390,10 @@
       "name": "Human Resources Manager",
       "solution": "msdynhr_HumanResources",
       "tags": {
-        "persona": "HR Manager / HRBP"
+        "persona": "HR Manager / HRBP",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -293,7 +401,10 @@
       "name": "Human Resources Self Service",
       "solution": "msdynhr_HumanResources",
       "tags": {
-        "persona": "Employee (Self-Service)"
+        "persona": "Employee (Self-Service)",
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
       }
     },
     {
@@ -301,7 +412,10 @@
       "name": "Contoso HR Business Partner",
       "solution": "ContosoHumanResources",
       "tags": {
-        "persona": "HR Business Partner"
+        "persona": "HR Business Partner",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -309,7 +423,10 @@
       "name": "Contoso Employee Relations Specialist",
       "solution": "ContosoHumanResources",
       "tags": {
-        "persona": "ER / Disciplinary Case Handler"
+        "persona": "ER / Disciplinary Case Handler",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -317,7 +434,10 @@
       "name": "Omnichannel agent",
       "solution": "msdyn_OmnichannelBase",
       "tags": {
-        "persona": "Contact Center Agent"
+        "persona": "Contact Center Agent",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -325,7 +445,10 @@
       "name": "Omnichannel supervisor",
       "solution": "msdyn_OmnichannelBase",
       "tags": {
-        "persona": "Contact Center Supervisor"
+        "persona": "Contact Center Supervisor",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -333,7 +456,10 @@
       "name": "Omnichannel administrator",
       "solution": "msdyn_OmnichannelBase",
       "tags": {
-        "persona": "Contact Center Administrator"
+        "persona": "Contact Center Administrator",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -341,7 +467,10 @@
       "name": "Contoso CC Quality Analyst",
       "solution": "ContosoContactCenter",
       "tags": {
-        "persona": "Quality / Calibration Analyst"
+        "persona": "Quality / Calibration Analyst",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -349,7 +478,10 @@
       "name": "Environment Maker",
       "solution": "CenterofExcellenceCoreComponents",
       "tags": {
-        "persona": "Citizen / Fusion Maker"
+        "persona": "Citizen / Fusion Maker",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -357,7 +489,10 @@
       "name": "Con - CoE Data Protection Officer",
       "solution": "ContosoPlatformGovernance",
       "tags": {
-        "persona": "DPO / Data Governance Lead"
+        "persona": "DPO / Data Governance Lead",
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -365,7 +500,10 @@
       "name": "Con - Governance Auditor (Read-Only)",
       "solution": "ContosoPlatformGovernance",
       "tags": {
-        "persona": "Internal Audit / Compliance Reviewer"
+        "persona": "Internal Audit / Compliance Reviewer",
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.020 Review audit logs"
       }
     }
   ]

@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_shipmentstatus","displayName":"Shipment Status"},"metadata":{"type":"optionSets","id":"con_shipmentstatus"}}
+{"item":{"tags":{"processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"60.40 Process outbound goods","processCatalogL3":"60.40.060 Load goods for shipping"},"solution":"ContosoSupplyChain","schemaName":"con_shipmentstatus","displayName":"Shipment Status"},"metadata":{"type":"optionSets","id":"con_shipmentstatus"}}

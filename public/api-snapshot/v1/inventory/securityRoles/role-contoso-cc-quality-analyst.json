@@ -1,1 +1,1 @@
-{"item":{"id":"role-contoso-cc-quality-analyst","name":"Contoso CC Quality Analyst","tags":{"persona":"Quality / Calibration Analyst"},"solution":"ContosoContactCenter"},"metadata":{"type":"securityRoles","id":"role-contoso-cc-quality-analyst"}}
+{"item":{"id":"role-contoso-cc-quality-analyst","name":"Contoso CC Quality Analyst","tags":{"persona":"Quality / Calibration Analyst","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoContactCenter"},"metadata":{"type":"securityRoles","id":"role-contoso-cc-quality-analyst"}}

@@ -1,1 +1,1 @@
-{"item":{"id":"role-omnichannel-supervisor","name":"Omnichannel supervisor","tags":{"persona":"Contact Center Supervisor"},"solution":"msdyn_OmnichannelBase"},"metadata":{"type":"securityRoles","id":"role-omnichannel-supervisor"}}
+{"item":{"id":"role-omnichannel-supervisor","name":"Omnichannel supervisor","tags":{"persona":"Contact Center Supervisor","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_OmnichannelBase"},"metadata":{"type":"securityRoles","id":"role-omnichannel-supervisor"}}

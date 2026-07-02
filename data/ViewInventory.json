@@ -6,9 +6,9 @@
       "solution": "ContosoSales",
       "entity": "lead",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
       }
     },
     {
@@ -17,9 +17,9 @@
       "solution": "ContosoSales",
       "entity": "lead",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
       }
     },
     {
@@ -28,9 +28,9 @@
       "solution": "ContosoSales",
       "entity": "lead",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
       }
     },
     {
@@ -39,9 +39,9 @@
       "solution": "ContosoSales",
       "entity": "opportunity",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
       }
     },
     {
@@ -50,9 +50,9 @@
       "solution": "ContosoSales",
       "entity": "opportunity",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
       }
     },
     {
@@ -61,9 +61,9 @@
       "solution": "ContosoSales",
       "entity": "opportunity",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
       }
     },
     {
@@ -72,9 +72,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "opportunityproduct",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.02"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
       }
     },
     {
@@ -83,9 +83,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "opportunityproduct",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.02"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
       }
     },
     {
@@ -94,9 +94,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "quote",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.55 Estimate and quote sales",
+        "processCatalogL3": "85.55.200 Define sales quotations"
       }
     },
     {
@@ -105,9 +105,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "quote",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.55 Estimate and quote sales",
+        "processCatalogL3": "85.55.200 Define sales quotations"
       }
     },
     {
@@ -116,9 +116,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "quotedetail",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "SA.02.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.55 Estimate and quote sales",
+        "processCatalogL3": "85.55.200 Define sales quotations"
       }
     },
     {
@@ -127,9 +127,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "quotedetail",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "SA.02.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.55 Estimate and quote sales",
+        "processCatalogL3": "85.55.200 Define sales quotations"
       }
     },
     {
@@ -138,9 +138,9 @@
       "solution": "ContosoSales",
       "entity": "salesorder",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -149,9 +149,9 @@
       "solution": "ContosoSales",
       "entity": "salesorder",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -160,9 +160,9 @@
       "solution": "ContosoSales",
       "entity": "salesorder",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -171,9 +171,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "salesorderdetail",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -182,9 +182,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "salesorderdetail",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -193,9 +193,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "invoice",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
       }
     },
     {
@@ -204,9 +204,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "invoice",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
       }
     },
     {
@@ -215,9 +215,9 @@
       "solution": "ContosoSales",
       "entity": "product",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.02"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -226,9 +226,9 @@
       "solution": "ContosoSales",
       "entity": "product",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.02"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -237,9 +237,9 @@
       "solution": "ContosoSales",
       "entity": "product",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.02"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -248,9 +248,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "pricelevel",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -259,9 +259,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "pricelevel",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -270,9 +270,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "competitor",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
       }
     },
     {
@@ -281,9 +281,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "competitor",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.200 Manage opportunity process"
       }
     },
     {
@@ -292,9 +292,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "goal",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.400 Determine sales targets"
       }
     },
     {
@@ -303,9 +303,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "goal",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.400 Determine sales targets"
       }
     },
     {
@@ -314,9 +314,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "territory",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.02"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.200 Define sales teams"
       }
     },
     {
@@ -325,9 +325,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "territory",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01",
-        "processCatalogL3": "SA.01.02"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.200 Define sales teams"
       }
     },
     {
@@ -336,9 +336,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "campaign",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.100 Run campaigns"
       }
     },
     {
@@ -347,9 +347,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "campaign",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.100 Run campaigns"
       }
     },
     {
@@ -358,9 +358,9 @@
       "solution": "ContosoSales",
       "entity": "con_dealdeskreview",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "SA.02.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
       }
     },
     {
@@ -369,9 +369,9 @@
       "solution": "ContosoSales",
       "entity": "con_dealdeskreview",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "SA.02.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
       }
     },
     {
@@ -380,9 +380,9 @@
       "solution": "ContosoSales",
       "entity": "con_dealdeskreview",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02",
-        "processCatalogL3": "SA.02.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
       }
     },
     {
@@ -391,9 +391,9 @@
       "solution": "ContosoSales",
       "entity": "con_salesplaybook",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -402,9 +402,9 @@
       "solution": "ContosoSales",
       "entity": "con_salesplaybook",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -413,9 +413,9 @@
       "solution": "ContosoSales",
       "entity": "con_salesplaybook",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
       }
     },
     {
@@ -424,9 +424,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "con_custtranspayment",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -435,9 +435,9 @@
       "solution": "msdyn_SalesPro",
       "entity": "con_custtranspayment",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03",
-        "processCatalogL3": "SA.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -446,9 +446,9 @@
       "solution": "ContosoCustomerService",
       "entity": "incident",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
       }
     },
     {
@@ -457,9 +457,9 @@
       "solution": "ContosoCustomerService",
       "entity": "incident",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
       }
     },
     {
@@ -468,9 +468,9 @@
       "solution": "ContosoCustomerService",
       "entity": "incident",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
       }
     },
     {
@@ -479,9 +479,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "incidentresolution",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.100 Close a case"
       }
     },
     {
@@ -490,9 +490,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "incidentresolution",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.100 Close a case"
       }
     },
     {
@@ -501,9 +501,9 @@
       "solution": "ContosoCustomerService",
       "entity": "knowledgearticle",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.02"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
       }
     },
     {
@@ -512,9 +512,9 @@
       "solution": "ContosoCustomerService",
       "entity": "knowledgearticle",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.02"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
       }
     },
     {
@@ -523,9 +523,9 @@
       "solution": "ContosoCustomerService",
       "entity": "knowledgearticle",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.02"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
       }
     },
     {
@@ -534,9 +534,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "entitlement",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.220 Define service terms"
       }
     },
     {
@@ -545,9 +545,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "entitlement",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.220 Define service terms"
       }
     },
     {
@@ -556,9 +556,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "entitlementtemplate",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": "CS.20.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.220 Define service terms"
       }
     },
     {
@@ -567,9 +567,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "entitlementtemplate",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": "CS.20.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.220 Define service terms"
       }
     },
     {
@@ -578,9 +578,9 @@
       "solution": "ContosoCustomerService",
       "entity": "sla",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -589,9 +589,9 @@
       "solution": "ContosoCustomerService",
       "entity": "sla",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -600,9 +600,9 @@
       "solution": "ContosoCustomerService",
       "entity": "sla",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -611,9 +611,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "slaitem",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.30",
-        "processCatalogL3": "CS.30.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.200 Create and track service level agreements"
       }
     },
     {
@@ -622,9 +622,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "slaitem",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.30",
-        "processCatalogL3": "CS.30.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.200 Create and track service level agreements"
       }
     },
     {
@@ -633,9 +633,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "queue",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.020 Define queues and teams"
       }
     },
     {
@@ -644,9 +644,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "queue",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.020 Define queues and teams"
       }
     },
     {
@@ -655,9 +655,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "queueitem",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.070 Track additional information against a case"
       }
     },
     {
@@ -666,9 +666,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "queueitem",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.070 Track additional information against a case"
       }
     },
     {
@@ -677,9 +677,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "msdyn_ocsession",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.010 Engage in conversations with customers"
       }
     },
     {
@@ -688,9 +688,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "msdyn_ocsession",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.010 Engage in conversations with customers"
       }
     },
     {
@@ -699,9 +699,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "contract",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.02"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
       }
     },
     {
@@ -710,9 +710,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "contract",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10",
-        "processCatalogL3": "CS.10.02"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
       }
     },
     {
@@ -721,9 +721,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "msdyn_customervoicesurvey",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.030 Review call center performance"
       }
     },
     {
@@ -732,9 +732,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "msdyn_customervoicesurvey",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.030 Review call center performance"
       }
     },
     {
@@ -743,9 +743,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_casedeflection",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": "CS.20.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.020 Identify common issues"
       }
     },
     {
@@ -754,9 +754,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_casedeflection",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": "CS.20.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.020 Identify common issues"
       }
     },
     {
@@ -765,9 +765,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_casedeflection",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": "CS.20.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.020 Identify common issues"
       }
     },
     {
@@ -776,9 +776,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_escalation",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.040 Re-assign case to another team/individual"
       }
     },
     {
@@ -787,9 +787,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_escalation",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.040 Re-assign case to another team/individual"
       }
     },
     {
@@ -798,9 +798,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_escalation",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.040 Re-assign case to another team/individual"
       }
     },
     {
@@ -809,9 +809,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_servicefeedback",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.30",
-        "processCatalogL3": "CS.30.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -820,9 +820,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_servicefeedback",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.30",
-        "processCatalogL3": "CS.30.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -831,9 +831,9 @@
       "solution": "ContosoCustomerService",
       "entity": "con_servicefeedback",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.30",
-        "processCatalogL3": "CS.30.01"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -842,9 +842,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "msdyn_agreement",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
       }
     },
     {
@@ -853,9 +853,9 @@
       "solution": "msdyn_CustomerService",
       "entity": "msdyn_agreement",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
       }
     },
     {
@@ -864,9 +864,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_workorder",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
       }
     },
     {
@@ -875,9 +875,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_workorder",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
       }
     },
     {
@@ -886,9 +886,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_workorder",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
       }
     },
     {
@@ -897,9 +897,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_workorderproduct",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -908,9 +908,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_workorderproduct",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -919,9 +919,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_workorderservice",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.02"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
       }
     },
     {
@@ -930,9 +930,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_workorderservice",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.02"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
       }
     },
     {
@@ -941,9 +941,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_incidenttype",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.300 Develop service catalogs"
       }
     },
     {
@@ -952,9 +952,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_incidenttype",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.300 Develop service catalogs"
       }
     },
     {
@@ -963,9 +963,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_incidenttype",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.300 Develop service catalogs"
       }
     },
     {
@@ -974,9 +974,9 @@
       "solution": "ContosoFieldService",
       "entity": "bookableresource",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": "FS.02.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -985,9 +985,9 @@
       "solution": "ContosoFieldService",
       "entity": "bookableresource",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": "FS.02.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -996,9 +996,9 @@
       "solution": "ContosoFieldService",
       "entity": "bookableresource",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": "FS.02.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -1007,9 +1007,9 @@
       "solution": "msdyn_FieldService",
       "entity": "bookableresourcebooking",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.950 Schedule frontline workers"
       }
     },
     {
@@ -1018,9 +1018,9 @@
       "solution": "msdyn_FieldService",
       "entity": "bookableresourcebooking",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.950 Schedule frontline workers"
       }
     },
     {
@@ -1029,9 +1029,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_resourcerequirement",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.03",
-        "processCatalogL3": "FS.03.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.100 Model service capacity"
       }
     },
     {
@@ -1040,9 +1040,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_resourcerequirement",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.03",
-        "processCatalogL3": "FS.03.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.100 Model service capacity"
       }
     },
     {
@@ -1051,9 +1051,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_customerasset",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.600 Manage service assets"
       }
     },
     {
@@ -1062,9 +1062,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_customerasset",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.600 Manage service assets"
       }
     },
     {
@@ -1073,9 +1073,9 @@
       "solution": "ContosoFieldService",
       "entity": "msdyn_customerasset",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.600 Manage service assets"
       }
     },
     {
@@ -1084,9 +1084,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_rma",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -1095,9 +1095,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_rma",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -1106,9 +1106,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_timeentry",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
       }
     },
     {
@@ -1117,9 +1117,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_timeentry",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
       }
     },
     {
@@ -1128,9 +1128,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_timeentry",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
       }
     },
     {
@@ -1139,9 +1139,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_productinventory",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -1150,9 +1150,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_productinventory",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -1161,9 +1161,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_warehouse",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": "FS.02.01"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -1172,9 +1172,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_warehouse",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": "FS.02.01"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -1183,9 +1183,9 @@
       "solution": "ContosoFieldService",
       "entity": "con_safetyinspection",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
       }
     },
     {
@@ -1194,9 +1194,9 @@
       "solution": "ContosoFieldService",
       "entity": "con_safetyinspection",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
       }
     },
     {
@@ -1205,9 +1205,9 @@
       "solution": "ContosoFieldService",
       "entity": "con_safetyinspection",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
       }
     },
     {
@@ -1216,9 +1216,9 @@
       "solution": "ContosoFieldService",
       "entity": "con_slapenaltyrule",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
       }
     },
     {
@@ -1227,9 +1227,9 @@
       "solution": "ContosoFieldService",
       "entity": "con_slapenaltyrule",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
       }
     },
     {
@@ -1238,9 +1238,9 @@
       "solution": "ContosoFieldService",
       "entity": "con_slapenaltyrule",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01",
-        "processCatalogL3": "FS.01.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
       }
     },
     {
@@ -1249,9 +1249,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_purchaseorder",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
       }
     },
     {
@@ -1260,9 +1260,9 @@
       "solution": "msdyn_FieldService",
       "entity": "msdyn_purchaseorder",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
       }
     },
     {
@@ -1271,9 +1271,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_project",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope"
       }
     },
     {
@@ -1282,9 +1282,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_project",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope"
       }
     },
     {
@@ -1293,9 +1293,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_project",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope"
       }
     },
     {
@@ -1304,9 +1304,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projecttask",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.040 Plan project tasks"
       }
     },
     {
@@ -1315,9 +1315,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projecttask",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.040 Plan project tasks"
       }
     },
     {
@@ -1326,9 +1326,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projectteam",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.02"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.050 Assign project resources"
       }
     },
     {
@@ -1337,9 +1337,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projectteam",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.02"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.050 Assign project resources"
       }
     },
     {
@@ -1348,9 +1348,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_resourceassignment",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -1359,9 +1359,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_resourceassignment",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -1370,9 +1370,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projectcontract",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.03",
-        "processCatalogL3": "PJ.03.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
       }
     },
     {
@@ -1381,9 +1381,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projectcontract",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.03",
-        "processCatalogL3": "PJ.03.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
       }
     },
     {
@@ -1392,9 +1392,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_contractline",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
       }
     },
     {
@@ -1403,9 +1403,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_contractline",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
       }
     },
     {
@@ -1414,9 +1414,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_estimate",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": "PJ.04.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.010 Estimate project contracts"
       }
     },
     {
@@ -1425,9 +1425,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_estimate",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": "PJ.04.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.010 Estimate project contracts"
       }
     },
     {
@@ -1436,9 +1436,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_estimateline",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.010 Estimate project contracts"
       }
     },
     {
@@ -1447,9 +1447,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_estimateline",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.010 Estimate project contracts"
       }
     },
     {
@@ -1458,9 +1458,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_expense",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.020 Track project expenses"
       }
     },
     {
@@ -1469,9 +1469,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_expense",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.020 Track project expenses"
       }
     },
     {
@@ -1480,9 +1480,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "msdyn_expense",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.020 Track project expenses"
       }
     },
     {
@@ -1491,9 +1491,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_actuals",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.02"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.45 Analyze service performance",
+        "processCatalogL3": "95.45.300 Analyze service profitability"
       }
     },
     {
@@ -1502,9 +1502,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_actuals",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.02"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.45 Analyze service performance",
+        "processCatalogL3": "95.45.300 Analyze service profitability"
       }
     },
     {
@@ -1513,9 +1513,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_invoice",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
       }
     },
     {
@@ -1524,9 +1524,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_invoice",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
       }
     },
     {
@@ -1535,9 +1535,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "con_projecthealthreview",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.60 Analyze project performance",
+        "processCatalogL3": "80.60.020 Monitor project status"
       }
     },
     {
@@ -1546,9 +1546,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "con_projecthealthreview",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.60 Analyze project performance",
+        "processCatalogL3": "80.60.020 Monitor project status"
       }
     },
     {
@@ -1557,9 +1557,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "con_projecthealthreview",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.60 Analyze project performance",
+        "processCatalogL3": "80.60.020 Monitor project status"
       }
     },
     {
@@ -1568,9 +1568,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "con_resourcerequest",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": "PJ.04.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.050 Assign project resources"
       }
     },
     {
@@ -1579,9 +1579,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "con_resourcerequest",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": "PJ.04.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.050 Assign project resources"
       }
     },
     {
@@ -1590,9 +1590,9 @@
       "solution": "ContosoProjectOperations",
       "entity": "con_resourcerequest",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": "PJ.04.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.050 Assign project resources"
       }
     },
     {
@@ -1601,9 +1601,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projectparameter",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
       }
     },
     {
@@ -1612,9 +1612,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "msdyn_projectparameter",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
       }
     },
     {
@@ -1623,9 +1623,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "con_faoprojectvendorinvoice",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.01"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -1634,9 +1634,9 @@
       "solution": "msdyn_ProjectServiceCore",
       "entity": "con_faoprojectvendorinvoice",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02",
-        "processCatalogL3": "PJ.02.01"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -1645,9 +1645,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_journey",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1656,9 +1656,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_journey",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1667,9 +1667,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_journey",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1678,9 +1678,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_segment",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1689,9 +1689,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_segment",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1700,9 +1700,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_segment",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1711,9 +1711,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_marketingemail",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1722,9 +1722,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_marketingemail",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1733,9 +1733,9 @@
       "solution": "ContosoMarketing",
       "entity": "msdynmkt_marketingemail",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -1744,9 +1744,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_channeltemplate",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.300 Create marketing material"
       }
     },
     {
@@ -1755,9 +1755,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_channeltemplate",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.300 Create marketing material"
       }
     },
     {
@@ -1766,9 +1766,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_marketingform",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.800 Create website for campaigns"
       }
     },
     {
@@ -1777,9 +1777,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_marketingform",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.800 Create website for campaigns"
       }
     },
     {
@@ -1788,9 +1788,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_leadscoringmodel",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.100 Identify campaign audiences"
       }
     },
     {
@@ -1799,9 +1799,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_leadscoringmodel",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.100 Identify campaign audiences"
       }
     },
     {
@@ -1810,9 +1810,9 @@
       "solution": "ContosoMarketing",
       "entity": "contact",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -1821,9 +1821,9 @@
       "solution": "ContosoMarketing",
       "entity": "contact",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -1832,9 +1832,9 @@
       "solution": "ContosoMarketing",
       "entity": "contact",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -1843,9 +1843,9 @@
       "solution": "ContosoMarketing",
       "entity": "msevtmgt_event",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -1854,9 +1854,9 @@
       "solution": "ContosoMarketing",
       "entity": "msevtmgt_event",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -1865,9 +1865,9 @@
       "solution": "ContosoMarketing",
       "entity": "msevtmgt_event",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -1876,9 +1876,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msevtmgt_eventregistration",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.200 Run events"
       }
     },
     {
@@ -1887,9 +1887,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msevtmgt_eventregistration",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.200 Run events"
       }
     },
     {
@@ -1898,9 +1898,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_contactpointconsent3",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
       }
     },
     {
@@ -1909,9 +1909,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_contactpointconsent3",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": "MK.02.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
       }
     },
     {
@@ -1920,9 +1920,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_trigger",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.100 Run campaigns"
       }
     },
     {
@@ -1931,9 +1931,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "msdynmkt_trigger",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.100 Run campaigns"
       }
     },
     {
@@ -1942,9 +1942,9 @@
       "solution": "ContosoMarketing",
       "entity": "con_campaignbrief",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
       }
     },
     {
@@ -1953,9 +1953,9 @@
       "solution": "ContosoMarketing",
       "entity": "con_campaignbrief",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
       }
     },
     {
@@ -1964,9 +1964,9 @@
       "solution": "ContosoMarketing",
       "entity": "con_campaignbrief",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
       }
     },
     {
@@ -1975,9 +1975,9 @@
       "solution": "ContosoMarketing",
       "entity": "con_legalfootertemplate",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
       }
     },
     {
@@ -1986,9 +1986,9 @@
       "solution": "ContosoMarketing",
       "entity": "con_legalfootertemplate",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
       }
     },
     {
@@ -1997,9 +1997,9 @@
       "solution": "ContosoMarketing",
       "entity": "con_legalfootertemplate",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
       }
     },
     {
@@ -2008,9 +2008,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "con_marketingspendline",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.300 Track campaign expenses"
       }
     },
     {
@@ -2019,9 +2019,9 @@
       "solution": "msdynmkt_CustomerInsightsJourneys",
       "entity": "con_marketingspendline",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04",
-        "processCatalogL3": "MK.04.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.300 Track campaign expenses"
       }
     },
     {
@@ -2030,9 +2030,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_customerprofile",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2041,9 +2041,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_customerprofile",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2052,9 +2052,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_customerprofile",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2063,9 +2063,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_datasource",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2074,9 +2074,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_datasource",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2085,9 +2085,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_entity",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2096,9 +2096,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_entity",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2107,9 +2107,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_measure",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.10 Define business continuity plan",
+        "processCatalogL3": "99.10.010 Define business continuity objectives"
       }
     },
     {
@@ -2118,9 +2118,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_measure",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.10 Define business continuity plan",
+        "processCatalogL3": "99.10.010 Define business continuity objectives"
       }
     },
     {
@@ -2129,9 +2129,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_measure",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.10 Define business continuity plan",
+        "processCatalogL3": "99.10.010 Define business continuity objectives"
       }
     },
     {
@@ -2140,9 +2140,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_segment",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": "CI.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": ""
       }
     },
     {
@@ -2151,9 +2151,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_segment",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": "CI.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": ""
       }
     },
     {
@@ -2162,9 +2162,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "msdynci_segment",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": "CI.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": ""
       }
     },
     {
@@ -2173,9 +2173,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_prediction",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.65 Analyze business performance",
+        "processCatalogL3": "50.65.525 Analyze and segment customers and markets"
       }
     },
     {
@@ -2184,9 +2184,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_prediction",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.65 Analyze business performance",
+        "processCatalogL3": "50.65.525 Analyze and segment customers and markets"
       }
     },
     {
@@ -2195,9 +2195,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_predictionscore",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.03",
-        "processCatalogL3": "CI.03.01"
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.65 Analyze business performance",
+        "processCatalogL3": "50.65.525 Analyze and segment customers and markets"
       }
     },
     {
@@ -2206,9 +2206,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_predictionscore",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.03",
-        "processCatalogL3": "CI.03.01"
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.65 Analyze business performance",
+        "processCatalogL3": "50.65.525 Analyze and segment customers and markets"
       }
     },
     {
@@ -2217,9 +2217,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_activity",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2228,9 +2228,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_activity",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2239,9 +2239,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_relationship",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": "CI.04.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2250,9 +2250,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_relationship",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": "CI.04.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2261,9 +2261,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_consentledger",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -2272,9 +2272,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_consentledger",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -2283,9 +2283,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_consentledger",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -2294,9 +2294,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_matchrule",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2305,9 +2305,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_matchrule",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2316,9 +2316,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_matchrule",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2327,9 +2327,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_datasourcehealth",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.030 Monitor data synchronization failures"
       }
     },
     {
@@ -2338,9 +2338,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_datasourcehealth",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.030 Monitor data synchronization failures"
       }
     },
     {
@@ -2349,9 +2349,9 @@
       "solution": "ContosoCustomerInsights",
       "entity": "con_datasourcehealth",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.030 Monitor data synchronization failures"
       }
     },
     {
@@ -2360,9 +2360,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "mserp_custcustomerv3entity",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2371,9 +2371,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "mserp_custcustomerv3entity",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01",
-        "processCatalogL3": "CI.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.020 Manage the recurring synchronization of data"
       }
     },
     {
@@ -2382,9 +2382,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_semanticmapping",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2393,9 +2393,9 @@
       "solution": "msdynci_CustomerInsights",
       "entity": "msdynci_semanticmapping",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -2404,9 +2404,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_mainaccount",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.040 Develop chart of accounts strategy"
       }
     },
     {
@@ -2415,9 +2415,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_mainaccount",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.040 Develop chart of accounts strategy"
       }
     },
     {
@@ -2426,9 +2426,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_ledger",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.040 Develop chart of accounts strategy"
       }
     },
     {
@@ -2437,9 +2437,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_ledger",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.040 Develop chart of accounts strategy"
       }
     },
     {
@@ -2448,9 +2448,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_generaljournalaccountentry",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.50 Record financial transactions",
+        "processCatalogL3": "90.50.040 Record ledger entries"
       }
     },
     {
@@ -2459,9 +2459,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_generaljournalaccountentry",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.50 Record financial transactions",
+        "processCatalogL3": "90.50.040 Record ledger entries"
       }
     },
     {
@@ -2470,9 +2470,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_vendinvoiceheader",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -2481,9 +2481,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_vendinvoiceheader",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -2492,9 +2492,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_custpaymentjournalline",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": "FI.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -2503,9 +2503,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_custpaymentjournalline",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": "FI.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -2514,9 +2514,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_budgetregisterentry",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.30 Manage budgets",
+        "processCatalogL3": "90.30.050 Maintain budgets"
       }
     },
     {
@@ -2525,9 +2525,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_budgetregisterentry",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.30 Manage budgets",
+        "processCatalogL3": "90.30.050 Maintain budgets"
       }
     },
     {
@@ -2536,9 +2536,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_fixedasset",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.40 Manage active assets",
+        "processCatalogL3": "10.40.025 Maintain fixed assets"
       }
     },
     {
@@ -2547,9 +2547,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_fixedasset",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.40 Manage active assets",
+        "processCatalogL3": "10.40.025 Maintain fixed assets"
       }
     },
     {
@@ -2558,9 +2558,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_taxtransaction",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.50 Record financial transactions",
+        "processCatalogL3": "90.50.090 Record tax commitments"
       }
     },
     {
@@ -2569,9 +2569,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "mserp_taxtransaction",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.50 Record financial transactions",
+        "processCatalogL3": "90.50.090 Record tax commitments"
       }
     },
     {
@@ -2580,9 +2580,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "cdm_company",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.010 Develop company structure"
       }
     },
     {
@@ -2591,9 +2591,9 @@
       "solution": "msdyn_FinanceAndOperations",
       "entity": "cdm_company",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.010 Develop company structure"
       }
     },
     {
@@ -2602,9 +2602,9 @@
       "solution": "ContosoFinance",
       "entity": "account",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -2613,9 +2613,9 @@
       "solution": "ContosoFinance",
       "entity": "account",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -2624,9 +2624,9 @@
       "solution": "ContosoFinance",
       "entity": "account",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -2635,9 +2635,9 @@
       "solution": "ContosoFinance",
       "entity": "transactioncurrency",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": "FI.04.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -2646,9 +2646,9 @@
       "solution": "ContosoFinance",
       "entity": "transactioncurrency",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": "FI.04.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -2657,9 +2657,9 @@
       "solution": "ContosoFinance",
       "entity": "transactioncurrency",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": "FI.04.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -2668,9 +2668,9 @@
       "solution": "ContosoFinance",
       "entity": "con_apapprovalrequest",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -2679,9 +2679,9 @@
       "solution": "ContosoFinance",
       "entity": "con_apapprovalrequest",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -2690,9 +2690,9 @@
       "solution": "ContosoFinance",
       "entity": "con_apapprovalrequest",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -2701,9 +2701,9 @@
       "solution": "ContosoFinance",
       "entity": "con_capexrequest",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.20 Acquire assets",
+        "processCatalogL3": "10.20.200 Budget fixed assets"
       }
     },
     {
@@ -2712,9 +2712,9 @@
       "solution": "ContosoFinance",
       "entity": "con_capexrequest",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.20 Acquire assets",
+        "processCatalogL3": "10.20.200 Budget fixed assets"
       }
     },
     {
@@ -2723,9 +2723,9 @@
       "solution": "ContosoFinance",
       "entity": "con_capexrequest",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": "FI.02.01"
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.20 Acquire assets",
+        "processCatalogL3": "10.20.200 Budget fixed assets"
       }
     },
     {
@@ -2734,9 +2734,9 @@
       "solution": "ContosoFinance",
       "entity": "con_financialdimensionmap",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.035 Define posting policies"
       }
     },
     {
@@ -2745,9 +2745,9 @@
       "solution": "ContosoFinance",
       "entity": "con_financialdimensionmap",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.035 Define posting policies"
       }
     },
     {
@@ -2756,9 +2756,9 @@
       "solution": "ContosoFinance",
       "entity": "con_financialdimensionmap",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.035 Define posting policies"
       }
     },
     {
@@ -2767,9 +2767,9 @@
       "solution": "ContosoFinance",
       "entity": "con_dunningaction",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.080 Manage customer collections"
       }
     },
     {
@@ -2778,9 +2778,9 @@
       "solution": "ContosoFinance",
       "entity": "con_dunningaction",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.080 Manage customer collections"
       }
     },
     {
@@ -2789,9 +2789,9 @@
       "solution": "ContosoFinance",
       "entity": "con_dunningaction",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03",
-        "processCatalogL3": "FI.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.080 Manage customer collections"
       }
     },
     {
@@ -2800,9 +2800,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_releasedproduct",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.10 Develop product strategy",
+        "processCatalogL3": "40.10.070 Develop product catalogs"
       }
     },
     {
@@ -2811,9 +2811,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_releasedproduct",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.10 Develop product strategy",
+        "processCatalogL3": "40.10.070 Develop product catalogs"
       }
     },
     {
@@ -2822,9 +2822,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_inventwarehouse",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.22"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -2833,9 +2833,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_inventwarehouse",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.22"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -2844,9 +2844,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_purchaseorderheader",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
       }
     },
     {
@@ -2855,9 +2855,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_purchaseorderheader",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
       }
     },
     {
@@ -2866,9 +2866,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_purchaseorderline",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.30",
-        "processCatalogL3": "SC.31"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
       }
     },
     {
@@ -2877,9 +2877,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_purchaseorderline",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.30",
-        "processCatalogL3": "SC.31"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
       }
     },
     {
@@ -2888,9 +2888,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_salesorderline",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.10",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -2899,9 +2899,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "msdyn_salesorderline",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.10",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -2910,9 +2910,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_vendor",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": "SC.41"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
       }
     },
     {
@@ -2921,9 +2921,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_vendor",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": "SC.41"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
       }
     },
     {
@@ -2932,9 +2932,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_vendor",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": "SC.41"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
       }
     },
     {
@@ -2943,9 +2943,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_purchaserequisition",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.30",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
       }
     },
     {
@@ -2954,9 +2954,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_purchaserequisition",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.30",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
       }
     },
     {
@@ -2965,9 +2965,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_purchaserequisition",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.30",
-        "processCatalogL3": ""
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
       }
     },
     {
@@ -2976,9 +2976,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_inventorycount",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.21"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.040 Count inventory"
       }
     },
     {
@@ -2987,9 +2987,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_inventorycount",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.21"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.040 Count inventory"
       }
     },
     {
@@ -2998,9 +2998,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_inventorycount",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.21"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.040 Count inventory"
       }
     },
     {
@@ -3009,9 +3009,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_shipment",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.50",
-        "processCatalogL3": ""
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.40 Process outbound goods",
+        "processCatalogL3": "60.40.060 Load goods for shipping"
       }
     },
     {
@@ -3020,9 +3020,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_shipment",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.50",
-        "processCatalogL3": ""
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.40 Process outbound goods",
+        "processCatalogL3": "60.40.060 Load goods for shipping"
       }
     },
     {
@@ -3031,9 +3031,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_shipment",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.50",
-        "processCatalogL3": ""
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.40 Process outbound goods",
+        "processCatalogL3": "60.40.060 Load goods for shipping"
       }
     },
     {
@@ -3042,9 +3042,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_demandforecast",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.22"
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.25 Conduct sales and operations planning",
+        "processCatalogL3": "50.25.625 Forecast demand"
       }
     },
     {
@@ -3053,9 +3053,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_demandforecast",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.22"
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.25 Conduct sales and operations planning",
+        "processCatalogL3": "50.25.625 Forecast demand"
       }
     },
     {
@@ -3064,9 +3064,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_demandforecast",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": "SC.22"
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.25 Conduct sales and operations planning",
+        "processCatalogL3": "50.25.625 Forecast demand"
       }
     },
     {
@@ -3075,9 +3075,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "uom",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.10 Develop product strategy",
+        "processCatalogL3": "40.10.040 Define product attributes"
       }
     },
     {
@@ -3086,9 +3086,9 @@
       "solution": "msdyn_SupplyChain",
       "entity": "uom",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.10 Develop product strategy",
+        "processCatalogL3": "40.10.040 Define product attributes"
       }
     },
     {
@@ -3097,9 +3097,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_bomcomponent",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.100 Manage bills of materials"
       }
     },
     {
@@ -3108,9 +3108,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_bomcomponent",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.100 Manage bills of materials"
       }
     },
     {
@@ -3119,9 +3119,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_bomcomponent",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.100 Manage bills of materials"
       }
     },
     {
@@ -3130,9 +3130,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_productionorder",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": "SC.41"
+        "processCatalogL1": "70.00 Plan to produce",
+        "processCatalogL2": "70.30 Run production operations",
+        "processCatalogL3": "70.30.010 Start production"
       }
     },
     {
@@ -3141,9 +3141,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_productionorder",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": "SC.41"
+        "processCatalogL1": "70.00 Plan to produce",
+        "processCatalogL2": "70.30 Run production operations",
+        "processCatalogL3": "70.30.010 Start production"
       }
     },
     {
@@ -3152,9 +3152,9 @@
       "solution": "ContosoSupplyChain",
       "entity": "con_productionorder",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40",
-        "processCatalogL3": "SC.41"
+        "processCatalogL1": "70.00 Plan to produce",
+        "processCatalogL2": "70.30 Run production operations",
+        "processCatalogL3": "70.30.010 Start production"
       }
     },
     {
@@ -3163,9 +3163,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailchannel",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.01",
-        "processCatalogL3": "CO.01.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3174,9 +3174,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailchannel",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.01",
-        "processCatalogL3": "CO.01.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3185,9 +3185,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailchannel",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.01",
-        "processCatalogL3": "CO.01.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3196,9 +3196,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailstore",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3207,9 +3207,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailstore",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3218,9 +3218,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailstore",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3229,9 +3229,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailterminal",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "CO.02.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -3240,9 +3240,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailterminal",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "CO.02.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -3251,9 +3251,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_channelprofile",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3262,9 +3262,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_channelprofile",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3273,9 +3273,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailtransaction",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03",
-        "processCatalogL3": "CO.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3284,9 +3284,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailtransaction",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03",
-        "processCatalogL3": "CO.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3295,9 +3295,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_retailtransaction",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03",
-        "processCatalogL3": "CO.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -3306,9 +3306,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailtransactionsalesline",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -3317,9 +3317,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailtransactionsalesline",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -3328,9 +3328,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailtransactionpaymentline",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": "CO.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -3339,9 +3339,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailtransactionpaymentline",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": "CO.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -3350,9 +3350,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailstatement",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -3361,9 +3361,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_retailstatement",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -3372,9 +3372,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_pricingrule",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -3383,9 +3383,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_pricingrule",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -3394,9 +3394,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_loyaltyprogram",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "CO.02.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
       }
     },
     {
@@ -3405,9 +3405,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_loyaltyprogram",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "CO.02.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
       }
     },
     {
@@ -3416,9 +3416,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_loyaltyprogram",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": "CO.02.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
       }
     },
     {
@@ -3427,9 +3427,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_loyaltycard",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.010 Assess customer credit risk"
       }
     },
     {
@@ -3438,9 +3438,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_loyaltycard",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.010 Assess customer credit risk"
       }
     },
     {
@@ -3449,9 +3449,9 @@
       "solution": "ContosoCommerce",
       "entity": "msdyn_loyaltycard",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.010 Assess customer credit risk"
       }
     },
     {
@@ -3460,9 +3460,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_giftcard",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03",
-        "processCatalogL3": "CO.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -3471,9 +3471,9 @@
       "solution": "msdyn_Commerce",
       "entity": "msdyn_giftcard",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03",
-        "processCatalogL3": "CO.03.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -3482,9 +3482,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_clienteling",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -3493,9 +3493,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_clienteling",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -3504,9 +3504,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_clienteling",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -3515,9 +3515,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_curbsideorder",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": "CO.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -3526,9 +3526,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_curbsideorder",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": "CO.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -3537,9 +3537,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_curbsideorder",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": "CO.04.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -3548,9 +3548,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_pricematchrequest",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -3559,9 +3559,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_pricematchrequest",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -3570,9 +3570,9 @@
       "solution": "ContosoCommerce",
       "entity": "con_pricematchrequest",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -3581,9 +3581,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_worker",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -3592,9 +3592,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_worker",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -3603,9 +3603,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_worker",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -3614,9 +3614,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_employment",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -3625,9 +3625,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_employment",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -3636,9 +3636,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_employment",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -3647,9 +3647,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_position",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -3658,9 +3658,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_position",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -3669,9 +3669,9 @@
       "solution": "ContosoHumanResources",
       "entity": "cdm_position",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -3680,9 +3680,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_job",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.05 Develop people strategy",
+        "processCatalogL3": "55.05.010 Define organizational structure"
       }
     },
     {
@@ -3691,9 +3691,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_job",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.05 Develop people strategy",
+        "processCatalogL3": "55.05.010 Define organizational structure"
       }
     },
     {
@@ -3702,9 +3702,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_department",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03",
-        "processCatalogL3": "HR.03.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.05 Develop people strategy",
+        "processCatalogL3": "55.05.010 Define organizational structure"
       }
     },
     {
@@ -3713,9 +3713,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_department",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03",
-        "processCatalogL3": "HR.03.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.05 Develop people strategy",
+        "processCatalogL3": "55.05.010 Define organizational structure"
       }
     },
     {
@@ -3724,9 +3724,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_fixedcompensation",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.70 Manage compensation and benefits",
+        "processCatalogL3": "55.70.070 Manage compensation changes"
       }
     },
     {
@@ -3735,9 +3735,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_fixedcompensation",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.70 Manage compensation and benefits",
+        "processCatalogL3": "55.70.070 Manage compensation changes"
       }
     },
     {
@@ -3746,9 +3746,9 @@
       "solution": "ContosoHumanResources",
       "entity": "mshr_leaverequest",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": "HR.04.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
       }
     },
     {
@@ -3757,9 +3757,9 @@
       "solution": "ContosoHumanResources",
       "entity": "mshr_leaverequest",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": "HR.04.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
       }
     },
     {
@@ -3768,9 +3768,9 @@
       "solution": "ContosoHumanResources",
       "entity": "mshr_leaverequest",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": "HR.04.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
       }
     },
     {
@@ -3779,9 +3779,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "mshr_leaveenrollment",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.010 Develop leave and absence policies"
       }
     },
     {
@@ -3790,9 +3790,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "mshr_leaveenrollment",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.010 Develop leave and absence policies"
       }
     },
     {
@@ -3801,9 +3801,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "msdynhr_worker",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.05",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.070 Onboard new employees"
       }
     },
     {
@@ -3812,9 +3812,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "msdynhr_worker",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.05",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.070 Onboard new employees"
       }
     },
     {
@@ -3823,9 +3823,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_onboardingtask",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.070 Onboard new employees"
       }
     },
     {
@@ -3834,9 +3834,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_onboardingtask",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.070 Onboard new employees"
       }
     },
     {
@@ -3845,9 +3845,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_onboardingtask",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.070 Onboard new employees"
       }
     },
     {
@@ -3856,9 +3856,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_performancereview",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.080 Asses worker performance"
       }
     },
     {
@@ -3867,9 +3867,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_performancereview",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.080 Asses worker performance"
       }
     },
     {
@@ -3878,9 +3878,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_performancereview",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.080 Asses worker performance"
       }
     },
     {
@@ -3889,9 +3889,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_skill",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.055 Track skills and competencies"
       }
     },
     {
@@ -3900,9 +3900,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_skill",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.055 Track skills and competencies"
       }
     },
     {
@@ -3911,9 +3911,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_skill",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02",
-        "processCatalogL3": "HR.02.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.055 Track skills and competencies"
       }
     },
     {
@@ -3922,9 +3922,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_workerskill",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.055 Track skills and competencies"
       }
     },
     {
@@ -3933,9 +3933,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_workerskill",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.055 Track skills and competencies"
       }
     },
     {
@@ -3944,9 +3944,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_workerskill",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.055 Track skills and competencies"
       }
     },
     {
@@ -3955,9 +3955,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_benefit",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03",
-        "processCatalogL3": "HR.03.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.70 Manage compensation and benefits",
+        "processCatalogL3": "55.70.020 Define benefit offerings"
       }
     },
     {
@@ -3966,9 +3966,9 @@
       "solution": "msdynhr_HumanResources",
       "entity": "cdm_benefit",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03",
-        "processCatalogL3": "HR.03.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.70 Manage compensation and benefits",
+        "processCatalogL3": "55.70.020 Define benefit offerings"
       }
     },
     {
@@ -3977,9 +3977,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_disciplinarycase",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.400 Manage cases and requests"
       }
     },
     {
@@ -3988,9 +3988,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_disciplinarycase",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.400 Manage cases and requests"
       }
     },
     {
@@ -3999,9 +3999,9 @@
       "solution": "ContosoHumanResources",
       "entity": "con_disciplinarycase",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01",
-        "processCatalogL3": ""
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.30 Manage workplace compliance",
+        "processCatalogL3": "55.30.400 Manage cases and requests"
       }
     },
     {
@@ -4010,9 +4010,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_ocliveworkitem",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.21"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4021,9 +4021,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_ocliveworkitem",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.21"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4032,9 +4032,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_ocliveworkitem",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.21"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4043,9 +4043,9 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_ocsessionparticipant",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.22"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4054,9 +4054,9 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_ocsessionparticipant",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.22"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4065,8 +4065,8 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_occontext",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
         "processCatalogL3": ""
       }
     },
@@ -4076,8 +4076,8 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_occontext",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
         "processCatalogL3": ""
       }
     },
@@ -4087,9 +4087,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_agentstatushistory",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4098,9 +4098,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_agentstatushistory",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4109,9 +4109,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_agentstatushistory",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4120,9 +4120,9 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_presence",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.010 Define agent skill sets"
       }
     },
     {
@@ -4131,9 +4131,9 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_presence",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.010 Define agent skill sets"
       }
     },
     {
@@ -4142,9 +4142,9 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_liveworkstream",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": "CC.41"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4153,9 +4153,9 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "msdyn_liveworkstream",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": "CC.41"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4164,9 +4164,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_channel",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4175,9 +4175,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_channel",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4186,9 +4186,9 @@
       "solution": "ContosoContactCenter",
       "entity": "msdyn_channel",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -4197,9 +4197,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_deflectionoutcome",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.22"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4208,9 +4208,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_deflectionoutcome",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.22"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4219,9 +4219,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_deflectionoutcome",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
-        "processCatalogL3": "CC.22"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
       }
     },
     {
@@ -4230,9 +4230,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_agentcoachingnote",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.030 Review call center performance"
       }
     },
     {
@@ -4241,9 +4241,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_agentcoachingnote",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.030 Review call center performance"
       }
     },
     {
@@ -4252,9 +4252,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_agentcoachingnote",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40",
-        "processCatalogL3": ""
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.030 Review call center performance"
       }
     },
     {
@@ -4263,9 +4263,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_botconfiguration",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.010 Engage in conversations with customers"
       }
     },
     {
@@ -4274,9 +4274,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_botconfiguration",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.010 Engage in conversations with customers"
       }
     },
     {
@@ -4285,9 +4285,9 @@
       "solution": "ContosoContactCenter",
       "entity": "con_botconfiguration",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30",
-        "processCatalogL3": "CC.31"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.010 Engage in conversations with customers"
       }
     },
     {
@@ -4296,8 +4296,8 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "con_channelbudgetline",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
         "processCatalogL3": ""
       }
     },
@@ -4307,8 +4307,8 @@
       "solution": "msdyn_OmnichannelBase",
       "entity": "con_channelbudgetline",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20",
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
         "processCatalogL3": ""
       }
     },
@@ -4318,9 +4318,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "systemuser",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.040 Onboard new users"
       }
     },
     {
@@ -4329,9 +4329,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "systemuser",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.040 Onboard new users"
       }
     },
     {
@@ -4340,9 +4340,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "systemuser",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.040 Onboard new users"
       }
     },
     {
@@ -4351,9 +4351,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "team",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.040 Onboard new users"
       }
     },
     {
@@ -4362,9 +4362,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "team",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.040 Onboard new users"
       }
     },
     {
@@ -4373,9 +4373,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "businessunit",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": "PL.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.130 Manage organizational structure"
       }
     },
     {
@@ -4384,9 +4384,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "businessunit",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": "PL.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.130 Manage organizational structure"
       }
     },
     {
@@ -4395,9 +4395,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "solution",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.100 Implement cloud solutions"
       }
     },
     {
@@ -4406,9 +4406,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "solution",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.100 Implement cloud solutions"
       }
     },
     {
@@ -4417,9 +4417,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "publisher",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03",
-        "processCatalogL3": "PL.03.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.310 Implement application lifecycle management (ALM) strategies"
       }
     },
     {
@@ -4428,9 +4428,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "publisher",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03",
-        "processCatalogL3": "PL.03.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.310 Implement application lifecycle management (ALM) strategies"
       }
     },
     {
@@ -4439,9 +4439,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "workflow",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.010 Configure and administer workflows"
       }
     },
     {
@@ -4450,9 +4450,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "workflow",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.010 Configure and administer workflows"
       }
     },
     {
@@ -4461,9 +4461,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "connectionreference",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": "PL.04.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.100 Implement cloud solutions"
       }
     },
     {
@@ -4472,9 +4472,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "connectionreference",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": "PL.04.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.100 Implement cloud solutions"
       }
     },
     {
@@ -4483,9 +4483,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "environmentvariabledefinition",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.110 Drive app value"
       }
     },
     {
@@ -4494,9 +4494,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "environmentvariabledefinition",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.110 Drive app value"
       }
     },
     {
@@ -4505,9 +4505,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "sdkmessageprocessingstep",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.350 Define extensions approach"
       }
     },
     {
@@ -4516,9 +4516,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "sdkmessageprocessingstep",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.350 Define extensions approach"
       }
     },
     {
@@ -4527,9 +4527,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "plugintype",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.350 Define extensions approach"
       }
     },
     {
@@ -4538,9 +4538,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "plugintype",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.350 Define extensions approach"
       }
     },
     {
@@ -4549,9 +4549,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "role",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.050 Manage data security"
       }
     },
     {
@@ -4560,9 +4560,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "role",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01",
-        "processCatalogL3": "PL.01.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.050 Manage data security"
       }
     },
     {
@@ -4571,9 +4571,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "fieldsecurityprofile",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.050 Manage data security"
       }
     },
     {
@@ -4582,9 +4582,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "fieldsecurityprofile",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.050 Manage data security"
       }
     },
     {
@@ -4593,9 +4593,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "adx_webpage",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": "PL.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.120 Configure and manage portals"
       }
     },
     {
@@ -4604,9 +4604,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "adx_webpage",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": "PL.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.120 Configure and manage portals"
       }
     },
     {
@@ -4615,9 +4615,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "adx_webpage",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": "PL.02.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.120 Configure and manage portals"
       }
     },
     {
@@ -4626,9 +4626,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_environmentinventory",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -4637,9 +4637,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_environmentinventory",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -4648,9 +4648,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_environmentinventory",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -4659,9 +4659,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_coecomplianceattestation",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03",
-        "processCatalogL3": "PL.03.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.050 Monitor compliance"
       }
     },
     {
@@ -4670,9 +4670,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_coecomplianceattestation",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03",
-        "processCatalogL3": "PL.03.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.050 Monitor compliance"
       }
     },
     {
@@ -4681,9 +4681,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_coecomplianceattestation",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03",
-        "processCatalogL3": "PL.03.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.050 Monitor compliance"
       }
     },
     {
@@ -4692,9 +4692,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_dataprocessingregister",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -4703,9 +4703,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_dataprocessingregister",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -4714,9 +4714,9 @@
       "solution": "ContosoPlatformGovernance",
       "entity": "con_dataprocessingregister",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02",
-        "processCatalogL3": ""
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -4725,9 +4725,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "con_ledgerdimension",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": "PL.04.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.035 Define posting policies"
       }
     },
     {
@@ -4736,9 +4736,9 @@
       "solution": "CenterofExcellenceCoreComponents",
       "entity": "con_ledgerdimension",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04",
-        "processCatalogL3": "PL.04.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "90.10 Define accounting policies",
+        "processCatalogL3": "90.10.035 Define posting policies"
       }
     }
   ]

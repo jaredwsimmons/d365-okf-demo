@@ -1,1 +1,1 @@
-{"item":{"id":"role-financial-controller","name":"Financial Controller","tags":{"persona":"Controller"},"solution":"ContosoFinance"},"metadata":{"type":"securityRoles","id":"role-financial-controller"}}
+{"item":{"id":"role-financial-controller","name":"Financial Controller","tags":{"persona":"Controller","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoFinance"},"metadata":{"type":"securityRoles","id":"role-financial-controller"}}

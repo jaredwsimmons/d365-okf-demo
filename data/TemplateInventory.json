@@ -4,37 +4,61 @@
       "id": "tpl-notify-manager-on-high-p",
       "title": "Notify Manager on High-Priority Escalation Email",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "tpl-nightly-knowledge-articl",
       "title": "Nightly Knowledge Article Review Reminder Email",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
+      }
     },
     {
       "id": "tpl-contoso-time-entry-auto-",
       "title": "Contoso Time Entry Auto-Submit Reminder Email",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "tpl-require-legal-footer-bef",
       "title": "Require Legal Footer Before Email Go-Live Email",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "tpl-probation-end-reminder",
       "title": "Probation End Reminder Email",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "tpl-compliance-attestation-r",
       "title": "Compliance Attestation Reminder Email",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.020 Configure, monitor, and send emails"
+      }
     }
   ]
 }

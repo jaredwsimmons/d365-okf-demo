@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_ProjectServiceCore","schemaName":"msdyn_transactiontypecode","displayName":"Transaction Type"},"metadata":{"type":"optionSets","id":"msdyn_transactiontypecode"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_ProjectServiceCore","schemaName":"msdyn_transactiontypecode","displayName":"Transaction Type"},"metadata":{"type":"optionSets","id":"msdyn_transactiontypecode"}}

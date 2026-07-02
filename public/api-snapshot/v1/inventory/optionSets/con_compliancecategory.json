@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoFieldService","schemaName":"con_compliancecategory","displayName":"Compliance Category"},"metadata":{"type":"optionSets","id":"con_compliancecategory"}}
+{"item":{"tags":{"processCatalogL1":"99.00 Administer to operate","processCatalogL2":"99.60 Manage system compliance","processCatalogL3":"99.60.010 Identify applicable regulations and compliance requirements"},"solution":"ContosoFieldService","schemaName":"con_compliancecategory","displayName":"Compliance Category"},"metadata":{"type":"optionSets","id":"con_compliancecategory"}}

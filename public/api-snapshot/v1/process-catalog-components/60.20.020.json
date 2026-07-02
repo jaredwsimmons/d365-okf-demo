@@ -1,0 +1,1 @@
+{"code":"60.20.020","tagField":"processCatalogL3","total":1,"components":[{"name":"SessionParticipantAuditPlugin","type":"Plugin","id":"plg-sessionparticipantauditplugin","solution":"ContosoContactCenter","tags":{"processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"60.20 Maintain inventory levels","processCatalogL3":"60.20.020 Process inventory movements"}}]}

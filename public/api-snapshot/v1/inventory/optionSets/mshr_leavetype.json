@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdynhr_HumanResources","schemaName":"mshr_leavetype","displayName":"Leave Type"},"metadata":{"type":"optionSets","id":"mshr_leavetype"}}
+{"item":{"tags":{"processCatalogL1":"55.00 Hire to retire","processCatalogL2":"55.50 Manage time and attendance","processCatalogL3":"55.50.010 Develop leave and absence policies"},"solution":"msdynhr_HumanResources","schemaName":"mshr_leavetype","displayName":"Leave Type"},"metadata":{"type":"optionSets","id":"mshr_leavetype"}}

@@ -1,1 +1,1 @@
-{"item":{"id":"role-contoso-hr-business-partner","name":"Contoso HR Business Partner","tags":{"persona":"HR Business Partner"},"solution":"ContosoHumanResources"},"metadata":{"type":"securityRoles","id":"role-contoso-hr-business-partner"}}
+{"item":{"id":"role-contoso-hr-business-partner","name":"Contoso HR Business Partner","tags":{"persona":"HR Business Partner","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoHumanResources"},"metadata":{"type":"securityRoles","id":"role-contoso-hr-business-partner"}}

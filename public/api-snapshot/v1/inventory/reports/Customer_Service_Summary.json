@@ -1,1 +1,1 @@
-{"item":{"name":"Customer Service Summary","tags":{},"solution":"ContosoCustomerService"},"metadata":{"type":"reports","id":"Customer Service Summary"}}
+{"item":{"name":"Customer Service Summary","tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"95.05 Develop service strategy","processCatalogL3":"95.05.100 Develop service pricing strategy"},"solution":"ContosoCustomerService"},"metadata":{"type":"reports","id":"Customer Service Summary"}}

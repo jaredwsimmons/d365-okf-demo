@@ -1,134 +1,182 @@
 {
-  "SA.00": [
+  "10.00": [
     {
-      "path": "bpc-diagrams/sales/sales-flow.svg",
-      "name": "Sales — End-to-End Flow"
+      "path": "bpc-diagrams/acquire-to-dispose/acquire-to-dispose-flow.svg",
+      "name": "Acquire to dispose — End-to-End Flow"
     }
   ],
-  "SA.01": [
+  "10.05": [
     {
-      "path": "bpc-diagrams/sales/lead-management-subflow.svg",
-      "name": "Lead Management — Detailed Flow"
+      "path": "bpc-diagrams/acquire-to-dispose/define-asset-strategy-subflow.svg",
+      "name": "Define asset strategy — Detailed Flow"
     }
   ],
-  "CS.00": [
+  "20.00": [
     {
-      "path": "bpc-diagrams/customer-service-management/customer-service-management-flow.svg",
-      "name": "Customer Service Management — End-to-End Flow"
+      "path": "bpc-diagrams/case-to-resolution/case-to-resolution-flow.svg",
+      "name": "Case to resolution — End-to-End Flow"
     }
   ],
-  "CS.10": [
+  "20.10": [
     {
-      "path": "bpc-diagrams/customer-service-management/case-intake-routing-subflow.svg",
-      "name": "Case Intake & Routing — Detailed Flow"
+      "path": "bpc-diagrams/case-to-resolution/establish-a-knowledge-base-subflow.svg",
+      "name": "Establish a knowledge base — Detailed Flow"
     }
   ],
-  "FS.00": [
+  "30.00": [
     {
-      "path": "bpc-diagrams/field-service/field-service-flow.svg",
-      "name": "Field Service — End-to-End Flow"
+      "path": "bpc-diagrams/concept-to-market/concept-to-market-flow.svg",
+      "name": "Concept to market — End-to-End Flow"
     }
   ],
-  "FS.01": [
+  "30.05": [
     {
-      "path": "bpc-diagrams/field-service/work-order-management-subflow.svg",
-      "name": "Work Order Management — Detailed Flow"
+      "path": "bpc-diagrams/concept-to-market/develop-marketing-strategy-subflow.svg",
+      "name": "Develop marketing strategy — Detailed Flow"
     }
   ],
-  "PJ.00": [
+  "40.00": [
     {
-      "path": "bpc-diagrams/project-operations/project-operations-flow.svg",
-      "name": "Project Operations — End-to-End Flow"
+      "path": "bpc-diagrams/design-to-retire/design-to-retire-flow.svg",
+      "name": "Design to retire — End-to-End Flow"
     }
   ],
-  "PJ.02": [
+  "40.10": [
     {
-      "path": "bpc-diagrams/project-operations/plan-resource-subflow.svg",
-      "name": "Plan & Resource — Detailed Flow"
+      "path": "bpc-diagrams/design-to-retire/develop-product-strategy-subflow.svg",
+      "name": "Develop product strategy — Detailed Flow"
     }
   ],
-  "MK.00": [
+  "50.00": [
     {
-      "path": "bpc-diagrams/marketing/marketing-flow.svg",
-      "name": "Marketing — End-to-End Flow"
+      "path": "bpc-diagrams/forecast-to-plan/forecast-to-plan-flow.svg",
+      "name": "Forecast to plan — End-to-End Flow"
     }
   ],
-  "MK.02": [
+  "50.15": [
     {
-      "path": "bpc-diagrams/marketing/audience-journey-orchestration-subflow.svg",
-      "name": "Audience & Journey Orchestration — Detailed Flow"
+      "path": "bpc-diagrams/forecast-to-plan/develop-business-strategy-subflow.svg",
+      "name": "Develop business strategy — Detailed Flow"
     }
   ],
-  "CI.00": [
+  "55.00": [
     {
-      "path": "bpc-diagrams/customer-data-platform-unified-customer-data/customer-data-platform-unified-customer-data-flow.svg",
-      "name": "Customer Data Platform (Unified Customer Data) — End-to-End Flow"
+      "path": "bpc-diagrams/hire-to-retire/hire-to-retire-flow.svg",
+      "name": "Hire to retire — End-to-End Flow"
     }
   ],
-  "CI.01": [
+  "55.05": [
     {
-      "path": "bpc-diagrams/customer-data-platform-unified-customer-data/data-ingestion-onboarding-subflow.svg",
-      "name": "Data Ingestion & Onboarding — Detailed Flow"
+      "path": "bpc-diagrams/hire-to-retire/develop-people-strategy-subflow.svg",
+      "name": "Develop people strategy — Detailed Flow"
     }
   ],
-  "FI.00": [
+  "60.00": [
     {
-      "path": "bpc-diagrams/finance/finance-flow.svg",
-      "name": "Finance — End-to-End Flow"
+      "path": "bpc-diagrams/inventory-to-deliver/inventory-to-deliver-flow.svg",
+      "name": "Inventory to deliver — End-to-End Flow"
     }
   ],
-  "SC.00": [
+  "60.10": [
     {
-      "path": "bpc-diagrams/supply-chain-management/supply-chain-management-flow.svg",
-      "name": "Supply Chain Management — End-to-End Flow"
+      "path": "bpc-diagrams/inventory-to-deliver/manage-warehouse-operations-subflow.svg",
+      "name": "Manage warehouse operations — Detailed Flow"
     }
   ],
-  "SC.20": [
+  "65.00": [
     {
-      "path": "bpc-diagrams/supply-chain-management/procure-to-receive-subflow.svg",
-      "name": "Procure to Receive — Detailed Flow"
+      "path": "bpc-diagrams/order-to-cash/order-to-cash-flow.svg",
+      "name": "Order to cash — End-to-End Flow"
     }
   ],
-  "CO.00": [
+  "65.05": [
     {
-      "path": "bpc-diagrams/commerce-omnichannel-retail/commerce-omnichannel-retail-flow.svg",
-      "name": "Commerce & Omnichannel Retail — End-to-End Flow"
+      "path": "bpc-diagrams/order-to-cash/develop-sales-policies-subflow.svg",
+      "name": "Develop sales policies — Detailed Flow"
     }
   ],
-  "HR.00": [
+  "70.00": [
     {
-      "path": "bpc-diagrams/human-resources/human-resources-flow.svg",
-      "name": "Human Resources — End-to-End Flow"
+      "path": "bpc-diagrams/plan-to-produce/plan-to-produce-flow.svg",
+      "name": "Plan to produce — End-to-End Flow"
     }
   ],
-  "HR.02": [
+  "70.10": [
     {
-      "path": "bpc-diagrams/human-resources/hire-to-onboard-subflow.svg",
-      "name": "Hire to Onboard — Detailed Flow"
+      "path": "bpc-diagrams/plan-to-produce/develop-production-strategies-subflow.svg",
+      "name": "Develop production strategies — Detailed Flow"
     }
   ],
-  "CC.00": [
+  "75.00": [
     {
-      "path": "bpc-diagrams/contact-center-omnichannel-engagement/contact-center-omnichannel-engagement-flow.svg",
-      "name": "Contact Center / Omnichannel Engagement — End-to-End Flow"
+      "path": "bpc-diagrams/source-to-pay/source-to-pay-flow.svg",
+      "name": "Source to pay — End-to-End Flow"
     }
   ],
-  "CC.20": [
+  "75.10": [
     {
-      "path": "bpc-diagrams/contact-center-omnichannel-engagement/conversation-handling-subflow.svg",
-      "name": "Conversation Handling — Detailed Flow"
+      "path": "bpc-diagrams/source-to-pay/develop-procurement-and-sourcing-strategy-subflow.svg",
+      "name": "Develop procurement and sourcing strategy — Detailed Flow"
     }
   ],
-  "PL.00": [
+  "80.00": [
     {
-      "path": "bpc-diagrams/platform-governance/platform-governance-flow.svg",
-      "name": "Platform & Governance — End-to-End Flow"
+      "path": "bpc-diagrams/project-to-profit/project-to-profit-flow.svg",
+      "name": "Project to profit — End-to-End Flow"
     }
   ],
-  "PL.01": [
+  "80.10": [
     {
-      "path": "bpc-diagrams/platform-governance/environment-capacity-management-subflow.svg",
-      "name": "Environment & Capacity Management — Detailed Flow"
+      "path": "bpc-diagrams/project-to-profit/develop-project-strategy-subflow.svg",
+      "name": "Develop project strategy — Detailed Flow"
+    }
+  ],
+  "85.00": [
+    {
+      "path": "bpc-diagrams/prospect-to-quote/prospect-to-quote-flow.svg",
+      "name": "Prospect to quote — End-to-End Flow"
+    }
+  ],
+  "85.15": [
+    {
+      "path": "bpc-diagrams/prospect-to-quote/manage-customer-relationships-subflow.svg",
+      "name": "Manage customer relationships — Detailed Flow"
+    }
+  ],
+  "90.00": [
+    {
+      "path": "bpc-diagrams/record-to-report/record-to-report-flow.svg",
+      "name": "Record to report — End-to-End Flow"
+    }
+  ],
+  "90.10": [
+    {
+      "path": "bpc-diagrams/record-to-report/define-accounting-policies-subflow.svg",
+      "name": "Define accounting policies — Detailed Flow"
+    }
+  ],
+  "95.00": [
+    {
+      "path": "bpc-diagrams/service-to-deliver/service-to-deliver-flow.svg",
+      "name": "Service to deliver — End-to-End Flow"
+    }
+  ],
+  "95.05": [
+    {
+      "path": "bpc-diagrams/service-to-deliver/develop-service-strategy-subflow.svg",
+      "name": "Develop service strategy — Detailed Flow"
+    }
+  ],
+  "99.00": [
+    {
+      "path": "bpc-diagrams/administer-to-operate/administer-to-operate-flow.svg",
+      "name": "Administer to operate — End-to-End Flow"
+    }
+  ],
+  "99.01": [
+    {
+      "path": "bpc-diagrams/administer-to-operate/implement-solutions-subflow.svg",
+      "name": "Implement solutions — Detailed Flow"
     }
   ]
 }

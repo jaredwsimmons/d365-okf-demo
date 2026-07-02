@@ -1,1 +1,1 @@
-{"item":{"id":"role-sales-manager","name":"Sales Manager","tags":{"persona":"Sales Manager"},"solution":"msdyn_SalesPro"},"metadata":{"type":"securityRoles","id":"role-sales-manager"}}
+{"item":{"id":"role-sales-manager","name":"Sales Manager","tags":{"persona":"Sales Manager","processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.35 Define sales strategy and policies","processCatalogL3":"85.35.100 Define sales process"},"solution":"msdyn_SalesPro"},"metadata":{"type":"securityRoles","id":"role-sales-manager"}}

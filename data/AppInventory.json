@@ -4,127 +4,211 @@
       "uniqueName": "con_contosoSalesHub",
       "displayName": "Contoso Sales Hub",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
+      }
     },
     {
       "uniqueName": "con_contosoDealDesk",
       "displayName": "Contoso Deal Desk",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_customerServiceHub",
       "displayName": "Customer Service Hub",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "uniqueName": "con_fieldService",
       "displayName": "Field Service",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "uniqueName": "con_projectOperations",
       "displayName": "Project Operations",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
+      }
     },
     {
       "uniqueName": "con_contosoDeliveryPmo",
       "displayName": "Contoso Delivery PMO",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_customerInsightsJourneys",
       "displayName": "Customer Insights - Journeys",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoCampaignIntake",
       "displayName": "Contoso Campaign Intake",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoCustomerInsightsData",
       "displayName": "Contoso Customer Insights - Data",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     },
     {
       "uniqueName": "con_ciDataGovernanceConsole",
       "displayName": "CI Data Governance Console",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     },
     {
       "uniqueName": "con_contosoFinanceOperations",
       "displayName": "Contoso Finance Operations",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoBudgetingCapex",
       "displayName": "Contoso Budgeting & Capex",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoSupplyChainHub",
       "displayName": "Contoso Supply Chain Hub",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoCommerceHeadquarters",
       "displayName": "Contoso Commerce Headquarters",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoLoyaltyEngagement",
       "displayName": "Contoso Loyalty & Engagement",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoHumanResources",
       "displayName": "Contoso Human Resources",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_employeeSelfService",
       "displayName": "Employee Self Service",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "uniqueName": "con_customerServiceWorkspace",
       "displayName": "Customer Service workspace",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.500 Plan service contractor work"
+      }
     },
     {
       "uniqueName": "con_omnichannelAdminCenter",
       "displayName": "Omnichannel Admin Center",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoCoeCommandCenter",
       "displayName": "Contoso CoE Command Center",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_dataGovernanceRegister",
       "displayName": "Data Governance Register",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     }
   ],
   "canvasApps": [
@@ -132,73 +216,121 @@
       "uniqueName": "con_contosoFieldQuoteCapture",
       "displayName": "Contoso Field Quote Capture",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.55 Estimate and quote sales",
+        "processCatalogL3": "85.55.200 Define sales quotations"
+      }
     },
     {
       "uniqueName": "con_contosoServiceCoeInsights",
       "displayName": "Contoso Service CoE Insights",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "uniqueName": "con_contosoFieldServiceMobile",
       "displayName": "Contoso Field Service Mobile",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.100 Perform service tasks"
+      }
     },
     {
       "uniqueName": "con_contosoTimeExpenseCapture",
       "displayName": "Contoso Time & Expense Capture",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoEventCheckIn",
       "displayName": "Contoso Event Check-in",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_consentStewardPortal",
       "displayName": "Consent Steward Portal",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.120 Configure and manage portals"
+      }
     },
     {
       "uniqueName": "con_capexRequestIntake",
       "displayName": "Capex Request Intake",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoWarehouseCount",
       "displayName": "Contoso Warehouse Count (Canvas)",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
+      }
     },
     {
       "uniqueName": "con_contosoCurbsideConcierge",
       "displayName": "Contoso Curbside Concierge",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_contosoTalentMarketplace",
       "displayName": "Contoso Talent Marketplace",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.050 Recruit new talent"
+      }
     },
     {
       "uniqueName": "con_contosoSupervisorCoaching",
       "displayName": "Contoso Supervisor Coaching",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_makerAttestation",
       "displayName": "Maker Attestation (Canvas)",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     }
   ]
 }

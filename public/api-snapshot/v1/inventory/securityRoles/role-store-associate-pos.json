@@ -1,1 +1,1 @@
-{"item":{"id":"role-store-associate-pos","name":"Store Associate (POS)","tags":{"persona":"Cashier / Sales Associate"},"solution":"ContosoCommerce"},"metadata":{"type":"securityRoles","id":"role-store-associate-pos"}}
+{"item":{"id":"role-store-associate-pos","name":"Store Associate (POS)","tags":{"persona":"Cashier / Sales Associate","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoCommerce"},"metadata":{"type":"securityRoles","id":"role-store-associate-pos"}}

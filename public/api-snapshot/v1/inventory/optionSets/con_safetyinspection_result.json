@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoFieldService","schemaName":"con_safetyinspection_result","displayName":"Safety Inspection Result"},"metadata":{"type":"optionSets","id":"con_safetyinspection_result"}}
+{"item":{"tags":{"processCatalogL1":"55.00 Hire to retire","processCatalogL2":"55.30 Manage workplace compliance","processCatalogL3":"55.30.020 Document safety protocols"},"solution":"ContosoFieldService","schemaName":"con_safetyinspection_result","displayName":"Safety Inspection Result"},"metadata":{"type":"optionSets","id":"con_safetyinspection_result"}}

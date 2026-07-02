@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_abcclassification","displayName":"ABC Classification"},"metadata":{"type":"optionSets","id":"con_abcclassification"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSupplyChain","schemaName":"con_abcclassification","displayName":"ABC Classification"},"metadata":{"type":"optionSets","id":"con_abcclassification"}}

@@ -1,1 +1,1 @@
-{"item":{"id":"role-con-deal-desk-approver","name":"Con Deal Desk Approver","tags":{"persona":"Deal Desk / Finance Approver"},"solution":"ContosoSales"},"metadata":{"type":"securityRoles","id":"role-con-deal-desk-approver"}}
+{"item":{"id":"role-con-deal-desk-approver","name":"Con Deal Desk Approver","tags":{"persona":"Deal Desk / Finance Approver","processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.45 Pursue opportunities","processCatalogL3":""},"solution":"ContosoSales"},"metadata":{"type":"securityRoles","id":"role-con-deal-desk-approver"}}

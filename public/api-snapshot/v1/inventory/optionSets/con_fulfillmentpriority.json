@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSales","schemaName":"con_fulfillmentpriority","displayName":"Fulfillment Priority"},"metadata":{"type":"optionSets","id":"con_fulfillmentpriority"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSales","schemaName":"con_fulfillmentpriority","displayName":"Fulfillment Priority"},"metadata":{"type":"optionSets","id":"con_fulfillmentpriority"}}

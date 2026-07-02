@@ -1,1 +1,1 @@
-{"item":{"id":"dash-humanResources","name":"Human Resources Overview","tags":{},"solution":"ContosoHumanResources","_relApps":["Contoso Human Resources"]},"metadata":{"type":"dashboards","id":"dash-humanResources"}}
+{"item":{"id":"dash-humanResources","name":"Human Resources Overview","tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoHumanResources","_relApps":["Contoso Human Resources"]},"metadata":{"type":"dashboards","id":"dash-humanResources"}}

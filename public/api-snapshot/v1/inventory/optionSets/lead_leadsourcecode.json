@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_SalesPro","schemaName":"lead_leadsourcecode","displayName":"Lead Source"},"metadata":{"type":"optionSets","id":"lead_leadsourcecode"}}
+{"item":{"tags":{"processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.25 Identify and qualify leads","processCatalogL3":"85.25.100 Manage lead identification process"},"solution":"msdyn_SalesPro","schemaName":"lead_leadsourcecode","displayName":"Lead Source"},"metadata":{"type":"optionSets","id":"lead_leadsourcecode"}}

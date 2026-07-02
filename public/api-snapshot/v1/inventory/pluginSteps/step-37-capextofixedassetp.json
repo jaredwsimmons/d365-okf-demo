@@ -1,1 +1,1 @@
-{"item":{"id":"step-37-capextofixedassetp","name":"Update of con_capexrequest — CapexToFixedAssetPlugin","tags":{},"solution":"ContosoFinance"},"metadata":{"type":"pluginSteps","id":"step-37-capextofixedassetp"}}
+{"item":{"id":"step-37-capextofixedassetp","name":"Update of con_capexrequest — CapexToFixedAssetPlugin","tags":{"processCatalogL1":"10.00 Acquire to dispose","processCatalogL2":"10.20 Acquire assets","processCatalogL3":"10.20.200 Budget fixed assets"},"solution":"ContosoFinance"},"metadata":{"type":"pluginSteps","id":"step-37-capextofixedassetp"}}

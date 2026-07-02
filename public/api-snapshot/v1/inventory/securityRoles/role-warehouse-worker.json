@@ -1,1 +1,1 @@
-{"item":{"id":"role-warehouse-worker","name":"Warehouse Worker","tags":{"persona":"Warehouse Operative"},"solution":"ContosoSupplyChain"},"metadata":{"type":"securityRoles","id":"role-warehouse-worker"}}
+{"item":{"id":"role-warehouse-worker","name":"Warehouse Worker","tags":{"persona":"Warehouse Operative","processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"60.10 Manage warehouse operations","processCatalogL3":"60.10.010 Define warehouse processes"},"solution":"ContosoSupplyChain"},"metadata":{"type":"securityRoles","id":"role-warehouse-worker"}}

@@ -1,1 +1,1 @@
-{"item":{"id":"role-contoso-segment-activator","name":"Contoso Segment Activator","tags":{"persona":"Marketing Operations"},"solution":"ContosoCustomerInsights"},"metadata":{"type":"securityRoles","id":"role-contoso-segment-activator"}}
+{"item":{"id":"role-contoso-segment-activator","name":"Contoso Segment Activator","tags":{"persona":"Marketing Operations","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoCustomerInsights"},"metadata":{"type":"securityRoles","id":"role-contoso-segment-activator"}}

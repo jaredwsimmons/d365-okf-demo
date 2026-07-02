@@ -1,1 +1,1 @@
-{"item":{"name":"Sales Summary","tags":{},"solution":"ContosoSales"},"metadata":{"type":"reports","id":"Sales Summary"}}
+{"item":{"name":"Sales Summary","tags":{"processCatalogL1":"65.00 Order to cash","processCatalogL2":"65.05 Develop sales policies","processCatalogL3":"65.05.020 Manage sales channels"},"solution":"ContosoSales"},"metadata":{"type":"reports","id":"Sales Summary"}}

@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_FinanceAndOperations","schemaName":"vendinvoiceapprovalstatus","displayName":"Vendor Invoice Approval Status"},"metadata":{"type":"optionSets","id":"vendinvoiceapprovalstatus"}}
+{"item":{"tags":{"processCatalogL1":"65.00 Order to cash","processCatalogL2":"65.30 Manage accounts receivable","processCatalogL3":"65.30.010 Issue sales invoices"},"solution":"msdyn_FinanceAndOperations","schemaName":"vendinvoiceapprovalstatus","displayName":"Vendor Invoice Approval Status"},"metadata":{"type":"optionSets","id":"vendinvoiceapprovalstatus"}}

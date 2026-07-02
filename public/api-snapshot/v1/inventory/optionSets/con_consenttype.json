@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoCustomerInsights","schemaName":"con_consenttype","displayName":"Consent Type"},"metadata":{"type":"optionSets","id":"con_consenttype"}}
+{"item":{"tags":{"processCatalogL1":"99.00 Administer to operate","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoCustomerInsights","schemaName":"con_consenttype","displayName":"Consent Type"},"metadata":{"type":"optionSets","id":"con_consenttype"}}

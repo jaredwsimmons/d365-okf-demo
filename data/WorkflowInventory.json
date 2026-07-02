@@ -8,8 +8,9 @@
       "solution": "ContosoSales",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
       }
     },
     {
@@ -20,8 +21,9 @@
       "solution": "ContosoSales",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
       }
     },
     {
@@ -32,8 +34,9 @@
       "solution": "ContosoSales",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.03"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
       }
     },
     {
@@ -44,8 +47,9 @@
       "solution": "ContosoSales",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.04"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
       }
     },
     {
@@ -56,8 +60,9 @@
       "solution": "ContosoSales",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
       }
     },
     {
@@ -68,8 +73,9 @@
       "solution": "ContosoSales",
       "category": "async",
       "tags": {
-        "processCatalogL1": "SA.00 Sales",
-        "processCatalogL2": "SA.02"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
       }
     },
     {
@@ -80,8 +86,9 @@
       "solution": "ContosoCustomerService",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
       }
     },
     {
@@ -92,8 +99,9 @@
       "solution": "ContosoCustomerService",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
       }
     },
     {
@@ -104,8 +112,9 @@
       "solution": "ContosoCustomerService",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.30"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.40 Manage and work on cases",
+        "processCatalogL3": "20.40.040 Re-assign case to another team/individual"
       }
     },
     {
@@ -116,8 +125,9 @@
       "solution": "ContosoCustomerService",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.40"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
       }
     },
     {
@@ -128,8 +138,9 @@
       "solution": "ContosoCustomerService",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.10"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.040 Create a case manually"
       }
     },
     {
@@ -140,8 +151,9 @@
       "solution": "ContosoCustomerService",
       "category": "async",
       "tags": {
-        "processCatalogL1": "CS.00 Customer Service Management",
-        "processCatalogL2": "CS.20"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
       }
     },
     {
@@ -152,8 +164,9 @@
       "solution": "ContosoFieldService",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
       }
     },
     {
@@ -164,8 +177,9 @@
       "solution": "ContosoFieldService",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
       }
     },
     {
@@ -176,8 +190,9 @@
       "solution": "ContosoFieldService",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.03"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.200 Maintain open service requests"
       }
     },
     {
@@ -188,8 +203,9 @@
       "solution": "ContosoFieldService",
       "category": "async",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.04"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
       }
     },
     {
@@ -200,8 +216,9 @@
       "solution": "ContosoFieldService",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.01"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.300 Manage service truck inventory"
       }
     },
     {
@@ -212,8 +229,9 @@
       "solution": "ContosoFieldService",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.02"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.600 Manage service assets"
       }
     },
     {
@@ -224,8 +242,9 @@
       "solution": "ContosoFieldService",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "FS.00 Field Service",
-        "processCatalogL2": "FS.03"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.400 Deploy service resources"
       }
     },
     {
@@ -236,8 +255,9 @@
       "solution": "ContosoProjectOperations",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.020 Define project scope"
       }
     },
     {
@@ -248,8 +268,9 @@
       "solution": "ContosoProjectOperations",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
       }
     },
     {
@@ -260,8 +281,9 @@
       "solution": "ContosoProjectOperations",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.03"
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.45 Analyze service performance",
+        "processCatalogL3": "95.45.300 Analyze service profitability"
       }
     },
     {
@@ -272,8 +294,9 @@
       "solution": "ContosoProjectOperations",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.04"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.30 Plan projects",
+        "processCatalogL3": "80.30.050 Assign project resources"
       }
     },
     {
@@ -284,8 +307,9 @@
       "solution": "ContosoProjectOperations",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.01"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.020 Track project expenses"
       }
     },
     {
@@ -296,8 +320,9 @@
       "solution": "ContosoProjectOperations",
       "category": "async",
       "tags": {
-        "processCatalogL1": "PJ.00 Project Operations",
-        "processCatalogL2": "PJ.02"
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
       }
     },
     {
@@ -308,8 +333,9 @@
       "solution": "ContosoMarketing",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
       }
     },
     {
@@ -320,8 +346,9 @@
       "solution": "ContosoMarketing",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
       }
     },
     {
@@ -332,8 +359,9 @@
       "solution": "ContosoMarketing",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.03"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.45 Manage marketing campaigns",
+        "processCatalogL3": "30.45.200 Run events"
       }
     },
     {
@@ -344,8 +372,9 @@
       "solution": "ContosoMarketing",
       "category": "async",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.04"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.700 Comply with customer data regulations"
       }
     },
     {
@@ -356,8 +385,9 @@
       "solution": "ContosoMarketing",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.01"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
       }
     },
     {
@@ -368,8 +398,9 @@
       "solution": "ContosoMarketing",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "MK.00 Marketing",
-        "processCatalogL2": "MK.02"
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.35 Prepare marketing campaigns",
+        "processCatalogL3": "30.35.200 Develop campaign themes and messages"
       }
     },
     {
@@ -380,8 +411,9 @@
       "solution": "ContosoCustomerInsights",
       "category": "async",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01"
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.65 Analyze business performance",
+        "processCatalogL3": "50.65.525 Analyze and segment customers and markets"
       }
     },
     {
@@ -392,8 +424,9 @@
       "solution": "ContosoCustomerInsights",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": ""
       }
     },
     {
@@ -404,8 +437,9 @@
       "solution": "ContosoCustomerInsights",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.03"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.030 Monitor data synchronization failures"
       }
     },
     {
@@ -416,8 +450,9 @@
       "solution": "ContosoCustomerInsights",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.04"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -428,8 +463,9 @@
       "solution": "ContosoCustomerInsights",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -440,8 +476,9 @@
       "solution": "ContosoCustomerInsights",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "CI.00 Customer Data Platform (Unified Customer Data)",
-        "processCatalogL2": "CI.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
       }
     },
     {
@@ -452,8 +489,9 @@
       "solution": "ContosoFinance",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.01"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -464,8 +502,9 @@
       "solution": "ContosoFinance",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02"
+        "processCatalogL1": "10.00 Acquire to dispose",
+        "processCatalogL2": "10.20 Acquire assets",
+        "processCatalogL3": "10.20.200 Budget fixed assets"
       }
     },
     {
@@ -476,8 +515,9 @@
       "solution": "ContosoFinance",
       "category": "async",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.03"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.080 Manage customer collections"
       }
     },
     {
@@ -488,8 +528,9 @@
       "solution": "ContosoFinance",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.04"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -500,8 +541,9 @@
       "solution": "ContosoFinance",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.01"
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -512,8 +554,9 @@
       "solution": "ContosoFinance",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "FI.00 Finance",
-        "processCatalogL2": "FI.02"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
       }
     },
     {
@@ -524,8 +567,9 @@
       "solution": "ContosoSupplyChain",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.10"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
       }
     },
     {
@@ -536,8 +580,9 @@
       "solution": "ContosoSupplyChain",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.20"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.10 Manage warehouse operations",
+        "processCatalogL3": "60.10.010 Define warehouse processes"
       }
     },
     {
@@ -548,8 +593,9 @@
       "solution": "ContosoSupplyChain",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.30"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
       }
     },
     {
@@ -560,8 +606,9 @@
       "solution": "ContosoSupplyChain",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.40"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.40 Process outbound goods",
+        "processCatalogL3": "60.40.060 Load goods for shipping"
       }
     },
     {
@@ -572,8 +619,9 @@
       "solution": "ContosoSupplyChain",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.50"
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
       }
     },
     {
@@ -584,8 +632,9 @@
       "solution": "ContosoSupplyChain",
       "category": "async",
       "tags": {
-        "processCatalogL1": "SC.00 Supply Chain Management",
-        "processCatalogL2": "SC.10"
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.040 Count inventory"
       }
     },
     {
@@ -596,8 +645,9 @@
       "solution": "ContosoCommerce",
       "category": "async",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.05 Develop sales policies",
+        "processCatalogL3": "65.05.020 Manage sales channels"
       }
     },
     {
@@ -608,8 +658,9 @@
       "solution": "ContosoCommerce",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -620,8 +671,9 @@
       "solution": "ContosoCommerce",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03"
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -632,8 +684,9 @@
       "solution": "ContosoCommerce",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.04"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.300 Manage store operations"
       }
     },
     {
@@ -644,8 +697,9 @@
       "solution": "ContosoCommerce",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.01"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.100 Process customer payments"
       }
     },
     {
@@ -656,8 +710,9 @@
       "solution": "ContosoCommerce",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.02"
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
       }
     },
     {
@@ -668,8 +723,9 @@
       "solution": "ContosoCommerce",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CO.00 Commerce & Omnichannel Retail",
-        "processCatalogL2": "CO.03"
+        "processCatalogL1": "40.00 Design to retire",
+        "processCatalogL2": "40.50 Manage active products",
+        "processCatalogL3": "40.50.400 Manage product pricing"
       }
     },
     {
@@ -680,8 +736,9 @@
       "solution": "ContosoHumanResources",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
       }
     },
     {
@@ -692,8 +749,9 @@
       "solution": "ContosoHumanResources",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.040 Request time off"
       }
     },
     {
@@ -704,8 +762,9 @@
       "solution": "ContosoHumanResources",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.03"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -716,8 +775,9 @@
       "solution": "ContosoHumanResources",
       "category": "async",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.04"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -728,8 +788,9 @@
       "solution": "ContosoHumanResources",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.05"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -740,8 +801,9 @@
       "solution": "ContosoHumanResources",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.01"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.40 Manage performance and growth",
+        "processCatalogL3": "55.40.080 Asses worker performance"
       }
     },
     {
@@ -752,8 +814,9 @@
       "solution": "ContosoHumanResources",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "HR.00 Human Resources",
-        "processCatalogL2": "HR.02"
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.060 Hire for open positions"
       }
     },
     {
@@ -764,8 +827,9 @@
       "solution": "ContosoContactCenter",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.10"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -776,8 +840,9 @@
       "solution": "ContosoContactCenter",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -788,8 +853,9 @@
       "solution": "ContosoContactCenter",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.30"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -800,8 +866,9 @@
       "solution": "ContosoContactCenter",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.40"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
       }
     },
     {
@@ -812,8 +879,9 @@
       "solution": "ContosoContactCenter",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.10"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
       }
     },
     {
@@ -824,8 +892,9 @@
       "solution": "ContosoContactCenter",
       "category": "async",
       "tags": {
-        "processCatalogL1": "CC.00 Contact Center / Omnichannel Engagement",
-        "processCatalogL2": "CC.20"
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": ""
       }
     },
     {
@@ -836,8 +905,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -848,8 +918,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.010 Configure and administer workflows"
       }
     },
     {
@@ -860,8 +931,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "cloudflow",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.050 Monitor compliance"
       }
     },
     {
@@ -872,8 +944,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "realtime",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.04"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -884,8 +957,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "businessrule",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.01"
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.15 Manage customer relationships",
+        "processCatalogL3": "85.15.100 Maintain contacts and accounts"
       }
     },
     {
@@ -896,8 +970,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "bpf",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.02"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.60 Manage system compliance",
+        "processCatalogL3": "99.60.020 Establish compliance policies and procedures"
       }
     },
     {
@@ -908,8 +983,9 @@
       "solution": "ContosoPlatformGovernance",
       "category": "async",
       "tags": {
-        "processCatalogL1": "PL.00 Platform & Governance",
-        "processCatalogL2": "PL.03"
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.01 Implement solutions",
+        "processCatalogL3": "99.01.100 Implement cloud solutions"
       }
     }
   ]

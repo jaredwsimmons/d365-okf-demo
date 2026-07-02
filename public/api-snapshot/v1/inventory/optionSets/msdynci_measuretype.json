@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdynci_CustomerInsights","schemaName":"msdynci_measuretype","displayName":"Measure Type"},"metadata":{"type":"optionSets","id":"msdynci_measuretype"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdynci_CustomerInsights","schemaName":"msdynci_measuretype","displayName":"Measure Type"},"metadata":{"type":"optionSets","id":"msdynci_measuretype"}}

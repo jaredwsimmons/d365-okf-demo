@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoCustomerInsights","schemaName":"con_loyaltytier","displayName":"Contoso Loyalty Tier"},"metadata":{"type":"optionSets","id":"con_loyaltytier"}}
+{"item":{"tags":{"processCatalogL1":"65.00 Order to cash","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoCustomerInsights","schemaName":"con_loyaltytier","displayName":"Contoso Loyalty Tier"},"metadata":{"type":"optionSets","id":"con_loyaltytier"}}

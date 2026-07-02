@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoMarketing","schemaName":"con_dataresidencyregion","displayName":"Data Residency Region"},"metadata":{"type":"optionSets","id":"con_dataresidencyregion"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoMarketing","schemaName":"con_dataresidencyregion","displayName":"Data Residency Region"},"metadata":{"type":"optionSets","id":"con_dataresidencyregion"}}

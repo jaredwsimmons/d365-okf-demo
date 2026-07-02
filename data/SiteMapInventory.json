@@ -3,107 +3,191 @@
     {
       "name": "Contoso Sales Hub Sitemap",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
+      }
     },
     {
       "name": "Contoso Deal Desk Sitemap",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Customer Service Hub Sitemap",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "name": "Field Service Sitemap",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "name": "Project Operations Sitemap",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
+      }
     },
     {
       "name": "Contoso Delivery PMO Sitemap",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Customer Insights - Journeys Sitemap",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Campaign Intake Sitemap",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Customer Insights - Data Sitemap",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     },
     {
       "name": "CI Data Governance Console Sitemap",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     },
     {
       "name": "Contoso Finance Operations Sitemap",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Budgeting & Capex Sitemap",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Supply Chain Hub Sitemap",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Commerce Headquarters Sitemap",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Loyalty & Engagement Sitemap",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso Human Resources Sitemap",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Employee Self Service Sitemap",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "name": "Customer Service workspace Sitemap",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.500 Plan service contractor work"
+      }
     },
     {
       "name": "Omnichannel Admin Center Sitemap",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Contoso CoE Command Center Sitemap",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "name": "Data Governance Register Sitemap",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.55 Manage data",
+        "processCatalogL3": "99.55.010 Manage the initial synchronization of data"
+      }
     }
   ]
 }

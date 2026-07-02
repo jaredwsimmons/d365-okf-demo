@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoCommerce","schemaName":"con_pricematchapprovalstatus","displayName":"Contoso Price Match Approval Status"},"metadata":{"type":"optionSets","id":"con_pricematchapprovalstatus"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoCommerce","schemaName":"con_pricematchapprovalstatus","displayName":"Contoso Price Match Approval Status"},"metadata":{"type":"optionSets","id":"con_pricematchapprovalstatus"}}

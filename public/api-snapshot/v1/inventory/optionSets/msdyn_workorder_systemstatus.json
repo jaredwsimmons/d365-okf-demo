@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_FieldService","schemaName":"msdyn_workorder_systemstatus","displayName":"Work Order System Status"},"metadata":{"type":"optionSets","id":"msdyn_workorder_systemstatus"}}
+{"item":{"tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"95.15 Plan service work","processCatalogL3":"95.15.500 Plan service contractor work"},"solution":"msdyn_FieldService","schemaName":"msdyn_workorder_systemstatus","displayName":"Work Order System Status"},"metadata":{"type":"optionSets","id":"msdyn_workorder_systemstatus"}}

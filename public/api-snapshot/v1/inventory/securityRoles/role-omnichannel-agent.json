@@ -1,1 +1,1 @@
-{"item":{"id":"role-omnichannel-agent","name":"Omnichannel agent","tags":{"persona":"Contact Center Agent"},"solution":"msdyn_OmnichannelBase"},"metadata":{"type":"securityRoles","id":"role-omnichannel-agent"}}
+{"item":{"id":"role-omnichannel-agent","name":"Omnichannel agent","tags":{"persona":"Contact Center Agent","processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_OmnichannelBase"},"metadata":{"type":"securityRoles","id":"role-omnichannel-agent"}}

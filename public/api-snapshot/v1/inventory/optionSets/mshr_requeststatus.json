@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdynhr_HumanResources","schemaName":"mshr_requeststatus","displayName":"Leave Request Status"},"metadata":{"type":"optionSets","id":"mshr_requeststatus"}}
+{"item":{"tags":{"processCatalogL1":"55.00 Hire to retire","processCatalogL2":"55.50 Manage time and attendance","processCatalogL3":"55.50.010 Develop leave and absence policies"},"solution":"msdynhr_HumanResources","schemaName":"mshr_requeststatus","displayName":"Leave Request Status"},"metadata":{"type":"optionSets","id":"mshr_requeststatus"}}

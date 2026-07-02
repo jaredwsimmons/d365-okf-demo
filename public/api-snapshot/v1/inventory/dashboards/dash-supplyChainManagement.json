@@ -1,1 +1,1 @@
-{"item":{"id":"dash-supplyChainManagement","name":"Supply Chain Management Overview","tags":{},"solution":"ContosoSupplyChain","_relApps":["Contoso Supply Chain Hub"]},"metadata":{"type":"dashboards","id":"dash-supplyChainManagement"}}
+{"item":{"id":"dash-supplyChainManagement","name":"Supply Chain Management Overview","tags":{"processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSupplyChain","_relApps":["Contoso Supply Chain Hub"]},"metadata":{"type":"dashboards","id":"dash-supplyChainManagement"}}

@@ -1,1 +1,1 @@
-{"item":{"id":"role-procurement-manager","name":"Procurement Manager","tags":{"persona":"Procurement Manager"},"solution":"ContosoSupplyChain"},"metadata":{"type":"securityRoles","id":"role-procurement-manager"}}
+{"item":{"id":"role-procurement-manager","name":"Procurement Manager","tags":{"persona":"Procurement Manager","processCatalogL1":"75.00 Source to pay","processCatalogL2":"75.40 Procure goods and services","processCatalogL3":"75.40.010 Raise purchase requisitions"},"solution":"ContosoSupplyChain"},"metadata":{"type":"securityRoles","id":"role-procurement-manager"}}

@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSales","schemaName":"con_lifecyclestage","displayName":"Product Lifecycle Stage"},"metadata":{"type":"optionSets","id":"con_lifecyclestage"}}
+{"item":{"tags":{"processCatalogL1":"60.00 Inventory to deliver","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSales","schemaName":"con_lifecyclestage","displayName":"Product Lifecycle Stage"},"metadata":{"type":"optionSets","id":"con_lifecyclestage"}}

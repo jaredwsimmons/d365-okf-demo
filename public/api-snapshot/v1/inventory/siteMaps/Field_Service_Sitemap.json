@@ -1,1 +1,1 @@
-{"item":{"name":"Field Service Sitemap","tags":{},"solution":"ContosoFieldService","_relApps":["Field Service"]},"metadata":{"type":"siteMaps","id":"Field Service Sitemap"}}
+{"item":{"name":"Field Service Sitemap","tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"95.05 Develop service strategy","processCatalogL3":"95.05.100 Develop service pricing strategy"},"solution":"ContosoFieldService","_relApps":["Field Service"]},"metadata":{"type":"siteMaps","id":"Field Service Sitemap"}}

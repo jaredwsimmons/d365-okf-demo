@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_hazmatclass","displayName":"HazMat Class"},"metadata":{"type":"optionSets","id":"con_hazmatclass"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSupplyChain","schemaName":"con_hazmatclass","displayName":"HazMat Class"},"metadata":{"type":"optionSets","id":"con_hazmatclass"}}

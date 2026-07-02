@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoHumanResources","schemaName":"con_onboardingcategory","displayName":"Onboarding Task Category"},"metadata":{"type":"optionSets","id":"con_onboardingcategory"}}
+{"item":{"tags":{"processCatalogL1":"55.00 Hire to retire","processCatalogL2":"55.10 Recruit and onboard talent","processCatalogL3":"55.10.070 Onboard new employees"},"solution":"ContosoHumanResources","schemaName":"con_onboardingcategory","displayName":"Onboarding Task Category"},"metadata":{"type":"optionSets","id":"con_onboardingcategory"}}

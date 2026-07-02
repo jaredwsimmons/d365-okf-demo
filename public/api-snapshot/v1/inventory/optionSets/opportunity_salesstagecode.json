@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_SalesPro","schemaName":"opportunity_salesstagecode","displayName":"Sales Stage"},"metadata":{"type":"optionSets","id":"opportunity_salesstagecode"}}
+{"item":{"tags":{"processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.45 Pursue opportunities","processCatalogL3":"85.45.200 Manage opportunity process"},"solution":"msdyn_SalesPro","schemaName":"opportunity_salesstagecode","displayName":"Sales Stage"},"metadata":{"type":"optionSets","id":"opportunity_salesstagecode"}}

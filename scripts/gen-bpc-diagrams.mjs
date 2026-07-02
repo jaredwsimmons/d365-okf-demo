@@ -37,15 +37,16 @@ for (const l2 of PC.l2Processes || []) (l2ByL1[l2.parentL1Code] ||= []).push(l2)
 const l3ByL2 = {};
 for (const l3 of PC.l3Processes || []) (l3ByL2[l3.parentL2Code] ||= []).push(l3);
 
+const MAX_STAGES = 8; // keep flow SVGs readable when an L1/L2 has many children
 const FLOWS = [];
 for (const l1 of PC.l1Processes || []) {
   const area = slug(l1.title);
   const l2s = l2ByL1[l1.code] || [];
-  const stages = l2s.map((l2) => l2.title);
+  const stages = l2s.map((l2) => l2.title).slice(0, MAX_STAGES);
   FLOWS.push({ code: l1.code, area, file: `${slug(l1.title)}-flow.svg`, name: `${l1.title} — End-to-End Flow`, stages: stages.length >= 2 ? stages : ["Initiate", "Process", "Review", "Complete"] });
   // detailed sub-flow for the first L2 that has L3 steps
   const withL3 = l2s.find((l2) => (l3ByL2[l2.code] || []).length >= 2);
-  if (withL3) FLOWS.push({ code: withL3.code, area, file: `${slug(withL3.title)}-subflow.svg`, name: `${withL3.title} — Detailed Flow`, stages: (l3ByL2[withL3.code] || []).map((l3) => l3.title) });
+  if (withL3) FLOWS.push({ code: withL3.code, area, file: `${slug(withL3.title)}-subflow.svg`, name: `${withL3.title} — Detailed Flow`, stages: (l3ByL2[withL3.code] || []).map((l3) => l3.title).slice(0, MAX_STAGES) });
 }
 
 // ── SVG geometry ───────────────────────────────────────────────────

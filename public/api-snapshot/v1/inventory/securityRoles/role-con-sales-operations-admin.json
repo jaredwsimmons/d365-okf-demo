@@ -1,1 +1,1 @@
-{"item":{"id":"role-con-sales-operations-admin","name":"Con Sales Operations Admin","tags":{"persona":"Sales Ops Administrator"},"solution":"ContosoSales"},"metadata":{"type":"securityRoles","id":"role-con-sales-operations-admin"}}
+{"item":{"id":"role-con-sales-operations-admin","name":"Con Sales Operations Admin","tags":{"persona":"Sales Ops Administrator","processCatalogL1":"99.00 Administer to operate","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSales"},"metadata":{"type":"securityRoles","id":"role-con-sales-operations-admin"}}

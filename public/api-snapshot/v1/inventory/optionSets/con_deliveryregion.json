@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoProjectOperations","schemaName":"con_deliveryregion","displayName":"Delivery Region"},"metadata":{"type":"optionSets","id":"con_deliveryregion"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoProjectOperations","schemaName":"con_deliveryregion","displayName":"Delivery Region"},"metadata":{"type":"optionSets","id":"con_deliveryregion"}}

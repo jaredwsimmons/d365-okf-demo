@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdynmkt_CustomerInsightsJourneys","schemaName":"msdynmkt_channeltype","displayName":"Channel Type"},"metadata":{"type":"optionSets","id":"msdynmkt_channeltype"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdynmkt_CustomerInsightsJourneys","schemaName":"msdynmkt_channeltype","displayName":"Channel Type"},"metadata":{"type":"optionSets","id":"msdynmkt_channeltype"}}

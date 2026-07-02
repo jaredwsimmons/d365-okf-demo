@@ -1,1 +1,1 @@
-{"item":{"id":"role-retail-store-manager","name":"Retail Store Manager","tags":{"persona":"Store Manager"},"solution":"ContosoCommerce"},"metadata":{"type":"securityRoles","id":"role-retail-store-manager"}}
+{"item":{"id":"role-retail-store-manager","name":"Retail Store Manager","tags":{"persona":"Store Manager","processCatalogL1":"65.00 Order to cash","processCatalogL2":"65.20 Manage sales orders","processCatalogL3":"65.20.300 Manage store operations"},"solution":"ContosoCommerce"},"metadata":{"type":"securityRoles","id":"role-retail-store-manager"}}

@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_Commerce","schemaName":"msdyn_tendertype","displayName":"Tender Type"},"metadata":{"type":"optionSets","id":"msdyn_tendertype"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_Commerce","schemaName":"msdyn_tendertype","displayName":"Tender Type"},"metadata":{"type":"optionSets","id":"msdyn_tendertype"}}

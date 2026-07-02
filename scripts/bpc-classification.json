@@ -1,0 +1,3128 @@
+{
+  "metadata": {
+    "source": "Microsoft Dynamics 365 Business Process Catalog (DEC 2025.1) taxonomy",
+    "description": "Universal / Microsoft entity → BPC process classification rules: entity-to-L3 lookup, L2/L3 keyword rules for the D365 CE end-to-end processes, and web-resource entity-keyword patterns. Contains only generic Microsoft entity mappings.",
+    "demoNote": "Public demo copy of the product classifier: bespoke third-party vendor tokens scrubbed; extended to all 15 BPC end-to-end processes via bpc-classification-ext.json."
+  },
+  "integrations": {
+    "_description": "Customer-specific integrations belong in customer-config.json. This section is reserved for universal integration patterns."
+  },
+  "entityToProcess": {
+    "_description": "Direct entity-to-process mapping for precise L2/L3 tagging. Derived from EntityInventory.json and BPC taxonomy alignment.",
+    "fieldService": {
+      "msdyn_workorder": {
+        "l1": "95.00",
+        "l2": "95.25",
+        "l3": "95.25.200",
+        "name": "Maintain open service requests"
+      },
+      "msdyn_workorderproduct": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.300",
+        "name": "Manage service truck inventory"
+      },
+      "msdyn_workorderservice": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.100",
+        "name": "Perform service tasks"
+      },
+      "msdyn_workorderservicetask": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.100",
+        "name": "Perform service tasks"
+      },
+      "msdyn_workorderincident": {
+        "l1": "95.00",
+        "l2": "95.25",
+        "l3": "95.25.100",
+        "name": "Receive service requests"
+      },
+      "bookableresourcebooking": {
+        "l1": "95.00",
+        "l2": "95.25",
+        "l3": "95.25.950",
+        "name": "Schedule frontline workers"
+      },
+      "bookableresource": {
+        "l1": "95.00",
+        "l2": "95.25",
+        "l3": "95.25.400",
+        "name": "Deploy service resources"
+      },
+      "msdyn_resourcerequirement": {
+        "l1": "95.00",
+        "l2": "95.15",
+        "l3": "95.15.100",
+        "name": "Model service capacity"
+      },
+      "msdyn_resourceassignment": {
+        "l1": "95.00",
+        "l2": "95.25",
+        "l3": "95.25.400",
+        "name": "Deploy service resources"
+      },
+      "msdyn_agreement": {
+        "l1": "95.00",
+        "l2": "95.05",
+        "l3": "95.05.400",
+        "name": "Define service contracts"
+      },
+      "msdyn_agreementbookingsetup": {
+        "l1": "95.00",
+        "l2": "95.05",
+        "l3": "95.05.400",
+        "name": "Define service contracts"
+      },
+      "msdyn_agreementinvoicesetup": {
+        "l1": "95.00",
+        "l2": "95.05",
+        "l3": "95.05.400",
+        "name": "Define service contracts"
+      },
+      "msdyn_customerasset": {
+        "l1": "95.00",
+        "l2": "95.15",
+        "l3": "95.15.600",
+        "name": "Manage service assets"
+      },
+      "msdyn_incidenttype": {
+        "l1": "95.00",
+        "l2": "95.05",
+        "l3": "95.05.300",
+        "name": "Develop service catalogs"
+      },
+      "msdyn_servicetasktype": {
+        "l1": "95.00",
+        "l2": "95.05",
+        "l3": "95.05.300",
+        "name": "Develop service catalogs"
+      },
+      "msdyn_actual": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.800",
+        "name": "Record service timesheet"
+      },
+      "msdyn_rma": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.300",
+        "name": "Manage service truck inventory"
+      },
+      "msdyn_rtv": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.300",
+        "name": "Manage service truck inventory"
+      },
+      "msdyn_inventoryadjustment": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.300",
+        "name": "Manage service truck inventory"
+      },
+      "msdyn_inventorytransfer": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.300",
+        "name": "Manage service truck inventory"
+      },
+      "msdyn_productinventory": {
+        "l1": "95.00",
+        "l2": "95.35",
+        "l3": "95.35.300",
+        "name": "Manage service truck inventory"
+      }
+    },
+    "inventory": {
+      "msdyn_warehouse": {
+        "l1": "60.00",
+        "l2": "60.10",
+        "l3": "60.10.010",
+        "name": "Define warehouse processes"
+      },
+      "product": {
+        "l1": "60.00",
+        "l2": "60.10",
+        "l3": "60.10.010",
+        "name": "Define warehouse processes"
+      }
+    },
+    "procurement": {
+      "msdyn_purchaseorder": {
+        "l1": "75.00",
+        "l2": "75.40",
+        "l3": "75.40.030",
+        "name": "Issue purchase orders"
+      },
+      "msdyn_purchaseorderproduct": {
+        "l1": "75.00",
+        "l2": "75.40",
+        "l3": "75.40.030",
+        "name": "Issue purchase orders"
+      },
+      "msdyn_purchaseorderreceipt": {
+        "l1": "75.00",
+        "l2": "75.40",
+        "l3": "75.40.050",
+        "name": "Manage open purchases"
+      }
+    },
+    "financial": {
+      "invoice": {
+        "l1": "65.00",
+        "l2": "65.30",
+        "l3": "65.30.010",
+        "name": "Issue sales invoices"
+      },
+      "salesorder": {
+        "l1": "65.00",
+        "l2": "65.20",
+        "l3": "65.20.025",
+        "name": "Enter sales orders"
+      }
+    },
+    "construction": {
+      "msdyn_project": {
+        "l1": "80.00",
+        "l2": "80.30",
+        "l3": "80.30.020",
+        "name": "Define project scope"
+      },
+      "msdyn_projecttask": {
+        "l1": "80.00",
+        "l2": "80.30",
+        "l3": "80.30.040",
+        "name": "Plan project tasks"
+      },
+      "msdyn_projectteam": {
+        "l1": "80.00",
+        "l2": "80.30",
+        "l3": "80.30.050",
+        "name": "Assign project resources"
+      },
+      "msdyn_estimate": {
+        "l1": "80.00",
+        "l2": "80.20",
+        "l3": "80.20.010",
+        "name": "Estimate project contracts"
+      },
+      "msdyn_expense": {
+        "l1": "80.00",
+        "l2": "80.40",
+        "l3": "80.40.020",
+        "name": "Track project expenses"
+      },
+      "msdyn_contractline": {
+        "l1": "80.00",
+        "l2": "80.20",
+        "l3": "80.20.060",
+        "name": "Maintain project contracts"
+      }
+    },
+    "timeAndAttendance": {
+      "msdyn_timeentry": {
+        "l1": "55.00",
+        "l2": "55.50",
+        "l3": "55.50.050",
+        "name": "Record employee time"
+      }
+    },
+    "sales": {
+      "account": {
+        "l1": "85.00",
+        "l2": "85.15",
+        "l3": "85.15.100",
+        "name": "Maintain contacts and accounts"
+      },
+      "contact": {
+        "l1": "85.00",
+        "l2": "85.15",
+        "l3": "85.15.100",
+        "name": "Maintain contacts and accounts"
+      },
+      "lead": {
+        "l1": "85.00",
+        "l2": "85.25",
+        "l3": "85.25.100",
+        "name": "Manage lead identification process"
+      },
+      "opportunity": {
+        "l1": "85.00",
+        "l2": "85.45",
+        "l3": "85.45.100",
+        "name": "Identify opportunity"
+      },
+      "quote": {
+        "l1": "85.00",
+        "l2": "85.55",
+        "l3": "85.55.200",
+        "name": "Define sales quotations"
+      },
+      "quotedetail": {
+        "l1": "85.00",
+        "l2": "85.55",
+        "l3": "85.55.200",
+        "name": "Define sales quotations"
+      },
+      "competitor": {
+        "l1": "85.00",
+        "l2": "85.45",
+        "l3": "85.45.200",
+        "name": "Manage opportunity process"
+      }
+    },
+    "system": {
+      "systemuser": {
+        "l1": "99.00",
+        "l2": "99.25",
+        "l3": "99.25.040",
+        "name": "Onboard new users"
+      },
+      "team": {
+        "l1": "99.00",
+        "l2": "99.25",
+        "l3": "99.25.040",
+        "name": "Onboard new users"
+      },
+      "businessunit": {
+        "l1": "99.00",
+        "l2": "99.20",
+        "l3": "99.20.130",
+        "name": "Manage organizational structure"
+      },
+      "annotation": {
+        "l1": "99.00",
+        "l2": "99.55",
+        "l3": "99.55.020",
+        "name": "Manage data synchronization"
+      }
+    },
+    "caseManagement": {
+      "incident": {
+        "l1": "20.00",
+        "l2": "20.30",
+        "l3": "20.30.040",
+        "name": "Create a case manually"
+      }
+    }
+  },
+  "webResourcePatterns": {
+    "entityKeywords": {
+      "workorder": "95.00",
+      "booking": "95.00",
+      "agreement": "95.00",
+      "service": "95.00",
+      "technician": "95.00",
+      "dispatch": "95.00",
+      "resource": "95.00",
+      "schedule": "95.00",
+      "project": "80.00",
+      "construction": "80.00",
+      "estimate": "80.00",
+      "quoteline": "80.00",
+      "ticket": "20.00",
+      "incident": "20.00",
+      "case": "20.00",
+      "knowledge": "20.00",
+      "quote": "85.00",
+      "opportunity": "85.00",
+      "proposal": "85.00",
+      "lead": "85.00",
+      "invoice": "65.00",
+      "payment": "65.00",
+      "order": "65.00",
+      "purchase": "75.00",
+      "vendor": "75.00",
+      "requisition": "75.00",
+      "pcard": "75.00",
+      "timeentry": "55.00",
+      "payroll": "55.00",
+      "attendance": "55.00",
+      "inventory": "60.00",
+      "warehouse": "60.00",
+      "stock": "60.00",
+      "product": "60.00",
+      "setting": "99.00",
+      "config": "99.00",
+      "admin": "99.00",
+      "security": "99.00",
+      "role": "99.00",
+      "asset": "95.00",
+      "crew": "95.00",
+      "signature": "95.00",
+      "wbs": "80.00",
+      "milestone": "80.00",
+      "manpower": "80.00",
+      "geofence": "80.00",
+      "diary": "80.00",
+      "dailyreport": "80.00",
+      "billingschedule": "65.00",
+      "creditreturn": "65.00",
+      "transfer": "60.00",
+      "parttag": "60.00",
+      "trade": "55.00",
+      "timeclock": "55.00",
+      "jsa": "55.00",
+      "safety": "55.00",
+      "exception": "99.00",
+      "audit": "99.00",
+      "flowerror": "99.00",
+      "notification": "99.00"
+    },
+    "entityKeywordsL2": {
+      "_description": "L2-level process hints for more specific web resource tagging. Use entityToProcess for entity-level L3 precision.",
+      "workorder": "95.25",
+      "booking": "95.25",
+      "agreement": "95.05",
+      "dispatch": "95.25",
+      "schedule": "95.25",
+      "asset": "95.15",
+      "crew": "95.25",
+      "signature": "95.35",
+      "project": "80.30",
+      "construction": "80.40",
+      "estimate": "80.20",
+      "wbs": "80.30",
+      "milestone": "80.60",
+      "manpower": "80.30",
+      "invoice": "65.30",
+      "payment": "65.30",
+      "billing": "65.30",
+      "credit": "65.30",
+      "purchase": "75.40",
+      "vendor": "75.30",
+      "pcard": "75.50",
+      "requisition": "75.40",
+      "timeentry": "55.50",
+      "payroll": "55.70",
+      "timeclock": "55.50",
+      "trade": "55.05",
+      "jsa": "55.30",
+      "safety": "55.30",
+      "inventory": "60.20",
+      "warehouse": "60.10",
+      "transfer": "60.20",
+      "setting": "99.20",
+      "config": "99.20",
+      "security": "99.25",
+      "role": "99.25",
+      "exception": "99.65",
+      "audit": "99.25",
+      "notification": "99.45",
+      "portal": "99.20",
+      "email": "99.20"
+    },
+    "solutionMapping": {
+      "_description": "Customer-specific solution-to-process mappings belong in customer-config.json."
+    }
+  },
+  "processes": {
+    "95.00": {
+      "name": "Service to deliver",
+      "l1Code": "95.00",
+      "keywords": [
+        "workorder",
+        "work order",
+        "booking",
+        "service",
+        "technician",
+        "dispatch",
+        "field service",
+        "schedule",
+        "resource",
+        "incident",
+        "asset",
+        "maintenance",
+        "repair",
+        "install",
+        "wo ",
+        "wo_",
+        "woproduct",
+        "woservice",
+        "mobile",
+        "crew"
+      ],
+      "entityPatterns": [
+        "msdyn_workorder",
+        "msdyn_booking",
+        "msdyn_resourcerequirement",
+        "msdyn_agreement",
+        "msdyn_customerasset",
+        "msdyn_incidenttype",
+        "msdyn_servicetasktype",
+        "bookableresource",
+        "msdyn_actual",
+        "msdyn_resourceassignment"
+      ],
+      "l2": {
+        "95.05": {
+          "name": "Develop service strategy",
+          "keywords": [
+            "strategy",
+            "policy",
+            "pricing",
+            "catalog",
+            "contract",
+            "agreement",
+            "workflow",
+            "process",
+            "service type",
+            "incident type",
+            "priority matrix",
+            "entitlement"
+          ],
+          "l3": {
+            "95.05.100": {
+              "name": "Develop service pricing strategy",
+              "keywords": [
+                "price",
+                "pricing",
+                "rate",
+                "cost",
+                "markup",
+                "margin",
+                "discount"
+              ]
+            },
+            "95.05.200": {
+              "name": "Develop service policies",
+              "keywords": [
+                "policy",
+                "policies",
+                "rule",
+                "standard",
+                "terms"
+              ]
+            },
+            "95.05.300": {
+              "name": "Develop service catalogs",
+              "keywords": [
+                "catalog",
+                "service type",
+                "incident type",
+                "task type"
+              ]
+            },
+            "95.05.400": {
+              "name": "Define service contracts",
+              "keywords": [
+                "contract",
+                "agreement",
+                "term",
+                "SLA",
+                "entitlement",
+                "warranty"
+              ]
+            },
+            "95.05.600": {
+              "name": "Define service scheduling approach",
+              "keywords": [
+                "schedule",
+                "scheduling",
+                "approach",
+                "method",
+                "zone",
+                "territory"
+              ]
+            },
+            "95.05.650": {
+              "name": "Define service workflows",
+              "keywords": [
+                "workflow",
+                "process",
+                "automation",
+                "business rule"
+              ]
+            }
+          }
+        },
+        "95.15": {
+          "name": "Plan service work",
+          "keywords": [
+            "plan",
+            "capacity",
+            "forecast",
+            "demand",
+            "resource planning",
+            "look ahead"
+          ],
+          "l3": {
+            "95.15.100": {
+              "name": "Model service capacity",
+              "keywords": [
+                "capacity",
+                "model",
+                "resource capacity",
+                "utilization"
+              ]
+            },
+            "95.15.200": {
+              "name": "Plan service demand",
+              "keywords": [
+                "demand",
+                "forecast",
+                "predict",
+                "backlog"
+              ]
+            },
+            "95.15.600": {
+              "name": "Manage service assets",
+              "keywords": [
+                "asset",
+                "customer asset",
+                "equipment",
+                "functional location"
+              ]
+            }
+          }
+        },
+        "95.25": {
+          "name": "Manage service work",
+          "keywords": [
+            "manage",
+            "request",
+            "allocate",
+            "deploy",
+            "monitor",
+            "coordinate",
+            "dispatch",
+            "assign"
+          ],
+          "l3": {
+            "95.25.100": {
+              "name": "Receive service requests",
+              "keywords": [
+                "request",
+                "create",
+                "receive",
+                "case to work order",
+                "convert"
+              ]
+            },
+            "95.25.200": {
+              "name": "Maintain open service requests",
+              "keywords": [
+                "maintain",
+                "open",
+                "pending",
+                "in progress",
+                "status"
+              ]
+            },
+            "95.25.300": {
+              "name": "Allocate service parts inventory",
+              "keywords": [
+                "inventory",
+                "parts",
+                "allocate",
+                "stock",
+                "truck stock"
+              ]
+            },
+            "95.25.400": {
+              "name": "Deploy service resources",
+              "keywords": [
+                "deploy",
+                "schedule",
+                "assign",
+                "dispatch",
+                "resource scheduling",
+                "optimization",
+                "zone"
+              ]
+            },
+            "95.25.600": {
+              "name": "Monitor service assets",
+              "keywords": [
+                "monitor",
+                "IoT",
+                "sensor",
+                "alert",
+                "connected"
+              ]
+            },
+            "95.25.650": {
+              "name": "Coordinate service work with customer",
+              "keywords": [
+                "coordinate",
+                "customer",
+                "notify",
+                "communicate",
+                "reminder",
+                "address"
+              ]
+            },
+            "95.25.950": {
+              "name": "Schedule frontline workers",
+              "keywords": [
+                "schedule",
+                "frontline",
+                "technician",
+                "crew",
+                "booking"
+              ]
+            }
+          }
+        },
+        "95.35": {
+          "name": "Deliver services",
+          "keywords": [
+            "deliver",
+            "perform",
+            "execute",
+            "complete",
+            "field",
+            "on-site",
+            "mobile",
+            "signature",
+            "finalize"
+          ],
+          "l3": {
+            "95.35.025": {
+              "name": "Gather work order details",
+              "keywords": [
+                "gather",
+                "detail",
+                "information",
+                "collect",
+                "retrieve"
+              ]
+            },
+            "95.35.050": {
+              "name": "Track frontline worker location",
+              "keywords": [
+                "track",
+                "location",
+                "GPS",
+                "geolocation",
+                "geo"
+              ]
+            },
+            "95.35.100": {
+              "name": "Perform service tasks",
+              "keywords": [
+                "perform",
+                "task",
+                "service task",
+                "execute",
+                "work",
+                "checklist"
+              ]
+            },
+            "95.35.200": {
+              "name": "Collaborate on service work",
+              "keywords": [
+                "collaborate",
+                "remote assist",
+                "guides",
+                "teams",
+                "call guide"
+              ]
+            },
+            "95.35.300": {
+              "name": "Manage service truck inventory",
+              "keywords": [
+                "truck",
+                "van",
+                "inventory",
+                "consume",
+                "use product",
+                "warehouse"
+              ]
+            },
+            "95.35.400": {
+              "name": "Update asset register",
+              "keywords": [
+                "update asset",
+                "asset register",
+                "asset detail",
+                "customer asset"
+              ]
+            },
+            "95.35.600": {
+              "name": "Collect customer feedback",
+              "keywords": [
+                "feedback",
+                "survey",
+                "customer voice",
+                "satisfaction",
+                "NPS"
+              ]
+            },
+            "95.35.800": {
+              "name": "Record service timesheet",
+              "keywords": [
+                "time",
+                "timesheet",
+                "hours",
+                "duration",
+                "time entry",
+                "labor"
+              ]
+            },
+            "95.35.900": {
+              "name": "Update work order details",
+              "keywords": [
+                "update",
+                "work order",
+                "modify",
+                "change",
+                "line item"
+              ]
+            },
+            "95.35.950": {
+              "name": "Finalize work orders",
+              "keywords": [
+                "finalize",
+                "complete",
+                "close",
+                "finish",
+                "posted",
+                "signature",
+                "sign off",
+                "service report"
+              ]
+            }
+          }
+        },
+        "95.45": {
+          "name": "Analyze service performance",
+          "keywords": [
+            "analyze",
+            "report",
+            "dashboard",
+            "KPI",
+            "metric",
+            "performance",
+            "analytics"
+          ],
+          "l3": {
+            "95.45.100": {
+              "name": "Measure frontline worker service performance",
+              "keywords": [
+                "measure",
+                "frontline",
+                "technician",
+                "performance",
+                "productivity"
+              ]
+            },
+            "95.45.200": {
+              "name": "Optimize service performance",
+              "keywords": [
+                "optimize",
+                "improve",
+                "efficiency",
+                "utilization"
+              ]
+            },
+            "95.45.300": {
+              "name": "Analyze service profitability",
+              "keywords": [
+                "profitability",
+                "profit",
+                "margin",
+                "revenue",
+                "cost analysis"
+              ]
+            },
+            "95.45.500": {
+              "name": "Identify service trends",
+              "keywords": [
+                "trend",
+                "pattern",
+                "insight",
+                "analytics"
+              ]
+            },
+            "95.45.600": {
+              "name": "Monitor service quality",
+              "keywords": [
+                "quality",
+                "SLA",
+                "compliance",
+                "first-time fix"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "80.00": {
+      "name": "Project to profit",
+      "l1Code": "80.00",
+      "keywords": [
+        "project",
+        "construction",
+        "estimate",
+        "bid",
+        "job",
+        "WBS",
+        "milestone",
+        "deliverable",
+        "phase",
+        "contract line",
+        "cost plus",
+        "fixed price",
+        "weekly schedule"
+      ],
+      "entityPatterns": [
+        "msdyn_project",
+        "msdyn_projecttask",
+        "msdyn_projectteam",
+        "msdyn_estimate",
+        "msdyn_expense",
+        "msdyn_contractline",
+        "msdyn_orderlineresourcecategory"
+      ],
+      "l2": {
+        "80.10": {
+          "name": "Develop project strategy",
+          "keywords": [
+            "strategy",
+            "stakeholder",
+            "budget",
+            "risk",
+            "quality",
+            "governance"
+          ],
+          "l3": {}
+        },
+        "80.20": {
+          "name": "Manage project contracts",
+          "keywords": [
+            "agreement",
+            "scope",
+            "change order",
+            "contract line",
+            "contract"
+          ],
+          "l3": {
+            "80.20.010": {
+              "name": "Estimate project contracts",
+              "keywords": [
+                "estimate",
+                "line item",
+                "bid",
+                "quote line detail",
+                "qld",
+                "staging"
+              ]
+            },
+            "80.20.060": {
+              "name": "Maintain project contracts",
+              "keywords": [
+                "contract",
+                "detail",
+                "terms",
+                "billing method"
+              ]
+            },
+            "80.20.200": {
+              "name": "Define project stakeholders",
+              "keywords": [
+                "stakeholder",
+                "sponsor",
+                "owner",
+                "PM",
+                "superintendent"
+              ]
+            }
+          }
+        },
+        "80.30": {
+          "name": "Plan projects",
+          "keywords": [
+            "task",
+            "look ahead",
+            "schedule",
+            "resource",
+            "timeline",
+            "plan",
+            "WBS"
+          ],
+          "l3": {
+            "80.30.020": {
+              "name": "Define project scope",
+              "keywords": [
+                "WBS",
+                "breakdown",
+                "structure",
+                "hierarchy",
+                "phase"
+              ]
+            },
+            "80.30.040": {
+              "name": "Plan project tasks",
+              "keywords": [
+                "schedule",
+                "task",
+                "timeline",
+                "gantt",
+                "weekly schedule"
+              ]
+            },
+            "80.30.050": {
+              "name": "Assign project resources",
+              "keywords": [
+                "assign",
+                "resource",
+                "team",
+                "allocation",
+                "resource request",
+                "RM",
+                "resource manager"
+              ]
+            },
+            "80.30.070": {
+              "name": "Manage project budget",
+              "keywords": [
+                "budget",
+                "cost",
+                "estimate",
+                "forecast"
+              ]
+            }
+          }
+        },
+        "80.40": {
+          "name": "Manage project delivery",
+          "keywords": [
+            "deliver",
+            "execute",
+            "expense",
+            "time",
+            "progress",
+            "actual"
+          ],
+          "l3": {
+            "80.40.020": {
+              "name": "Track project expenses",
+              "keywords": [
+                "expense",
+                "cost",
+                "receipt",
+                "mileage"
+              ]
+            },
+            "80.40.050": {
+              "name": "Track project time",
+              "keywords": [
+                "time",
+                "timesheet",
+                "hours",
+                "labor",
+                "time entry"
+              ]
+            },
+            "80.40.115": {
+              "name": "Use and track project materials",
+              "keywords": [
+                "material",
+                "product",
+                "supply",
+                "equipment"
+              ]
+            }
+          }
+        },
+        "80.50": {
+          "name": "Manage project financials",
+          "keywords": [
+            "financial",
+            "invoice",
+            "billing",
+            "revenue",
+            "cost",
+            "actual",
+            "journal"
+          ],
+          "l3": {
+            "80.50.030": {
+              "name": "Correct project transactions",
+              "keywords": [
+                "cost",
+                "expense",
+                "budget variance",
+                "actual cost"
+              ]
+            },
+            "80.50.055": {
+              "name": "Invoice project transactions",
+              "keywords": [
+                "invoice",
+                "bill",
+                "billing",
+                "contract invoice"
+              ]
+            },
+            "80.50.060": {
+              "name": "Recognize project revenue",
+              "keywords": [
+                "revenue",
+                "recognize",
+                "recognition",
+                "WIP"
+              ]
+            }
+          }
+        },
+        "80.60": {
+          "name": "Analyze project performance",
+          "keywords": [
+            "project health",
+            "analyze",
+            "dashboard",
+            "monitor",
+            "report",
+            "KPI"
+          ],
+          "l3": {
+            "80.60.020": {
+              "name": "Monitor project status",
+              "keywords": [
+                "health",
+                "status",
+                "dashboard",
+                "RAG"
+              ]
+            },
+            "80.60.030": {
+              "name": "Analyze project metrics",
+              "keywords": [
+                "analyze",
+                "performance",
+                "metric",
+                "variance"
+              ]
+            },
+            "80.60.100": {
+              "name": "Monitor project risks",
+              "keywords": [
+                "risk",
+                "mitigation",
+                "contingency",
+                "issue"
+              ]
+            },
+            "80.60.200": {
+              "name": "Manage project quality",
+              "keywords": [
+                "quality",
+                "standard",
+                "compliance",
+                "inspection"
+              ]
+            },
+            "80.60.300": {
+              "name": "Measure project progress",
+              "keywords": [
+                "progress",
+                "status",
+                "milestone",
+                "percent complete",
+                "ETC",
+                "EAC"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "20.00": {
+      "name": "Case to resolution",
+      "l1Code": "20.00",
+      "keywords": [
+        "case",
+        "ticket",
+        "incident",
+        "support",
+        "help desk",
+        "service desk",
+        "resolution",
+        "request",
+        "problem",
+        "change"
+      ],
+      "entityPatterns": [
+        "incident",
+        "msdyn_case"
+      ],
+      "l2": {
+        "20.10": {
+          "name": "Establish a knowledge base",
+          "keywords": [
+            "knowledge",
+            "article",
+            "KB",
+            "documentation",
+            "FAQ"
+          ],
+          "l3": {
+            "20.10.010": {
+              "name": "Create knowledge base articles",
+              "keywords": [
+                "article",
+                "create",
+                "author",
+                "write"
+              ]
+            },
+            "20.10.030": {
+              "name": "Maintain knowledge base articles",
+              "keywords": [
+                "manage",
+                "publish",
+                "review",
+                "approve"
+              ]
+            }
+          }
+        },
+        "20.20": {
+          "name": "Define customer service operations",
+          "keywords": [
+            "define",
+            "setup",
+            "configure",
+            "operations",
+            "service operations"
+          ],
+          "l3": {
+            "20.20.020": {
+              "name": "Define queues and teams",
+              "keywords": [
+                "queue",
+                "routing",
+                "assignment",
+                "call queue"
+              ]
+            },
+            "20.20.030": {
+              "name": "Define routing rules",
+              "keywords": [
+                "channel",
+                "omnichannel",
+                "portal",
+                "email",
+                "web role"
+              ]
+            }
+          }
+        },
+        "20.30": {
+          "name": "Intake cases",
+          "keywords": [
+            "intake",
+            "create",
+            "submit",
+            "receive",
+            "log",
+            "categorize",
+            "triage"
+          ],
+          "l3": {
+            "20.30.020": {
+              "name": "Capture details about a case",
+              "keywords": [
+                "categorize",
+                "classify",
+                "triage",
+                "priority",
+                "urgency",
+                "impact",
+                "auto categorize"
+              ]
+            },
+            "20.30.030": {
+              "name": "Create a case from a channel",
+              "keywords": [
+                "create",
+                "channel",
+                "portal",
+                "email",
+                "ticket create",
+                "auto create"
+              ]
+            }
+          }
+        },
+        "20.40": {
+          "name": "Manage and work on cases",
+          "keywords": [
+            "manage",
+            "work",
+            "process",
+            "handle",
+            "update",
+            "escalate"
+          ],
+          "l3": {
+            "20.40.040": {
+              "name": "Re-assign case to another team/individual",
+              "keywords": [
+                "route",
+                "assign",
+                "escalate",
+                "ownership",
+                "transfer"
+              ]
+            },
+            "20.40.070": {
+              "name": "Track additional information against a case",
+              "keywords": [
+                "work",
+                "resolve",
+                "investigate",
+                "update",
+                "activity"
+              ]
+            },
+            "20.40.100": {
+              "name": "Close a case",
+              "keywords": [
+                "resolve",
+                "close",
+                "complete",
+                "resolution",
+                "close case"
+              ]
+            },
+            "20.40.120": {
+              "name": "Send case close notification",
+              "keywords": [
+                "status",
+                "update",
+                "progress",
+                "adaptive card",
+                "notification"
+              ]
+            }
+          }
+        },
+        "20.60": {
+          "name": "Analyze case performance",
+          "keywords": [
+            "analyze",
+            "report",
+            "metric",
+            "dashboard",
+            "SLA",
+            "MTTR"
+          ],
+          "l3": {
+            "20.60.010": {
+              "name": "Analyze case patterns",
+              "keywords": [
+                "analytics",
+                "insight",
+                "trend",
+                "pattern",
+                "MTTR",
+                "first response",
+                "KPI",
+                "metric",
+                "SLA"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "65.00": {
+      "name": "Order to cash",
+      "l1Code": "65.00",
+      "keywords": [
+        "order",
+        "sales",
+        "invoice",
+        "payment",
+        "quote",
+        "opportunity",
+        "revenue",
+        "billing",
+        "AR",
+        "accounts receivable",
+        "customer payment"
+      ],
+      "entityPatterns": [
+        "salesorder",
+        "invoice",
+        "opportunity",
+        "quote",
+        "payment"
+      ],
+      "l2": {
+        "65.20": {
+          "name": "Manage sales orders",
+          "keywords": [
+            "order",
+            "sales order",
+            "create",
+            "manage",
+            "convert quote"
+          ],
+          "l3": {
+            "65.20.025": {
+              "name": "Enter sales orders",
+              "keywords": [
+                "create",
+                "order",
+                "submit",
+                "won"
+              ]
+            },
+            "65.20.100": {
+              "name": "Manage sales order changes",
+              "keywords": [
+                "change",
+                "modify",
+                "update",
+                "cancel"
+              ]
+            }
+          }
+        },
+        "65.30": {
+          "name": "Record customer payments",
+          "keywords": [
+            "collect",
+            "billing",
+            "invoice",
+            "generate invoice",
+            "receive",
+            "cash",
+            "payment",
+            "bill"
+          ],
+          "l3": {
+            "65.30.010": {
+              "name": "Issue sales invoices",
+              "keywords": [
+                "print",
+                "invoice",
+                "invoice ready",
+                "email",
+                "deliver",
+                "send",
+                "generate",
+                "create"
+              ]
+            },
+            "65.30.030": {
+              "name": "Issue customer credits",
+              "keywords": [
+                "credit",
+                "limit",
+                "hold",
+                "block"
+              ]
+            },
+            "65.30.100": {
+              "name": "Process payments",
+              "keywords": [
+                "process",
+                "payment",
+                "receipt",
+                "credit card"
+              ]
+            }
+          }
+        },
+        "65.50": {
+          "name": "Manage credit and collections",
+          "keywords": [
+            "credit",
+            "collection",
+            "AR",
+            "accounts receivable",
+            "aging"
+          ],
+          "l3": {
+            "65.50.080": {
+              "name": "Manage customer collections",
+              "keywords": [
+                "collection",
+                "overdue",
+                "aging",
+                "dunning",
+                "annotation"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "75.00": {
+      "name": "Source to pay",
+      "l1Code": "75.00",
+      "keywords": [
+        "purchase",
+        "vendor",
+        "supplier",
+        "procurement",
+        "PO",
+        "AP",
+        "accounts payable",
+        "P-Card",
+        "pcard",
+        "requisition",
+        "buy"
+      ],
+      "entityPatterns": [
+        "vendor",
+        "supplier",
+        "msdyn_purchaseorder",
+        "msdyn_purchaseorderproduct",
+        "msdyn_purchaseorderreceipt"
+      ],
+      "l2": {
+        "75.10": {
+          "name": "Develop procurement and sourcing strategies",
+          "keywords": [
+            "strategy",
+            "sourcing",
+            "procurement",
+            "category"
+          ],
+          "l3": {
+            "75.10.010": {
+              "name": "Develop procurement policies",
+              "keywords": [
+                "policy",
+                "rule",
+                "approval",
+                "threshold"
+              ]
+            }
+          }
+        },
+        "75.30": {
+          "name": "Manage supplier relationships",
+          "keywords": [
+            "vendor",
+            "supplier",
+            "relationship",
+            "master"
+          ],
+          "l3": {
+            "75.30.020": {
+              "name": "Onboard new suppliers",
+              "keywords": [
+                "onboard",
+                "setup",
+                "register",
+                "new vendor"
+              ]
+            },
+            "75.30.030": {
+              "name": "Manage active suppliers",
+              "keywords": [
+                "manage",
+                "update",
+                "maintain",
+                "vendor info"
+              ]
+            }
+          }
+        },
+        "75.40": {
+          "name": "Procure goods and services",
+          "keywords": [
+            "procure",
+            "purchase",
+            "requisition",
+            "order",
+            "PR",
+            "PO",
+            "raise"
+          ],
+          "l3": {
+            "75.40.010": {
+              "name": "Raise purchase requisitions",
+              "keywords": [
+                "requisition",
+                "request",
+                "need",
+                "raise PR",
+                "PR"
+              ]
+            },
+            "75.40.030": {
+              "name": "Issue purchase orders",
+              "keywords": [
+                "PO",
+                "purchase order",
+                "order",
+                "create PO"
+              ]
+            },
+            "75.40.050": {
+              "name": "Manage open purchases",
+              "keywords": [
+                "receive",
+                "receipt",
+                "goods",
+                "delivery",
+                "GRN"
+              ]
+            }
+          }
+        },
+        "75.50": {
+          "name": "Issue and settle vendor payments",
+          "keywords": [
+            "pay",
+            "AP",
+            "settle",
+            "three-way match",
+            "check",
+            "invoice",
+            "pcard",
+            "P-Card",
+            "ACH",
+            "payment",
+            "vendor invoice"
+          ],
+          "l3": {
+            "75.50.020": {
+              "name": "Process supplier invoices",
+              "keywords": [
+                "invoice",
+                "process",
+                "match",
+                "approve"
+              ]
+            },
+            "75.50.090": {
+              "name": "Issue and settle supplier payments",
+              "keywords": [
+                "payment",
+                "check",
+                "ACH",
+                "P-Card",
+                "pcard",
+                "wire"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "55.00": {
+      "name": "Hire to retire",
+      "l1Code": "55.00",
+      "keywords": [
+        "employee",
+        "HR",
+        "human resources",
+        "time",
+        "payroll",
+        "attendance",
+        "leave",
+        "benefit",
+        "worker",
+        "staff",
+        "personnel",
+        "trade",
+        "trade class",
+        "job family",
+        "labor",
+        "commission",
+        "spiff"
+      ],
+      "entityPatterns": [
+        "systemuser",
+        "msdyn_timeentry",
+        "bookableresource"
+      ],
+      "l2": {
+        "55.05": {
+          "name": "Develop people strategy",
+          "keywords": [
+            "organization",
+            "structure",
+            "division",
+            "job family",
+            "trade",
+            "trade class",
+            "workforce plan"
+          ],
+          "l3": {
+            "55.05.010": {
+              "name": "Define organizational structure",
+              "keywords": [
+                "org",
+                "structure",
+                "division",
+                "department",
+                "job family",
+                "job family group"
+              ]
+            },
+            "55.05.060": {
+              "name": "Plan workforce",
+              "keywords": [
+                "workforce",
+                "plan",
+                "trade",
+                "trade class",
+                "capacity",
+                "skills",
+                "manpower"
+              ]
+            }
+          }
+        },
+        "55.10": {
+          "name": "Recruit and onboard talent",
+          "keywords": [
+            "recruit",
+            "onboard",
+            "hire",
+            "new employee",
+            "position",
+            "workday"
+          ],
+          "l3": {
+            "55.10.060": {
+              "name": "Hire for open positions",
+              "keywords": [
+                "hire",
+                "position",
+                "offer",
+                "accept"
+              ]
+            },
+            "55.10.070": {
+              "name": "Onboard new employees",
+              "keywords": [
+                "onboard",
+                "new hire",
+                "orientation",
+                "workday",
+                "setup"
+              ]
+            }
+          }
+        },
+        "55.30": {
+          "name": "Manage workplace compliance",
+          "keywords": [
+            "safety",
+            "compliance",
+            "hazard",
+            "JSA",
+            "injury",
+            "OSHA",
+            "PPE",
+            "safety analysis"
+          ],
+          "l3": {
+            "55.30.010": {
+              "name": "Identify workplace hazards",
+              "keywords": [
+                "hazard",
+                "JSA",
+                "job safety",
+                "safety analysis",
+                "risk assessment"
+              ]
+            },
+            "55.30.020": {
+              "name": "Document safety protocols",
+              "keywords": [
+                "protocol",
+                "document",
+                "procedure",
+                "PPE",
+                "OSHA"
+              ]
+            },
+            "55.30.100": {
+              "name": "Report an injury or illness",
+              "keywords": [
+                "injury",
+                "illness",
+                "incident report",
+                "workers comp"
+              ]
+            }
+          }
+        },
+        "55.40": {
+          "name": "Manage performance and growth",
+          "keywords": [
+            "performance",
+            "review",
+            "skill",
+            "competency",
+            "training",
+            "career",
+            "recognition"
+          ],
+          "l3": {
+            "55.40.055": {
+              "name": "Track skills and competencies",
+              "keywords": [
+                "skill",
+                "competency",
+                "certification",
+                "license",
+                "qualification"
+              ]
+            },
+            "55.40.080": {
+              "name": "Assess worker performance",
+              "keywords": [
+                "assess",
+                "review",
+                "evaluation",
+                "performance review"
+              ]
+            },
+            "55.40.300": {
+              "name": "Recognize employees",
+              "keywords": [
+                "recognize",
+                "award",
+                "incentive",
+                "bonus"
+              ]
+            }
+          }
+        },
+        "55.50": {
+          "name": "Manage employee time and attendance",
+          "keywords": [
+            "time",
+            "attendance",
+            "clock",
+            "hours",
+            "shift",
+            "time entry",
+            "time clock",
+            "leave",
+            "absence",
+            "PTO"
+          ],
+          "l3": {
+            "55.50.010": {
+              "name": "Develop leave and absence policies",
+              "keywords": [
+                "leave",
+                "absence",
+                "PTO",
+                "policy",
+                "accrual"
+              ]
+            },
+            "55.50.020": {
+              "name": "Record employee absences",
+              "keywords": [
+                "absence",
+                "leave request",
+                "PTO request",
+                "sick leave"
+              ]
+            },
+            "55.50.030": {
+              "name": "Manage shifts",
+              "keywords": [
+                "shift",
+                "schedule",
+                "rotation",
+                "crew schedule"
+              ]
+            },
+            "55.50.050": {
+              "name": "Record employee time",
+              "keywords": [
+                "time",
+                "clock",
+                "entry",
+                "timesheet",
+                "hours",
+                "time clock",
+                "punch"
+              ]
+            },
+            "55.50.100": {
+              "name": "Request travel",
+              "keywords": [
+                "travel",
+                "request",
+                "trip",
+                "mileage"
+              ]
+            },
+            "55.50.200": {
+              "name": "Manage employee travel",
+              "keywords": [
+                "travel",
+                "expense",
+                "reimburse",
+                "per diem"
+              ]
+            }
+          }
+        },
+        "55.70": {
+          "name": "Manage compensation and benefits",
+          "keywords": [
+            "benefit",
+            "compensation",
+            "payroll",
+            "pay",
+            "salary",
+            "commission",
+            "spiff"
+          ],
+          "l3": {
+            "55.70.010": {
+              "name": "Define compensation policies",
+              "keywords": [
+                "compensation",
+                "policy",
+                "pay scale",
+                "rate"
+              ]
+            },
+            "55.70.040": {
+              "name": "Manage benefits enrollment",
+              "keywords": [
+                "benefit",
+                "enrollment",
+                "insurance",
+                "health"
+              ]
+            },
+            "55.70.045": {
+              "name": "Reimburse workers for expenses",
+              "keywords": [
+                "reimburse",
+                "expense",
+                "receipt",
+                "claim"
+              ]
+            },
+            "55.70.050": {
+              "name": "Pay employees",
+              "keywords": [
+                "payroll",
+                "pay",
+                "salary",
+                "wage",
+                "payroll batch"
+              ]
+            },
+            "55.70.060": {
+              "name": "Record life events",
+              "keywords": [
+                "life event",
+                "marriage",
+                "birth",
+                "address change"
+              ]
+            },
+            "55.70.070": {
+              "name": "Manage compensation changes",
+              "keywords": [
+                "commission",
+                "spiff",
+                "incentive",
+                "raise",
+                "adjustment"
+              ]
+            }
+          }
+        },
+        "55.80": {
+          "name": "Offboard talent",
+          "keywords": [
+            "offboard",
+            "terminate",
+            "resign",
+            "exit",
+            "succession"
+          ],
+          "l3": {
+            "55.80.010": {
+              "name": "Conduct succession planning",
+              "keywords": [
+                "succession",
+                "plan",
+                "backup",
+                "critical role"
+              ]
+            },
+            "55.80.040": {
+              "name": "Terminate workers",
+              "keywords": [
+                "terminate",
+                "resign",
+                "exit",
+                "separation"
+              ]
+            }
+          }
+        },
+        "55.90": {
+          "name": "Analyze HR programs",
+          "keywords": [
+            "analyze",
+            "HR analytics",
+            "headcount",
+            "turnover",
+            "retention"
+          ],
+          "l3": {
+            "55.90.030": {
+              "name": "Analyze worker performance",
+              "keywords": [
+                "analyze",
+                "performance",
+                "metrics",
+                "trend"
+              ]
+            },
+            "55.90.050": {
+              "name": "Monitor human capital expenses",
+              "keywords": [
+                "expense",
+                "cost",
+                "labor cost",
+                "headcount"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "99.00": {
+      "name": "Administer to operate",
+      "l1Code": "99.00",
+      "keywords": [
+        "admin",
+        "system",
+        "configuration",
+        "setup",
+        "master data",
+        "security",
+        "user",
+        "setting",
+        "config",
+        "company",
+        "business unit",
+        "environment",
+        "solution",
+        "plugin",
+        "background",
+        "notification",
+        "audit",
+        "compliance",
+        "license"
+      ],
+      "entityPatterns": [
+        "systemuser",
+        "team",
+        "businessunit",
+        "role",
+        "annotation"
+      ],
+      "l2": {
+        "99.01": {
+          "name": "Implement solutions",
+          "keywords": [
+            "implement",
+            "deploy",
+            "ALM",
+            "solution",
+            "release",
+            "go live",
+            "migration"
+          ],
+          "l3": {
+            "99.01.100": {
+              "name": "Implement cloud solutions",
+              "keywords": [
+                "implement",
+                "cloud",
+                "deploy",
+                "install"
+              ]
+            },
+            "99.01.200": {
+              "name": "Create solution blueprint",
+              "keywords": [
+                "blueprint",
+                "design",
+                "architecture",
+                "solution design"
+              ]
+            },
+            "99.01.310": {
+              "name": "Implement ALM strategies",
+              "keywords": [
+                "ALM",
+                "lifecycle",
+                "CI/CD",
+                "DevOps",
+                "pipeline"
+              ]
+            }
+          }
+        },
+        "99.10": {
+          "name": "Define business continuity plan",
+          "keywords": [
+            "continuity",
+            "disaster",
+            "recovery",
+            "backup",
+            "structure",
+            "organization",
+            "business unit",
+            "company",
+            "legal entity"
+          ],
+          "l3": {
+            "99.10.040": {
+              "name": "Develop a business continuity plan",
+              "keywords": [
+                "continuity",
+                "plan",
+                "BCP",
+                "DR"
+              ]
+            },
+            "99.10.080": {
+              "name": "Identify critical systems and data",
+              "keywords": [
+                "critical",
+                "system",
+                "priority",
+                "RTO",
+                "RPO"
+              ]
+            }
+          }
+        },
+        "99.15": {
+          "name": "Manage licensing and entitlements",
+          "keywords": [
+            "license",
+            "entitlement",
+            "subscription",
+            "seat",
+            "capacity"
+          ],
+          "l3": {
+            "99.15.010": {
+              "name": "Take inventory on software licenses",
+              "keywords": [
+                "inventory",
+                "license",
+                "audit",
+                "count"
+              ]
+            },
+            "99.15.060": {
+              "name": "Track and analyze software licenses",
+              "keywords": [
+                "track",
+                "analyze",
+                "usage",
+                "compliance"
+              ]
+            }
+          }
+        },
+        "99.20": {
+          "name": "Administer system features",
+          "keywords": [
+            "administer",
+            "system",
+            "feature",
+            "configure",
+            "plugin",
+            "workflow",
+            "flow",
+            "portal",
+            "email",
+            "search",
+            "offline",
+            "IoT",
+            "geofence"
+          ],
+          "l3": {
+            "99.20.010": {
+              "name": "Configure and administer workflows",
+              "keywords": [
+                "workflow",
+                "flow",
+                "automate",
+                "process",
+                "business rule"
+              ]
+            },
+            "99.20.020": {
+              "name": "Configure and send emails",
+              "keywords": [
+                "email",
+                "template",
+                "mailbox",
+                "server-side sync"
+              ]
+            },
+            "99.20.070": {
+              "name": "Configure offline mode for apps",
+              "keywords": [
+                "offline",
+                "mobile",
+                "sync",
+                "offline profile"
+              ]
+            },
+            "99.20.080": {
+              "name": "Configure mobile apps and devices",
+              "keywords": [
+                "mobile",
+                "device",
+                "intune",
+                "desktop central",
+                "MDM"
+              ]
+            },
+            "99.20.100": {
+              "name": "Configure reporting and analytics",
+              "keywords": [
+                "report",
+                "analytics",
+                "dashboard",
+                "power BI",
+                "SSRS"
+              ]
+            },
+            "99.20.120": {
+              "name": "Configure and manage portals",
+              "keywords": [
+                "portal",
+                "web role",
+                "entity permission",
+                "content"
+              ]
+            },
+            "99.20.130": {
+              "name": "Manage organizational structure",
+              "keywords": [
+                "org",
+                "structure",
+                "BU",
+                "business unit",
+                "division",
+                "hierarchy"
+              ]
+            },
+            "99.20.200": {
+              "name": "Manage master data",
+              "keywords": [
+                "master",
+                "data",
+                "reference",
+                "lookup",
+                "option set",
+                "country",
+                "state"
+              ]
+            },
+            "99.20.210": {
+              "name": "Configure Teams integrations",
+              "keywords": [
+                "teams",
+                "integration",
+                "channel",
+                "adaptive card"
+              ]
+            },
+            "99.20.220": {
+              "name": "Configure geofencing and geolocation",
+              "keywords": [
+                "geofence",
+                "geolocation",
+                "GPS",
+                "location"
+              ]
+            }
+          }
+        },
+        "99.25": {
+          "name": "Manage system access and security",
+          "keywords": [
+            "security",
+            "role",
+            "permission",
+            "access",
+            "privilege",
+            "field security",
+            "audit",
+            "encryption"
+          ],
+          "l3": {
+            "99.25.010": {
+              "name": "Review access policies",
+              "keywords": [
+                "access policy",
+                "review",
+                "security policy"
+              ]
+            },
+            "99.25.020": {
+              "name": "Review audit logs",
+              "keywords": [
+                "audit",
+                "log",
+                "audit log",
+                "trail"
+              ]
+            },
+            "99.25.030": {
+              "name": "Enable and configure audit logs",
+              "keywords": [
+                "enable",
+                "audit",
+                "configure",
+                "tracking"
+              ]
+            },
+            "99.25.040": {
+              "name": "Onboard new users",
+              "keywords": [
+                "onboard",
+                "new user",
+                "create user",
+                "provision"
+              ]
+            },
+            "99.25.050": {
+              "name": "Manage data security",
+              "keywords": [
+                "data security",
+                "field security",
+                "column security",
+                "encrypt"
+              ]
+            },
+            "99.25.100": {
+              "name": "Revoke user access",
+              "keywords": [
+                "revoke",
+                "disable",
+                "remove access",
+                "deactivate user"
+              ]
+            },
+            "99.25.110": {
+              "name": "Update access to systems",
+              "keywords": [
+                "update",
+                "access",
+                "modify role",
+                "reassign"
+              ]
+            }
+          }
+        },
+        "99.30": {
+          "name": "Train users and increase adoption",
+          "keywords": [
+            "train",
+            "adoption",
+            "guide",
+            "documentation",
+            "onboard",
+            "support"
+          ],
+          "l3": {
+            "99.30.001": {
+              "name": "Develop training strategy",
+              "keywords": [
+                "strategy",
+                "plan",
+                "training plan"
+              ]
+            },
+            "99.30.040": {
+              "name": "Conduct training",
+              "keywords": [
+                "train",
+                "session",
+                "workshop",
+                "demo"
+              ]
+            },
+            "99.30.060": {
+              "name": "Measure adoption and success",
+              "keywords": [
+                "measure",
+                "adoption",
+                "usage",
+                "success",
+                "KPI"
+              ]
+            }
+          }
+        },
+        "99.35": {
+          "name": "Monitor systems, environments, and capacity",
+          "keywords": [
+            "monitor",
+            "health",
+            "performance",
+            "capacity",
+            "storage",
+            "sync",
+            "integration failure"
+          ],
+          "l3": {
+            "99.35.010": {
+              "name": "Monitor system usage",
+              "keywords": [
+                "usage",
+                "monitoring",
+                "telemetry",
+                "API calls"
+              ]
+            },
+            "99.35.020": {
+              "name": "Monitor system performance and health",
+              "keywords": [
+                "performance",
+                "health",
+                "response time",
+                "availability"
+              ]
+            },
+            "99.35.030": {
+              "name": "Detect synchronous integration failures",
+              "keywords": [
+                "sync",
+                "failure",
+                "plugin error",
+                "integration error"
+              ]
+            },
+            "99.35.040": {
+              "name": "Detect asynchronous integration failures",
+              "keywords": [
+                "async",
+                "flow error",
+                "flow failure",
+                "system job"
+              ]
+            },
+            "99.35.060": {
+              "name": "Monitor storage capacity",
+              "keywords": [
+                "storage",
+                "capacity",
+                "database",
+                "file storage",
+                "log storage"
+              ]
+            }
+          }
+        },
+        "99.40": {
+          "name": "Manage background jobs",
+          "keywords": [
+            "background",
+            "job",
+            "async",
+            "system job",
+            "bulk delete",
+            "recurring"
+          ],
+          "l3": {
+            "99.40.030": {
+              "name": "Configure and run background jobs",
+              "keywords": [
+                "configure",
+                "run",
+                "schedule",
+                "trigger"
+              ]
+            },
+            "99.40.040": {
+              "name": "Monitor background jobs",
+              "keywords": [
+                "monitor",
+                "status",
+                "failed",
+                "waiting"
+              ]
+            },
+            "99.40.060": {
+              "name": "Handle background job errors",
+              "keywords": [
+                "error",
+                "retry",
+                "exception",
+                "failed job"
+              ]
+            }
+          }
+        },
+        "99.45": {
+          "name": "Manage notifications and alerts",
+          "keywords": [
+            "notification",
+            "alert",
+            "trigger",
+            "email notification",
+            "push notification"
+          ],
+          "l3": {
+            "99.45.010": {
+              "name": "Identify notification triggers",
+              "keywords": [
+                "trigger",
+                "event",
+                "condition"
+              ]
+            },
+            "99.45.020": {
+              "name": "Define notification channels",
+              "keywords": [
+                "channel",
+                "email",
+                "push",
+                "teams"
+              ]
+            },
+            "99.45.060": {
+              "name": "Define notification templates",
+              "keywords": [
+                "template",
+                "format",
+                "content",
+                "notification type"
+              ]
+            }
+          }
+        },
+        "99.50": {
+          "name": "Uptake software releases",
+          "keywords": [
+            "release",
+            "update",
+            "upgrade",
+            "patch",
+            "version",
+            "deploy"
+          ],
+          "l3": {
+            "99.50.010": {
+              "name": "Assess software releases",
+              "keywords": [
+                "assess",
+                "review",
+                "release notes",
+                "impact"
+              ]
+            },
+            "99.50.040": {
+              "name": "Deploy software releases",
+              "keywords": [
+                "deploy",
+                "push",
+                "release",
+                "environment"
+              ]
+            },
+            "99.50.070": {
+              "name": "Implement new features",
+              "keywords": [
+                "feature",
+                "new",
+                "enable",
+                "turn on"
+              ]
+            }
+          }
+        },
+        "99.55": {
+          "name": "Manage data",
+          "keywords": [
+            "data",
+            "sync",
+            "synchronize",
+            "migration",
+            "import",
+            "export",
+            "dual write",
+            "F&O sync"
+          ],
+          "l3": {
+            "99.55.010": {
+              "name": "Manage initial data synchronization",
+              "keywords": [
+                "initial",
+                "sync",
+                "seed",
+                "migrate",
+                "import"
+              ]
+            },
+            "99.55.020": {
+              "name": "Manage recurring data synchronization",
+              "keywords": [
+                "recurring",
+                "sync",
+                "dual write",
+                "scheduled",
+                "ongoing"
+              ]
+            },
+            "99.55.030": {
+              "name": "Monitor data sync failures",
+              "keywords": [
+                "failure",
+                "error",
+                "sync error",
+                "data quality"
+              ]
+            },
+            "99.55.040": {
+              "name": "Correct data sync failures",
+              "keywords": [
+                "correct",
+                "fix",
+                "retry",
+                "reconcile"
+              ]
+            }
+          }
+        },
+        "99.60": {
+          "name": "Manage system compliance",
+          "keywords": [
+            "compliance",
+            "regulation",
+            "audit",
+            "policy",
+            "GDPR",
+            "SOX"
+          ],
+          "l3": {
+            "99.60.010": {
+              "name": "Identify applicable regulations",
+              "keywords": [
+                "regulation",
+                "requirement",
+                "law",
+                "GDPR"
+              ]
+            },
+            "99.60.020": {
+              "name": "Establish compliance policies",
+              "keywords": [
+                "policy",
+                "procedure",
+                "standard"
+              ]
+            },
+            "99.60.050": {
+              "name": "Monitor compliance",
+              "keywords": [
+                "monitor",
+                "track",
+                "audit",
+                "report"
+              ]
+            }
+          }
+        },
+        "99.65": {
+          "name": "Support systems",
+          "keywords": [
+            "support",
+            "incident",
+            "troubleshoot",
+            "root cause",
+            "exception",
+            "error log"
+          ],
+          "l3": {
+            "99.65.010": {
+              "name": "Establish support procedures",
+              "keywords": [
+                "procedure",
+                "escalation",
+                "SLA",
+                "support matrix"
+              ]
+            },
+            "99.65.030": {
+              "name": "Manage support incidents",
+              "keywords": [
+                "incident",
+                "error",
+                "exception",
+                "bug",
+                "defect"
+              ]
+            },
+            "99.65.040": {
+              "name": "Troubleshoot reported incidents",
+              "keywords": [
+                "troubleshoot",
+                "debug",
+                "investigate",
+                "root cause"
+              ]
+            },
+            "99.65.050": {
+              "name": "Conduct root cause analysis",
+              "keywords": [
+                "root cause",
+                "RCA",
+                "analysis",
+                "post-mortem"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "85.00": {
+      "name": "Prospect to quote",
+      "l1Code": "85.00",
+      "keywords": [
+        "prospect",
+        "lead",
+        "opportunity",
+        "quote",
+        "proposal",
+        "sales",
+        "CRM",
+        "pipeline",
+        "forecast",
+        "docusign",
+        "win",
+        "lose",
+        "close"
+      ],
+      "entityPatterns": [
+        "lead",
+        "opportunity",
+        "quote",
+        "account",
+        "contact",
+        "competitor",
+        "msdyn_opportunityproduct",
+        "msdyn_quoteline"
+      ],
+      "l2": {
+        "85.25": {
+          "name": "Identify and qualify leads",
+          "keywords": [
+            "lead",
+            "prospect",
+            "qualify",
+            "nurture"
+          ],
+          "l3": {
+            "85.25.100": {
+              "name": "Manage lead identification process",
+              "keywords": [
+                "capture",
+                "create",
+                "lead",
+                "import"
+              ]
+            },
+            "85.25.200": {
+              "name": "Qualify and disqualify leads",
+              "keywords": [
+                "qualify",
+                "score",
+                "convert",
+                "disqualify"
+              ]
+            }
+          }
+        },
+        "85.45": {
+          "name": "Pursue opportunities",
+          "keywords": [
+            "opportunity",
+            "deal",
+            "pipeline",
+            "stage"
+          ],
+          "l3": {
+            "85.45.100": {
+              "name": "Identify opportunity",
+              "keywords": [
+                "create",
+                "opportunity",
+                "convert lead"
+              ]
+            },
+            "85.45.200": {
+              "name": "Manage opportunity process",
+              "keywords": [
+                "pipeline",
+                "stage",
+                "forecast",
+                "probability"
+              ]
+            },
+            "85.45.300": {
+              "name": "Nurture opportunities and finalize the sale",
+              "keywords": [
+                "win",
+                "lose",
+                "close",
+                "convert",
+                "won",
+                "lost"
+              ]
+            }
+          }
+        },
+        "85.55": {
+          "name": "Estimate and quote sales",
+          "keywords": [
+            "quote",
+            "proposal",
+            "estimate",
+            "pricing",
+            "docusign",
+            "esign"
+          ],
+          "l3": {
+            "85.55.200": {
+              "name": "Define sales quotations",
+              "keywords": [
+                "create",
+                "quote",
+                "proposal",
+                "generate",
+                "docusign"
+              ]
+            },
+            "85.55.300": {
+              "name": "Negotiate and finalize quotations",
+              "keywords": [
+                "revise",
+                "update",
+                "version",
+                "amend"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "60.00": {
+      "name": "Inventory to deliver",
+      "l1Code": "60.00",
+      "keywords": [
+        "inventory",
+        "warehouse",
+        "stock",
+        "delivery",
+        "shipment",
+        "fulfillment",
+        "product",
+        "item",
+        "bin",
+        "transfer",
+        "truck count",
+        "part tag",
+        "customer supplied"
+      ],
+      "entityPatterns": [
+        "product",
+        "msdyn_warehouse",
+        "msdyn_inventoryadjustment",
+        "msdyn_inventorytransfer",
+        "msdyn_productinventory"
+      ],
+      "l2": {
+        "60.10": {
+          "name": "Manage warehouse operations",
+          "keywords": [
+            "warehouse",
+            "layout",
+            "process",
+            "work assignment",
+            "policy",
+            "F&O",
+            "dual write"
+          ],
+          "l3": {
+            "60.10.010": {
+              "name": "Define warehouse processes",
+              "keywords": [
+                "define",
+                "process",
+                "policy",
+                "setup"
+              ]
+            },
+            "60.10.020": {
+              "name": "Design warehouse layout",
+              "keywords": [
+                "layout",
+                "bin",
+                "zone",
+                "aisle"
+              ]
+            },
+            "60.10.040": {
+              "name": "Manage work assignments",
+              "keywords": [
+                "assignment",
+                "work",
+                "task",
+                "priority"
+              ]
+            }
+          }
+        },
+        "60.20": {
+          "name": "Maintain inventory levels",
+          "keywords": [
+            "inventory",
+            "stock",
+            "count",
+            "adjust",
+            "track",
+            "level",
+            "on-hand",
+            "transfer"
+          ],
+          "l3": {
+            "60.20.010": {
+              "name": "Track supplier managed inventory",
+              "keywords": [
+                "supplier",
+                "consignment",
+                "vendor managed"
+              ]
+            },
+            "60.20.015": {
+              "name": "Track customer managed inventory",
+              "keywords": [
+                "customer supplied",
+                "customer inventory",
+                "customer provided"
+              ]
+            },
+            "60.20.020": {
+              "name": "Process inventory movements",
+              "keywords": [
+                "movement",
+                "transfer",
+                "move",
+                "issue",
+                "receive",
+                "F&O sync"
+              ]
+            },
+            "60.20.030": {
+              "name": "Stage inventory",
+              "keywords": [
+                "stage",
+                "staging",
+                "pre-stage",
+                "truck load"
+              ]
+            },
+            "60.20.040": {
+              "name": "Count inventory",
+              "keywords": [
+                "count",
+                "cycle count",
+                "physical count",
+                "audit"
+              ]
+            },
+            "60.20.060": {
+              "name": "Adjust inventory levels",
+              "keywords": [
+                "adjust",
+                "adjustment",
+                "write off",
+                "scrap",
+                "correction"
+              ]
+            }
+          }
+        },
+        "60.30": {
+          "name": "Process inbound goods",
+          "keywords": [
+            "inbound",
+            "receive",
+            "receipt",
+            "put away",
+            "inspect"
+          ],
+          "l3": {
+            "60.30.010": {
+              "name": "Receive goods",
+              "keywords": [
+                "receive",
+                "receipt",
+                "delivery",
+                "GRN",
+                "goods receipt"
+              ]
+            },
+            "60.30.030": {
+              "name": "Put away received goods",
+              "keywords": [
+                "put away",
+                "store",
+                "shelf",
+                "bin assignment"
+              ]
+            }
+          }
+        },
+        "60.40": {
+          "name": "Process outbound goods",
+          "keywords": [
+            "outbound",
+            "pick",
+            "pack",
+            "ship",
+            "allocate",
+            "release"
+          ],
+          "l3": {
+            "60.40.015": {
+              "name": "Allocate goods",
+              "keywords": [
+                "allocate",
+                "reserve",
+                "allocate to order"
+              ]
+            },
+            "60.40.030": {
+              "name": "Pick goods",
+              "keywords": [
+                "pick",
+                "picking",
+                "pick list"
+              ]
+            },
+            "60.40.040": {
+              "name": "Pack goods",
+              "keywords": [
+                "pack",
+                "packing",
+                "box",
+                "container"
+              ]
+            },
+            "60.40.060": {
+              "name": "Load goods for shipping",
+              "keywords": [
+                "load",
+                "ship",
+                "dispatch",
+                "carrier"
+              ]
+            }
+          }
+        },
+        "60.50": {
+          "name": "Manage inventory quality",
+          "keywords": [
+            "quality",
+            "inspect",
+            "quarantine",
+            "defect",
+            "non-conformance"
+          ],
+          "l3": {
+            "60.50.010": {
+              "name": "Define quality procedures",
+              "keywords": [
+                "quality",
+                "procedure",
+                "standard",
+                "plan"
+              ]
+            },
+            "60.50.040": {
+              "name": "Inspect inventory",
+              "keywords": [
+                "inspect",
+                "test",
+                "check",
+                "verify"
+              ]
+            },
+            "60.50.090": {
+              "name": "Scrap defective inventory",
+              "keywords": [
+                "scrap",
+                "defective",
+                "write off",
+                "dispose"
+              ]
+            }
+          }
+        },
+        "60.80": {
+          "name": "Analyze warehouse operations",
+          "keywords": [
+            "analyze",
+            "report",
+            "KPI",
+            "warehouse performance"
+          ],
+          "l3": {
+            "60.80.100": {
+              "name": "Define warehouse KPIs",
+              "keywords": [
+                "KPI",
+                "metric",
+                "target",
+                "benchmark"
+              ]
+            },
+            "60.80.200": {
+              "name": "Measure warehouse performance",
+              "keywords": [
+                "measure",
+                "performance",
+                "throughput",
+                "accuracy"
+              ]
+            },
+            "60.80.300": {
+              "name": "Analyze inventory levels",
+              "keywords": [
+                "analyze",
+                "trend",
+                "turnover",
+                "aging"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

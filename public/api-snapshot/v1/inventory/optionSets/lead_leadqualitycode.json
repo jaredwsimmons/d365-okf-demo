@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_SalesPro","schemaName":"lead_leadqualitycode","displayName":"Rating"},"metadata":{"type":"optionSets","id":"lead_leadqualitycode"}}
+{"item":{"tags":{"processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.25 Identify and qualify leads","processCatalogL3":"85.25.100 Manage lead identification process"},"solution":"msdyn_SalesPro","schemaName":"lead_leadqualitycode","displayName":"Rating"},"metadata":{"type":"optionSets","id":"lead_leadqualitycode"}}

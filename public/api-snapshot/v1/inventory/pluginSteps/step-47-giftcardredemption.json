@@ -1,1 +1,1 @@
-{"item":{"id":"step-47-giftcardredemption","name":"Update of msdyn_giftcard — GiftCardRedemptionPlugin","tags":{},"solution":"ContosoCommerce"},"metadata":{"type":"pluginSteps","id":"step-47-giftcardredemption"}}
+{"item":{"id":"step-47-giftcardredemption","name":"Update of msdyn_giftcard — GiftCardRedemptionPlugin","tags":{"processCatalogL1":"65.00 Order to cash","processCatalogL2":"65.30 Manage accounts receivable","processCatalogL3":"65.30.100 Process customer payments"},"solution":"ContosoCommerce"},"metadata":{"type":"pluginSteps","id":"step-47-giftcardredemption"}}

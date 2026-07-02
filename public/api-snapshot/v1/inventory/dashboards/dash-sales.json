@@ -1,1 +1,1 @@
-{"item":{"id":"dash-sales","name":"Sales Overview","tags":{},"solution":"ContosoSales","_relApps":["Contoso Sales Hub"]},"metadata":{"type":"dashboards","id":"dash-sales"}}
+{"item":{"id":"dash-sales","name":"Sales Overview","tags":{"processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.35 Define sales strategy and policies","processCatalogL3":"85.35.100 Define sales process"},"solution":"ContosoSales","_relApps":["Contoso Sales Hub"]},"metadata":{"type":"dashboards","id":"dash-sales"}}

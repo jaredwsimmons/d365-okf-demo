@@ -1,1 +1,1 @@
-{"item":{"id":"role-omnichannel-administrator","name":"Omnichannel administrator","tags":{"persona":"Contact Center Administrator"},"solution":"msdyn_OmnichannelBase"},"metadata":{"type":"securityRoles","id":"role-omnichannel-administrator"}}
+{"item":{"id":"role-omnichannel-administrator","name":"Omnichannel administrator","tags":{"persona":"Contact Center Administrator","processCatalogL1":"99.00 Administer to operate","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_OmnichannelBase"},"metadata":{"type":"securityRoles","id":"role-omnichannel-administrator"}}

@@ -19,7 +19,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.35 Define sales strategy and policies",
+        "processCatalogL3": "85.35.100 Define sales process"
+      }
     },
     {
       "schemaName": "con_contosoSupportCopilot",
@@ -32,7 +36,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_copilotForFieldService",
@@ -45,7 +53,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "schemaName": "con_contosoProjectCopilot",
@@ -58,7 +70,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
+      }
     },
     {
       "schemaName": "con_copilotForMarketers",
@@ -71,7 +87,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_copilotForCustomerInsights",
@@ -84,7 +104,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_contosoApCopilot",
@@ -97,7 +121,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_contosoProcurementCopilot",
@@ -110,7 +138,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
+      }
     },
     {
       "schemaName": "con_contosoStoreCopilot",
@@ -123,7 +155,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_contosoOnboardingCopilot",
@@ -136,7 +172,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.10 Recruit and onboard talent",
+        "processCatalogL3": "55.10.070 Onboard new employees"
+      }
     },
     {
       "schemaName": "con_contosoContactCenterCopilot",
@@ -149,7 +189,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_contosoCoeGovernanceCopilot",
@@ -162,7 +206,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     }
   ],
   "customAPIs": [
@@ -178,7 +226,11 @@
       "bindingType": "Global",
       "parameterCount": 2,
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.25 Identify and qualify leads",
+        "processCatalogL3": "85.25.100 Manage lead identification process"
+      }
     },
     {
       "uniqueName": "con_conSuggestknowledgearticles",
@@ -192,7 +244,11 @@
       "bindingType": "Global",
       "parameterCount": 2,
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
+      }
     },
     {
       "uniqueName": "con_contosoSendTimeOptimizationApi",
@@ -206,7 +262,11 @@
       "bindingType": "Global",
       "parameterCount": 2,
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_fraudscorecustomapi",
@@ -220,7 +280,11 @@
       "bindingType": "Global",
       "parameterCount": 2,
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "uniqueName": "con_skillExtractionCustomApi",
@@ -234,7 +298,11 @@
       "bindingType": "Global",
       "parameterCount": 2,
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     }
   ],
   "aiSkillConfigs": [
@@ -249,7 +317,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.600 Manage service assets"
+      }
     },
     {
       "uniqueName": "con_conExpensereceiptextraction",
@@ -262,7 +334,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.020 Track project expenses"
+      }
     },
     {
       "uniqueName": "con_churnPrediction",
@@ -275,7 +351,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "50.00 Forecast to plan",
+        "processCatalogL2": "50.65 Analyze business performance",
+        "processCatalogL3": "50.65.525 Analyze and segment customers and markets"
+      }
     },
     {
       "uniqueName": "con_invoicelineextraction",
@@ -288,7 +368,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.50 Manage accounts payable",
+        "processCatalogL3": "75.50.020 Process supplier invoices"
+      }
     },
     {
       "uniqueName": "con_vendorInvoiceExtractionModel",
@@ -301,7 +385,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.030 Manage active suppliers"
+      }
     },
     {
       "uniqueName": "con_realTimeSentimentAnalysis",
@@ -314,7 +402,11 @@
       "statusCode": 1,
       "isCustomizable": true,
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.20 Define customer and employee service operations",
+        "processCatalogL3": "20.20.030 Define routing rules"
+      }
     }
   ]
 }

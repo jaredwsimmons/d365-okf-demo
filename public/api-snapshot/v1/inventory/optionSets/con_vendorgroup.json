@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_vendorgroup","displayName":"Vendor Group"},"metadata":{"type":"optionSets","id":"con_vendorgroup"}}
+{"item":{"tags":{"processCatalogL1":"75.00 Source to pay","processCatalogL2":"75.30 Manage supplier relationships","processCatalogL3":""},"solution":"ContosoSupplyChain","schemaName":"con_vendorgroup","displayName":"Vendor Group"},"metadata":{"type":"optionSets","id":"con_vendorgroup"}}

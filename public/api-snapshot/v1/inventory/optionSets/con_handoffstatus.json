@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoCommerce","schemaName":"con_handoffstatus","displayName":"Contoso Curbside Handoff Status"},"metadata":{"type":"optionSets","id":"con_handoffstatus"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoCommerce","schemaName":"con_handoffstatus","displayName":"Contoso Curbside Handoff Status"},"metadata":{"type":"optionSets","id":"con_handoffstatus"}}

@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSales","schemaName":"con_reviewstatus","displayName":"Deal Desk Review Status"},"metadata":{"type":"optionSets","id":"con_reviewstatus"}}
+{"item":{"tags":{"processCatalogL1":"85.00 Prospect to quote","processCatalogL2":"85.45 Pursue opportunities","processCatalogL3":""},"solution":"ContosoSales","schemaName":"con_reviewstatus","displayName":"Deal Desk Review Status"},"metadata":{"type":"optionSets","id":"con_reviewstatus"}}

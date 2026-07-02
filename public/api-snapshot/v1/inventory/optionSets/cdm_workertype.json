@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdynhr_HumanResources","schemaName":"cdm_workertype","displayName":"Worker Type"},"metadata":{"type":"optionSets","id":"cdm_workertype"}}
+{"item":{"tags":{"processCatalogL1":"55.00 Hire to retire","processCatalogL2":"","processCatalogL3":""},"solution":"msdynhr_HumanResources","schemaName":"cdm_workertype","displayName":"Worker Type"},"metadata":{"type":"optionSets","id":"cdm_workertype"}}

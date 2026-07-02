@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_ProjectServiceCore","schemaName":"msdyn_timeentry_entrystatus","displayName":"Time Entry Status"},"metadata":{"type":"optionSets","id":"msdyn_timeentry_entrystatus"}}
+{"item":{"tags":{"processCatalogL1":"55.00 Hire to retire","processCatalogL2":"55.50 Manage time and attendance","processCatalogL3":"55.50.050 Record employee time"},"solution":"msdyn_ProjectServiceCore","schemaName":"msdyn_timeentry_entrystatus","displayName":"Time Entry Status"},"metadata":{"type":"optionSets","id":"msdyn_timeentry_entrystatus"}}

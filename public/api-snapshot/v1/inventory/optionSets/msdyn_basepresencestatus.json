@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_OmnichannelBase","schemaName":"msdyn_basepresencestatus","displayName":"Base Presence Status"},"metadata":{"type":"optionSets","id":"msdyn_basepresencestatus"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_OmnichannelBase","schemaName":"msdyn_basepresencestatus","displayName":"Base Presence Status"},"metadata":{"type":"optionSets","id":"msdyn_basepresencestatus"}}

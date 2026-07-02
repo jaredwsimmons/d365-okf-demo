@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoProjectOperations","schemaName":"con_ragstatus","displayName":"Project RAG Status"},"metadata":{"type":"optionSets","id":"con_ragstatus"}}
+{"item":{"tags":{"processCatalogL1":"80.00 Project to profit","processCatalogL2":"80.10 Develop project strategy","processCatalogL3":"80.10.200 Develop project management strategy"},"solution":"ContosoProjectOperations","schemaName":"con_ragstatus","displayName":"Project RAG Status"},"metadata":{"type":"optionSets","id":"con_ragstatus"}}

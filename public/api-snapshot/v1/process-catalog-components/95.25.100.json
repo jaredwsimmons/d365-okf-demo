@@ -1,0 +1,1 @@
+{"code":"95.25.100","tagField":"processCatalogL3","total":1,"components":[{"name":"CapexToFixedAssetPlugin","type":"Plugin","id":"plg-capextofixedassetplugin","solution":"ContosoFinance","tags":{"processCatalogL1":"95.00 Service to deliver","processCatalogL2":"95.25 Manage service work","processCatalogL3":"95.25.100 Receive service requests"}}]}

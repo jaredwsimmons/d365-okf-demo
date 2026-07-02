@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdyn_Commerce","schemaName":"msdyn_channeltype","displayName":"Channel Type"},"metadata":{"type":"optionSets","id":"msdyn_channeltype"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdyn_Commerce","schemaName":"msdyn_channeltype","displayName":"Channel Type"},"metadata":{"type":"optionSets","id":"msdyn_channeltype"}}

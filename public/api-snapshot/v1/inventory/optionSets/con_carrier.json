@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"ContosoSupplyChain","schemaName":"con_carrier","displayName":"Carrier"},"metadata":{"type":"optionSets","id":"con_carrier"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"ContosoSupplyChain","schemaName":"con_carrier","displayName":"Carrier"},"metadata":{"type":"optionSets","id":"con_carrier"}}

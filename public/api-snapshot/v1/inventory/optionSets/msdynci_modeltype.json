@@ -1,1 +1,1 @@
-{"item":{"tags":{},"solution":"msdynci_CustomerInsights","schemaName":"msdynci_modeltype","displayName":"Prediction Model Type"},"metadata":{"type":"optionSets","id":"msdynci_modeltype"}}
+{"item":{"tags":{"processCatalogL1":"","processCatalogL2":"","processCatalogL3":""},"solution":"msdynci_CustomerInsights","schemaName":"msdynci_modeltype","displayName":"Prediction Model Type"},"metadata":{"type":"optionSets","id":"msdynci_modeltype"}}

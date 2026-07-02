@@ -5,133 +5,209 @@
       "displayName": "F&O Dual-Write: Customer & Invoice URL",
       "description": "Endpoint for F&O Dual-Write: Customer & Invoice.",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
+      }
     },
     {
       "schemaName": "con_salesorderToErpLogicappUrl",
       "displayName": "SalesOrder-to-ERP LogicApp URL",
       "description": "Endpoint for SalesOrder-to-ERP LogicApp.",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
+      }
     },
     {
       "schemaName": "con_warrantyDualwriteAgreementUrl",
       "displayName": "warranty-dualwrite-agreement URL",
       "description": "Endpoint for warranty-dualwrite-agreement.",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
+      }
     },
     {
       "schemaName": "con_fandoDualwriteProcurementUrl",
       "displayName": "FandO-DualWrite-Procurement URL",
       "description": "Endpoint for FandO-DualWrite-Procurement.",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
+      }
     },
     {
       "schemaName": "con_projectopsToFinopsDualwriteUrl",
       "displayName": "ProjectOps-to-FinOps DualWrite URL",
       "description": "Endpoint for ProjectOps-to-FinOps DualWrite.",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.10 Develop project strategy",
+        "processCatalogL3": "80.10.200 Develop project management strategy"
+      }
     },
     {
       "schemaName": "con_conInvoicepdfLogicappUrl",
       "displayName": "con-InvoicePDF-LogicApp URL",
       "description": "Endpoint for con-InvoicePDF-LogicApp.",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.30 Manage accounts receivable",
+        "processCatalogL3": "65.30.010 Issue sales invoices"
+      }
     },
     {
       "schemaName": "con_fOMarketingSpendVirtualEntityProviderUrl",
       "displayName": "F&O Marketing Spend Virtual Entity Provider URL",
       "description": "Endpoint for F&O Marketing Spend Virtual Entity Provider.",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "30.05 Develop marketing strategy",
+        "processCatalogL3": "30.05.200 Forecast marketing campaign targets"
+      }
     },
     {
       "schemaName": "con_marketingAnalyticsExportLogicAppUrl",
       "displayName": "Marketing Analytics Export Logic App URL",
       "description": "Endpoint for Marketing Analytics Export Logic App.",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
+      }
     },
     {
       "schemaName": "con_onelakeAdlsGen2IngestionUrl",
       "displayName": "OneLake / ADLS Gen2 Ingestion URL",
       "description": "Endpoint for OneLake / ADLS Gen2 Ingestion.",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_dsrErasureOrchestratorUrl",
       "displayName": "DSR Erasure Orchestrator (Logic App) URL",
       "description": "Endpoint for DSR Erasure Orchestrator (Logic App).",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
+      }
     },
     {
       "schemaName": "con_dualwriteFinanceSyncUrl",
       "displayName": "DualWrite-Finance-Sync URL",
       "description": "Endpoint for DualWrite-Finance-Sync.",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_dualWriteOrchestrationUrl",
       "displayName": "Dual-Write Orchestration URL",
       "description": "Endpoint for Dual-Write Orchestration.",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_supplierediIntakelogicappUrl",
       "displayName": "SupplierEDI-IntakeLogicApp URL",
       "description": "Endpoint for SupplierEDI-IntakeLogicApp.",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.30 Manage supplier relationships",
+        "processCatalogL3": "75.30.040 Evaluate supplier performance"
+      }
     },
     {
       "schemaName": "con_channeldatapublishLogicappUrl",
       "displayName": "ChannelDataPublish-LogicApp URL",
       "description": "Endpoint for ChannelDataPublish-LogicApp.",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.030 Issue purchase orders"
+      }
     },
     {
       "schemaName": "con_dualwriteRetailtransactionsyncUrl",
       "displayName": "DualWrite-RetailTransactionSync URL",
       "description": "Endpoint for DualWrite-RetailTransactionSync.",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_fODualWriteHrBridgeUrl",
       "displayName": "F&O Dual-Write HR Bridge URL",
       "description": "Endpoint for F&O Dual-Write HR Bridge.",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_offboardingToServicenowLogicAppUrl",
       "displayName": "Offboarding-to-ServiceNow Logic App URL",
       "description": "Endpoint for Offboarding-to-ServiceNow Logic App.",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "schemaName": "con_omnichannelvoiceeventgridUrl",
       "displayName": "OmnichannelVoiceEventGrid URL",
       "description": "Endpoint for OmnichannelVoiceEventGrid.",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "schemaName": "con_dualWriteLedgerDimensionBridgeUrl",
       "displayName": "Dual-Write Ledger Dimension Bridge URL",
       "description": "Endpoint for Dual-Write Ledger Dimension Bridge.",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     }
   ]
 }

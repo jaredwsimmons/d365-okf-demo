@@ -5,273 +5,429 @@
       "name": "OpportunityRollupPlugin",
       "businessLogic": "On opportunity product create/update/delete, recalculates opportunity estimatedvalue and line rollups, honoring ispriceoverridden.",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
+      }
     },
     {
       "id": "plg-quotetoorderguardplugin",
       "name": "QuoteToOrderGuardPlugin",
       "businessLogic": "On quote activation/win and on order creation, blocks conversion to salesorder if an open con_dealdeskreview exists for the parent opportunity.",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.300 Nurture opportunities and finalize the sale"
+      }
     },
     {
       "id": "plg-dealdeskapprovalstampplugin",
       "name": "DealDeskApprovalStampPlugin",
       "businessLogic": "On con_dealdeskreview status change to Approved, stamps con_approvedon and the approving user, and writes back the approved discount to the opportunity.",
       "solution": "ContosoSales",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "85.00 Prospect to quote",
+        "processCatalogL2": "85.45 Pursue opportunities",
+        "processCatalogL3": "85.45.100 Identify opportunity"
+      }
     },
     {
       "id": "plg-con-caserouting-entitlementbinderplugin",
       "name": "Con.CaseRouting.EntitlementBinderPlugin",
       "businessLogic": "On case create, matches the customer to an active entitlement/SLA, decrements remaining terms, and stamps con_channelsource-derived defaults. Prevents case creation when no valid entitlement exists for Platinum customers.",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
+      }
     },
     {
       "id": "plg-con-escalation-slabreachstampplugin",
       "name": "Con.Escalation.SlaBreachStampPlugin",
       "businessLogic": "On escalation create, evaluates the linked case's active SLA KPI instances and sets con_slabreached; writes back to the case and rolls up breach counts for reporting.",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.60 Analyze case performance",
+        "processCatalogL3": "20.60.010 Analyze case patterns"
+      }
     },
     {
       "id": "plg-con-deflection-savingscalculatorplugin",
       "name": "Con.Deflection.SavingsCalculatorPlugin",
       "businessLogic": "On case deflection create, computes con_estimatedsavings from average handle time and tier labor cost, and links back to the knowledge article that deflected the case.",
       "solution": "ContosoCustomerService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
+      }
     },
     {
       "id": "plg-contoso-fieldservice-workorderpricingplugin",
       "name": "Contoso.FieldService.WorkOrderPricingPlugin",
       "businessLogic": "On work order product/service create or update, recalculates msdyn_totalamount rollups and applies agreement-based discounting from the linked price list.",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.100 Develop service pricing strategy"
+      }
     },
     {
       "id": "plg-contoso-fieldservice-slabreachevaluatorplugin",
       "name": "Contoso.FieldService.SlaBreachEvaluatorPlugin",
       "businessLogic": "On work order update, evaluates elapsed time against the agreement's con_slapenaltyrule response hours and sets con_slabreachrisk accordingly.",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.05 Develop service strategy",
+        "processCatalogL3": "95.05.400 Define service contracts"
+      }
     },
     {
       "id": "plg-contoso-fieldservice-inventorydecrementplugin",
       "name": "Contoso.FieldService.InventoryDecrementPlugin",
       "businessLogic": "On work order product line status moving to Used, decrements msdyn_productinventory available quantity at the technician's truck warehouse.",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.15 Plan service work",
+        "processCatalogL3": "95.15.500 Plan service contractor work"
+      }
     },
     {
       "id": "plg-contoso-fieldservice-safetyinspectionguardplugin",
       "name": "Contoso.FieldService.SafetyInspectionGuardPlugin",
       "businessLogic": "On booking create for a hazardous work order, blocks the operation (throws InvalidPluginExecutionException) unless a con_safetyinspection with con_result = Pass or Pass with Conditions and con_signedoff = true exists for the work order.",
       "solution": "ContosoFieldService",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.090 Configure and management office apps and add-ins"
+      }
     },
     {
       "id": "plg-projectrollupplugin",
       "name": "ProjectRollupPlugin",
       "businessLogic": "On task or actuals change, recalculates project-level effort completed, scheduled finish, and cost/sales rollups; guards against recursion via depth check.",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.35 Deliver services",
+        "processCatalogL3": "95.35.950 Finalize work orders"
+      }
     },
     {
       "id": "plg-timeentryvalidationplugin",
       "name": "TimeEntryValidationPlugin",
       "businessLogic": "Pre-operation validation preventing time entries against closed projects or outside the assignment date range, and enforcing Contoso overtime policy.",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.050 Record employee time"
+      }
     },
     {
       "id": "plg-contractlineactualsgenerationplugin",
       "name": "ContractLineActualsGenerationPlugin",
       "businessLogic": "Generates unbilled actuals records from confirmed project journal lines and associates them to the correct contract line detail for invoicing.",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.20 Manage project contracts",
+        "processCatalogL3": "80.20.060 Maintain project contracts"
+      }
     },
     {
       "id": "plg-projecthealthreviewauditplugin",
       "name": "ProjectHealthReviewAuditPlugin",
       "businessLogic": "Post-operation plugin that stamps con_projecthealthreview onto the parent project's latest-review fields and notifies the delivery lead when RAG is Red.",
       "solution": "ContosoProjectOperations",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "80.00 Project to profit",
+        "processCatalogL2": "80.40 Manage project delivery",
+        "processCatalogL3": "80.40.008 Control project scope"
+      }
     },
     {
       "id": "plg-contosobrandapprovalguardplugin",
       "name": "ContosoBrandApprovalGuardPlugin",
       "businessLogic": "Synchronous pre-operation plugin that prevents setting con_brandapprovalstatus to Approved on a marketing email unless a legal footer template is assigned and its region matches the journey's data residency region.",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.020 Configure, monitor, and send emails"
+      }
     },
     {
       "id": "plg-contosobudgetrollupplugin",
       "name": "ContosoBudgetRollupPlugin",
       "businessLogic": "Post-operation plugin that recalculates committed vs requested budget on con_campaignbrief by aggregating related F&O virtual spend lines whenever a spend line is associated.",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "plg-contosoconsentauditplugin",
       "name": "ContosoConsentAuditPlugin",
       "businessLogic": "Post-operation plugin that writes an immutable audit entry and updates con_marketablereason on the related contact whenever consent status changes.",
       "solution": "ContosoMarketing",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "plg-consentledgervalidationplugin",
       "name": "ConsentLedgerValidationPlugin",
       "businessLogic": "Pre-operation validation on the consent ledger: ensures every DSR request references a valid unified profile and blocks duplicate open DSR requests of the same type for a profile.",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "90.00 Record to report",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "plg-matchruleauditplugin",
       "name": "MatchRuleAuditPlugin",
       "businessLogic": "Post-operation plugin that auto-increments con_version and writes an audit trail whenever a match-rule override changes, and prevents deletion of mandatory rules referenced by an active unification.",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.200 Configure and manage copilot capabilities"
+      }
     },
     {
       "id": "plg-profilemergeenrichmentplugin",
       "name": "ProfileMergeEnrichmentPlugin",
       "businessLogic": "Post-create plugin on unified profiles that triggers semantic enrichment lookups and links matched account/contact records, populating con_matchedaccountid/con_matchedcontactid.",
       "solution": "ContosoCustomerInsights",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.030 Manage file storage"
+      }
     },
     {
       "id": "plg-apapprovalroutingplugin",
       "name": "ApApprovalRoutingPlugin",
       "businessLogic": "On create/update of con_apapprovalrequest, computes the required con_approvaltier from con_amount against Contoso threshold config and assigns con_approverid from the approval hierarchy.",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.090 Configure and management office apps and add-ins"
+      }
     },
     {
       "id": "plg-creditlimitenforcementplugin",
       "name": "CreditLimitEnforcementPlugin",
       "businessLogic": "Pre-operation plugin on account update that recalculates con_creditriskrating and blocks payment-terms changes when open AR exceeds creditlimit.",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": "65.50.010 Assess customer credit risk"
+      }
     },
     {
       "id": "plg-capextofixedassetplugin",
       "name": "CapexToFixedAssetPlugin",
       "businessLogic": "On con_capexrequest status = Approved, provisions a fixed-asset acquisition payload and links the resulting F&O mserp_fixedasset reference back to the request.",
       "solution": "ContosoFinance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "95.00 Service to deliver",
+        "processCatalogL2": "95.25 Manage service work",
+        "processCatalogL3": "95.25.100 Receive service requests"
+      }
     },
     {
       "id": "plg-requisitionnumberplugin",
       "name": "RequisitionNumberPlugin",
       "businessLogic": "Generates a sequential con_name requisition number (REQ-{yyyy}-{seq}) on create and validates con_estimatedamount against the requester's spend limit.",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
+      }
     },
     {
       "id": "plg-shipmenttrackingsyncplugin",
       "name": "ShipmentTrackingSyncPlugin",
       "businessLogic": "On shipment create/update, validates carrier tracking number format and rolls up shipment status to the linked F&O sales order line via the OData connection.",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
+      }
     },
     {
       "id": "plg-vendorapprovalguardplugin",
       "name": "VendorApprovalGuardPlugin",
       "businessLogic": "Prevents deletion of an approved vendor that is referenced by open requisitions and defaults con_vendoraccount from the linked account number.",
       "solution": "ContosoSupplyChain",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "75.00 Source to pay",
+        "processCatalogL2": "75.40 Procure goods and services",
+        "processCatalogL3": "75.40.010 Raise purchase requisitions"
+      }
     },
     {
       "id": "plg-retailtransactiontotalsplugin",
       "name": "RetailTransactionTotalsPlugin",
       "businessLogic": "On create/update of a sales or payment line, recalculates the parent transaction's msdyn_totalamount and msdyn_grosstotal and flags over-tendered transactions.",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
+      }
     },
     {
       "id": "plg-loyaltycardenrollmentplugin",
       "name": "LoyaltyCardEnrollmentPlugin",
       "businessLogic": "On create of a loyalty card, validates uniqueness of the card number, stamps the enrollment channel, and initializes the points balance from the program's welcome bonus.",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.20 Manage sales orders",
+        "processCatalogL3": "65.20.025 Enter sales orders"
+      }
     },
     {
       "id": "plg-giftcardredemptionplugin",
       "name": "GiftCardRedemptionPlugin",
       "businessLogic": "On update of a gift card during tender application, decrements the gift card balance atomically and rejects redemption if funds are insufficient.",
       "solution": "ContosoCommerce",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "65.00 Order to cash",
+        "processCatalogL2": "65.50 Manage credit and collections",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "plg-workeremployeeidplugin",
       "name": "WorkerEmployeeIdPlugin",
       "businessLogic": "Auto-generates a sequential con_employeeid on worker creation and validates uniqueness of personal email within the legal entity.",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "plg-leavebalancevalidationplugin",
       "name": "LeaveBalanceValidationPlugin",
       "businessLogic": "Pre-validation plugin that blocks a leave request when con_totaldays exceeds the worker's accrued balance on the matching mshr_leaveenrollment record.",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "55.00 Hire to retire",
+        "processCatalogL2": "55.50 Manage time and attendance",
+        "processCatalogL3": "55.50.010 Develop leave and absence policies"
+      }
     },
     {
       "id": "plg-positionhierarchyguardplugin",
       "name": "PositionHierarchyGuardPlugin",
       "businessLogic": "Prevents circular reporting relationships when cdm_reportstoposition is set and cascades department changes to child positions.",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "30.00 Concept to market",
+        "processCatalogL2": "",
+        "processCatalogL3": ""
+      }
     },
     {
       "id": "plg-disciplinarycaseauditplugin",
       "name": "DisciplinaryCaseAuditPlugin",
       "businessLogic": "Writes an immutable audit entry and enforces confidential access checks whenever a disciplinary case is created or its owner is reassigned.",
       "solution": "ContosoHumanResources",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.25 Manage system access and security",
+        "processCatalogL3": "99.25.110 Update access to systems"
+      }
     },
     {
       "id": "plg-conversationroutingplugin",
       "name": "ConversationRoutingPlugin",
       "businessLogic": "On conversation create, evaluates con_priorityscore from context and work-stream routing rules, then stamps the target queue before assignment.",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.30 Intake cases",
+        "processCatalogL3": "20.30.010 Assign a case"
+      }
     },
     {
       "id": "plg-sessionparticipantauditplugin",
       "name": "SessionParticipantAuditPlugin",
       "businessLogic": "On participant creation, records active start time and validates consult/transfer mode transitions for coaching-note eligibility.",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.020 Process inventory movements"
+      }
     },
     {
       "id": "plg-deflectioncostcalculationplugin",
       "name": "DeflectionCostCalculationPlugin",
       "businessLogic": "On deflection outcome create, computes con_costavoided using the channel cost model and marks con_contained based on outcome type.",
       "solution": "ContosoContactCenter",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "20.00 Case to resolution",
+        "processCatalogL2": "20.10 Establish a knowledge base",
+        "processCatalogL3": "20.10.010 Create knowledge base articles"
+      }
     },
     {
       "id": "plg-con-governance-datasensitivityguardplugin",
       "name": "Con.Governance.DataSensitivityGuardPlugin",
       "businessLogic": "Pre-Operation validation preventing a con_datasensitivity downgrade (e.g. Regulated -> Public) on account/contact unless the executing user holds the CoE Data Protection Officer role; throws InvalidPluginExecutionException otherwise.",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": "99.20.090 Configure and management office apps and add-ins"
+      }
     },
     {
       "id": "plg-con-governance-environmentinventoryauditplugin",
       "name": "Con.Governance.EnvironmentInventoryAuditPlugin",
       "businessLogic": "Post-Operation plug-in that writes an immutable audit annotation and enforces uniqueness of con_environmentid whenever an environment inventory record is created or modified.",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "60.00 Inventory to deliver",
+        "processCatalogL2": "60.20 Maintain inventory levels",
+        "processCatalogL3": "60.20.040 Count inventory"
+      }
     },
     {
       "id": "plg-con-governance-attestationrollupplugin",
       "name": "Con.Governance.AttestationRollupPlugin",
       "businessLogic": "Post-Operation plug-in that recalculates the parent environment's compliance score and next-due date when a con_coecomplianceattestation is created or its con_result changes.",
       "solution": "ContosoPlatformGovernance",
-      "tags": {}
+      "tags": {
+        "processCatalogL1": "99.00 Administer to operate",
+        "processCatalogL2": "99.20 Administer system features",
+        "processCatalogL3": ""
+      }
     }
   ]
 }
